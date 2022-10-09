@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+var PersonName=\"person\"		# person short name small font
+var Status=false 				#in - true out - false
+var Visitor=false
+var PTime=\"\"     #updated on every change
+var Face=null
+
+signal setStatus
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func setout():
+	var td=OS.get_time()
+	PTime=str(td.get(\"hour\"))+\":\"+str(td.get(\"minute\"))
+	Status=false
+	pass
+	
+func setin():
+	var td=OS.get_time()
+	PTime=str(td.get(\"hour\"))+\":\"+str(td.get(\"minute\"))
+	Status=true
+	pass
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[node name="Person" type="Node"]
+script = SubResource( 1 )
