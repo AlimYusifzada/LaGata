@@ -1,6 +1,7 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://pngegg.png" type="Texture" id=1]
+[ext_resource path="res://Cat.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
@@ -215,10 +216,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="MainScene" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 163, 86.5 )
+
+[node name="Cat" type="KinematicBody2D"]
+position = Vector2( 211, 111 )
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1, 1 )
 frames = SubResource( 26 )
-animation = "walk"
-frame = 1
-playing = true
+animation = "tosit"
+speed_scale = 2.0
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 40 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
