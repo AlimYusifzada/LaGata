@@ -5,35 +5,65 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
-const SPEED=150
-var standup=false
+const SPEED=300
+const GRAVITY=1400
+const JUMP_VELOCITY=-700
+const INERTIA=300
+const UP=Vector2(0,-1)
+
+
+var velocity=Vector2()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.play("sit")
+	$AnimatedSprite.play("tosit")
 	$AnimatedSprite.playing=false
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var velocity=Vector2()
-	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
+	fall(delta)
+	jump()
+	walk(delta)
+	animate()
+	move_and_slide(velocity,UP)
+	pass
+	
+func fall(delta):
+	if is_on_floor():
+		velocity.y=0
+	else:
+		velocity.y+=GRAVITY*delta
+		
+func jump():
+	if Input.is_action_pressed("ui_up") and is_on_floor():
+		velocity.y=JUMP_VELOCITY
+	
+
+		
+func walk(delta):
+	if Input.is_action_pressed("ui_right"): # and not Input.is_action_pressed("ui_left"):
 		velocity.x=SPEED
 		$AnimatedSprite.flip_h=true
-		$AnimatedSprite.play("walk")
-	elif Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_left"): # and not Input.is_action_pressed("ui_right"):
 		velocity.x=-SPEED
 		$AnimatedSprite.flip_h=false
-		$AnimatedSprite.play("walk")
-	elif Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
-		velocity.x=0
-		$AnimatedSprite.play("tosit")
 	else:
-		velocity.x=0
-	move_and_slide(velocity)
-	pass
+		if velocity.x>0:
+			velocity.x-=INERTIA*delta
+			if velocity.x<0:
+				velocity.x=0
+		if velocity.x<0:
+			velocity.x+=INERTIA*delta
+			if velocity.x>0:
+				velocity.x=0
 
+		
+func animate():
+	if is_on_floor() and velocity.x!=0:
+		$AnimatedSprite.play("walk")
+	if is_on_floor() and velocity.x==0:
+		$AnimatedSprite.play("sit")
+	if velocity.y!=0 && is_on_floor():
+		$AnimatedSprite.play("Jump")
+			
 
-func _on_AnimatedSprite_animation_finished():
-	$AnimatedSprite.animation="sit"
-	$AnimatedSprite.playing=false
-	pass # Replace with function body.
