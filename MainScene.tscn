@@ -1,18 +1,49 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Cat.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 562.5, 22 )
+extents = Vector2( 346.25, 22 )
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0, 0, 0, 1, 0.287958, 0.287958, 0.287958, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 377, -52 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 393, 395 )
+position = Vector2( 67, 326 )
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 113.5, -2 )
+position = Vector2( 319.25, 3 )
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 293.75, 3 )
+scale = Vector2( 0.362549, 44 )
+texture = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 62, 341 )
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 595, 149 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 577.5, 150 )
+scale = Vector2( 0.373535, 44 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}

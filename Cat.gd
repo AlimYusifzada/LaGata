@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 
-const SPEED=300
+const SPEED=250
 const GRAVITY=1400
 const JUMP_VELOCITY=-700
-const INERTIA=300
+const INERTIA=SPEED
 const UP=Vector2(0,-1)
 
 var velocity=Vector2()
@@ -54,13 +54,12 @@ func walk(delta):
 				velocity.x=0
 		
 func animate():
-	if !is_on_floor():
-		return
-	if velocity.x!=0:
+
+	if velocity.x!=0 and is_on_floor():
 		$AnimatedSprite.play("walk")		
-	if velocity.x==0:
+	if velocity.x==0 and is_on_floor():
 		$AnimatedSprite.play("sit")
-	if velocity.y!=0:
+	if velocity.y!=0 and !is_on_floor():
 		$AnimatedSprite.play("Jump")
 			
 
