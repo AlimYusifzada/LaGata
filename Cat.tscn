@@ -220,7 +220,6 @@ animations = [ {
 extents = Vector2( 163, 86.5 )
 
 [node name="Cat" type="KinematicBody2D"]
-position = Vector2( 211, 111 )
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
