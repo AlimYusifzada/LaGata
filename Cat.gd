@@ -7,8 +7,9 @@ const JUMP_VELOCITY=-700
 const INERTIA=300
 const UP=Vector2(0,-1)
 
-
 var velocity=Vector2()
+var Life=100
+var Power=100
 
 func _ready():
 	$AnimatedSprite.play("tosit")
@@ -55,9 +56,7 @@ func walk(delta):
 func animate():
 	if !is_on_floor():
 		return
-	if velocity.x>0:
-		$AnimatedSprite.play("walk")
-	if velocity.x<0:
+	if velocity.x!=0:
 		$AnimatedSprite.play("walk")		
 	if velocity.x==0:
 		$AnimatedSprite.play("sit")
