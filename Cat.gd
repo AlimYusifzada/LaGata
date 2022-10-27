@@ -12,7 +12,6 @@ var Life=100
 var Power=100
 
 func _ready():
-	$AnimatedSprite.play("tosit")
 	$AnimatedSprite.playing=false
 	pass # Replace with function body.
 
@@ -21,16 +20,20 @@ func _physics_process(delta):
 	fall(delta)
 	jump()
 	walk(delta)
-	animate()
 	move_and_slide(velocity,UP)
 	pass
-	
+
+func _process(delta):
+	animate()
 	
 func fall(delta):
 	if is_on_floor():
 		velocity.y=0
+	elif is_on_ceiling():
+		velocity.y=1
 	else:
 		velocity.y+=GRAVITY*delta
+		
 		
 func jump():
 	if Input.is_action_pressed("ui_up") and is_on_floor():
@@ -54,7 +57,6 @@ func walk(delta):
 				velocity.x=0
 		
 func animate():
-
 	if velocity.x!=0 and is_on_floor():
 		$AnimatedSprite.play("walk")		
 	if velocity.x==0 and is_on_floor():
