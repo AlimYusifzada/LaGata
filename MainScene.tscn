@@ -23,7 +23,7 @@ position = Vector2( 595, 149 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D2"]
-position = Vector2( 580, 152 )
+position = Vector2( 566, 173 )
 scale = Vector2( 0.373535, 44 )
 texture = SubResource( 2 )
 __meta__ = {
@@ -40,7 +40,7 @@ position = Vector2( 319.25, 3 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 300, 3 )
+position = Vector2( 297, 25 )
 scale = Vector2( 0.362549, 44 )
 texture = SubResource( 2 )
 

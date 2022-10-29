@@ -14,6 +14,7 @@ var Life=100
 var Power=100
 
 func _ready():
+	randomize()
 	$AnimatedSprite.playing=false
 	pass # Replace with function body.
 
@@ -63,11 +64,15 @@ func walk(delta):
 				velocity.x=0
 		
 func animate():
+	var taleswing=randf()/2
 	if velocity.x!=0 and is_on_floor():
+		$AnimatedSprite.speed_scale=2
 		$AnimatedSprite.play("walk")		
 	if velocity.x==0 and is_on_floor():
+		$AnimatedSprite.speed_scale=taleswing
 		$AnimatedSprite.play("sit")
 	if velocity.y!=0 and !is_on_floor():
+		$AnimatedSprite.speed_scale=2
 		$AnimatedSprite.play("Jump")
 			
 

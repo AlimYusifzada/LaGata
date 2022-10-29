@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Cat.gd" type="Script" id=1]
 [ext_resource path="res://pngegg.png" type="Texture" id=2]
@@ -104,30 +104,10 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 400, 995, 400, 199 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=41]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 400, 0, 400, 199 )
-
-[sub_resource type="AtlasTexture" id=38]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 400, 199, 400, 199 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 400, 398, 400, 199 )
-
-[sub_resource type="AtlasTexture" id=36]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 400, 796, 400, 199 )
-
-[sub_resource type="AtlasTexture" id=35]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 400, 995, 400, 199 )
+region = Rect2( 400, 1194, 400, 199 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -201,14 +181,9 @@ animations = [ {
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 33 ) ],
+"frames": [ SubResource( 33 ), SubResource( 41 ) ],
 "loop": true,
 "name": "sit",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 39 ), SubResource( 38 ), SubResource( 34 ), SubResource( 36 ), SubResource( 35 ) ],
-"loop": true,
-"name": "tosit",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
@@ -218,7 +193,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 80, 68.5 )
+extents = Vector2( 96, 70.5 )
 
 [node name="Cat" type="KinematicBody2D"]
 collision_layer = 0
@@ -228,15 +203,16 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1.0025, 1 )
 frames = SubResource( 26 )
-animation = "walk"
-frame = 3
-speed_scale = 2.0
+animation = "run"
+frame = 7
+speed_scale = 3.0
+playing = true
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 10.5 )
+position = Vector2( 0, 11 )
 shape = SubResource( 40 )
 
 [node name="jumptimer" type="Timer" parent="."]
