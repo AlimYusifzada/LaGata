@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Cat.gd" type="Script" id=1]
 [ext_resource path="res://pngegg.png" type="Texture" id=2]
@@ -99,15 +99,20 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 800, 1791, 400, 199 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=43]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 400, 995, 400, 199 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=42]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 400, 1194, 400, 199 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 400, 995, 400, 199 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -181,7 +186,7 @@ animations = [ {
 "name": "Run",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 33 ), SubResource( 41 ) ],
+"frames": [ SubResource( 43 ), SubResource( 42 ), SubResource( 41 ) ],
 "loop": true,
 "name": "Sit",
 "speed": 5.0
@@ -203,13 +208,11 @@ script = ExtResource( 1 )
 position = Vector2( 0, -1 )
 scale = Vector2( 1.0025, 1 )
 frames = SubResource( 26 )
-animation = "Jump"
-frame = 12
-speed_scale = 3.0
-playing = true
+animation = "Sit"
 
-[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+[node name="Cam" parent="." instance=ExtResource( 3 )]
 smoothing_enabled = true
+smoothing_speed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 11 )
