@@ -8,11 +8,14 @@ onready var remove=preload("res://RemovePerson.tscn")
 onready var person=preload("res://Person.tscn")	
 
 var data="user://data"
+var panelstyle=StyleBoxFlat.new()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	updatelist()	
 	var root=get_tree().get_root()
 	var addnewinst=addnew.instance()
+	VisualServer.set_default_clear_color(Color.black)
+	panelstyle.bg_color=Color.darkgreen
 	addnewinst.position.x=230
 	addnewinst.position.y=150
 	root.add_child(addnewinst)
@@ -25,10 +28,10 @@ func updatelist():
 	$Visitors.clear()
 	var persons=get_children()
 	for p in persons:
-		var PersonName=get_node(p.name).get("PersonName")
-		var Status=get_node(p.name).get("Status")
-		var Visitor=get_node(p.name).get("Visitor")
-		var PTime=get_node(p.name).get("PTime")
+		var PersonName=p.get("PersonName")
+		var Status=p.get("Status")
+		var Visitor=p.get("Visitor")
+		var PTime=p.get("PTime")
 		if PersonName==null or Status==null or Visitor==null or PTime==null:
 			continue
 		if Visitor:
@@ -94,9 +97,9 @@ func _on_ExitBtn_pressed():
 func _on_In_item_selected(index):
 	var selName=$In.get_item_text(index)
 	for p in get_children():
-		var name=get_node(p.name).get("PersonName")
+		var name=p.get("PersonName")
 		if name==null: continue
-		if get_node(p.name).get("PersonName") in selName:
+		if p.get("PersonName") in selName:
 			get_node(p.name).setout()
 			break
 	updatelist()
@@ -104,7 +107,7 @@ func _on_In_item_selected(index):
 func _on_Out_item_selected(index):
 	var selName=$Out.get_item_text(index)
 	for p in get_children():
-		var name=get_node(p.name).get("PersonName")
+		var name=p.get("PersonName")
 		if name==null: continue
 		if name in selName:
 			get_node(p.name).setin()
@@ -131,7 +134,10 @@ func _on_Remove_pressed():
 func AddNewPerson(Name,visitor):
 	var personinst=person.instance()
 	var td=OS.get_time()
-	var PTime=str(td.get("hour"))+":"+str(td.get("minute"))	
+	var minstr=str(td.get("minute"))
+	if minstr.length()<2:
+		minstr="0"+minstr
+	var PTime=str(td.get("hour"))+":"+minstr	
 	personinst.PersonName=Name #+tdtxt
 	personinst.Status=false
 	personinst.Visitor=visitor
@@ -146,6 +152,24 @@ func RemovePerson(Name):
 		var tempn=p.get("PersonName")
 		if tempn==null:continue
 		if Name in tempn:
+			p.queue_free()
+	updatelist()
+	pass
+
+
+func _on_Visitors_item_selected(index):
+	var pername=$Visitors.get_item_text(index)
+	for p in get_children():
+		var name=p.get("PersonName")
+		if name==null: continue
+		if name in pername:
+			p.queue_free()
+	updatelist()
+	pass # Replace with function body.
+	
+func delete_all():
+	for p in get_children():
+		if p.get("PTime")!=null:
 			p.queue_free()
 	updatelist()
 	pass

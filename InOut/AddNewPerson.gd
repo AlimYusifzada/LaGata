@@ -12,7 +12,7 @@ func _on_Ok_pressed():
 	var root=get_tree().get_root()
 	var main=root.get_node("Main")
 	if main!=null:
-		main.AddNewPerson($Panel/Name.text.to_lower(),$Panel/VisitorBox.pressed)
+		main.AddNewPerson($Panel/Name.text.to_upper(),$Panel/VisitorBox.pressed)
 	queue_free()
 	pass # Replace with function body.
 

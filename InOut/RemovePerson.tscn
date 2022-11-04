@@ -8,13 +8,15 @@ script = ExtResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 592.0
-margin_bottom = 168.0
+margin_bottom = 143.0
+theme = ExtResource( 1 )
 
 [node name="Ok" type="Button" parent="Panel"]
 margin_left = 272.0
 margin_top = 64.0
 margin_right = 416.0
 margin_bottom = 120.0
+rect_pivot_offset = Vector2( -57, 79 )
 theme = ExtResource( 1 )
 text = "OK"
 
@@ -34,12 +36,15 @@ margin_bottom = 52.0
 hint_tooltip = "type your name here"
 theme = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 272.0
-margin_top = 136.0
-margin_right = 535.0
-margin_bottom = 150.0
-text = "are you sure to delete the person forever"
+[node name="Ok2" type="Button" parent="Panel"]
+margin_left = 22.0
+margin_top = 64.0
+margin_right = 166.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( -57, 79 )
+theme = ExtResource( 1 )
+text = "delete all"
 
 [connection signal="pressed" from="Panel/Ok" to="." method="_on_Ok_pressed"]
 [connection signal="pressed" from="Panel/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="Panel/Ok2" to="." method="_on_Ok2_pressed"]

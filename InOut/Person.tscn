@@ -22,13 +22,20 @@ func _ready():
 
 func setout():
 	var td=OS.get_time()
-	PTime=str(td.get(\"hour\"))+\":\"+str(td.get(\"minute\"))
+	var minstr=str(td.get(\"minute\"))
+	if minstr.length()<2:
+		minstr=\"0\"+minstr
+	PTime=str(td.get(\"hour\"))+\":\"+minstr
+	#PTime=str(td.get(\"hour\"))+\":\"+str(td.get(\"minute\"))
 	Status=false
 	pass
 	
 func setin():
 	var td=OS.get_time()
-	PTime=str(td.get(\"hour\"))+\":\"+str(td.get(\"minute\"))
+	var minstr=str(td.get(\"minute\"))
+	if minstr.length()<2:
+		minstr=\"0\"+minstr
+	PTime=str(td.get(\"hour\"))+\":\"+minstr
 	Status=true
 	pass
 	

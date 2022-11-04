@@ -81,3 +81,4 @@ text = "Visitors"
 [connection signal="pressed" from="ExitBtn" to="." method="_on_ExitBtn_pressed"]
 [connection signal="pressed" from="Add" to="." method="_on_Add_pressed"]
 [connection signal="pressed" from="Remove" to="." method="_on_Remove_pressed"]
+[connection signal="item_selected" from="Visitors" to="." method="_on_Visitors_item_selected"]

@@ -10,7 +10,9 @@ config_version=4
 
 [application]
 
-config/name="ABBInOut"
+config/name="InOutTracker"
+config/description="simple tracker for office stufff and visitors
+"
 run/main_scene="res://Main.tscn"
 boot_splash/image="res://ABBLogo..png"
 boot_splash/bg_color=Color( 1, 0, 0, 1 )
