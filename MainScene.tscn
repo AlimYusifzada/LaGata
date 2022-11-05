@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://bricks.png" type="Texture" id=2]
@@ -7,12 +7,13 @@
 [ext_resource path="res://PARALLAX/layer_03_1920 x 1080.png" type="Texture" id=5]
 [ext_resource path="res://PARALLAX/layer_02_1920 x 1080.png" type="Texture" id=6]
 [ext_resource path="res://PARALLAX/layer_04_1920 x 1080.png" type="Texture" id=7]
+[ext_resource path="res://Mouse.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 96, 24 )
 
 [node name="test-level" type="Node2D"]
-position = Vector2( 168, 848 )
+position = Vector2( 276, 856 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -372,3 +373,6 @@ shape = SubResource( 1 )
 [node name="Cat" parent="." instance=ExtResource( 1 )]
 position = Vector2( 744, -49 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Mouse" parent="." instance=ExtResource( 8 )]
+position = Vector2( -209, -368 )
