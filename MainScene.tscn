@@ -50,7 +50,7 @@ position = Vector2( 960, 560 )
 texture = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 304, -209 )
+position = Vector2( 140, -120 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
@@ -58,10 +58,14 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+position = Vector2( -4, 1 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 900, 48 )
+position = Vector2( 900, 56 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
