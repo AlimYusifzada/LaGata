@@ -46,4 +46,3 @@ func move(delta):
 	if is_on_floor() and is_on_wall():
 		velocity.x*=-1
 		
-	pass
