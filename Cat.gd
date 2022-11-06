@@ -14,6 +14,7 @@ const PLATFORM=2            # platforms layer, user can jump on and off the plat
 var velocity=Vector2()
 var Life=100
 var Power=100
+var collision
 
 func _ready():
 	randomize()
@@ -30,6 +31,7 @@ func _physics_process(delta):
 	#walk(delta)
 	#---SLOWER---
 	move_and_slide(velocity,UP)
+	
 
 func _process(delta): 
 	animate()
@@ -75,8 +77,8 @@ func run(delta):
 		
 func animate():
 	var taleswing=randf()/2
-	#var zoom=abs(velocity.x)*0.07/MAXSPEED+1
-	#$Cam.set_zoom(Vector2(zoom,zoom))
+	var zoom=abs(velocity.x)*0.5/MAXSPEED+1
+	$Cam.set_zoom(Vector2(zoom,zoom))
 	if velocity.y!=0 and !is_on_floor():
 		$AnimatedSprite.speed_scale=5
 		$AnimatedSprite.play("Jump")

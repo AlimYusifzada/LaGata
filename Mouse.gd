@@ -15,24 +15,11 @@ func _ready():
 	$AnimatedSprite.play("Run")
 	velocity.x=SPEED
 	pass # Replace with function body.
-
+	
 func _physics_process(delta):
-	fall(delta)
-	move()
 	move_and_slide(velocity,UP)
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	
-	pass
-
-func move():
-	pass
-
-func fall(delta):
-	if is_on_floor():
-		velocity.y=0
-	else: 
-		velocity.y+=FALLSPEED*delta
-	pass
+func _on_Area2D_body_entered(body):
+	print(body)
+	pass # Replace with function body.

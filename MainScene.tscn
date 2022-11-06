@@ -375,4 +375,4 @@ position = Vector2( 744, -49 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Mouse" parent="." instance=ExtResource( 8 )]
-position = Vector2( -209, -368 )
+position = Vector2( 428, -32 )
