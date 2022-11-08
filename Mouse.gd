@@ -4,11 +4,14 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-const SPEED=300
+const SPEED=200
 const FALLSPEED = 700
 const GRAVITY = 1500
 const UP=Vector2(0,-1)
+const LIFEDAMAGE=-100
+const JUMP_VELOCITY=-1000
 var velocity=Vector2()
+var Life=100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +20,7 @@ func _ready():
 	pass # Replace with function body.
 	
 func _physics_process(delta):
+	deathcheck()
 	fall(delta)
 	move(delta)
 	move_and_slide(velocity,UP)
@@ -27,7 +31,11 @@ func _process(delta):
 	
 
 func _on_Area2D_body_entered(body):
-	print(body)
+	if body.is_in_group("Cats"):
+		body.emit_signal("Food")
+		Life+=LIFEDAMAGE
+	if body.is_in_group("Platforms"):
+		jump()
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -46,3 +54,11 @@ func move(delta):
 	if is_on_floor() and is_on_wall():
 		velocity.x*=-1
 		
+func deathcheck():
+	if Life<=0:
+		queue_free()
+		
+func jump():
+	velocity.y=-JUMP_VELOCITY
+	pass
+	

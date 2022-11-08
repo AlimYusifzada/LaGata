@@ -200,7 +200,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 96, 70.5 )
 
-[node name="Cat" type="KinematicBody2D"]
+[node name="Cat" type="KinematicBody2D" groups=["Cats"]]
 collision_mask = 22
 script = ExtResource( 1 )
 
@@ -221,4 +221,6 @@ wait_time = 0.5
 position = Vector2( 0, 11 )
 shape = SubResource( 40 )
 
+[connection signal="Enemy" from="." to="." method="_on_Cat_Enemy"]
+[connection signal="Food" from="." to="." method="_on_Cat_Food"]
 [connection signal="timeout" from="jumptimer" to="." method="_on_jumptimer_timeout"]

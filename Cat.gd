@@ -12,9 +12,12 @@ const GROUND=1 				# ground layer, user cant jump off the ground
 const PLATFORM=2            # platforms layer, user can jump on and off the platform
 							 
 var velocity=Vector2()
-var Life=100
+var Life=10
 var Power=100
 var collision
+
+signal Food
+signal Enemy
 
 func _ready():
 	randomize()
@@ -77,7 +80,7 @@ func run(delta):
 		
 func animate():
 	var taleswing=randf()/2
-	var zoom=abs(velocity.x)*0.5/MAXSPEED+1
+	var zoom=abs(velocity.x)*0.3/MAXSPEED+1
 	$Cam.set_zoom(Vector2(zoom,zoom))
 	if velocity.y!=0 and !is_on_floor():
 		$AnimatedSprite.speed_scale=5
@@ -94,4 +97,19 @@ func animate():
 		
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(PLATFORM,true)
-	
+
+func _on_Cat_Food():
+	if Life<100:
+		Life+=10
+		if Life>100:
+			Life=100
+	pass # Replace with function body.
+
+
+func _on_Cat_Enemy():
+	if Life>0:
+		Life-=10
+	pass # Replace with function body.
+
+func deathcheck():
+	pass

@@ -50,6 +50,8 @@ ui_walkright={
 2d_physics/layer_1="Cat"
 2d_physics/layer_2="Ground"
 2d_physics/layer_3="Platform"
+2d_physics/layer_5="Pray"
+2d_physics/layer_6="Food"
 
 [physics]
 
