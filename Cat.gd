@@ -22,12 +22,14 @@ signal Enemy
 func _ready():
 	randomize()
 	$AnimatedSprite.playing=true
+	$jumptimer.wait_time=0.5
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # slower movement goes to the end!
 func _physics_process(delta):
 	#---FASTER---
+	deathcheck()
 	fall(delta)
 	jump()
 	run(delta)
@@ -96,7 +98,7 @@ func animate():
 		$AnimatedSprite.play("Run")
 		
 func _on_jumptimer_timeout():
-	set_collision_mask_bit(PLATFORM,true)
+		set_collision_mask_bit(PLATFORM,true)
 
 func _on_Cat_Food():
 	if Life<100:
@@ -105,11 +107,12 @@ func _on_Cat_Food():
 			Life=100
 	pass # Replace with function body.
 
-
 func _on_Cat_Enemy():
 	if Life>0:
 		Life-=10
 	pass # Replace with function body.
 
 func deathcheck():
+	if Life<=0 || velocity.y>1500:
+		queue_free()
 	pass

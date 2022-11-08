@@ -28,14 +28,11 @@ func _physics_process(delta):
 
 func _process(delta):
 	animation()
-	
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food")
 		Life+=LIFEDAMAGE
-	if body.is_in_group("Platforms"):
-		jump()
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -59,6 +56,7 @@ func deathcheck():
 		queue_free()
 		
 func jump():
-	velocity.y=-JUMP_VELOCITY
+	if is_on_floor():
+		velocity.y=-JUMP_VELOCITY
 	pass
 	

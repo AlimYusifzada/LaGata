@@ -4,7 +4,7 @@
 [ext_resource path="res://Mouse.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 31.5, 39 )
+extents = Vector2( 31.5, 16 )
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -47,7 +47,7 @@ collision_layer = 16
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, -7 )
+position = Vector2( 0, 16 )
 shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
