@@ -198,7 +198,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 96, 70.5 )
+extents = Vector2( 64, 40 )
 
 [node name="Cat" type="KinematicBody2D" groups=["Cats"]]
 collision_mask = 22
@@ -217,7 +217,7 @@ smoothing_speed = 10.0
 [node name="jumptimer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 11 )
+position = Vector2( 0, 40 )
 shape = SubResource( 40 )
 
 [connection signal="Enemy" from="." to="." method="_on_Cat_Enemy"]

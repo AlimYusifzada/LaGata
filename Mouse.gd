@@ -1,10 +1,6 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-const SPEED=200
+const SPEED=100
 const FALLSPEED = 700
 const GRAVITY = 1500
 const UP=Vector2(0,-1)
@@ -33,6 +29,8 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food")
 		Life+=LIFEDAMAGE
+	if body.is_in_group("Edge"):
+		velocity.x*=-1
 	pass # Replace with function body.
 	
 func fall(delta):

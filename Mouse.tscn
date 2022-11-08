@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://mouse.png" type="Texture" id=1]
 [ext_resource path="res://Mouse.gd" type="Script" id=2]
@@ -26,27 +26,32 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 192, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 64, 64 )
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 8 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 24, 5.5 )
+extents = Vector2( 10, 1.5 )
 
 [node name="Mouse" type="KinematicBody2D"]
 collision_layer = 0
 collision_mask = 6
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DynEnvCol" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DynEnvCol"]
 position = Vector2( 0, 16 )
 shape = SubResource( 6 )
 
@@ -54,8 +59,8 @@ shape = SubResource( 6 )
 frames = SubResource( 5 )
 animation = "Run"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 26.5 )
+[node name="GravCol" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 29.5 )
 shape = SubResource( 7 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="DynEnvCol" to="." method="_on_Area2D_body_entered"]
