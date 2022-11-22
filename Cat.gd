@@ -1,64 +1,60 @@
 extends KinematicBody2D
-
-
+#cat
 const SPEED=350   #walking speed
+const FOOD=10
+const ENEMY=20
 const MAXSPEED=500
-const GRAVITY=1400
-const JUMP_VELOCITY=-700
-const UP=Vector2(0,-1)
-# layer bit numbering starts from 0
-# layer 0 is a player
-const GROUND=1 				# ground layer, user cant jump off the ground 
-const PLATFORM=2            # platforms layer, user can jump on and off the platform
-							 
+const JUMP_VELOCITY=-600
+const SCALE=Vector2(0.5,0.5)
 var velocity=Vector2()
-var Life=10
-var Power=100
-var collision
+var Stamina=10	#initial value
+var Life=true
 
 signal Food
 signal Enemy
 
 func _ready():
+	set_scale(SCALE)
+	Global.Cat=self
 	randomize()
 	$AnimatedSprite.playing=true
 	$jumptimer.wait_time=0.5
+	Life=true
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# slower movement goes to the end!
 func _physics_process(delta):
 	#---FASTER---
 	deathcheck()
 	fall(delta)
 	jump()
 	run(delta)
-	#walk(delta)
 	#---SLOWER---
-	move_and_slide(velocity,UP)
+	move_and_slide(velocity,Global.UP)
 	
 
 func _process(delta): 
 	animate()
 	
-func fall(delta):
+func fall(delta) -> void:
 	if is_on_floor():
 		velocity.y=0
 	elif is_on_ceiling():
 		velocity.y=1
 	else:
-		velocity.y+=GRAVITY*delta
+		velocity.y+=Global.GRAVITY*delta
 		
-func jump():
+func jump() -> void:
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		$jumptimer.start()		
-		velocity.y=JUMP_VELOCITY
-		set_collision_mask_bit(PLATFORM,false)
+		velocity.y=JUMP_VELOCITY-Stamina*2-abs(velocity.x/3)
+		set_collision_mask_bit(Global.PLATFORM,false)
+		if Stamina>10: Stamina-=1
+		
 	elif Input.is_action_pressed("ui_down") and is_on_floor():
 		$jumptimer.start()
-		set_collision_mask_bit(PLATFORM,false)
+		set_collision_mask_bit(Global.PLATFORM,false)
 			
-func run(delta):
+func run(delta) -> void:
 	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
@@ -81,16 +77,13 @@ func run(delta):
 			if velocity.x>0:
 				velocity.x=0
 		
-		
-func animate():
-	var taleswing=randf()/2
-	var zoom=abs(velocity.x)*0.3/MAXSPEED+1
-	$Cam.set_zoom(Vector2(zoom,zoom))
+func animate() -> void:
+	$Cam/HUD/ColorRect/Stamina.text=str(Stamina)
 	if velocity.y!=0 and !is_on_floor():
-		$AnimatedSprite.speed_scale=5
+		$AnimatedSprite.speed_scale=3
 		$AnimatedSprite.play("Jump")
 	if velocity.x==0 and is_on_floor():
-		$AnimatedSprite.speed_scale=taleswing
+		$AnimatedSprite.speed_scale=0.1
 		$AnimatedSprite.play("Sit")
 	elif abs(velocity.x)<=SPEED and is_on_floor():
 		$AnimatedSprite.speed_scale=2
@@ -99,22 +92,20 @@ func animate():
 		$AnimatedSprite.speed_scale=2
 		$AnimatedSprite.play("Run")
 		
-func _on_jumptimer_timeout():
-		set_collision_mask_bit(PLATFORM,true)
+func _on_jumptimer_timeout() -> void:
+		set_collision_mask_bit(Global.PLATFORM,true)
 
-func _on_Cat_Food():
-	if Life<100:
-		Life+=10
-		if Life>100:
-			Life=100
+func _on_Cat_Food() -> void:
+	if Stamina<100:
+		Stamina+=FOOD
+		if Stamina>100:
+			Stamina=100
+
+func _on_Cat_Enemy() -> void:
+	set_collision_mask_bit(Global.PLATFORM,false)
+	set_collision_mask_bit(Global.GROUND,false)
 	pass # Replace with function body.
 
-func _on_Cat_Enemy():
-	if Life>0:
-		Life-=10
-	pass # Replace with function body.
-
-func deathcheck():
-	if Life<=0 || velocity.y>1500:
+func deathcheck() -> void:
+	if Stamina<=0 || velocity.y>1500 || !Life:
 		queue_free()
-	pass

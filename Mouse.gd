@@ -1,16 +1,23 @@
 extends KinematicBody2D
 
-const SPEED=100
+var SPEED=0
+const MINSPEED=150
 const FALLSPEED = 700
 const GRAVITY = 1500
 const UP=Vector2(0,-1)
-const LIFEDAMAGE=-100
 const JUMP_VELOCITY=-1000
+const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2()
-var Life=100
+var Life=true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.Mouse=self
+	randomize()
+	SPEED=rand_range(MINSPEED,MINSPEED+100)
+	$AnimatedSprite.speed_scale=SPEED/(MINSPEED/3)
+	set_scale(SCALE)
 	$AnimatedSprite.play("Run")
 	velocity.x=SPEED
 	pass # Replace with function body.
@@ -28,9 +35,7 @@ func _process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food")
-		Life+=LIFEDAMAGE
-	if body.is_in_group("Edge"):
-		velocity.x*=-1
+		Life=false
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -50,7 +55,7 @@ func move(delta):
 		velocity.x*=-1
 		
 func deathcheck():
-	if Life<=0:
+	if !Life:
 		queue_free()
 		
 func jump():
