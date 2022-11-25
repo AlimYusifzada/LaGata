@@ -10,8 +10,12 @@ config_version=4
 
 [application]
 
-config/name="AnimatedSpriteMove"
+config/name="LaGata"
+config/description="platformer
+started: October 2022
+"
 run/main_scene="res://Main.tscn"
+config/icon="res://cat.png"
 
 [autoload]
 
@@ -58,9 +62,12 @@ ui_walkright={
 2d_physics/layer_5="Pray"
 2d_physics/layer_6="Enemy"
 
+[physics]
+
+common/physics_jitter_fix=0.6
+
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://Common/default_env.tres"
