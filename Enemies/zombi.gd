@@ -6,7 +6,7 @@ const SCALE=Vector2(2,2)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
-var iscrawl=false
+var isCrawl=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,7 +15,7 @@ func _ready():
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
 	$AnimatedSprite.speed_scale=Speed/(MINSPEED/2.0)
-	iscrawl=is_crawl()
+	isCrawl=is_crawl()
 	velocity.x=Speed
 	pass # Replace with function body.
 
@@ -49,7 +49,7 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 
 func animation():
-	if iscrawl:
+	if isCrawl:
 		$AnimatedSprite.play("Crawl")
 	else:
 		$AnimatedSprite.play("Run")
@@ -62,7 +62,7 @@ func animation():
 		
 func move(delta):
 	if is_on_floor() and is_on_wall():
-		iscrawl=false
+		isCrawl=false
 		velocity.y=JUMP_VELOCITY #jump
 		$JumpTimer.start(0.5)
 	if velocity.x==0:
@@ -91,5 +91,5 @@ func _on_JumpTimer_timeout():
 	if rand_range(0.0,1.0)<0.3:
 		velocity.x*=-1
 	$JumpTimer.stop()
-	iscrawl=is_crawl()
+	isCrawl=is_crawl()
 	pass # Replace with function body.

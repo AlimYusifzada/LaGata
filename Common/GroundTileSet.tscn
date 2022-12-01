@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=1]
 [ext_resource path="res://Common/64xt/bookshelf.png" type="Texture" id=2]
@@ -23,9 +23,17 @@
 [ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=21]
 [ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=22]
 [ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=23]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=25]
+[ext_resource path="res://Common/64xt/TreeRingsRound.png" type="Texture" id=26]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=27]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=28]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 32.0
 
 [node name="GroundTileSet" type="Node2D"]
 
@@ -208,6 +216,16 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite13/StaticBody2D"]
 shape = SubResource( 1 )
 
+[node name="Sprite29" type="Sprite" parent="."]
+position = Vector2( -72, 216 )
+texture = ExtResource( 26 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite29"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite29/StaticBody2D"]
+shape = SubResource( 2 )
+
 [node name="Sprite14" type="Sprite" parent="."]
 position = Vector2( 72, 216 )
 texture = ExtResource( 4 )
@@ -217,6 +235,46 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite14/StaticBody2D"]
 shape = SubResource( 1 )
+
+[node name="Sprite25" type="Sprite" parent="."]
+position = Vector2( 72, 288 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite25"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite25/StaticBody2D"]
+polygon = PoolVector2Array( 32, 32, -8, 32, -24, 16, -16, -8, -32, -8, -32, -32, 32, -32 )
+
+[node name="Sprite27" type="Sprite" parent="."]
+position = Vector2( 0, 288 )
+texture = ExtResource( 28 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite27"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite27/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, 8, -24, -8, -8, -24, 16, -32, 32, -32, 32, 32 )
+
+[node name="Sprite28" type="Sprite" parent="."]
+position = Vector2( 216, 288 )
+texture = ExtResource( 29 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite28"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite28/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite26" type="Sprite" parent="."]
+position = Vector2( 144, 288 )
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite26"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite26/StaticBody2D"]
+polygon = PoolVector2Array( 0, 32, -32, 32, -32, -32, 32, -32, 32, -8, 16, 0, 24, 16, 16, 16, 0, 24 )
 
 [node name="Sprite15" type="Sprite" parent="."]
 position = Vector2( 144, 216 )

@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Player/HUD/mousehead.png" type="Texture" id=2]
+[ext_resource path="res://Player/HUD/cathead.png" type="Texture" id=3]
+[ext_resource path="res://Common/kenpixel_blocks.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Common/Doors/GoldKey.png" type="Texture" id=5]
+
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="HUDPanel" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 80.0
+color = Color( 0, 0, 0, 0.588235 )
+
+[node name="CatStat" type="Sprite" parent="HUDPanel"]
+position = Vector2( 160, 32 )
+texture = ExtResource( 3 )
+
+[node name="LifeCounter" type="Label" parent="HUDPanel/CatStat"]
+margin_left = 40.0
+margin_top = -16.0
+margin_right = 64.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 1 )
+text = "7"
+
+[node name="StamCounter" type="Label" parent="HUDPanel/CatStat"]
+margin_left = 40.0
+margin_top = 8.0
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+text = "7"
+
+[node name="MiceStat" type="Sprite" parent="HUDPanel"]
+position = Vector2( 416, 32 )
+texture = ExtResource( 2 )
+
+[node name="MiceCounter" type="Label" parent="HUDPanel/MiceStat"]
+margin_left = 32.0
+margin_top = -16.0
+margin_right = 56.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 3 )
+text = "7"
+
+[node name="MiceLeft" type="Label" parent="HUDPanel/MiceStat"]
+margin_left = -32.0
+margin_top = 16.0
+margin_right = -8.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 3 )
+text = "7"
+
+[node name="LvlCounter" type="Label" parent="HUDPanel"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 40.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 4 )
+text = "7"
+
+[node name="Message" type="Label" parent="HUDPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -320.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 4 )
+autowrap = true
+
+[node name="Keys" type="Sprite" parent="HUDPanel"]
+position = Vector2( 544, 40 )
+texture = ExtResource( 5 )
+
+[node name="KeysCounter" type="Label" parent="HUDPanel/Keys"]
+margin_left = 40.0
+margin_top = -24.0
+margin_right = 64.0
+custom_fonts/font = SubResource( 3 )
+text = "7"
+
+[node name="ScaleTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ScaleTimer" to="." method="_on_ScaleTimer_timeout"]

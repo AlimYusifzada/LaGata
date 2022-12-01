@@ -1,2 +1,2 @@
 # LaGata
-cats platformer
+platformer about the cat

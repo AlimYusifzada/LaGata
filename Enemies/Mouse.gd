@@ -3,11 +3,9 @@
 extends KinematicBody2D
 
 var SPEED=0
-const MINSPEED=150
+const MINSPEED=200
 const FALLSPEED = 700
-const GRAVITY = 1500
-const UP=Vector2(0,-1)
-const JUMP_VELOCITY=-1000
+const JUMP_VELOCITY=-100
 const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2()
 var Life=true
@@ -28,7 +26,7 @@ func _physics_process(delta):
 	deathcheck()
 	fall(delta)
 	move(delta)
-	move_and_slide(velocity,UP)
+	move_and_slide(velocity,Global.UP)
 	pass
 
 func _process(delta):
@@ -45,7 +43,7 @@ func fall(delta):
 	if is_on_floor():
 		velocity.y=0
 	else:
-		velocity.y+=GRAVITY*delta
+		velocity.y+=Global.GRAVITY*delta
 
 func animation():
 	if velocity.x>0:
@@ -56,6 +54,7 @@ func animation():
 func move(delta):
 	if is_on_floor() and is_on_wall():
 		velocity.x*=-1
+		
 		
 func deathcheck():
 	if !Life:

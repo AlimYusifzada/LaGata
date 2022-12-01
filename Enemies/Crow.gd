@@ -7,6 +7,7 @@ var poopspawn=Vector2()
 func _ready():
 	Global.Crow=self
 	poopspawn.y=position.y
+	scale=Vector2(0.5,0.5)
 	pass
 
 func _on_Area2D_body_entered(body):
