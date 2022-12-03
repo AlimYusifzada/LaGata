@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kitten0012.png-27a2650ee8663455373f6aeca4a86aed.stex"
+path="res://.import/greyhound.png-ae8a1dd06b56eaddccff8402ae5e03c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/kitten/kitten0012.png"
-dest_files=[ "res://.import/kitten0012.png-27a2650ee8663455373f6aeca4a86aed.stex" ]
+source_file="res://Enemies/greyhound.png"
+dest_files=[ "res://.import/greyhound.png-ae8a1dd06b56eaddccff8402ae5e03c2.stex" ]
 
 [params]
 
