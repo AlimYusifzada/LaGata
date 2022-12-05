@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Common/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://PARALLAX/Sewers/sewers.png" type="Texture" id=14]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_05_2048 x 1546.png" type="Texture" id=15]
 [ext_resource path="res://Common/Doors/SDoor/InternalDoor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/zombi.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Common/Doors/GoldKey.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyMoss.tscn" type="PackedScene" id=19]
 
@@ -109,17 +110,17 @@ position = Vector2( 1312, 264 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 12
+frame = 6
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 12
+frame = 6
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 11
+frame = 5
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
@@ -255,3 +256,6 @@ scale = Vector2( 0.5, 0.5 )
 [node name="GoldKey5" parent="." instance=ExtResource( 18 )]
 position = Vector2( -240, 32 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="zombi" parent="." instance=ExtResource( 17 )]
+position = Vector2( -84, 154 )

@@ -13,7 +13,7 @@ var Animate_Mod="Kitten"
 
 var velocity=Vector2()
 var Life=true
-var isChild=false
+var isChild=true
 
 
 signal Food
@@ -27,7 +27,6 @@ func _ready():
 	$AnimatedSprite.playing=true
 	$jumptimer.wait_time=0.5
 	Life=true
-	isChild=true
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -62,7 +61,7 @@ func jump() -> void:
 		$jumptimer.start()		
 		velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)
 		if isChild:
-			velocity.y=velocity.y/1.5
+			velocity.y=velocity.y/1.5 #makes jumps shorter for kitten
 		set_collision_mask_bit(Global.PLATFORM,false)
 		if Global.Stamina>10: Global.Stamina-=0.1
 		
