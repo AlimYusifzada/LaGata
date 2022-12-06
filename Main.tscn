@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Common/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemies/Mouse.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/mouse/Mouse.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Common/MovingPlatforms/MovingPlatform2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Common/64xt/Lava/LavaTop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Common/torch.tscn" type="PackedScene" id=6]
@@ -16,9 +16,11 @@
 [ext_resource path="res://PARALLAX/Sewers/sewers.png" type="Texture" id=14]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_05_2048 x 1546.png" type="Texture" id=15]
 [ext_resource path="res://Common/Doors/SDoor/InternalDoor.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Enemies/zombi.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/zombi/zombi.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Common/Doors/GoldKey.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyMoss.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=21]
 
 [node name="MainTest" type="Node2D"]
 
@@ -110,17 +112,17 @@ position = Vector2( 1312, 264 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 6
+frame = 1
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 6
+frame = 1
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 5
+frame = 0
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
@@ -259,3 +261,9 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="zombi" parent="." instance=ExtResource( 17 )]
 position = Vector2( -84, 154 )
+
+[node name="dog" parent="." instance=ExtResource( 20 )]
+position = Vector2( -815, 571 )
+
+[node name="Crow" parent="." instance=ExtResource( 21 )]
+position = Vector2( 1526, -85 )
