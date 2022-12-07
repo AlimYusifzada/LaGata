@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Common/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyMoss.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/human/humanguy.tscn" type="PackedScene" id=22]
 
 [node name="MainTest" type="Node2D"]
 
@@ -112,17 +113,15 @@ position = Vector2( 1312, 264 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 13
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 13
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 12
+frame = 7
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
@@ -267,3 +266,6 @@ position = Vector2( -815, 571 )
 
 [node name="Crow" parent="." instance=ExtResource( 21 )]
 position = Vector2( 1526, -85 )
+
+[node name="humanguy" parent="." instance=ExtResource( 22 )]
+position = Vector2( 500, 589 )
