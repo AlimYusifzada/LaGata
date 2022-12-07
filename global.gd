@@ -10,11 +10,14 @@ const UP=Vector2(0,-1)
 var KeysRing=[0,0,0] #Yellow(),Green,Black
 var Level=0 #current level
 var LifesLeft=7
+var Life=true #player life status - default true
+var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 
 #modules (objects)
 var Cat
+
 var Mouse
 var Xen
 var HUD

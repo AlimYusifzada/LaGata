@@ -9,11 +9,8 @@ const SCALE=Vector2(0.5,0.5)
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
-var Animate_Mod="Kitten"
-
+var Animate_Mode="Kitten"
 var velocity=Vector2()
-var Life=true
-var isChild=true
 
 
 signal Food
@@ -26,7 +23,7 @@ func _ready():
 	randomize()
 	$AnimatedSprite.playing=true
 	$jumptimer.wait_time=0.5
-	Life=true
+	Global.Life=true
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -42,12 +39,12 @@ func _process(delta):
 	animate()
 	
 func PickAnimation(an_type=0) -> String: #pick from enum
-	if isChild:
-		return Animate_Mod+Animate_Name[an_type]
+	if Global.isChild:
+		return Animate_Mode+Animate_Name[an_type]
 	else:
 		return Animate_Name[an_type]
 	
-func fall(delta) -> void:
+func fall(delta):
 	if is_on_floor():
 		velocity.y=0
 	elif is_on_ceiling():
@@ -55,12 +52,12 @@ func fall(delta) -> void:
 	else:
 		velocity.y+=Global.GRAVITY*delta
 		
-func jump() -> void:
-	if !Life: return
+func jump():
+	if !Global.Life: return
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		$jumptimer.start()		
 		velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)
-		if isChild:
+		if Global.isChild:
 			velocity.y=velocity.y/1.5 #makes jumps shorter for kitten
 		set_collision_mask_bit(Global.PLATFORM,false)
 		if Global.Stamina>10: Global.Stamina-=0.1
@@ -69,20 +66,20 @@ func jump() -> void:
 		$jumptimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
 			
-func run(delta) -> void:
-	if !Life: return
+func run(delta):
+	if !Global.Life: return
 	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
 		else:
 			velocity.x=MAXSPEED
-		$AnimatedSprite.flip_h=true
+		$AnimatedSprite.flip_h=true #face right
 	elif Input.is_action_pressed("ui_runleft"):#and not Input.is_action_pressed("ui_runright"):
 		if velocity.x>-MAXSPEED:
 			velocity.x-=MAXSPEED*delta
 		else:
 			velocity.x=-MAXSPEED
-		$AnimatedSprite.flip_h=false
+		$AnimatedSprite.flip_h=false #face left
 	else:
 		if velocity.x>0:
 			velocity.x-=MAXSPEED*delta
@@ -93,8 +90,8 @@ func run(delta) -> void:
 			if velocity.x>0:
 				velocity.x=0
 		
-func animate() -> void:
-	if !Life:
+func animate():
+	if !Global.Life:
 		return
 	if velocity.y!=0 and !is_on_floor():
 		$AnimatedSprite.speed_scale=3
@@ -109,35 +106,35 @@ func animate() -> void:
 		$AnimatedSprite.speed_scale=3
 		$AnimatedSprite.play(PickAnimation(RUN))
 		
-func _on_jumptimer_timeout() -> void:
+func _on_jumptimer_timeout():
 		set_collision_mask_bit(Global.PLATFORM,true)
 
-func _on_Cat_Food() -> void:
+func _on_Cat_Food():
 	if Global.Stamina<100:
 		Global.Stamina+=FOOD
 		if Global.Stamina>100:
 			Global.Stamina=100
 
-func _on_Cat_Enemy() -> void:
-	if !Life:
+func _on_Cat_Enemy():
+#if enemy is meet
+	if !Global.Life:
 		return
 #	set_collision_mask_bit(Global.PLATFORM,false)
 #	set_collision_mask_bit(Global.GROUND,false)
 #	$AnimatedSprite.flip_v=true
 #	$AnimatedSprite.rotate(rand_range(0.0,1.0))
-	Life=false
-	Global.LifesLeft-=1
+	Global.Life=false #die
+	Global.LifesLeft-=1 #decrease lifes counter
 	pass # Replace with function body.
 
-func deathcheck() -> void:
-	if Global.Stamina<=0 || velocity.y>1500 || !Life:
+func deathcheck(): 
+	if Global.Stamina<=0 || velocity.y>1500 || !Global.Life:
+		Global.Life=false #die if trigered by highfall or stamina
 		queue_free()
 
+#message handling
 func _on_Cat_Message(message):
 	$Cam/HUD/HUDPanel/Message.text=str(message)
 	$messagetimer.start(5)
-	pass # Replace with function body.
-
 func _on_messagetimer_timeout():
 	$Cam/HUD/HUDPanel/Message.text=""
-	pass # Replace with function body.

@@ -112,17 +112,17 @@ position = Vector2( 1312, 264 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 1
+frame = 13
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 1
+frame = 13
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 0
+frame = 12
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
