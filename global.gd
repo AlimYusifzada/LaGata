@@ -2,15 +2,14 @@ extends Node
 
 #general constants
 const GRAVITY = 1500
-#const GROUND=1# ground layer, user cant jump off the ground 
-#const PLATFORM=2# platforms layer, user can jump on and off the platform
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
-#Player parameters
-var KeysRing=[0,0,0] #Yellow(),Green,Black
+#Player(game) parameters
+enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
+var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level=0 #current level
 var LifesLeft=7
-var Life=true #player life status - default true
+var PlayerAlive=true #player life status - default true
 var isChild=false #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
@@ -24,3 +23,10 @@ var HUD
 var Arrow
 var Crow
 var Shit
+
+func getLevelScene(level):
+	var pathS="res://Levels/"
+	var pathM="level"
+	var pathE=".tscn"
+	
+	pass

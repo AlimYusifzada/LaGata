@@ -11,6 +11,7 @@ enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
 var Animate_Mode="Kitten"
 var velocity=Vector2()
+var Life=true
 
 
 signal Food
@@ -23,7 +24,8 @@ func _ready():
 	randomize()
 	$AnimatedSprite.playing=true
 	$jumptimer.wait_time=0.5
-	Global.Life=true
+	Global.PlayerAlive=true
+	Life=true
 	pass # Replace with function body.
 
 func _physics_process(delta):
@@ -53,7 +55,7 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 		
 func jump():
-	if !Global.Life: return
+	if !Life: return
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		$jumptimer.start()		
 		velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)
@@ -67,7 +69,7 @@ func jump():
 		set_collision_mask_bit(Global.PLATFORM,false)
 			
 func run(delta):
-	if !Global.Life: return
+	if !Life: return
 	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
@@ -91,7 +93,7 @@ func run(delta):
 				velocity.x=0
 		
 func animate():
-	if !Global.Life:
+	if !Life:
 		return
 	if velocity.y!=0 and !is_on_floor():
 		$AnimatedSprite.speed_scale=3
@@ -117,19 +119,19 @@ func _on_Cat_Food():
 
 func _on_Cat_Enemy():
 #if enemy is meet
-	if !Global.Life:
+	if !Life:
 		return
 #	set_collision_mask_bit(Global.PLATFORM,false)
 #	set_collision_mask_bit(Global.GROUND,false)
 #	$AnimatedSprite.flip_v=true
 #	$AnimatedSprite.rotate(rand_range(0.0,1.0))
-	Global.Life=false #die
+	Life=false #die
 	Global.LifesLeft-=1 #decrease lifes counter
 	pass # Replace with function body.
 
 func deathcheck(): 
-	if Global.Stamina<=0 || velocity.y>1500 || !Global.Life:
-		Global.Life=false #die if trigered by highfall or stamina
+	if Global.Stamina<=0 || velocity.y>1500 || !Life:
+		Global.PlayerAlive=false #die if trigered by highfall or stamina
 		queue_free()
 
 #message handling

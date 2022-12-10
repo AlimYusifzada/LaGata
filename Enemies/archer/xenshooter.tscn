@@ -204,8 +204,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 16, 26 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 8, 12 )
+[sub_resource type="CapsuleShape2D" id=72]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 16, 2.5 )
@@ -234,8 +233,8 @@ position = Vector2( 0, 6 )
 shape = SubResource( 6 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 16 )
-shape = SubResource( 7 )
+position = Vector2( 0, 8 )
+shape = SubResource( 72 )
 
 [node name="head" type="Area2D" parent="."]
 collision_layer = 0

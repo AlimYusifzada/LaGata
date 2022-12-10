@@ -56,8 +56,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 64, 24 )
+[sub_resource type="CapsuleShape2D" id=16]
+radius = 24.0
+height = 60.898
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 20, 255 )
@@ -104,6 +105,7 @@ collision_mask = 0
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CrowBody"]
 frames = SubResource( 10 )
 animation = "Fly"
+frame = 1
 speed_scale = 2.5
 playing = true
 
@@ -112,7 +114,8 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody/body"]
 position = Vector2( 0.869995, 24 )
-shape = SubResource( 13 )
+rotation = 1.5708
+shape = SubResource( 16 )
 
 [node name="shitzone" type="Area2D" parent="CrowBody"]
 position = Vector2( 0.319099, 24 )

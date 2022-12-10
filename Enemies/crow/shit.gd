@@ -2,7 +2,7 @@
 
 extends KinematicBody2D
 
-const SCALE=Vector2(0.6,0.6)
+const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2(0,0)
 
 func _ready():
