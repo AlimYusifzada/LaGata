@@ -1,4 +1,5 @@
 extends Node
+#scenes
 
 #general constants
 const GRAVITY = 1500
@@ -28,5 +29,4 @@ func getLevelScene(level):
 	var pathS="res://Levels/"
 	var pathM="level"
 	var pathE=".tscn"
-	
 	pass

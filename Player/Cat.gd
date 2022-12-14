@@ -12,6 +12,7 @@ var Animate_Name=["Jump","Sit","Walk","Run"]
 var Animate_Mode="Kitten"
 var velocity=Vector2()
 var Life=true
+var animfinish=true
 
 
 signal Food
@@ -95,16 +96,16 @@ func run(delta):
 func animate():
 	if !Life:
 		return
-	if velocity.y!=0 and !is_on_floor():
+	if velocity.y!=0 && !is_on_floor():
 		$AnimatedSprite.speed_scale=3
 		$AnimatedSprite.play(PickAnimation(JUMP))
-	if velocity.x==0 and is_on_floor():
+	if velocity.x==0 && is_on_floor():
 		$AnimatedSprite.speed_scale=0.1
 		$AnimatedSprite.play(PickAnimation(SIT))
-	elif abs(velocity.x)<=SPEED and is_on_floor():
+	elif abs(velocity.x)<=SPEED && is_on_floor():
 		$AnimatedSprite.speed_scale=2
 		$AnimatedSprite.play(PickAnimation(WALK))
-	elif abs(velocity.x)>SPEED and is_on_floor():
+	elif abs(velocity.x)>SPEED && is_on_floor():
 		$AnimatedSprite.speed_scale=3
 		$AnimatedSprite.play(PickAnimation(RUN))
 		

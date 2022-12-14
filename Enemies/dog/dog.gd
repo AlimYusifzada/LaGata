@@ -5,7 +5,7 @@ extends KinematicBody2D
 #const ARROW=preload("res://Enemies//arrow.tscn")
 const MINSPEED=250.0
 const JUMP_VELOCITY=-600
-const SCALE=Vector2(0.8,0.8)
+const SCALE=Vector2(0.9,0.9)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
