@@ -205,6 +205,7 @@ animations = [ {
 extents = Vector2( 16, 26 )
 
 [sub_resource type="CapsuleShape2D" id=72]
+height = 0.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 16, 2.5 )
@@ -233,7 +234,7 @@ position = Vector2( 0, 6 )
 shape = SubResource( 6 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8 )
+position = Vector2( 0, 16 )
 shape = SubResource( 72 )
 
 [node name="head" type="Area2D" parent="."]

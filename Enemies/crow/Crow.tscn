@@ -61,7 +61,7 @@ radius = 24.0
 height = 60.898
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 20, 255 )
+extents = Vector2( 24, 255.5 )
 
 [sub_resource type="RectangleShape2D" id=15]
 
@@ -98,14 +98,13 @@ tracks/1/keys = {
 script = ExtResource( 2 )
 
 [node name="CrowBody" type="KinematicBody2D" parent="."]
-position = Vector2( 110.681, 0 )
 collision_layer = 0
 collision_mask = 0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="CrowBody"]
 frames = SubResource( 10 )
 animation = "Fly"
-frame = 1
+frame = 4
 speed_scale = 2.5
 playing = true
 
@@ -123,7 +122,7 @@ collision_layer = 0
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody/shitzone"]
-position = Vector2( -3.0001, 616 )
+position = Vector2( -7.0001, 487.5 )
 shape = SubResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody"]

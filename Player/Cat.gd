@@ -25,7 +25,7 @@ func _ready():
 	randomize()
 	$AnimatedSprite.playing=true
 	$jumptimer.wait_time=0.5
-	Global.PlayerAlive=true
+#	Global.PlayerAlive=true
 	Life=true
 	pass # Replace with function body.
 
@@ -37,6 +37,9 @@ func _physics_process(delta):
 	run(delta)
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)
+	if Input.is_action_pressed("ui_cancel"):
+		Global.saveGameState()
+		Global.PlayerAlive=false
 	
 func _process(delta): 
 	animate()

@@ -134,11 +134,11 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 16, 24 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 8, 12 )
-
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 16, 2.5 )
+
+[sub_resource type="CapsuleShape2D" id=44]
+height = 0.0
 
 [node name="xen" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -157,10 +157,6 @@ collision_mask = 0
 position = Vector2( 0, 8 )
 shape = SubResource( 6 )
 
-[node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 16 )
-shape = SubResource( 7 )
-
 [node name="head" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
@@ -173,6 +169,10 @@ one_shot = true
 
 [node name="JumpTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="GravCol" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 16 )
+shape = SubResource( 44 )
 
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]

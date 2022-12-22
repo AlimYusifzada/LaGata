@@ -36,6 +36,9 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food")
 		Global.MiceCatches+=1
+		if Global.MiceCatches>10:
+			Global.isChild=false
+			Global.saveGameState()
 		Life=false
 	pass # Replace with function body.
 	

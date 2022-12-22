@@ -290,7 +290,7 @@ smoothing_speed = 10.0
 [node name="jumptimer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.49012e-08, 16 )
+position = Vector2( 3.90799e-14, 8 )
 rotation = 1.56375
 shape = SubResource( 80 )
 
