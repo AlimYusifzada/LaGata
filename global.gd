@@ -83,7 +83,7 @@ func loadGameState():
 		isChild=GameState["isChild"]
 		Stamina=GameState["Stamina"]
 		MiceCatches=GameState["MiceCatches"]
-		print(getLevelScene(Level))
+#		print(getLevelScene(Level))
 		return
 	else:
 		saveGameState()

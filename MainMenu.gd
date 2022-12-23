@@ -2,6 +2,11 @@ extends Node2D
 
 
 func _ready():
+	Global.loadGameState()
+	if Global.LifesLeft<=0:
+		$Comtinue.disabled=true
+	else:
+		$Comtinue.disabled=false
 	pass
 
 func _on_StartNewGame_pressed():
@@ -15,7 +20,7 @@ func _on_Exit_pressed():
 	pass # Replace with function body.
 
 func _on_Comtinue_pressed():
-	Global.loadGameState()
-	Global.PlayerAlive=true
-	get_tree().change_scene("res://Main.tscn")
+	if Global.LifesLeft>0:
+		Global.PlayerAlive=true
+		get_tree().change_scene("res://Main.tscn")
 	pass # Replace with function body.

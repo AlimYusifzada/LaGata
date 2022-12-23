@@ -5,6 +5,7 @@ const FOOD=10
 const ENEMY=20
 const MAXSPEED=500
 const JUMP_VELOCITY=-600
+const KITTEN_MOD=1.2 #jumping modifiyer
 const SCALE=Vector2(0.5,0.5)
 
 enum {JUMP,SIT,WALK,RUN}
@@ -64,9 +65,9 @@ func jump():
 		$jumptimer.start()		
 		velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)
 		if Global.isChild:
-			velocity.y=velocity.y/1.5 #makes jumps shorter for kitten
+			velocity.y=velocity.y/KITTEN_MOD #makes jumps shorter for kitten
 		set_collision_mask_bit(Global.PLATFORM,false)
-		if Global.Stamina>10: Global.Stamina-=0.1
+		if Global.Stamina>10: Global.Stamina-=0.2
 		
 	elif Input.is_action_pressed("ui_down") and is_on_floor():
 		$jumptimer.start()
@@ -131,6 +132,7 @@ func _on_Cat_Enemy():
 #	$AnimatedSprite.rotate(rand_range(0.0,1.0))
 	Life=false #die
 	Global.LifesLeft-=1 #decrease lifes counter
+	Global.saveGameState()
 	pass # Replace with function body.
 
 func deathcheck(): 

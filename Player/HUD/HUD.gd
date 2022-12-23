@@ -9,13 +9,11 @@ func _ready():
 	$HUDPanel/CatStat.scale=NSCALE
 	$HUDPanel/MiceStat.scale=NSCALE
 	$HUDPanel/Keys.scale=NSCALE
-	var prays=get_tree().get_nodes_in_group("Pray")
-	$HUDPanel/MiceStat/MiceLeft.text=str(len(prays))
+	$HUDPanel/LvlCounter.text="Lvl="+str(Global.Level)
 	pass
 	
 func _process(delta):
 	getsetVal()
-	$HUDPanel/LvlCounter.text="Lvl="+str(Global.Level)
 
 func getsetVal():
 	var l=int($HUDPanel/CatStat/LifeCounter.text)
@@ -23,15 +21,17 @@ func getsetVal():
 	var m=int($HUDPanel/MiceStat/MiceCounter.text)
 	var k=int($HUDPanel/Keys/KeysCounter.text)
 	if l!=Global.LifesLeft:
-		$HUDPanel/CatStat/LifeCounter.text="Cats="+str(Global.LifesLeft)
+		$HUDPanel/CatStat/LifeCounter.text=str(Global.LifesLeft)
 #	elif l==0:
 #		$HUDPanel/CatStat.scale=LSCALE
 	if s!=Global.Stamina*10:
-		$HUDPanel/CatStat/StamCounter.text="Stam="+str(Global.Stamina*10)
+		$HUDPanel/CatStat/StamCounter.text=str(Global.Stamina*10)
 #	elif s==0:
 #		$HUDPanel/CatStat.scale=LSCALE
 	if m!=Global.MiceCatches:
+		var prays=get_tree().get_nodes_in_group("Pray")
 		$HUDPanel/MiceStat/MiceCounter.text=str(Global.MiceCatches)
+		$HUDPanel/MiceStat/MiceLeft.text=str(len(prays))
 		boom($HUDPanel/MiceStat)
 	elif m==0:
 		$HUDPanel/MiceStat.scale=LSCALE #item dissappear
