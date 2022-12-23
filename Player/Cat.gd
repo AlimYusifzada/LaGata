@@ -8,6 +8,8 @@ const JUMP_VELOCITY=-600
 const KITTEN_MOD=1.2 #jumping modifiyer
 const SCALE=Vector2(0.5,0.5)
 
+var DUST=preload("res://Common/JumpDust.tscn")
+
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
 var Animate_Mode="Kitten"
@@ -60,8 +62,11 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 		
 func jump():
-	if !Life: return
 	if Input.is_action_pressed("ui_up") and is_on_floor():
+		if abs(velocity.x)>SPEED:
+			var dust=DUST.instance()
+			get_parent().add_child(dust)
+			dust.position=position
 		$jumptimer.start()		
 		velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)
 		if Global.isChild:
@@ -74,7 +79,6 @@ func jump():
 		set_collision_mask_bit(Global.PLATFORM,false)
 			
 func run(delta):
-	if !Life: return
 	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
@@ -98,8 +102,6 @@ func run(delta):
 				velocity.x=0
 		
 func animate():
-	if !Life:
-		return
 	if velocity.y!=0 && !is_on_floor():
 		$AnimatedSprite.speed_scale=3
 		$AnimatedSprite.play(PickAnimation(JUMP))
@@ -124,20 +126,14 @@ func _on_Cat_Food():
 
 func _on_Cat_Enemy():
 #if enemy is meet
-	if !Life:
-		return
-#	set_collision_mask_bit(Global.PLATFORM,false)
-#	set_collision_mask_bit(Global.GROUND,false)
-#	$AnimatedSprite.flip_v=true
-#	$AnimatedSprite.rotate(rand_range(0.0,1.0))
 	Life=false #die
-	Global.LifesLeft-=1 #decrease lifes counter
-	Global.saveGameState()
 	pass # Replace with function body.
 
 func deathcheck(): 
 	if Global.Stamina<=0 || velocity.y>1500 || !Life:
+		Global.LifesLeft-=1
 		Global.PlayerAlive=false #die if trigered by highfall or stamina
+		Global.saveGameState()
 		queue_free()
 
 #message handling

@@ -25,7 +25,7 @@ func _ready():
 func _physics_process(delta):
 	deathcheck()
 	fall(delta)
-	move(delta)
+	move()
 	move_and_slide(velocity,Global.UP)
 	pass
 
@@ -54,7 +54,7 @@ func animation():
 	else:
 		$AnimatedSprite.flip_h=true
 		
-func move(delta):
+func move():
 	if is_on_floor() and is_on_wall():
 		velocity.x*=-1
 		

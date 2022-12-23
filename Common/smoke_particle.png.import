@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kittenstop0000.png-152be1eeaff27eb67f7e64f66f9a57e5.stex"
+path="res://.import/smoke_particle.png-e802398cf8fae1d92fca153b39f8c6d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/kitten/Idle/kittenstop0000.png"
-dest_files=[ "res://.import/kittenstop0000.png-152be1eeaff27eb67f7e64f66f9a57e5.stex" ]
+source_file="res://Common/smoke_particle.png"
+dest_files=[ "res://.import/smoke_particle.png-e802398cf8fae1d92fca153b39f8c6d7.stex" ]
 
 [params]
 

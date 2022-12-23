@@ -47,7 +47,7 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 
 func animation():
-	LookAt(dest)
+	LookAt()
 	if !$DeathTimer.is_stopped(): #play death if timer is running
 		$AnimatedSprite.play("Death")
 	elif shooting:
@@ -55,7 +55,7 @@ func animation():
 	else:
 		$AnimatedSprite.play("Run")
 		
-func LookAt(dest):
+func LookAt():
 	if dest>0: #face to right or left
 		$AnimatedSprite.flip_h=false
 		return 1
@@ -105,7 +105,7 @@ func _on_AimRight_body_entered(body):
 		velocity.x*=-1
 	elif velocity.x==0:
 		velocity.x=Speed
-	LookAt(velocity.x)
+	LookAt()
 	Shoot()
 	pass # Replace with function body.
 
@@ -114,7 +114,7 @@ func _on_AimLeft_body_entered(body):
 		velocity.x*=-1
 	elif velocity.x==0:
 		velocity.x=-Speed
-	LookAt(velocity.x)
+	LookAt()
 	Shoot()
 	pass # Replace with function body.
 
@@ -129,7 +129,7 @@ func _on_AnimatedSprite_animation_finished():
 		var arrow=ARROW.instance() #create instance of arrow
 		arrow.position=position # set position
 		arrow.position.y+=15
-		arrow.velocity.x=LookAt(dest)*Speed*10
+		arrow.velocity.x=LookAt()*Speed*10
 		get_parent().add_child(arrow)
 		shooting=false
 		velocity.x=dest
