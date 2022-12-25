@@ -1,23 +1,113 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Common/coralines-cat.regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Player/Sound/l1.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Player/Sound/Lose.wav" type="AudioStream" id=4]
+[ext_resource path="res://Common/CatYawAnim/catgif0010.png" type="Texture" id=5]
+[ext_resource path="res://Common/CatYawAnim/catgif0000.png" type="Texture" id=6]
+[ext_resource path="res://Common/CatYawAnim/catgif0006.png" type="Texture" id=7]
+[ext_resource path="res://Common/CatYawAnim/catgif0005.png" type="Texture" id=8]
+[ext_resource path="res://Common/CatYawAnim/catgif0004.png" type="Texture" id=9]
+[ext_resource path="res://Common/CatYawAnim/catgif0003.png" type="Texture" id=10]
+[ext_resource path="res://Common/CatYawAnim/catgif0002.png" type="Texture" id=11]
+[ext_resource path="res://Common/CatYawAnim/catgif0001.png" type="Texture" id=12]
+[ext_resource path="res://Common/CatYawAnim/catgif0046.png" type="Texture" id=13]
+[ext_resource path="res://Common/CatYawAnim/catgif0045.png" type="Texture" id=14]
+[ext_resource path="res://Common/CatYawAnim/catgif0009.png" type="Texture" id=15]
+[ext_resource path="res://Common/CatYawAnim/catgif0041.png" type="Texture" id=16]
+[ext_resource path="res://Common/CatYawAnim/catgif0042.png" type="Texture" id=17]
+[ext_resource path="res://Common/CatYawAnim/catgif0011.png" type="Texture" id=18]
+[ext_resource path="res://Common/CatYawAnim/catgif0017.png" type="Texture" id=19]
+[ext_resource path="res://Common/CatYawAnim/catgif0013.png" type="Texture" id=20]
+[ext_resource path="res://Common/CatYawAnim/catgif0012.png" type="Texture" id=21]
+[ext_resource path="res://Common/CatYawAnim/catgif0008.png" type="Texture" id=22]
+[ext_resource path="res://Common/CatYawAnim/catgif0019.png" type="Texture" id=23]
+[ext_resource path="res://Common/CatYawAnim/catgif0052.png" type="Texture" id=24]
+[ext_resource path="res://Common/CatYawAnim/catgif0015.png" type="Texture" id=25]
+[ext_resource path="res://Common/CatYawAnim/catgif0026.png" type="Texture" id=26]
+[ext_resource path="res://Common/CatYawAnim/catgif0048.png" type="Texture" id=27]
+[ext_resource path="res://Common/CatYawAnim/catgif0018.png" type="Texture" id=28]
+[ext_resource path="res://Common/CatYawAnim/catgif0016.png" type="Texture" id=29]
+[ext_resource path="res://Common/CatYawAnim/catgif0020.png" type="Texture" id=30]
+[ext_resource path="res://Common/CatYawAnim/catgif0023.png" type="Texture" id=31]
+[ext_resource path="res://Common/CatYawAnim/catgif0025.png" type="Texture" id=32]
+[ext_resource path="res://Common/CatYawAnim/catgif0014.png" type="Texture" id=33]
+[ext_resource path="res://Common/CatYawAnim/catgif0007.png" type="Texture" id=34]
+[ext_resource path="res://Common/CatYawAnim/catgif0040.png" type="Texture" id=35]
+[ext_resource path="res://Common/CatYawAnim/catgif0028.png" type="Texture" id=36]
+[ext_resource path="res://Common/CatYawAnim/catgif0047.png" type="Texture" id=37]
+[ext_resource path="res://Common/CatYawAnim/catgif0044.png" type="Texture" id=38]
+[ext_resource path="res://Common/CatYawAnim/catgif0036.png" type="Texture" id=39]
+[ext_resource path="res://Common/CatYawAnim/catgif0038.png" type="Texture" id=40]
+[ext_resource path="res://Common/CatYawAnim/catgif0037.png" type="Texture" id=41]
+[ext_resource path="res://Common/CatYawAnim/catgif0031.png" type="Texture" id=42]
+[ext_resource path="res://Common/CatYawAnim/catgif0032.png" type="Texture" id=43]
+[ext_resource path="res://Common/CatYawAnim/catgif0039.png" type="Texture" id=44]
+[ext_resource path="res://Common/CatYawAnim/catgif0049.png" type="Texture" id=45]
+[ext_resource path="res://Common/CatYawAnim/catgif0034.png" type="Texture" id=46]
+[ext_resource path="res://Common/CatYawAnim/catgif0024.png" type="Texture" id=47]
+[ext_resource path="res://Common/CatYawAnim/catgif0027.png" type="Texture" id=48]
+[ext_resource path="res://Common/CatYawAnim/catgif0053.png" type="Texture" id=49]
+[ext_resource path="res://Common/CatYawAnim/catgif0033.png" type="Texture" id=50]
+[ext_resource path="res://Common/CatYawAnim/catgif0029.png" type="Texture" id=51]
+[ext_resource path="res://Common/CatYawAnim/catgif0030.png" type="Texture" id=52]
+[ext_resource path="res://Common/CatYawAnim/catgif0051.png" type="Texture" id=53]
+[ext_resource path="res://Common/CatYawAnim/catgif0050.png" type="Texture" id=54]
+[ext_resource path="res://Common/CatYawAnim/catgif0035.png" type="Texture" id=55]
+[ext_resource path="res://Common/CatYawAnim/catgif0022.png" type="Texture" id=56]
+[ext_resource path="res://Common/CatYawAnim/catgif0021.png" type="Texture" id=57]
+[ext_resource path="res://Common/CatYawAnim/catgif0043.png" type="Texture" id=58]
+[ext_resource path="res://Common/CatYawAnim/catlookright.png" type="Texture" id=59]
+[ext_resource path="res://Common/CatYawAnim/catlookleft.png" type="Texture" id=60]
 
 [sub_resource type="DynamicFont" id=1]
 size = 28
 font_data = ExtResource( 1 )
 
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "lookleft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "lookright",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 34 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 5 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 33 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 31 ), ExtResource( 47 ), ExtResource( 32 ), ExtResource( 26 ), ExtResource( 48 ), ExtResource( 36 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 50 ), ExtResource( 46 ), ExtResource( 55 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 44 ), ExtResource( 35 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 58 ), ExtResource( 38 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 37 ), ExtResource( 27 ), ExtResource( 45 ), ExtResource( 54 ), ExtResource( 53 ), ExtResource( 24 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "yaw",
+"speed": 5.0
+} ]
+
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 512, 256 )
+stream = ExtResource( 3 )
+area_mask = 0
+
+[node name="LooseSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 512, 256 )
+stream = ExtResource( 4 )
+
 [node name="StartNewGame" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 64.0
-margin_right = 303.0
-margin_bottom = 103.0
+margin_left = 304.0
+margin_top = 200.0
+margin_right = 709.0
+margin_bottom = 264.0
 focus_mode = 0
-custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
-custom_colors/font_color = Color( 1, 0.501961, 0, 1 )
+custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -26,13 +116,13 @@ text = "Start new game"
 flat = true
 
 [node name="Comtinue" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 128.0
-margin_right = 192.0
-margin_bottom = 167.0
+margin_left = 408.0
+margin_top = 264.0
+margin_right = 619.0
+margin_bottom = 328.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
-custom_colors/font_color = Color( 1, 0.501961, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -41,13 +131,13 @@ text = "Continue"
 flat = true
 
 [node name="Exit" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 192.0
-margin_right = 129.0
-margin_bottom = 231.0
+margin_left = 456.0
+margin_top = 328.0
+margin_right = 556.0
+margin_bottom = 392.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
-custom_colors/font_color = Color( 1, 0.501961, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -55,6 +145,15 @@ enabled_focus_mode = 0
 text = "Exit"
 flat = true
 
+[node name="CatYaw" type="AnimatedSprite" parent="."]
+position = Vector2( 526, 183 )
+frames = SubResource( 2 )
+speed_scale = 2.0
+
+[node name="CatYawDelay" type="Timer" parent="."]
+
 [connection signal="pressed" from="StartNewGame" to="." method="_on_StartNewGame_pressed"]
 [connection signal="pressed" from="Comtinue" to="." method="_on_Comtinue_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="animation_finished" from="CatYaw" to="." method="_on_CatYaw_animation_finished"]
+[connection signal="timeout" from="CatYawDelay" to="." method="_on_CatYawDelay_timeout"]

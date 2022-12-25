@@ -4,14 +4,14 @@
 [ext_resource path="res://Common/JumpDust.gd" type="Script" id=2]
 
 [node name="JumpDust" type="CPUParticles2D"]
-amount = 5
+amount = 3
 texture = ExtResource( 1 )
 direction = Vector2( 0, -1 )
-gravity = Vector2( 0, -100 )
+gravity = Vector2( 0, -5 )
 angular_velocity = 100.0
 scale_amount = 2.0
 scale_amount_random = 1.0
-color = Color( 1, 1, 1, 0.25098 )
+color = Color( 1, 1, 1, 0.12549 )
 script = ExtResource( 2 )
 
 [node name="EndTimer" type="Timer" parent="."]

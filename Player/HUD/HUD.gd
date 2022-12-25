@@ -25,7 +25,7 @@ func getsetVal():
 #	elif l==0:
 #		$HUDPanel/CatStat.scale=LSCALE
 	if s!=Global.Stamina*10:
-		$HUDPanel/CatStat/StamCounter.text=str(Global.Stamina*10)
+		$HUDPanel/CatStat/StamCounter.text=str(Global.Stamina)
 #	elif s==0:
 #		$HUDPanel/CatStat.scale=LSCALE
 	if m!=Global.MiceCatches:

@@ -13,7 +13,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Enemy")
+		body.emit_signal("Jump")
 	pass # Replace with function body.
 
 func _on_shitzone_body_entered(body):

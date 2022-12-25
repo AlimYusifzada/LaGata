@@ -9,6 +9,7 @@ const JUMP_VELOCITY=-100
 const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2()
 var Life=true
+var isRunning=true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,9 +37,6 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food")
 		Global.MiceCatches+=1
-		if Global.MiceCatches>10:
-			Global.isChild=false
-			Global.saveGameState()
 		Life=false
 	pass # Replace with function body.
 	
@@ -57,12 +55,11 @@ func animation():
 func move():
 	if is_on_floor() and is_on_wall():
 		velocity.x*=-1
-		
-		
+
 func deathcheck():
 	if !Life:
 		queue_free()
-		
+
 func jump():
 	if is_on_floor():
 		velocity.y=-JUMP_VELOCITY

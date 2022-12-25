@@ -52,7 +52,12 @@ func getLevelScene(level):
 	else:
 		return null
 	pass
-	
+
+func checkChild():
+	if Global.MiceCatches>100:
+		Global.isChild=false
+		Global.saveGameState()
+		
 func saveGameState():
 	var GameState={
 		"KeysRing":KeysRing,
