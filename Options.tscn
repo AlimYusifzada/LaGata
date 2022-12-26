@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://cat_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Options.gd" type="Script" id=2]
+[ext_resource path="res://Enemies/Sound/Hit_03.wav" type="AudioStream" id=3]
 
 [node name="Options" type="Node2D"]
 script = ExtResource( 2 )
@@ -35,27 +36,11 @@ margin_bottom = 296.0
 theme = ExtResource( 1 )
 text = "Cancel"
 
-[node name="MasterVol" type="HSlider" parent="window"]
-margin_left = 64.0
-margin_top = 49.0
-margin_right = 256.0
-margin_bottom = 65.0
-min_value = -70.0
-max_value = 10.0
-step = 5.0
-
-[node name="Label" type="Label" parent="window/MasterVol"]
-margin_left = 208.0
-margin_top = -8.0
-margin_right = 308.0
-margin_bottom = 25.0
-text = "Master"
-
 [node name="MusicVol" type="HSlider" parent="window"]
 margin_left = 64.0
-margin_top = 113.0
+margin_top = 136.0
 margin_right = 256.0
-margin_bottom = 129.0
+margin_bottom = 152.0
 min_value = -70.0
 max_value = 10.0
 step = 5.0
@@ -69,9 +54,9 @@ text = "Music"
 
 [node name="SFXVol" type="HSlider" parent="window"]
 margin_left = 64.0
-margin_top = 177.0
+margin_top = 200.0
 margin_right = 256.0
-margin_bottom = 193.0
+margin_bottom = 216.0
 min_value = -70.0
 max_value = 10.0
 step = 5.0
@@ -83,8 +68,10 @@ margin_right = 248.0
 margin_bottom = 25.0
 text = "SFX"
 
+[node name="SFXTest" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
 [connection signal="pressed" from="window/OKButton" to="." method="_on_OKButton_pressed"]
 [connection signal="pressed" from="window/CancelButton" to="." method="_on_CancelButton_pressed"]
-[connection signal="value_changed" from="window/MasterVol" to="." method="_on_MasterVol_value_changed"]
 [connection signal="value_changed" from="window/MusicVol" to="." method="_on_MusicVol_value_changed"]
 [connection signal="value_changed" from="window/SFXVol" to="." method="_on_SFXVol_value_changed"]

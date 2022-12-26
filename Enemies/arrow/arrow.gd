@@ -7,6 +7,8 @@ func _ready():
 	Global.Arrow=self
 	set_scale(SCALE)
 	visible=true
+	$woosh.volume_db=Global.SFXVol
+	$woosh.play()
 	$RemoveTimer.start(1)
 	pass
 

@@ -11,7 +11,6 @@ func _on_Lava_body_entered(body):
 	$Smoke.play("default")
 	pass # Replace with function body.
 
-
 func _on_Smoke_animation_finished():
 	$Smoke.visible=false
 	pass # Replace with function body.

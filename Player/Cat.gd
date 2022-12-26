@@ -8,6 +8,7 @@ const KITTEN_MOD=1.2 #jumping modifiyer
 const SCALE=Vector2(0.5,0.5)
 
 var DUST=preload("res://Common/JumpDust.tscn")
+var Options=preload("res://Options.tscn")
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -138,6 +139,7 @@ func _on_jumptimer_timeout():
 		set_collision_mask_bit(Global.PLATFORM,true)
 
 func _on_Cat_Food():
+	$CollectSound.volume_db=Global.SFXVol
 	$CollectSound.play()
 	if Global.Stamina<100:
 		Global.Stamina+=FOOD

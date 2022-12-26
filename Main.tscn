@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=8]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_01_2048 x 1546.png" type="Texture" id=9]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_03_2048 x 1546.png" type="Texture" id=10]
+[ext_resource path="res://Enemies/spider/ambusher.tscn" type="PackedScene" id=11]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_04_2048 x 1546.png" type="Texture" id=12]
 [ext_resource path="res://PARALLAX/PastelCountry/layer_02_2048 x 1546.png" type="Texture" id=13]
 [ext_resource path="res://PARALLAX/Sewers/sewers.png" type="Texture" id=14]
@@ -133,15 +134,17 @@ scale = Vector2( 0.5, 0.5 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
+frame = 10
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
+frame = 10
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 7
+frame = 9
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
@@ -307,3 +310,6 @@ position = Vector2( 232, 237 )
 
 [node name="spider" parent="." instance=ExtResource( 8 )]
 position = Vector2( -944, 581 )
+
+[node name="ambusher" parent="." instance=ExtResource( 11 )]
+position = Vector2( -480, 341 )
