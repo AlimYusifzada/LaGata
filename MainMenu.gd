@@ -1,10 +1,15 @@
 extends Node2D
 
+onready var OptionsMenu=preload("res://Options.tscn")
+
+signal OptionsChanged
 
 func _ready():
 	randomize()
 	$CatYawDelay.start(rand_range(3.0,15.0))
+	Global.loadGameOptions()
 	Global.loadGameState()
+	$BGMusic.volume_db=Global.MusicVol
 	$BGMusic.play()
 	if Global.LifesLeft<=0:
 		$Comtinue.disabled=true
@@ -50,4 +55,15 @@ func _on_CatYawDelay_timeout():
 func _on_CatYaw_animation_finished():
 	$CatYaw.stop()
 	$CatYawDelay.start(rand_range(3.0,10.0))
+	pass # Replace with function body.
+
+
+func _on_Options_pressed():
+	var om=OptionsMenu.instance()
+	om.position=Vector2(220,150)
+	self.add_child(om)
+	pass # Replace with function body.
+
+func _on_MainMenu_OptionsChanged():
+	$BGMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.

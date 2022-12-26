@@ -112,13 +112,13 @@ custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
 enabled_focus_mode = 0
-text = "Start new game"
+text = "Start"
 flat = true
 
 [node name="Comtinue" type="Button" parent="."]
-margin_left = 408.0
+margin_left = 506.0
 margin_top = 264.0
-margin_right = 619.0
+margin_right = 717.0
 margin_bottom = 328.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
@@ -130,11 +130,26 @@ enabled_focus_mode = 0
 text = "Continue"
 flat = true
 
+[node name="Options" type="Button" parent="."]
+margin_left = 374.0
+margin_top = 309.0
+margin_right = 585.0
+margin_bottom = 373.0
+focus_mode = 0
+custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "Options"
+flat = true
+
 [node name="Exit" type="Button" parent="."]
-margin_left = 456.0
-margin_top = 328.0
-margin_right = 556.0
-margin_bottom = 392.0
+margin_left = 529.0
+margin_top = 379.0
+margin_right = 629.0
+margin_bottom = 443.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -146,14 +161,16 @@ text = "Exit"
 flat = true
 
 [node name="CatYaw" type="AnimatedSprite" parent="."]
-position = Vector2( 526, 183 )
+position = Vector2( 486, 170 )
 frames = SubResource( 2 )
 speed_scale = 2.0
 
 [node name="CatYawDelay" type="Timer" parent="."]
 
+[connection signal="OptionsChanged" from="." to="." method="_on_MainMenu_OptionsChanged"]
 [connection signal="pressed" from="StartNewGame" to="." method="_on_StartNewGame_pressed"]
 [connection signal="pressed" from="Comtinue" to="." method="_on_Comtinue_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
 [connection signal="animation_finished" from="CatYaw" to="." method="_on_CatYaw_animation_finished"]
 [connection signal="timeout" from="CatYawDelay" to="." method="_on_CatYawDelay_timeout"]

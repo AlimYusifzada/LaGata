@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lpc faun.png-00c3795a8c09f7fe23f1872729d283dc.stex"
+path="res://.import/frame0007.png-e9bd3f3de013573aad1d754820c5b65f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/lpc faun.png"
-dest_files=[ "res://.import/lpc faun.png-00c3795a8c09f7fe23f1872729d283dc.stex" ]
+source_file="res://Enemies/spider/frame0007.png"
+dest_files=[ "res://.import/frame0007.png-e9bd3f3de013573aad1d754820c5b65f.stex" ]
 
 [params]
 

@@ -25,6 +25,8 @@ signal Jump
 signal Message(message)
 
 func _ready():
+	Global.loadGameOptions()
+	$BGM.volume_db=Global.MusicVol
 	$BGM.play()
 	set_scale(SCALE)
 	Global.Cat=self

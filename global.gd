@@ -5,6 +5,8 @@ extends Node
 const main_menu="res://MainMenu.tscn"
 
 const file_GameState="user://gamestate"
+const file_GameOptions="user://gameoptions"
+
 const GRAVITY = 1500
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
@@ -18,6 +20,11 @@ var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 
+#sound volumes (-70,10)
+var MusicVol=0
+var SFXVol=0
+var MasterVol=0
+
 #modules (objects)
 var Cat
 
@@ -28,8 +35,8 @@ var Arrow
 var Crow
 var Shit
 
-func _ready():
-	get_tree().change_scene(main_menu)
+#func _ready():
+	#get_tree().change_scene(main_menu)
 
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
@@ -57,6 +64,18 @@ func checkChild():
 	if Global.MiceCatches>100:
 		Global.isChild=false
 		Global.saveGameState()
+
+func saveGameOptions():
+	var GameOptions={
+		"MasterVol":MasterVol,
+		"SFXVol":SFXVol,
+		"MusicVol":MusicVol
+		}
+	var f=File.new()
+	f.open(file_GameOptions,File.WRITE)
+	f.store_line(to_json(GameOptions))
+	f.close()
+	pass
 		
 func saveGameState():
 	var GameState={
@@ -73,7 +92,22 @@ func saveGameState():
 	f.store_line(to_json(GameState))
 	f.close()
 	pass
-	
+
+func loadGameOptions():
+	var GameOptions={}
+	var f=File.new()
+	if f.file_exists(file_GameOptions):
+		f.open(file_GameOptions,File.READ)
+		GameOptions=parse_json(f.get_line())
+		f.close()
+		MusicVol=GameOptions["MusicVol"]
+		SFXVol=GameOptions["SFXVol"]
+		MasterVol=GameOptions["MasterVol"]
+		return
+	else:
+		saveGameOptions()
+	pass
+
 func loadGameState():
 	var GameState={}
 	var f=File.new()
@@ -92,5 +126,4 @@ func loadGameState():
 		return
 	else:
 		saveGameState()
-		print("gamestate record not found")
 	pass
