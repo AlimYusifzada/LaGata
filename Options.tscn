@@ -2,7 +2,7 @@
 
 [ext_resource path="res://cat_theme.tres" type="Theme" id=1]
 [ext_resource path="res://Options.gd" type="Script" id=2]
-[ext_resource path="res://Enemies/Sound/Hit_03.wav" type="AudioStream" id=3]
+[ext_resource path="res://Enemies/arrow/mixkit-arrow-whoosh-1491.wav" type="AudioStream" id=3]
 
 [node name="Options" type="Node2D"]
 script = ExtResource( 2 )
@@ -70,6 +70,7 @@ text = "SFX"
 
 [node name="SFXTest" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+area_mask = 0
 
 [connection signal="pressed" from="window/OKButton" to="." method="_on_OKButton_pressed"]
 [connection signal="pressed" from="window/CancelButton" to="." method="_on_CancelButton_pressed"]

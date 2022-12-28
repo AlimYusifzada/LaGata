@@ -22,8 +22,8 @@
 [ext_resource path="res://Player/kitten/Run/kittenrun0003.png" type="Texture" id=20]
 [ext_resource path="res://Player/kitten/Run/kittenrun0006.png" type="Texture" id=21]
 [ext_resource path="res://Player/kitten/Run/kittenrun0001.png" type="Texture" id=22]
-[ext_resource path="res://Player/Sound/Jump.wav" type="AudioStream" id=23]
-[ext_resource path="res://Player/Sound/Collect_Point.wav" type="AudioStream" id=24]
+[ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
+[ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://Player/kitten/Jump/kittenjump0003.png" type="Texture" id=25]
 [ext_resource path="res://Player/kitten/Jump/kittenjump0000.png" type="Texture" id=26]
 [ext_resource path="res://Player/kitten/Jump/kittenjump0001.png" type="Texture" id=27]
@@ -312,11 +312,11 @@ shape = SubResource( 80 )
 [node name="koyotetimer" type="Timer" parent="."]
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 23 )
+stream = ExtResource( 24 )
 area_mask = 6
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 24 )
+stream = ExtResource( 23 )
 area_mask = 6
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]

@@ -73,9 +73,11 @@ func move(delta):
 	jump_from_wall()
 
 func jump_from_wall():
-	if is_on_floor() and is_on_wall():
+	if is_on_floor() && is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
+	elif !is_on_floor() && randf()>0.9:
+		velocity.x*=-1
 
 func deathcheck():
 	if !Life:
@@ -96,7 +98,7 @@ func _on_DeathTimer_timeout():
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
-	if rand_range(0.0,1.0)<0.3:
+	if randf()<0.2:
 		velocity.x*=-1
 	JumpTimer.stop()
 	pass # Replace with function body.

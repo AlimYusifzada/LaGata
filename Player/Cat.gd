@@ -18,6 +18,7 @@ onready var JumperTimer=$jumptimer
 onready var KoyoteTimer=$koyotetimer
 onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
+onready var JumpSound=$JumpSound
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -35,6 +36,8 @@ signal Message(message)
 
 func _ready():
 	Global.loadGameOptions()
+	JumpSound.volume_db=Global.SFXVol
+	CollectSound.volume_db=Global.SFXVol
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()
 	set_scale(SCALE)
@@ -87,6 +90,7 @@ func EmitDust():
 	var dust=DUST.instance()
 	get_parent().add_child(dust)
 	dust.position=position
+	JumpSound.play()
 
 func CheckJump():
 	if Input.is_action_just_pressed("ui_up") && JumpIsPossible:

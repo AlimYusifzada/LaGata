@@ -12,6 +12,7 @@ var Life=true
 onready var DogAnimation=$AnimatedSprite
 onready var DeathTimer=$DeathTimer
 onready var JumpTimer=$JumpTimer
+onready var Voice=$Voice
 
 #var shooting=false
 var dest=velocity.x
@@ -25,6 +26,7 @@ func _ready():
 	DogAnimation.speed_scale=Speed/(MINSPEED/2.0)
 	DogAnimation.play("Run")
 	velocity.x=Speed
+	Voice.volume_db=Global.SFXVol
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -53,8 +55,6 @@ func animation():
 	LookAt()
 	if !DeathTimer.is_stopped(): #play death if timer is running
 		DogAnimation.play("Death")
-#	elif shooting:
-#		$AnimatedSprite.play("Shoot")
 	else:
 		DogAnimation.play("Run")
 		
@@ -69,12 +69,10 @@ func LookAt():
 func move(delta):
 	if velocity.x!=0:
 		dest=velocity.x
-#	elif !shooting:
-#		velocity.x=Speed
 	jump_from_wall()
 
 func jump_from_wall():
-	if is_on_floor() and is_on_wall():
+	if is_on_floor() && is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
 
@@ -85,7 +83,6 @@ func deathcheck():
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		#drop sceleton down
 		set_collision_mask_bit(Global.GROUND,false)
 		set_collision_mask_bit(Global.PLATFORM,false)
 		DeathTimer.start()
@@ -97,43 +94,40 @@ func _on_DeathTimer_timeout():
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
-	if rand_range(0.0,1.0)<0.3:
+	if randf()<0.3:
 		velocity.x*=-1
 	JumpTimer.stop()
 	pass # Replace with function body.
 
-
+func MakeVoice(body):
+	if body.is_in_group("Cats"):
+		Voice.play()
+func ShutVoice(body):
+	if body.is_in_group("Cats"):
+		Voice.stop()
+		
 func _on_AimRight_body_entered(body):
+	MakeVoice(body)
 	if velocity.x<0:
 		velocity.x*=-1
 	elif velocity.x==0:
 		velocity.x=Speed
 	LookAt()
-#	Shoot()
 	pass # Replace with function body.
 
 func _on_AimLeft_body_entered(body):
+	MakeVoice(body)
 	if velocity.x>0:
 		velocity.x*=-1
 	elif velocity.x==0:
 		velocity.x=-Speed
 	LookAt()
-#	Shoot()
 	pass # Replace with function body.
 
-#func Shoot():
-#	dest=velocity.x
-#	velocity.x=0
-#	shooting=true
-#	pass
-	
-#func _on_AnimatedSprite_animation_finished():
-#	if shooting:
-#		var arrow=ARROW.instance() #create instance of arrow
-#		arrow.position=position # set position
-#		arrow.position.y+=15
-#		arrow.velocity.x=LookAt(dest)*Speed*10
-#		get_parent().add_child(arrow)
-#		shooting=false
-#		velocity.x=dest
-#	pass # Replace with function body.
+func _on_AimRight_body_exited(body):
+	ShutVoice(body)
+	pass # Replace with function body.
+
+func _on_AimLeft_body_exited(body):
+	ShutVoice(body)
+	pass # Replace with function body.

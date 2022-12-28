@@ -10,15 +10,16 @@ const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2()
 var Life=true
 var isRunning=true
+onready var MouseSprite=$AnimatedSprite
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
 	SPEED=rand_range(MINSPEED,MINSPEED+100)
-	$AnimatedSprite.speed_scale=SPEED/(MINSPEED/3)
+	MouseSprite.speed_scale=SPEED/(MINSPEED/3)
 	set_scale(SCALE)
-	$AnimatedSprite.play("Run")
+	MouseSprite.play("Run")
 	velocity.x=SPEED
 	pass # Replace with function body.
 	
@@ -47,15 +48,16 @@ func fall(delta):
 
 func animation():
 	if velocity.x>0:
-		$AnimatedSprite.flip_h=false
+		MouseSprite.flip_h=false
 	else:
-		$AnimatedSprite.flip_h=true
+		MouseSprite.flip_h=true
 		
 func move():
 	if is_on_floor() && is_on_wall():
 		velocity.x*=-1
-#	elif !is_on_floor():
-#		velocity.x*=-1
+	elif !is_on_floor():
+		if randf()>0.9:
+			velocity.x*=-1
 		
 func deathcheck():
 	if !Life:
@@ -64,4 +66,4 @@ func deathcheck():
 func jump():
 	velocity.y=-JUMP_VELOCITY
 	pass
-	
+

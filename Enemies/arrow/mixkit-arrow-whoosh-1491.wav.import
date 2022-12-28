@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Jump.wav-38bd5027c1c3fcad30d5035f341fb537.sample"
+path="res://.import/mixkit-arrow-whoosh-1491.wav-6ee682b35375ac2bab41edfd58091852.sample"
 
 [deps]
 
-source_file="res://Player/Sound/Jump.wav"
-dest_files=[ "res://.import/Jump.wav-38bd5027c1c3fcad30d5035f341fb537.sample" ]
+source_file="res://Enemies/arrow/mixkit-arrow-whoosh-1491.wav"
+dest_files=[ "res://.import/mixkit-arrow-whoosh-1491.wav-6ee682b35375ac2bab41edfd58091852.sample" ]
 
 [params]
 
