@@ -52,15 +52,16 @@ func animation():
 		$AnimatedSprite.flip_h=true
 		
 func move():
-	if is_on_floor() and is_on_wall():
+	if is_on_floor() && is_on_wall():
 		velocity.x*=-1
-
+#	elif !is_on_floor():
+#		velocity.x*=-1
+		
 func deathcheck():
 	if !Life:
 		queue_free()
 
 func jump():
-	if is_on_floor():
-		velocity.y=-JUMP_VELOCITY
+	velocity.y=-JUMP_VELOCITY
 	pass
 	

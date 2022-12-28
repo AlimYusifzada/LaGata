@@ -8,13 +8,13 @@
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/64xt/Lava/Lava.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=8]
-[ext_resource path="res://PARALLAX/PastelCountry/layer_01_2048 x 1546.png" type="Texture" id=9]
-[ext_resource path="res://PARALLAX/PastelCountry/layer_03_2048 x 1546.png" type="Texture" id=10]
+[ext_resource path="res://Backgrounds/PastelCountry/layer_01_2048 x 1546.png" type="Texture" id=9]
+[ext_resource path="res://Backgrounds/PastelCountry/layer_03_2048 x 1546.png" type="Texture" id=10]
 [ext_resource path="res://Enemies/spider/ambusher.tscn" type="PackedScene" id=11]
-[ext_resource path="res://PARALLAX/PastelCountry/layer_04_2048 x 1546.png" type="Texture" id=12]
-[ext_resource path="res://PARALLAX/PastelCountry/layer_02_2048 x 1546.png" type="Texture" id=13]
-[ext_resource path="res://PARALLAX/Sewers/sewers.png" type="Texture" id=14]
-[ext_resource path="res://PARALLAX/PastelCountry/layer_05_2048 x 1546.png" type="Texture" id=15]
+[ext_resource path="res://Backgrounds/PastelCountry/layer_04_2048 x 1546.png" type="Texture" id=12]
+[ext_resource path="res://Backgrounds/PastelCountry/layer_02_2048 x 1546.png" type="Texture" id=13]
+[ext_resource path="res://Backgrounds/Sewers/sewers.png" type="Texture" id=14]
+[ext_resource path="res://Backgrounds/PastelCountry/layer_05_2048 x 1546.png" type="Texture" id=15]
 [ext_resource path="res://Common/Doors/SDoor/InternalDoor.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Enemies/archer/xenknight.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Common/Doors/GoldKey.tscn" type="PackedScene" id=18]
@@ -134,21 +134,21 @@ scale = Vector2( 0.5, 0.5 )
 [node name="torch2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 10
+frame = 1
 
 [node name="torch3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 10
+frame = 1
 
 [node name="torch4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 9
+frame = 0
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 2 )]
-position = Vector2( -912, 301 )
+position = Vector2( -95, -123 )
 
 [node name="Mouse" parent="." instance=ExtResource( 3 )]
 position = Vector2( -282, -354 )

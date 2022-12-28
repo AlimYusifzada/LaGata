@@ -1,4 +1,4 @@
-#ambusher
+#ambusher (animation?) spider waiting for the pray
 extends Sprite
 
 onready var Spider=preload("res://Enemies/spider/spider.tscn")

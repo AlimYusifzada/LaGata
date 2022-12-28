@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemies/spider/spider.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/spider/frame0006.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/spider/frame0005.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/spider/frame0000.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/spider/frame0002.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/spider/frame0001.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/spider/frame0004.png" type="Texture" id=8]
-[ext_resource path="res://Enemies/spider/frame0003.png" type="Texture" id=9]
-[ext_resource path="res://Enemies/spider/frame0007.png" type="Texture" id=10]
+[ext_resource path="res://Enemies/spider/sprites/frame0006.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/spider/sprites/frame0005.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/spider/sprites/frame0000.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/spider/sprites/frame0002.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/spider/sprites/frame0001.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/spider/sprites/frame0004.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/spider/sprites/frame0003.png" type="Texture" id=9]
+[ext_resource path="res://Enemies/spider/sprites/frame0007.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
