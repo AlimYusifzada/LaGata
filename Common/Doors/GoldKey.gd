@@ -1,3 +1,4 @@
+#key (gold)
 extends Sprite
 
 func _ready():

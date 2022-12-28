@@ -1,22 +1,26 @@
+#arrow
+
 extends KinematicBody2D
 
 const SCALE=Vector2(2,2)
 var velocity=Vector2(0,0) # only x wiil change
+onready var woosh=$woosh
+onready var RemoveTimer=$RemoveTimer
+onready var sprite=$arrow/Sprite
 
 func _ready():
-	Global.Arrow=self
 	set_scale(SCALE)
 	visible=true
-	$woosh.volume_db=Global.SFXVol
-	$woosh.play()
-	$RemoveTimer.start(1)
+	woosh.volume_db=Global.SFXVol
+	woosh.play()
+	RemoveTimer.start(1)
 	pass
 
 func _process(delta):
 	if velocity.x>0:
-		$arrow/Sprite.flip_h=true
+		sprite.flip_h=true
 	else:
-		$arrow/Sprite.flip_h=false
+		sprite.flip_h=false
 		
 func _physics_process(delta):
 	move_and_slide(velocity)

@@ -14,7 +14,6 @@ var isRunning=true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.Mouse=self
 	randomize()
 	SPEED=rand_range(MINSPEED,MINSPEED+100)
 	$AnimatedSprite.speed_scale=SPEED/(MINSPEED/3)

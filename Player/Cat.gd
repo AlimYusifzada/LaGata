@@ -1,18 +1,26 @@
-extends KinematicBody2D
 #cat & kitten
-const SPEED=350   #walking speed
-const FOOD=1
-const MAXSPEED=500
+
+extends KinematicBody2D
+const SPEED=350   	#walking speed
+const FOOD=1 		#stamina increased by this value
+const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-600
 const KITTEN_MOD=1.2 #jumping modifiyer
 const SCALE=Vector2(0.5,0.5)
+const Animate_Mode="Kitten"
 
-var DUST=preload("res://Common/JumpDust.tscn")
-var Options=preload("res://Options.tscn")
+onready var DUST=preload("res://Common/JumpDust.tscn")
+onready var Options=preload("res://Options.tscn")
+onready var Message=$Cam/HUD/HUDPanel/Message
+onready var PlayerSprite=$AnimatedSprite
+onready var BackgroundMusic=$BGM
+onready var JumperTimer=$jumptimer
+onready var KoyoteTimer=$koyotetimer
+onready var CollectSound=$CollectSound
+onready var MessageTimer=$messagetimer
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
-var Animate_Mode="Kitten"
 var velocity=Vector2()
 var Life=true
 var animfinish=true
@@ -27,13 +35,12 @@ signal Message(message)
 
 func _ready():
 	Global.loadGameOptions()
-	$BGM.volume_db=Global.MusicVol
-	$BGM.play()
+	BackgroundMusic.volume_db=Global.MusicVol
+	BackgroundMusic.play()
 	set_scale(SCALE)
-	Global.Cat=self
 	randomize()
-	$AnimatedSprite.playing=true
-	$jumptimer.wait_time=0.5
+	PlayerSprite.playing=true
+	JumperTimer.wait_time=0.5
 #	Global.PlayerAlive=true
 	Life=true
 	pass # Replace with function body.
@@ -56,10 +63,10 @@ func _process(delta):
 	animate()
 	
 func KoyoteTimeCheck():
-	if !is_on_floor() && $koyotetimer.is_stopped():
-		$koyotetimer.start(KoyoteTime)
+	if !is_on_floor() && KoyoteTimer.is_stopped():
+		KoyoteTimer.start(KoyoteTime)
 	elif is_on_floor():
-		$koyotetimer.stop()
+		KoyoteTimer.stop()
 		JumpIsPossible=true
 	
 func PickAnimation(an_type=0) -> String: #pick from enum
@@ -88,11 +95,11 @@ func CheckJump():
 		if Global.Stamina>10: Global.Stamina-=0.1
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") and is_on_floor():
-		$jumptimer.start()
+		JumperTimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
 
 func jumpaction(modifier=0): #instant jump
-	$jumptimer.start()		
+	JumperTimer.start()		
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:
@@ -104,13 +111,13 @@ func CheckRun(delta):
 			velocity.x+=MAXSPEED*delta
 		else:
 			velocity.x=MAXSPEED
-		$AnimatedSprite.flip_h=true #face right
+		PlayerSprite.flip_h=true #face right
 	elif Input.is_action_pressed("ui_runleft"):#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x>-MAXSPEED:
 			velocity.x-=MAXSPEED*delta
 		else:
 			velocity.x=-MAXSPEED
-		$AnimatedSprite.flip_h=false #face left
+		PlayerSprite.flip_h=false #face left
 	else: #inertia calc - buttons released
 		if velocity.x>0:
 			velocity.x-=MAXSPEED*delta
@@ -123,24 +130,24 @@ func CheckRun(delta):
 		
 func animate(): #animation 
 	if velocity.y!=0 && !is_on_floor():
-		$AnimatedSprite.speed_scale=3
-		$AnimatedSprite.play(PickAnimation(JUMP))
+		PlayerSprite.speed_scale=3
+		PlayerSprite.play(PickAnimation(JUMP))
 	if velocity.x==0 && is_on_floor():
-		$AnimatedSprite.speed_scale=0.1
-		$AnimatedSprite.play(PickAnimation(SIT))
+		PlayerSprite.speed_scale=0.1
+		PlayerSprite.play(PickAnimation(SIT))
 	elif abs(velocity.x)<=SPEED && is_on_floor():
-		$AnimatedSprite.speed_scale=2
-		$AnimatedSprite.play(PickAnimation(WALK))
+		PlayerSprite.speed_scale=2
+		PlayerSprite.play(PickAnimation(WALK))
 	elif abs(velocity.x)>SPEED && is_on_floor():
-		$AnimatedSprite.speed_scale=3
-		$AnimatedSprite.play(PickAnimation(RUN))
+		PlayerSprite.speed_scale=3
+		PlayerSprite.play(PickAnimation(RUN))
 		
 func _on_jumptimer_timeout():
 		set_collision_mask_bit(Global.PLATFORM,true)
 
 func _on_Cat_Food():
-	$CollectSound.volume_db=Global.SFXVol
-	$CollectSound.play()
+	CollectSound.volume_db=Global.SFXVol
+	CollectSound.play()
 	if Global.Stamina<100:
 		Global.Stamina+=FOOD
 		if Global.Stamina>100:
@@ -160,10 +167,10 @@ func CheckDeath():
 
 #message handling
 func _on_Cat_Message(message):
-	$Cam/HUD/HUDPanel/Message.text=str(message)
-	$messagetimer.start(5)
+	Message.text=str(message)
+	MessageTimer.start(5)
 func _on_messagetimer_timeout():
-	$Cam/HUD/HUDPanel/Message.text=""
+	Message.text=""
 
 func _on_koyotetimer_timeout():
 	JumpIsPossible=false

@@ -1,5 +1,6 @@
+
+#zombi two moving animation (walk and crawl)
 extends KinematicBody2D
-#zombi
 const MINSPEED=100.0
 const JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)
@@ -7,24 +8,26 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 var isCrawl=false
+onready var ZombiSprite=$AnimatedSprite
+onready var DeathTimer=$DeathTimer
+onready var JumpTimer=$JumpTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.Xen=self
 	randomize()
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
-	$AnimatedSprite.speed_scale=Speed/(MINSPEED/2.0)
+	ZombiSprite.speed_scale=Speed/(MINSPEED/2.0)
 	isCrawl=is_crawl()
 	velocity.x=Speed
 	pass # Replace with function body.
 
 func is_crawl()->bool:
 	if rand_range(0.0,1.0)>0.3:
-		#$AnimatedSprite.play("Run")
+		Speed=rand_range(MINSPEED,MINSPEED+100)
 		return false
 	else:
-		#$AnimatedSprite.play("Crawl")
+		Speed=rand_range(MINSPEED,MINSPEED+100)/2
 		return true
 	
 func _physics_process(delta):
@@ -38,7 +41,7 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && $DeathTimer.is_stopped():
+	if body.is_in_group("Cats") && DeathTimer.is_stopped():
 		body.emit_signal("Enemy")
 	pass # Replace with function body.
 	
@@ -50,21 +53,21 @@ func fall(delta):
 
 func animation():
 	if isCrawl:
-		$AnimatedSprite.play("Crawl")
+		ZombiSprite.play("Crawl")
 	else:
-		$AnimatedSprite.play("Run")
-	if !$DeathTimer.is_stopped(): #play death if timer is running
-		$AnimatedSprite.play("Death")
+		ZombiSprite.play("Run")
+	if !DeathTimer.is_stopped(): #play death if timer is running
+		ZombiSprite.play("Death")
 	elif velocity.x>0: #face to right or left
-		$AnimatedSprite.flip_h=false
+		ZombiSprite.flip_h=false
 	else:
-		$AnimatedSprite.flip_h=true
+		ZombiSprite.flip_h=true
 		
 func move():
 	if is_on_floor() and is_on_wall():
 		isCrawl=false
 		velocity.y=JUMP_VELOCITY #jump
-		$JumpTimer.start(0.5)
+		JumpTimer.start(0.5)
 	if velocity.x==0:
 		velocity.x=Speed
 		pass
@@ -79,7 +82,7 @@ func _on_head_body_entered(body):
 		#drop sceleton down
 		set_collision_mask_bit(Global.GROUND,false)
 		set_collision_mask_bit(Global.PLATFORM,false)
-		$DeathTimer.start()
+		DeathTimer.start()
 		pass
 	pass # Replace with function body.
 
@@ -90,6 +93,6 @@ func _on_DeathTimer_timeout():
 func _on_JumpTimer_timeout():
 	if rand_range(0.0,1.0)<0.3:
 		velocity.x*=-1
-	$JumpTimer.stop()
+	JumpTimer.stop()
 	isCrawl=is_crawl()
 	pass # Replace with function body.

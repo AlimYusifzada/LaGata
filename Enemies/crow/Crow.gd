@@ -1,14 +1,16 @@
+#crow
+
 extends Node2D
 
-var SHIT=preload("res://Enemies/crow/shit.tscn")
+onready var SHIT=preload("res://Enemies/crow/shit.tscn")
 var pooping=false
 var poopspawn=Vector2()
+onready var CrowAnimation=$AnimationPlayer
 
 func _ready():
-	Global.Crow=self
 	poopspawn.y=position.y
 	scale=Vector2(0.5,0.5)
-	$AnimationPlayer.set_speed_scale(rand_range(0.7,1.0))
+	CrowAnimation.set_speed_scale(rand_range(0.7,1.0))
 	pass
 
 func _on_Area2D_body_entered(body):

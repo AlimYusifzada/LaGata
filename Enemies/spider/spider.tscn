@@ -32,7 +32,7 @@ animations = [ {
 extents = Vector2( 52, 24 )
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 52, 2.5 )
+extents = Vector2( 52, 3.25 )
 
 [sub_resource type="CapsuleShape2D" id=44]
 radius = 16.0
@@ -58,7 +58,7 @@ shape = SubResource( 6 )
 [node name="head" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
-position = Vector2( 4, -19 )
+position = Vector2( 4, -19.75 )
 shape = SubResource( 21 )
 
 [node name="DeathTimer" type="Timer" parent="."]

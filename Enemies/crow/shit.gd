@@ -1,14 +1,15 @@
-#crow poo
+#crows poo
 
 extends KinematicBody2D
 
 const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2(0,0)
+onready var RemoveTimer=$RemoveTimer
 
 func _ready():
 	velocity.y=700
 	set_scale(SCALE)
-	$RemoveTimer.start(2)
+	RemoveTimer.start(2)
 	pass
 
 func _physics_process(delta):

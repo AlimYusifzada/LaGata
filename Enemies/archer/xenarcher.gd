@@ -12,15 +12,17 @@ var Life=true
 var shooting=false
 var dest=velocity.x
 
+onready var JumpTimer=$JumpTimer
+onready var ArcherSprite=$AnimatedSprite
+onready var DeathTimer=$DeathTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.Xen=self
 	randomize()
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
-	$AnimatedSprite.speed_scale=Speed/(MINSPEED/2.0)
-	$AnimatedSprite.play("Run")
+	ArcherSprite.speed_scale=Speed/(MINSPEED/2.0)
+	ArcherSprite.play("Run")
 	velocity.x=Speed
 	pass # Replace with function body.
 	
@@ -35,7 +37,7 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && $DeathTimer.is_stopped():
+	if body.is_in_group("Cats") && DeathTimer.is_stopped():
 		body.emit_signal("Enemy")
 		pass
 	pass # Replace with function body.
@@ -48,19 +50,19 @@ func fall(delta):
 
 func animation():
 	LookAt()
-	if !$DeathTimer.is_stopped(): #play death if timer is running
-		$AnimatedSprite.play("Death")
+	if !DeathTimer.is_stopped(): #play death if timer is running
+		ArcherSprite.play("Death")
 	elif shooting:
-		$AnimatedSprite.play("Shoot")
+		ArcherSprite.play("Shoot")
 	else:
-		$AnimatedSprite.play("Run")
+		ArcherSprite.play("Run")
 		
 func LookAt():
 	if dest>0: #face to right or left
-		$AnimatedSprite.flip_h=false
+		ArcherSprite.flip_h=false
 		return 1
 	else:
-		$AnimatedSprite.flip_h=true
+		ArcherSprite.flip_h=true
 		return -1
 		
 func move(delta):
@@ -73,7 +75,7 @@ func move(delta):
 func jump_from_wall():
 	if is_on_floor() and is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
-		$JumpTimer.start(0.5)
+		JumpTimer.start(0.5)
 
 func deathcheck():
 	if !Life:
@@ -85,7 +87,7 @@ func _on_head_body_entered(body):
 		#drop sceleton down
 		set_collision_mask_bit(Global.GROUND,false)
 		set_collision_mask_bit(Global.PLATFORM,false)
-		$DeathTimer.start()
+		DeathTimer.start()
 		pass
 	pass # Replace with function body.
 
@@ -96,7 +98,7 @@ func _on_DeathTimer_timeout():
 func _on_JumpTimer_timeout():
 	if rand_range(0.0,1.0)<0.3:
 		velocity.x*=-1
-	$JumpTimer.stop()
+	JumpTimer.stop()
 	pass # Replace with function body.
 
 

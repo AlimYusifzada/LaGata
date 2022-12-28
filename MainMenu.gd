@@ -1,35 +1,40 @@
+#main menu
+
 extends Node2D
 
 onready var OptionsMenu=preload("res://Options.tscn")
-
+onready var CatYawAnimation=$CatYaw
+onready var CatYawDelay=$CatYawDelay
+onready var BGMusic=$BGMusic
+onready var Comtinue=$Comtinue
 signal OptionsChanged
 
 func _ready():
 	randomize()
-	$CatYawDelay.start(rand_range(3.0,15.0))
+	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()
-	$BGMusic.volume_db=Global.MusicVol
-	$BGMusic.play()
+	BGMusic.volume_db=Global.MusicVol
+	BGMusic.play()
 	if Global.LifesLeft<=0:
-		$Comtinue.disabled=true
+		Comtinue.disabled=true
 	else:
-		$Comtinue.disabled=false
+		Comtinue.disabled=false
 	pass
 	
 func _process(delta):
-	var eye_position=get_global_mouse_position()-$CatYaw.position
-	if !$CatYaw.playing:
+	var eye_position=get_global_mouse_position()-CatYawAnimation.position
+	if !CatYawAnimation.playing:
 		if eye_position.x<-100:
-			$CatYaw.play("lookright")
+			CatYawAnimation.play("lookright")
 			pass
 		elif eye_position.x>100:
-			$CatYaw.play("lookleft")
+			CatYawAnimation.play("lookleft")
 			pass
 		else:
-			$CatYaw.play("default")
+			CatYawAnimation.play("default")
 			pass
-		$CatYaw.stop()
+		CatYawAnimation.stop()
 	pass
 	
 func _on_StartNewGame_pressed():
@@ -49,12 +54,12 @@ func _on_Comtinue_pressed():
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():
-	$CatYaw.play("yaw")
+	CatYawAnimation.play("yaw")
 	pass # Replace with function body.
 
 func _on_CatYaw_animation_finished():
-	$CatYaw.stop()
-	$CatYawDelay.start(rand_range(3.0,10.0))
+	CatYawAnimation.stop()
+	CatYawDelay.start(rand_range(3.0,10.0))
 	pass # Replace with function body.
 
 
@@ -65,5 +70,5 @@ func _on_Options_pressed():
 	pass # Replace with function body.
 
 func _on_MainMenu_OptionsChanged():
-	$BGMusic.volume_db=Global.MusicVol
+	BGMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.

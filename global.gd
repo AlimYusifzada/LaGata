@@ -1,6 +1,5 @@
+#global - autoload on startup
 extends Node
-#scenes
-
 #general constants
 const main_menu="res://MainMenu.tscn"
 
@@ -26,14 +25,7 @@ var SFXVol=0
 var MasterVol=0
 
 #modules (objects)
-var Cat
 
-var Mouse
-var Xen
-var HUD
-var Arrow
-var Crow
-var Shit
 
 #func _ready():
 	#get_tree().change_scene(main_menu)
@@ -122,7 +114,6 @@ func loadGameState():
 		isChild=GameState["isChild"]
 		Stamina=GameState["Stamina"]
 		MiceCatches=GameState["MiceCatches"]
-#		print(getLevelScene(Level))
 		return
 	else:
 		saveGameState()
