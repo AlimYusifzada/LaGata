@@ -3,22 +3,23 @@
 extends KinematicBody2D
 
 const ARROW=preload("res://Enemies/arrow/arrow.tscn")
-const MINSPEED=100.0
-const JUMP_VELOCITY=-600
+export var MINSPEED=100.0
+export var JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
 var shooting=false
 var dest=velocity.x
+export var JumpOffProb=0.1
 
 onready var JumpTimer=$JumpTimer
 onready var ArcherSprite=$AnimatedSprite
 onready var DeathTimer=$DeathTimer
+onready var MindTimer=$MindTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
 	ArcherSprite.speed_scale=Speed/(MINSPEED/2.0)
@@ -76,8 +77,9 @@ func jump_from_wall():
 	if is_on_floor() && is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
-	elif !is_on_floor() && randf()>0.9:
+	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
+		MindTimer.start(Global.MindTimerSet)
 
 func deathcheck():
 	if !Life:
@@ -107,8 +109,8 @@ func _on_JumpTimer_timeout():
 func _on_AimRight_body_entered(body):
 	if velocity.x<0:
 		velocity.x*=-1
-	elif velocity.x==0:
-		velocity.x=Speed
+#	elif velocity.x==0:
+#		velocity.x=Speed
 	LookAt()
 	Shoot()
 	pass # Replace with function body.
@@ -116,8 +118,8 @@ func _on_AimRight_body_entered(body):
 func _on_AimLeft_body_entered(body):
 	if velocity.x>0:
 		velocity.x*=-1
-	elif velocity.x==0:
-		velocity.x=-Speed
+#	elif velocity.x==0:
+#		velocity.x=-Speed
 	LookAt()
 	Shoot()
 	pass # Replace with function body.

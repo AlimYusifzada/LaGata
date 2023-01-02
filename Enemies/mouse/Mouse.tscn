@@ -75,7 +75,8 @@ animations = [ {
 extents = Vector2( 64, 24 )
 
 [sub_resource type="CapsuleShape2D" id=20]
-height = 60.0
+radius = 16.0
+height = 14.0
 
 [node name="Mouse" type="KinematicBody2D" groups=["Pray"]]
 collision_layer = 16
@@ -96,8 +97,10 @@ position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -8 )
-rotation = 1.57079
+position = Vector2( 0, -16 )
 shape = SubResource( 20 )
+
+[node name="MindTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="body_entered" from="DynEnvCol" to="." method="_on_Area2D_body_entered"]

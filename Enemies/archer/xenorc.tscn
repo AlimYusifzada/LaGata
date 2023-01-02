@@ -170,6 +170,7 @@ animations = [ {
 extents = Vector2( 16, 26 )
 
 [sub_resource type="CapsuleShape2D" id=65]
+radius = 16.0
 height = 0.0
 
 [sub_resource type="RectangleShape2D" id=21]
@@ -199,7 +200,7 @@ position = Vector2( 0, 6 )
 shape = SubResource( 6 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 16 )
+position = Vector2( 0, 12 )
 shape = SubResource( 65 )
 
 [node name="head" type="Area2D" parent="."]
@@ -229,6 +230,9 @@ collision_layer = 0
 [node name="CollisionLeft" type="CollisionShape2D" parent="AimLeft"]
 position = Vector2( -192, 0 )
 shape = SubResource( 36 )
+
+[node name="MindTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]

@@ -175,6 +175,7 @@ extents = Vector2( 24, 24 )
 extents = Vector2( 24, 4 )
 
 [sub_resource type="CapsuleShape2D" id=57]
+radius = 16.0
 height = 0.0
 
 [node name="zombi" type="KinematicBody2D" groups=["Enemies"]]
@@ -195,6 +196,7 @@ position = Vector2( 0, 8 )
 shape = SubResource( 6 )
 
 [node name="head" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
 position = Vector2( 0, -20 )
@@ -208,8 +210,11 @@ one_shot = true
 one_shot = true
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 16 )
+position = Vector2( 0, 9 )
 shape = SubResource( 57 )
+
+[node name="MindTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]

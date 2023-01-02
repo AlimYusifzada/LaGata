@@ -2,19 +2,20 @@
 
 extends KinematicBody2D
 
-const MINSPEED=150.0
-const JUMP_VELOCITY=-600
+export var MINSPEED=100.0
+export var JUMP_VELOCITY=-600
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
+export var JumpOffProb=0.1
 onready var SpiderAnimation=$AnimatedSprite
 onready var DeathTimer=$DeathTimer
 onready var JumpTimer=$JumpTimer
+onready var MindTimer=$MindTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
 	SpiderAnimation.speed_scale=Speed/(MINSPEED/2.0)
@@ -55,8 +56,9 @@ func move():
 	if is_on_floor() && is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
-	if velocity.x==0:
-		velocity.x=Speed
+	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+		velocity.x*=-1.0
+		MindTimer.start(Global.MindTimerSet)
 		pass
 		
 func deathcheck():
@@ -78,7 +80,7 @@ func _on_DeathTimer_timeout():
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
-	if rand_range(0.0,1.0)<0.3:
+	if randf()<0.3:
 		velocity.x*=-1
-	JumpTimer.stop()
+#	JumpTimer.stop()
 	pass # Replace with function body.

@@ -5,7 +5,7 @@ const main_menu="res://MainMenu.tscn"
 
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
-
+const MindTimerSet=.5
 const GRAVITY = 1500
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
@@ -27,7 +27,8 @@ var MasterVol=0
 #modules (objects)
 
 
-#func _ready():
+func _ready():
+	randomize()
 	#get_tree().change_scene(main_menu)
 
 func PlayerReset():

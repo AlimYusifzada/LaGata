@@ -59,7 +59,7 @@ func _on_CatYawDelay_timeout():
 
 func _on_CatYaw_animation_finished():
 	CatYawAnimation.stop()
-	CatYawDelay.start(rand_range(3.0,10.0))
+	CatYawDelay.start(rand_range(3.0,15.0))
 	pass # Replace with function body.
 
 

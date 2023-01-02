@@ -3,16 +3,18 @@
 extends KinematicBody2D
 
 #const ARROW=preload("res://Enemies//arrow.tscn")
-const MINSPEED=250.0
-const JUMP_VELOCITY=-600
+export var MINSPEED=250.0
+export var JUMP_VELOCITY=-600
 const SCALE=Vector2(0.9,0.9)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
+export var  JumpOffProb=0.1
 onready var DogAnimation=$AnimatedSprite
 onready var DeathTimer=$DeathTimer
 onready var JumpTimer=$JumpTimer
 onready var Voice=$Voice
+onready var MindTimer=$MindTimer
 
 #var shooting=false
 var dest=velocity.x
@@ -20,10 +22,9 @@ var dest=velocity.x
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
-	DogAnimation.speed_scale=Speed/(MINSPEED/2.0)
+	DogAnimation.speed_scale=Speed/(MINSPEED/1.5)
 	DogAnimation.play("Run")
 	velocity.x=Speed
 	Voice.volume_db=Global.SFXVol
@@ -59,7 +60,7 @@ func animation():
 		DogAnimation.play("Run")
 		
 func LookAt():
-	if dest>0: #face to right or left
+	if velocity.x>0: #face to right or left
 		DogAnimation.flip_h=false
 		return 1
 	else:
@@ -67,14 +68,15 @@ func LookAt():
 		return -1
 		
 func move(delta):
-	if velocity.x!=0:
-		dest=velocity.x
-	jump_from_wall()
-
-func jump_from_wall():
 	if is_on_floor() && is_on_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
+	elif !is_on_floor() && (MindTimer.is_stopped() && randf()>JumpOffProb):
+		velocity.x*=-1.0
+		MindTimer.start(Global.MindTimerSet)
+
+#func jump_from_wall():
+#	pass
 
 func deathcheck():
 	if !Life:

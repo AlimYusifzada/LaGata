@@ -3,19 +3,20 @@
 extends KinematicBody2D
 
 var SPEED=0
-const MINSPEED=200
-const FALLSPEED = 700
-const JUMP_VELOCITY=-100
+export var MINSPEED=200
+export var JUMP_VELOCITY=-100
 const SCALE=Vector2(0.7,0.7)
 var velocity=Vector2()
 var Life=true
 var isRunning=true
+export var JumpOffProb=0.1
+
 onready var MouseSprite=$AnimatedSprite
+onready var MindTimer=$MindTimer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomize()
 	SPEED=rand_range(MINSPEED,MINSPEED+100)
 	MouseSprite.speed_scale=SPEED/(MINSPEED/3)
 	set_scale(SCALE)
@@ -55,9 +56,9 @@ func animation():
 func move():
 	if is_on_floor() && is_on_wall():
 		velocity.x*=-1
-	elif !is_on_floor():
-		if randf()>0.9:
-			velocity.x*=-1
+	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+		velocity.x*=-1
+		MindTimer.start(Global.MindTimerSet)
 		
 func deathcheck():
 	if !Life:
