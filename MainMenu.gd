@@ -11,7 +11,6 @@ onready var SFXSound=$SFXSound
 signal OptionsChanged
 
 func _ready():
-	randomize()
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()
