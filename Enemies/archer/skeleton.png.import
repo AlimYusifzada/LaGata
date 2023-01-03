@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/download_17.png-14769be95cc9532e5f2e07bec305d865.stex"
+path="res://.import/skeleton.png-7745cfc61ac608276275bb975934beb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/archer/download_17.png"
-dest_files=[ "res://.import/download_17.png-14769be95cc9532e5f2e07bec305d865.stex" ]
+source_file="res://Enemies/archer/skeleton.png"
+dest_files=[ "res://.import/skeleton.png-7745cfc61ac608276275bb975934beb9.stex" ]
 
 [params]
 

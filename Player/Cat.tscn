@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Player/Cat.gd" type="Script" id=1]
 [ext_resource path="res://Player/blackcat.png" type="Texture" id=2]
@@ -32,7 +32,6 @@
 [ext_resource path="res://Player/kitten/Jump/kittenjump0007.png" type="Texture" id=30]
 [ext_resource path="res://Player/kitten/Jump/kittenjump0004.png" type="Texture" id=31]
 [ext_resource path="res://Player/kitten/Jump/kittenjump0006.png" type="Texture" id=32]
-[ext_resource path="res://Player/Sound/l1.mp3" type="AudioStream" id=33]
 
 [sub_resource type="AtlasTexture" id=41]
 flags = 4
@@ -318,10 +317,6 @@ area_mask = 6
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 23 )
 area_mask = 6
-
-[node name="BGM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 33 )
-volume_db = -20.0
 
 [connection signal="Enemy" from="." to="." method="_on_Cat_Enemy"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]

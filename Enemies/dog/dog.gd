@@ -27,7 +27,6 @@ func _ready():
 	DogAnimation.speed_scale=Speed/(MINSPEED/1.5)
 	DogAnimation.play("Run")
 	velocity.x=Speed
-	Voice.volume_db=Global.SFXVol
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -35,6 +34,8 @@ func _physics_process(delta):
 	fall(delta)
 	move(delta)
 	move_and_slide(velocity,Global.UP)
+	#---ubpdate sund vol
+	Voice.volume_db=Global.SFXVol
 	pass
 
 func _process(delta):

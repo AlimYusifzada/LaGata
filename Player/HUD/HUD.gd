@@ -15,8 +15,16 @@ onready var MiceCounter=$HUDPanel/MiceStat/MiceCounter
 onready var MiceLeft=$HUDPanel/MiceStat/MiceLeft
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var ScaleTimer=$ScaleTimer
+onready var BackgroundMusic=$BGM
+onready var Options=preload("res://Options.tscn")
+
+signal OptionsChanged
 
 func _ready():
+	Global.loadGameOptions()
+	BackgroundMusic.volume_db=Global.MusicVol
+	BackgroundMusic.play()
+	
 	CatStat.scale=NSCALE
 	MiceStat.scale=NSCALE
 	Keys.scale=NSCALE
@@ -33,12 +41,8 @@ func getsetVal():
 	var k=int(KeysCounter.text)
 	if l!=Global.LifesLeft:
 		LifeCounter.text=str(Global.LifesLeft)
-#	elif l==0:
-#		$HUDPanel/CatStat.scale=LSCALE
 	if s!=Global.Stamina*10:
 		StamCounter.text=str(Global.Stamina)
-#	elif s==0:
-#		$HUDPanel/CatStat.scale=LSCALE
 	if m!=Global.MiceCatches:
 		var prays=get_tree().get_nodes_in_group("Pray")
 		MiceCounter.text=str(Global.MiceCatches)
@@ -51,6 +55,11 @@ func getsetVal():
 		boom(Keys)
 	elif k==0:
 		Keys.scale=LSCALE #item dissappear
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().paused=true
+		var op=Options.instance()
+		self.add_child(op)
+		pass
 
 func boom(obj):
 	obj.scale=BSCALE
@@ -61,4 +70,10 @@ func _on_ScaleTimer_timeout():
 	CatStat.scale=NSCALE
 	MiceStat.scale=NSCALE
 	Keys.scale=NSCALE
+	pass # Replace with function body.
+
+func _on_HUD_OptionsChanged():
+	print("HUD options changed")
+	Global.loadGameOptions()
+	BackgroundMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.

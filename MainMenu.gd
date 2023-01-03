@@ -7,6 +7,7 @@ onready var CatYawAnimation=$CatYaw
 onready var CatYawDelay=$CatYawDelay
 onready var BGMusic=$BGMusic
 onready var Comtinue=$Comtinue
+onready var SFXSound=$SFXSound
 signal OptionsChanged
 
 func _ready():
@@ -62,13 +63,14 @@ func _on_CatYaw_animation_finished():
 	CatYawDelay.start(rand_range(3.0,15.0))
 	pass # Replace with function body.
 
-
 func _on_Options_pressed():
 	var om=OptionsMenu.instance()
-	om.position=Vector2(220,150)
+	get_tree().paused=true
 	self.add_child(om)
 	pass # Replace with function body.
 
 func _on_MainMenu_OptionsChanged():
+	Global.loadGameOptions()
+	SFXSound.volume_db=Global.SFXVol
 	BGMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.

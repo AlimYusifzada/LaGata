@@ -76,7 +76,7 @@ extents = Vector2( 64, 24 )
 
 [sub_resource type="CapsuleShape2D" id=20]
 radius = 16.0
-height = 14.0
+height = 8.0
 
 [node name="Mouse" type="KinematicBody2D" groups=["Pray"]]
 collision_layer = 16
@@ -97,7 +97,7 @@ position = Vector2( 0, -16 )
 shape = SubResource( 6 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -16 )
+position = Vector2( 0, -20 )
 shape = SubResource( 20 )
 
 [node name="MindTimer" type="Timer" parent="."]

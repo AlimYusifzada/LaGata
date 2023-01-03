@@ -96,7 +96,7 @@ position = Vector2( 512, 256 )
 stream = ExtResource( 3 )
 area_mask = 0
 
-[node name="LooseSound" type="AudioStreamPlayer2D" parent="."]
+[node name="SFXSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 512, 256 )
 stream = ExtResource( 4 )
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/download_18.png-d572e36d873a8cc237048d57bc9fd087.stex"
+path="res://.import/ork.png-54b43c0c24d302756a9924b96896c4ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/archer/download_18.png"
-dest_files=[ "res://.import/download_18.png-d572e36d873a8cc237048d57bc9fd087.stex" ]
+source_file="res://Enemies/archer/ork.png"
+dest_files=[ "res://.import/ork.png-54b43c0c24d302756a9924b96896c4ce.stex" ]
 
 [params]
 

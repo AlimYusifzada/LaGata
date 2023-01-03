@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/spider/spider.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/spider/sprites/frame0006.png" type="Texture" id=3]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Enemies/spider/sprites/frame0001.png" type="Texture" id=7]
 [ext_resource path="res://Enemies/spider/sprites/frame0004.png" type="Texture" id=8]
 [ext_resource path="res://Enemies/spider/sprites/frame0003.png" type="Texture" id=9]
-[ext_resource path="res://Enemies/spider/sprites/frame0007.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -17,12 +16,12 @@ animations = [ {
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0

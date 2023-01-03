@@ -10,10 +10,8 @@ const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten"
 
 onready var DUST=preload("res://Common/JumpDust.tscn")
-onready var Options=preload("res://Options.tscn")
 onready var Message=$Cam/HUD/HUDPanel/Message
 onready var PlayerSprite=$AnimatedSprite
-onready var BackgroundMusic=$BGM
 onready var JumperTimer=$jumptimer
 onready var KoyoteTimer=$koyotetimer
 onready var CollectSound=$CollectSound
@@ -32,19 +30,14 @@ var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
 signal Food
 signal Enemy
 signal Jump
+#signal OptionsChanged
 signal Message(message)
 
 func _ready():
-	Global.loadGameOptions()
-	JumpSound.volume_db=Global.SFXVol
-	CollectSound.volume_db=Global.SFXVol
-	BackgroundMusic.volume_db=Global.MusicVol
-	BackgroundMusic.play()
 	set_scale(SCALE)
 	randomize()
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
-#	Global.PlayerAlive=true
 	Life=true
 	pass # Replace with function body.
 
@@ -57,11 +50,10 @@ func _physics_process(delta):
 	CheckRun(delta)
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)
-
-	if Input.is_action_just_pressed("ui_cancel"):
-		Global.saveGameState()
-		Global.PlayerAlive=false
-	
+	#---update sound volume
+	JumpSound.volume_db=Global.SFXVol
+	CollectSound.volume_db=Global.SFXVol
+		
 func _process(delta): 
 	animate()
 	
@@ -184,3 +176,11 @@ func _on_Cat_Jump(): # initiated by logic
 	jumpaction(Global.Stamina*10)
 	EmitDust()
 	pass # Replace with function body.
+
+
+#func _on_Cat_OptionsChanged():
+#	Global.loadGameOptions()
+#	JumpSound.volume_db=Global.SFXVol
+#	CollectSound.volume_db=Global.SFXVol
+#	BackgroundMusic.volume_db=Global.MusicVol	
+#	pass # Replace with function body.
