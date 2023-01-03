@@ -36,3 +36,10 @@ func _on_SFXVol_value_changed(value):
 	SFX.volume_db=value
 	SFX.play()
 	pass # Replace with function body.
+
+func _on_MainMenuButton_pressed():
+	get_tree().paused=false
+	Global.saveGameOptions()
+	Global.saveGameState()
+	get_tree().change_scene("res://MainMenu.tscn")
+	pass # Replace with function body.

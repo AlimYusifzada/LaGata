@@ -73,7 +73,6 @@ func _on_ScaleTimer_timeout():
 	pass # Replace with function body.
 
 func _on_HUD_OptionsChanged():
-	print("HUD options changed")
 	Global.loadGameOptions()
 	BackgroundMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.

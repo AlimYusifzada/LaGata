@@ -10,10 +10,10 @@ pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 32.0
-margin_top = 32.0
-margin_right = 544.0
-margin_bottom = 352.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 536.0
+margin_bottom = 344.0
 color = Color( 0, 0, 0, 0.501961 )
 
 [node name="window" type="ColorRect" parent="."]
@@ -22,26 +22,35 @@ margin_bottom = 320.0
 theme = ExtResource( 1 )
 color = Color( 0.215686, 0.215686, 0.215686, 1 )
 
-[node name="OKButton" type="Button" parent="window"]
-margin_left = 64.0
-margin_top = 248.0
-margin_right = 192.0
-margin_bottom = 296.0
-theme = ExtResource( 1 )
-text = "OK"
-
-[node name="CancelButton" type="Button" parent="window/OKButton"]
-margin_left = 256.0
-margin_right = 384.0
-margin_bottom = 48.0
+[node name="CancelButton" type="Button" parent="window"]
+margin_left = 376.0
+margin_top = 73.0
+margin_right = 504.0
+margin_bottom = 121.0
 theme = ExtResource( 1 )
 text = "Cancel"
 
+[node name="OKButton" type="Button" parent="window"]
+margin_left = 376.0
+margin_top = 16.0
+margin_right = 504.0
+margin_bottom = 64.0
+theme = ExtResource( 1 )
+text = "OK"
+
+[node name="MainMenuButton" type="Button" parent="window"]
+margin_left = 24.0
+margin_top = 256.0
+margin_right = 194.0
+margin_bottom = 304.0
+theme = ExtResource( 1 )
+text = "Save & Exit"
+
 [node name="MusicVol" type="HSlider" parent="window"]
-margin_left = 64.0
-margin_top = 136.0
-margin_right = 256.0
-margin_bottom = 152.0
+margin_left = 24.0
+margin_top = 48.0
+margin_right = 216.0
+margin_bottom = 64.0
 min_value = -70.0
 max_value = 10.0
 step = 5.0
@@ -54,10 +63,10 @@ margin_bottom = 25.0
 text = "Music"
 
 [node name="SFXVol" type="HSlider" parent="window"]
-margin_left = 64.0
-margin_top = 200.0
-margin_right = 256.0
-margin_bottom = 216.0
+margin_left = 24.0
+margin_top = 112.0
+margin_right = 216.0
+margin_bottom = 128.0
 min_value = -70.0
 max_value = 10.0
 step = 5.0
@@ -75,7 +84,8 @@ stream = ExtResource( 3 )
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
+[connection signal="pressed" from="window/CancelButton" to="." method="_on_CancelButton_pressed"]
 [connection signal="pressed" from="window/OKButton" to="." method="_on_OKButton_pressed"]
-[connection signal="pressed" from="window/OKButton/CancelButton" to="." method="_on_CancelButton_pressed"]
+[connection signal="pressed" from="window/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="value_changed" from="window/MusicVol" to="." method="_on_MusicVol_value_changed"]
 [connection signal="value_changed" from="window/SFXVol" to="." method="_on_SFXVol_value_changed"]

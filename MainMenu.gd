@@ -40,7 +40,7 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-	get_tree().change_scene("res://Main.tscn")
+	get_tree().change_scene("res://TestLvl.tscn")
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
@@ -51,7 +51,7 @@ func _on_Exit_pressed():
 func _on_Comtinue_pressed():
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
-		get_tree().change_scene("res://Main.tscn")
+		get_tree().change_scene("res://TestLvl.tscn")
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():
