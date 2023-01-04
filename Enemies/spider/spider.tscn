@@ -1,41 +1,42 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemies/spider/spider.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/spider/sprites/frame0000.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/spider/sprites/frame0006.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/spider/sprites/frame0005.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/spider/sprites/frame0000.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/spider/sprites/frame0002.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/spider/sprites/frame0001.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/spider/sprites/frame0004.png" type="Texture" id=8]
-[ext_resource path="res://Enemies/spider/sprites/frame0003.png" type="Texture" id=9]
+[ext_resource path="res://Enemies/spider/sprites/frame0002.png" type="Texture" id=4]
+[ext_resource path="res://Enemies/spider/sprites/frame0004.png" type="Texture" id=5]
+[ext_resource path="res://Enemies/spider/sprites/frame0005.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/spider/sprites/frame0003.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/spider/sprites/frame0001.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/spider/sprites/ambusher.png" type="Texture" id=9]
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [  ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 52, 24 )
+extents = Vector2( 40, 20 )
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 52, 3.25 )
+extents = Vector2( 40, 3.90625 )
 
 [sub_resource type="CapsuleShape2D" id=44]
-radius = 15.0
-height = 12.0
+radius = 8.0
+height = 16.0
 
 [node name="spider" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -51,14 +52,13 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
-position = Vector2( 4, 8 )
 shape = SubResource( 6 )
 
 [node name="head" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
-position = Vector2( 4, -20 )
+position = Vector2( 0, -24 )
 shape = SubResource( 21 )
 
 [node name="DeathTimer" type="Timer" parent="."]
@@ -69,7 +69,6 @@ one_shot = true
 one_shot = true
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 4 )
 shape = SubResource( 44 )
 
 [node name="MindTimer" type="Timer" parent="."]

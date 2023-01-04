@@ -2,7 +2,7 @@ extends CPUParticles2D
 
 
 func _ready():
-	$EndTimer.start(2)
+	$EndTimer.start(1)
 	pass
 
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Enemies/spider/smallspider.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/Doors/SDoor/InternalDoor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/mouse/Mouse.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/spider/ambusher.tscn" type="PackedScene" id=4]
@@ -8,21 +8,15 @@
 [ext_resource path="res://Common/MovingPlatforms/MovingPlatform2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/Doors/GoldKey.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Enemies/archer/xenorc.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/archer/xenknight.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Common/64xt/Lava/Lava.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyMoss.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Common/64xt/Lava/LavaTop.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Enemies/archer/xenassasin.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Enemies/zombi/zombi.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Enemies/archer/xenskeleton.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Common/StaticPlatforms/trashcanH.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Enemies/human/humanguy.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=22]
-[ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=24]
 [ext_resource path="res://TestLvl.gd" type="Script" id=25]
 [ext_resource path="res://Backgrounds/PastelCountry/layer_03_2048 x 1546.png" type="Texture" id=26]
@@ -100,10 +94,6 @@ tile_data = PoolIntArray( -29, 6, 0, -28, 6, 0, -27, 6, 0, 327650, 6, 0, 327651,
 [node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2506, 597 )
 
-[node name="humanguy" parent="StaticBody2D" instance=ExtResource( 20 )]
-position = Vector2( -3223, -892 )
-JumpOffProb = 0.9
-
 [node name="trashcanH" parent="." instance=ExtResource( 19 )]
 position = Vector2( 2323, 651 )
 
@@ -135,109 +125,21 @@ scale = Vector2( 0.5, 0.5 )
 [node name="torch2" parent="." instance=ExtResource( 21 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 7
+frame = 13
 
 [node name="torch3" parent="." instance=ExtResource( 21 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 7
+frame = 13
 
 [node name="torch4" parent="." instance=ExtResource( 21 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 6
+frame = 12
 flip_h = true
-
-[node name="Mouse" parent="." instance=ExtResource( 3 )]
-position = Vector2( -282, -354 )
-JumpOffProb = 0.9
-
-[node name="Mouse2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -600, -349 )
-
-[node name="Mouse3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -272, 160 )
-
-[node name="Mouse4" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse7" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse13" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse14" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse15" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse16" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse17" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
 
 [node name="Mouse18" parent="." instance=ExtResource( 3 )]
 position = Vector2( -280, 176 )
-
-[node name="Mouse19" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse20" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse21" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse22" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse23" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse24" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse25" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse26" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse27" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse28" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse29" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse30" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse31" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse32" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse33" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse34" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse35" parent="." instance=ExtResource( 3 )]
-position = Vector2( -280, 176 )
-
-[node name="Mouse5" parent="." instance=ExtResource( 3 )]
-position = Vector2( -487, -401 )
-
-[node name="Mouse6" parent="." instance=ExtResource( 3 )]
-position = Vector2( -612, -472 )
 
 [node name="LavaTop" parent="." instance=ExtResource( 14 )]
 position = Vector2( 928, 376 )
@@ -280,26 +182,6 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( -240, 32 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="xenassasin" parent="." instance=ExtResource( 15 )]
-position = Vector2( -792, -243 )
-JumpOffProb = 0.3
-
-[node name="xenknight" parent="." instance=ExtResource( 10 )]
-position = Vector2( -552, -283 )
-JumpOffProb = 0.6
-
-[node name="xenorc" parent="." instance=ExtResource( 9 )]
-position = Vector2( -683, -263 )
-JumpOffProb = 0.4
-
-[node name="xenshooter" parent="." instance=ExtResource( 18 )]
-position = Vector2( -616, -276 )
-JumpOffProb = 0.5
-
-[node name="dog" parent="." instance=ExtResource( 1 )]
-position = Vector2( -436, -369 )
-JumpOffProb = 0.8
-
 [node name="Crow2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 240, 85 )
 
@@ -312,12 +194,20 @@ position = Vector2( 1664, 245 )
 [node name="Crow" parent="." instance=ExtResource( 16 )]
 position = Vector2( 232, 237 )
 
-[node name="spider" parent="." instance=ExtResource( 23 )]
-position = Vector2( -453, -261 )
-JumpOffProb = 0.7
-
 [node name="ambusher" parent="." instance=ExtResource( 4 )]
 position = Vector2( -480, 341 )
 
 [node name="Cat" parent="." instance=ExtResource( 12 )]
 position = Vector2( -736, -115 )
+
+[node name="smallspider" parent="." instance=ExtResource( 1 )]
+position = Vector2( -790, -231 )
+
+[node name="smallspider2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -696, -239 )
+
+[node name="smallspider3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -646, -233 )
+
+[node name="smallspider4" parent="." instance=ExtResource( 1 )]
+position = Vector2( -568, -233 )
