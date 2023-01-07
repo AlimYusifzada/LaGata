@@ -29,7 +29,7 @@ var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
 
 signal Food
 signal Enemy
-signal Jump
+signal Jump(power)
 #signal OptionsChanged
 signal Message(message)
 
@@ -172,8 +172,8 @@ func _on_koyotetimer_timeout():
 	JumpIsPossible=false
 	pass # Replace with function body.
 
-func _on_Cat_Jump(): # initiated by logic
-	jumpaction(Global.Stamina*10)
+func _on_Cat_Jump(power): # initiated by logic
+	jumpaction(Global.Stamina*power)
 	EmitDust()
 	pass # Replace with function body.
 
