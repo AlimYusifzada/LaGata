@@ -126,17 +126,17 @@ scale = Vector2( 0.5, 0.5 )
 [node name="torch2" parent="." instance=ExtResource( 21 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 1
+frame = 3
 
 [node name="torch3" parent="." instance=ExtResource( 21 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 1
+frame = 3
 
 [node name="torch4" parent="." instance=ExtResource( 21 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 0
+frame = 2
 flip_h = true
 
 [node name="Mouse18" parent="." instance=ExtResource( 3 )]
@@ -215,4 +215,4 @@ position = Vector2( -646, -233 )
 position = Vector2( -568, -233 )
 
 [node name="SpringJump" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1343, 861 )
+position = Vector2( 451, 654 )
