@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WalkStone.png-f39a8611dbb51c9951773eac8f38b12b.stex"
+path="res://.import/WalkStone.png-9d306327ddc25e10f12ba24b4dd7194b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Common/64xt/WalkingStone/WalkStone.png"
-dest_files=[ "res://.import/WalkStone.png-f39a8611dbb51c9951773eac8f38b12b.stex" ]
+source_file="res://Common/64xt/WalkStone.png"
+dest_files=[ "res://.import/WalkStone.png-9d306327ddc25e10f12ba24b4dd7194b.stex" ]
 
 [params]
 
