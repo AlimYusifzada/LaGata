@@ -34,7 +34,6 @@ animations = [ {
 
 [sub_resource type="StreamTexture" id=19]
 flags = 4
-load_path = "res://.import/LavaBR_1.png-559717b38bdf69084e84608c1683a896.stex"
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 30, 30.5 )
@@ -109,8 +108,6 @@ script = ExtResource( 2 )
 
 [node name="Lava" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 3
-playing = true
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 9.53674e-07, -1.43051e-06 )

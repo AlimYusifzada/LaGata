@@ -99,22 +99,25 @@ position = Vector2( 2506, 597 )
 position = Vector2( 2323, 651 )
 
 [node name="DeadlyMoss2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2208, 1104 )
+position = Vector2( 2195, 1115 )
 
 [node name="DeadlyMoss3" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2720, 1312 )
 
 [node name="DeadlyMoss4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1696, 768 )
+position = Vector2( 1695, 786 )
 
 [node name="DeadlyMoss5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1760, 800 )
+position = Vector2( 1760, 795 )
 
 [node name="DeadlyMoss6" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1824, 776 )
 
 [node name="DeadlyMoss7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1888, 760 )
+position = Vector2( 1887, 770 )
+
+[node name="DeadlyMoss8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1633, 764 )
 
 [node name="InternalDoor" parent="." instance=ExtResource( 2 )]
 position = Vector2( -192, 160 )
@@ -126,17 +129,17 @@ scale = Vector2( 0.5, 0.5 )
 [node name="torch2" parent="." instance=ExtResource( 21 )]
 position = Vector2( 3568, 1160 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 3
+frame = 13
 
 [node name="torch3" parent="." instance=ExtResource( 21 )]
 position = Vector2( 168, 1256 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 3
+frame = 13
 
 [node name="torch4" parent="." instance=ExtResource( 21 )]
 position = Vector2( 2080, 1272 )
 scale = Vector2( 0.704275, 0.557438 )
-frame = 2
+frame = 12
 flip_h = true
 
 [node name="Mouse18" parent="." instance=ExtResource( 3 )]
@@ -153,6 +156,9 @@ position = Vector2( 864, 376 )
 
 [node name="LavaTop4" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1056, 376 )
+
+[node name="LavaTop5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1378, 1068 )
 
 [node name="Lava" parent="." instance=ExtResource( 11 )]
 position = Vector2( 888, 408 )
@@ -200,10 +206,22 @@ position = Vector2( -736, 258 )
 flip_h = true
 
 [node name="Cat" parent="." instance=ExtResource( 12 )]
-position = Vector2( -736, -115 )
+position = Vector2( 1155, 253 )
 
 [node name="smallspider" parent="." instance=ExtResource( 1 )]
-position = Vector2( -790, -231 )
+position = Vector2( 870, 178 )
+
+[node name="smallspider5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 934, 172 )
+
+[node name="smallspider6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 844, -32 )
+
+[node name="smallspider7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 946, -13 )
+
+[node name="smallspider8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 742, 237 )
 
 [node name="smallspider2" parent="." instance=ExtResource( 1 )]
 position = Vector2( -696, -239 )
@@ -215,4 +233,9 @@ position = Vector2( -646, -233 )
 position = Vector2( -568, -233 )
 
 [node name="SpringJump" parent="." instance=ExtResource( 9 )]
-position = Vector2( 451, 654 )
+position = Vector2( -1297, 917 )
+JumPower = 50
+
+[node name="SpringJump2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -6, 1558 )
+JumPower = 50
