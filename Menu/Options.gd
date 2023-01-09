@@ -41,5 +41,5 @@ func _on_MainMenuButton_pressed():
 	get_tree().paused=false
 	Global.saveGameOptions()
 	Global.saveGameState()
-	get_tree().change_scene("res://MainMenu.tscn")
+	get_tree().change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.

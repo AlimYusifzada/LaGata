@@ -1,54 +1,54 @@
 [gd_resource type="TileSet" load_steps=46 format=2]
 
-[ext_resource path="res://Common/64xt/Singles/GemOv1.png" type="Texture" id=1]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=2]
-[ext_resource path="res://Common/64xt/Singles/Coal.png" type="Texture" id=3]
-[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=4]
-[ext_resource path="res://Common/64xt/Singles/BrickOv.png" type="Texture" id=5]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=6]
-[ext_resource path="res://Common/64xt/Singles/GlassFacete.png" type="Texture" id=7]
-[ext_resource path="res://Common/64xt/Greens/MossOver.png" type="Texture" id=8]
-[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=9]
-[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=10]
-[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=11]
-[ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=12]
-[ext_resource path="res://Common/64xt/Singles/SmoothStone.png" type="Texture" id=13]
-[ext_resource path="res://Common/64xt/Singles/CrackOver.png" type="Texture" id=14]
-[ext_resource path="res://Common/64xt/Singles/GemOv4.png" type="Texture" id=15]
-[ext_resource path="res://Common/64xt/Singles/Gold1.png" type="Texture" id=16]
-[ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=17]
-[ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=18]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=19]
-[ext_resource path="res://Common/64xt/Greens/LeavesOP.png" type="Texture" id=20]
+[ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=1]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=2]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=3]
+[ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=4]
+[ext_resource path="res://Common/64xt/Bark/BarkTR.png" type="Texture" id=5]
+[ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=6]
+[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=7]
+[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=8]
+[ext_resource path="res://Common/64xt/Singles/SmoothStone.png" type="Texture" id=9]
+[ext_resource path="res://Common/64xt/Singles/Coal.png" type="Texture" id=10]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=11]
+[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=12]
+[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=13]
+[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=14]
+[ext_resource path="res://Common/64xt/Greens/LeavesOP.png" type="Texture" id=15]
+[ext_resource path="res://Common/64xt/Singles/GlassFacete.png" type="Texture" id=16]
+[ext_resource path="res://Common/64xt/Singles/WoolSnow.png" type="Texture" id=17]
+[ext_resource path="res://Common/64xt/Singles/CrackOver.png" type="Texture" id=18]
+[ext_resource path="res://Common/64xt/Singles/OreVein.png" type="Texture" id=19]
+[ext_resource path="res://Common/64xt/Singles/CrateOver.png" type="Texture" id=20]
 [ext_resource path="res://Common/64xt/Bricks/BricksTL.png" type="Texture" id=21]
-[ext_resource path="res://Common/64xt/Bark/BarkTR.png" type="Texture" id=22]
-[ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=23]
-[ext_resource path="res://Common/64xt/Singles/OreVein.png" type="Texture" id=24]
-[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=25]
-[ext_resource path="res://Common/64xt/Singles/Glass.png" type="Texture" id=26]
-[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=27]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=28]
-[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=29]
-[ext_resource path="res://Common/64xt/Singles/Dirt.png" type="Texture" id=30]
-[ext_resource path="res://Common/64xt/Singles/GemOv2.png" type="Texture" id=31]
-[ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=32]
-[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=33]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=34]
-[ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=35]
-[ext_resource path="res://Common/64xt/Greens/LeavesTS.png" type="Texture" id=36]
-[ext_resource path="res://Common/64xt/Singles/WoolSnow.png" type="Texture" id=37]
-[ext_resource path="res://Common/64xt/Singles/CrateOver.png" type="Texture" id=38]
-[ext_resource path="res://Common/64xt/Bricks/BricksBL.png" type="Texture" id=39]
-[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=40]
-[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=41]
-[ext_resource path="res://Common/64xt/Singles/GemOv3.png" type="Texture" id=42]
-[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=43]
-[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=44]
-[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=45]
+[ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=22]
+[ext_resource path="res://Common/64xt/Greens/MossOver.png" type="Texture" id=23]
+[ext_resource path="res://Common/64xt/Singles/Dirt.png" type="Texture" id=24]
+[ext_resource path="res://Common/64xt/Greens/LeavesTS.png" type="Texture" id=25]
+[ext_resource path="res://Common/64xt/Singles/GemOv2.png" type="Texture" id=26]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=27]
+[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=28]
+[ext_resource path="res://Common/64xt/Singles/GemOv1.png" type="Texture" id=29]
+[ext_resource path="res://Common/64xt/Bricks/BricksBL.png" type="Texture" id=30]
+[ext_resource path="res://Common/64xt/Singles/GemOv3.png" type="Texture" id=31]
+[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=32]
+[ext_resource path="res://Common/64xt/Singles/BrickOv.png" type="Texture" id=33]
+[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=34]
+[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=35]
+[ext_resource path="res://Common/64xt/Singles/GemOv4.png" type="Texture" id=36]
+[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=37]
+[ext_resource path="res://Common/64xt/Singles/Glass.png" type="Texture" id=38]
+[ext_resource path="res://Common/64xt/Singles/Gold1.png" type="Texture" id=39]
+[ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=40]
+[ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=41]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=42]
+[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=43]
+[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=44]
+[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=45]
 
 [resource]
 0/name = "Bark"
-0/texture = ExtResource( 25 )
+0/texture = ExtResource( 45 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -62,7 +62,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Bookshelf"
-1/texture = ExtResource( 12 )
+1/texture = ExtResource( 41 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
@@ -76,7 +76,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "BrickOv"
-2/texture = ExtResource( 5 )
+2/texture = ExtResource( 33 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
@@ -90,7 +90,7 @@
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Bricks"
-3/texture = ExtResource( 29 )
+3/texture = ExtResource( 43 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 64 )
@@ -104,7 +104,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Coal"
-4/texture = ExtResource( 3 )
+4/texture = ExtResource( 10 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
@@ -118,7 +118,7 @@
 4/shapes = [  ]
 4/z_index = 0
 5/name = "CrackOver"
-5/texture = ExtResource( 14 )
+5/texture = ExtResource( 18 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -132,7 +132,7 @@
 5/shapes = [  ]
 5/z_index = 0
 6/name = "CrateOver"
-6/texture = ExtResource( 38 )
+6/texture = ExtResource( 20 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -146,7 +146,7 @@
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Dirt"
-7/texture = ExtResource( 30 )
+7/texture = ExtResource( 24 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
@@ -160,7 +160,7 @@
 7/shapes = [  ]
 7/z_index = 0
 8/name = "GemOv1"
-8/texture = ExtResource( 1 )
+8/texture = ExtResource( 29 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 64, 64 )
@@ -174,7 +174,7 @@
 8/shapes = [  ]
 8/z_index = 0
 9/name = "GemOv2"
-9/texture = ExtResource( 31 )
+9/texture = ExtResource( 26 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
@@ -188,7 +188,7 @@
 9/shapes = [  ]
 9/z_index = 0
 10/name = "GemOv3"
-10/texture = ExtResource( 42 )
+10/texture = ExtResource( 31 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 64, 64 )
@@ -202,7 +202,7 @@
 10/shapes = [  ]
 10/z_index = 0
 11/name = "GemOv4"
-11/texture = ExtResource( 15 )
+11/texture = ExtResource( 36 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 64, 64 )
@@ -216,7 +216,7 @@
 11/shapes = [  ]
 11/z_index = 0
 12/name = "Glass"
-12/texture = ExtResource( 26 )
+12/texture = ExtResource( 38 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 64, 64 )
@@ -230,7 +230,7 @@
 12/shapes = [  ]
 12/z_index = 0
 13/name = "GlassFacete"
-13/texture = ExtResource( 7 )
+13/texture = ExtResource( 16 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 64, 64 )
@@ -244,7 +244,7 @@
 13/shapes = [  ]
 13/z_index = 0
 14/name = "Gold0"
-14/texture = ExtResource( 4 )
+14/texture = ExtResource( 12 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 64, 64 )
@@ -258,7 +258,7 @@
 14/shapes = [  ]
 14/z_index = 0
 15/name = "Gold1"
-15/texture = ExtResource( 16 )
+15/texture = ExtResource( 39 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 64, 64 )
@@ -272,7 +272,7 @@
 15/shapes = [  ]
 15/z_index = 0
 16/name = "Grass"
-16/texture = ExtResource( 43 )
+16/texture = ExtResource( 35 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 64, 64 )
@@ -286,7 +286,7 @@
 16/shapes = [  ]
 16/z_index = 0
 17/name = "Gravel"
-17/texture = ExtResource( 33 )
+17/texture = ExtResource( 34 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 64, 64 )
@@ -300,7 +300,7 @@
 17/shapes = [  ]
 17/z_index = 0
 18/name = "Ice"
-18/texture = ExtResource( 9 )
+18/texture = ExtResource( 44 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 0, 64, 64 )
@@ -314,7 +314,7 @@
 18/shapes = [  ]
 18/z_index = 0
 19/name = "Iron"
-19/texture = ExtResource( 45 )
+19/texture = ExtResource( 37 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 64, 64 )
@@ -328,7 +328,7 @@
 19/shapes = [  ]
 19/z_index = 0
 20/name = "LeavesOp"
-20/texture = ExtResource( 20 )
+20/texture = ExtResource( 15 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 64, 64 )
@@ -342,7 +342,7 @@
 20/shapes = [  ]
 20/z_index = 0
 21/name = "LeavesTs"
-21/texture = ExtResource( 36 )
+21/texture = ExtResource( 25 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 0, 64, 64 )
@@ -356,7 +356,7 @@
 21/shapes = [  ]
 21/z_index = 0
 22/name = "MossOver"
-22/texture = ExtResource( 8 )
+22/texture = ExtResource( 23 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 0, 64, 64 )
@@ -370,7 +370,7 @@
 22/shapes = [  ]
 22/z_index = 0
 23/name = "Mud"
-23/texture = ExtResource( 40 )
+23/texture = ExtResource( 7 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 64, 64 )
@@ -384,7 +384,7 @@
 23/shapes = [  ]
 23/z_index = 0
 24/name = "OreVein"
-24/texture = ExtResource( 24 )
+24/texture = ExtResource( 19 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 0, 64, 64 )
@@ -398,7 +398,7 @@
 24/shapes = [  ]
 24/z_index = 0
 25/name = "Planks"
-25/texture = ExtResource( 41 )
+25/texture = ExtResource( 8 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 64, 64 )
@@ -412,7 +412,7 @@
 25/shapes = [  ]
 25/z_index = 0
 26/name = "Sand"
-26/texture = ExtResource( 11 )
+26/texture = ExtResource( 14 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 0, 0, 64, 64 )
@@ -426,7 +426,7 @@
 26/shapes = [  ]
 26/z_index = 0
 27/name = "SmoothStone"
-27/texture = ExtResource( 13 )
+27/texture = ExtResource( 9 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 64, 64 )
@@ -440,7 +440,7 @@
 27/shapes = [  ]
 27/z_index = 0
 28/name = "Stone"
-28/texture = ExtResource( 10 )
+28/texture = ExtResource( 32 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 64, 64 )
@@ -454,7 +454,7 @@
 28/shapes = [  ]
 28/z_index = 0
 29/name = "TilledSoil"
-29/texture = ExtResource( 44 )
+29/texture = ExtResource( 28 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 64, 64 )
@@ -468,7 +468,7 @@
 29/shapes = [  ]
 29/z_index = 0
 30/name = "TreeRings"
-30/texture = ExtResource( 27 )
+30/texture = ExtResource( 13 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 0, 64, 64 )
@@ -482,7 +482,7 @@
 30/shapes = [  ]
 30/z_index = 0
 31/name = "WalkStone"
-31/texture = ExtResource( 34 )
+31/texture = ExtResource( 42 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 0, 64, 64 )
@@ -496,7 +496,7 @@
 31/shapes = [  ]
 31/z_index = 0
 32/name = "WoolSnow"
-32/texture = ExtResource( 37 )
+32/texture = ExtResource( 17 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 0, 64, 64 )
@@ -510,7 +510,7 @@
 32/shapes = [  ]
 32/z_index = 0
 33/name = "BarkBl"
-33/texture = ExtResource( 32 )
+33/texture = ExtResource( 40 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 0, 64, 64 )
@@ -524,7 +524,7 @@
 33/shapes = [  ]
 33/z_index = 0
 34/name = "BarkBr"
-34/texture = ExtResource( 23 )
+34/texture = ExtResource( 1 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 0, 0, 64, 64 )
@@ -538,7 +538,7 @@
 34/shapes = [  ]
 34/z_index = 0
 35/name = "BarkTl"
-35/texture = ExtResource( 35 )
+35/texture = ExtResource( 22 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 64, 64 )
@@ -552,7 +552,7 @@
 35/shapes = [  ]
 35/z_index = 0
 36/name = "BarkTr"
-36/texture = ExtResource( 22 )
+36/texture = ExtResource( 5 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 0, 64, 64 )
@@ -566,7 +566,7 @@
 36/shapes = [  ]
 36/z_index = 0
 37/name = "BricksBl"
-37/texture = ExtResource( 39 )
+37/texture = ExtResource( 30 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 0, 0, 64, 64 )
@@ -580,7 +580,7 @@
 37/shapes = [  ]
 37/z_index = 0
 38/name = "BricksBr"
-38/texture = ExtResource( 18 )
+38/texture = ExtResource( 4 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 0, 0, 64, 64 )
@@ -608,7 +608,7 @@
 39/shapes = [  ]
 39/z_index = 0
 40/name = "BricksTr"
-40/texture = ExtResource( 17 )
+40/texture = ExtResource( 6 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 0, 0, 64, 64 )
@@ -622,7 +622,7 @@
 40/shapes = [  ]
 40/z_index = 0
 41/name = "WalkStoneBl"
-41/texture = ExtResource( 28 )
+41/texture = ExtResource( 27 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 0, 0, 64, 64 )
@@ -636,7 +636,7 @@
 41/shapes = [  ]
 41/z_index = 0
 42/name = "WalkStoneBr"
-42/texture = ExtResource( 2 )
+42/texture = ExtResource( 11 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 0, 0, 64, 64 )
@@ -650,7 +650,7 @@
 42/shapes = [  ]
 42/z_index = 0
 43/name = "WalkStoneTl"
-43/texture = ExtResource( 6 )
+43/texture = ExtResource( 2 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 0, 0, 64, 64 )
@@ -664,7 +664,7 @@
 43/shapes = [  ]
 43/z_index = 0
 44/name = "WalkStoneTr"
-44/texture = ExtResource( 19 )
+44/texture = ExtResource( 3 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 0, 0, 64, 64 )

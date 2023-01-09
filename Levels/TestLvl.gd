@@ -5,4 +5,4 @@ func _ready():
 	
 func _process(delta):
 	if !Global.PlayerAlive:
-		get_tree().change_scene("res://MainMenu.tscn")
+		get_tree().change_scene("res://Menu/MainMenu.tscn")

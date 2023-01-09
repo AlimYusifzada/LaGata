@@ -2,7 +2,7 @@
 
 extends Node2D
 
-onready var OptionsMenu=preload("res://Options.tscn")
+onready var OptionsMenu=preload("res://Menu/Options.tscn")
 onready var CatYawAnimation=$CatYaw
 onready var CatYawDelay=$CatYawDelay
 onready var BGMusic=$BGMusic
@@ -39,7 +39,7 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-	get_tree().change_scene("res://TestLvl.tscn")
+	get_tree().change_scene("res://Levels/TestLvl.tscn")
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
@@ -50,7 +50,7 @@ func _on_Exit_pressed():
 func _on_Comtinue_pressed():
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
-		get_tree().change_scene("res://TestLvl.tscn")
+		get_tree().change_scene("res://Levels/TestLvl.tscn")
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():

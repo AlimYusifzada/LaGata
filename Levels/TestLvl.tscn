@@ -21,7 +21,7 @@
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=22]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=24]
-[ext_resource path="res://TestLvl.gd" type="Script" id=25]
+[ext_resource path="res://Levels/TestLvl.gd" type="Script" id=25]
 [ext_resource path="res://Backgrounds/PastelCountry/layer_03_2048 x 1546.png" type="Texture" id=26]
 [ext_resource path="res://Backgrounds/PastelCountry/layer_04_2048 x 1546.png" type="Texture" id=27]
 [ext_resource path="res://Backgrounds/PastelCountry/layer_02_2048 x 1546.png" type="Texture" id=28]

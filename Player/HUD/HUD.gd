@@ -16,7 +16,7 @@ onready var MiceLeft=$HUDPanel/MiceStat/MiceLeft
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var ScaleTimer=$ScaleTimer
 onready var BackgroundMusic=$BGM
-onready var Options=preload("res://Options.tscn")
+onready var Options=preload("res://Menu/Options.tscn")
 
 signal OptionsChanged
 
