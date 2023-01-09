@@ -1,6 +1,8 @@
 #global - autoload on startup
 extends Node
 #general constants
+const revision="0.090123"
+
 const main_menu="res://MainMenu.tscn"
 
 const file_GameState="user://gamestate"

@@ -1,26 +1,31 @@
 extends Node2D
 
-onready var SFX=$SFXTest
-onready var BGM=$BGM
-
+onready var SFX:AudioStreamPlayer=$SFXTest
+onready var BGM:AudioStreamPlayer=$BGM
+onready var musicscr=$window/TabContainer/Sound/MusicVol
+onready var sfxscr=$window/TabContainer/Sound/SFXVol
+onready var rev=$window/TabContainer/About/revision
 
 func _ready():
 	Global.loadGameOptions()
-	$window/SFXVol.set_value(Global.SFXVol)
-	$window/MusicVol.set_value(Global.MusicVol)
+	rev.text="rev:"+Global.revision
+	SFX.volume_db=Global.SFXVol
+	BGM.volume_db=Global.MusicVol
+	sfxscr.set_value(Global.SFXVol)
+	musicscr.set_value(Global.MusicVol)
 	position=get_viewport_rect().size/6
 	pass
 
 func _on_CancelButton_pressed():
-	get_tree().paused=false
 	Global.loadGameOptions()
+	get_tree().paused=false
 	get_parent().emit_signal("OptionsChanged")
 	queue_free()
 	pass # Replace with function body.
 
 func _on_OKButton_pressed():
-	get_tree().paused=false
 	Global.saveGameOptions()
+	get_tree().paused=false
 	get_parent().emit_signal("OptionsChanged")
 	queue_free()
 	pass # Replace with function body.
@@ -38,8 +43,7 @@ func _on_SFXVol_value_changed(value):
 	pass # Replace with function body.
 
 func _on_MainMenuButton_pressed():
-	get_tree().paused=false
 	Global.saveGameOptions()
-	Global.saveGameState()
+	get_tree().paused=false
 	get_tree().change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.
