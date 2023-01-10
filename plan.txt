@@ -1,0 +1,16 @@
+add foliage (grass, flowers, moss, stones)
+change jumping platform coil spring (current looks bad)
+enhance pallax screens (add new)
+update decoration tiles 64x64
+do i need small tiles 32x32?
+enhance quality of some sprites (enemies)
+add particle node (black feathers) for crow
+add static platforms (pipes, branches and etc)
+
+intro animation
+"small kitten lost mother and need to survive alone"
+
+mid game animation
+"years past and kitten grow up in to adult cat"
+
+kitten die animation

@@ -155,7 +155,7 @@ func _on_Cat_Enemy():
 	pass # Replace with function body.
 
 func CheckDeath(): 
-	if Global.Stamina<=0 || velocity.y>1500 || !Life:
+	if Global.Stamina<=0 || velocity.y>2000 || !Life:
 		Global.LifesLeft-=1
 		Global.PlayerAlive=false #die if trigered by highfall or stamina
 		Global.saveGameState()
