@@ -18,7 +18,6 @@ script = ExtResource( 25 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sky1" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0, 0.1 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky1"]
@@ -26,7 +25,6 @@ position = Vector2( 29, 2 )
 texture = ExtResource( 31 )
 
 [node name="Far1" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.1, 0.5 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Far1"]
@@ -38,7 +36,6 @@ position = Vector2( 12, -221 )
 texture = ExtResource( 28 )
 
 [node name="Close1" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.9, 1 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Close1"]
@@ -46,7 +43,6 @@ position = Vector2( 8, 176 )
 texture = ExtResource( 27 )
 
 [node name="Far2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 2541, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Far2"]
@@ -73,6 +69,8 @@ position = Vector2( -102, -96 )
 
 [node name="SpringJump" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1504, 1529 )
+JumPower = 50
 
 [node name="SpringJump2" parent="." instance=ExtResource( 9 )]
 position = Vector2( -562, 693 )
+JumPower = 50

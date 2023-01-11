@@ -14,10 +14,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 48, 20 )
+extents = Vector2( 48, 36 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 48, 11.5 )
+extents = Vector2( 48, 3.5 )
 
 [sub_resource type="Animation" id=8]
 resource_name = "bounce"
@@ -60,7 +60,7 @@ collision_mask = 0
 motion/sync_to_physics = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
-position = Vector2( 0, 16 )
+position = Vector2( 0, 32 )
 shape = SubResource( 7 )
 
 [node name="sense" type="Area2D" parent="platform"]
@@ -69,7 +69,7 @@ collision_layer = 0
 collision_mask = 49
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform/sense"]
-position = Vector2( 0, -7.5 )
+position = Vector2( 0, -11 )
 shape = SubResource( 6 )
 
 [node name="APlayer" type="AnimationPlayer" parent="."]

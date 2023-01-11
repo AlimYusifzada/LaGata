@@ -1,18 +1,18 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.090123"
+const revision="0.110123"
 
 const main_menu="res://MainMenu.tscn"
 
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
+
 const MindTimerSet=.5
 const GRAVITY = 1500
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
-#Player(game) parameters
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level=0 #current level
 var LifesLeft=7
@@ -21,24 +21,19 @@ var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 
-#sound volumes (-70,10)
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
 
-#modules (objects)
-
-
 func _ready():
 	randomize()
-	#get_tree().change_scene(main_menu)
 
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
 	Level=0 #current level
-	LifesLeft=7
+	LifesLeft=7 #shall I give additional life as a bonus?
 	PlayerAlive=true #player life status - default true
-	isChild=true #player status (child/adult)
+	isChild=true #player status (child/adult). what is a rule of change
 	Stamina=10	#initial value
 	MiceCatches=0	
 	pass
@@ -59,7 +54,8 @@ func checkChild():
 	if Global.MiceCatches>100:
 		Global.isChild=false
 		Global.saveGameState()
-
+	pass
+	
 func saveGameOptions():
 	var GameOptions={
 		"MasterVol":MasterVol,

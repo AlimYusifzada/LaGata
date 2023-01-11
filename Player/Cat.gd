@@ -5,7 +5,7 @@ const SPEED=350   	#walking speed
 const FOOD=1 		#stamina increased by this value
 const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-600
-const KITTEN_MOD=1.2 #jumping modifiyer
+const KITTEN_MOD=1.2 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten"
 
@@ -35,12 +35,11 @@ signal Message(message)
 
 func _ready():
 	set_scale(SCALE)
-	randomize()
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
-	pass # Replace with function body.
-
+	pass
+#----------------------------------------
 func _physics_process(delta):
 	#---FASTER---
 	KoyoteTimeCheck()
@@ -53,23 +52,13 @@ func _physics_process(delta):
 	#---update sound volume
 	JumpSound.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
-		
+	pass
+	
 func _process(delta): 
 	animate()
-	
-func KoyoteTimeCheck():
-	if !is_on_floor() && KoyoteTimer.is_stopped():
-		KoyoteTimer.start(KoyoteTime)
-	elif is_on_floor():
-		KoyoteTimer.stop()
-		JumpIsPossible=true
-	
-func PickAnimation(an_type=0) -> String: #pick from enum
-	if Global.isChild:
-		return Animate_Mode+Animate_Name[an_type]
-	else:
-		return Animate_Name[an_type]
-	
+	pass
+#-------------------------------------------
+
 func CheckFall(delta):
 	if is_on_floor():
 		velocity.y=0
@@ -77,30 +66,16 @@ func CheckFall(delta):
 		velocity.y=2
 	else:
 		velocity.y+=Global.GRAVITY*delta
-		
-func EmitDust():		
-	var dust=DUST.instance()
-	get_parent().add_child(dust)
-	dust.position=position
-	JumpSound.play()
-
-func CheckJump():
-	if Input.is_action_just_pressed("ui_up") && JumpIsPossible:
-		if !is_on_floor():
-			EmitDust()
-		if Global.Stamina>10: Global.Stamina-=0.1
-		jumpaction()
-	elif Input.is_action_just_pressed("ui_down") and is_on_floor():
-		JumperTimer.start()
-		set_collision_mask_bit(Global.PLATFORM,false)
-
-func jumpaction(modifier=0): #instant jump
-	JumperTimer.start()		
-	set_collision_mask_bit(Global.PLATFORM,false)
-	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
-	if Global.isChild:
-		velocity.y=velocity.y/KITTEN_MOD #makes jumps shorter for kitten
-
+	pass
+	
+func CheckDeath(): 
+	if Global.Stamina<=0 || velocity.y>2000 || !Life:
+		Global.LifesLeft-=1
+		Global.PlayerAlive=false #die if trigered by highfall or stamina
+		Global.saveGameState()
+		queue_free()
+	pass
+	
 func CheckRun(delta):
 	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
@@ -123,8 +98,10 @@ func CheckRun(delta):
 			velocity.x+=MAXSPEED*delta
 			if velocity.x>0:
 				velocity.x=0
-		
-func animate(): #animation 
+	pass
+	
+#animation
+func animate(): 
 	if velocity.y!=0 && !is_on_floor():
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(JUMP))
@@ -137,10 +114,22 @@ func animate(): #animation
 	elif abs(velocity.x)>SPEED && is_on_floor():
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(RUN))
-		
-func _on_jumptimer_timeout():
-		set_collision_mask_bit(Global.PLATFORM,true)
+	pass
+	
+func PickAnimation(an_type=0) -> String: #pick from enum
+	if Global.isChild:
+		return Animate_Mode+Animate_Name[an_type]
+	else:
+		return Animate_Name[an_type]
+	pass
 
+func EmitDust():		
+	var dust=DUST.instance()
+	get_parent().add_child(dust)
+	dust.position=position
+	JumpSound.play()
+	pass
+	
 func _on_Cat_Food():
 	CollectSound.volume_db=Global.SFXVol
 	CollectSound.play()
@@ -148,25 +137,41 @@ func _on_Cat_Food():
 		Global.Stamina+=FOOD
 		if Global.Stamina>100:
 			Global.Stamina=100
-
+	pass
+	
 func _on_Cat_Enemy():
-#if enemy is meet
+	# if enemy is meet
+	# call death screen
 	Life=false #die
 	pass # Replace with function body.
 
-func CheckDeath(): 
-	if Global.Stamina<=0 || velocity.y>2000 || !Life:
-		Global.LifesLeft-=1
-		Global.PlayerAlive=false #die if trigered by highfall or stamina
-		Global.saveGameState()
-		queue_free()
-
-#message handling
+# HUD message handling
 func _on_Cat_Message(message):
 	Message.text=str(message)
 	MessageTimer.start(5)
+	pass
 func _on_messagetimer_timeout():
 	Message.text=""
+	pass
+
+#jumping
+func CheckJump():
+	if Input.is_action_just_pressed("ui_up") && JumpIsPossible:
+		if !is_on_floor():
+			EmitDust()
+		if Global.Stamina>10: Global.Stamina-=0.1
+		jumpaction()
+	elif Input.is_action_just_pressed("ui_down") and is_on_floor():
+		JumperTimer.start()
+		set_collision_mask_bit(Global.PLATFORM,false)
+	pass	
+
+func KoyoteTimeCheck():
+	if !is_on_floor() && KoyoteTimer.is_stopped():
+		KoyoteTimer.start(KoyoteTime)
+	elif is_on_floor():
+		KoyoteTimer.stop()
+		JumpIsPossible=true
 
 func _on_koyotetimer_timeout():
 	JumpIsPossible=false
@@ -177,10 +182,16 @@ func _on_Cat_Jump(power): # initiated by logic
 	EmitDust()
 	pass # Replace with function body.
 
+func _on_jumptimer_timeout():
+	set_collision_mask_bit(Global.PLATFORM,true)
+	pass
 
-#func _on_Cat_OptionsChanged():
-#	Global.loadGameOptions()
-#	JumpSound.volume_db=Global.SFXVol
-#	CollectSound.volume_db=Global.SFXVol
-#	BackgroundMusic.volume_db=Global.MusicVol	
-#	pass # Replace with function body.
+func jumpaction(modifier=0): #instant jump
+	JumperTimer.start()		
+	set_collision_mask_bit(Global.PLATFORM,false)
+	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
+	if Global.isChild:
+		#makes jumps shorter for kitten
+		velocity.y=velocity.y/KITTEN_MOD 
+	pass
+#end of jumping
