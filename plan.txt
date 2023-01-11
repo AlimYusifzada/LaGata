@@ -1,5 +1,5 @@
 add foliage (grass, flowers, moss, stones)
-+ change jumping platform coil spring (current looks bad) 
+(done) change jumping platform coil spring (current looks bad) 
 enhance pallax screens (add new)
 add movable object 
 add area where the object should be pushed/placed
@@ -7,8 +7,8 @@ add area where the object should be pushed/placed
 update decoration tiles 64x64
 do i need small tiles 32x32?
 enhance quality of some sprites (enemies)
-add particle node (black feathers) for crow
-add static platforms (pipes, branches and etc)
+add particle node (black feathers) for birds
+add more static platforms (pipes, branches and etc)
 
 intro animation
 "small kitten lost mother and need to survive alone"
