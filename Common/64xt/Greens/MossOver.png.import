@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MossOver.png-f34a67bc9ba8a7a9481a0c16d2b055ce.stex"
+path="res://.import/MossOver.png-7b6dcc5575e7ffde4a426b4baec42fea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Common/64xt/MossOver.png"
-dest_files=[ "res://.import/MossOver.png-f34a67bc9ba8a7a9481a0c16d2b055ce.stex" ]
+source_file="res://Common/64xt/Greens/MossOver.png"
+dest_files=[ "res://.import/MossOver.png-7b6dcc5575e7ffde4a426b4baec42fea.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LeavesOP.png-1470bfbeb277654af52257e5b28c5202.stex"
+path="res://.import/LeavesOP.png-4a04b206f56f3f0ba67fceca8303bf98.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Common/64xt/LeavesOP.png"
-dest_files=[ "res://.import/LeavesOP.png-1470bfbeb277654af52257e5b28c5202.stex" ]
+source_file="res://Common/64xt/Greens/LeavesOP.png"
+dest_files=[ "res://.import/LeavesOP.png-4a04b206f56f3f0ba67fceca8303bf98.stex" ]
 
 [params]
 
