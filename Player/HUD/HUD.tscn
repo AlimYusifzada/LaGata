@@ -3,7 +3,7 @@
 [ext_resource path="res://Player/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Player/HUD/mousehead.png" type="Texture" id=2]
 [ext_resource path="res://Player/HUD/cathead.png" type="Texture" id=3]
-[ext_resource path="res://Common/Doors/GoldKey.png" type="Texture" id=5]
+[ext_resource path="res://Common/Doors/Keys/GoldKey.png" type="Texture" id=5]
 [ext_resource path="res://Common/coralines-cat.regular.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]

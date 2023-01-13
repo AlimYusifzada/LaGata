@@ -1,14 +1,23 @@
 add foliage (grass, flowers, moss, stones)
-(done) change jumping platform coil spring (current looks bad) 
+	added some as 32x32 sprites (flowers as empty)
+
+change jumping platform coil spring (current looks bad) 
+	new tramplin added (grphics)
+	logic slightly changed to make it more natural
+
 enhance pallax screens (add new)
-add movable object 
-add area where the object should be pushed/placed
-  add buttons(plates) to activate/open something
+
+!add movable object 
+!add area where the object should be pushed/placed
+!add buttons(plates) to activate/open something
+
 update decoration tiles 64x64
-do i need small tiles 32x32?
+	added few 64x64 for grass (decoration tiles)
+
 enhance quality of some sprites (enemies)
-add particle node (black feathers) for birds
-add more static platforms (pipes, branches and etc)
+!add particle node (black feathers) for birds
+!add more static platforms (pipes, branches and etc)
+
 
 intro animation
 "small kitten lost mother and need to survive alone"

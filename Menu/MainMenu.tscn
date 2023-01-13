@@ -101,10 +101,10 @@ position = Vector2( 512, 256 )
 stream = ExtResource( 20 )
 
 [node name="StartNewGame" type="Button" parent="."]
-margin_left = 304.0
-margin_top = 200.0
-margin_right = 709.0
-margin_bottom = 264.0
+margin_left = 293.0
+margin_top = 210.0
+margin_right = 698.0
+margin_bottom = 274.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -146,9 +146,9 @@ text = "Options"
 flat = true
 
 [node name="Exit" type="Button" parent="."]
-margin_left = 529.0
+margin_left = 517.0
 margin_top = 379.0
-margin_right = 629.0
+margin_right = 617.0
 margin_bottom = 443.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
@@ -160,17 +160,17 @@ enabled_focus_mode = 0
 text = "Exit"
 flat = true
 
+[node name="CatYawDelay" type="Timer" parent="."]
+
 [node name="CatYaw" type="AnimatedSprite" parent="."]
-position = Vector2( 486, 170 )
+position = Vector2( 474, 184 )
 frames = SubResource( 2 )
 speed_scale = 2.0
-
-[node name="CatYawDelay" type="Timer" parent="."]
 
 [connection signal="OptionsChanged" from="." to="." method="_on_MainMenu_OptionsChanged"]
 [connection signal="pressed" from="StartNewGame" to="." method="_on_StartNewGame_pressed"]
 [connection signal="pressed" from="Comtinue" to="." method="_on_Comtinue_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
-[connection signal="animation_finished" from="CatYaw" to="." method="_on_CatYaw_animation_finished"]
 [connection signal="timeout" from="CatYawDelay" to="." method="_on_CatYawDelay_timeout"]
+[connection signal="animation_finished" from="CatYaw" to="." method="_on_CatYaw_animation_finished"]
