@@ -1,13 +1,17 @@
-add foliage (grass, flowers, moss, stones)
+-add foliage (grass, flowers, moss, stones)
 	added some as 32x32 sprites (flowers as empty)
 
-change jumping platform coil spring (current looks bad) 
++change jumping platform coil spring (current looks bad) 
 	new tramplin added (grphics)
 	logic slightly changed to make it more natural
 
 enhance pallax screens (add new)
 
-!add movable object 
++add movable object
+	add RigidBody2d
+	add three RayCast to player to let stand on the objects
+	there is a bug when object could be pushed through walls
+		two additioan raycasts added to prevent it	
 !add area where the object should be pushed/placed
 !add buttons(plates) to activate/open something
 

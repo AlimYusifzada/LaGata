@@ -58,6 +58,8 @@ collision_mask = 49
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 5 )
 
+[connection signal="SetClose" from="." to="." method="_on_InternalDoor_SetClose"]
+[connection signal="SetOpen" from="." to="." method="_on_InternalDoor_SetOpen"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

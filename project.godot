@@ -68,6 +68,7 @@ ui_walkright={
 2d_physics/layer_4="Lava"
 2d_physics/layer_5="Pray"
 2d_physics/layer_6="Enemy"
+2d_physics/layer_7="Movable"
 
 [physics]
 

@@ -18,6 +18,8 @@ onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
 onready var LookDown=$LookDown
+onready var LookDown2=$LookDown2
+onready var LookDown3=$LookDown3
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -64,12 +66,19 @@ func _process(delta):
 func CheckFall(delta):
 	if is_on_floor():
 		velocity.y=0
+		LookDown.enabled=false
+		LookDown2.enabled=false
+		LookDown3.enabled=false
 	elif is_on_ceiling():
 		velocity.y=2
 	else: #in the air
+		LookDown.enabled=true
+		LookDown2.enabled=true
+		LookDown3.enabled=true
 		LookDown.force_raycast_update()
-		var collider=LookDown.get_collider()
-		if !collider:
+		LookDown2.force_raycast_update()
+		LookDown3.force_raycast_update()
+		if !LookDown.get_collider() && !LookDown2.get_collider() && !LookDown3.get_collider():
 			velocity.y+=Global.GRAVITY*delta
 			onObject=false
 		else:
