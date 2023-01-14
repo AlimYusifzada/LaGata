@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Common/JumpingPlatforms/Spring.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Common/Doors/Keys/GoldKey.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Common/Doors/SDoor/InternalDoor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=7]
+
+[node name="TestLvl1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( -393218, 25, 0, -393217, 25, 0, -458752, 25, 0, -458751, 25, 0, -458750, 25, 0, -458749, 25, 0, -458748, 25, 0, -458747, 25, 0, -458746, 25, 0, -458745, 25, 0, -458744, 25, 0, -458743, 25, 0, -458742, 25, 0, -458741, 25, 0, -458740, 25, 0, -458739, 25, 0, -458738, 25, 0, -458737, 25, 0, -458736, 25, 0, -458735, 25, 0, -458734, 25, 0, -327684, 25, 0, -327683, 25, 0, -393198, 25, 0, -393197, 25, 0, -262149, 25, 0, -262148, 25, 0, -327661, 25, 0, -196615, 25, 0, -196614, 25, 0, -196613, 25, 0, -262142, 25, 0, -262141, 25, 0, -262140, 25, 0, -262139, 25, 0, -262133, 50, 0, -262125, 25, 0, -131079, 25, 0, -131078, 25, 0, -196602, 25, 0, -196597, 50, 0, -196596, 50, 0, -196595, 50, 0, -196594, 50, 0, -196589, 25, 0, -65543, 25, 0, -131053, 25, 0, -7, 25, 0, -3, 50, 0, -2, 50, 0, -1, 50, 0, -65534, 25, 0, -65517, 25, 0, -65516, 25, 0, 65529, 25, 0, 8, 50, 0, 9, 50, 0, 10, 50, 0, 11, 50, 0, 12, 50, 0, 13, 25, 0, 14, 25, 0, 15, 25, 0, 16, 25, 0, 17, 25, 0, 18, 25, 0, 19, 25, 0, 131065, 25, 0, 65550, 50, 0, 65555, 25, 0, 196601, 25, 0, 196607, 50, 0, 131072, 50, 0, 131073, 50, 0, 131074, 50, 0, 131077, 25, 0, 131078, 50, 0, 131079, 50, 0, 131080, 50, 0, 131081, 50, 0, 131086, 50, 0, 131087, 50, 0, 131088, 50, 0, 131091, 25, 0, 262136, 25, 0, 262137, 25, 0, 262138, 25, 0, 196626, 25, 0, 196627, 25, 0, 327672, 25, 0, 327673, 25, 0, 327674, 25, 0, 327675, 25, 0, 327676, 25, 0, 327677, 25, 0, 327678, 25, 0, 327679, 25, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 25, 0, 262150, 25, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 25, 0, 262155, 25, 0, 262156, 25, 0, 262157, 25, 0, 262158, 25, 0, 262162, 25, 0, 393208, 25, 0, 393209, 25, 0, 393210, 25, 0, 393211, 25, 0, 393212, 25, 0, 393213, 25, 0, 393214, 25, 0, 393215, 25, 0, 327680, 25, 0, 327681, 25, 0, 327682, 25, 0, 327683, 25, 0, 327684, 25, 0, 327685, 25, 0, 327686, 25, 0, 327687, 25, 0, 327688, 25, 0, 327689, 25, 0, 327690, 25, 0, 327694, 25, 0, 327695, 25, 0, 327696, 25, 0, 327697, 25, 0, 327698, 25, 0, 458750, 25, 0, 458751, 25, 0, 393216, 25, 0 )
+
+[node name="Jumper2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 256, 253 )
+JumPower = 60
+
+[node name="InternalDoor" parent="." instance=ExtResource( 5 )]
+position = Vector2( 446, 225 )
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( -231, 67 )
+
+[node name="Cat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 276, -194 )
+
+[node name="GoldKey" parent="." instance=ExtResource( 4 )]
+position = Vector2( -95, -120 )
+
+[node name="torch" parent="." instance=ExtResource( 6 )]
+position = Vector2( 928, 140 )
+scale = Vector2( 0.586775, 0.406529 )
+frame = 1

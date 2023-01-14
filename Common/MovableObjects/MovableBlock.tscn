@@ -5,10 +5,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[node name="Node2D" type="RigidBody2D" groups=["Movable"]]
+[node name="MovableObject" type="RigidBody2D" groups=["Movable"]]
 collision_layer = 64
 collision_mask = 55
-mass = 20.4082
+gravity_scale = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

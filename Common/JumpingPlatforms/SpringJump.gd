@@ -3,8 +3,7 @@ onready var AnSprite:AnimatedSprite=$AnSprite
 onready var APlayer:AnimationPlayer=$APlayer
 var jump:bool=false
 var jumper:Node=null
-export var JumPower=0 
-# value 50 will let jump up to 4 tiles
+export var JumPower=50 # value 50 will let jump up to 5 tiles
 # 
 func _ready():
 	pass # Replace with function body.
