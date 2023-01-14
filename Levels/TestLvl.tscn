@@ -66,6 +66,7 @@ position = Vector2( 8, 168 )
 texture = ExtResource( 30 )
 
 [node name="GMap64x" type="TileMap" parent="."]
+position = Vector2( 0, -5 )
 tile_set = ExtResource( 24 )
 collision_layer = 2
 collision_mask = 0
@@ -87,16 +88,11 @@ position = Vector2( -1520, 1534 )
 JumPower = 100
 
 [node name="SpringJump2" parent="." instance=ExtResource( 9 )]
-position = Vector2( -562, 693 )
+position = Vector2( -559, 687 )
 JumPower = 50
 
 [node name="smallspider" parent="." instance=ExtResource( 1 )]
 position = Vector2( -957, 564 )
-
-[node name="Decor" type="TileMap" parent="."]
-tile_set = ExtResource( 5 )
-format = 1
-tile_data = PoolIntArray( 655366, 49, 0, 655367, 47, 0, 655368, 47, 0, 655369, 48, 0, 655370, 48, 0, 655371, 49, 0, 655372, 51, 0, 655373, 51, 0, 655374, 51, 0, 655375, 51, 0, 655376, 49, 0 )
 
 [node name="TileMap32" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -105,7 +101,11 @@ cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 2
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 1376269, 26, 0, 1376272, 26, 0, 1376274, 24, 0, 1376281, 24, 0, 1376284, 26, 0, 1376286, 25, 0 )
 
 [node name="Node2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1216, 1461 )
+position = Vector2( -127, 147 )
+
+[node name="Decor" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+format = 1
+tile_data = PoolIntArray( 196620, 12, 0, 196621, 12, 0, 196622, 12, 0, 196623, 12, 0, 196624, 12, 0, 262155, 12, 0, 262156, 12, 0, 262157, 12, 0, 262158, 12, 0, 262159, 12, 0, 262160, 12, 0, 262161, 12, 0, 327690, 12, 0, 327691, 12, 0, 327692, 12, 0, 327693, 12, 0, 327694, 12, 0, 327695, 12, 0, 327696, 12, 0, 393222, 1, 0, 393226, 12, 0, 393227, 12, 0, 393228, 5, 0, 393230, 12, 0, 393231, 12, 0, 458762, 12, 0, 458763, 12, 0, 524289, 12, 0, 524290, 12, 0, 524291, 12, 0, 720885, 50, 0, 720886, 49, 0, 720887, 48, 0, 720888, 47, 0, 720889, 45, 0, 720890, 47, 0, 720891, 47, 0, 720892, 48, 0, 720893, 49, 0, 720894, 50, 0, 720895, 51, 0, 655360, 50, 0, 655361, 49, 0, 655362, 47, 0, 655363, 46, 0, 655364, 45, 0, 655365, 47, 0, 655366, 51, 0, 655367, 47, 0, 655368, 47, 0, 655369, 48, 0, 655370, 50, 0, 655371, 49, 0, 655372, 51, 0, 655373, 50, 0, 655374, 51, 0, 655375, 48, 0, 655376, 49, 0 )
