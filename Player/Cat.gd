@@ -17,6 +17,7 @@ onready var KoyoteTimer=$koyotetimer
 onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
+onready var LookDown=$LookDown
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -25,7 +26,7 @@ var Life=true
 var animfinish=true
 var JumpIsPossible=false
 var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
-
+var onObject=false
 
 signal Food
 signal Enemy
@@ -38,6 +39,7 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
+	LookDown.enabled=true
 	pass
 #----------------------------------------
 func _physics_process(delta):
@@ -48,7 +50,7 @@ func _physics_process(delta):
 	CheckJump()
 	CheckRun(delta)
 	#---SLOWER---
-	move_and_slide(velocity,Global.UP)
+	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
 	#---update sound volume
 	JumpSound.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
@@ -64,8 +66,16 @@ func CheckFall(delta):
 		velocity.y=0
 	elif is_on_ceiling():
 		velocity.y=2
-	else:
-		velocity.y+=Global.GRAVITY*delta
+	else: #in the air
+		LookDown.force_raycast_update()
+		var collider=LookDown.get_collider()
+		if !collider:
+			velocity.y+=Global.GRAVITY*delta
+			onObject=false
+		else:
+			velocity.y=0
+			JumpIsPossible=true
+			onObject=true
 	pass
 	
 func CheckDeath(): 
@@ -102,16 +112,16 @@ func CheckRun(delta):
 	
 #animation
 func animate(): 
-	if velocity.y!=0 && !is_on_floor():
+	if velocity.y!=0 && !(is_on_floor()||onObject):
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(JUMP))
-	if velocity.x==0 && is_on_floor():
+	if velocity.x==0 && (is_on_floor()||onObject):
 		PlayerSprite.speed_scale=0.1
 		PlayerSprite.play(PickAnimation(SIT))
-	elif abs(velocity.x)<=SPEED && is_on_floor():
+	elif abs(velocity.x)<=SPEED && (is_on_floor()||onObject):
 		PlayerSprite.speed_scale=2
 		PlayerSprite.play(PickAnimation(WALK))
-	elif abs(velocity.x)>SPEED && is_on_floor():
+	elif abs(velocity.x)>SPEED && (is_on_floor()||onObject):
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(RUN))
 	pass
