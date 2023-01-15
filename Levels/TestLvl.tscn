@@ -19,7 +19,7 @@ tile_data = PoolIntArray( -393218, 25, 0, -393217, 25, 0, -458752, 25, 0, -45875
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 736, -282 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 2
+frame = 6
 
 [node name="Jumper2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256, 253 )
@@ -31,12 +31,12 @@ position = Vector2( 160, 158 )
 [node name="GoldKey" parent="." instance=ExtResource( 4 )]
 position = Vector2( -68, 40 )
 
-[node name="Panel" parent="." instance=ExtResource( 7 )]
-position = Vector2( -295, 241 )
-DoorName = "InternalDoor"
-
 [node name="MovableObject" parent="." instance=ExtResource( 8 )]
 position = Vector2( -129, 112 )
+
+[node name="Panel" parent="." instance=ExtResource( 7 )]
+position = Vector2( -286, 226 )
+DoorName = "InternalDoor"
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
 position = Vector2( -7, 151 )

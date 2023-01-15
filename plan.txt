@@ -1,3 +1,7 @@
+(-) in progress
+(+) almost done
+(!) no progress
+
 -add foliage (grass, flowers, moss, stones)
 	added some as 32x32 sprites (flowers as empty)
 
@@ -5,28 +9,26 @@
 	new tramplin added (grphics)
 	logic slightly changed to make it more natural
 
-enhance pallax screens (add new)
+!enhance pallax screens (add new) 
 
 +add movable object
 	add RigidBody2d
 	add three RayCast to player to let stand on the objects
 	there is a bug when object could be pushed through walls
 		two additioan raycasts added to prevent it	
-!add area where the object should be pushed/placed
-!add buttons(plates) to activate/open something
 
-update decoration tiles 64x64
+-add area where the object should be pushed/placed/activated
+	area and code created - no sprite yet
+
+
+-update decoration tiles 64x64
 	added few 64x64 for grass (decoration tiles)
 
-enhance quality of some sprites (enemies)
+!enhance quality of some sprites (enemies)
 !add particle node (black feathers) for birds
 !add more static platforms (pipes, branches and etc)
-
-
-intro animation
-"small kitten lost mother and need to survive alone"
-
-mid game animation
-"years past and kitten grow up in to adult cat"
-
-kitten die animation
+!intro animation
+	"small kitten lost mother and need to survive alone"
+!mid game animation
+	"years past and kitten grow up in to adult cat"
+!kitten die animation

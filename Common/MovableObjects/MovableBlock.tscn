@@ -7,7 +7,7 @@ extents = Vector2( 32, 32 )
 
 [node name="MovableObject" type="RigidBody2D" groups=["Movable"]]
 collision_layer = 64
-collision_mask = 55
+collision_mask = 7
 gravity_scale = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
