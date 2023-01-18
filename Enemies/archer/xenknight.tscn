@@ -174,7 +174,7 @@ radius = 16.0
 height = 0.0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 16, 2.5 )
+extents = Vector2( 8, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 32, 4 )
@@ -207,7 +207,7 @@ shape = SubResource( 65 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
-position = Vector2( 0, -21 )
+position = Vector2( 0, -24 )
 shape = SubResource( 21 )
 
 [node name="DeathTimer" type="Timer" parent="."]

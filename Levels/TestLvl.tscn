@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/Doors/Panel/Panel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/spider/ambusher.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/spider/smallspider.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/mouse/Mouse.tscn" type="PackedScene" id=11]
 
 [node name="TestLvl1" type="Node2D"]
 
@@ -47,3 +50,14 @@ DoorName = "InternalDoor"
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 736, -282 )
 scale = Vector2( 0.586775, 0.406529 )
+frame = 4
+
+[node name="smallspider" parent="." instance=ExtResource( 10 )]
+position = Vector2( 804, 152 )
+
+[node name="Sprite" parent="." instance=ExtResource( 9 )]
+position = Vector2( 685, -208 )
+flip_h = true
+
+[node name="Mouse" parent="." instance=ExtResource( 11 )]
+position = Vector2( -244, -112 )
