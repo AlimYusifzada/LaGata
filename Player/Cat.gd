@@ -18,8 +18,12 @@ onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
 onready var LookDown=$LookDown
-onready var LookDown2=$LookDown2
-onready var LookDown3=$LookDown3
+onready var LookEDown=$LookEDown
+onready var LookWDown=$LookWDown
+onready var CheckMWest=$ChkMWest
+onready var CheckMEast=$ChkMEast
+onready var CheckTWest=$ChkTWest
+onready var CheckTEast=$ChkTEast
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -29,6 +33,8 @@ var animfinish=true
 var JumpIsPossible=false
 var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject=false
+var canMoveWest=false
+var canMoveEast=false
 
 signal Food
 signal Enemy
@@ -41,14 +47,14 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
-	LookDown.enabled=true
+#	LookDown.enabled=true
 	pass
 #----------------------------------------
 func _physics_process(delta):
 	#---FASTER---
 	KoyoteTimeCheck()
 	CheckDeath()
-	CheckFall(delta)
+	CheckMovable(delta)
 	CheckJump()
 	CheckRun(delta)
 	#---SLOWER---
@@ -63,28 +69,29 @@ func _process(delta):
 	pass
 #-------------------------------------------
 
-func CheckFall(delta):
+func CheckMovable(delta):
+	#CHAECK FALL CONDITION
 	if is_on_floor():
 		velocity.y=0
-		LookDown.enabled=false
-		LookDown2.enabled=false
-		LookDown3.enabled=false
 	elif is_on_ceiling():
 		velocity.y=2
 	else: #in the air
-		LookDown.enabled=true
-		LookDown2.enabled=true
-		LookDown3.enabled=true
-		LookDown.force_raycast_update()
-		LookDown2.force_raycast_update()
-		LookDown3.force_raycast_update()
-		if !LookDown.get_collider() && !LookDown2.get_collider() && !LookDown3.get_collider():
+		if !LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():
 			velocity.y+=Global.GRAVITY*delta
 			onObject=false
 		else:
 			velocity.y=0
 			JumpIsPossible=true
 			onObject=true
+	#CHECK MOVE CONDITION
+	if CheckMEast.get_collider() && CheckTEast.get_collider():
+		canMoveEast=false
+	else:
+		canMoveEast=true
+	if CheckMWest.get_collider() && CheckTWest.get_collider():
+		canMoveWest=false
+	else:
+		canMoveWest=true
 	pass
 	
 func CheckDeath(): 
@@ -96,24 +103,30 @@ func CheckDeath():
 	pass
 	
 func CheckRun(delta):
-	if Input.is_action_pressed("ui_runright"):#and not Input.is_action_just_pressed("ui_runright"):
+	if Input.is_action_pressed("ui_runright") && canMoveEast:#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
 		else:
 			velocity.x=MAXSPEED
 		PlayerSprite.flip_h=true #face right
-	elif Input.is_action_pressed("ui_runleft"):#and not Input.is_action_just_pressed("ui_runright"):
+	elif Input.is_action_pressed("ui_runleft") && canMoveWest:#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x>-MAXSPEED:
 			velocity.x-=MAXSPEED*delta
 		else:
 			velocity.x=-MAXSPEED
 		PlayerSprite.flip_h=false #face left
 	else: #inertia calc - buttons released
-		if velocity.x>0:
+		
+		if velocity.x>0 && !canMoveEast:
+			velocity.x=0
+		if velocity.x<0 && !canMoveWest:
+			velocity.x=0
+			
+		if velocity.x>0 && canMoveEast:
 			velocity.x-=MAXSPEED*delta
 			if velocity.x<0:
 				velocity.x=0
-		if velocity.x<0:
+		if velocity.x<0 && canMoveWest:
 			velocity.x+=MAXSPEED*delta
 			if velocity.x>0:
 				velocity.x=0

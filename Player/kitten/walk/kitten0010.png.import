@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kitten0010.png-4896ee9037d98370eaeee1e5663b2a33.stex"
+path="res://.import/kitten0010.png-e5a55a1c0c82bbdcae591b5598d79dde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/kitten/Walk/kitten0010.png"
-dest_files=[ "res://.import/kitten0010.png-4896ee9037d98370eaeee1e5663b2a33.stex" ]
+source_file="res://Player/kitten/walk/kitten0010.png"
+dest_files=[ "res://.import/kitten0010.png-e5a55a1c0c82bbdcae591b5598d79dde.stex" ]
 
 [params]
 
