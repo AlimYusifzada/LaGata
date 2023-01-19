@@ -76,22 +76,15 @@ func CheckMovable(delta):
 	elif is_on_ceiling():
 		velocity.y=2
 	else: #in the air
-		if !LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():
+		onObject=LookDown.get_collider() || LookEDown.get_collider() || LookWDown.get_collider()
+		if !onObject:#!LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():
 			velocity.y+=Global.GRAVITY*delta
-			onObject=false
 		else:
 			velocity.y=0
 			JumpIsPossible=true
-			onObject=true
 	#CHECK MOVE CONDITION
-	if CheckMEast.get_collider() && CheckTEast.get_collider():
-		canMoveEast=false
-	else:
-		canMoveEast=true
-	if CheckMWest.get_collider() && CheckTWest.get_collider():
-		canMoveWest=false
-	else:
-		canMoveWest=true
+	canMoveEast=!(CheckMEast.get_collider() && CheckTEast.get_collider())
+	canMoveWest=!(CheckMWest.get_collider() && CheckTWest.get_collider())
 	pass
 	
 func CheckDeath(): 
@@ -116,12 +109,10 @@ func CheckRun(delta):
 			velocity.x=-MAXSPEED
 		PlayerSprite.flip_h=false #face left
 	else: #inertia calc - buttons released
-		
 		if velocity.x>0 && !canMoveEast:
 			velocity.x=0
 		if velocity.x<0 && !canMoveWest:
 			velocity.x=0
-			
 		if velocity.x>0 && canMoveEast:
 			velocity.x-=MAXSPEED*delta
 			if velocity.x<0:
@@ -172,7 +163,6 @@ func _on_Cat_Food():
 	pass
 	
 func _on_Cat_Enemy():
-	# if enemy is meet
 	# call death screen
 	Life=false #die
 	pass # Replace with function body.
@@ -193,7 +183,7 @@ func CheckJump():
 			EmitDust()
 		if Global.Stamina>10: Global.Stamina-=0.1
 		jumpaction()
-	elif Input.is_action_just_pressed("ui_down") and is_on_floor():
+	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		JumperTimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
 	pass	

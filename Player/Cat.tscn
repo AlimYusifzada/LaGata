@@ -343,7 +343,7 @@ collision_mask = 64
 position = Vector2( -220, 0 )
 enabled = true
 cast_to = Vector2( -10, 0 )
-collision_mask = 2
+collision_mask = 70
 
 [node name="ChkMEast" type="RayCast2D" parent="."]
 position = Vector2( 80, 0 )
@@ -355,7 +355,7 @@ collision_mask = 64
 position = Vector2( 221, 0 )
 enabled = true
 cast_to = Vector2( 10, 0 )
-collision_mask = 2
+collision_mask = 70
 
 [connection signal="Enemy" from="." to="." method="_on_Cat_Enemy"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]
