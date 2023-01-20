@@ -14,13 +14,13 @@ signal SetClose
 
 func _ready():
 	scale=Vector2(1,1)
+	if DoorState==CLOSED:
+		DoorAnimation.set_frame(3)
+	else:
+		DoorAnimation.set_frame(0)
 	pass
 	
 #func _process(delta):
-#	if DoorState==CLOSED:
-#		DoorAnimation.set_frame(3)
-#	else:
-#		DoorAnimation.set_frame(0)
 	
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DoorState==OPEN:
