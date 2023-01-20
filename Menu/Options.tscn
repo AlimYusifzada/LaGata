@@ -73,7 +73,6 @@ margin_bottom = 25.0
 text = "SFX"
 
 [node name="Graphics" type="Tabs" parent="window/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -81,7 +80,22 @@ margin_top = 51.0
 margin_right = -4.0
 margin_bottom = -4.0
 
+[node name="Label" type="Label" parent="window/TabContainer/Graphics"]
+margin_left = 154.0
+margin_top = 17.0
+margin_right = 211.0
+margin_bottom = 50.0
+text = "View"
+
+[node name="ViewOptions" type="OptionButton" parent="window/TabContainer/Graphics/Label"]
+margin_left = -146.0
+margin_top = -5.0
+margin_right = -7.0
+margin_bottom = 34.0
+text = "Screen"
+
 [node name="About" type="Tabs" parent="window/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -136,6 +150,7 @@ stream = ExtResource( 4 )
 
 [connection signal="value_changed" from="window/TabContainer/Sound/MusicVol" to="." method="_on_MusicVol_value_changed"]
 [connection signal="value_changed" from="window/TabContainer/Sound/SFXVol" to="." method="_on_SFXVol_value_changed"]
+[connection signal="item_selected" from="window/TabContainer/Graphics/Label/ViewOptions" to="." method="_on_ViewOptions_item_selected"]
 [connection signal="pressed" from="window/CancelButton" to="." method="_on_CancelButton_pressed"]
 [connection signal="pressed" from="window/OKButton" to="." method="_on_OKButton_pressed"]
 [connection signal="pressed" from="window/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

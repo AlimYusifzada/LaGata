@@ -65,6 +65,7 @@ func _on_CatYaw_animation_finished():
 func _on_Options_pressed():
 	get_tree().paused=true
 	var om=OptionsMenu.instance()
+	
 	self.add_child(om)
 	pass # Replace with function body.
 

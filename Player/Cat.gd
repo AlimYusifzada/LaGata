@@ -48,6 +48,8 @@ func _ready():
 	JumperTimer.wait_time=0.5
 	Life=true
 #	LookDown.enabled=true
+#	Global.isChild=false
+	
 	pass
 #----------------------------------------
 func _physics_process(delta):

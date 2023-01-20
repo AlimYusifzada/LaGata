@@ -92,19 +92,19 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 512, 256 )
+position = Vector2( 534, 260 )
 stream = ExtResource( 44 )
 area_mask = 0
 
 [node name="SFXSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 512, 256 )
+position = Vector2( 534, 260 )
 stream = ExtResource( 20 )
 
 [node name="StartNewGame" type="Button" parent="."]
-margin_left = 293.0
-margin_top = 210.0
-margin_right = 698.0
-margin_bottom = 274.0
+margin_left = 315.0
+margin_top = 214.0
+margin_right = 720.0
+margin_bottom = 278.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -116,10 +116,10 @@ text = "Start"
 flat = true
 
 [node name="Comtinue" type="Button" parent="."]
-margin_left = 506.0
-margin_top = 264.0
-margin_right = 717.0
-margin_bottom = 328.0
+margin_left = 528.0
+margin_top = 268.0
+margin_right = 739.0
+margin_bottom = 332.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -131,10 +131,10 @@ text = "Continue"
 flat = true
 
 [node name="Options" type="Button" parent="."]
-margin_left = 374.0
-margin_top = 309.0
-margin_right = 585.0
-margin_bottom = 373.0
+margin_left = 396.0
+margin_top = 313.0
+margin_right = 607.0
+margin_bottom = 377.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -146,10 +146,10 @@ text = "Options"
 flat = true
 
 [node name="Exit" type="Button" parent="."]
-margin_left = 517.0
-margin_top = 379.0
-margin_right = 617.0
-margin_bottom = 443.0
+margin_left = 539.0
+margin_top = 383.0
+margin_right = 639.0
+margin_bottom = 447.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -163,7 +163,7 @@ flat = true
 [node name="CatYawDelay" type="Timer" parent="."]
 
 [node name="CatYaw" type="AnimatedSprite" parent="."]
-position = Vector2( 474, 184 )
+position = Vector2( 496, 188 )
 frames = SubResource( 2 )
 speed_scale = 2.0
 
