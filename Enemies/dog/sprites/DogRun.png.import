@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dog0010.png-9e07930da31327ca8be3aa6100f0d510.stex"
+path="res://.import/DogRun.png-6f7b51fae4e79c01512b5e349799feef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/dog/sprites/dog0010.png"
-dest_files=[ "res://.import/dog0010.png-9e07930da31327ca8be3aa6100f0d510.stex" ]
+source_file="res://Enemies/dog/sprites/DogRun.png"
+dest_files=[ "res://.import/DogRun.png-6f7b51fae4e79c01512b5e349799feef.stex" ]
 
 [params]
 

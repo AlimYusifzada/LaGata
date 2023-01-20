@@ -1,14 +1,43 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Enemies/spider/spider.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/spider/sprites/frame0000.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/spider/sprites/frame0006.png" type="Texture" id=3]
-[ext_resource path="res://Enemies/spider/sprites/frame0002.png" type="Texture" id=4]
-[ext_resource path="res://Enemies/spider/sprites/frame0004.png" type="Texture" id=5]
-[ext_resource path="res://Enemies/spider/sprites/frame0005.png" type="Texture" id=6]
-[ext_resource path="res://Enemies/spider/sprites/frame0003.png" type="Texture" id=7]
-[ext_resource path="res://Enemies/spider/sprites/frame0001.png" type="Texture" id=8]
+[ext_resource path="res://Enemies/spider/sprites/SpiderWalk.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/spider/sprites/ambusher.png" type="Texture" id=9]
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 110, 0, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 54, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 110, 54, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 108, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 110, 108, 110, 54 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 162, 110, 54 )
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -22,7 +51,7 @@ animations = [ {
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
 "loop": true,
 "name": "Run",
 "speed": 5.0

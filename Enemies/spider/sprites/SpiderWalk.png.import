@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dog0005.png-7c1eaa5cb15051c718bad033d246720a.stex"
+path="res://.import/SpiderWalk.png-9041680e9f1200a2a4cb8f4beeb099c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/dog/sprites/dog0005.png"
-dest_files=[ "res://.import/dog0005.png-7c1eaa5cb15051c718bad033d246720a.stex" ]
+source_file="res://Enemies/spider/sprites/SpiderWalk.png"
+dest_files=[ "res://.import/SpiderWalk.png-9041680e9f1200a2a4cb8f4beeb099c8.stex" ]
 
 [params]
 

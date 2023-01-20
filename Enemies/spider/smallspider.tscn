@@ -98,7 +98,6 @@ extents = Vector2( 16, 20 )
 extents = Vector2( 8, 4.8125 )
 
 [sub_resource type="CapsuleShape2D" id=44]
-radius = 8.0
 height = 0.0
 
 [node name="smallspider" type="KinematicBody2D" groups=["Enemies"]]

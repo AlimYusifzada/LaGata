@@ -6,17 +6,17 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 192 )
 
-[node name="Sprite" type="Sprite"]
+[node name="ambusher" type="Sprite"]
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="ambusher" type="Area2D" parent="."]
+[node name="ambushArea" type="Area2D" parent="."]
 collision_layer = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ambusher"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ambushArea"]
 position = Vector2( 0, 256 )
 shape = SubResource( 1 )
 
 [node name="remtime" type="Timer" parent="."]
 
-[connection signal="body_entered" from="ambusher" to="." method="_on_ambusher_body_entered"]
+[connection signal="body_entered" from="ambushArea" to="." method="_on_ambusher_body_entered"]
