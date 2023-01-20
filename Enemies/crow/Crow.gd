@@ -6,6 +6,7 @@ onready var SHIT=preload("res://Enemies/crow/shit.tscn")
 var pooping=false
 var poopspawn=Vector2()
 onready var CrowAnimation=$AnimationPlayer
+onready var Feathers=$feathers
 
 func _ready():
 	poopspawn.y=position.y
@@ -16,6 +17,9 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Jump",10)
+		Feathers.position=$Crow.position
+		Feathers.set_emitting(true)
+		
 	pass # Replace with function body.
 
 func _on_shitzone_body_entered(body):

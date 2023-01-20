@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Enemies/crow/Crow.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/crow/Crow.gd" type="Script" id=2]
+[ext_resource path="res://Enemies/crow/feathers.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -70,7 +71,7 @@ resource_name = "Crow"
 length = 10.0
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("CrowBody:position")
+tracks/0/path = NodePath("Crow:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -82,7 +83,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1500, 0 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("CrowBody/AnimatedSprite:flip_h")
+tracks/1/path = NodePath("Crow/CrowSprite:flip_h")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -94,38 +95,56 @@ tracks/1/keys = {
 "values": [ false, true, false ]
 }
 
-[node name="Crow" type="Node2D"]
+[node name="CrowScene" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="CrowBody" type="KinematicBody2D" parent="."]
+[node name="feathers" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 5
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.6
+texture = ExtResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 100.0
+gravity = Vector2( 0, 40 )
+angular_velocity = 100.0
+angular_velocity_random = 0.5
+angle = 180.0
+scale_amount = 1.5
+scale_amount_random = 0.5
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="Crow" type="KinematicBody2D" parent="."]
 collision_layer = 0
 collision_mask = 0
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CrowBody"]
+[node name="CrowSprite" type="AnimatedSprite" parent="Crow"]
 frames = SubResource( 10 )
 animation = "Fly"
-frame = 5
+frame = 3
 speed_scale = 2.5
 playing = true
 
-[node name="body" type="Area2D" parent="CrowBody"]
+[node name="Crowbody" type="Area2D" parent="Crow"]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody/body"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/Crowbody"]
 position = Vector2( 0.869995, 24 )
 rotation = 1.5708
 shape = SubResource( 16 )
 
-[node name="shitzone" type="Area2D" parent="CrowBody"]
+[node name="shitzone" type="Area2D" parent="Crow"]
 position = Vector2( 0.319099, 24 )
 collision_layer = 0
 collision_mask = 33
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody/shitzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/shitzone"]
 position = Vector2( -7.0001, 487.5 )
 shape = SubResource( 14 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrowBody"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow"]
 position = Vector2( 1.319, 24 )
 shape = SubResource( 15 )
 
@@ -133,6 +152,6 @@ shape = SubResource( 15 )
 autoplay = "Crow"
 anims/Crow = SubResource( 12 )
 
-[connection signal="animation_finished" from="CrowBody/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
-[connection signal="body_entered" from="CrowBody/body" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="CrowBody/shitzone" to="." method="_on_shitzone_body_entered"]
+[connection signal="animation_finished" from="Crow/CrowSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="Crow/Crowbody" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Crow/shitzone" to="." method="_on_shitzone_body_entered"]
