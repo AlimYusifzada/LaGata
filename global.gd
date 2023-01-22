@@ -21,6 +21,7 @@ var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 var Points=0
+var PlayerPosition=Vector2()
 
 var MusicVol=0
 var SFXVol=0

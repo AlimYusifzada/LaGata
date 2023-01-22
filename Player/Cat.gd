@@ -58,6 +58,7 @@ func _physics_process(delta):
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
 	#---update sound volume
+	Global.PlayerPosition=position
 	JumpSound.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
 	pass

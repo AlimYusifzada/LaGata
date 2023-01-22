@@ -2,33 +2,34 @@
 (+) almost done
 (!) no progress
 
+
 -add foliage (grass, flowers, moss, stones)
 	added some as 32x32 sprites (flowers as empty)
 
-+change jumping platform coil spring (current looks bad) 
-	new tramplin added (grphics)
-	logic slightly changed to make it more natural
-
-!enhance pallax screens (add new) 
-
 +add movable object
-	add RigidBody2d
-	add three RayCast to player to let stand on the objects
-	there is a bug when object could be pushed through walls
-		two additioan raycasts added to prevent it	
+	-no sprites yet
 
--add area where the object should be pushed/placed/activated
-	area and code created - no sprite yet
++add area where the object should be pushed/placed/activated
+	-no sprite yet
 
+-!door animation need to be fixed
 
 -update decoration tiles 64x64
 	added few 64x64 for grass (decoration tiles)
 
-!enhance quality of some sprites (enemies)
-!add particle node (black feathers) for birds
+-enhance quality of some sprites
+    +player sprites cleaned(kitten)
+
++add particle node (black feathers) for birds
+
+!enhance pallax screens (add new) 
+
 !add more static platforms (pipes, branches and etc)
+
 !intro animation
 	"small kitten lost mother and need to survive alone"
+	
 !mid game animation
 	"years past and kitten grow up in to adult cat"
-!kitten die animation
+	
+!kitten die animation or scene

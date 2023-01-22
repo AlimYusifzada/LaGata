@@ -3,9 +3,9 @@
 extends KinematicBody2D
 
 var SPEED=0
-export var MINSPEED=150
+export var MINSPEED=100
 export var JUMP_VELOCITY=-100
-const SCALE=Vector2(0.5,0.5)
+const SCALE=Vector2(0.6,0.6)
 var velocity=Vector2()
 var Life=true
 var isRunning=true
@@ -18,7 +18,7 @@ onready var MindTimer=$MindTimer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SPEED=rand_range(MINSPEED,MINSPEED+100)
-	RoachSprite.speed_scale=SPEED/(MINSPEED/3)
+	RoachSprite.speed_scale=SPEED/(MINSPEED/2)
 	set_scale(SCALE)
 	RoachSprite.play("RoachRun")
 	velocity.x=SPEED

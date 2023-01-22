@@ -48,6 +48,7 @@ func _on_Exit_pressed():
 	pass # Replace with function body.
 
 func _on_Comtinue_pressed():
+	Global.loadGameState()
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
 		get_tree().change_scene("res://Levels/TestLvl.tscn")
