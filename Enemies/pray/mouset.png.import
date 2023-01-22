@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mouset.png-6dfea5a997a0e1692fe49fa2ee4ee8d2.stex"
+path="res://.import/mouset.png-a03c0bcb4d75aff2503e87a797ae096e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/mouse/mouset.png"
-dest_files=[ "res://.import/mouset.png-6dfea5a997a0e1692fe49fa2ee4ee8d2.stex" ]
+source_file="res://Enemies/pray/mouset.png"
+dest_files=[ "res://.import/mouset.png-a03c0bcb4d75aff2503e87a797ae096e.stex" ]
 
 [params]
 

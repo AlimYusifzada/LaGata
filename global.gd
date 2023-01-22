@@ -20,12 +20,14 @@ var PlayerAlive=true #player life status - default true
 var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
+var Points=0
 
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
 
 func _ready():
+#	PlayerReset()
 	randomize()
 
 func PlayerReset():
@@ -35,7 +37,8 @@ func PlayerReset():
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change
 	Stamina=10	#initial value
-	MiceCatches=0	
+	MiceCatches=0
+	saveGameState()
 	pass
 
 func getLevelScene(level):
@@ -76,7 +79,8 @@ func saveGameState():
 		"PlayerAlive":PlayerAlive,
 		"isChild":isChild,
 		"Stamina":Stamina,
-		"MiceCatches":MiceCatches
+		"MiceCatches":MiceCatches,
+		"Points":Points
 		}
 	var f=File.new()
 	f.open(file_GameState,File.WRITE)
@@ -113,6 +117,7 @@ func loadGameState():
 		isChild=GameState["isChild"]
 		Stamina=GameState["Stamina"]
 		MiceCatches=GameState["MiceCatches"]
+		Points=GameState["Points"]
 		return
 	else:
 		saveGameState()

@@ -2,7 +2,6 @@
 
 extends KinematicBody2D
 const SPEED=350   	#walking speed
-const FOOD=1 		#stamina increased by this value
 const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-600
 const KITTEN_MOD=1.2 #jumping modifiyer for kitten
@@ -36,10 +35,9 @@ var onObject=false
 var canMoveWest=false
 var canMoveEast=false
 
-signal Food
+signal Food(stamina)
 signal Enemy
 signal Jump(power)
-#signal OptionsChanged
 signal Message(message)
 
 func _ready():
@@ -47,9 +45,7 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
-#	LookDown.enabled=true
 #	Global.isChild=false
-	
 	pass
 #----------------------------------------
 func _physics_process(delta):
@@ -155,11 +151,11 @@ func EmitDust():
 	JumpSound.play()
 	pass
 	
-func _on_Cat_Food():
+func _on_Cat_Food(stamina=2):
 	CollectSound.volume_db=Global.SFXVol
 	CollectSound.play()
 	if Global.Stamina<100:
-		Global.Stamina+=FOOD
+		Global.Stamina+=stamina
 		if Global.Stamina>100:
 			Global.Stamina=100
 	pass

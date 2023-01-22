@@ -20,7 +20,7 @@ func _ready():
 	SPEED=rand_range(MINSPEED,MINSPEED+100)
 	MouseSprite.speed_scale=SPEED/(MINSPEED/3)
 	set_scale(SCALE)
-	MouseSprite.play("Run")
+	MouseSprite.play("MouseRun")
 	velocity.x=SPEED
 	pass # Replace with function body.
 	
