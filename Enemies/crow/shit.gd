@@ -21,5 +21,5 @@ func _on_RemoveTimer_timeout():
 
 func _on_DamageArea_body_entered(body):
 	if body.is_in_group("Cats"):
-		Global.Stamina-=1
+		Global.Stamina-=3
 	pass # Replace with function body.

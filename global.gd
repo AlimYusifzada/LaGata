@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.110123"
+const revision="0.230123"
 
 const main_menu="res://MainMenu.tscn"
 
@@ -37,8 +37,9 @@ func PlayerReset():
 	LifesLeft=7 #shall I give additional life as a bonus?
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change
-	Stamina=10	#initial value
+	Stamina=10 #initial value
 	MiceCatches=0
+	Points=0
 	saveGameState()
 	pass
 

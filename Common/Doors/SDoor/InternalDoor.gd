@@ -25,18 +25,18 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DoorState==OPEN:
 		set_collision_mask_bit(Global.PLAYER,false)
-		body.emit_signal("Message","see, the door is open")
+		body.emit_signal("Message","door is open")
 		DoorAnimation.play("open")
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]>0 && DoorState==CLOSED:
 		DoorAnimation.play("open")
 		set_collision_mask_bit(Global.PLAYER,false)
 		Global.KeysRing[DoorColor]-=1
 		DoorState=OPEN
-		body.emit_signal("Message","the door is open now")
+		body.emit_signal("Message","you open the door")
 		DoorAnimation.play("open")
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]<=0 && DoorState==CLOSED:
 		Global.KeysRing[DoorColor]=0
-		body.emit_signal("Message","the door is closed,\nyou need a key!")
+		body.emit_signal("Message","you need a key!")
 	pass # Replace with function body.
 
 func _on_Area2D_body_exited(body):

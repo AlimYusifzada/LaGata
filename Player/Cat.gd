@@ -155,6 +155,7 @@ func EmitDust():
 func _on_Cat_Food(stamina=2):
 	CollectSound.volume_db=Global.SFXVol
 	CollectSound.play()
+	Global.Points+=stamina*50
 	if Global.Stamina<100:
 		Global.Stamina+=stamina
 		if Global.Stamina>100:
@@ -180,7 +181,7 @@ func CheckJump():
 	if Input.is_action_just_pressed("ui_up") && JumpIsPossible:
 		if !is_on_floor():
 			EmitDust()
-		if Global.Stamina>10: Global.Stamina-=0.1
+		if Global.Stamina>10: Global.Stamina-=1.0
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		JumperTimer.start()
