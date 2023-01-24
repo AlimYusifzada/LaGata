@@ -7,6 +7,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
+		body.emit_signal("Food",1)
 		Global.KeysRing[Global.Ykey]+=1
 		$Timer.start(0.1)
 	pass # Replace with function body.

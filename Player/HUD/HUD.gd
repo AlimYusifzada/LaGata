@@ -3,19 +3,19 @@
 extends CanvasLayer
 
 const LSCALE=Vector2(0.0,0.0)
-const NSCALE=Vector2(1.0,1.0)
-const BSCALE=Vector2(2.5,2.5)
+const NSCALE=Vector2(.6,.6)
+const BSCALE=Vector2(1.0,1.0)
 onready var CatStat=$HUDPanel/CatStat
 onready var MiceStat=$HUDPanel/MiceStat
 onready var Keys=$HUDPanel/Keys
 onready var LvlCounter=$HUDPanel/LvlCounter
-onready var LifeCounter=$HUDPanel/CatStat/LifeCounter
-onready var StamCounter=$HUDPanel/CatStat/StamCounter
 onready var MiceCounter=$HUDPanel/MiceStat/MiceCounter
 onready var MiceLeft=$HUDPanel/MiceStat/MiceLeft
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var ScaleTimer=$ScaleTimer
 onready var BackgroundMusic=$BGM
+onready var StaminaBar=$HUDPanel/CatStamBar
+onready var LifeBar=$HUDPanel/CatLifeBar
 onready var Options=preload("res://Menu/Options.tscn")
 
 signal OptionsChanged
@@ -32,17 +32,13 @@ func _ready():
 	pass
 	
 func _process(delta):
+	StaminaBar.progress=Global.Stamina
+	LifeBar.progress=Global.LifesLeft
 	getsetVal()
 
 func getsetVal():
-	var l=int(LifeCounter.text)
-	var s=int(StamCounter.text)
 	var m=int(MiceCounter.text)
 	var k=int(KeysCounter.text)
-	if l!=Global.LifesLeft:
-		LifeCounter.text=str(Global.LifesLeft)
-	if s!=Global.Stamina*10:
-		StamCounter.text=str(Global.Stamina)
 	if m!=Global.MiceCatches:
 		var prays=get_tree().get_nodes_in_group("Pray")
 		MiceCounter.text=str(Global.MiceCatches)
