@@ -7,6 +7,7 @@ var pooping=false
 var poopspawn=Vector2()
 onready var CrowAnimation=$AnimationPlayer
 onready var Feathers=$feathers
+onready var Scream=$Crow/scream
 
 func _ready():
 	poopspawn.y=position.y
@@ -19,19 +20,22 @@ func _on_Area2D_body_entered(body):
 		body.emit_signal("Jump",10)
 		Feathers.position=$Crow.position
 		Feathers.set_emitting(true)
-		
+		Scream.play()
 	pass # Replace with function body.
 
 func _on_shitzone_body_entered(body):
 	if body.is_in_group("Cats") && !pooping:
 		pooping=true
 		poopspawn.x=body.position.x
+#		Scream.play()
 	pass # Replace with function body.
 
 func _on_AnimatedSprite_animation_finished():
+	Scream.volume_db=Global.SFXVol
 	if pooping:
 		pooping=false
 		var poop=SHIT.instance()
 		poop.position=poopspawn
 		get_parent().add_child(poop)
+#	Scream.stop()
 	pass # Replace with function body.

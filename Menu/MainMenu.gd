@@ -49,8 +49,8 @@ func _on_Exit_pressed():
 
 func _on_Comtinue_pressed():
 	Global.loadGameState()
-	if Global.Stamina<=0:
-		Global.Stamina=10
+	Global.Stamina=10
+	Global.KeysRing=[0,0,0]
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
 		get_tree().change_scene("res://Levels/TestLvl.tscn")
@@ -68,7 +68,6 @@ func _on_CatYaw_animation_finished():
 func _on_Options_pressed():
 	get_tree().paused=true
 	var om=OptionsMenu.instance()
-	
 	self.add_child(om)
 	pass # Replace with function body.
 

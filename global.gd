@@ -21,13 +21,14 @@ var isChild=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 var Points=0
-var PlayerPosition=Vector2()
+#var PlayerPosition=Vector2()
 
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
 
 func _ready():
+	loadGameOptions()
 #	PlayerReset()
 	randomize()
 
@@ -75,12 +76,12 @@ func saveGameOptions():
 		
 func saveGameState():
 	var GameState={
-		"KeysRing":KeysRing,
+#		"KeysRing":KeysRing,
 		"Level":Level,
 		"LifesLeft":LifesLeft,
 		"PlayerAlive":PlayerAlive,
 		"isChild":isChild,
-		"Stamina":Stamina,
+#		"Stamina":Stamina,
 		"MiceCatches":MiceCatches,
 		"Points":Points
 		}
@@ -112,12 +113,12 @@ func loadGameState():
 		f.open(file_GameState,File.READ)
 		GameState=parse_json(f.get_line())
 		f.close()
-		KeysRing=GameState["KeysRing"]
+#		KeysRing=GameState["KeysRing"]
 		Level=GameState["Level"]
 		LifesLeft=GameState["LifesLeft"]
 		PlayerAlive=GameState["PlayerAlive"]
 		isChild=GameState["isChild"]
-		Stamina=GameState["Stamina"]
+#		Stamina=GameState["Stamina"]
 		MiceCatches=GameState["MiceCatches"]
 		Points=GameState["Points"]
 		return

@@ -23,6 +23,7 @@ onready var CheckMWest=$ChkMWest
 onready var CheckMEast=$ChkMEast
 onready var CheckTWest=$ChkTWest
 onready var CheckTEast=$ChkTEast
+onready var HeartBeat=$heartbeat
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -57,10 +58,7 @@ func _physics_process(delta):
 	CheckRun(delta)
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
-	#---update sound volume
-	Global.PlayerPosition=position
-	JumpSound.volume_db=Global.SFXVol
-	CollectSound.volume_db=Global.SFXVol
+
 	pass
 	
 func _process(delta): 
@@ -86,7 +84,15 @@ func CheckMovable(delta):
 	canMoveWest=!(CheckMWest.get_collider() && CheckTWest.get_collider())
 	pass
 	
-func CheckDeath(): 
+func CheckDeath():
+	
+	if Global.Stamina<10 && !HeartBeat.playing:
+		print(Global.Stamina)
+		HeartBeat.volume_db=Global.SFXVol
+		HeartBeat.play()
+	elif Global.Stamina>=10:
+		HeartBeat.stop()
+		
 	if Global.Stamina<=0 || velocity.y>2000 || !Life:
 		Global.LifesLeft-=1
 		Global.PlayerAlive=false #die if trigered by highfall or stamina
@@ -149,6 +155,7 @@ func EmitDust():
 	var dust=DUST.instance()
 	get_parent().add_child(dust)
 	dust.position=position
+	JumpSound.volume_db=Global.SFXVol
 	JumpSound.play()
 	pass
 	

@@ -10,8 +10,8 @@ onready var sprite=$arrow/Sprite
 
 func _ready():
 	set_scale(SCALE)
-	visible=true
 	woosh.volume_db=Global.SFXVol
+	visible=true
 	woosh.play()
 	RemoveTimer.start(1)
 	pass

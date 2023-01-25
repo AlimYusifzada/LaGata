@@ -3,7 +3,7 @@
 extends KinematicBody2D
 
 #const ARROW=preload("res://Enemies//arrow.tscn")
-export var MINSPEED=250.0
+export var MINSPEED=200.0
 export var JUMP_VELOCITY=-600
 const SCALE=Vector2(0.9,0.9)
 var velocity=Vector2()
@@ -35,7 +35,7 @@ func _physics_process(delta):
 	move(delta)
 	move_and_slide(velocity,Global.UP)
 	#---ubpdate sund vol
-	Voice.volume_db=Global.SFXVol
+	
 	pass
 
 func _process(delta):
@@ -104,10 +104,8 @@ func _on_JumpTimer_timeout():
 
 func MakeVoice(body):
 	if body.is_in_group("Cats"):
+		Voice.volume_db=Global.SFXVol
 		Voice.play()
-func ShutVoice(body):
-	if body.is_in_group("Cats"):
-		Voice.stop()
 		
 func _on_AimRight_body_entered(body):
 	MakeVoice(body)
@@ -125,12 +123,4 @@ func _on_AimLeft_body_entered(body):
 	elif velocity.x==0:
 		velocity.x=-Speed
 	LookAt()
-	pass # Replace with function body.
-
-func _on_AimRight_body_exited(body):
-	ShutVoice(body)
-	pass # Replace with function body.
-
-func _on_AimLeft_body_exited(body):
-	ShutVoice(body)
 	pass # Replace with function body.

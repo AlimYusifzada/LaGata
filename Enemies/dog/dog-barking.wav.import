@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dog-barking.wav-f360a84e8210060d2b40b5774191983c.sample"
+
+[deps]
+
+source_file="res://Enemies/dog/dog-barking.wav"
+dest_files=[ "res://.import/dog-barking.wav-f360a84e8210060d2b40b5774191983c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
