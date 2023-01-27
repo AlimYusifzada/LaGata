@@ -29,8 +29,7 @@ enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
 var velocity=Vector2()
 var Life=true
-var animfinish=true
-var JumpIsPossible=false
+var JumpPossible=false
 var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject=false
 var canMoveWest=false
@@ -53,7 +52,7 @@ func _ready():
 	Color(1,1,1,0),1,
 	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	
-	Global.isChild=true
+	Global.isChild=false
 	pass
 #----------------------------------------
 func _physics_process(delta):
@@ -65,7 +64,6 @@ func _physics_process(delta):
 	CheckRun(delta)
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
-
 	pass
 	
 func _process(delta): 
@@ -85,7 +83,7 @@ func CheckMovable(delta):
 			velocity.y+=Global.GRAVITY*delta
 		else:
 			velocity.y=0
-			JumpIsPossible=true
+			JumpPossible=true
 	#CHECK MOVE CONDITION
 	canMoveEast=!(CheckMEast.get_collider() && CheckTEast.get_collider())
 	canMoveWest=!(CheckMWest.get_collider() && CheckTWest.get_collider())
@@ -98,9 +96,6 @@ func CheckDeath():
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
 	if Global.Stamina<=0 || velocity.y>2000 || !Life:
-#		Global.LifesLeft-=1
-#		Global.PlayerAlive=false #die if trigered by highfall or stamina
-#		Global.saveGameState()
 		set_physics_process(false)
 		$Tween.start()
 	pass
@@ -175,7 +170,6 @@ func _on_Cat_Food(stamina=2):
 	pass
 	
 func _on_Cat_Enemy():
-	# call death screen
 	Life=false #die
 	pass # Replace with function body.
 
@@ -190,7 +184,7 @@ func _on_messagetimer_timeout():
 
 #jumping
 func CheckJump():
-	if Input.is_action_just_pressed("ui_up") && JumpIsPossible:
+	if Input.is_action_just_pressed("ui_up") && JumpPossible:
 		if !is_on_floor():
 			EmitDust()
 		if Global.Stamina>10: Global.Stamina-=1.0
@@ -205,10 +199,10 @@ func KoyoteTimeCheck():
 		KoyoteTimer.start(KoyoteTime)
 	elif is_on_floor():
 		KoyoteTimer.stop()
-		JumpIsPossible=true
+		JumpPossible=true
 
 func _on_koyotetimer_timeout():
-	JumpIsPossible=false
+	JumpPossible=false
 	pass # Replace with function body.
 
 func _on_Cat_Jump(power): # initiated by logic
@@ -225,7 +219,6 @@ func jumpaction(modifier=0): #instant jump
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:
-		#makes jumps shorter for kitten
 		velocity.y=velocity.y/KITTEN_MOD 
 	pass
 #end of jumping

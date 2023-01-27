@@ -18,16 +18,18 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Jump",10)
+		body.emit_signal("Message","crow jump!")
 		Feathers.position=$Crow.position
 		Feathers.set_emitting(true)
 		Scream.play()
+		Global.Points+=50
 	pass # Replace with function body.
 
 func _on_shitzone_body_entered(body):
 	if body.is_in_group("Cats") && !pooping:
 		pooping=true
 		poopspawn.x=body.position.x
-#		Scream.play()
+		body.emit_signal("Message","crow above!")
 	pass # Replace with function body.
 
 func _on_AnimatedSprite_animation_finished():
