@@ -16,6 +16,7 @@ onready var LifeBar=$HUDPanel/CatStat/CatLifeBar
 onready var MiceStatBar=$HUDPanel/MiceStat/MiceStatBar
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var PointsCounter=$HUDPanel/PointsCounter
+onready var SceneTransition=$SceneTransition
 
 onready var Options=preload("res://Menu/Options.tscn")
 
@@ -24,6 +25,7 @@ signal OptionsChanged
 var Praystot=0
 
 func _ready():
+	SceneTransition.emit_signal("Start")
 	Global.loadGameOptions()
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()
@@ -48,10 +50,9 @@ func _process(delta):
 		MiceStat.visible=false
 		$HUDPanel/Message.text="all clear"
 	
-	
 	PointsCounter.text=str(Global.Points)
-	
 	KeysCounter.text=str(Global.KeysRing[0])
+	
 	if Global.KeysRing[0]==0:
 		Keys.scale=LSCALE
 	else:

@@ -206,7 +206,7 @@ extents = Vector2( 192, 4 )
 
 [sub_resource type="CapsuleShape2D" id=37]
 radius = 16.0
-height = 48.0
+height = 32.0
 
 [node name="dog" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 0
@@ -233,9 +233,6 @@ collision_layer = 0
 position = Vector2( 0, -32 )
 shape = SubResource( 21 )
 
-[node name="DeathTimer" type="Timer" parent="."]
-wait_time = 2.0
-
 [node name="JumpTimer" type="Timer" parent="."]
 
 [node name="AimRight" type="Area2D" parent="."]
@@ -253,7 +250,7 @@ position = Vector2( -384, 12 )
 shape = SubResource( 36 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8 )
+position = Vector2( 0, 12 )
 shape = SubResource( 37 )
 
 [node name="Voice" type="AudioStreamPlayer2D" parent="."]
@@ -262,9 +259,11 @@ stream = ExtResource( 3 )
 [node name="MindTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
-[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
 [connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
 [connection signal="body_entered" from="AimRight" to="." method="_on_AimRight_body_entered"]
 [connection signal="body_entered" from="AimLeft" to="." method="_on_AimLeft_body_entered"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

@@ -22,10 +22,17 @@ func _ready():
 	set_scale(SCALE)
 	MouseSprite.play("MouseRun")
 	velocity.x=SPEED
+	$Tween.interpolate_property($".","modulate",
+		Color(1,1,1,1),Color(1,1,1,0),0.5,
+		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	$Tween.interpolate_property($".",
+	"scale",
+	$".".scale,
+	$".".scale+Vector2(0.3,0.3),0.5,
+	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
-	deathcheck()
 	fall(delta)
 	move()
 	move_and_slide(velocity,Global.UP)
@@ -35,10 +42,12 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats"):
+	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Food")
 		Global.MiceCatches+=1
 		Life=false
+		set_collision_layer_bit(Global.PRAY,false)
+		$Tween.start()
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -59,12 +68,11 @@ func move():
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)
-		
-func deathcheck():
-	if !Life:
-		queue_free()
 
 func jump():
 	velocity.y=-JUMP_VELOCITY
 	pass
 
+func _on_Tween_tween_all_completed():
+	queue_free()
+	pass # Replace with function body.

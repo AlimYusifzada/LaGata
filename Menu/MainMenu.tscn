@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Common/coralines-cat.regular.ttf" type="DynamicFontData" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Common/CatYawAnim/catgif0047.png" type="Texture" id=17]
 [ext_resource path="res://Common/CatYawAnim/catgif0018.png" type="Texture" id=18]
 [ext_resource path="res://Common/CatYawAnim/catgif0023.png" type="Texture" id=19]
+[ext_resource path="res://Common/SceneTransition/SceneTransition.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Common/CatYawAnim/catgif0002.png" type="Texture" id=21]
 [ext_resource path="res://Common/CatYawAnim/catgif0012.png" type="Texture" id=22]
 [ext_resource path="res://Common/CatYawAnim/catgif0045.png" type="Texture" id=23]
@@ -171,6 +172,9 @@ flat = true
 position = Vector2( 496, 188 )
 frames = SubResource( 2 )
 speed_scale = 2.0
+
+[node name="SceneTransition" parent="." instance=ExtResource( 20 )]
+TransTime = 1.0
 
 [connection signal="OptionsChanged" from="." to="." method="_on_MainMenu_OptionsChanged"]
 [connection signal="pressed" from="StartNewGame" to="." method="_on_StartNewGame_pressed"]

@@ -8,9 +8,12 @@ onready var CatYawDelay=$CatYawDelay
 onready var BGMusic=$BGMusic
 onready var Comtinue=$Comtinue
 onready var SFXSound=$SFXSound
+onready var SceneTransition=$SceneTransition
+onready var Fade=$SceneTransition/Fade
 signal OptionsChanged
 
 func _ready():
+	SceneTransition.emit_signal("Start")
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()
@@ -39,6 +42,9 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
+	SceneTransition.FadeIn=false
+	SceneTransition.emit_signal("Start")
+	yield(SceneTransition,"finished")
 	get_tree().change_scene("res://Levels/TestLvl.tscn")
 	pass # Replace with function body.
 
@@ -51,6 +57,11 @@ func _on_Comtinue_pressed():
 	Global.loadGameState()
 	Global.Stamina=10
 	Global.KeysRing=[0,0,0]
+	
+	SceneTransition.FadeIn=false
+	SceneTransition.emit_signal("Start")
+	yield(SceneTransition,"finished")
+	
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
 		get_tree().change_scene("res://Levels/TestLvl.tscn")

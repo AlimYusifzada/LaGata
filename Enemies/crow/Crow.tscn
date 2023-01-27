@@ -63,7 +63,7 @@ radius = 24.0
 height = 60.898
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 24, 255.5 )
+extents = Vector2( 16, 255.5 )
 
 [sub_resource type="RectangleShape2D" id=15]
 
@@ -124,7 +124,7 @@ collision_mask = 0
 [node name="CrowSprite" type="AnimatedSprite" parent="Crow"]
 frames = SubResource( 10 )
 animation = "Fly"
-frame = 4
+frame = 8
 speed_scale = 2.5
 playing = true
 
@@ -142,7 +142,7 @@ collision_layer = 0
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/shitzone"]
-position = Vector2( -7.0001, 487.5 )
+position = Vector2( -0.319099, 487.5 )
 shape = SubResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crow"]

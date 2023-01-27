@@ -46,7 +46,14 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
-#	Global.isChild=false
+
+	$Tween.interpolate_property($".",
+	"modulate",
+	Color(1,1,1,1),
+	Color(1,1,1,0),1,
+	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	
+	Global.isChild=true
 	pass
 #----------------------------------------
 func _physics_process(delta):
@@ -85,19 +92,17 @@ func CheckMovable(delta):
 	pass
 	
 func CheckDeath():
-	
+	HeartBeat.volume_db=Global.SFXVol
 	if Global.Stamina<10 && !HeartBeat.playing:
-		print(Global.Stamina)
-		HeartBeat.volume_db=Global.SFXVol
 		HeartBeat.play()
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
-		
 	if Global.Stamina<=0 || velocity.y>2000 || !Life:
-		Global.LifesLeft-=1
-		Global.PlayerAlive=false #die if trigered by highfall or stamina
-		Global.saveGameState()
-		queue_free()
+#		Global.LifesLeft-=1
+#		Global.PlayerAlive=false #die if trigered by highfall or stamina
+#		Global.saveGameState()
+		set_physics_process(false)
+		$Tween.start()
 	pass
 	
 func CheckRun(delta):
@@ -193,7 +198,7 @@ func CheckJump():
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		JumperTimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
-	pass	
+	pass
 
 func KoyoteTimeCheck():
 	if !is_on_floor() && KoyoteTimer.is_stopped():
@@ -224,3 +229,9 @@ func jumpaction(modifier=0): #instant jump
 		velocity.y=velocity.y/KITTEN_MOD 
 	pass
 #end of jumping
+
+func _on_Tween_tween_all_completed():
+	Global.LifesLeft-=1
+	Global.PlayerAlive=false #die if trigered by highfall or stamina
+	Global.saveGameState()
+	queue_free()

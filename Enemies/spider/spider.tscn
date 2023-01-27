@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Enemies/spider/spider.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/spider/sprites/SpiderWalk.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/spider/sprites/ambusher.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=45]
 flags = 4
@@ -46,7 +45,7 @@ animations = [ {
 "name": "Attack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [  ],
 "loop": true,
 "name": "Death",
 "speed": 5.0
@@ -92,10 +91,6 @@ collision_layer = 0
 position = Vector2( 0, -27 )
 shape = SubResource( 21 )
 
-[node name="DeathTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
 [node name="JumpTimer" type="Timer" parent="."]
 one_shot = true
 
@@ -106,7 +101,9 @@ shape = SubResource( 44 )
 [node name="MindTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
-[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
 [connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

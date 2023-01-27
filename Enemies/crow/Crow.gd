@@ -11,7 +11,7 @@ onready var Scream=$Crow/scream
 
 func _ready():
 	poopspawn.y=position.y
-	scale=Vector2(0.5,0.5)
+	scale=Vector2(0.6,0.6)
 	CrowAnimation.set_speed_scale(rand_range(0.7,1.0))
 	pass
 

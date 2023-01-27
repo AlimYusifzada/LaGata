@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.230123"
+const revision="0.260123"
 
 const main_menu="res://MainMenu.tscn"
 
@@ -76,12 +76,10 @@ func saveGameOptions():
 		
 func saveGameState():
 	var GameState={
-#		"KeysRing":KeysRing,
 		"Level":Level,
 		"LifesLeft":LifesLeft,
 		"PlayerAlive":PlayerAlive,
 		"isChild":isChild,
-#		"Stamina":Stamina,
 		"MiceCatches":MiceCatches,
 		"Points":Points
 		}
@@ -113,12 +111,10 @@ func loadGameState():
 		f.open(file_GameState,File.READ)
 		GameState=parse_json(f.get_line())
 		f.close()
-#		KeysRing=GameState["KeysRing"]
 		Level=GameState["Level"]
 		LifesLeft=GameState["LifesLeft"]
 		PlayerAlive=GameState["PlayerAlive"]
 		isChild=GameState["isChild"]
-#		Stamina=GameState["Stamina"]
 		MiceCatches=GameState["MiceCatches"]
 		Points=GameState["Points"]
 		return

@@ -6,6 +6,7 @@ onready var musicscr=$window/TabContainer/Sound/MusicVol
 onready var sfxscr=$window/TabContainer/Sound/SFXVol
 onready var rev=$window/TabContainer/About/revision
 onready var ViewOptions=$window/TabContainer/Graphics/Label/ViewOptions
+
 var Size=Vector2()
 
 func _ready():
@@ -15,7 +16,6 @@ func _ready():
 	BGM.volume_db=Global.MusicVol
 	sfxscr.set_value(Global.SFXVol)
 	musicscr.set_value(Global.MusicVol)
-#	position=get_viewport_rect().size/6
 	ViewOptions.add_item("Window",0)
 	ViewOptions.add_item("Screen",1)
 	ViewOptions.select(OS.window_fullscreen)
