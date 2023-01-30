@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://Common/flame/flame.gd" type="Script" id=1]
-[ext_resource path="res://Common/flame/flame.png" type="Texture" id=2]
+[ext_resource path="res://Common/FlameTrap/flame.gd" type="Script" id=1]
+[ext_resource path="res://Common/FlameTrap/flame.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -97,13 +97,15 @@ animations = [ {
 } ]
 
 [sub_resource type="Gradient" id=53]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=54]
 gradient = SubResource( 53 )
-fill_from = Vector2( 0.504167, 0 )
-fill_to = Vector2( 0.491667, 1 )
+fill = 1
+fill_from = Vector2( 0.495833, 0.729167 )
+fill_to = Vector2( 0.495833, 0.170833 )
 
-[node name="flame" type="AnimatedSprite"]
+[node name="FlameTrap" type="AnimatedSprite"]
 frames = SubResource( 37 )
 speed_scale = 2.0
 script = ExtResource( 1 )
@@ -118,18 +120,19 @@ collision_mask = 49
 
 [node name="CheckBodyE" type="RayCast2D" parent="."]
 position = Vector2( 0, 128 )
-cast_to = Vector2( 40, -64 )
+cast_to = Vector2( 48, -88 )
 
 [node name="CheckBodyW" type="RayCast2D" parent="."]
 position = Vector2( 0, 128 )
-cast_to = Vector2( -40, -64 )
+cast_to = Vector2( -48, -88 )
 
 [node name="Light" type="Light2D" parent="."]
 position = Vector2( 2.38419e-06, -28.5 )
 scale = Vector2( 2, 5.10937 )
 texture = SubResource( 54 )
-color = Color( 0.905882, 0.603922, 0.0313726, 1 )
-energy = 0.5
+color = Color( 1, 0.607843, 0, 1 )
 
+[connection signal="SetClose" from="." to="." method="_on_FlameTrap_SetClose"]
+[connection signal="SetOpen" from="." to="." method="_on_FlameTrap_SetOpen"]
 [connection signal="animation_finished" from="." to="." method="_on_flame_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

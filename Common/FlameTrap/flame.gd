@@ -72,3 +72,4 @@ func _on_flame_animation_finished():
 		state=IDLE
 		$Light.enabled=false
 	pass # Replace with function body.
+

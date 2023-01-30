@@ -8,7 +8,7 @@
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/Doors/Panel/Panel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Common/flame/flame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Common/FlameTrap/flame.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/pray/Coin.tscn" type="PackedScene" id=12]
@@ -58,13 +58,13 @@ gravity_scale = 10.0
 position = Vector2( 56, 158 )
 
 [node name="Panel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 96, 224 )
+position = Vector2( 304, 289 )
 DoorName = "FlameTrap"
 
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 736, -282 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 0
+frame = 5
 
 [node name="smallspider" parent="." instance=ExtResource( 17 )]
 position = Vector2( 359, 232 )
@@ -136,8 +136,8 @@ position = Vector2( 856, -240 )
 position = Vector2( 488, 224 )
 
 [node name="FlameTrap" parent="." instance=ExtResource( 9 )]
-position = Vector2( 295, 187 )
-rotation = -0.00365722
+position = Vector2( 304, 183 )
+scale = Vector2( 1, 1 )
 
 [node name="xenshooter" parent="." instance=ExtResource( 18 )]
 position = Vector2( 672, 256 )
@@ -152,7 +152,7 @@ position = Vector2( 768, 248 )
 position = Vector2( 808, 200 )
 
 [node name="dog" parent="." instance=ExtResource( 19 )]
-position = Vector2( 608, 248 )
+position = Vector2( 648, 208 )
 
 [node name="dog2" parent="." instance=ExtResource( 19 )]
-position = Vector2( 848, 168 )
+position = Vector2( 885, 230 )
