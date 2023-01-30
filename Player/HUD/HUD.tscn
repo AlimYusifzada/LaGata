@@ -107,7 +107,4 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
 [node name="SceneTransition" parent="." instance=ExtResource( 7 )]
-__meta__ = {
-"_edit_use_anchors_": true
-}
 TransTime = 1.0

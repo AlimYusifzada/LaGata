@@ -33,7 +33,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DeathTimer.is_stopped():
-		body.emit_signal("Enemy")
+		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):

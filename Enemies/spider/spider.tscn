@@ -103,6 +103,7 @@ one_shot = true
 
 [node name="Tween" type="Tween" parent="."]
 
+[connection signal="Die" from="." to="." method="_on_spider_Die"]
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
 [connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]

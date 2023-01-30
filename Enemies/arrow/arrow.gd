@@ -28,7 +28,7 @@ func _physics_process(delta):
 
 func _on_arrow_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Enemy")
+		body.emit_signal("Die")
 		pass
 		
 func _on_RemoveTimer_timeout():

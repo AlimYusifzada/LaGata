@@ -16,6 +16,7 @@ onready var KoyoteTimer=$koyotetimer
 onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
+onready var Meow=$meow
 onready var LookDown=$LookDown
 onready var LookEDown=$LookEDown
 onready var LookWDown=$LookWDown
@@ -36,7 +37,7 @@ var canMoveWest=false
 var canMoveEast=false
 
 signal Food(stamina)
-signal Enemy
+signal Die
 signal Jump(power)
 signal Message(message)
 
@@ -169,10 +170,6 @@ func _on_Cat_Food(stamina=2):
 			Global.Stamina=100
 	pass
 	
-func _on_Cat_Enemy():
-	Life=false #die
-	pass # Replace with function body.
-
 # HUD message handling
 func _on_Cat_Message(message):
 	Message.text=str(message)
@@ -228,3 +225,9 @@ func _on_Tween_tween_all_completed():
 	Global.PlayerAlive=false #die if trigered by highfall or stamina
 	Global.saveGameState()
 	queue_free()
+
+func _on_Cat_Die():
+	Meow.volume_db=Global.SFXVol
+	Meow.play()
+	Life=false #die
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Enemies/crow/Crow.png" type="Texture" id=1]
 [ext_resource path="res://Enemies/crow/Crow.gd" type="Script" id=2]
@@ -62,10 +62,8 @@ animations = [ {
 radius = 24.0
 height = 60.898
 
-[sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 16, 255.5 )
-
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 8, 204 )
 
 [sub_resource type="Animation" id=12]
 resource_name = "Crow"
@@ -124,7 +122,7 @@ collision_mask = 0
 [node name="CrowSprite" type="AnimatedSprite" parent="Crow"]
 frames = SubResource( 10 )
 animation = "Fly"
-frame = 6
+frame = 2
 speed_scale = 2.5
 playing = true
 
@@ -136,22 +134,22 @@ position = Vector2( 0.869995, 24 )
 rotation = 1.5708
 shape = SubResource( 16 )
 
-[node name="shitzone" type="Area2D" parent="Crow"]
-position = Vector2( 0.319099, 24 )
-collision_layer = 0
-collision_mask = 33
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/shitzone"]
-position = Vector2( -0.319099, 487.5 )
-shape = SubResource( 14 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow"]
-position = Vector2( 1.319, 24 )
-shape = SubResource( 15 )
-
 [node name="scream" type="AudioStreamPlayer2D" parent="Crow"]
 stream = ExtResource( 4 )
 area_mask = 7
+
+[node name="LookDown" type="RayCast2D" parent="Crow"]
+position = Vector2( 0, 24 )
+enabled = true
+cast_to = Vector2( 0, 168 )
+collision_mask = 6
+
+[node name="PoopingArea" type="Area2D" parent="Crow"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/PoopingArea"]
+position = Vector2( 0, 396 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Crow"
@@ -159,4 +157,4 @@ anims/Crow = SubResource( 12 )
 
 [connection signal="animation_finished" from="Crow/CrowSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Crow/Crowbody" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Crow/shitzone" to="." method="_on_shitzone_body_entered"]
+[connection signal="body_entered" from="Crow/PoopingArea" to="." method="_on_PoopingArea_body_entered"]

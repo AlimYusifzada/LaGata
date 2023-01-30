@@ -9,10 +9,11 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 onready var XenAnimation=$AnimatedSprite
-onready var DeathTimer=$DeathTimer
 onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
 export var JumpOffProb=0.1
+
+signal Die
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,10 +22,11 @@ func _ready():
 	XenAnimation.speed_scale=Speed/(MINSPEED/2.0)
 	XenAnimation.play("Run")
 	velocity.x=Speed
+	$Tween.interpolate_property($".","modulate",
+		Color(1,1,1,1),Color(1,1,1,0),0.5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
-	deathcheck()
 	fall(delta)
 	move()
 	move_and_slide(velocity,Global.UP)
@@ -34,8 +36,8 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && DeathTimer.is_stopped():
-		body.emit_signal("Enemy")
+	if body.is_in_group("Cats") && Life:
+		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -45,7 +47,7 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 
 func animation():
-	if !DeathTimer.is_stopped(): #play death if timer is running
+	if !Life: #play death if timer is running
 		XenAnimation.play("Death")
 	elif velocity.x>0: #face to right or left
 		XenAnimation.flip_h=false
@@ -61,26 +63,28 @@ func move():
 		MindTimer.start(Global.MindTimerSet)
 		pass
 		
-func deathcheck():
-	if !Life:
-		queue_free()
-		
+func Kill():
+	Life=false
+	set_collision_mask_bit(Global.GROUND,false)
+	set_collision_mask_bit(Global.PLATFORM,false)
+	$Tween.start()
+
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		#drop sceleton down
-		set_collision_mask_bit(Global.GROUND,false)
-		set_collision_mask_bit(Global.PLATFORM,false)
-		DeathTimer.start()
+		Kill()
 		pass
-	pass # Replace with function body.
-
-func _on_DeathTimer_timeout():
-	Life=false
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
 	if rand_range(0.0,1.0)<0.3:
 		velocity.x*=-1
-#	JumpTimer.stop()
+	pass # Replace with function body.
+
+func _on_Tween_tween_all_completed():
+	queue_free()
+	pass # Replace with function body.
+
+func _on_xen_Die():
+	Kill()
 	pass # Replace with function body.

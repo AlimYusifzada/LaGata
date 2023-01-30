@@ -14,6 +14,7 @@ export var JumpOffProb=0.7
 onready var RoachSprite=$AnimatedSprite
 onready var MindTimer=$MindTimer
 
+signal Die
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,13 +42,16 @@ func _physics_process(delta):
 func _process(delta):
 	animation()
 
+func Kill():
+	Life=false
+	set_collision_layer_bit(Global.PRAY,false)
+	$Tween.start()
+
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Food")
 		Global.MiceCatches+=1
-		Life=false
-		set_collision_layer_bit(Global.PRAY,false)
-		$Tween.start()
+		Kill()
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -75,4 +79,8 @@ func jump():
 
 func _on_Tween_tween_all_completed():
 	queue_free()
+	pass # Replace with function body.
+
+func _on_Roach_Die():
+	Kill()
 	pass # Replace with function body.

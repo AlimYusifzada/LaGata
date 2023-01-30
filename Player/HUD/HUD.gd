@@ -30,7 +30,7 @@ func _ready():
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()
 	LvlCounter.text="Lvl="+str(Global.Level)
-	MiceStatBar.max_value=len(get_tree().get_nodes_in_group("Pray"))+1
+	MiceStatBar.max_value=len(get_tree().get_nodes_in_group("Pray"))
 	pass
 	
 func _process(delta):

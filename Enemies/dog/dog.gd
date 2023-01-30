@@ -15,6 +15,8 @@ onready var JumpTimer=$JumpTimer
 onready var Voice=$Voice
 onready var MindTimer=$MindTimer
 
+signal Die
+
 #var shooting=false
 var dest=velocity.x
 
@@ -43,7 +45,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Enemy")
+		body.emit_signal("Die")
 		pass
 	pass # Replace with function body.
 	
@@ -75,15 +77,17 @@ func move(delta):
 	elif !is_on_floor() && (MindTimer.is_stopped() && randf()>JumpOffProb):
 		velocity.x*=-1.0
 		MindTimer.start(Global.MindTimerSet)
-		
+
+func Kill():
+	set_collision_mask_bit(Global.GROUND,false)
+	set_collision_mask_bit(Global.PLATFORM,false)
+	Life=false
+	$Tween.start()
+	
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		set_collision_mask_bit(Global.GROUND,false)
-		set_collision_mask_bit(Global.PLATFORM,false)
-		Life=false
-		$Tween.start()
-		pass
+		Kill()
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
@@ -117,4 +121,9 @@ func _on_AimLeft_body_entered(body):
 
 func _on_Tween_tween_all_completed():
 	queue_free()
+	pass # Replace with function body.
+
+
+func _on_dog_Die():
+	Kill()
 	pass # Replace with function body.

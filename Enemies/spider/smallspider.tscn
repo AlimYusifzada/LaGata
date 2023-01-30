@@ -134,9 +134,11 @@ one_shot = true
 [node name="GravCol" type="CollisionShape2D" parent="."]
 shape = SubResource( 44 )
 
-[node name="MindTimer" type="Timer" parent="."]
-one_shot = true
+[node name="Tween" type="Tween" parent="."]
 
+[node name="MindTimer" type="Timer" parent="."]
+
+[connection signal="Die" from="." to="." method="_on_spider_Die"]
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

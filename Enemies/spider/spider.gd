@@ -13,6 +13,8 @@ onready var SpiderAnimation=$AnimatedSprite
 onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
 
+signal Die
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)
@@ -36,7 +38,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Enemy")
+		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -60,23 +62,29 @@ func move():
 		MindTimer.start(Global.MindTimerSet)
 		pass
 
+func Kill():
+	set_collision_mask_bit(Global.GROUND,false)
+	set_collision_mask_bit(Global.PLATFORM,false)
+	Life=false
+	$Tween.start()
+
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		#drop sceleton down
-		set_collision_mask_bit(Global.GROUND,false)
-		set_collision_mask_bit(Global.PLATFORM,false)
-		Life=false
-		$Tween.start()
+		Kill()
 		pass
 	pass # Replace with function body.
 
 func _on_JumpTimer_timeout():
 	if randf()<0.3:
 		velocity.x*=-1
-#	JumpTimer.stop()
 	pass # Replace with function body.
 
 func _on_Tween_tween_all_completed():
 	queue_free()
 	pass # Replace with function body.
+
+func _on_spider_Die():
+	Kill()
+	pass # Replace with function body.
+

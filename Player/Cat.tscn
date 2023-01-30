@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Player/Cat.gd" type="Script" id=1]
 [ext_resource path="res://Player/blackcat.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Player/Sound/heartbeat.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Player/kitten/Run/KittenRun.png" type="Texture" id=5]
 [ext_resource path="res://Player/kitten/walk/KittenWalk.png" type="Texture" id=6]
+[ext_resource path="res://Player/Sound/cat-meow.wav" type="AudioStream" id=7]
 [ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
 [ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://Player/kitten/Jump/KittenJump.png" type="Texture" id=25]
@@ -432,6 +433,9 @@ collision_mask = 64
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 24 )
 
+[node name="meow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
 [node name="CollectSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
 
@@ -467,7 +471,7 @@ smoothing_speed = 10.0
 
 [node name="Tween" type="Tween" parent="."]
 
-[connection signal="Enemy" from="." to="." method="_on_Cat_Enemy"]
+[connection signal="Die" from="." to="." method="_on_Cat_Die"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]
 [connection signal="Jump" from="." to="." method="_on_Cat_Jump"]
 [connection signal="Message" from="." to="." method="_on_Cat_Message"]

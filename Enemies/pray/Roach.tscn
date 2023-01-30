@@ -62,5 +62,6 @@ one_shot = true
 
 [node name="Tween" type="Tween" parent="."]
 
+[connection signal="Die" from="." to="." method="_on_Roach_Die"]
 [connection signal="body_entered" from="DynEnvCol" to="." method="_on_Area2D_body_entered"]
 [connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

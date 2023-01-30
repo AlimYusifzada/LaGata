@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -8,12 +8,18 @@
 [ext_resource path="res://Common/Lights/torch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/Doors/Panel/Panel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Common/flame/flame.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/pray/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemies/archer/xenorc.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Levels/TestLvl.gd" type="Script" id=15]
-[ext_resource path="res://Enemies/archer/xenassasin.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Enemies/spider/smallspider.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/archer/xenskeleton.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=20]
 
 [node name="TestLvl1" type="Node2D"]
 script = ExtResource( 15 )
@@ -24,7 +30,7 @@ compatibility_mode = true
 collision_layer = 2
 collision_mask = 65
 format = 1
-tile_data = PoolIntArray( -393218, 32, 0, -393217, 26, 0, -458752, 26, 0, -458751, 26, 0, -458750, 26, 0, -458749, 26, 0, -458748, 26, 0, -458747, 26, 0, -458746, 26, 0, -458745, 26, 0, -458744, 26, 0, -458743, 26, 0, -458742, 26, 0, -458741, 26, 0, -458740, 26, 0, -458739, 26, 0, -458738, 26, 0, -458737, 26, 0, -458736, 26, 0, -458735, 26, 0, -458734, 26, 0, -393198, 32, 0, -393197, 34, 0, -262149, 25, 0, -327661, 45, 0, -196615, 25, 0, -196614, 25, 0, -196613, 25, 0, -262133, 87, 0, -262125, 45, 0, -131079, 25, 0, -131078, 25, 0, -196597, 27, 0, -196596, 87, 0, -196595, 87, 0, -196594, 87, 0, -196589, 45, 0, -65543, 25, 0, -131053, 45, 0, -7, 26, 0, -6, 26, 0, -5, 26, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 26, 0, -65536, 26, 0, -65535, 26, 0, -65534, 34, 0, -65517, 45, 0, -65516, 25, 0, 65529, 74, 0, 2, 37, 0, 8, 4, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 13, 0, 13, 28, 0, 14, 0, 0, 17, 26, 0, 18, 30, 0, 19, 46, 0, 131065, 59, 0, 65538, 34, 0, 65550, 0, 0, 65555, 48, 0, 196601, 59, 0, 131077, 28, 0, 131078, 26, 0, 131079, 26, 0, 131080, 26, 0, 131081, 30, 0, 131086, 4, 0, 131087, 13, 0, 131091, 45, 0, 262136, 63, 0, 262137, 59, 0, 262138, 65, 0, 196610, 74, 0, 196626, 48, 0, 196627, 25, 0, 327672, 60, 0, 327673, 60, 0, 327674, 60, 0, 327675, 60, 0, 327676, 60, 0, 327677, 60, 0, 327678, 60, 0, 327679, 60, 0, 262144, 60, 0, 262145, 60, 0, 262146, 60, 0, 262147, 60, 0, 262162, 45, 0, 393208, 74, 0, 393209, 74, 0, 393210, 74, 0, 393211, 74, 0, 393212, 74, 0, 393213, 74, 0, 393214, 74, 0, 393215, 74, 0, 327680, 74, 0, 327681, 74, 0, 327682, 74, 0, 327683, 74, 0, 327684, 74, 0, 327685, 74, 0, 327686, 74, 0, 327687, 74, 0, 327688, 74, 0, 327689, 74, 0, 327690, 74, 0, 327691, 74, 0, 327692, 74, 0, 327693, 74, 0, 327694, 74, 0, 327695, 74, 0, 327696, 74, 0, 327697, 74, 0, 327698, 25, 0, 458750, 25, 0, 458751, 25, 0, 393216, 25, 0 )
+tile_data = PoolIntArray( -1638394, 60, 0, -1638393, 60, 0, -1638392, 60, 0, -1638391, 60, 0, -1638390, 60, 0, -1638389, 60, 0, -1638388, 60, 0, -1638387, 60, 0, -1638386, 60, 0, -1638385, 66, 0, -1572858, 40, 0, -1572849, 74, 0, -1441796, 25, 0, -1441795, 25, 0, -1441794, 25, 0, -1441793, 25, 0, -1507328, 25, 0, -1507327, 25, 0, -1507326, 25, 0, -1507325, 25, 0, -1507324, 25, 0, -1507323, 25, 0, -1507322, 25, 0, -1507313, 59, 0, -1507312, 59, 0, -1376261, 25, 0, -1376260, 25, 0, -1441776, 59, 0, -1310726, 25, 0, -1310725, 25, 0, -1376246, 25, 0, -1376241, 61, 0, -1376240, 59, 0, -1376239, 73, 0, -1245192, 25, 0, -1245191, 25, 0, -1245190, 25, 0, -1310720, 84, 0, -1310715, 25, 0, -1310714, 25, 0, -1310713, 25, 0, -1310712, 25, 0, -1310711, 25, 0, -1310710, 25, 0, -1310704, 59, 0, -1310702, 60, 0, -1310701, 60, 0, -1310700, 60, 0, -1310699, 60, 0, -1310698, 60, 0, -1310697, 66, 0, -1179656, 25, 0, -1179650, 84, 0, -1179649, 84, 0, -1245184, 84, 0, -1245183, 84, 0, -1245177, 25, 0, -1245176, 25, 0, -1245171, 64, 0, -1245170, 60, 0, -1245169, 60, 0, -1245168, 60, 0, -1245161, 59, 0, -1114120, 25, 0, -1114116, 25, 0, -1114115, 25, 0, -1114114, 25, 0, -1114113, 25, 0, -1179648, 25, 0, -1179647, 25, 0, -1179646, 25, 0, -1179640, 25, 0, -1179625, 59, 0, -1179624, 59, 0, -1048584, 25, 0, -1048583, 25, 0, -1048578, 25, 0, -1114104, 25, 0, -1114088, 62, 0, -1114087, 68, 0, -1114086, 66, 0, -983047, 25, 0, -983046, 25, 0, -1048570, 62, 0, -1048569, 60, 0, -1048568, 60, 0, -1048567, 60, 0, -1048566, 60, 0, -1048565, 60, 0, -1048564, 60, 0, -1048563, 60, 0, -1048562, 60, 0, -1048561, 60, 0, -1048560, 60, 0, -1048559, 60, 0, -1048558, 60, 0, -1048557, 60, 0, -1048556, 68, 0, -1048551, 76, 0, -1048550, 74, 0, -1048549, 74, 0, -917510, 25, 0, -983039, 84, 0, -983032, 40, 0, -983015, 59, 0, -983014, 59, 0, -851974, 25, 0, -851973, 25, 0, -851972, 25, 0, -851971, 25, 0, -851970, 25, 0, -851969, 25, 0, -917504, 25, 0, -917503, 25, 0, -917502, 25, 0, -917496, 25, 0, -917479, 59, 0, -917478, 59, 0, -851968, 25, 0, -851960, 25, 0, -851946, 59, 0, -851945, 60, 0, -851944, 60, 0, -851943, 60, 0, -851942, 68, 0, -786432, 25, 0, -786426, 25, 0, -786425, 25, 0, -786424, 25, 0, -786414, 59, 0, -786413, 60, 0, -786412, 60, 0, -786411, 60, 0, -786410, 68, 0, -720896, 25, 0, -720895, 25, 0, -720894, 25, 0, -720889, 25, 0, -720888, 25, 0, -720878, 59, 0, -655360, 25, 0, -655359, 25, 0, -655353, 25, 0, -655352, 25, 0, -655342, 59, 0, -655341, 59, 0, -589824, 27, 0, -589823, 29, 0, -589817, 27, 0, -589816, 29, 0, -589805, 59, 0, -524288, 31, 0, -524287, 33, 0, -524281, 31, 0, -524280, 33, 0, -524272, 31, 0, -524271, 33, 0, -524269, 59, 0, -393218, 32, 0, -393217, 26, 0, -458752, 26, 0, -458751, 26, 0, -458750, 26, 0, -458746, 26, 0, -458745, 26, 0, -458744, 26, 0, -458743, 26, 0, -458742, 26, 0, -458741, 26, 0, -458740, 26, 0, -458739, 26, 0, -458738, 26, 0, -458737, 26, 0, -458736, 26, 0, -458735, 26, 0, -458734, 26, 0, -458733, 59, 0, -393197, 59, 0, -262152, 84, 0, -262151, 84, 0, -262150, 0, 0, -262149, 0, 0, -327676, 25, 0, -327661, 59, 0, -196619, 4, 0, -196618, 1, 0, -196617, 1, 0, -196616, 1, 0, -196615, 1, 0, -196614, 13, 0, -262140, 25, 0, -262139, 25, 0, -262133, 87, 0, -262125, 25, 0, -196604, 28, 0, -196603, 26, 0, -196602, 26, 0, -196601, 30, 0, -196597, 27, 0, -196596, 87, 0, -196595, 87, 0, -196594, 87, 0, -196589, 25, 0, -131053, 25, 0, -7, 26, 0, -6, 26, 0, -5, 26, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 26, 0, -65536, 26, 0, -65535, 26, 0, -65534, 34, 0, -65517, 25, 0, 65529, 74, 0, 2, 37, 0, 8, 4, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 13, 0, 13, 28, 0, 14, 0, 0, 17, 26, 0, 18, 30, 0, 19, 46, 0, 131065, 59, 0, 65538, 34, 0, 65550, 0, 0, 65555, 48, 0, 196601, 59, 0, 131077, 28, 0, 131078, 26, 0, 131079, 26, 0, 131080, 26, 0, 131081, 30, 0, 131086, 4, 0, 131087, 13, 0, 131091, 45, 0, 262136, 63, 0, 262137, 59, 0, 262138, 65, 0, 196610, 74, 0, 196626, 48, 0, 196627, 40, 0, 327672, 60, 0, 327673, 60, 0, 327674, 60, 0, 327675, 60, 0, 327676, 60, 0, 327677, 60, 0, 327678, 60, 0, 327679, 60, 0, 262144, 60, 0, 262145, 60, 0, 262146, 60, 0, 262147, 60, 0, 262162, 45, 0, 393208, 74, 0, 393209, 74, 0, 393210, 74, 0, 393211, 74, 0, 393212, 74, 0, 393213, 74, 0, 393214, 74, 0, 393215, 74, 0, 327680, 74, 0, 327681, 74, 0, 327682, 74, 0, 327683, 74, 0, 327684, 74, 0, 327685, 74, 0, 327686, 74, 0, 327687, 74, 0, 327688, 74, 0, 327689, 74, 0, 327690, 74, 0, 327691, 74, 0, 327692, 74, 0, 327693, 74, 0, 327694, 74, 0, 327695, 74, 0, 327696, 74, 0, 327697, 74, 0, 327698, 25, 0, 458750, 25, 0, 458751, 25, 0, 393216, 25, 0 )
 
 [node name="Jumper2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 240, 251 )
@@ -37,44 +43,53 @@ position = Vector2( 160, 158 )
 position = Vector2( -160, 46 )
 
 [node name="MovableObject" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1104, 98 )
+position = Vector2( 880, 251 )
 gravity_scale = 10.0
 
 [node name="MovableObject3" parent="." instance=ExtResource( 8 )]
-position = Vector2( -78, 49 )
+position = Vector2( -272, 224 )
 gravity_scale = 10.0
 
 [node name="MovableObject4" parent="." instance=ExtResource( 8 )]
-position = Vector2( -80, 115 )
+position = Vector2( -80, 219 )
 gravity_scale = 10.0
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
-position = Vector2( -280, 128 )
+position = Vector2( 56, 158 )
 
 [node name="Panel" parent="." instance=ExtResource( 7 )]
-position = Vector2( -286, 226 )
-DoorName = "InternalDoor1"
+position = Vector2( 96, 224 )
+DoorName = "FlameTrap"
 
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 736, -282 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 3
+frame = 0
 
-[node name="xenassasin" parent="." instance=ExtResource( 16 )]
-position = Vector2( 784, 192 )
+[node name="smallspider" parent="." instance=ExtResource( 17 )]
+position = Vector2( 359, 232 )
 
 [node name="Mouse" parent="." instance=ExtResource( 11 )]
-position = Vector2( -104, 199 )
+position = Vector2( 680, -40 )
+
+[node name="Mouse2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 968, -48 )
 
 [node name="Crow" parent="." instance=ExtResource( 10 )]
-position = Vector2( 0, -208 )
+position = Vector2( -272, -1192 )
+
+[node name="Crow2" parent="." instance=ExtResource( 10 )]
+position = Vector2( -136, -592 )
+
+[node name="Crow3" parent="." instance=ExtResource( 10 )]
+position = Vector2( -144, -200 )
 
 [node name="Coin" parent="." instance=ExtResource( 12 )]
-position = Vector2( 48.0002, 226 )
+position = Vector2( -136, 168 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin2" parent="." instance=ExtResource( 12 )]
-position = Vector2( -7.99994, 226 )
+position = Vector2( -336, 168 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin4" parent="." instance=ExtResource( 12 )]
@@ -82,7 +97,7 @@ position = Vector2( -180, 136 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin5" parent="." instance=ExtResource( 12 )]
-position = Vector2( 104, 226 )
+position = Vector2( -224, 168 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin6" parent="." instance=ExtResource( 12 )]
@@ -103,10 +118,10 @@ position = Vector2( 360, 96 )
 position = Vector2( 400, 98 )
 
 [node name="Roach5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 520, 88 )
+position = Vector2( 624, -64 )
 
 [node name="Roach6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 586, 104 )
+position = Vector2( 736, -40 )
 
 [node name="Roach2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 832, -56 )
@@ -116,3 +131,28 @@ position = Vector2( 1008, -48 )
 
 [node name="Roach4" parent="." instance=ExtResource( 13 )]
 position = Vector2( 856, -240 )
+
+[node name="xenorc" parent="." instance=ExtResource( 14 )]
+position = Vector2( 488, 224 )
+
+[node name="FlameTrap" parent="." instance=ExtResource( 9 )]
+position = Vector2( 295, 187 )
+rotation = -0.00365722
+
+[node name="xenshooter" parent="." instance=ExtResource( 18 )]
+position = Vector2( 672, 256 )
+
+[node name="xen" parent="." instance=ExtResource( 16 )]
+position = Vector2( 744, 160 )
+
+[node name="spider" parent="." instance=ExtResource( 20 )]
+position = Vector2( 768, 248 )
+
+[node name="smallspider2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 808, 200 )
+
+[node name="dog" parent="." instance=ExtResource( 19 )]
+position = Vector2( 608, 248 )
+
+[node name="dog2" parent="." instance=ExtResource( 19 )]
+position = Vector2( 848, 168 )

@@ -1,0 +1,135 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Common/flame/flame.gd" type="Script" id=1]
+[ext_resource path="res://Common/flame/flame.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 200, 0, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 400, 0, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 600, 0, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 270, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 200, 270, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 400, 270, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 600, 270, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 540, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 200, 540, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 400, 540, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 600, 540, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 810, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 200, 810, 200, 270 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 400, 810, 200, 270 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Gradient" id=53]
+
+[sub_resource type="GradientTexture2D" id=54]
+gradient = SubResource( 53 )
+fill_from = Vector2( 0.504167, 0 )
+fill_to = Vector2( 0.491667, 1 )
+
+[node name="flame" type="AnimatedSprite"]
+frames = SubResource( 37 )
+speed_scale = 2.0
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CheckBody" type="RayCast2D" parent="."]
+position = Vector2( 0, 128 )
+enabled = true
+cast_to = Vector2( 0, -192 )
+collision_mask = 49
+
+[node name="CheckBodyE" type="RayCast2D" parent="."]
+position = Vector2( 0, 128 )
+cast_to = Vector2( 40, -64 )
+
+[node name="CheckBodyW" type="RayCast2D" parent="."]
+position = Vector2( 0, 128 )
+cast_to = Vector2( -40, -64 )
+
+[node name="Light" type="Light2D" parent="."]
+position = Vector2( 2.38419e-06, -28.5 )
+scale = Vector2( 2, 5.10937 )
+texture = SubResource( 54 )
+color = Color( 0.905882, 0.603922, 0.0313726, 1 )
+energy = 0.5
+
+[connection signal="animation_finished" from="." to="." method="_on_flame_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
