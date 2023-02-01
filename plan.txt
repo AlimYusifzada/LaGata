@@ -18,7 +18,7 @@
 	added few 64x64 for grass (decoration tiles)
 
 -enhance quality of some sprites
-    +player sprites cleaned(kitten)
+	+player sprites cleaned(kitten)
 
 +add particle node (black feathers) for birds
 

@@ -29,6 +29,7 @@ func _on_Area2D_body_entered(body):
 		body.emit_signal("Message","crow jump!")
 		Feathers.position=$Crow.position
 		Feathers.set_emitting(true)
+		Scream.volume_db=Global.SFXVol
 		Scream.play()
 		Global.Points+=50
 

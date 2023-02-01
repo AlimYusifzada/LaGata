@@ -122,7 +122,6 @@ collision_mask = 0
 [node name="CrowSprite" type="AnimatedSprite" parent="Crow"]
 frames = SubResource( 10 )
 animation = "Fly"
-frame = 2
 speed_scale = 2.5
 playing = true
 

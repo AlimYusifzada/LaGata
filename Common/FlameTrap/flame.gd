@@ -27,7 +27,7 @@ func check_body():
 	$CheckBody.force_raycast_update()
 	var body=$CheckBody.get_collider()
 	if body:
-		body.emit_signal("Die")	
+		body.emit_signal("Die")
 	$CheckBodyW.force_raycast_update()
 	body=$CheckBodyW.get_collider()
 	if body:
@@ -36,7 +36,6 @@ func check_body():
 	body=$CheckBodyE.get_collider()
 	if body:
 		body.emit_signal("Die")
-
 
 func set_mask(val):
 	$CheckBody.set_collision_mask_bit(Global.PLAYER,val)
