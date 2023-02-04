@@ -53,7 +53,9 @@ func _ready():
 	Color(1,1,1,0),1,
 	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	
-	Global.isChild=false
+	Global.isChild=true
+	
+	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #----------------------------------------
 func _physics_process(delta):
@@ -69,6 +71,7 @@ func _physics_process(delta):
 	
 func _process(delta): 
 	animate()
+	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #-------------------------------------------
 
@@ -163,7 +166,8 @@ func EmitDust():
 func _on_Cat_Food(stamina=2):
 	CollectSound.volume_db=Global.SFXVol
 	CollectSound.play()
-	Global.Points+=stamina*50
+	if stamina>0:
+		Global.Points+=stamina*50
 	if Global.Stamina<100:
 		Global.Stamina+=stamina
 		if Global.Stamina>100:
@@ -184,7 +188,8 @@ func CheckJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
 		if !is_on_floor():
 			EmitDust()
-		if Global.Stamina>10: Global.Stamina-=1.0
+		if Global.Stamina>10: 
+			Global.Stamina-=1.0
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		JumperTimer.start()

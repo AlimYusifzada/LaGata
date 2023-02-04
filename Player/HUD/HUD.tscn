@@ -108,3 +108,5 @@ texture = ExtResource( 3 )
 
 [node name="SceneTransition" parent="." instance=ExtResource( 7 )]
 TransTime = 1.0
+
+[connection signal="UpdateHUD" from="." to="." method="_on_CanvasLayer_UpdateHUD"]

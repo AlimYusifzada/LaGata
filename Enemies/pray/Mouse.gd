@@ -49,8 +49,8 @@ func Kill():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Food")
 		Global.MiceCatches+=1
+		body.emit_signal("Food",2)
 		Kill()
 	pass # Replace with function body.
 	

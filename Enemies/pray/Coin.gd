@@ -20,10 +20,10 @@ func _ready():
 
 func _on_Coin_body_entered(body):
 	if body.is_in_group("Cats") && !flag:
-		body.emit_signal("Food")
 		set_collision_layer_bit(Global.PRAY,false)
 		flag=true
 		$Tween.start()
+		body.emit_signal("Food",1)
 	pass # Replace with function body.
 
 func _on_Tween_tween_all_completed():

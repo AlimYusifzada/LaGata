@@ -70,7 +70,7 @@ func Kill():
 
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Food") #incease stamina
+		body.emit_signal("Food",4) #incease stamina
 		Kill()
 		pass
 	pass # Replace with function body.

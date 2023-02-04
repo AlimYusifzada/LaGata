@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -13,9 +13,11 @@
 [ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/pray/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Levels/TestLvl.gd" type="Script" id=15]
 
 [node name="TestLvl1" type="Node2D"]
+position = Vector2( 439, 202 )
 script = ExtResource( 15 )
 
 [node name="TileMap" type="TileMap" parent="." groups=["Wall"]]
@@ -26,18 +28,24 @@ collision_mask = 65
 format = 1
 tile_data = PoolIntArray( -1310697, 66, 0, -1245161, 59, 0, -1179625, 59, 0, -1179624, 59, 0, -1114088, 62, 0, -1114087, 68, 0, -1114086, 66, 0, -1048551, 76, 0, -1048550, 74, 0, -1048549, 74, 0, -983015, 59, 0, -983014, 59, 0, -917479, 59, 0, -917478, 59, 0, -851945, 60, 0, -851944, 60, 0, -851943, 60, 0, -851942, 68, 0, -262151, 5, 0, -327661, 5, 0, -196615, 5, 0, -262125, 5, 0, -131079, 5, 0, -196604, 28, 0, -196601, 30, 0, -196596, 87, 0, -196595, 87, 0, -196594, 87, 0, -196589, 5, 0, -65543, 5, 0, -131053, 5, 0, -7, 5, 0, -6, 5, 0, -5, 5, 0, -4, 5, 0, -3, 5, 0, -2, 5, 0, -1, 5, 0, -65536, 5, 0, -65535, 5, 0, -65534, 5, 0, -65518, 97, 0, -65517, 5, 0, 65529, 5, 0, 2, 5, 0, 13, 28, 0, 14, 5, 0, 15, 5, 0, 16, 5, 0, 17, 5, 0, 18, 5, 0, 19, 5, 0, 131065, 5, 0, 65538, 5, 0, 65553, 5, 0, 65555, 48, 0, 196601, 5, 0, 131077, 28, 0, 131081, 30, 0, 131089, 5, 0, 131091, 99, 0, 262136, 63, 0, 262137, 5, 0, 262138, 65, 0, 196609, 5, 0, 196610, 5, 0, 196625, 5, 0, 196626, 48, 0, 196627, 40, 0, 327672, 60, 0, 327673, 5, 0, 327674, 60, 0, 327675, 60, 0, 327676, 60, 0, 327677, 60, 0, 327678, 60, 0, 327679, 60, 0, 262144, 5, 0, 262145, 5, 0, 262146, 5, 0, 262147, 60, 0, 262154, 22, 0, 262155, 21, 0, 262160, 5, 0, 262161, 5, 0, 262162, 45, 0, 393208, 74, 0, 393209, 5, 0, 393210, 5, 0, 393211, 5, 0, 393212, 5, 0, 393213, 5, 0, 393214, 5, 0, 393215, 5, 0, 327680, 5, 0, 327681, 5, 0, 327682, 5, 0, 327683, 5, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 74, 0, 327698, 92, 0, 458745, 5, 0, 458746, 5, 0, 458747, 5, 0, 458748, 5, 0, 458749, 5, 0, 458750, 5, 0, 458751, 5, 0, 393216, 5, 0, 393217, 5, 0, 393218, 5, 0 )
 
+[node name="Cat" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1032, 194 )
+
+[node name="FlameTrap" parent="." instance=ExtResource( 9 )]
+position = Vector2( 698, 162 )
+
 [node name="Jumper2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 240, 316 )
-JumPower = 20
+position = Vector2( 240, 348 )
+JumPower = 10
 
 [node name="InternalDoor1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 160, 158 )
 
 [node name="GoldKey" parent="." instance=ExtResource( 4 )]
-position = Vector2( -160, 46 )
+position = Vector2( 698, 185 )
 
 [node name="MovableObject" parent="." instance=ExtResource( 8 )]
-position = Vector2( 503, 251 )
+position = Vector2( 320, 82 )
 gravity_scale = 10.0
 
 [node name="MovableObject3" parent="." instance=ExtResource( 8 )]
@@ -48,17 +56,9 @@ gravity_scale = 10.0
 position = Vector2( -80, 219 )
 gravity_scale = 10.0
 
-[node name="Cat" parent="." instance=ExtResource( 1 )]
-position = Vector2( -104, -117 )
-
-[node name="Panel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 304, 289 )
-DoorName = "FlameTrap"
-
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 176, -64 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 11
 
 [node name="Mouse" parent="." instance=ExtResource( 11 )]
 position = Vector2( -163, 198 )
@@ -92,7 +92,7 @@ position = Vector2( -224, 168 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin6" parent="." instance=ExtResource( 12 )]
-position = Vector2( 352, 296 )
+position = Vector2( 698, 125 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Coin7" parent="." instance=ExtResource( 12 )]
@@ -106,7 +106,7 @@ position = Vector2( -59, 94 )
 position = Vector2( -83, 134 )
 
 [node name="Roach8" parent="." instance=ExtResource( 13 )]
-position = Vector2( -99, 38 )
+position = Vector2( 10, 200 )
 
 [node name="Roach5" parent="." instance=ExtResource( 13 )]
 position = Vector2( -219, 174 )
@@ -123,5 +123,13 @@ position = Vector2( -64, 279 )
 [node name="Roach4" parent="." instance=ExtResource( 13 )]
 position = Vector2( -155, 102 )
 
-[node name="FlameTrap" parent="." instance=ExtResource( 9 )]
-position = Vector2( 696, 168 )
+[node name="Coin3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 699, 249 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="spider" parent="." instance=ExtResource( 14 )]
+position = Vector2( -179, -97 )
+
+[node name="Panel" parent="." instance=ExtResource( 7 )]
+position = Vector2( 328, 286 )
+DoorTrapPath = NodePath("../FlameTrap")

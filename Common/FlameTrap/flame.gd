@@ -8,6 +8,8 @@ signal SetClose
 enum {IDLE,ACTIVE,SLEEP}
 var state=IDLE
 export var delay=3
+export var NextTrapPath:NodePath
+onready var NextTrap=get_node(NextTrapPath)
 
 func _ready():
 	$Light.enabled=false
@@ -24,6 +26,8 @@ func _process(delta):
 		_: play("dead")
 
 func check_body():
+	if !($".".get_frame()>6 || $".".get_frame()<11):
+		return
 	$CheckBody.force_raycast_update()
 	var body=$CheckBody.get_collider()
 	if body:
@@ -50,10 +54,14 @@ func set_mask(val):
 
 func _on_FlameTrap_SetOpen():
 	state=SLEEP
+	if NextTrap:
+		NextTrap.emit_signal("SetOpen")
 	pass # Replace with function body.
 
 func _on_FlameTrap_SetClose():
 	state=IDLE
+	if NextTrap:
+		NextTrap.emit_signal("SetClose")
 	pass # Replace with function body.
 
 func _on_Timer_timeout():
