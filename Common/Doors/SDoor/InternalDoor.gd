@@ -12,6 +12,9 @@ signal SetClose
 #frame 0 - open
 #frame 3 - closed
 
+export var NextDoorPath:NodePath
+onready var NextDoor=get_node(NextDoorPath)
+
 func _ready():
 	scale=Vector2(1,1)
 	if DoorState==CLOSED:
@@ -25,18 +28,14 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DoorState==OPEN:
 		set_collision_mask_bit(Global.PLAYER,false)
-		body.emit_signal("Message","door is open")
 		DoorAnimation.play("open")
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]>0 && DoorState==CLOSED:
-		DoorAnimation.play("open")
 		set_collision_mask_bit(Global.PLAYER,false)
 		Global.KeysRing[DoorColor]-=1
 		DoorState=OPEN
-		body.emit_signal("Message","you open the door")
 		DoorAnimation.play("open")
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]<=0 && DoorState==CLOSED:
 		Global.KeysRing[DoorColor]=0
-		body.emit_signal("Message","you need a key!")
 	pass # Replace with function body.
 
 func _on_Area2D_body_exited(body):
@@ -53,10 +52,14 @@ func _on_InternalDoor_SetClose():
 	set_collision_mask_bit(Global.PLAYER,true)
 	DoorState=CLOSED
 	DoorAnimation.set_frame(3)
+	if NextDoor:
+		NextDoor.emit_signal("SetOpen")
 	pass # Replace with function body.
 
 func _on_InternalDoor_SetOpen():
 	set_collision_mask_bit(Global.PLAYER,false)
 	DoorState=OPEN
 	DoorAnimation.set_frame(0)
+	if NextDoor:
+		NextDoor.emit_signal("SetClose")
 	pass # Replace with function body.

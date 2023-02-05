@@ -46,7 +46,6 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
-
 	$Tween.interpolate_property($".",
 	"modulate",
 	Color(1,1,1,1),

@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Common/SpiderTrap/spidertextures.png" type="Texture" id=1]
+[ext_resource path="res://Common/SpiderTrap/HangingSpider.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.0907
+
+[sub_resource type="Animation" id=2]
+resource_name = "a128"
+tracks/0/type = "value"
+tracks/0/path = NodePath("NestSkeleton/threadbon/bodybon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 11 ), Vector2( -16, 85 ), Vector2( -1, 191 ), Vector2( 8, 125 ), Vector2( 0, 11 ) ]
+}
+
+[sub_resource type="RayShape2D" id=3]
+length = 192.0
+
+[node name="HangingSpider" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="NestSkeleton" type="Skeleton2D" parent="."]
+
+[node name="threadbon" type="Bone2D" parent="NestSkeleton"]
+position = Vector2( 0, 3 )
+rest = Transform2D( 1, 0, 0, 1, 0, 3 )
+
+[node name="bodybon" type="Bone2D" parent="NestSkeleton/threadbon"]
+position = Vector2( 0, 11 )
+rest = Transform2D( 1, 0, 0, 1, 0, 11 )
+
+[node name="damagezone" type="Area2D" parent="NestSkeleton/threadbon/bodybon"]
+position = Vector2( 1, -16 )
+collision_layer = 0
+collision_mask = 49
+
+[node name="collision" type="CollisionShape2D" parent="NestSkeleton/threadbon/bodybon/damagezone"]
+position = Vector2( -1, 26 )
+shape = SubResource( 1 )
+
+[node name="Nest" type="Node2D" parent="."]
+
+[node name="threadtex" type="Polygon2D" parent="Nest"]
+position = Vector2( -56, -9 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../NestSkeleton")
+polygon = PoolVector2Array( 55, 9, 55, 25, 57, 25, 57, 9 )
+uv = PoolVector2Array( 55, 9, 55, 25, 57, 25, 57, 9 )
+bones = [ "threadbon", PoolRealArray( 0, 0, 0, 0 ), "threadbon/bodybon", PoolRealArray( 0, 1, 1, 0 ) ]
+
+[node name="spiderbodytext" type="Polygon2D" parent="Nest"]
+position = Vector2( -23, -2 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../../NestSkeleton")
+polygon = PoolVector2Array( 19.752, -9.53674e-07, 6.37733, 6.90877, 0.177147, 20.1949, -9.53674e-07, 30.558, 10.3346, 50.5906, 40.2559, 50.7874, 49.8671, 30.4694, 50.2214, 20.1063, 44.907, 5.49158, 30.1151, 0.265721 )
+uv = PoolVector2Array( 22.037, 4.07407, 9.62963, 7.22222, 2.96296, 19.2593, 4.44444, 31.2963, 10.7407, 44.6296, 40.1852, 45.1852, 47.037, 30.9259, 49.5277, 17.4089, 40.4858, 5.39811, 29.4197, 4.18354 )
+bones = [ "threadbon", PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), "threadbon/bodybon", PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ) ]
+
+[node name="Ambush" type="AnimationPlayer" parent="."]
+anims/a128 = SubResource( 2 )
+
+[node name="Watch128" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 49
+
+[node name="sensor" type="CollisionShape2D" parent="Watch128"]
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="NestSkeleton/threadbon/bodybon/damagezone" to="." method="_on_damagezone_body_entered"]
+[connection signal="animation_finished" from="Ambush" to="." method="_on_Ambush_animation_finished"]
+[connection signal="body_entered" from="Watch128" to="." method="_on_Watch128_body_entered"]

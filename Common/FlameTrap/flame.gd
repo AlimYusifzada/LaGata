@@ -26,17 +26,17 @@ func _process(delta):
 		_: play("dead")
 
 func check_body():
-	if !($".".get_frame()>6 || $".".get_frame()<11):
+	if !($".".get_frame()<8 || $".".get_frame()>10):
 		return
-	$CheckBody.force_raycast_update()
+#	$CheckBody.force_raycast_update()
 	var body=$CheckBody.get_collider()
 	if body:
 		body.emit_signal("Die")
-	$CheckBodyW.force_raycast_update()
+#	$CheckBodyW.force_raycast_update()
 	body=$CheckBodyW.get_collider()
 	if body:
 		body.emit_signal("Die")
-	$CheckBodyE.force_raycast_update()
+#	$CheckBodyE.force_raycast_update()
 	body=$CheckBodyE.get_collider()
 	if body:
 		body.emit_signal("Die")

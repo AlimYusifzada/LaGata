@@ -2,6 +2,27 @@
 (+) almost done
 (!) no progress
 
+level structure
+
+parallax
+decorBack tiles
+lights
+
+ground tiles
+static platforms
+
+movable platforms
+movable objects
+
+player
+enemies+prays
+
+traps
+
+decorFront tiles
+
+
+
 
 -add foliage (grass, flowers, moss, stones)
 	added some as 32x32 sprites (flowers as empty)
@@ -12,15 +33,27 @@
 +add area where the object should be pushed/placed/activated
 	-no sprite yet
 
--!door animation need to be fixed
++expand existed traps
+	   -new:
+	hanging spider(small spider crawl down/up on its thread)
+		can hide in deadly moss?
+	   +existed:
+	ambusher (jumping spider)
+		add web nest?
+	deadly moss (static dangerous grows)
+	flametrap (timely controlled)
 
 -update decoration tiles 64x64
 	added few 64x64 for grass (decoration tiles)
 
 -enhance quality of some sprites
 	+player sprites cleaned(kitten)
+	+spider cleaned and color changed
+	+dog cleaned 
+	-add new dog
 
-+add particle node (black feathers) for birds
+-change stamina change sound track depends its increased or decreased
+	at the moment only one sound available (gain points)
 
 !enhance pallax screens (add new) 
 
@@ -32,4 +65,6 @@
 !mid game animation
 	"years past and kitten grow up in to adult cat"
 	
-!kitten die animation or scene
+-kitten die animation or scene
+	+sprite fade out (std effect for all)
+	-die message need to popup
