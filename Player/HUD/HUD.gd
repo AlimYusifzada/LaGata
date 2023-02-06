@@ -27,7 +27,8 @@ var Praystot=0
 
 func _ready():
 	SceneTransition.emit_signal("Start")
-	Global.loadGameOptions()
+#	Global.loadGameOptions()
+#	Global.loadGameState()
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()
 	LvlCounter.text="Lvl="+str(Global.Level)
@@ -40,6 +41,7 @@ func _process(delta):
 func CheckESC():
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().paused=true
+		Global.saveGameOptions()
 		Global.saveGameState()
 		var op=Options.instance()
 		self.add_child(op)

@@ -49,11 +49,13 @@ func _on_StartNewGame_pressed():
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
+	Global.saveGameOptions()
 	Global.saveGameState()
 	get_tree().quit(0)
 	pass # Replace with function body.
 
 func _on_Comtinue_pressed():
+	Global.loadGameOptions()
 	Global.loadGameState()
 	Global.Stamina=10
 	Global.KeysRing=[0,0,0]

@@ -6,19 +6,26 @@ onready var musicscr=$window/TabContainer/Sound/MusicVol
 onready var sfxscr=$window/TabContainer/Sound/SFXVol
 onready var rev=$window/TabContainer/About/revision
 onready var ViewOptions=$window/TabContainer/Graphics/Label/ViewOptions
-
+onready var ChildOptions=$window/TabContainer/Graphics/Label2/ChildOptions
 var Size=Vector2()
 
 func _ready():
 	Global.loadGameOptions()
+	Global.loadGameState()
 	rev.text="rev:"+Global.revision
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
 	sfxscr.set_value(Global.SFXVol)
 	musicscr.set_value(Global.MusicVol)
+	
+	ChildOptions.add_item("Cat",0) #temporary
+	ChildOptions.add_item("Kitten",1) #temporary 
+	ChildOptions.select(int(Global.isChild))
+	
 	ViewOptions.add_item("Window",0)
 	ViewOptions.add_item("Screen",1)
 	ViewOptions.select(OS.window_fullscreen)
+	
 	position=get_parent().get_viewport().size/2-$window.get_viewport().size/2
 	pass
 
@@ -59,4 +66,10 @@ func _on_ViewOptions_item_selected(index):
 		OS.window_fullscreen=true
 	else:
 		OS.window_fullscreen=false
-		
+
+func _on_ChildOptions_item_selected(index):
+	match index:
+		0:
+			Global.isChild=false
+		1:
+			Global.isChild=true
