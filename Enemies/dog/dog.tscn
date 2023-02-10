@@ -204,9 +204,8 @@ extents = Vector2( 192, 4 )
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 192, 4 )
 
-[sub_resource type="CapsuleShape2D" id=37]
-radius = 16.0
-height = 32.0
+[sub_resource type="CircleShape2D" id=71]
+radius = 32.249
 
 [node name="dog" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -251,7 +250,7 @@ shape = SubResource( 36 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 12 )
-shape = SubResource( 37 )
+shape = SubResource( 71 )
 
 [node name="Voice" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )

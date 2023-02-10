@@ -204,12 +204,11 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 16, 26 )
 
-[sub_resource type="CapsuleShape2D" id=72]
-radius = 16.0
-height = 0.0
+[sub_resource type="CircleShape2D" id=72]
+radius = 16.0312
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 8, 2.5 )
+extents = Vector2( 16, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 32, 4 )

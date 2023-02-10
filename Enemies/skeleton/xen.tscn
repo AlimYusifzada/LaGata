@@ -137,9 +137,8 @@ extents = Vector2( 16, 24 )
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 8, 2.5 )
 
-[sub_resource type="CapsuleShape2D" id=44]
-radius = 16.0
-height = 0.0
+[sub_resource type="CircleShape2D" id=44]
+radius = 16.2788
 
 [node name="xen" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -147,6 +146,7 @@ collision_mask = 6
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 frames = SubResource( 11 )
 animation = "Jump"
 
