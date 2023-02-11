@@ -3,7 +3,6 @@
 extends KinematicBody2D
 
 
-
 const ARROW=preload("res://Enemies/arrow/arrow.tscn")
 export var MINSPEED=100.0
 export var JUMP_VELOCITY=-600

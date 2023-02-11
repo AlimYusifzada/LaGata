@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Enemies/pray/Mouse.gd" type="Script" id=1]
 [ext_resource path="res://Enemies/pray/mouset.png" type="Texture" id=2]
@@ -74,9 +74,11 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 64, 24 )
 
-[sub_resource type="CapsuleShape2D" id=20]
-radius = 16.0
-height = 8.0
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 56, 4 )
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 24.3311
 
 [node name="Mouse" type="KinematicBody2D" groups=["Pray"]]
 collision_layer = 16
@@ -93,18 +95,24 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DynEnvCol"]
-position = Vector2( 0, -16 )
+position = Vector2( 0, -20 )
 shape = SubResource( 6 )
+
+[node name="CatchZone" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
+position = Vector2( 0, -52 )
+shape = SubResource( 20 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -20 )
-shape = SubResource( 20 )
-
-[node name="MindTimer" type="Timer" parent="."]
-one_shot = true
+shape = SubResource( 21 )
 
 [node name="Tween" type="Tween" parent="."]
 
 [connection signal="Die" from="." to="." method="_on_Mouse_Die"]
 [connection signal="body_entered" from="DynEnvCol" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CatchZone" to="." method="_on_CatchZone_body_entered"]
 [connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

@@ -85,8 +85,12 @@ func CheckMovable(delta):
 			velocity.y=0
 			JumpPossible=true
 	#CHECK MOVE CONDITION
-	canMoveEast=!(CheckMEast.get_collider() && CheckTEast.get_collider())
-	canMoveWest=!(CheckMWest.get_collider() && CheckTWest.get_collider())
+	var eastobj=CheckMEast.get_collider()
+	var westobj=CheckMWest.get_collider()
+	canMoveEast=!(eastobj && CheckTEast.get_collider())
+	canMoveWest=!(westobj && CheckTWest.get_collider())
+	if eastobj:if "Tile" in eastobj.to_string():canMoveEast=false
+	if westobj:if "Tile" in westobj.to_string():canMoveWest=false
 	pass
 	
 func CheckDeath():
