@@ -1,7 +1,7 @@
 #xen human or simple skeleton no shooting
 extends KinematicBody2D
 export var  MINSPEED=100.0
-export var JUMP_VELOCITY=-600
+export var JUMP_VELOCITY=-100
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
@@ -12,6 +12,9 @@ onready var XenAnimation=$AnimatedSprite
 onready var DeathTimer=$DeathTimer
 onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)
@@ -50,8 +53,12 @@ func animation():
 	else:
 		XenAnimation.flip_h=true
 		
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()	
+	pass
+
 func move():
-	if is_on_floor() and is_on_wall():
+	if is_on_floor() and is_wall():
 		velocity.y=JUMP_VELOCITY #jump
 		JumpTimer.start(0.5)
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():

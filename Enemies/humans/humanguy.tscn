@@ -1,7 +1,7 @@
 [gd_scene load_steps=63 format=2]
 
-[ext_resource path="res://Enemies/human/humanguy.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/human/humanrob.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/humans/humanguy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/humans/humanrob.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=59]
 flags = 4
@@ -296,15 +296,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 48, 88 )
+[sub_resource type="CapsuleShape2D" id=115]
+radius = 32.0
+height = 96.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 40, 5.25 )
 
-[sub_resource type="CapsuleShape2D" id=115]
-radius = 29.0
-height = 64.0
+[sub_resource type="RayShape2D" id=116]
+length = 88.0
 
 [node name="humanguy" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -320,7 +320,7 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
-shape = SubResource( 6 )
+shape = SubResource( 115 )
 
 [node name="head" type="Area2D" parent="."]
 collision_layer = 0
@@ -337,11 +337,20 @@ one_shot = true
 one_shot = true
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 27 )
-shape = SubResource( 115 )
+shape = SubResource( 116 )
 
 [node name="MindTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="RayCastWest" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -64, 0 )
+collision_mask = 6
+
+[node name="RayCastEast" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 64, 0 )
+collision_mask = 6
 
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
