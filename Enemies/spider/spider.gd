@@ -8,10 +8,12 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
-export var JumpOffProb=0.1
+export var JumpOffProb=0.5
 onready var SpiderAnimation=$AnimatedSprite
 onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
 
 signal Die
 
@@ -52,13 +54,19 @@ func animation():
 		SpiderAnimation.flip_h=false
 	elif velocity.x<0:
 		SpiderAnimation.flip_h=true
-		
+
+
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+
 func move():
-	if is_on_floor() && is_on_wall():
-		velocity.y=JUMP_VELOCITY #jump
-		JumpTimer.start(0.5)
+	if is_on_floor() && is_wall():
+		velocity.x*=-1
+#		velocity.y=JUMP_VELOCITY #jump
+#		JumpTimer.start(0.5)
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
-		velocity.x*=-1.0
+		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)
 		pass
 

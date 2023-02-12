@@ -56,14 +56,14 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 40, 20 )
+[sub_resource type="CapsuleShape2D" id=52]
+radius = 16.0
+height = 60.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 32, 3.90625 )
 
-[sub_resource type="CircleShape2D" id=52]
-radius = 16.0
+[sub_resource type="RayShape2D" id=53]
 
 [node name="spider" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -79,7 +79,8 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
-shape = SubResource( 6 )
+rotation = 1.5708
+shape = SubResource( 52 )
 
 [node name="head" type="Area2D" parent="."]
 collision_layer = 0
@@ -92,12 +93,22 @@ shape = SubResource( 21 )
 one_shot = true
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-shape = SubResource( 52 )
+shape = SubResource( 53 )
 
 [node name="MindTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="RayCastWest" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -64, 0 )
+collision_mask = 6
+
+[node name="RayCastEast" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 64, 0 )
+collision_mask = 6
 
 [connection signal="Die" from="." to="." method="_on_spider_Die"]
 [connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]

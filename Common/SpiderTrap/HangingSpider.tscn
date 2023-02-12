@@ -115,7 +115,6 @@ visible = false
 position = Vector2( 0, 18 )
 frames = SubResource( 10 )
 animation = "up"
-frame = 5
 speed_scale = 3.0
 playing = true
 

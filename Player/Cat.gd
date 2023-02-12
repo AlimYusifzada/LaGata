@@ -75,8 +75,10 @@ func CheckMovable(delta):
 	#CHAECK FALL CONDITION
 	if is_on_floor():
 		velocity.y=0
+		JumpPossible=true
 	elif is_on_ceiling():
 		velocity.y=2
+		JumpPossible=false
 	else: #in the air
 		onObject=LookDown.get_collider() || LookEDown.get_collider() || LookWDown.get_collider()
 		if !onObject:#!LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():

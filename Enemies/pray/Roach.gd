@@ -12,6 +12,8 @@ var isRunning=true
 export var JumpOffProb=0.7
 
 onready var RoachSprite=$AnimatedSprite
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
 
 signal Die
 
@@ -70,9 +72,13 @@ func animation():
 		RoachSprite.flip_h=false
 	else:
 		RoachSprite.flip_h=true
-		
+
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+
 func move():
-	if is_on_floor() && is_on_wall():
+	if is_on_floor() && is_wall():
 		velocity.x*=-1
 
 func _on_Tween_tween_all_completed():

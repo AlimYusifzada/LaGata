@@ -19,6 +19,8 @@ signal Die
 onready var JumpTimer=$JumpTimer
 onready var ArcherSprite=$AnimatedSprite
 onready var MindTimer=$MindTimer
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -77,13 +79,16 @@ func move(delta):
 		velocity.x=Speed
 	jump_from_wall()
 
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+
 func jump_from_wall():
-	if is_on_floor() && is_on_wall():
-		velocity.y=JUMP_VELOCITY #jump
-		JumpTimer.start(0.5)
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+	if is_on_floor() && is_wall():
 		velocity.x*=-1
+	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		MindTimer.start(Global.MindTimerSet)
+		velocity.x*=-1
 
 func Kill():
 	set_collision_mask_bit(Global.GROUND,false)

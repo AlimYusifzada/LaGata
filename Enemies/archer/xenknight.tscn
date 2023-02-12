@@ -166,20 +166,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 16, 25 )
+[sub_resource type="CapsuleShape2D" id=65]
+height = 26.0
 
-[sub_resource type="CircleShape2D" id=65]
-radius = 16.2788
+[sub_resource type="RayShape2D" id=66]
+length = 24.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 16, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=35]
-extents = Vector2( 32, 4 )
+extents = Vector2( 48, 8 )
 
 [sub_resource type="RectangleShape2D" id=36]
-extents = Vector2( 32, 4 )
+extents = Vector2( 48, 8 )
 
 [node name="xenknight" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -196,11 +196,10 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
 position = Vector2( 0, 7 )
-shape = SubResource( 6 )
+shape = SubResource( 65 )
 
 [node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 13 )
-shape = SubResource( 65 )
+shape = SubResource( 66 )
 
 [node name="head" type="Area2D" parent="."]
 collision_layer = 0
@@ -208,6 +207,7 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
 position = Vector2( 0, -24 )
 shape = SubResource( 21 )
+disabled = true
 
 [node name="JumpTimer" type="Timer" parent="."]
 one_shot = true
@@ -216,20 +216,30 @@ one_shot = true
 collision_layer = 0
 
 [node name="CollisionRight" type="CollisionShape2D" parent="AimRight"]
-position = Vector2( 192, 0 )
+position = Vector2( 80, 0 )
 shape = SubResource( 35 )
 
 [node name="AimLeft" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionLeft" type="CollisionShape2D" parent="AimLeft"]
-position = Vector2( -192, 0 )
+position = Vector2( -80, 0 )
 shape = SubResource( 36 )
 
 [node name="MindTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="RayCastWest" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -16, 0 )
+collision_mask = 6
+
+[node name="RayCastEast" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 16, 0 )
+collision_mask = 6
 
 [connection signal="Die" from="." to="." method="_on_xenshooter_Die"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

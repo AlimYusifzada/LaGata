@@ -14,6 +14,8 @@ onready var DogAnimation=$AnimatedSprite
 onready var JumpTimer=$JumpTimer
 onready var Voice=$Voice
 onready var MindTimer=$MindTimer
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
 
 signal Die
 
@@ -69,11 +71,16 @@ func LookAt():
 	else:
 		DogAnimation.flip_h=true
 		return -1
-		
+
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+
 func move(delta):
-	if is_on_floor() && is_on_wall():
-		velocity.y=JUMP_VELOCITY #jump
-		JumpTimer.start(0.5)
+	if is_on_floor() && is_wall():
+		velocity.x*=-1
+#		velocity.y=JUMP_VELOCITY #jump
+#		JumpTimer.start(0.5)
 	elif !is_on_floor() && (MindTimer.is_stopped() && randf()>JumpOffProb):
 		velocity.x*=-1.0
 		MindTimer.start(Global.MindTimerSet)
