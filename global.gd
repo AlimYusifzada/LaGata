@@ -26,6 +26,8 @@ var Points=0
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
+var JoystickMove=Vector2()
+var JoystickJump=false
 
 func _ready():
 	loadGameOptions()

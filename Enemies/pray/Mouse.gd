@@ -11,6 +11,9 @@ var Life=true
 var isRunning=true
 
 onready var MouseSprite=$AnimatedSprite
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
+onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 
 signal Die
 
@@ -22,15 +25,15 @@ func _ready():
 	MouseSprite.play("MouseRun")
 	velocity.x=SPEED
 	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.5,
+		Color(1,1,1,1),Color(1,1,1,0),0.2,
 		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.interpolate_property($".",
 	"scale",
 	$".".scale,
-	$".".scale+Vector2(0.3,0.3),0.5,
+	$".".scale+Vector2(0.3,0.3),0.1,
 	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
-	
+
 func _physics_process(delta):
 	fall(delta)
 	move()
@@ -55,6 +58,9 @@ func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		Global.MiceCatches+=1
 		body.emit_signal("Food",3)
+		var bl=BloodExpl.instance()
+		bl.position=position
+		get_parent().add_child(bl)	
 		Kill()	
 	pass # Replace with function body.
 
@@ -69,9 +75,13 @@ func animation():
 		MouseSprite.flip_h=false
 	else:
 		MouseSprite.flip_h=true
-		
+
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+
 func move():
-	if is_on_floor() && is_on_wall():
+	if is_on_floor() && is_wall():
 		velocity.x*=-1
 
 func _on_Tween_tween_all_completed():

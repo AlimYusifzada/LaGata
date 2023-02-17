@@ -7,16 +7,13 @@ const NSCALE=Vector2(.65,.65)
 const BSCALE=Vector2(1.0,1.0)
 
 onready var CatStat=$HUDPanel/CatStat
-onready var MiceStat=$HUDPanel/MiceStat
 onready var Keys=$HUDPanel/Keys
 onready var LvlCounter=$HUDPanel/LvlCounter
 onready var BackgroundMusic=$BGM
 onready var StaminaBar=$HUDPanel/CatStat/CatStamBar
 onready var LifeBar=$HUDPanel/CatStat/CatLifeBar
-onready var MiceStatBar=$HUDPanel/MiceStat/MiceStatBar
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var PointsCounter=$HUDPanel/PointsCounter
-onready var SceneTransition=$SceneTransition
 
 onready var Options=preload("res://Menu/Options.tscn")
 
@@ -26,13 +23,10 @@ signal UpdateHUD
 var Praystot=0
 
 func _ready():
-	SceneTransition.emit_signal("Start")
-#	Global.loadGameOptions()
-#	Global.loadGameState()
+	Global.loadGameOptions()
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()
 	LvlCounter.text="Lvl="+str(Global.Level)
-	MiceStatBar.max_value=len(get_tree().get_nodes_in_group("Pray"))
 	pass
 	
 func _process(delta):
@@ -61,15 +55,7 @@ func _on_CanvasLayer_UpdateHUD():
 	
 	StaminaBar.bar_color=Color(0,range_lerp(Global.Stamina,0,100,1,0),1)
 	StaminaBar.set_progress(Global.Stamina)
-#
-	MiceStatBar.bar_color=Color(1,range_lerp(prays,0,MiceStatBar.max_value,1,0),0)
-	MiceStatBar.set_progress(prays)
-	
-	if prays<=0:
-		MiceStat.visible=false
-	else:
-		MiceStat.visible=true
-		
+
 	PointsCounter.text=str(Global.Points)
 	KeysCounter.text=str(Global.KeysRing[0])
 	
@@ -78,3 +64,11 @@ func _on_CanvasLayer_UpdateHUD():
 	else:
 		Keys.visible=true
 	pass # Replace with function body.
+
+func _on_TouchESC_pressed():
+	get_tree().paused=true
+	Global.saveGameOptions()
+	Global.saveGameState()
+	var op=Options.instance()
+	self.add_child(op)
+

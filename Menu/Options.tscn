@@ -29,7 +29,6 @@ margin_right = 244.0
 margin_bottom = 256.0
 
 [node name="Shop" type="Tabs" parent="window/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -79,6 +78,7 @@ margin_bottom = 25.0
 text = "SFX"
 
 [node name="Graphics" type="Tabs" parent="window/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0

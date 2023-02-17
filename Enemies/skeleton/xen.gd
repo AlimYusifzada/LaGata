@@ -9,8 +9,11 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 onready var XenAnimation=$AnimatedSprite
-onready var JumpTimer=$JumpTimer
+#onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
+onready var WallOnWest=$RayCastWest
+onready var WallOnEast=$RayCastEast
+onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 export var JumpOffProb=0.1
 
 signal Die
@@ -23,7 +26,7 @@ func _ready():
 	XenAnimation.play("Run")
 	velocity.x=Speed
 	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.5,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+		Color(1,1,1,1),Color(1,1,1,0),0.2,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -55,18 +58,23 @@ func animation():
 		XenAnimation.flip_h=true
 		
 func move():
-	if is_on_floor() and is_on_wall():
-		velocity.y=JUMP_VELOCITY #jump
-		JumpTimer.start(0.5)
+	if is_on_floor() && is_wall():
+		velocity.x*=-1
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)
 		pass
 		
+func is_wall():
+	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	pass
+	
 func Kill():
+	var bl=BloodExpl.instance()
+	bl.position=position
+	get_parent().add_child(bl)
+	set_collision_layer_bit(Global.ENEMY,false)
 	Life=false
-	set_collision_mask_bit(Global.GROUND,false)
-	set_collision_mask_bit(Global.PLATFORM,false)
 	$Tween.start()
 
 func _on_head_body_entered(body):
@@ -76,10 +84,10 @@ func _on_head_body_entered(body):
 		pass
 	pass # Replace with function body.
 
-func _on_JumpTimer_timeout():
-	if rand_range(0.0,1.0)<0.3:
-		velocity.x*=-1
-	pass # Replace with function body.
+#func _on_JumpTimer_timeout():
+#	if rand_range(0.0,1.0)<0.3:
+#		velocity.x*=-1
+#	pass # Replace with function body.
 
 func _on_Tween_tween_all_completed():
 	queue_free()

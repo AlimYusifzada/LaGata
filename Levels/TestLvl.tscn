@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -9,21 +9,17 @@
 [ext_resource path="res://Common/Doors/Panel/Panel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Common/FlameTrap/flame.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Enemies/archer/xenknight.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Common/StaticPlatforms/trashcanH.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/pray/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Levels/TestLvl.gd" type="Script" id=15]
 [ext_resource path="res://Enemies/archer/xenskeleton.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Common/OpenCloseMsg/OpenCloseMsg.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Common/SpiderTrap/HangingSpider.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Backgrounds/Sewers/sewers.png" type="Texture" id=20]
-[ext_resource path="res://Enemies/archer/xenassasin.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Enemies/archer/xenorc.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Enemies/spider/smallspider.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Enemies/humans/humanguy.tscn" type="PackedScene" id=24]
 
 [node name="TestLvl1" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -46,37 +42,39 @@ compatibility_mode = true
 collision_layer = 2
 collision_mask = 65
 format = 1
-tile_data = PoolIntArray( -655332, 198, 0, -655331, 198, 0, -655330, 198, 0, -655329, 198, 0, -655328, 198, 0, -655327, 198, 0, -589793, 198, 0, -589792, 198, 0, -589791, 198, 0, -589790, 198, 0, -524254, 198, 0, -524253, 198, 0, -524252, 198, 0, -393226, 198, 0, -393225, 198, 0, -458717, 198, 0, -458716, 198, 0, -458715, 198, 0, -458714, 198, 0, -327690, 198, 0, -393181, 198, 0, -393180, 198, 0, -393179, 198, 0, -393178, 198, 0, -393177, 198, 0, -393176, 198, 0, -393175, 27, 0, -262154, 198, 0, -327680, 22, 0, -327679, 23, 0, -327645, 198, 0, -327644, 198, 0, -327643, 198, 0, -327642, 198, 0, -327641, 27, 0, -196620, 198, 0, -196619, 198, 0, -196618, 27, 0, -262132, 22, 0, -262131, 23, 0, -262109, 198, 0, -262108, 198, 0, -262107, 198, 0, -262106, 198, 0, -131085, 26, 0, -131084, 198, 0, -196592, 22, 0, -196591, 23, 0, -196574, 28, 0, -196573, 198, 0, -196572, 198, 0, -196571, 198, 0, -196570, 27, 0, -65548, 198, 0, -131068, 18, 0, -131067, 19, 0, -131038, 198, 0, -12, 198, 0, -7, 26, 0, -6, 198, 0, -5, 198, 0, -4, 198, 0, -3, 198, 0, -2, 198, 0, -1, 27, 0, -65534, 29, 0, -65527, 26, 0, -65526, 198, 0, -65525, 27, 0, -65504, 28, 0, -65503, 198, 0, -65502, 27, 0, 65524, 26, 0, 65525, 198, 0, 65526, 29, 0, 65530, 198, 0, 2, 198, 0, 17, 26, 0, 18, 198, 0, 19, 198, 0, 20, 198, 0, 21, 198, 0, 22, 198, 0, 23, 27, 0, 24, 296, 0, 25, 296, 0, 26, 26, 0, 27, 198, 0, 28, 296, 0, 31, 28, 0, 32, 27, 0, 131062, 198, 0, 131063, 29, 0, 131066, 27, 0, 65538, 198, 0, 65542, 26, 0, 65543, 198, 0, 65544, 27, 0, 65564, 296, 0, 65567, 198, 0, 196597, 26, 0, 196598, 198, 0, 196599, 198, 0, 131074, 198, 0, 131084, 26, 0, 131085, 198, 0, 131086, 27, 0, 131089, 26, 0, 131090, 27, 0, 131095, 198, 0, 131096, 198, 0, 131097, 11, 0, 131100, 296, 0, 131102, 198, 0, 131103, 27, 0, 262135, 198, 0, 262136, 198, 0, 262137, 198, 0, 262138, 29, 0, 196631, 26, 0, 196632, 27, 0, 196636, 296, 0, 196637, 198, 0, 196638, 27, 0, 327671, 26, 0, 327672, 198, 0, 327673, 198, 0, 327674, 198, 0, 262146, 198, 0, 262160, 12, 0, 262172, 198, 0, 262173, 198, 0, 393210, 198, 0, 393211, 198, 0, 393212, 198, 0, 393213, 198, 0, 393214, 198, 0, 393215, 198, 0, 327680, 198, 0, 327681, 198, 0, 327682, 198, 0, 327683, 198, 0, 327684, 198, 0, 327685, 198, 0, 327686, 198, 0, 327687, 17, 0, 327695, 16, 0, 327696, 198, 0, 327697, 198, 0, 327698, 198, 0, 327699, 198, 0, 327700, 198, 0, 327701, 198, 0, 327702, 198, 0, 327703, 198, 0, 327704, 198, 0, 327705, 198, 0, 327706, 198, 0, 327707, 198, 0, 327708, 198, 0, 327709, 27, 0, 393223, 14, 0, 393224, 17, 0, 393225, 32, 0, 393226, 33, 0, 393227, 32, 0, 393228, 33, 0, 393230, 16, 0, 393231, 15, 0, 458760, 14, 0, 458761, 235, 0, 458762, 235, 0, 458763, 235, 0, 458764, 235, 0, 458765, 235, 0, 458766, 15, 0, 524296, 264, 0, 524297, 235, 0, 524298, 235, 0, 524299, 235, 0, 524300, 235, 0, 524301, 235, 0, 524302, 263, 0 )
+tile_data = PoolIntArray( -1048561, 43, 0, -1048560, 43, 0, -1048559, 43, 0, -1048558, 43, 0, -1048557, 43, 0, -1048556, 43, 0, -1048555, 43, 0, -1048554, 43, 0, -1048553, 43, 0, -1048552, 43, 0, -1048551, 43, 0, -1048550, 43, 0, -1048549, 43, 0, -1048548, 43, 0, -1048547, 43, 0, -1048546, 43, 0, -1048545, 43, 0, -1048544, 43, 0, -1048543, 43, 0, -1048542, 43, 0, -1048541, 43, 0, -1048540, 43, 0, -1048539, 43, 0, -1048538, 43, 0, -1048537, 43, 0, -1048536, 43, 0, -851969, 5, 0, -917504, 5, 0, -917491, 5, 0, -917490, 5, 0, -786431, 5, 0, -786430, 5, 0, -786429, 5, 0, -786422, 5, 0, -786421, 5, 0, -786420, 5, 0, -655355, 5, 0, -655354, 5, 0, -655353, 5, 0, -655352, 5, 0, -655351, 5, 0, -655332, 198, 0, -655331, 94, 0, -655330, 94, 0, -655329, 94, 0, -655328, 94, 0, -655327, 94, 0, -524289, 5, 0, -589824, 5, 0, -589823, 5, 0, -589822, 5, 0, -589813, 5, 0, -589812, 5, 0, -589811, 5, 0, -589810, 5, 0, -589793, 94, 0, -589792, 94, 0, -589791, 94, 0, -589790, 94, 0, -524254, 94, 0, -524253, 94, 0, -458750, 5, 0, -458749, 5, 0, -458748, 5, 0, -458747, 5, 0, -458743, 5, 0, -458742, 5, 0, -458741, 5, 0, -458717, 94, 0, -458716, 94, 0, -393181, 94, 0, -393180, 94, 0, -327680, 22, 0, -327679, 23, 0, -327645, 94, 0, -327644, 94, 0, -262132, 22, 0, -262131, 23, 0, -262109, 94, 0, -262108, 94, 0, -131085, 26, 0, -131084, 198, 0, -196592, 22, 0, -196591, 23, 0, -196574, 28, 0, -196573, 94, 0, -196572, 94, 0, -65548, 198, 0, -131068, 18, 0, -131067, 19, 0, -131038, 198, 0, -12, 198, 0, -7, 26, 0, -6, 198, 0, -5, 198, 0, -4, 198, 0, -3, 198, 0, -2, 198, 0, -1, 291, 0, -65536, 291, 0, -65535, 291, 0, -65534, 29, 0, -65527, 26, 0, -65526, 198, 0, -65525, 27, 0, -65504, 28, 0, -65503, 198, 0, -65502, 27, 0, 65524, 26, 0, 65525, 198, 0, 65526, 29, 0, 65530, 198, 0, 2, 198, 0, 17, 26, 0, 18, 198, 0, 19, 198, 0, 20, 198, 0, 21, 198, 0, 22, 198, 0, 23, 27, 0, 26, 10, 0, 27, 198, 0, 31, 28, 0, 32, 27, 0, 131062, 198, 0, 131063, 29, 0, 131066, 27, 0, 65538, 198, 0, 65542, 14, 0, 65543, 130, 0, 65544, 15, 0, 65567, 198, 0, 196597, 26, 0, 196598, 198, 0, 196599, 198, 0, 131074, 0, 0, 131084, 26, 0, 131085, 198, 0, 131086, 27, 0, 131089, 26, 0, 131090, 27, 0, 131095, 198, 0, 131096, 198, 0, 131097, 11, 0, 131102, 198, 0, 131103, 27, 0, 262135, 198, 0, 262136, 198, 0, 262137, 198, 0, 262138, 29, 0, 196610, 0, 0, 196631, 26, 0, 196632, 27, 0, 196636, 296, 0, 196637, 198, 0, 196638, 27, 0, 327671, 26, 0, 327672, 198, 0, 327673, 198, 0, 327674, 198, 0, 262160, 12, 0, 262172, 198, 0, 262173, 198, 0, 393210, 198, 0, 393211, 198, 0, 393212, 198, 0, 393213, 198, 0, 393214, 198, 0, 393215, 198, 0, 327680, 198, 0, 327681, 198, 0, 327682, 198, 0, 327683, 198, 0, 327684, 198, 0, 327685, 198, 0, 327686, 198, 0, 327687, 17, 0, 327695, 16, 0, 327696, 198, 0, 327697, 198, 0, 327698, 198, 0, 327699, 198, 0, 327700, 198, 0, 327701, 198, 0, 327702, 198, 0, 327703, 198, 0, 327704, 198, 0, 327705, 198, 0, 327706, 198, 0, 327707, 198, 0, 327708, 198, 0, 327709, 27, 0, 393222, 26, 0, 393223, 14, 0, 393224, 17, 0, 393230, 16, 0, 393231, 15, 0, 458760, 14, 0, 458761, 235, 0, 458762, 235, 0, 458763, 235, 0, 458764, 235, 0, 458765, 235, 0, 458766, 15, 0, 524296, 264, 0, 524297, 235, 0, 524298, 235, 0, 524299, 235, 0, 524300, 235, 0, 524301, 235, 0, 524302, 263, 0 )
+
+[node name="xen" parent="TileMap" instance=ExtResource( 17 )]
+position = Vector2( -191, -290 )
+
+[node name="xen2" parent="TileMap" instance=ExtResource( 17 )]
+position = Vector2( 873, 30 )
+
+[node name="xen3" parent="TileMap" instance=ExtResource( 17 )]
+position = Vector2( 377, 230 )
+
+[node name="trashcanH" parent="." instance=ExtResource( 10 )]
+position = Vector2( 689, 414 )
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 49, 54 )
+position = Vector2( -79, 94 )
 
 [node name="FlameTrap" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1345, 187 )
 NextTrapPath = NodePath("../InternalDoor1")
 
-[node name="humanguy" parent="." instance=ExtResource( 24 )]
-position = Vector2( 1313, 175 )
-
-[node name="dog" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1685, 230 )
-
-[node name="xenshooter" parent="." instance=ExtResource( 16 )]
-position = Vector2( 1545, 278 )
-
 [node name="Jumper2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 705, 414 )
-JumPower = 20
+position = Vector2( 481, 54 )
 
 [node name="InternalDoor1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 153, 224 )
+position = Vector2( 161, 286 )
 NextDoorPath = NodePath("../OpenCloseMsg")
 
 [node name="GoldKey" parent="." instance=ExtResource( 4 )]
-position = Vector2( -71, 94 )
+position = Vector2( 41, 251 )
 
 [node name="MovableObject" parent="." instance=ExtResource( 8 )]
-position = Vector2( 89, 285 )
+position = Vector2( -127, -106 )
 gravity_scale = 10.0
 
 [node name="MovableObject3" parent="." instance=ExtResource( 8 )]
@@ -90,13 +88,12 @@ gravity_scale = 10.0
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 176, -64 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 3
 
 [node name="Mouse" parent="." instance=ExtResource( 11 )]
-position = Vector2( 521, 12 )
+position = Vector2( 1345, 180 )
 
 [node name="Mouse2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1833, -426 )
+position = Vector2( -263, 174 )
 
 [node name="Coin" parent="." instance=ExtResource( 12 )]
 position = Vector2( 2025, -409 )
@@ -123,56 +120,40 @@ position = Vector2( 1981, -369 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="Roach" parent="." instance=ExtResource( 13 )]
-position = Vector2( 932, 16 )
+position = Vector2( 1356, 231 )
 
 [node name="Roach7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 441, -10 )
+position = Vector2( 1265, 158 )
 
 [node name="Roach8" parent="." instance=ExtResource( 13 )]
-position = Vector2( 673, -114 )
-
-[node name="Roach5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1264, -50 )
+position = Vector2( 1369, 110 )
 
 [node name="Roach6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 833, 62 )
+position = Vector2( -223, 263 )
 
 [node name="Roach2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 641, 175 )
-
-[node name="Roach3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1178, -50 )
+position = Vector2( 1457, 277 )
 
 [node name="Roach4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 985, -554 )
+position = Vector2( 1673, 256 )
 
 [node name="Coin3" parent="." instance=ExtResource( 12 )]
 position = Vector2( 254, 206 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="spider" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1457, -26 )
+position = Vector2( 1305, -74 )
 
 [node name="Panel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 328, 286 )
+position = Vector2( -223, -106 )
 DoorTrapPath = NodePath("../FlameTrap")
+TriggerGroup = "Cats"
+Latch = true
 
 [node name="OpenCloseMsg" parent="." instance=ExtResource( 18 )]
 
 [node name="HangingSpider" parent="." instance=ExtResource( 19 )]
-position = Vector2( 1201, 126 )
+position = Vector2( 1265, 62 )
 
 [node name="xenshooter2" parent="." instance=ExtResource( 16 )]
 position = Vector2( 2121, -130 )
-
-[node name="xenorc" parent="." instance=ExtResource( 22 )]
-position = Vector2( 1225, 254 )
-
-[node name="xenknight" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1377, 182 )
-
-[node name="smallspider" parent="." instance=ExtResource( 23 )]
-position = Vector2( 1264, 286 )
-
-[node name="xenassasin" parent="." instance=ExtResource( 21 )]
-position = Vector2( 1449, 271 )

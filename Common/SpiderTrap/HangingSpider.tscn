@@ -86,7 +86,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="RayShape2D" id=3]
-length = 192.0
+length = 224.0
 
 [node name="HangingSpider" type="Node2D"]
 script = ExtResource( 2 )
@@ -104,7 +104,6 @@ rest = Transform2D( 1, 0, 0, 1, 0, 11 )
 [node name="damagezone" type="Area2D" parent="NestSkeleton/threadbon/bodybon"]
 position = Vector2( 1, -16 )
 collision_layer = 0
-collision_mask = 49
 
 [node name="collision" type="CollisionShape2D" parent="NestSkeleton/threadbon/bodybon/damagezone"]
 position = Vector2( -1, 26 )
@@ -115,6 +114,7 @@ visible = false
 position = Vector2( 0, 18 )
 frames = SubResource( 10 )
 animation = "up"
+frame = 5
 speed_scale = 3.0
 playing = true
 
@@ -141,7 +141,6 @@ anims/a128 = SubResource( 2 )
 
 [node name="Watch128" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 49
 
 [node name="sensor" type="CollisionShape2D" parent="Watch128"]
 shape = SubResource( 3 )

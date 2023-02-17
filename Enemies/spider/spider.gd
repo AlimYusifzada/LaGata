@@ -14,7 +14,7 @@ onready var JumpTimer=$JumpTimer
 onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
-
+onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +25,7 @@ func _ready():
 	SpiderAnimation.play("Run")
 	velocity.x=Speed
 	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.5,
+		Color(1,1,1,1),Color(1,1,1,0),0.2,
 		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
@@ -71,9 +71,12 @@ func move():
 		pass
 
 func Kill():
-	set_collision_mask_bit(Global.GROUND,false)
-	set_collision_mask_bit(Global.PLATFORM,false)
+	var bl=BloodExpl.instance()
+	bl.position=position
+	bl.cloud="acid"
+	get_parent().add_child(bl)
 	Life=false
+	set_collision_layer_bit(Global.ENEMY,false)
 	$Tween.start()
 
 func _on_head_body_entered(body):

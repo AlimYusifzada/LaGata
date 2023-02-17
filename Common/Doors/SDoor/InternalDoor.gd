@@ -27,10 +27,10 @@ func _ready():
 	
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DoorState==OPEN:
-		set_collision_mask_bit(Global.PLAYER,false)
+		SetDoor(false)
 		DoorAnimation.play("open")
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]>0 && DoorState==CLOSED:
-		set_collision_mask_bit(Global.PLAYER,false)
+		SetDoor(false)
 		Global.KeysRing[DoorColor]-=1
 		DoorState=OPEN
 		DoorAnimation.play("open")
@@ -41,7 +41,7 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Cats") && DoorState!=OPEN:
 		DoorAnimation.play("open",true)
-		set_collision_mask_bit(Global.PLAYER,true) 
+		SetDoor(true)
 	pass # Replace with function body.
 
 func _on_AnimatedSprite_animation_finished():
@@ -49,7 +49,7 @@ func _on_AnimatedSprite_animation_finished():
 	pass # Replace with function body.
 
 func _on_InternalDoor_SetClose():
-	set_collision_mask_bit(Global.PLAYER,true)
+	SetDoor(true)
 	DoorState=CLOSED
 	DoorAnimation.set_frame(3)
 	if NextDoor:
@@ -57,9 +57,15 @@ func _on_InternalDoor_SetClose():
 	pass # Replace with function body.
 
 func _on_InternalDoor_SetOpen():
-	set_collision_mask_bit(Global.PLAYER,false)
+	SetDoor(false)
 	DoorState=OPEN
 	DoorAnimation.set_frame(0)
 	if NextDoor:
 		NextDoor.emit_signal("SetClose")
 	pass # Replace with function body.
+
+func SetDoor(status):
+	set_collision_layer_bit(Global.GROUND,status)
+	set_collision_mask_bit(Global.PLAYER,status)
+	set_collision_mask_bit(Global.PRAY,status)
+	set_collision_mask_bit(Global.ENEMY,status)

@@ -209,7 +209,7 @@ height = 28.0
 length = 24.0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 16, 2.5 )
+extents = Vector2( 8, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=35]
 extents = Vector2( 64, 8 )

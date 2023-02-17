@@ -16,7 +16,7 @@ onready var Voice=$Voice
 onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
-
+onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
 #var shooting=false
@@ -31,7 +31,7 @@ func _ready():
 	DogAnimation.play("Run")
 	velocity.x=Speed
 	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.5,
+		Color(1,1,1,1),Color(1,1,1,0),0.2,
 		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
@@ -86,8 +86,10 @@ func move(delta):
 		MindTimer.start(Global.MindTimerSet)
 
 func Kill():
-	set_collision_mask_bit(Global.GROUND,false)
-	set_collision_mask_bit(Global.PLATFORM,false)
+	var bl=BloodExpl.instance()
+	bl.position=position
+	get_parent().add_child(bl)
+	set_collision_layer_bit(Global.ENEMY,false)
 	Life=false
 	$Tween.start()
 	

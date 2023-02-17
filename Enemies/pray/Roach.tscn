@@ -36,7 +36,7 @@ radius = 16.0
 height = 76.0
 
 [sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 56, 4 )
+extents = Vector2( 40, 4 )
 
 [sub_resource type="RayShape2D" id=28]
 

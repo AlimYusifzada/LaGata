@@ -23,10 +23,10 @@ config/icon="res://Common/cat.png"
 [autoload]
 
 Global="*res://global.gd"
+Transit="*res://addons/transit/Transit.tscn"
 
 [display]
 
-window/size/resizable=false
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
@@ -67,6 +67,10 @@ ui_walkright={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

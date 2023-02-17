@@ -7,12 +7,13 @@ onready var sfxscr=$window/TabContainer/Sound/SFXVol
 onready var rev=$window/TabContainer/About/revision
 onready var ViewOptions=$window/TabContainer/Graphics/Label/ViewOptions
 onready var ChildOptions=$window/TabContainer/Graphics/Label2/ChildOptions
+onready var transit=$"/root/Transit"
 var Size=Vector2()
 
 func _ready():
 	Global.loadGameOptions()
 	Global.loadGameState()
-	rev.text="rev:"+Global.revision
+	rev.text=str(OS.window_size)
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
 	sfxscr.set_value(Global.SFXVol)
@@ -58,7 +59,7 @@ func _on_SFXVol_value_changed(value):
 func _on_MainMenuButton_pressed():
 	Global.saveGameOptions()
 	get_tree().paused=false
-	get_tree().change_scene("res://Menu/MainMenu.tscn")
+	transit.change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.
 
 func _on_ViewOptions_item_selected(index):

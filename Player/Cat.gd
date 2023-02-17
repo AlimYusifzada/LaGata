@@ -31,10 +31,11 @@ var Animate_Name=["Jump","Sit","Walk","Run"]
 var velocity=Vector2()
 var Life=true
 var JumpPossible=false
-var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
+var KoyoteTime=0.2 #0.3 is a max value for k.jump more it will be double jump
 var onObject=false
 var canMoveWest=false
 var canMoveEast=false
+var JoystickMove=Vector2()
 
 signal Food(stamina)
 signal Die
@@ -59,8 +60,8 @@ func _physics_process(delta):
 	KoyoteTimeCheck()
 	CheckDeath()
 	CheckMovable(delta)
-	CheckJump()
-	CheckRun(delta)
+	ChecKbrdJump()
+	ChecKbrdRun(delta)
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
 	pass
@@ -105,8 +106,8 @@ func CheckDeath():
 		set_physics_process(false)
 		$Tween.start()
 	pass
-	
-func CheckRun(delta):
+
+func ChecKbrdRun(delta):
 	if Input.is_action_pressed("ui_runright") && canMoveEast:#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
@@ -149,7 +150,7 @@ func animate():
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(RUN))
 	pass
-	
+
 func PickAnimation(an_type=0) -> String: #pick from enum
 	if Global.isChild:
 		return Animate_Mode+Animate_Name[an_type]
@@ -164,10 +165,14 @@ func EmitDust():
 	JumpSound.volume_db=Global.SFXVol
 	JumpSound.play()
 	pass
-	
+
 func _on_Cat_Food(stamina=2):
+	Meow.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
-	CollectSound.play()
+	if stamina>0:
+		CollectSound.play()
+	else:
+		Meow.play()
 	if stamina>0:
 		Global.Points+=stamina*50
 	if Global.Stamina<100:
@@ -186,10 +191,8 @@ func _on_messagetimer_timeout():
 	pass
 
 #jumping
-func CheckJump():
+func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
-		if !is_on_floor():
-			EmitDust()
 		if Global.Stamina>10: 
 			Global.Stamina-=1.0
 		jumpaction()
@@ -209,7 +212,7 @@ func _on_koyotetimer_timeout():
 	JumpPossible=false
 	pass # Replace with function body.
 
-func _on_Cat_Jump(power): # initiated by logic
+func _on_Cat_Jump(power): # signal
 	jumpaction(Global.Stamina*power)
 	EmitDust()
 	pass # Replace with function body.
@@ -219,7 +222,7 @@ func _on_jumptimer_timeout():
 	pass
 
 func jumpaction(modifier=0): #instant jump
-	JumperTimer.start()		
+	JumperTimer.start()
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:

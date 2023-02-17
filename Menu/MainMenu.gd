@@ -3,35 +3,35 @@
 extends Node2D
 
 onready var OptionsMenu=preload("res://Menu/Options.tscn")
-onready var CatYawAnimation=$CatYaw
+onready var CatYawAnimation=$MenuPoint/CatYaw
 onready var CatYawDelay=$CatYawDelay
 onready var BGMusic=$BGMusic
-onready var Comtinue=$Comtinue
+onready var Continue=$MenuPoint/Continue
 onready var SFXSound=$SFXSound
-onready var SceneTransition=$SceneTransition
-onready var Fade=$SceneTransition/Fade
+onready var MenuPoint=$MenuPoint
+onready var transit=$"/root/Transit"
+
 signal OptionsChanged
 
 func _ready():
-	SceneTransition.emit_signal("Start")
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()
 	BGMusic.volume_db=Global.MusicVol
 	BGMusic.play()
 	if Global.LifesLeft<=0:
-		Comtinue.disabled=true
+		Continue.disabled=true
 	else:
-		Comtinue.disabled=false
+		Continue.disabled=false
 	pass
 	
 func _process(delta):
-	var eye_position=get_global_mouse_position()-CatYawAnimation.position
+	var eye_position=get_global_mouse_position().x-CatYawAnimation.position.x
 	if !CatYawAnimation.playing:
-		if eye_position.x<-100:
+		if eye_position<-100:
 			CatYawAnimation.play("lookright")
 			pass
-		elif eye_position.x>100:
+		elif eye_position>100:
 			CatYawAnimation.play("lookleft")
 			pass
 		else:
@@ -42,10 +42,11 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-	SceneTransition.FadeIn=false
-	SceneTransition.emit_signal("Start")
-	yield(SceneTransition,"finished")
-	get_tree().change_scene("res://Levels/TestLvl.tscn")
+#	SceneTransition.FadeIn=false
+#	SceneTransition.emit_signal("Start")
+#	yield(SceneTransition,"finished")
+	transit.change_scene("res://Levels/TestLvl.tscn")
+#	get_tree().change_scene()
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
@@ -60,13 +61,13 @@ func _on_Comtinue_pressed():
 	Global.Stamina=10
 	Global.KeysRing=[0,0,0]
 	
-	SceneTransition.FadeIn=false
-	SceneTransition.emit_signal("Start")
-	yield(SceneTransition,"finished")
+#	SceneTransition.FadeIn=false
+#	SceneTransition.emit_signal("Start")
+#	yield(SceneTransition,"finished")
 	
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
-		get_tree().change_scene("res://Levels/TestLvl.tscn")
+		transit.change_scene("res://Levels/TestLvl.tscn")
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():
@@ -89,3 +90,4 @@ func _on_MainMenu_OptionsChanged():
 	SFXSound.volume_db=Global.SFXVol
 	BGMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.
+

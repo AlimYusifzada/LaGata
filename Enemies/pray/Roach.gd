@@ -14,7 +14,7 @@ export var JumpOffProb=0.7
 onready var RoachSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
-
+onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
 # Called when the node enters the scene tree for the first time.
@@ -25,7 +25,7 @@ func _ready():
 	RoachSprite.play("RoachRun")
 	velocity.x=SPEED
 	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.5,
+		Color(1,1,1,1),Color(1,1,1,0),0.2,
 		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.interpolate_property($".",
 	"scale",
@@ -58,6 +58,10 @@ func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		Global.MiceCatches+=1
 		body.emit_signal("Food",2)
+		var bl=BloodExpl.instance()
+		bl.position=position
+		bl.cloud="brown"
+		get_parent().add_child(bl)		
 		Kill()
 	pass # Replace with function body.
 

@@ -1,8 +1,10 @@
 extends Node2D
 
+onready var transit=$"/root/Transit"
+
 func _ready():
 	pass
 
 func _process(delta):
 	if !Global.PlayerAlive:
-		get_tree().change_scene("res://Menu/MainMenu.tscn")
+		transit.change_scene("res://Menu/MainMenu.tscn")

@@ -390,7 +390,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=80]
-radius = 48.4498
+radius = 48.337
 height = 95.0957
 
 [node name="Cat" type="KinematicBody2D" groups=["Cats"]]
