@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Common/DblJumpBonus.png" type="Texture" id=2]
 [ext_resource path="res://Player/HUD/cathead.png" type="Texture" id=3]
 [ext_resource path="res://addons/radial_progress/RadialProgressBar.gd" type="Script" id=4]
 [ext_resource path="res://Common/Doors/Keys/GoldKey.png" type="Texture" id=5]
@@ -45,7 +46,7 @@ custom_fonts/font = SubResource( 4 )
 autowrap = true
 
 [node name="Keys" type="Sprite" parent="HUDPanel"]
-position = Vector2( 184, 56 )
+position = Vector2( 32, 176 )
 scale = Vector2( 0.781249, 0.75 )
 texture = ExtResource( 5 )
 
@@ -57,7 +58,7 @@ custom_fonts/font = SubResource( 3 )
 text = "7"
 
 [node name="CatStat" type="Node2D" parent="HUDPanel"]
-position = Vector2( 96, 88 )
+position = Vector2( 64, 88 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -85,6 +86,22 @@ bar_color = Color( 0, 1, 0, 1 )
 [node name="TouchESC" type="TouchScreenButton" parent="HUDPanel/CatStat"]
 position = Vector2( -32, -32 )
 normal = ExtResource( 3 )
+
+[node name="DblJumpTimerInd" type="Control" parent="HUDPanel"]
+margin_left = 184.0
+margin_top = 88.0
+margin_right = 224.0
+margin_bottom = 128.0
+script = ExtResource( 4 )
+max_value = 30
+radius = 60
+progress = 30
+thickness = 10
+bg_color = Color( 0.501961, 0.501961, 0.501961, 0 )
+bar_color = Color( 0, 0, 1, 0.25098 )
+
+[node name="Sprite" type="Sprite" parent="HUDPanel/DblJumpTimerInd"]
+texture = ExtResource( 2 )
 
 [connection signal="UpdateHUD" from="." to="." method="_on_CanvasLayer_UpdateHUD"]
 [connection signal="pressed" from="HUDPanel/CatStat/TouchESC" to="." method="_on_TouchESC_pressed"]

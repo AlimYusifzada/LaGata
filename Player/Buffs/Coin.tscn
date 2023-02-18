@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://Enemies/pray/Coin.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/pray/coin.png" type="Texture" id=2]
+[ext_resource path="res://Player/Buffs/Coin.gd" type="Script" id=1]
+[ext_resource path="res://Player/Buffs/coin.png" type="Texture" id=2]
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4

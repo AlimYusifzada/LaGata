@@ -4,7 +4,7 @@ export var DoubleJumps=1
 var flag=false
 
 func _ready():
-	$AnimatedSprite/Label.text=str(DoubleJumps)+"up"
+	$AnimatedSprite/Label.text=str(DoubleJumps)
 	$Tween.interpolate_property($".",
 	"modulate",
 	Color(1,1,1,1),

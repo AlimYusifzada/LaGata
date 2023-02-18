@@ -15,7 +15,7 @@ const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level=0 #current level
-var LifesLeft=7
+var LifesLeft:int=7
 var PlayerAlive:bool=true #player life status - default true
 var isChild:bool=true #player status (child/adult)
 var Stamina=10	#initial value
@@ -28,7 +28,9 @@ var SFXVol=0
 var MasterVol=0
 #var JoystickMove=Vector2()
 #var JoystickJump=false
-var DblJumps:int=1
+var DblJumps:int
+var MaxDblJumps:int=1
+var MaxLifes:int=7
 
 func _ready():
 	loadGameOptions()
@@ -38,13 +40,13 @@ func _ready():
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
 	Level=0 #current level
-	LifesLeft=7 #shall I give additional life as a bonus?
+	LifesLeft=MaxLifes 
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change
 	Stamina=10 #initial value
 	MiceCatches=0
 	Points=0
-	DblJumps=1
+	DblJumps=MaxDblJumps
 	saveGameState()
 	pass
 
@@ -82,11 +84,17 @@ func saveGameState():
 	var GameState={
 		"Level":Level,
 		"LifesLeft":LifesLeft,
+		"MaxLifes":MaxLifes,
 		"PlayerAlive":PlayerAlive,
 		"isChild":isChild,
 		"MiceCatches":MiceCatches,
 		"Points":Points,
-		"DblJumps":DblJumps
+		"DblJumps":DblJumps,
+		"MaxDblJumps":MaxDblJumps,
+		"Stamina":Stamina,
+		"YellowKeys":KeysRing[0],
+		"GreenKeys":KeysRing[1],
+		"BlackKeys":KeysRing[2]
 		}
 	var f=File.new()
 	f.open(file_GameState,File.WRITE)
@@ -118,11 +126,17 @@ func loadGameState():
 		f.close()
 		Level=GameState["Level"]
 		LifesLeft=GameState["LifesLeft"]
+		MaxLifes=GameState["MaxLifes"]
 		PlayerAlive=GameState["PlayerAlive"]
 		isChild=GameState["isChild"]
 		MiceCatches=GameState["MiceCatches"]
 		Points=GameState["Points"]
 		DblJumps=GameState["DblJumps"]
+		MaxDblJumps=GameState["MaxDblJumps"]
+		Stamina=GameState["Stamina"]
+		KeysRing[0]=GameState["YellowKeys"]
+		KeysRing[1]=GameState["GreenKeys"]
+		KeysRing[2]=GameState["BlackKeys"]
 		return
 	else:
 		saveGameState()

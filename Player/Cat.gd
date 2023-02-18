@@ -26,6 +26,7 @@ onready var CheckTWest=$ChkTWest
 onready var CheckTEast=$ChkTEast
 onready var HeartBeat=$heartbeat
 onready var DblJumpTimer=$DblJumpTimer
+onready var DblJumpInd=$Cam/HUD/HUDPanel/DblJumpTimerInd
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -38,6 +39,7 @@ var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
 var JoystickMove=Vector2()
+var BuffTime=30
 
 signal Food(stamina)
 signal Die
@@ -46,7 +48,6 @@ signal Message(message)
 
 func _ready():
 	set_scale(SCALE)
-	DblJumpTimer.wait_time=30#set for 30sec
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
@@ -255,7 +256,13 @@ func _on_Cat_Die():
 	pass # Replace with function body.
 
 func _on_DblJumpTimer_timeout():
-	if Global.DblJumps>1:
-		Global.DblJumps-=1
-	emit_signal("Message","Double Jumps counter: %s"%(Global.DblJumps-1))
+	BuffTime-=1
+	if BuffTime>0:
+		DblJumpTimer.start()
+	else:
+		BuffTime=30
+		if Global.DblJumps>1:
+			Global.DblJumps-=1
+			emit_signal("Message","Double Jumps counter: %s"%(Global.DblJumps-1))
+	DblJumpInd.progress=BuffTime
 	pass # Replace with function body.

@@ -11,7 +11,7 @@
 [ext_resource path="res://Common/FlameTrap/flame.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Common/StaticPlatforms/trashcanH.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Enemies/pray/Coin.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Player/Buffs/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Levels/TestLvl.gd" type="Script" id=15]
@@ -20,7 +20,7 @@
 [ext_resource path="res://Common/OpenCloseMsg/OpenCloseMsg.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Common/SpiderTrap/HangingSpider.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Backgrounds/Sewers/sewers.png" type="Texture" id=20]
-[ext_resource path="res://Enemies/pray/DblJumpBonus.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Player/Buffs/DblJumpBonus.tscn" type="PackedScene" id=21]
 
 [node name="TestLvl1" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -89,7 +89,7 @@ gravity_scale = 10.0
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 176, -64 )
 scale = Vector2( 0.586775, 0.406529 )
-frame = 2
+frame = 12
 
 [node name="Mouse" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1345, 180 )
@@ -157,7 +157,7 @@ position = Vector2( 1265, 62 )
 position = Vector2( 2121, -130 )
 
 [node name="DblJumpBonus" parent="." instance=ExtResource( 21 )]
-position = Vector2( -527, 14 )
+position = Vector2( -663, -26 )
 __meta__ = {
 "_edit_group_": true
 }

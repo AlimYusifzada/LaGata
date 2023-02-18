@@ -47,8 +47,12 @@ func _on_HUD_OptionsChanged():
 	pass # Replace with function body.
 
 func _on_CanvasLayer_UpdateHUD():
-	var prays=len(get_tree().get_nodes_in_group("Pray"))
 	
+	if Global.DblJumps>1:
+		$HUDPanel/DblJumpTimerInd.visible=true
+	else:
+		$HUDPanel/DblJumpTimerInd.visible=false
+		
 	LifeBar.bar_color=Color(range_lerp(Global.LifesLeft,1,7,1,0),
 						  range_lerp(Global.LifesLeft,1,7,0,1),0)
 	LifeBar.set_progress(Global.LifesLeft)

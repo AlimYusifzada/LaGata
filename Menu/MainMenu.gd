@@ -58,9 +58,8 @@ func _on_Exit_pressed():
 func _on_Comtinue_pressed():
 	Global.loadGameOptions()
 	Global.loadGameState()
-	Global.Stamina=10
-	Global.KeysRing=[0,0,0]
-	
+#	Global.Stamina=10
+#	Global.KeysRing=[0,0,0]
 #	SceneTransition.FadeIn=false
 #	SceneTransition.emit_signal("Start")
 #	yield(SceneTransition,"finished")
