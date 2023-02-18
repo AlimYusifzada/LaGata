@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.260123"
+const revision="0.1"
 
 const main_menu="res://MainMenu.tscn"
 
@@ -16,8 +16,8 @@ enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level=0 #current level
 var LifesLeft=7
-var PlayerAlive=true #player life status - default true
-var isChild=true #player status (child/adult)
+var PlayerAlive:bool=true #player life status - default true
+var isChild:bool=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 var Points=0
@@ -26,8 +26,9 @@ var Points=0
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
-var JoystickMove=Vector2()
-var JoystickJump=false
+#var JoystickMove=Vector2()
+#var JoystickJump=false
+var DblJumps:int=1
 
 func _ready():
 	loadGameOptions()
@@ -43,6 +44,7 @@ func PlayerReset():
 	Stamina=10 #initial value
 	MiceCatches=0
 	Points=0
+	DblJumps=1
 	saveGameState()
 	pass
 
@@ -83,7 +85,8 @@ func saveGameState():
 		"PlayerAlive":PlayerAlive,
 		"isChild":isChild,
 		"MiceCatches":MiceCatches,
-		"Points":Points
+		"Points":Points,
+		"DblJumps":DblJumps
 		}
 	var f=File.new()
 	f.open(file_GameState,File.WRITE)
@@ -119,6 +122,7 @@ func loadGameState():
 		isChild=GameState["isChild"]
 		MiceCatches=GameState["MiceCatches"]
 		Points=GameState["Points"]
+		DblJumps=GameState["DblJumps"]
 		return
 	else:
 		saveGameState()

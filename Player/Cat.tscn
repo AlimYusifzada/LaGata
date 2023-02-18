@@ -471,6 +471,9 @@ smoothing_speed = 10.0
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="DblJumpTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="Die" from="." to="." method="_on_Cat_Die"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]
 [connection signal="Jump" from="." to="." method="_on_Cat_Jump"]
@@ -479,3 +482,4 @@ smoothing_speed = 10.0
 [connection signal="timeout" from="messagetimer" to="." method="_on_messagetimer_timeout"]
 [connection signal="timeout" from="koyotetimer" to="." method="_on_koyotetimer_timeout"]
 [connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="timeout" from="DblJumpTimer" to="." method="_on_DblJumpTimer_timeout"]

@@ -178,7 +178,7 @@ text = "Exit"
 flat = true
 
 [node name="CatYaw" type="AnimatedSprite" parent="MenuPoint"]
-position = Vector2( 560, 184 )
+position = Vector2( 552, 184 )
 frames = SubResource( 2 )
 speed_scale = 2.0
 

@@ -25,16 +25,18 @@ onready var CheckMEast=$ChkMEast
 onready var CheckTWest=$ChkTWest
 onready var CheckTEast=$ChkTEast
 onready var HeartBeat=$heartbeat
+onready var DblJumpTimer=$DblJumpTimer
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
 var velocity=Vector2()
-var Life=true
-var JumpPossible=false
-var KoyoteTime=0.2 #0.3 is a max value for k.jump more it will be double jump
-var onObject=false
-var canMoveWest=false
-var canMoveEast=false
+var Life:bool=true
+var JumpPossible:bool=false
+var JumpCounter
+var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
+var onObject:bool=false
+var canMoveWest:bool=false
+var canMoveEast:bool=false
 var JoystickMove=Vector2()
 
 signal Food(stamina)
@@ -44,14 +46,16 @@ signal Message(message)
 
 func _ready():
 	set_scale(SCALE)
+	DblJumpTimer.wait_time=30#set for 30sec
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
+	JumpCounter=Global.DblJumps
 	$Tween.interpolate_property($".",
 	"modulate",
 	Color(1,1,1,1),
 	Color(1,1,1,0),1,
-	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)	
+	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #----------------------------------------
@@ -65,28 +69,31 @@ func _physics_process(delta):
 	#---SLOWER---
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
 	pass
-	
-func _process(delta): 
+
+func _process(delta):
 	animate()
 	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
-#-------------------------------------------
+#----------------------------------------
 
 func CheckMovable(delta):
-	#CHAECK FALL CONDITION
+	#CHAECK FALL and JUMP CONDITION
 	if is_on_floor():
 		velocity.y=0
 		JumpPossible=true
+		JumpCounter=Global.DblJumps
 	elif is_on_ceiling():
 		velocity.y=2
 		JumpPossible=false
 	else: #in the air
+		JumpPossible=JumpCounter>0
 		onObject=LookDown.get_collider() || LookEDown.get_collider() || LookWDown.get_collider()
 		if !onObject:#!LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():
 			velocity.y+=Global.GRAVITY*delta
 		else:
 			velocity.y=0
 			JumpPossible=true
+			JumpCounter=Global.DblJumps
 	#CHECK MOVE CONDITION
 	var eastobj=CheckMEast.get_collider()
 	var westobj=CheckMWest.get_collider()
@@ -95,7 +102,7 @@ func CheckMovable(delta):
 	if eastobj:if "Tile" in eastobj.to_string():canMoveEast=false
 	if westobj:if "Tile" in westobj.to_string():canMoveWest=false
 	pass
-	
+
 func CheckDeath():
 	HeartBeat.volume_db=Global.SFXVol
 	if Global.Stamina<10 && !HeartBeat.playing:
@@ -134,9 +141,9 @@ func ChecKbrdRun(delta):
 			if velocity.x>0:
 				velocity.x=0
 	pass
-	
+
 #animation
-func animate(): 
+func animate():
 	if velocity.y!=0 && !(is_on_floor()||onObject):
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(JUMP))
@@ -158,7 +165,7 @@ func PickAnimation(an_type=0) -> String: #pick from enum
 		return Animate_Name[an_type]
 	pass
 
-func EmitDust():		
+func EmitDust():
 	var dust=DUST.instance()
 	get_parent().add_child(dust)
 	dust.position=position
@@ -180,7 +187,7 @@ func _on_Cat_Food(stamina=2):
 		if Global.Stamina>100:
 			Global.Stamina=100
 	pass
-	
+
 # HUD message handling
 func _on_Cat_Message(message):
 	Message.text=str(message)
@@ -193,12 +200,16 @@ func _on_messagetimer_timeout():
 #jumping
 func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
-		if Global.Stamina>10: 
+		if Global.Stamina>10:
 			Global.Stamina-=1.0
+		if !is_on_floor():
+			EmitDust()
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		JumperTimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
+	if DblJumpTimer.is_stopped() && Global.DblJumps>1:
+		DblJumpTimer.start()
 	pass
 
 func KoyoteTimeCheck():
@@ -222,11 +233,12 @@ func _on_jumptimer_timeout():
 	pass
 
 func jumpaction(modifier=0): #instant jump
-	JumperTimer.start()
+	JumperTimer.start() # set for platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:
 		velocity.y=velocity.y/KITTEN_MOD 
+	JumpCounter-=1
 	pass
 #end of jumping
 
@@ -240,4 +252,10 @@ func _on_Cat_Die():
 	Meow.volume_db=Global.SFXVol
 	Meow.play()
 	Life=false #die
+	pass # Replace with function body.
+
+func _on_DblJumpTimer_timeout():
+	if Global.DblJumps>1:
+		Global.DblJumps-=1
+	emit_signal("Message","Double Jumps counter: %s"%(Global.DblJumps-1))
 	pass # Replace with function body.

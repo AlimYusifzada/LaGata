@@ -16,7 +16,6 @@
 [ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=16]
 [ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=17]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
