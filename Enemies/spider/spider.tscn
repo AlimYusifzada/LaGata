@@ -58,7 +58,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=52]
 radius = 16.0
-height = 60.0
+height = 48.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 32, 3.90625 )
@@ -102,12 +102,12 @@ one_shot = true
 
 [node name="RayCastWest" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( -64, 0 )
+cast_to = Vector2( -32, 0 )
 collision_mask = 6
 
 [node name="RayCastEast" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 64, 0 )
+cast_to = Vector2( 32, 0 )
 collision_mask = 6
 
 [connection signal="Die" from="." to="." method="_on_spider_Die"]

@@ -59,12 +59,18 @@ func animation():
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
-
+func sidewall():
+	if WallOnEast.get_collider():
+		if velocity.x<0:
+			return 1
+	if WallOnWest.get_collider():
+		if velocity.x>0:
+			return 1
+	return -1
+		
 func move():
 	if is_on_floor() && is_wall():
-		velocity.x*=-1
-#		velocity.y=JUMP_VELOCITY #jump
-#		JumpTimer.start(0.5)
+		velocity.x*=sidewall()
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)

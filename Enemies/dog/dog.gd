@@ -75,10 +75,17 @@ func LookAt():
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
-
+func sidewall():
+	if WallOnEast.get_collider():
+		if velocity.x<0:
+			return 1
+	if WallOnWest.get_collider():
+		if velocity.x>0:
+			return 1
+	return -1
 func move(delta):
 	if is_on_floor() && is_wall():
-		velocity.x*=-1
+		velocity.x*=sidewall()
 #		velocity.y=JUMP_VELOCITY #jump
 #		JumpTimer.start(0.5)
 	elif !is_on_floor() && (MindTimer.is_stopped() && randf()>JumpOffProb):

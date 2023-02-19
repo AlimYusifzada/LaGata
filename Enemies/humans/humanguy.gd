@@ -56,7 +56,14 @@ func animation():
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()	
 	pass
-
+func sidewall():
+	if WallOnEast.get_collider():
+		if velocity.x<0:
+			return 1
+	if WallOnWest.get_collider():
+		if velocity.x>0:
+			return 1
+	return -1
 func move():
 	if is_on_floor() and is_wall():
 		velocity.y=JUMP_VELOCITY #jump
@@ -86,6 +93,6 @@ func _on_DeathTimer_timeout():
 
 func _on_JumpTimer_timeout():
 	if randf()<0.3:
-		velocity.x*=-1
+		velocity.x*=sidewall()
 	pass # Replace with function body.
 

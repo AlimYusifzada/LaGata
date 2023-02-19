@@ -22,7 +22,7 @@ traps
 decorFront tiles
 
 
-
++double jump implemented as temporary buff
 
 -add foliage (grass, flowers, moss, stones)
 	added some as 32x32 sprites (flowers as empty)
@@ -43,8 +43,9 @@ decorFront tiles
 	deadly moss (static dangerous grows)
 	flametrap (timely controlled)
 
--update decoration tiles 64x64
++update decoration tiles 64x64
 	added few 64x64 for grass (decoration tiles)
+	new ground tiles added
 
 -enhance quality of some sprites
 	+player sprites cleaned(kitten)

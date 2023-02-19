@@ -2,7 +2,7 @@
 
 extends KinematicBody2D
 
-export var MINSPEED=150
+export var MINSPEED=50
 export var JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)
 var velocity=Vector2()
@@ -59,7 +59,7 @@ func animation():
 		
 func move():
 	if is_on_floor() && is_wall():
-		velocity.x*=-1
+		velocity.x*=sidewall()
 	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)
@@ -68,6 +68,14 @@ func move():
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
+func sidewall():
+	if WallOnEast.get_collider():
+		if velocity.x<0:
+			return 1
+	if WallOnWest.get_collider():
+		if velocity.x>0:
+			return 1
+	return -1
 	
 func Kill():
 	var bl=BloodExpl.instance()

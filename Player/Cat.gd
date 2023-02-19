@@ -33,13 +33,13 @@ var Animate_Name=["Jump","Sit","Walk","Run"]
 var velocity=Vector2()
 var Life:bool=true
 var JumpPossible:bool=false
-var JumpCounter
-var KoyoteTime=0.1 #0.3 is a max value for k.jump more it will be double jump
+var JumpCounter:int=0
+var KoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
 var JoystickMove=Vector2()
-var BuffTime=30
+var BuffTime:int=30
 
 signal Food(stamina)
 signal Die
@@ -252,6 +252,9 @@ func _on_Tween_tween_all_completed():
 func _on_Cat_Die():
 	Meow.volume_db=Global.SFXVol
 	Meow.play()
+	set_collision_layer_bit(Global.PLAYER,false)
+	set_collision_mask_bit(Global.PRAY,false)
+	set_collision_mask_bit(Global.ENEMY,false)
 	Life=false #die
 	pass # Replace with function body.
 

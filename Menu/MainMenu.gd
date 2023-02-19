@@ -89,4 +89,3 @@ func _on_MainMenu_OptionsChanged():
 	SFXSound.volume_db=Global.SFXVol
 	BGMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.
-
