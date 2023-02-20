@@ -1,40 +1,40 @@
 [gd_resource type="TileSet" load_steps=74 format=2]
 
-[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=1]
-[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=2]
-[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=3]
-[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=4]
-[ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=5]
-[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=6]
-[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=7]
-[ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=8]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=9]
-[ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=10]
-[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=11]
-[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=12]
-[ext_resource path="res://Common/64xt/Bark/BarkTR.png" type="Texture" id=13]
-[ext_resource path="res://Common/64xt/Bricks/BricksTL.png" type="Texture" id=14]
-[ext_resource path="res://Common/64xt/Bricks/BricksBL.png" type="Texture" id=15]
-[ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=16]
-[ext_resource path="res://Common/64xt/Singles/MixedTileset.png" type="Texture" id=17]
-[ext_resource path="res://Common/64xt/Singles/TreeRingsRound.png" type="Texture" id=18]
-[ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=19]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=20]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=21]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=22]
-[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=23]
-[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=24]
-[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=25]
-[ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=26]
-[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=27]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=28]
-[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=29]
+[ext_resource path="res://Common/64xt/Bricks/BricksTL.png" type="Texture" id=1]
+[ext_resource path="res://Common/64xt/Gravel/GrGravel.png" type="Texture" id=2]
+[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=3]
+[ext_resource path="res://Common/64xt/Gravel/Bolders.png" type="Texture" id=4]
+[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=5]
+[ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=6]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=7]
+[ext_resource path="res://Common/64xt/Gravel/HellBricks.png" type="Texture" id=8]
+[ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=9]
+[ext_resource path="res://Common/64xt/Bark/BarkTR.png" type="Texture" id=10]
+[ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=11]
+[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=12]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=13]
+[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=14]
+[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=15]
+[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=16]
+[ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=17]
+[ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=18]
+[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=19]
+[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=20]
+[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=21]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=22]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=23]
+[ext_resource path="res://Common/64xt/Bricks/BricksBL.png" type="Texture" id=24]
+[ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=25]
+[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=26]
+[ext_resource path="res://Common/64xt/Gravel/RedBricks.png" type="Texture" id=27]
+[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=28]
+[ext_resource path="res://Common/64xt/Gravel/BrGravel.png" type="Texture" id=29]
 [ext_resource path="res://Common/64xt/Gravel/BigStones.png" type="Texture" id=30]
-[ext_resource path="res://Common/64xt/Gravel/Bolders.png" type="Texture" id=31]
-[ext_resource path="res://Common/64xt/Gravel/HellBricks.png" type="Texture" id=32]
-[ext_resource path="res://Common/64xt/Gravel/GrGravel.png" type="Texture" id=33]
-[ext_resource path="res://Common/64xt/Gravel/RedBricks.png" type="Texture" id=34]
-[ext_resource path="res://Common/64xt/Gravel/BrGravel.png" type="Texture" id=35]
+[ext_resource path="res://Common/64xt/Singles/MixedTileset.png" type="Texture" id=31]
+[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=32]
+[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=33]
+[ext_resource path="res://Common/64xt/Singles/TreeRingsRound.png" type="Texture" id=34]
+[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -152,7 +152,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 
 [resource]
 0/name = "Sprite"
-0/texture = ExtResource( 29 )
+0/texture = ExtResource( 20 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -173,7 +173,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 0/z_index = 0
 1/name = "Sprite16"
-1/texture = ExtResource( 19 )
+1/texture = ExtResource( 11 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
@@ -194,7 +194,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 1/z_index = 0
 2/name = "Sprite17"
-2/texture = ExtResource( 5 )
+2/texture = ExtResource( 9 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 64, 64 )
@@ -215,7 +215,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 2/z_index = 0
 3/name = "Sprite18"
-3/texture = ExtResource( 13 )
+3/texture = ExtResource( 10 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 64, 64 )
@@ -236,7 +236,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 3/z_index = 0
 4/name = "Sprite19"
-4/texture = ExtResource( 10 )
+4/texture = ExtResource( 6 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 64, 64 )
@@ -257,7 +257,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 4/z_index = 0
 5/name = "Sprite2"
-5/texture = ExtResource( 24 )
+5/texture = ExtResource( 14 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 64, 64 )
@@ -278,7 +278,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 5/z_index = 0
 6/name = "Sprite20"
-6/texture = ExtResource( 15 )
+6/texture = ExtResource( 24 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -299,7 +299,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 6/z_index = 0
 7/name = "Sprite21"
-7/texture = ExtResource( 16 )
+7/texture = ExtResource( 25 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
@@ -320,7 +320,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 7/z_index = 0
 8/name = "Sprite22"
-8/texture = ExtResource( 14 )
+8/texture = ExtResource( 1 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 64, 64 )
@@ -341,7 +341,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 8/z_index = 0
 9/name = "Sprite23"
-9/texture = ExtResource( 8 )
+9/texture = ExtResource( 18 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
@@ -362,7 +362,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 9/z_index = 0
 10/name = "Sprite59"
-10/texture = ExtResource( 34 )
+10/texture = ExtResource( 27 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 64, 0, 64, 64 )
@@ -383,7 +383,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 10/z_index = 0
 11/name = "Sprite287"
-11/texture = ExtResource( 34 )
+11/texture = ExtResource( 27 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 128, 0, 64, 64 )
@@ -404,7 +404,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 11/z_index = 0
 12/name = "Sprite288"
-12/texture = ExtResource( 34 )
+12/texture = ExtResource( 27 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 64, 64, 64, 64 )
@@ -425,7 +425,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 12/z_index = 0
 13/name = "Sprite289"
-13/texture = ExtResource( 34 )
+13/texture = ExtResource( 27 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 64, 64, 64 )
@@ -446,7 +446,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 13/z_index = 0
 14/name = "Sprite290"
-14/texture = ExtResource( 32 )
+14/texture = ExtResource( 8 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 64, 64, 64 )
@@ -467,7 +467,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 14/z_index = 0
 15/name = "Sprite291"
-15/texture = ExtResource( 32 )
+15/texture = ExtResource( 8 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 128, 64, 64 )
@@ -488,7 +488,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 15/z_index = 0
 16/name = "Sprite292"
-16/texture = ExtResource( 32 )
+16/texture = ExtResource( 8 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 256, 64, 64 )
@@ -509,7 +509,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 16/z_index = 0
 17/name = "Sprite293"
-17/texture = ExtResource( 32 )
+17/texture = ExtResource( 8 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 192, 64, 64 )
@@ -530,7 +530,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 17/z_index = 0
 18/name = "Sprite298"
-18/texture = ExtResource( 35 )
+18/texture = ExtResource( 29 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 64, 64, 64 )
@@ -551,7 +551,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 18/z_index = 0
 19/name = "Sprite299"
-19/texture = ExtResource( 35 )
+19/texture = ExtResource( 29 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 128, 64, 64 )
@@ -572,7 +572,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 19/z_index = 0
 20/name = "Sprite300"
-20/texture = ExtResource( 35 )
+20/texture = ExtResource( 29 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 192, 64, 64 )
@@ -593,7 +593,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 20/z_index = 0
 21/name = "Sprite301"
-21/texture = ExtResource( 35 )
+21/texture = ExtResource( 29 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 256, 64, 64 )
@@ -614,7 +614,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 21/z_index = 0
 22/name = "Sprite306"
-22/texture = ExtResource( 33 )
+22/texture = ExtResource( 2 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 64, 64, 64 )
@@ -635,7 +635,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 22/z_index = 0
 23/name = "Sprite307"
-23/texture = ExtResource( 33 )
+23/texture = ExtResource( 2 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 128, 64, 64 )
@@ -656,7 +656,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 23/z_index = 0
 24/name = "Sprite308"
-24/texture = ExtResource( 33 )
+24/texture = ExtResource( 2 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 256, 64, 64 )
@@ -677,7 +677,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 24/z_index = 0
 25/name = "Sprite309"
-25/texture = ExtResource( 33 )
+25/texture = ExtResource( 2 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 192, 64, 64 )
@@ -782,7 +782,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 29/z_index = 0
 30/name = "Sprite294"
-30/texture = ExtResource( 31 )
+30/texture = ExtResource( 4 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 192, 64, 64 )
@@ -803,7 +803,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 30/z_index = 0
 31/name = "Sprite295"
-31/texture = ExtResource( 31 )
+31/texture = ExtResource( 4 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 256, 64, 64 )
@@ -824,7 +824,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 31/z_index = 0
 32/name = "Sprite296"
-32/texture = ExtResource( 31 )
+32/texture = ExtResource( 4 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 0, 64, 64, 64 )
@@ -845,7 +845,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 32/z_index = 0
 33/name = "Sprite297"
-33/texture = ExtResource( 31 )
+33/texture = ExtResource( 4 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 0, 128, 64, 64 )
@@ -866,7 +866,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 33/z_index = 0
 34/name = "Sprite3"
-34/texture = ExtResource( 6 )
+34/texture = ExtResource( 21 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 0, 0, 64, 64 )
@@ -887,7 +887,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 34/z_index = 0
 35/name = "Sprite4"
-35/texture = ExtResource( 2 )
+35/texture = ExtResource( 16 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 64, 64 )
@@ -908,7 +908,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 35/z_index = 0
 36/name = "Sprite5"
-36/texture = ExtResource( 23 )
+36/texture = ExtResource( 12 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 0, 0, 64, 64 )
@@ -929,7 +929,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 36/z_index = 0
 37/name = "Sprite6"
-37/texture = ExtResource( 11 )
+37/texture = ExtResource( 19 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 0, 0, 64, 64 )
@@ -950,7 +950,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 37/z_index = 0
 38/name = "Sprite7"
-38/texture = ExtResource( 4 )
+38/texture = ExtResource( 26 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 0, 0, 64, 64 )
@@ -971,7 +971,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 38/z_index = 0
 39/name = "Sprite8"
-39/texture = ExtResource( 12 )
+39/texture = ExtResource( 5 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 0, 0, 64, 64 )
@@ -992,7 +992,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 39/z_index = 0
 40/name = "Sprite12"
-40/texture = ExtResource( 1 )
+40/texture = ExtResource( 28 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 0, 0, 64, 64 )
@@ -1013,7 +1013,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 40/z_index = 0
 41/name = "Sprite13"
-41/texture = ExtResource( 25 )
+41/texture = ExtResource( 32 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 0, 0, 64, 64 )
@@ -1034,7 +1034,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 41/z_index = 0
 42/name = "Sprite29"
-42/texture = ExtResource( 18 )
+42/texture = ExtResource( 34 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 0, 0, 64, 64 )
@@ -1055,7 +1055,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 42/z_index = 0
 43/name = "Sprite14"
-43/texture = ExtResource( 28 )
+43/texture = ExtResource( 22 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 0, 0, 64, 64 )
@@ -1076,7 +1076,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 43/z_index = 0
 44/name = "Sprite24"
-44/texture = ExtResource( 17 )
+44/texture = ExtResource( 31 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 0, 0, 64, 64 )
@@ -1097,7 +1097,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 44/z_index = 0
 45/name = "Sprite30"
-45/texture = ExtResource( 17 )
+45/texture = ExtResource( 31 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 64, 0, 64, 64 )
@@ -1118,7 +1118,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 45/z_index = 0
 46/name = "Sprite31"
-46/texture = ExtResource( 17 )
+46/texture = ExtResource( 31 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 128, 0, 64, 64 )
@@ -1139,7 +1139,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 46/z_index = 0
 47/name = "Sprite32"
-47/texture = ExtResource( 17 )
+47/texture = ExtResource( 31 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 192, 0, 64, 64 )
@@ -1160,7 +1160,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 47/z_index = 0
 48/name = "Sprite33"
-48/texture = ExtResource( 17 )
+48/texture = ExtResource( 31 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 256, 0, 64, 64 )
@@ -1181,7 +1181,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 48/z_index = 0
 49/name = "Sprite34"
-49/texture = ExtResource( 17 )
+49/texture = ExtResource( 31 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 320, 0, 64, 64 )
@@ -1202,7 +1202,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 49/z_index = 0
 50/name = "Sprite35"
-50/texture = ExtResource( 17 )
+50/texture = ExtResource( 31 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 384, 0, 64, 64 )
@@ -1223,7 +1223,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 50/z_index = 0
 51/name = "Sprite36"
-51/texture = ExtResource( 17 )
+51/texture = ExtResource( 31 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 448, 0, 64, 64 )
@@ -1244,7 +1244,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 51/z_index = 0
 52/name = "Sprite37"
-52/texture = ExtResource( 17 )
+52/texture = ExtResource( 31 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 0, 64, 64, 64 )
@@ -1265,7 +1265,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 52/z_index = 0
 53/name = "Sprite38"
-53/texture = ExtResource( 17 )
+53/texture = ExtResource( 31 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 64, 64, 64, 64 )
@@ -1286,7 +1286,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 53/z_index = 0
 54/name = "Sprite39"
-54/texture = ExtResource( 17 )
+54/texture = ExtResource( 31 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 128, 64, 64, 64 )
@@ -1307,7 +1307,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 54/z_index = 0
 55/name = "Sprite40"
-55/texture = ExtResource( 17 )
+55/texture = ExtResource( 31 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 192, 64, 64, 64 )
@@ -1328,7 +1328,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 55/z_index = 0
 56/name = "Sprite41"
-56/texture = ExtResource( 17 )
+56/texture = ExtResource( 31 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 256, 64, 64, 64 )
@@ -1349,10 +1349,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 56/z_index = 0
 57/name = "Sprite42"
-57/texture = ExtResource( 17 )
+57/texture = ExtResource( 29 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
-57/region = Rect2( 320, 64, 64, 64 )
+57/region = Rect2( 0, 0, 64, 64 )
 57/tile_mode = 0
 57/occluder_offset = Vector2( 32, 32 )
 57/navigation_offset = Vector2( 32, 32 )
@@ -1370,7 +1370,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 57/z_index = 0
 58/name = "Sprite43"
-58/texture = ExtResource( 17 )
+58/texture = ExtResource( 31 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 384, 64, 64, 64 )
@@ -1391,7 +1391,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 58/z_index = 0
 59/name = "Sprite44"
-59/texture = ExtResource( 17 )
+59/texture = ExtResource( 31 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 448, 64, 64, 64 )
@@ -1412,7 +1412,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 59/z_index = 0
 60/name = "Sprite45"
-60/texture = ExtResource( 17 )
+60/texture = ExtResource( 31 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
 60/region = Rect2( 0, 128, 64, 64 )
@@ -1433,7 +1433,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 60/z_index = 0
 61/name = "Sprite46"
-61/texture = ExtResource( 17 )
+61/texture = ExtResource( 31 )
 61/tex_offset = Vector2( 0, 0 )
 61/modulate = Color( 1, 1, 1, 1 )
 61/region = Rect2( 64, 128, 64, 64 )
@@ -1454,7 +1454,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 61/z_index = 0
 62/name = "Sprite47"
-62/texture = ExtResource( 17 )
+62/texture = ExtResource( 31 )
 62/tex_offset = Vector2( 0, 0 )
 62/modulate = Color( 1, 1, 1, 1 )
 62/region = Rect2( 128, 128, 64, 64 )
@@ -1475,7 +1475,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 62/z_index = 0
 63/name = "Sprite48"
-63/texture = ExtResource( 17 )
+63/texture = ExtResource( 31 )
 63/tex_offset = Vector2( 0, 0 )
 63/modulate = Color( 1, 1, 1, 1 )
 63/region = Rect2( 192, 128, 64, 64 )
@@ -1496,7 +1496,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 63/z_index = 0
 64/name = "Sprite49"
-64/texture = ExtResource( 17 )
+64/texture = ExtResource( 31 )
 64/tex_offset = Vector2( 0, 0 )
 64/modulate = Color( 1, 1, 1, 1 )
 64/region = Rect2( 256, 128, 64, 64 )
@@ -1517,7 +1517,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 64/z_index = 0
 65/name = "Sprite50"
-65/texture = ExtResource( 17 )
+65/texture = ExtResource( 31 )
 65/tex_offset = Vector2( 0, 0 )
 65/modulate = Color( 1, 1, 1, 1 )
 65/region = Rect2( 320, 128, 64, 64 )
@@ -1538,7 +1538,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 65/z_index = 0
 66/name = "Sprite51"
-66/texture = ExtResource( 17 )
+66/texture = ExtResource( 31 )
 66/tex_offset = Vector2( 0, 0 )
 66/modulate = Color( 1, 1, 1, 1 )
 66/region = Rect2( 384, 128, 64, 64 )
@@ -1559,7 +1559,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 66/z_index = 0
 67/name = "Sprite52"
-67/texture = ExtResource( 17 )
+67/texture = ExtResource( 31 )
 67/tex_offset = Vector2( 0, 0 )
 67/modulate = Color( 1, 1, 1, 1 )
 67/region = Rect2( 448, 128, 64, 64 )
@@ -1580,7 +1580,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 67/z_index = 0
 68/name = "Sprite53"
-68/texture = ExtResource( 17 )
+68/texture = ExtResource( 31 )
 68/tex_offset = Vector2( 0, 0 )
 68/modulate = Color( 1, 1, 1, 1 )
 68/region = Rect2( 0, 192, 64, 64 )
@@ -1601,7 +1601,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 68/z_index = 0
 69/name = "Sprite54"
-69/texture = ExtResource( 17 )
+69/texture = ExtResource( 31 )
 69/tex_offset = Vector2( 0, 0 )
 69/modulate = Color( 1, 1, 1, 1 )
 69/region = Rect2( 64, 192, 64, 64 )
@@ -1622,7 +1622,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 69/z_index = 0
 70/name = "Sprite55"
-70/texture = ExtResource( 17 )
+70/texture = ExtResource( 31 )
 70/tex_offset = Vector2( 0, 0 )
 70/modulate = Color( 1, 1, 1, 1 )
 70/region = Rect2( 128, 192, 64, 64 )
@@ -1643,7 +1643,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 70/z_index = 0
 71/name = "Sprite56"
-71/texture = ExtResource( 17 )
+71/texture = ExtResource( 31 )
 71/tex_offset = Vector2( 0, 0 )
 71/modulate = Color( 1, 1, 1, 1 )
 71/region = Rect2( 192, 192, 64, 64 )
@@ -1664,7 +1664,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 71/z_index = 0
 72/name = "Sprite57"
-72/texture = ExtResource( 17 )
+72/texture = ExtResource( 31 )
 72/tex_offset = Vector2( 0, 0 )
 72/modulate = Color( 1, 1, 1, 1 )
 72/region = Rect2( 256, 192, 64, 64 )
@@ -1685,7 +1685,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 72/z_index = 0
 73/name = "Sprite58"
-73/texture = ExtResource( 17 )
+73/texture = ExtResource( 31 )
 73/tex_offset = Vector2( 0, 0 )
 73/modulate = Color( 1, 1, 1, 1 )
 73/region = Rect2( 320, 192, 64, 64 )
@@ -1706,7 +1706,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 73/z_index = 0
 74/name = "Sprite60"
-74/texture = ExtResource( 17 )
+74/texture = ExtResource( 31 )
 74/tex_offset = Vector2( 0, 0 )
 74/modulate = Color( 1, 1, 1, 1 )
 74/region = Rect2( 384, 192, 64, 64 )
@@ -1727,7 +1727,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 74/z_index = 0
 75/name = "Sprite61"
-75/texture = ExtResource( 17 )
+75/texture = ExtResource( 31 )
 75/tex_offset = Vector2( 0, 0 )
 75/modulate = Color( 1, 1, 1, 1 )
 75/region = Rect2( 448, 192, 64, 64 )
@@ -1748,7 +1748,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 75/z_index = 0
 76/name = "Sprite62"
-76/texture = ExtResource( 17 )
+76/texture = ExtResource( 31 )
 76/tex_offset = Vector2( 0, 0 )
 76/modulate = Color( 1, 1, 1, 1 )
 76/region = Rect2( 0, 256, 64, 64 )
@@ -1769,7 +1769,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 76/z_index = 0
 77/name = "Sprite63"
-77/texture = ExtResource( 17 )
+77/texture = ExtResource( 31 )
 77/tex_offset = Vector2( 0, 0 )
 77/modulate = Color( 1, 1, 1, 1 )
 77/region = Rect2( 64, 256, 64, 64 )
@@ -1790,7 +1790,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 77/z_index = 0
 78/name = "Sprite64"
-78/texture = ExtResource( 17 )
+78/texture = ExtResource( 31 )
 78/tex_offset = Vector2( 0, 0 )
 78/modulate = Color( 1, 1, 1, 1 )
 78/region = Rect2( 128, 256, 64, 64 )
@@ -1811,7 +1811,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 78/z_index = 0
 79/name = "Sprite65"
-79/texture = ExtResource( 17 )
+79/texture = ExtResource( 31 )
 79/tex_offset = Vector2( 0, 0 )
 79/modulate = Color( 1, 1, 1, 1 )
 79/region = Rect2( 192, 256, 64, 64 )
@@ -1832,7 +1832,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 79/z_index = 0
 80/name = "Sprite66"
-80/texture = ExtResource( 17 )
+80/texture = ExtResource( 31 )
 80/tex_offset = Vector2( 0, 0 )
 80/modulate = Color( 1, 1, 1, 1 )
 80/region = Rect2( 256, 256, 64, 64 )
@@ -1853,7 +1853,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 80/z_index = 0
 81/name = "Sprite67"
-81/texture = ExtResource( 17 )
+81/texture = ExtResource( 31 )
 81/tex_offset = Vector2( 0, 0 )
 81/modulate = Color( 1, 1, 1, 1 )
 81/region = Rect2( 320, 256, 64, 64 )
@@ -1874,7 +1874,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 81/z_index = 0
 82/name = "Sprite68"
-82/texture = ExtResource( 17 )
+82/texture = ExtResource( 31 )
 82/tex_offset = Vector2( 0, 0 )
 82/modulate = Color( 1, 1, 1, 1 )
 82/region = Rect2( 384, 256, 64, 64 )
@@ -1895,7 +1895,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 82/z_index = 0
 83/name = "Sprite69"
-83/texture = ExtResource( 17 )
+83/texture = ExtResource( 31 )
 83/tex_offset = Vector2( 0, 0 )
 83/modulate = Color( 1, 1, 1, 1 )
 83/region = Rect2( 448, 256, 64, 64 )
@@ -1916,7 +1916,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 83/z_index = 0
 84/name = "Sprite70"
-84/texture = ExtResource( 17 )
+84/texture = ExtResource( 31 )
 84/tex_offset = Vector2( 0, 0 )
 84/modulate = Color( 1, 1, 1, 1 )
 84/region = Rect2( 0, 320, 64, 64 )
@@ -1937,7 +1937,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 84/z_index = 0
 85/name = "Sprite71"
-85/texture = ExtResource( 17 )
+85/texture = ExtResource( 31 )
 85/tex_offset = Vector2( 0, 0 )
 85/modulate = Color( 1, 1, 1, 1 )
 85/region = Rect2( 0, 320, 64, 64 )
@@ -1958,7 +1958,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 85/z_index = 0
 86/name = "Sprite72"
-86/texture = ExtResource( 17 )
+86/texture = ExtResource( 31 )
 86/tex_offset = Vector2( 0, 0 )
 86/modulate = Color( 1, 1, 1, 1 )
 86/region = Rect2( 64, 320, 64, 64 )
@@ -1979,7 +1979,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 86/z_index = 0
 87/name = "Sprite73"
-87/texture = ExtResource( 17 )
+87/texture = ExtResource( 31 )
 87/tex_offset = Vector2( 0, 0 )
 87/modulate = Color( 1, 1, 1, 1 )
 87/region = Rect2( 128, 320, 64, 64 )
@@ -2000,7 +2000,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 87/z_index = 0
 88/name = "Sprite74"
-88/texture = ExtResource( 17 )
+88/texture = ExtResource( 31 )
 88/tex_offset = Vector2( 0, 0 )
 88/modulate = Color( 1, 1, 1, 1 )
 88/region = Rect2( 192, 320, 64, 64 )
@@ -2021,7 +2021,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 88/z_index = 0
 89/name = "Sprite75"
-89/texture = ExtResource( 17 )
+89/texture = ExtResource( 31 )
 89/tex_offset = Vector2( 0, 0 )
 89/modulate = Color( 1, 1, 1, 1 )
 89/region = Rect2( 256, 320, 64, 64 )
@@ -2042,7 +2042,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 89/z_index = 0
 90/name = "Sprite76"
-90/texture = ExtResource( 17 )
+90/texture = ExtResource( 31 )
 90/tex_offset = Vector2( 0, 0 )
 90/modulate = Color( 1, 1, 1, 1 )
 90/region = Rect2( 320, 320, 64, 64 )
@@ -2063,7 +2063,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 90/z_index = 0
 91/name = "Sprite77"
-91/texture = ExtResource( 17 )
+91/texture = ExtResource( 31 )
 91/tex_offset = Vector2( 0, 0 )
 91/modulate = Color( 1, 1, 1, 1 )
 91/region = Rect2( 384, 320, 64, 64 )
@@ -2084,7 +2084,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 91/z_index = 0
 92/name = "Sprite78"
-92/texture = ExtResource( 17 )
+92/texture = ExtResource( 31 )
 92/tex_offset = Vector2( 0, 0 )
 92/modulate = Color( 1, 1, 1, 1 )
 92/region = Rect2( 448, 320, 64, 64 )
@@ -2105,7 +2105,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 92/z_index = 0
 93/name = "Sprite79"
-93/texture = ExtResource( 17 )
+93/texture = ExtResource( 31 )
 93/tex_offset = Vector2( 0, 0 )
 93/modulate = Color( 1, 1, 1, 1 )
 93/region = Rect2( 0, 384, 64, 64 )
@@ -2126,7 +2126,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 93/z_index = 0
 94/name = "Sprite80"
-94/texture = ExtResource( 17 )
+94/texture = ExtResource( 31 )
 94/tex_offset = Vector2( 0, 0 )
 94/modulate = Color( 1, 1, 1, 1 )
 94/region = Rect2( 64, 384, 64, 64 )
@@ -2147,7 +2147,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 94/z_index = 0
 95/name = "Sprite81"
-95/texture = ExtResource( 17 )
+95/texture = ExtResource( 31 )
 95/tex_offset = Vector2( 0, 0 )
 95/modulate = Color( 1, 1, 1, 1 )
 95/region = Rect2( 128, 384, 64, 64 )
@@ -2168,7 +2168,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 95/z_index = 0
 96/name = "Sprite82"
-96/texture = ExtResource( 17 )
+96/texture = ExtResource( 31 )
 96/tex_offset = Vector2( 0, 0 )
 96/modulate = Color( 1, 1, 1, 1 )
 96/region = Rect2( 192, 384, 64, 64 )
@@ -2189,7 +2189,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 96/z_index = 0
 97/name = "Sprite83"
-97/texture = ExtResource( 17 )
+97/texture = ExtResource( 31 )
 97/tex_offset = Vector2( 0, 0 )
 97/modulate = Color( 1, 1, 1, 1 )
 97/region = Rect2( 256, 384, 64, 64 )
@@ -2210,7 +2210,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 97/z_index = 0
 98/name = "Sprite84"
-98/texture = ExtResource( 17 )
+98/texture = ExtResource( 31 )
 98/tex_offset = Vector2( 0, 0 )
 98/modulate = Color( 1, 1, 1, 1 )
 98/region = Rect2( 320, 384, 64, 64 )
@@ -2231,7 +2231,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 98/z_index = 0
 99/name = "Sprite85"
-99/texture = ExtResource( 17 )
+99/texture = ExtResource( 31 )
 99/tex_offset = Vector2( 0, 0 )
 99/modulate = Color( 1, 1, 1, 1 )
 99/region = Rect2( 384, 384, 64, 64 )
@@ -2252,7 +2252,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 99/z_index = 0
 100/name = "Sprite86"
-100/texture = ExtResource( 17 )
+100/texture = ExtResource( 31 )
 100/tex_offset = Vector2( 0, 0 )
 100/modulate = Color( 1, 1, 1, 1 )
 100/region = Rect2( 448, 384, 64, 64 )
@@ -2273,7 +2273,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 100/z_index = 0
 101/name = "Sprite87"
-101/texture = ExtResource( 17 )
+101/texture = ExtResource( 31 )
 101/tex_offset = Vector2( 0, 0 )
 101/modulate = Color( 1, 1, 1, 1 )
 101/region = Rect2( 0, 448, 64, 64 )
@@ -2294,7 +2294,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 101/z_index = 0
 102/name = "Sprite88"
-102/texture = ExtResource( 17 )
+102/texture = ExtResource( 31 )
 102/tex_offset = Vector2( 0, 0 )
 102/modulate = Color( 1, 1, 1, 1 )
 102/region = Rect2( 64, 448, 64, 64 )
@@ -2315,7 +2315,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 102/z_index = 0
 103/name = "Sprite89"
-103/texture = ExtResource( 17 )
+103/texture = ExtResource( 31 )
 103/tex_offset = Vector2( 0, 0 )
 103/modulate = Color( 1, 1, 1, 1 )
 103/region = Rect2( 128, 448, 64, 64 )
@@ -2336,7 +2336,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 103/z_index = 0
 104/name = "Sprite90"
-104/texture = ExtResource( 17 )
+104/texture = ExtResource( 31 )
 104/tex_offset = Vector2( 0, 0 )
 104/modulate = Color( 1, 1, 1, 1 )
 104/region = Rect2( 192, 448, 64, 64 )
@@ -2357,7 +2357,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 104/z_index = 0
 105/name = "Sprite91"
-105/texture = ExtResource( 17 )
+105/texture = ExtResource( 31 )
 105/tex_offset = Vector2( 0, 0 )
 105/modulate = Color( 1, 1, 1, 1 )
 105/region = Rect2( 256, 448, 64, 64 )
@@ -2378,7 +2378,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 105/z_index = 0
 106/name = "Sprite92"
-106/texture = ExtResource( 17 )
+106/texture = ExtResource( 31 )
 106/tex_offset = Vector2( 0, 0 )
 106/modulate = Color( 1, 1, 1, 1 )
 106/region = Rect2( 320, 448, 64, 64 )
@@ -2399,7 +2399,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 106/z_index = 0
 107/name = "Sprite93"
-107/texture = ExtResource( 17 )
+107/texture = ExtResource( 31 )
 107/tex_offset = Vector2( 0, 0 )
 107/modulate = Color( 1, 1, 1, 1 )
 107/region = Rect2( 384, 448, 64, 64 )
@@ -2420,7 +2420,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 107/z_index = 0
 108/name = "Sprite94"
-108/texture = ExtResource( 17 )
+108/texture = ExtResource( 31 )
 108/tex_offset = Vector2( 0, 0 )
 108/modulate = Color( 1, 1, 1, 1 )
 108/region = Rect2( 448, 448, 64, 64 )
@@ -2441,7 +2441,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 108/z_index = 0
 109/name = "Sprite95"
-109/texture = ExtResource( 17 )
+109/texture = ExtResource( 31 )
 109/tex_offset = Vector2( 0, 0 )
 109/modulate = Color( 1, 1, 1, 1 )
 109/region = Rect2( 0, 512, 64, 64 )
@@ -2462,7 +2462,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 109/z_index = 0
 110/name = "Sprite96"
-110/texture = ExtResource( 17 )
+110/texture = ExtResource( 31 )
 110/tex_offset = Vector2( 0, 0 )
 110/modulate = Color( 1, 1, 1, 1 )
 110/region = Rect2( 64, 512, 64, 64 )
@@ -2483,7 +2483,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 110/z_index = 0
 111/name = "Sprite97"
-111/texture = ExtResource( 17 )
+111/texture = ExtResource( 31 )
 111/tex_offset = Vector2( 0, 0 )
 111/modulate = Color( 1, 1, 1, 1 )
 111/region = Rect2( 128, 512, 64, 64 )
@@ -2504,7 +2504,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 111/z_index = 0
 112/name = "Sprite98"
-112/texture = ExtResource( 17 )
+112/texture = ExtResource( 31 )
 112/tex_offset = Vector2( 0, 0 )
 112/modulate = Color( 1, 1, 1, 1 )
 112/region = Rect2( 192, 512, 64, 64 )
@@ -2525,7 +2525,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 112/z_index = 0
 113/name = "Sprite99"
-113/texture = ExtResource( 17 )
+113/texture = ExtResource( 31 )
 113/tex_offset = Vector2( 0, 0 )
 113/modulate = Color( 1, 1, 1, 1 )
 113/region = Rect2( 256, 512, 64, 64 )
@@ -2546,7 +2546,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 113/z_index = 0
 114/name = "Sprite100"
-114/texture = ExtResource( 17 )
+114/texture = ExtResource( 31 )
 114/tex_offset = Vector2( 0, 0 )
 114/modulate = Color( 1, 1, 1, 1 )
 114/region = Rect2( 320, 512, 64, 64 )
@@ -2567,7 +2567,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 114/z_index = 0
 115/name = "Sprite101"
-115/texture = ExtResource( 17 )
+115/texture = ExtResource( 31 )
 115/tex_offset = Vector2( 0, 0 )
 115/modulate = Color( 1, 1, 1, 1 )
 115/region = Rect2( 384, 512, 64, 64 )
@@ -2588,7 +2588,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 115/z_index = 0
 116/name = "Sprite102"
-116/texture = ExtResource( 17 )
+116/texture = ExtResource( 31 )
 116/tex_offset = Vector2( 0, 0 )
 116/modulate = Color( 1, 1, 1, 1 )
 116/region = Rect2( 448, 512, 64, 64 )
@@ -2609,7 +2609,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 116/z_index = 0
 117/name = "Sprite103"
-117/texture = ExtResource( 17 )
+117/texture = ExtResource( 31 )
 117/tex_offset = Vector2( 0, 0 )
 117/modulate = Color( 1, 1, 1, 1 )
 117/region = Rect2( 0, 576, 64, 64 )
@@ -2630,7 +2630,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 117/z_index = 0
 118/name = "Sprite104"
-118/texture = ExtResource( 17 )
+118/texture = ExtResource( 31 )
 118/tex_offset = Vector2( 0, 0 )
 118/modulate = Color( 1, 1, 1, 1 )
 118/region = Rect2( 64, 576, 64, 64 )
@@ -2651,7 +2651,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 118/z_index = 0
 119/name = "Sprite105"
-119/texture = ExtResource( 17 )
+119/texture = ExtResource( 31 )
 119/tex_offset = Vector2( 0, 0 )
 119/modulate = Color( 1, 1, 1, 1 )
 119/region = Rect2( 128, 576, 64, 64 )
@@ -2672,7 +2672,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 119/z_index = 0
 120/name = "Sprite106"
-120/texture = ExtResource( 17 )
+120/texture = ExtResource( 31 )
 120/tex_offset = Vector2( 0, 0 )
 120/modulate = Color( 1, 1, 1, 1 )
 120/region = Rect2( 192, 576, 64, 64 )
@@ -2693,7 +2693,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 120/z_index = 0
 121/name = "Sprite107"
-121/texture = ExtResource( 17 )
+121/texture = ExtResource( 31 )
 121/tex_offset = Vector2( 0, 0 )
 121/modulate = Color( 1, 1, 1, 1 )
 121/region = Rect2( 256, 576, 64, 64 )
@@ -2714,7 +2714,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 121/z_index = 0
 122/name = "Sprite108"
-122/texture = ExtResource( 17 )
+122/texture = ExtResource( 31 )
 122/tex_offset = Vector2( 0, 0 )
 122/modulate = Color( 1, 1, 1, 1 )
 122/region = Rect2( 320, 576, 64, 64 )
@@ -2735,7 +2735,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 122/z_index = 0
 123/name = "Sprite109"
-123/texture = ExtResource( 17 )
+123/texture = ExtResource( 31 )
 123/tex_offset = Vector2( 0, 0 )
 123/modulate = Color( 1, 1, 1, 1 )
 123/region = Rect2( 384, 576, 64, 64 )
@@ -2756,7 +2756,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 123/z_index = 0
 124/name = "Sprite110"
-124/texture = ExtResource( 17 )
+124/texture = ExtResource( 31 )
 124/tex_offset = Vector2( 0, 0 )
 124/modulate = Color( 1, 1, 1, 1 )
 124/region = Rect2( 448, 576, 64, 64 )
@@ -2777,7 +2777,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 124/z_index = 0
 125/name = "Sprite111"
-125/texture = ExtResource( 17 )
+125/texture = ExtResource( 31 )
 125/tex_offset = Vector2( 0, 0 )
 125/modulate = Color( 1, 1, 1, 1 )
 125/region = Rect2( 0, 640, 64, 64 )
@@ -2798,7 +2798,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 125/z_index = 0
 126/name = "Sprite112"
-126/texture = ExtResource( 17 )
+126/texture = ExtResource( 31 )
 126/tex_offset = Vector2( 0, 0 )
 126/modulate = Color( 1, 1, 1, 1 )
 126/region = Rect2( 64, 640, 64, 64 )
@@ -2819,7 +2819,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 126/z_index = 0
 127/name = "Sprite113"
-127/texture = ExtResource( 17 )
+127/texture = ExtResource( 31 )
 127/tex_offset = Vector2( 0, 0 )
 127/modulate = Color( 1, 1, 1, 1 )
 127/region = Rect2( 128, 640, 64, 64 )
@@ -2840,7 +2840,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 127/z_index = 0
 128/name = "Sprite114"
-128/texture = ExtResource( 17 )
+128/texture = ExtResource( 31 )
 128/tex_offset = Vector2( 0, 0 )
 128/modulate = Color( 1, 1, 1, 1 )
 128/region = Rect2( 192, 640, 64, 64 )
@@ -2861,7 +2861,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 128/z_index = 0
 129/name = "Sprite115"
-129/texture = ExtResource( 17 )
+129/texture = ExtResource( 31 )
 129/tex_offset = Vector2( 0, 0 )
 129/modulate = Color( 1, 1, 1, 1 )
 129/region = Rect2( 256, 640, 64, 64 )
@@ -2882,7 +2882,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 129/z_index = 0
 130/name = "Sprite116"
-130/texture = ExtResource( 17 )
+130/texture = ExtResource( 31 )
 130/tex_offset = Vector2( 0, 0 )
 130/modulate = Color( 1, 1, 1, 1 )
 130/region = Rect2( 320, 640, 64, 64 )
@@ -2903,7 +2903,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 130/z_index = 0
 131/name = "Sprite117"
-131/texture = ExtResource( 17 )
+131/texture = ExtResource( 31 )
 131/tex_offset = Vector2( 0, 0 )
 131/modulate = Color( 1, 1, 1, 1 )
 131/region = Rect2( 384, 640, 64, 64 )
@@ -2924,7 +2924,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 131/z_index = 0
 132/name = "Sprite118"
-132/texture = ExtResource( 17 )
+132/texture = ExtResource( 31 )
 132/tex_offset = Vector2( 0, 0 )
 132/modulate = Color( 1, 1, 1, 1 )
 132/region = Rect2( 448, 640, 64, 64 )
@@ -2945,7 +2945,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 132/z_index = 0
 133/name = "Sprite119"
-133/texture = ExtResource( 17 )
+133/texture = ExtResource( 31 )
 133/tex_offset = Vector2( 0, 0 )
 133/modulate = Color( 1, 1, 1, 1 )
 133/region = Rect2( 0, 704, 64, 64 )
@@ -2966,7 +2966,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 133/z_index = 0
 134/name = "Sprite120"
-134/texture = ExtResource( 17 )
+134/texture = ExtResource( 31 )
 134/tex_offset = Vector2( 0, 0 )
 134/modulate = Color( 1, 1, 1, 1 )
 134/region = Rect2( 64, 704, 64, 64 )
@@ -2987,7 +2987,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 134/z_index = 0
 135/name = "Sprite121"
-135/texture = ExtResource( 17 )
+135/texture = ExtResource( 31 )
 135/tex_offset = Vector2( 0, 0 )
 135/modulate = Color( 1, 1, 1, 1 )
 135/region = Rect2( 128, 704, 64, 64 )
@@ -3008,7 +3008,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 135/z_index = 0
 136/name = "Sprite122"
-136/texture = ExtResource( 17 )
+136/texture = ExtResource( 31 )
 136/tex_offset = Vector2( 0, 0 )
 136/modulate = Color( 1, 1, 1, 1 )
 136/region = Rect2( 192, 704, 64, 64 )
@@ -3029,7 +3029,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 136/z_index = 0
 137/name = "Sprite123"
-137/texture = ExtResource( 17 )
+137/texture = ExtResource( 31 )
 137/tex_offset = Vector2( 0, 0 )
 137/modulate = Color( 1, 1, 1, 1 )
 137/region = Rect2( 256, 704, 64, 64 )
@@ -3050,7 +3050,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 137/z_index = 0
 138/name = "Sprite124"
-138/texture = ExtResource( 17 )
+138/texture = ExtResource( 31 )
 138/tex_offset = Vector2( 0, 0 )
 138/modulate = Color( 1, 1, 1, 1 )
 138/region = Rect2( 320, 704, 64, 64 )
@@ -3071,7 +3071,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 138/z_index = 0
 139/name = "Sprite125"
-139/texture = ExtResource( 17 )
+139/texture = ExtResource( 31 )
 139/tex_offset = Vector2( 0, 0 )
 139/modulate = Color( 1, 1, 1, 1 )
 139/region = Rect2( 384, 704, 64, 64 )
@@ -3092,7 +3092,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 139/z_index = 0
 140/name = "Sprite126"
-140/texture = ExtResource( 17 )
+140/texture = ExtResource( 31 )
 140/tex_offset = Vector2( 0, 0 )
 140/modulate = Color( 1, 1, 1, 1 )
 140/region = Rect2( 448, 704, 64, 64 )
@@ -3113,7 +3113,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 140/z_index = 0
 141/name = "Sprite127"
-141/texture = ExtResource( 17 )
+141/texture = ExtResource( 31 )
 141/tex_offset = Vector2( 0, 0 )
 141/modulate = Color( 1, 1, 1, 1 )
 141/region = Rect2( 0, 768, 64, 64 )
@@ -3134,7 +3134,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 141/z_index = 0
 142/name = "Sprite128"
-142/texture = ExtResource( 17 )
+142/texture = ExtResource( 31 )
 142/tex_offset = Vector2( 0, 0 )
 142/modulate = Color( 1, 1, 1, 1 )
 142/region = Rect2( 64, 768, 64, 64 )
@@ -3155,7 +3155,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 142/z_index = 0
 143/name = "Sprite129"
-143/texture = ExtResource( 17 )
+143/texture = ExtResource( 31 )
 143/tex_offset = Vector2( 0, 0 )
 143/modulate = Color( 1, 1, 1, 1 )
 143/region = Rect2( 128, 768, 64, 64 )
@@ -3176,7 +3176,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 143/z_index = 0
 144/name = "Sprite130"
-144/texture = ExtResource( 17 )
+144/texture = ExtResource( 31 )
 144/tex_offset = Vector2( 0, 0 )
 144/modulate = Color( 1, 1, 1, 1 )
 144/region = Rect2( 192, 768, 64, 64 )
@@ -3197,7 +3197,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 144/z_index = 0
 145/name = "Sprite131"
-145/texture = ExtResource( 17 )
+145/texture = ExtResource( 31 )
 145/tex_offset = Vector2( 0, 0 )
 145/modulate = Color( 1, 1, 1, 1 )
 145/region = Rect2( 256, 768, 64, 64 )
@@ -3218,7 +3218,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 145/z_index = 0
 146/name = "Sprite132"
-146/texture = ExtResource( 17 )
+146/texture = ExtResource( 31 )
 146/tex_offset = Vector2( 0, 0 )
 146/modulate = Color( 1, 1, 1, 1 )
 146/region = Rect2( 320, 768, 64, 64 )
@@ -3239,7 +3239,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 146/z_index = 0
 147/name = "Sprite133"
-147/texture = ExtResource( 17 )
+147/texture = ExtResource( 31 )
 147/tex_offset = Vector2( 0, 0 )
 147/modulate = Color( 1, 1, 1, 1 )
 147/region = Rect2( 384, 768, 64, 64 )
@@ -3260,7 +3260,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 147/z_index = 0
 148/name = "Sprite134"
-148/texture = ExtResource( 17 )
+148/texture = ExtResource( 31 )
 148/tex_offset = Vector2( 0, 0 )
 148/modulate = Color( 1, 1, 1, 1 )
 148/region = Rect2( 448, 768, 64, 64 )
@@ -3281,7 +3281,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 148/z_index = 0
 149/name = "Sprite135"
-149/texture = ExtResource( 17 )
+149/texture = ExtResource( 31 )
 149/tex_offset = Vector2( 0, 0 )
 149/modulate = Color( 1, 1, 1, 1 )
 149/region = Rect2( 0, 832, 64, 64 )
@@ -3302,7 +3302,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 149/z_index = 0
 150/name = "Sprite136"
-150/texture = ExtResource( 17 )
+150/texture = ExtResource( 31 )
 150/tex_offset = Vector2( 0, 0 )
 150/modulate = Color( 1, 1, 1, 1 )
 150/region = Rect2( 64, 832, 64, 64 )
@@ -3323,7 +3323,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 150/z_index = 0
 151/name = "Sprite137"
-151/texture = ExtResource( 17 )
+151/texture = ExtResource( 31 )
 151/tex_offset = Vector2( 0, 0 )
 151/modulate = Color( 1, 1, 1, 1 )
 151/region = Rect2( 128, 832, 64, 64 )
@@ -3344,7 +3344,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 151/z_index = 0
 152/name = "Sprite138"
-152/texture = ExtResource( 17 )
+152/texture = ExtResource( 31 )
 152/tex_offset = Vector2( 0, 0 )
 152/modulate = Color( 1, 1, 1, 1 )
 152/region = Rect2( 192, 832, 64, 64 )
@@ -3365,7 +3365,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 152/z_index = 0
 153/name = "Sprite139"
-153/texture = ExtResource( 17 )
+153/texture = ExtResource( 31 )
 153/tex_offset = Vector2( 0, 0 )
 153/modulate = Color( 1, 1, 1, 1 )
 153/region = Rect2( 256, 832, 64, 64 )
@@ -3386,7 +3386,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 153/z_index = 0
 154/name = "Sprite140"
-154/texture = ExtResource( 17 )
+154/texture = ExtResource( 31 )
 154/tex_offset = Vector2( 0, 0 )
 154/modulate = Color( 1, 1, 1, 1 )
 154/region = Rect2( 320, 832, 64, 64 )
@@ -3407,7 +3407,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 154/z_index = 0
 155/name = "Sprite141"
-155/texture = ExtResource( 17 )
+155/texture = ExtResource( 31 )
 155/tex_offset = Vector2( 0, 0 )
 155/modulate = Color( 1, 1, 1, 1 )
 155/region = Rect2( 384, 832, 64, 64 )
@@ -3428,7 +3428,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 155/z_index = 0
 156/name = "Sprite142"
-156/texture = ExtResource( 17 )
+156/texture = ExtResource( 31 )
 156/tex_offset = Vector2( 0, 0 )
 156/modulate = Color( 1, 1, 1, 1 )
 156/region = Rect2( 448, 832, 64, 64 )
@@ -3449,7 +3449,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 156/z_index = 0
 157/name = "Sprite143"
-157/texture = ExtResource( 17 )
+157/texture = ExtResource( 31 )
 157/tex_offset = Vector2( 0, 0 )
 157/modulate = Color( 1, 1, 1, 1 )
 157/region = Rect2( 0, 896, 64, 64 )
@@ -3470,7 +3470,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 157/z_index = 0
 158/name = "Sprite144"
-158/texture = ExtResource( 17 )
+158/texture = ExtResource( 31 )
 158/tex_offset = Vector2( 0, 0 )
 158/modulate = Color( 1, 1, 1, 1 )
 158/region = Rect2( 64, 896, 64, 64 )
@@ -3491,7 +3491,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 158/z_index = 0
 159/name = "Sprite145"
-159/texture = ExtResource( 17 )
+159/texture = ExtResource( 31 )
 159/tex_offset = Vector2( 0, 0 )
 159/modulate = Color( 1, 1, 1, 1 )
 159/region = Rect2( 128, 896, 64, 64 )
@@ -3512,7 +3512,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 159/z_index = 0
 160/name = "Sprite146"
-160/texture = ExtResource( 17 )
+160/texture = ExtResource( 31 )
 160/tex_offset = Vector2( 0, 0 )
 160/modulate = Color( 1, 1, 1, 1 )
 160/region = Rect2( 192, 896, 64, 64 )
@@ -3533,7 +3533,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 160/z_index = 0
 161/name = "Sprite147"
-161/texture = ExtResource( 17 )
+161/texture = ExtResource( 31 )
 161/tex_offset = Vector2( 0, 0 )
 161/modulate = Color( 1, 1, 1, 1 )
 161/region = Rect2( 256, 896, 64, 64 )
@@ -3554,7 +3554,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 161/z_index = 0
 162/name = "Sprite148"
-162/texture = ExtResource( 17 )
+162/texture = ExtResource( 31 )
 162/tex_offset = Vector2( 0, 0 )
 162/modulate = Color( 1, 1, 1, 1 )
 162/region = Rect2( 320, 896, 64, 64 )
@@ -3575,7 +3575,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 162/z_index = 0
 163/name = "Sprite149"
-163/texture = ExtResource( 17 )
+163/texture = ExtResource( 31 )
 163/tex_offset = Vector2( 0, 0 )
 163/modulate = Color( 1, 1, 1, 1 )
 163/region = Rect2( 384, 896, 64, 64 )
@@ -3596,7 +3596,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 163/z_index = 0
 164/name = "Sprite150"
-164/texture = ExtResource( 17 )
+164/texture = ExtResource( 31 )
 164/tex_offset = Vector2( 0, 0 )
 164/modulate = Color( 1, 1, 1, 1 )
 164/region = Rect2( 448, 896, 64, 64 )
@@ -3617,7 +3617,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 164/z_index = 0
 165/name = "Sprite151"
-165/texture = ExtResource( 17 )
+165/texture = ExtResource( 31 )
 165/tex_offset = Vector2( 0, 0 )
 165/modulate = Color( 1, 1, 1, 1 )
 165/region = Rect2( 0, 960, 64, 64 )
@@ -3638,7 +3638,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 165/z_index = 0
 166/name = "Sprite152"
-166/texture = ExtResource( 17 )
+166/texture = ExtResource( 31 )
 166/tex_offset = Vector2( 0, 0 )
 166/modulate = Color( 1, 1, 1, 1 )
 166/region = Rect2( 64, 960, 64, 64 )
@@ -3659,7 +3659,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 166/z_index = 0
 167/name = "Sprite153"
-167/texture = ExtResource( 17 )
+167/texture = ExtResource( 31 )
 167/tex_offset = Vector2( 0, 0 )
 167/modulate = Color( 1, 1, 1, 1 )
 167/region = Rect2( 128, 960, 64, 64 )
@@ -3680,7 +3680,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 167/z_index = 0
 168/name = "Sprite154"
-168/texture = ExtResource( 17 )
+168/texture = ExtResource( 31 )
 168/tex_offset = Vector2( 0, 0 )
 168/modulate = Color( 1, 1, 1, 1 )
 168/region = Rect2( 192, 960, 64, 64 )
@@ -3701,7 +3701,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 168/z_index = 0
 169/name = "Sprite155"
-169/texture = ExtResource( 17 )
+169/texture = ExtResource( 31 )
 169/tex_offset = Vector2( 0, 0 )
 169/modulate = Color( 1, 1, 1, 1 )
 169/region = Rect2( 256, 960, 64, 64 )
@@ -3722,7 +3722,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 169/z_index = 0
 170/name = "Sprite156"
-170/texture = ExtResource( 17 )
+170/texture = ExtResource( 31 )
 170/tex_offset = Vector2( 0, 0 )
 170/modulate = Color( 1, 1, 1, 1 )
 170/region = Rect2( 320, 960, 64, 64 )
@@ -3743,7 +3743,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 170/z_index = 0
 171/name = "Sprite157"
-171/texture = ExtResource( 17 )
+171/texture = ExtResource( 31 )
 171/tex_offset = Vector2( 0, 0 )
 171/modulate = Color( 1, 1, 1, 1 )
 171/region = Rect2( 384, 960, 64, 64 )
@@ -3764,7 +3764,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 171/z_index = 0
 172/name = "Sprite158"
-172/texture = ExtResource( 17 )
+172/texture = ExtResource( 31 )
 172/tex_offset = Vector2( 0, 0 )
 172/modulate = Color( 1, 1, 1, 1 )
 172/region = Rect2( 448, 960, 64, 64 )
@@ -3785,7 +3785,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 172/z_index = 0
 173/name = "Sprite159"
-173/texture = ExtResource( 17 )
+173/texture = ExtResource( 31 )
 173/tex_offset = Vector2( 0, 0 )
 173/modulate = Color( 1, 1, 1, 1 )
 173/region = Rect2( 0, 1024, 64, 64 )
@@ -3806,7 +3806,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 173/z_index = 0
 174/name = "Sprite160"
-174/texture = ExtResource( 17 )
+174/texture = ExtResource( 31 )
 174/tex_offset = Vector2( 0, 0 )
 174/modulate = Color( 1, 1, 1, 1 )
 174/region = Rect2( 64, 1024, 64, 64 )
@@ -3827,7 +3827,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 174/z_index = 0
 175/name = "Sprite161"
-175/texture = ExtResource( 17 )
+175/texture = ExtResource( 31 )
 175/tex_offset = Vector2( 0, 0 )
 175/modulate = Color( 1, 1, 1, 1 )
 175/region = Rect2( 128, 1024, 64, 64 )
@@ -3848,7 +3848,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 175/z_index = 0
 176/name = "Sprite162"
-176/texture = ExtResource( 17 )
+176/texture = ExtResource( 31 )
 176/tex_offset = Vector2( 0, 0 )
 176/modulate = Color( 1, 1, 1, 1 )
 176/region = Rect2( 192, 1024, 64, 64 )
@@ -3869,7 +3869,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 176/z_index = 0
 177/name = "Sprite163"
-177/texture = ExtResource( 17 )
+177/texture = ExtResource( 31 )
 177/tex_offset = Vector2( 0, 0 )
 177/modulate = Color( 1, 1, 1, 1 )
 177/region = Rect2( 256, 1024, 64, 64 )
@@ -3890,7 +3890,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 177/z_index = 0
 178/name = "Sprite164"
-178/texture = ExtResource( 17 )
+178/texture = ExtResource( 31 )
 178/tex_offset = Vector2( 0, 0 )
 178/modulate = Color( 1, 1, 1, 1 )
 178/region = Rect2( 320, 1024, 64, 64 )
@@ -3911,7 +3911,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 178/z_index = 0
 179/name = "Sprite165"
-179/texture = ExtResource( 17 )
+179/texture = ExtResource( 31 )
 179/tex_offset = Vector2( 0, 0 )
 179/modulate = Color( 1, 1, 1, 1 )
 179/region = Rect2( 384, 1024, 64, 64 )
@@ -3932,7 +3932,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 179/z_index = 0
 180/name = "Sprite166"
-180/texture = ExtResource( 17 )
+180/texture = ExtResource( 31 )
 180/tex_offset = Vector2( 0, 0 )
 180/modulate = Color( 1, 1, 1, 1 )
 180/region = Rect2( 448, 1024, 64, 64 )
@@ -3953,7 +3953,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 180/z_index = 0
 181/name = "Sprite167"
-181/texture = ExtResource( 17 )
+181/texture = ExtResource( 31 )
 181/tex_offset = Vector2( 0, 0 )
 181/modulate = Color( 1, 1, 1, 1 )
 181/region = Rect2( 0, 1088, 64, 64 )
@@ -3974,10 +3974,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 181/z_index = 0
 182/name = "Sprite168"
-182/texture = ExtResource( 17 )
+182/texture = ExtResource( 2 )
 182/tex_offset = Vector2( 0, 0 )
 182/modulate = Color( 1, 1, 1, 1 )
-182/region = Rect2( 64, 1088, 64, 64 )
+182/region = Rect2( 0, 0, 64, 64 )
 182/tile_mode = 0
 182/occluder_offset = Vector2( 32, 32 )
 182/navigation_offset = Vector2( 32, 32 )
@@ -3995,7 +3995,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 182/z_index = 0
 183/name = "Sprite169"
-183/texture = ExtResource( 17 )
+183/texture = ExtResource( 31 )
 183/tex_offset = Vector2( 0, 0 )
 183/modulate = Color( 1, 1, 1, 1 )
 183/region = Rect2( 128, 1088, 64, 64 )
@@ -4016,7 +4016,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 183/z_index = 0
 184/name = "Sprite170"
-184/texture = ExtResource( 17 )
+184/texture = ExtResource( 31 )
 184/tex_offset = Vector2( 0, 0 )
 184/modulate = Color( 1, 1, 1, 1 )
 184/region = Rect2( 192, 1088, 64, 64 )
@@ -4037,7 +4037,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 184/z_index = 0
 185/name = "Sprite171"
-185/texture = ExtResource( 17 )
+185/texture = ExtResource( 31 )
 185/tex_offset = Vector2( 0, 0 )
 185/modulate = Color( 1, 1, 1, 1 )
 185/region = Rect2( 256, 1088, 64, 64 )
@@ -4058,7 +4058,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 185/z_index = 0
 186/name = "Sprite172"
-186/texture = ExtResource( 17 )
+186/texture = ExtResource( 31 )
 186/tex_offset = Vector2( 0, 0 )
 186/modulate = Color( 1, 1, 1, 1 )
 186/region = Rect2( 320, 1088, 64, 64 )
@@ -4079,7 +4079,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 186/z_index = 0
 187/name = "Sprite173"
-187/texture = ExtResource( 17 )
+187/texture = ExtResource( 31 )
 187/tex_offset = Vector2( 0, 0 )
 187/modulate = Color( 1, 1, 1, 1 )
 187/region = Rect2( 384, 1088, 64, 64 )
@@ -4100,7 +4100,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 187/z_index = 0
 188/name = "Sprite174"
-188/texture = ExtResource( 17 )
+188/texture = ExtResource( 31 )
 188/tex_offset = Vector2( 0, 0 )
 188/modulate = Color( 1, 1, 1, 1 )
 188/region = Rect2( 448, 1088, 64, 64 )
@@ -4121,7 +4121,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 188/z_index = 0
 189/name = "Sprite175"
-189/texture = ExtResource( 17 )
+189/texture = ExtResource( 31 )
 189/tex_offset = Vector2( 0, 0 )
 189/modulate = Color( 1, 1, 1, 1 )
 189/region = Rect2( 0, 1152, 64, 64 )
@@ -4142,7 +4142,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 189/z_index = 0
 190/name = "Sprite176"
-190/texture = ExtResource( 17 )
+190/texture = ExtResource( 31 )
 190/tex_offset = Vector2( 0, 0 )
 190/modulate = Color( 1, 1, 1, 1 )
 190/region = Rect2( 64, 1152, 64, 64 )
@@ -4163,7 +4163,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 190/z_index = 0
 191/name = "Sprite177"
-191/texture = ExtResource( 17 )
+191/texture = ExtResource( 31 )
 191/tex_offset = Vector2( 0, 0 )
 191/modulate = Color( 1, 1, 1, 1 )
 191/region = Rect2( 128, 1152, 64, 64 )
@@ -4184,7 +4184,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 191/z_index = 0
 192/name = "Sprite178"
-192/texture = ExtResource( 17 )
+192/texture = ExtResource( 31 )
 192/tex_offset = Vector2( 0, 0 )
 192/modulate = Color( 1, 1, 1, 1 )
 192/region = Rect2( 192, 1152, 64, 64 )
@@ -4205,7 +4205,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 192/z_index = 0
 193/name = "Sprite179"
-193/texture = ExtResource( 17 )
+193/texture = ExtResource( 31 )
 193/tex_offset = Vector2( 0, 0 )
 193/modulate = Color( 1, 1, 1, 1 )
 193/region = Rect2( 256, 1152, 64, 64 )
@@ -4226,7 +4226,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 193/z_index = 0
 194/name = "Sprite180"
-194/texture = ExtResource( 17 )
+194/texture = ExtResource( 31 )
 194/tex_offset = Vector2( 0, 0 )
 194/modulate = Color( 1, 1, 1, 1 )
 194/region = Rect2( 320, 1152, 64, 64 )
@@ -4247,7 +4247,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 194/z_index = 0
 195/name = "Sprite181"
-195/texture = ExtResource( 17 )
+195/texture = ExtResource( 31 )
 195/tex_offset = Vector2( 0, 0 )
 195/modulate = Color( 1, 1, 1, 1 )
 195/region = Rect2( 384, 1152, 64, 64 )
@@ -4268,7 +4268,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 195/z_index = 0
 196/name = "Sprite182"
-196/texture = ExtResource( 17 )
+196/texture = ExtResource( 31 )
 196/tex_offset = Vector2( 0, 0 )
 196/modulate = Color( 1, 1, 1, 1 )
 196/region = Rect2( 448, 1152, 64, 64 )
@@ -4289,7 +4289,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 196/z_index = 0
 197/name = "Sprite183"
-197/texture = ExtResource( 17 )
+197/texture = ExtResource( 31 )
 197/tex_offset = Vector2( 0, 0 )
 197/modulate = Color( 1, 1, 1, 1 )
 197/region = Rect2( 0, 1216, 64, 64 )
@@ -4310,10 +4310,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 197/z_index = 0
 198/name = "Sprite184"
-198/texture = ExtResource( 17 )
+198/texture = ExtResource( 30 )
 198/tex_offset = Vector2( 0, 0 )
 198/modulate = Color( 1, 1, 1, 1 )
-198/region = Rect2( 64, 1216, 64, 64 )
+198/region = Rect2( 0, 0, 64, 64 )
 198/tile_mode = 0
 198/occluder_offset = Vector2( 32, 32 )
 198/navigation_offset = Vector2( 32, 32 )
@@ -4331,7 +4331,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 198/z_index = 0
 199/name = "Sprite185"
-199/texture = ExtResource( 17 )
+199/texture = ExtResource( 31 )
 199/tex_offset = Vector2( 0, 0 )
 199/modulate = Color( 1, 1, 1, 1 )
 199/region = Rect2( 128, 1216, 64, 64 )
@@ -4352,7 +4352,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 199/z_index = 0
 200/name = "Sprite186"
-200/texture = ExtResource( 17 )
+200/texture = ExtResource( 31 )
 200/tex_offset = Vector2( 0, 0 )
 200/modulate = Color( 1, 1, 1, 1 )
 200/region = Rect2( 192, 1216, 64, 64 )
@@ -4373,7 +4373,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 200/z_index = 0
 201/name = "Sprite187"
-201/texture = ExtResource( 17 )
+201/texture = ExtResource( 31 )
 201/tex_offset = Vector2( 0, 0 )
 201/modulate = Color( 1, 1, 1, 1 )
 201/region = Rect2( 256, 1216, 64, 64 )
@@ -4394,7 +4394,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 201/z_index = 0
 202/name = "Sprite188"
-202/texture = ExtResource( 17 )
+202/texture = ExtResource( 31 )
 202/tex_offset = Vector2( 0, 0 )
 202/modulate = Color( 1, 1, 1, 1 )
 202/region = Rect2( 320, 1216, 64, 64 )
@@ -4415,7 +4415,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 202/z_index = 0
 203/name = "Sprite189"
-203/texture = ExtResource( 17 )
+203/texture = ExtResource( 31 )
 203/tex_offset = Vector2( 0, 0 )
 203/modulate = Color( 1, 1, 1, 1 )
 203/region = Rect2( 384, 1216, 64, 64 )
@@ -4436,7 +4436,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 203/z_index = 0
 204/name = "Sprite190"
-204/texture = ExtResource( 17 )
+204/texture = ExtResource( 31 )
 204/tex_offset = Vector2( 0, 0 )
 204/modulate = Color( 1, 1, 1, 1 )
 204/region = Rect2( 448, 1216, 64, 64 )
@@ -4457,7 +4457,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 204/z_index = 0
 205/name = "Sprite191"
-205/texture = ExtResource( 17 )
+205/texture = ExtResource( 31 )
 205/tex_offset = Vector2( 0, 0 )
 205/modulate = Color( 1, 1, 1, 1 )
 205/region = Rect2( 0, 1280, 64, 64 )
@@ -4478,7 +4478,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 205/z_index = 0
 206/name = "Sprite192"
-206/texture = ExtResource( 17 )
+206/texture = ExtResource( 31 )
 206/tex_offset = Vector2( 0, 0 )
 206/modulate = Color( 1, 1, 1, 1 )
 206/region = Rect2( 64, 1280, 64, 64 )
@@ -4499,7 +4499,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 206/z_index = 0
 207/name = "Sprite193"
-207/texture = ExtResource( 17 )
+207/texture = ExtResource( 31 )
 207/tex_offset = Vector2( 0, 0 )
 207/modulate = Color( 1, 1, 1, 1 )
 207/region = Rect2( 128, 1280, 64, 64 )
@@ -4520,7 +4520,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 207/z_index = 0
 208/name = "Sprite194"
-208/texture = ExtResource( 17 )
+208/texture = ExtResource( 31 )
 208/tex_offset = Vector2( 0, 0 )
 208/modulate = Color( 1, 1, 1, 1 )
 208/region = Rect2( 192, 1280, 64, 64 )
@@ -4541,7 +4541,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 208/z_index = 0
 209/name = "Sprite195"
-209/texture = ExtResource( 17 )
+209/texture = ExtResource( 31 )
 209/tex_offset = Vector2( 0, 0 )
 209/modulate = Color( 1, 1, 1, 1 )
 209/region = Rect2( 256, 1280, 64, 64 )
@@ -4562,7 +4562,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 209/z_index = 0
 210/name = "Sprite196"
-210/texture = ExtResource( 17 )
+210/texture = ExtResource( 31 )
 210/tex_offset = Vector2( 0, 0 )
 210/modulate = Color( 1, 1, 1, 1 )
 210/region = Rect2( 320, 1280, 64, 64 )
@@ -4583,7 +4583,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 210/z_index = 0
 211/name = "Sprite197"
-211/texture = ExtResource( 17 )
+211/texture = ExtResource( 31 )
 211/tex_offset = Vector2( 0, 0 )
 211/modulate = Color( 1, 1, 1, 1 )
 211/region = Rect2( 384, 1280, 64, 64 )
@@ -4604,7 +4604,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 211/z_index = 0
 212/name = "Sprite198"
-212/texture = ExtResource( 17 )
+212/texture = ExtResource( 31 )
 212/tex_offset = Vector2( 0, 0 )
 212/modulate = Color( 1, 1, 1, 1 )
 212/region = Rect2( 448, 1280, 64, 64 )
@@ -4625,7 +4625,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 212/z_index = 0
 213/name = "Sprite199"
-213/texture = ExtResource( 17 )
+213/texture = ExtResource( 31 )
 213/tex_offset = Vector2( 0, 0 )
 213/modulate = Color( 1, 1, 1, 1 )
 213/region = Rect2( 0, 1344, 64, 64 )
@@ -4646,7 +4646,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 213/z_index = 0
 214/name = "Sprite200"
-214/texture = ExtResource( 17 )
+214/texture = ExtResource( 31 )
 214/tex_offset = Vector2( 0, 0 )
 214/modulate = Color( 1, 1, 1, 1 )
 214/region = Rect2( 64, 1344, 64, 64 )
@@ -4667,7 +4667,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 214/z_index = 0
 215/name = "Sprite201"
-215/texture = ExtResource( 17 )
+215/texture = ExtResource( 31 )
 215/tex_offset = Vector2( 0, 0 )
 215/modulate = Color( 1, 1, 1, 1 )
 215/region = Rect2( 128, 1344, 64, 64 )
@@ -4688,7 +4688,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 215/z_index = 0
 216/name = "Sprite202"
-216/texture = ExtResource( 17 )
+216/texture = ExtResource( 31 )
 216/tex_offset = Vector2( 0, 0 )
 216/modulate = Color( 1, 1, 1, 1 )
 216/region = Rect2( 192, 1344, 64, 64 )
@@ -4709,7 +4709,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 216/z_index = 0
 217/name = "Sprite203"
-217/texture = ExtResource( 17 )
+217/texture = ExtResource( 31 )
 217/tex_offset = Vector2( 0, 0 )
 217/modulate = Color( 1, 1, 1, 1 )
 217/region = Rect2( 256, 1344, 64, 64 )
@@ -4730,7 +4730,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 217/z_index = 0
 218/name = "Sprite204"
-218/texture = ExtResource( 17 )
+218/texture = ExtResource( 31 )
 218/tex_offset = Vector2( 0, 0 )
 218/modulate = Color( 1, 1, 1, 1 )
 218/region = Rect2( 320, 1344, 64, 64 )
@@ -4751,7 +4751,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 218/z_index = 0
 219/name = "Sprite205"
-219/texture = ExtResource( 17 )
+219/texture = ExtResource( 31 )
 219/tex_offset = Vector2( 0, 0 )
 219/modulate = Color( 1, 1, 1, 1 )
 219/region = Rect2( 384, 1344, 64, 64 )
@@ -4772,7 +4772,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 219/z_index = 0
 220/name = "Sprite206"
-220/texture = ExtResource( 17 )
+220/texture = ExtResource( 31 )
 220/tex_offset = Vector2( 0, 0 )
 220/modulate = Color( 1, 1, 1, 1 )
 220/region = Rect2( 448, 1344, 64, 64 )
@@ -4793,7 +4793,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 220/z_index = 0
 221/name = "Sprite207"
-221/texture = ExtResource( 17 )
+221/texture = ExtResource( 31 )
 221/tex_offset = Vector2( 0, 0 )
 221/modulate = Color( 1, 1, 1, 1 )
 221/region = Rect2( 0, 1408, 64, 64 )
@@ -4814,7 +4814,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 221/z_index = 0
 222/name = "Sprite208"
-222/texture = ExtResource( 17 )
+222/texture = ExtResource( 31 )
 222/tex_offset = Vector2( 0, 0 )
 222/modulate = Color( 1, 1, 1, 1 )
 222/region = Rect2( 64, 1408, 64, 64 )
@@ -4835,7 +4835,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 222/z_index = 0
 223/name = "Sprite209"
-223/texture = ExtResource( 17 )
+223/texture = ExtResource( 31 )
 223/tex_offset = Vector2( 0, 0 )
 223/modulate = Color( 1, 1, 1, 1 )
 223/region = Rect2( 128, 1408, 64, 64 )
@@ -4856,7 +4856,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 223/z_index = 0
 224/name = "Sprite210"
-224/texture = ExtResource( 17 )
+224/texture = ExtResource( 31 )
 224/tex_offset = Vector2( 0, 0 )
 224/modulate = Color( 1, 1, 1, 1 )
 224/region = Rect2( 192, 1408, 64, 64 )
@@ -4877,7 +4877,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 224/z_index = 0
 225/name = "Sprite211"
-225/texture = ExtResource( 17 )
+225/texture = ExtResource( 31 )
 225/tex_offset = Vector2( 0, 0 )
 225/modulate = Color( 1, 1, 1, 1 )
 225/region = Rect2( 256, 1408, 64, 64 )
@@ -4898,7 +4898,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 225/z_index = 0
 226/name = "Sprite212"
-226/texture = ExtResource( 17 )
+226/texture = ExtResource( 31 )
 226/tex_offset = Vector2( 0, 0 )
 226/modulate = Color( 1, 1, 1, 1 )
 226/region = Rect2( 320, 1408, 64, 64 )
@@ -4919,7 +4919,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 226/z_index = 0
 227/name = "Sprite213"
-227/texture = ExtResource( 17 )
+227/texture = ExtResource( 31 )
 227/tex_offset = Vector2( 0, 0 )
 227/modulate = Color( 1, 1, 1, 1 )
 227/region = Rect2( 384, 1408, 64, 64 )
@@ -4940,7 +4940,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 227/z_index = 0
 228/name = "Sprite214"
-228/texture = ExtResource( 17 )
+228/texture = ExtResource( 31 )
 228/tex_offset = Vector2( 0, 0 )
 228/modulate = Color( 1, 1, 1, 1 )
 228/region = Rect2( 448, 1408, 64, 64 )
@@ -4961,7 +4961,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 228/z_index = 0
 229/name = "Sprite215"
-229/texture = ExtResource( 17 )
+229/texture = ExtResource( 31 )
 229/tex_offset = Vector2( 0, 0 )
 229/modulate = Color( 1, 1, 1, 1 )
 229/region = Rect2( 0, 1472, 64, 64 )
@@ -4982,7 +4982,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 229/z_index = 0
 230/name = "Sprite216"
-230/texture = ExtResource( 17 )
+230/texture = ExtResource( 31 )
 230/tex_offset = Vector2( 0, 0 )
 230/modulate = Color( 1, 1, 1, 1 )
 230/region = Rect2( 64, 1472, 64, 64 )
@@ -5003,7 +5003,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 230/z_index = 0
 231/name = "Sprite217"
-231/texture = ExtResource( 17 )
+231/texture = ExtResource( 31 )
 231/tex_offset = Vector2( 0, 0 )
 231/modulate = Color( 1, 1, 1, 1 )
 231/region = Rect2( 128, 1472, 64, 64 )
@@ -5024,7 +5024,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 231/z_index = 0
 232/name = "Sprite218"
-232/texture = ExtResource( 17 )
+232/texture = ExtResource( 31 )
 232/tex_offset = Vector2( 0, 0 )
 232/modulate = Color( 1, 1, 1, 1 )
 232/region = Rect2( 192, 1472, 64, 64 )
@@ -5045,7 +5045,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 232/z_index = 0
 233/name = "Sprite219"
-233/texture = ExtResource( 17 )
+233/texture = ExtResource( 31 )
 233/tex_offset = Vector2( 0, 0 )
 233/modulate = Color( 1, 1, 1, 1 )
 233/region = Rect2( 256, 1472, 64, 64 )
@@ -5066,10 +5066,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 233/z_index = 0
 234/name = "Sprite220"
-234/texture = ExtResource( 17 )
+234/texture = ExtResource( 27 )
 234/tex_offset = Vector2( 0, 0 )
 234/modulate = Color( 1, 1, 1, 1 )
-234/region = Rect2( 320, 1472, 64, 64 )
+234/region = Rect2( 0, 0, 64, 64 )
 234/tile_mode = 0
 234/occluder_offset = Vector2( 32, 32 )
 234/navigation_offset = Vector2( 32, 32 )
@@ -5087,10 +5087,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 234/z_index = 0
 235/name = "Sprite221"
-235/texture = ExtResource( 17 )
+235/texture = ExtResource( 8 )
 235/tex_offset = Vector2( 0, 0 )
 235/modulate = Color( 1, 1, 1, 1 )
-235/region = Rect2( 384, 1472, 64, 64 )
+235/region = Rect2( 0, 0, 64, 64 )
 235/tile_mode = 0
 235/occluder_offset = Vector2( 32, 32 )
 235/navigation_offset = Vector2( 32, 32 )
@@ -5108,7 +5108,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 235/z_index = 0
 236/name = "Sprite222"
-236/texture = ExtResource( 17 )
+236/texture = ExtResource( 31 )
 236/tex_offset = Vector2( 0, 0 )
 236/modulate = Color( 1, 1, 1, 1 )
 236/region = Rect2( 448, 1472, 64, 64 )
@@ -5129,7 +5129,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 236/z_index = 0
 237/name = "Sprite223"
-237/texture = ExtResource( 17 )
+237/texture = ExtResource( 31 )
 237/tex_offset = Vector2( 0, 0 )
 237/modulate = Color( 1, 1, 1, 1 )
 237/region = Rect2( 0, 1536, 64, 64 )
@@ -5150,10 +5150,10 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 237/z_index = 0
 238/name = "Sprite224"
-238/texture = ExtResource( 17 )
+238/texture = ExtResource( 4 )
 238/tex_offset = Vector2( 0, 0 )
 238/modulate = Color( 1, 1, 1, 1 )
-238/region = Rect2( 64, 1536, 64, 64 )
+238/region = Rect2( 0, 0, 64, 64 )
 238/tile_mode = 0
 238/occluder_offset = Vector2( 32, 32 )
 238/navigation_offset = Vector2( 32, 32 )
@@ -5171,7 +5171,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 238/z_index = 0
 239/name = "Sprite225"
-239/texture = ExtResource( 17 )
+239/texture = ExtResource( 31 )
 239/tex_offset = Vector2( 0, 0 )
 239/modulate = Color( 1, 1, 1, 1 )
 239/region = Rect2( 128, 1536, 64, 64 )
@@ -5192,7 +5192,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 239/z_index = 0
 240/name = "Sprite226"
-240/texture = ExtResource( 17 )
+240/texture = ExtResource( 31 )
 240/tex_offset = Vector2( 0, 0 )
 240/modulate = Color( 1, 1, 1, 1 )
 240/region = Rect2( 192, 1536, 64, 64 )
@@ -5213,7 +5213,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 240/z_index = 0
 241/name = "Sprite227"
-241/texture = ExtResource( 17 )
+241/texture = ExtResource( 31 )
 241/tex_offset = Vector2( 0, 0 )
 241/modulate = Color( 1, 1, 1, 1 )
 241/region = Rect2( 256, 1536, 64, 64 )
@@ -5234,7 +5234,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 241/z_index = 0
 242/name = "Sprite228"
-242/texture = ExtResource( 17 )
+242/texture = ExtResource( 31 )
 242/tex_offset = Vector2( 0, 0 )
 242/modulate = Color( 1, 1, 1, 1 )
 242/region = Rect2( 320, 1536, 64, 64 )
@@ -5255,7 +5255,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 242/z_index = 0
 243/name = "Sprite229"
-243/texture = ExtResource( 17 )
+243/texture = ExtResource( 31 )
 243/tex_offset = Vector2( 0, 0 )
 243/modulate = Color( 1, 1, 1, 1 )
 243/region = Rect2( 384, 1536, 64, 64 )
@@ -5276,7 +5276,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 243/z_index = 0
 244/name = "Sprite230"
-244/texture = ExtResource( 17 )
+244/texture = ExtResource( 31 )
 244/tex_offset = Vector2( 0, 0 )
 244/modulate = Color( 1, 1, 1, 1 )
 244/region = Rect2( 448, 1536, 64, 64 )
@@ -5297,7 +5297,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 244/z_index = 0
 245/name = "Sprite231"
-245/texture = ExtResource( 17 )
+245/texture = ExtResource( 31 )
 245/tex_offset = Vector2( 0, 0 )
 245/modulate = Color( 1, 1, 1, 1 )
 245/region = Rect2( 0, 1600, 64, 64 )
@@ -5318,7 +5318,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 245/z_index = 0
 246/name = "Sprite232"
-246/texture = ExtResource( 17 )
+246/texture = ExtResource( 31 )
 246/tex_offset = Vector2( 0, 0 )
 246/modulate = Color( 1, 1, 1, 1 )
 246/region = Rect2( 64, 1600, 64, 64 )
@@ -5339,7 +5339,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 246/z_index = 0
 247/name = "Sprite233"
-247/texture = ExtResource( 17 )
+247/texture = ExtResource( 31 )
 247/tex_offset = Vector2( 0, 0 )
 247/modulate = Color( 1, 1, 1, 1 )
 247/region = Rect2( 128, 1600, 64, 64 )
@@ -5360,7 +5360,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 247/z_index = 0
 248/name = "Sprite234"
-248/texture = ExtResource( 17 )
+248/texture = ExtResource( 31 )
 248/tex_offset = Vector2( 0, 0 )
 248/modulate = Color( 1, 1, 1, 1 )
 248/region = Rect2( 192, 1600, 64, 64 )
@@ -5381,7 +5381,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 248/z_index = 0
 249/name = "Sprite236"
-249/texture = ExtResource( 17 )
+249/texture = ExtResource( 31 )
 249/tex_offset = Vector2( 0, 0 )
 249/modulate = Color( 1, 1, 1, 1 )
 249/region = Rect2( 320, 1600, 64, 64 )
@@ -5402,7 +5402,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 249/z_index = 0
 250/name = "Sprite237"
-250/texture = ExtResource( 17 )
+250/texture = ExtResource( 31 )
 250/tex_offset = Vector2( 0, 0 )
 250/modulate = Color( 1, 1, 1, 1 )
 250/region = Rect2( 384, 1600, 64, 64 )
@@ -5423,7 +5423,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 250/z_index = 0
 251/name = "Sprite238"
-251/texture = ExtResource( 17 )
+251/texture = ExtResource( 31 )
 251/tex_offset = Vector2( 0, 0 )
 251/modulate = Color( 1, 1, 1, 1 )
 251/region = Rect2( 448, 1600, 64, 64 )
@@ -5444,7 +5444,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 251/z_index = 0
 252/name = "Sprite239"
-252/texture = ExtResource( 17 )
+252/texture = ExtResource( 31 )
 252/tex_offset = Vector2( 0, 0 )
 252/modulate = Color( 1, 1, 1, 1 )
 252/region = Rect2( 0, 1664, 64, 64 )
@@ -5465,7 +5465,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 252/z_index = 0
 253/name = "Sprite240"
-253/texture = ExtResource( 17 )
+253/texture = ExtResource( 31 )
 253/tex_offset = Vector2( 0, 0 )
 253/modulate = Color( 1, 1, 1, 1 )
 253/region = Rect2( 64, 1664, 64, 64 )
@@ -5486,7 +5486,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 253/z_index = 0
 254/name = "Sprite241"
-254/texture = ExtResource( 17 )
+254/texture = ExtResource( 31 )
 254/tex_offset = Vector2( 0, 0 )
 254/modulate = Color( 1, 1, 1, 1 )
 254/region = Rect2( 128, 1664, 64, 64 )
@@ -5507,7 +5507,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 254/z_index = 0
 255/name = "Sprite242"
-255/texture = ExtResource( 17 )
+255/texture = ExtResource( 31 )
 255/tex_offset = Vector2( 0, 0 )
 255/modulate = Color( 1, 1, 1, 1 )
 255/region = Rect2( 192, 1664, 64, 64 )
@@ -5528,7 +5528,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 255/z_index = 0
 256/name = "Sprite243"
-256/texture = ExtResource( 17 )
+256/texture = ExtResource( 31 )
 256/tex_offset = Vector2( 0, 0 )
 256/modulate = Color( 1, 1, 1, 1 )
 256/region = Rect2( 256, 1664, 64, 64 )
@@ -5549,7 +5549,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 256/z_index = 0
 257/name = "Sprite244"
-257/texture = ExtResource( 17 )
+257/texture = ExtResource( 31 )
 257/tex_offset = Vector2( 0, 0 )
 257/modulate = Color( 1, 1, 1, 1 )
 257/region = Rect2( 320, 1664, 64, 64 )
@@ -5570,7 +5570,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 257/z_index = 0
 258/name = "Sprite245"
-258/texture = ExtResource( 17 )
+258/texture = ExtResource( 31 )
 258/tex_offset = Vector2( 0, 0 )
 258/modulate = Color( 1, 1, 1, 1 )
 258/region = Rect2( 384, 1664, 64, 64 )
@@ -5591,7 +5591,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 258/z_index = 0
 259/name = "Sprite246"
-259/texture = ExtResource( 17 )
+259/texture = ExtResource( 31 )
 259/tex_offset = Vector2( 0, 0 )
 259/modulate = Color( 1, 1, 1, 1 )
 259/region = Rect2( 448, 1664, 64, 64 )
@@ -5612,7 +5612,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 259/z_index = 0
 260/name = "Sprite247"
-260/texture = ExtResource( 17 )
+260/texture = ExtResource( 31 )
 260/tex_offset = Vector2( 0, 0 )
 260/modulate = Color( 1, 1, 1, 1 )
 260/region = Rect2( 0, 1728, 64, 64 )
@@ -5633,7 +5633,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 260/z_index = 0
 261/name = "Sprite248"
-261/texture = ExtResource( 17 )
+261/texture = ExtResource( 31 )
 261/tex_offset = Vector2( 0, 0 )
 261/modulate = Color( 1, 1, 1, 1 )
 261/region = Rect2( 64, 1728, 64, 64 )
@@ -5654,7 +5654,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 261/z_index = 0
 262/name = "Sprite249"
-262/texture = ExtResource( 17 )
+262/texture = ExtResource( 31 )
 262/tex_offset = Vector2( 0, 0 )
 262/modulate = Color( 1, 1, 1, 1 )
 262/region = Rect2( 128, 1728, 64, 64 )
@@ -5675,7 +5675,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 262/z_index = 0
 263/name = "Sprite250"
-263/texture = ExtResource( 17 )
+263/texture = ExtResource( 31 )
 263/tex_offset = Vector2( 0, 0 )
 263/modulate = Color( 1, 1, 1, 1 )
 263/region = Rect2( 192, 1728, 64, 64 )
@@ -5696,7 +5696,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 263/z_index = 0
 264/name = "Sprite251"
-264/texture = ExtResource( 17 )
+264/texture = ExtResource( 31 )
 264/tex_offset = Vector2( 0, 0 )
 264/modulate = Color( 1, 1, 1, 1 )
 264/region = Rect2( 256, 1728, 64, 64 )
@@ -5717,7 +5717,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 264/z_index = 0
 265/name = "Sprite252"
-265/texture = ExtResource( 17 )
+265/texture = ExtResource( 31 )
 265/tex_offset = Vector2( 0, 0 )
 265/modulate = Color( 1, 1, 1, 1 )
 265/region = Rect2( 320, 1728, 64, 64 )
@@ -5738,7 +5738,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 265/z_index = 0
 266/name = "Sprite253"
-266/texture = ExtResource( 17 )
+266/texture = ExtResource( 31 )
 266/tex_offset = Vector2( 0, 0 )
 266/modulate = Color( 1, 1, 1, 1 )
 266/region = Rect2( 384, 1728, 64, 64 )
@@ -5759,7 +5759,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 266/z_index = 0
 267/name = "Sprite254"
-267/texture = ExtResource( 17 )
+267/texture = ExtResource( 31 )
 267/tex_offset = Vector2( 0, 0 )
 267/modulate = Color( 1, 1, 1, 1 )
 267/region = Rect2( 448, 1728, 64, 64 )
@@ -5780,7 +5780,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 267/z_index = 0
 268/name = "Sprite255"
-268/texture = ExtResource( 17 )
+268/texture = ExtResource( 31 )
 268/tex_offset = Vector2( 0, 0 )
 268/modulate = Color( 1, 1, 1, 1 )
 268/region = Rect2( 0, 1792, 64, 64 )
@@ -5801,7 +5801,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 268/z_index = 0
 269/name = "Sprite256"
-269/texture = ExtResource( 17 )
+269/texture = ExtResource( 31 )
 269/tex_offset = Vector2( 0, 0 )
 269/modulate = Color( 1, 1, 1, 1 )
 269/region = Rect2( 64, 1792, 64, 64 )
@@ -5822,7 +5822,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 269/z_index = 0
 270/name = "Sprite257"
-270/texture = ExtResource( 17 )
+270/texture = ExtResource( 31 )
 270/tex_offset = Vector2( 0, 0 )
 270/modulate = Color( 1, 1, 1, 1 )
 270/region = Rect2( 128, 1792, 64, 64 )
@@ -5843,7 +5843,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 270/z_index = 0
 271/name = "Sprite258"
-271/texture = ExtResource( 17 )
+271/texture = ExtResource( 31 )
 271/tex_offset = Vector2( 0, 0 )
 271/modulate = Color( 1, 1, 1, 1 )
 271/region = Rect2( 192, 1792, 64, 64 )
@@ -5864,7 +5864,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 271/z_index = 0
 272/name = "Sprite259"
-272/texture = ExtResource( 17 )
+272/texture = ExtResource( 31 )
 272/tex_offset = Vector2( 0, 0 )
 272/modulate = Color( 1, 1, 1, 1 )
 272/region = Rect2( 256, 1792, 64, 64 )
@@ -5885,7 +5885,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 272/z_index = 0
 273/name = "Sprite260"
-273/texture = ExtResource( 17 )
+273/texture = ExtResource( 31 )
 273/tex_offset = Vector2( 0, 0 )
 273/modulate = Color( 1, 1, 1, 1 )
 273/region = Rect2( 320, 1792, 64, 64 )
@@ -5906,7 +5906,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 273/z_index = 0
 274/name = "Sprite261"
-274/texture = ExtResource( 17 )
+274/texture = ExtResource( 31 )
 274/tex_offset = Vector2( 0, 0 )
 274/modulate = Color( 1, 1, 1, 1 )
 274/region = Rect2( 384, 1792, 64, 64 )
@@ -5927,7 +5927,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 274/z_index = 0
 275/name = "Sprite262"
-275/texture = ExtResource( 17 )
+275/texture = ExtResource( 31 )
 275/tex_offset = Vector2( 0, 0 )
 275/modulate = Color( 1, 1, 1, 1 )
 275/region = Rect2( 448, 1792, 64, 64 )
@@ -5948,7 +5948,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 275/z_index = 0
 276/name = "Sprite263"
-276/texture = ExtResource( 17 )
+276/texture = ExtResource( 31 )
 276/tex_offset = Vector2( 0, 0 )
 276/modulate = Color( 1, 1, 1, 1 )
 276/region = Rect2( 0, 1856, 64, 64 )
@@ -5969,7 +5969,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 276/z_index = 0
 277/name = "Sprite264"
-277/texture = ExtResource( 17 )
+277/texture = ExtResource( 31 )
 277/tex_offset = Vector2( 0, 0 )
 277/modulate = Color( 1, 1, 1, 1 )
 277/region = Rect2( 64, 1856, 64, 64 )
@@ -5990,7 +5990,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 277/z_index = 0
 278/name = "Sprite265"
-278/texture = ExtResource( 17 )
+278/texture = ExtResource( 31 )
 278/tex_offset = Vector2( 0, 0 )
 278/modulate = Color( 1, 1, 1, 1 )
 278/region = Rect2( 128, 1856, 64, 64 )
@@ -6011,7 +6011,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 278/z_index = 0
 279/name = "Sprite266"
-279/texture = ExtResource( 17 )
+279/texture = ExtResource( 31 )
 279/tex_offset = Vector2( 0, 0 )
 279/modulate = Color( 1, 1, 1, 1 )
 279/region = Rect2( 192, 1856, 64, 64 )
@@ -6032,7 +6032,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 279/z_index = 0
 280/name = "Sprite267"
-280/texture = ExtResource( 17 )
+280/texture = ExtResource( 31 )
 280/tex_offset = Vector2( 0, 0 )
 280/modulate = Color( 1, 1, 1, 1 )
 280/region = Rect2( 256, 1856, 64, 64 )
@@ -6053,7 +6053,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 280/z_index = 0
 281/name = "Sprite268"
-281/texture = ExtResource( 17 )
+281/texture = ExtResource( 31 )
 281/tex_offset = Vector2( 0, 0 )
 281/modulate = Color( 1, 1, 1, 1 )
 281/region = Rect2( 320, 1856, 64, 64 )
@@ -6074,7 +6074,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 281/z_index = 0
 282/name = "Sprite269"
-282/texture = ExtResource( 17 )
+282/texture = ExtResource( 31 )
 282/tex_offset = Vector2( 0, 0 )
 282/modulate = Color( 1, 1, 1, 1 )
 282/region = Rect2( 384, 1856, 64, 64 )
@@ -6095,7 +6095,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 282/z_index = 0
 283/name = "Sprite270"
-283/texture = ExtResource( 17 )
+283/texture = ExtResource( 31 )
 283/tex_offset = Vector2( 0, 0 )
 283/modulate = Color( 1, 1, 1, 1 )
 283/region = Rect2( 448, 1856, 64, 64 )
@@ -6116,7 +6116,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 283/z_index = 0
 284/name = "Sprite271"
-284/texture = ExtResource( 17 )
+284/texture = ExtResource( 31 )
 284/tex_offset = Vector2( 0, 0 )
 284/modulate = Color( 1, 1, 1, 1 )
 284/region = Rect2( 0, 1920, 64, 64 )
@@ -6137,7 +6137,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 284/z_index = 0
 285/name = "Sprite272"
-285/texture = ExtResource( 17 )
+285/texture = ExtResource( 31 )
 285/tex_offset = Vector2( 0, 0 )
 285/modulate = Color( 1, 1, 1, 1 )
 285/region = Rect2( 64, 1920, 64, 64 )
@@ -6158,7 +6158,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 285/z_index = 0
 286/name = "Sprite273"
-286/texture = ExtResource( 17 )
+286/texture = ExtResource( 31 )
 286/tex_offset = Vector2( 0, 0 )
 286/modulate = Color( 1, 1, 1, 1 )
 286/region = Rect2( 128, 1920, 64, 64 )
@@ -6179,7 +6179,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 286/z_index = 0
 287/name = "Sprite274"
-287/texture = ExtResource( 17 )
+287/texture = ExtResource( 31 )
 287/tex_offset = Vector2( 0, 0 )
 287/modulate = Color( 1, 1, 1, 1 )
 287/region = Rect2( 192, 1920, 64, 64 )
@@ -6200,7 +6200,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 287/z_index = 0
 288/name = "Sprite275"
-288/texture = ExtResource( 17 )
+288/texture = ExtResource( 31 )
 288/tex_offset = Vector2( 0, 0 )
 288/modulate = Color( 1, 1, 1, 1 )
 288/region = Rect2( 256, 1920, 64, 64 )
@@ -6221,7 +6221,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 288/z_index = 0
 289/name = "Sprite276"
-289/texture = ExtResource( 17 )
+289/texture = ExtResource( 31 )
 289/tex_offset = Vector2( 0, 0 )
 289/modulate = Color( 1, 1, 1, 1 )
 289/region = Rect2( 320, 1920, 64, 64 )
@@ -6242,7 +6242,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 289/z_index = 0
 290/name = "Sprite277"
-290/texture = ExtResource( 17 )
+290/texture = ExtResource( 31 )
 290/tex_offset = Vector2( 0, 0 )
 290/modulate = Color( 1, 1, 1, 1 )
 290/region = Rect2( 384, 1920, 64, 64 )
@@ -6263,7 +6263,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 290/z_index = 0
 291/name = "Sprite278"
-291/texture = ExtResource( 17 )
+291/texture = ExtResource( 31 )
 291/tex_offset = Vector2( 0, 0 )
 291/modulate = Color( 1, 1, 1, 1 )
 291/region = Rect2( 448, 1920, 64, 64 )
@@ -6284,7 +6284,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 291/z_index = 0
 292/name = "Sprite279"
-292/texture = ExtResource( 17 )
+292/texture = ExtResource( 31 )
 292/tex_offset = Vector2( 0, 0 )
 292/modulate = Color( 1, 1, 1, 1 )
 292/region = Rect2( 0, 1984, 64, 64 )
@@ -6305,7 +6305,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 292/z_index = 0
 293/name = "Sprite280"
-293/texture = ExtResource( 17 )
+293/texture = ExtResource( 31 )
 293/tex_offset = Vector2( 0, 0 )
 293/modulate = Color( 1, 1, 1, 1 )
 293/region = Rect2( 64, 1984, 64, 64 )
@@ -6326,7 +6326,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 293/z_index = 0
 294/name = "Sprite281"
-294/texture = ExtResource( 17 )
+294/texture = ExtResource( 31 )
 294/tex_offset = Vector2( 0, 0 )
 294/modulate = Color( 1, 1, 1, 1 )
 294/region = Rect2( 128, 1984, 64, 64 )
@@ -6347,7 +6347,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 294/z_index = 0
 295/name = "Sprite282"
-295/texture = ExtResource( 17 )
+295/texture = ExtResource( 31 )
 295/tex_offset = Vector2( 0, 0 )
 295/modulate = Color( 1, 1, 1, 1 )
 295/region = Rect2( 192, 1984, 64, 64 )
@@ -6368,7 +6368,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 295/z_index = 0
 296/name = "Sprite283"
-296/texture = ExtResource( 17 )
+296/texture = ExtResource( 31 )
 296/tex_offset = Vector2( 0, 0 )
 296/modulate = Color( 1, 1, 1, 1 )
 296/region = Rect2( 256, 1984, 64, 64 )
@@ -6389,7 +6389,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 296/z_index = 0
 297/name = "Sprite284"
-297/texture = ExtResource( 17 )
+297/texture = ExtResource( 31 )
 297/tex_offset = Vector2( 0, 0 )
 297/modulate = Color( 1, 1, 1, 1 )
 297/region = Rect2( 320, 1984, 64, 64 )
@@ -6410,7 +6410,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 297/z_index = 0
 298/name = "Sprite285"
-298/texture = ExtResource( 17 )
+298/texture = ExtResource( 31 )
 298/tex_offset = Vector2( 0, 0 )
 298/modulate = Color( 1, 1, 1, 1 )
 298/region = Rect2( 384, 1984, 64, 64 )
@@ -6431,7 +6431,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 298/z_index = 0
 299/name = "Sprite286"
-299/texture = ExtResource( 17 )
+299/texture = ExtResource( 31 )
 299/tex_offset = Vector2( 0, 0 )
 299/modulate = Color( 1, 1, 1, 1 )
 299/region = Rect2( 448, 1984, 64, 64 )
@@ -6452,7 +6452,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 299/z_index = 0
 300/name = "Sprite235"
-300/texture = ExtResource( 17 )
+300/texture = ExtResource( 31 )
 300/tex_offset = Vector2( 0, 0 )
 300/modulate = Color( 1, 1, 1, 1 )
 300/region = Rect2( 256, 1600, 64, 64 )
@@ -6473,7 +6473,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 300/z_index = 0
 301/name = "Sprite25"
-301/texture = ExtResource( 9 )
+301/texture = ExtResource( 23 )
 301/tex_offset = Vector2( 0, 0 )
 301/modulate = Color( 1, 1, 1, 1 )
 301/region = Rect2( 0, 0, 64, 64 )
@@ -6494,7 +6494,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 301/z_index = 0
 302/name = "Sprite27"
-302/texture = ExtResource( 21 )
+302/texture = ExtResource( 33 )
 302/tex_offset = Vector2( 0, 0 )
 302/modulate = Color( 1, 1, 1, 1 )
 302/region = Rect2( 0, 0, 64, 64 )
@@ -6515,7 +6515,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 302/z_index = 0
 303/name = "Sprite28"
-303/texture = ExtResource( 20 )
+303/texture = ExtResource( 7 )
 303/tex_offset = Vector2( 0, 0 )
 303/modulate = Color( 1, 1, 1, 1 )
 303/region = Rect2( 0, 0, 64, 64 )
@@ -6536,7 +6536,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 303/z_index = 0
 304/name = "Sprite26"
-304/texture = ExtResource( 22 )
+304/texture = ExtResource( 13 )
 304/tex_offset = Vector2( 0, 0 )
 304/modulate = Color( 1, 1, 1, 1 )
 304/region = Rect2( 0, 0, 64, 64 )
@@ -6557,7 +6557,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 304/z_index = 0
 305/name = "Sprite15"
-305/texture = ExtResource( 26 )
+305/texture = ExtResource( 17 )
 305/tex_offset = Vector2( 0, 0 )
 305/modulate = Color( 1, 1, 1, 1 )
 305/region = Rect2( 0, 0, 64, 64 )
@@ -6578,7 +6578,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 305/z_index = 0
 306/name = "Sprite9"
-306/texture = ExtResource( 3 )
+306/texture = ExtResource( 15 )
 306/tex_offset = Vector2( 0, 0 )
 306/modulate = Color( 1, 1, 1, 1 )
 306/region = Rect2( 0, 0, 64, 64 )
@@ -6599,7 +6599,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 306/z_index = 0
 307/name = "Sprite10"
-307/texture = ExtResource( 7 )
+307/texture = ExtResource( 3 )
 307/tex_offset = Vector2( 0, 0 )
 307/modulate = Color( 1, 1, 1, 1 )
 307/region = Rect2( 0, 0, 64, 64 )
@@ -6620,7 +6620,7 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 } ]
 307/z_index = 0
 308/name = "Sprite11"
-308/texture = ExtResource( 27 )
+308/texture = ExtResource( 35 )
 308/tex_offset = Vector2( 0, 0 )
 308/modulate = Color( 1, 1, 1, 1 )
 308/region = Rect2( 0, 0, 64, 64 )

@@ -1,24 +1,7 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=29 format=2]
 
-[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=1]
 [ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=2]
-[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=3]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=4]
-[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=5]
-[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=6]
-[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=7]
-[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=8]
-[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=9]
-[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=10]
-[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=11]
-[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=12]
-[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=13]
-[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=14]
-[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=15]
-[ext_resource path="res://Common/64xt/Singles/Dirt.png" type="Texture" id=16]
 [ext_resource path="res://Common/64xt/Singles/GemOv1.png" type="Texture" id=17]
-[ext_resource path="res://Common/64xt/Singles/SmoothStone.png" type="Texture" id=18]
-[ext_resource path="res://Common/64xt/Singles/WoolSnow.png" type="Texture" id=19]
 [ext_resource path="res://Common/64xt/Singles/OreVein.png" type="Texture" id=20]
 [ext_resource path="res://Common/64xt/Singles/CrateOver.png" type="Texture" id=21]
 [ext_resource path="res://Common/64xt/Singles/GemOv3.png" type="Texture" id=22]
@@ -27,15 +10,12 @@
 [ext_resource path="res://Common/64xt/Singles/CrackOver.png" type="Texture" id=25]
 [ext_resource path="res://Common/64xt/Singles/GemOv4.png" type="Texture" id=26]
 [ext_resource path="res://Common/64xt/Singles/GlassFacete.png" type="Texture" id=27]
-[ext_resource path="res://Common/64xt/Greens/LeavesTS.png" type="Texture" id=28]
 [ext_resource path="res://Common/64xt/Greens/LeavesOP.png" type="Texture" id=29]
 [ext_resource path="res://Common/64xt/Singles/BrickOv.png" type="Texture" id=30]
-[ext_resource path="res://Common/64xt/Singles/Gold1.png" type="Texture" id=31]
 [ext_resource path="res://Common/64xt/Greens/MossOver.png" type="Texture" id=32]
 [ext_resource path="res://Common/64xt/Singles/GemOv2.png" type="Texture" id=33]
 [ext_resource path="res://Common/64xt/Bricks/BricksTL.png" type="Texture" id=34]
 [ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=35]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=36]
 [ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=37]
 [ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=38]
 [ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=39]
@@ -46,40 +26,120 @@
 [ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=44]
 [ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=45]
 [ext_resource path="res://Common/64xt/Greens/grass1.png" type="Texture" id=46]
+[ext_resource path="res://Common/64xt/Greens/Mossy - Hanging Plants.png" type="Texture" id=47]
+[ext_resource path="res://Common/64xt/Greens/Mossy - Decorations&Hazards.png" type="Texture" id=48]
 
 [node name="DecorTileSet" type="Node2D"]
 
-[node name="Bark" type="Sprite" parent="."]
-position = Vector2( 32, 40 )
-texture = ExtResource( 3 )
+[node name="Bark2" type="Sprite" parent="."]
+position = Vector2( 72, 600 )
+texture = ExtResource( 47 )
+region_enabled = true
+region_rect = Rect2( 26.5085, 29.0963, 95.3573, 296.985 )
+
+[node name="Bark3" type="Sprite" parent="."]
+position = Vector2( 184, 600 )
+texture = ExtResource( 47 )
+region_enabled = true
+region_rect = Rect2( 129, 29, 91, 244 )
+
+[node name="Bark4" type="Sprite" parent="."]
+position = Vector2( 296, 584 )
+texture = ExtResource( 47 )
+region_enabled = true
+region_rect = Rect2( 327, 29, 76, 205 )
+
+[node name="Bark5" type="Sprite" parent="."]
+position = Vector2( 384, 576 )
+texture = ExtResource( 47 )
+region_enabled = true
+region_rect = Rect2( 417, 26, 67, 237 )
+
+[node name="Bark6" type="Sprite" parent="."]
+position = Vector2( 504, 624 )
+texture = ExtResource( 47 )
+region_enabled = true
+region_rect = Rect2( 22, 350, 117, 344 )
+
+[node name="Bark8" type="Sprite" parent="."]
+position = Vector2( 688, 376 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 22, 769, 84, 111 )
+
+[node name="Bark9" type="Sprite" parent="."]
+position = Vector2( 549, 136 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 55, 896, 25, 113 )
+
+[node name="Bark10" type="Sprite" parent="."]
+position = Vector2( 616, 136 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 143, 893, 65, 119 )
+
+[node name="Bark12" type="Sprite" parent="."]
+position = Vector2( 768, 376 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 164, 656, 69, 95 )
+
+[node name="Bark13" type="Sprite" parent="."]
+position = Vector2( 736, 240 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 309, 657, 38, 91 )
+
+[node name="Bark14" type="Sprite" parent="."]
+position = Vector2( 680, 232 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 292, 776, 44, 102 )
+
+[node name="Bark21" type="Sprite" parent="."]
+position = Vector2( 184, 952 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 528, 641, 104, 367 )
+
+[node name="Bark22" type="Sprite" parent="."]
+position = Vector2( 376, 888 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 652, 641, 107, 368 )
+
+[node name="Bark23" type="Sprite" parent="."]
+position = Vector2( 496, 1024 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 777, 640, 106, 370 )
+
+[node name="Bark24" type="Sprite" parent="."]
+position = Vector2( 608, 832 )
+texture = ExtResource( 48 )
+region_enabled = true
+region_rect = Rect2( 930, 637, 62, 376 )
 
 [node name="Bookshelf" type="Sprite" parent="."]
-position = Vector2( 32, 256 )
+position = Vector2( 464, 112 )
 texture = ExtResource( 2 )
 
 [node name="BrickOv" type="Sprite" parent="."]
-position = Vector2( 104, 256 )
+position = Vector2( 176, 112 )
 texture = ExtResource( 30 )
 
-[node name="Bricks" type="Sprite" parent="."]
-position = Vector2( 176, 256 )
-texture = ExtResource( 1 )
-
 [node name="Coal" type="Sprite" parent="."]
-position = Vector2( 248, 256 )
+position = Vector2( 248, 40 )
 texture = ExtResource( 24 )
 
 [node name="CrackOver" type="Sprite" parent="."]
-position = Vector2( 320, 256 )
+position = Vector2( 176, 40 )
 texture = ExtResource( 25 )
 
 [node name="CrateOver" type="Sprite" parent="."]
-position = Vector2( 536, 184 )
+position = Vector2( 392, 40 )
 texture = ExtResource( 21 )
-
-[node name="Dirt" type="Sprite" parent="."]
-position = Vector2( 320, 40 )
-texture = ExtResource( 16 )
 
 [node name="GemOv1" type="Sprite" parent="."]
 position = Vector2( 320, 112 )
@@ -90,11 +150,11 @@ position = Vector2( 320, 184 )
 texture = ExtResource( 33 )
 
 [node name="GemOv3" type="Sprite" parent="."]
-position = Vector2( 536, 112 )
+position = Vector2( 464, 184 )
 texture = ExtResource( 22 )
 
 [node name="GemOv4" type="Sprite" parent="."]
-position = Vector2( 248, 40 )
+position = Vector2( 320, 40 )
 texture = ExtResource( 26 )
 
 [node name="Glass" type="Sprite" parent="."]
@@ -105,81 +165,17 @@ texture = ExtResource( 23 )
 position = Vector2( 248, 184 )
 texture = ExtResource( 27 )
 
-[node name="Gold0" type="Sprite" parent="."]
-position = Vector2( 176, 184 )
-texture = ExtResource( 12 )
-
-[node name="Gold1" type="Sprite" parent="."]
-position = Vector2( 104, 184 )
-texture = ExtResource( 31 )
-
-[node name="Grass" type="Sprite" parent="."]
-position = Vector2( 32, 184 )
-texture = ExtResource( 15 )
-
-[node name="Gravel" type="Sprite" parent="."]
-position = Vector2( 464, 40 )
-texture = ExtResource( 7 )
-
-[node name="Ice" type="Sprite" parent="."]
-position = Vector2( 392, 256 )
-texture = ExtResource( 10 )
-
-[node name="Iron" type="Sprite" parent="."]
-position = Vector2( 392, 184 )
-texture = ExtResource( 13 )
-
 [node name="LeavesOp" type="Sprite" parent="."]
-position = Vector2( 464, 112 )
+position = Vector2( 392, 184 )
 texture = ExtResource( 29 )
 
-[node name="LeavesTs" type="Sprite" parent="."]
-position = Vector2( 392, 40 )
-texture = ExtResource( 28 )
-
 [node name="MossOver" type="Sprite" parent="."]
-position = Vector2( 176, 112 )
+position = Vector2( 392, 112 )
 texture = ExtResource( 32 )
 
-[node name="Mud" type="Sprite" parent="."]
-position = Vector2( 464, 256 )
-texture = ExtResource( 9 )
-
 [node name="OreVein" type="Sprite" parent="."]
-position = Vector2( 464, 184 )
+position = Vector2( 176, 184 )
 texture = ExtResource( 20 )
-
-[node name="Planks" type="Sprite" parent="."]
-position = Vector2( 392, 112 )
-texture = ExtResource( 14 )
-
-[node name="Sand" type="Sprite" parent="."]
-position = Vector2( 104, 112 )
-texture = ExtResource( 11 )
-
-[node name="SmoothStone" type="Sprite" parent="."]
-position = Vector2( 536, 40 )
-texture = ExtResource( 18 )
-
-[node name="Stone" type="Sprite" parent="."]
-position = Vector2( 464, 408 )
-texture = ExtResource( 5 )
-
-[node name="TilledSoil" type="Sprite" parent="."]
-position = Vector2( 464, 328 )
-texture = ExtResource( 8 )
-
-[node name="TreeRings" type="Sprite" parent="."]
-position = Vector2( 32, 112 )
-texture = ExtResource( 6 )
-
-[node name="WalkStone" type="Sprite" parent="."]
-position = Vector2( 176, 40 )
-texture = ExtResource( 4 )
-
-[node name="WoolSnow" type="Sprite" parent="."]
-position = Vector2( 104, 40 )
-texture = ExtResource( 19 )
 
 [node name="BarkBl" type="Sprite" parent="."]
 position = Vector2( 104, 400 )
@@ -210,12 +206,8 @@ position = Vector2( 392, 328 )
 texture = ExtResource( 34 )
 
 [node name="BricksTr" type="Sprite" parent="."]
-position = Vector2( 320, 408 )
+position = Vector2( 320, 400 )
 texture = ExtResource( 39 )
-
-[node name="WalkStoneBl" type="Sprite" parent="."]
-position = Vector2( 176, 328 )
-texture = ExtResource( 36 )
 
 [node name="WalkStoneBr" type="Sprite" parent="."]
 position = Vector2( 104, 328 )
@@ -226,47 +218,47 @@ position = Vector2( 32, 328 )
 texture = ExtResource( 44 )
 
 [node name="WalkStoneTr" type="Sprite" parent="."]
-position = Vector2( 392, 408 )
+position = Vector2( 392, 400 )
 texture = ExtResource( 45 )
 
 [node name="Grass1" type="Sprite" parent="."]
 position = Vector2( 536, 256 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 85 )
 
 [node name="Grass2" type="Sprite" parent="."]
 position = Vector2( 536, 328 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 64, 0, 64, 64 )
+region_rect = Rect2( 64, 0, 64, 85 )
 
 [node name="Grass3" type="Sprite" parent="."]
 position = Vector2( 608, 328 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 128, 0, 64, 64 )
+region_rect = Rect2( 128, 0, 64, 85 )
 
 [node name="Grass4" type="Sprite" parent="."]
 position = Vector2( 608, 256 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 192, 0, 64, 64 )
+region_rect = Rect2( 192, 0, 64, 85 )
 
 [node name="Grass5" type="Sprite" parent="."]
 position = Vector2( 536, 408 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 256, 0, 64, 64 )
+region_rect = Rect2( 256, 0, 64, 85 )
 
 [node name="Grass6" type="Sprite" parent="."]
 position = Vector2( 608, 408 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 320, 0, 64, 64 )
+region_rect = Rect2( 320, 0, 64, 85 )
 
 [node name="Grass7" type="Sprite" parent="."]
-position = Vector2( 608, 184 )
+position = Vector2( 608, 504 )
 texture = ExtResource( 46 )
 region_enabled = true
-region_rect = Rect2( 384, 0, 64, 64 )
+region_rect = Rect2( 384, 0, 64, 85 )

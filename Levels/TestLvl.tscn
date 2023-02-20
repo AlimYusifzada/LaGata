@@ -50,21 +50,21 @@ tile_data = PoolIntArray( -1048561, 43, 0, -1048560, 43, 0, -1048559, 43, 0, -10
 
 [node name="Plant6" parent="." instance=ExtResource( 10 )]
 position = Vector2( 305, 278 )
-animation = "Plant6"
-frame = 43
+animation = "Plant3"
+frame = 20
 
 [node name="Plant" parent="." instance=ExtResource( 10 )]
 position = Vector2( 233, 278 )
-frame = 70
+frame = 34
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 409, 256 )
+position = Vector2( 33, 254 )
 
 [node name="xen" parent="." instance=ExtResource( 17 )]
 position = Vector2( -191, -288 )
 
 [node name="xen2" parent="." instance=ExtResource( 17 )]
-position = Vector2( 873, 30 )
+position = Vector2( 705, 262 )
 
 [node name="FlameTrap" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1345, 187 )
@@ -95,6 +95,7 @@ gravity_scale = 10.0
 [node name="torch" parent="." instance=ExtResource( 6 )]
 position = Vector2( 176, -64 )
 scale = Vector2( 0.586775, 0.406529 )
+frame = 2
 
 [node name="Mouse" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1345, 180 )
@@ -174,27 +175,26 @@ position = Vector2( 649, 390 )
 [node name="Plant2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 793, 414 )
 animation = "Plant4"
-frame = 38
+frame = 32
 
 [node name="Plant3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 649, 414 )
-frame = 70
+frame = 34
 
 [node name="Plant4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 881, 422 )
-frame = 69
+frame = 33
 
 [node name="Plant5" parent="." instance=ExtResource( 10 )]
 position = Vector2( 713, 414 )
 animation = "Plant5"
-frame = 7
+frame = 1
 
 [node name="DeadlyMoss" parent="." instance=ExtResource( 24 )]
-position = Vector2( 441, 166 )
+position = Vector2( 481, 156 )
 greens = "plant"
 
 [node name="Decoration" type="TileMap" parent="."]
-position = Vector2( 0, 15 )
 tile_set = ExtResource( 23 )
 format = 1
-tile_data = PoolIntArray( 262147, 45, 0, 262148, 47, 0, 262149, 45, 0, 262150, 46, 0, 393226, 46, 0, 393227, 47, 0, 393228, 48, 0, 393229, 51, 0 )
+tile_data = PoolIntArray( -589814, 12, 0, -524278, 11, 0, -262135, 12, 0, -196597, 11, 0, -65536, 1, 0, 1, 1, 0, 12, 24, 0, 13, 24, 0, 14, 24, 0, 65544, 13, 0, 65548, 24, 0, 65549, 25, 0, 65550, 25, 0, 131084, 11, 0, 131086, 24, 0, 131087, 24, 0, 131088, 24, 0, 196622, 24, 0, 196623, 24, 0, 196624, 24, 0, 196625, 24, 0, 327679, 10, 0, 262147, 40, 0, 262148, 44, 0, 262149, 42, 0, 262150, 41, 0, 262159, 24, 0, 262160, 24, 0, 262161, 24, 0, 393212, 28, 0, 327680, 27, 0, 327681, 27, 0, 327682, 27, 0, 327683, 27, 0, 327684, 27, 0, 327685, 27, 0, 327686, 27, 0, 327688, 7, 0, 327696, 27, 0, 327697, 27, 0, 458746, 26, 0, 458747, 26, 0, 458748, 26, 0, 458749, 26, 0, 458750, 26, 0, 458751, 26, 0, 393216, 26, 0, 393217, 26, 0, 393218, 26, 0, 393219, 27, 0, 393220, 27, 0, 393221, 27, 0, 393222, 27, 0, 393223, 27, 0, 393225, 40, 0, 393226, 40, 0, 393227, 40, 0, 393228, 40, 0, 393229, 41, 0, 393231, 27, 0, 393232, 27, 0, 393233, 27, 0, 458758, 27, 0, 458759, 27, 0, 458760, 27, 0, 458761, 27, 0, 458762, 27, 0, 458763, 27, 0, 458764, 27, 0, 458765, 27, 0, 458766, 27, 0, 458767, 27, 0, 458768, 27, 0, 524295, 27, 0, 524303, 27, 0 )
