@@ -209,8 +209,8 @@ func ChecKbrdJump():
 			EmitDust()
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
-		JumperTimer.start()
 		set_collision_mask_bit(Global.PLATFORM,false)
+		JumperTimer.start()
 	if DblJumpTimer.is_stopped() && Global.DblJumps>1:
 		DblJumpTimer.start()
 	pass
@@ -233,7 +233,7 @@ func _on_Cat_Jump(power): # signal
 
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
-	set_collision_mask_bit(Global.GROUND,true)
+#	set_collision_mask_bit(Global.GROUND,true)
 	pass
 
 func jumpaction(modifier=0): #instant jump
