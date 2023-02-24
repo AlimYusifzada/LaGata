@@ -5,7 +5,7 @@ extends KinematicBody2D
 #const ARROW=preload("res://Enemies//arrow.tscn")
 export var MINSPEED=200.0
 export var JUMP_VELOCITY=-600
-const SCALE=Vector2(0.8,0.8)
+const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
@@ -27,7 +27,7 @@ var dest=velocity.x
 func _ready():
 	set_scale(SCALE)
 	Speed=rand_range(MINSPEED,MINSPEED+100)
-	DogAnimation.speed_scale=Speed/(MINSPEED/1.5)
+	DogAnimation.speed_scale=Speed/(MINSPEED/2)
 	DogAnimation.play("Run")
 	velocity.x=Speed
 	$Tween.interpolate_property($".","modulate",
