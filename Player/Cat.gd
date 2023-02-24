@@ -83,8 +83,10 @@ func CheckMovable(delta):
 		velocity.y=0
 		JumpPossible=true
 		JumpCounter=Global.DblJumps
+		if !LookDown.get_collider():
+			velocity.y=Global.GRAVITY/10
 	elif is_on_ceiling():
-		velocity.y=2
+		velocity.y=1
 		JumpPossible=false
 	else: #in the air
 		JumpPossible=JumpCounter>0
@@ -231,6 +233,7 @@ func _on_Cat_Jump(power): # signal
 
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
+	set_collision_mask_bit(Global.GROUND,true)
 	pass
 
 func jumpaction(modifier=0): #instant jump

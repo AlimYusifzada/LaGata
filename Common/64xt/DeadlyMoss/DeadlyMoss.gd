@@ -1,9 +1,6 @@
 extends Area2D
 
-export var greens="default"
-
 func _ready():
-	$AnimatedSprite.play(greens)
 	pass
 
 func _on_DeadlyMoss_body_entered(body):

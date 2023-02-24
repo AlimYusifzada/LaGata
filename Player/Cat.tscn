@@ -391,7 +391,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=80]
 radius = 48.337
-height = 95.0957
+height = 31.3228
 
 [node name="Cat" type="KinematicBody2D" groups=["Cats"]]
 scale = Vector2( 0.5, 0.5 )
@@ -407,14 +407,13 @@ flip_h = true
 [node name="jumptimer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3.90799e-14, 0 )
 rotation = 1.56375
 shape = SubResource( 80 )
 
 [node name="LookDown" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 56 )
-collision_mask = 64
+collision_mask = 70
 
 [node name="LookEDown" type="RayCast2D" parent="."]
 enabled = true
@@ -443,25 +442,25 @@ stream = ExtResource( 23 )
 stream = ExtResource( 4 )
 
 [node name="ChkMWest" type="RayCast2D" parent="."]
-position = Vector2( -112, 0 )
+position = Vector2( -80, 0 )
 enabled = true
 cast_to = Vector2( -16, 0 )
 collision_mask = 70
 
 [node name="ChkTWest" type="RayCast2D" parent="."]
-position = Vector2( -256, 0 )
+position = Vector2( -224, 0 )
 enabled = true
 cast_to = Vector2( -16, 0 )
 collision_mask = 70
 
 [node name="ChkMEast" type="RayCast2D" parent="."]
-position = Vector2( 112, 0 )
+position = Vector2( 80, 0 )
 enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 70
 
 [node name="ChkTEast" type="RayCast2D" parent="."]
-position = Vector2( 256, 0 )
+position = Vector2( 224, 0 )
 enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 70

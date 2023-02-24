@@ -1,85 +1,76 @@
-[gd_resource type="TileSet" load_steps=74 format=2]
+[gd_resource type="TileSet" load_steps=77 format=2]
 
-[ext_resource path="res://Common/64xt/Bricks/BricksTL.png" type="Texture" id=1]
-[ext_resource path="res://Common/64xt/Gravel/GrGravel.png" type="Texture" id=2]
+[ext_resource path="res://Common/64xt/Corners/BigStones.png" type="Texture" id=1]
+[ext_resource path="res://Common/64xt/Corners/Bricks.png" type="Texture" id=2]
 [ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=3]
-[ext_resource path="res://Common/64xt/Gravel/Bolders.png" type="Texture" id=4]
+[ext_resource path="res://Common/64xt/Corners/BrGravel.png" type="Texture" id=4]
 [ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=5]
-[ext_resource path="res://Common/64xt/Bark/BarkBR.png" type="Texture" id=6]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTR.png" type="Texture" id=7]
-[ext_resource path="res://Common/64xt/Gravel/HellBricks.png" type="Texture" id=8]
-[ext_resource path="res://Common/64xt/Bark/BarkTL.png" type="Texture" id=9]
-[ext_resource path="res://Common/64xt/Bark/BarkTR.png" type="Texture" id=10]
-[ext_resource path="res://Common/64xt/Bark/BarkBL.png" type="Texture" id=11]
+[ext_resource path="res://Common/64xt/Corners/GrGravel.png" type="Texture" id=6]
+[ext_resource path="res://Common/64xt/Corners/Bolders.png" type="Texture" id=7]
+[ext_resource path="res://Common/64xt/Corners/GrayTiles.png" type="Texture" id=8]
+[ext_resource path="res://Common/64xt/Corners/Parket.png" type="Texture" id=9]
+[ext_resource path="res://Common/64xt/Corners/HellBricks.png" type="Texture" id=10]
+[ext_resource path="res://Common/64xt/Corners/RedBricks.png" type="Texture" id=11]
 [ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=12]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBR.png" type="Texture" id=13]
-[ext_resource path="res://Common/64xt/Bricks/Bricks.png" type="Texture" id=14]
+[ext_resource path="res://Common/64xt/Corners/Bark.png" type="Texture" id=13]
+[ext_resource path="res://Common/64xt/Corners/OliveBubles.png" type="Texture" id=14]
 [ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=15]
 [ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=16]
 [ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=17]
-[ext_resource path="res://Common/64xt/Bricks/BricksTR.png" type="Texture" id=18]
+[ext_resource path="res://Common/64xt/Corners/WalkingStones.png" type="Texture" id=18]
 [ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=19]
-[ext_resource path="res://Common/64xt/Bark/Bark.png" type="Texture" id=20]
 [ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=21]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStone.png" type="Texture" id=22]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneBL.png" type="Texture" id=23]
-[ext_resource path="res://Common/64xt/Bricks/BricksBL.png" type="Texture" id=24]
-[ext_resource path="res://Common/64xt/Bricks/BricksBR.png" type="Texture" id=25]
 [ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=26]
-[ext_resource path="res://Common/64xt/Gravel/RedBricks.png" type="Texture" id=27]
 [ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=28]
-[ext_resource path="res://Common/64xt/Gravel/BrGravel.png" type="Texture" id=29]
-[ext_resource path="res://Common/64xt/Gravel/BigStones.png" type="Texture" id=30]
 [ext_resource path="res://Common/64xt/Singles/MixedTileset.png" type="Texture" id=31]
 [ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=32]
-[ext_resource path="res://Common/64xt/WalkingStone/WalkStoneTL.png" type="Texture" id=33]
 [ext_resource path="res://Common/64xt/Singles/TreeRingsRound.png" type="Texture" id=34]
 [ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=35]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 32, -32, 32, 32, 0, 32, -32, 0, -32, -32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+points = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
-points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -19, -32, 29, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=13]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -19, -32, 29, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
@@ -91,488 +82,524 @@ points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 points = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -19, -32, 29, 16 )
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -19, -32, 29, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=23]
-points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-points = PoolVector2Array( 32, 16, 32, 32, -32, 32, -32, -32, -16, -32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=27]
-points = PoolVector2Array( 32, 32, -8, 32, -32, -8, -32, -32, 32, -32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( -35, 32, -35, 16, 21, -32, 32, -32, 32, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( -32, -32, -24, -32, 32, 16, 32, 32, -32, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=30]
-points = PoolVector2Array( 0, 32, -32, 32, -32, -32, 32, -32, 32, -8 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=32]
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -19, -32, 29, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
 points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=33]
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
 points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -21, -32, 32, 8 )
 
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 32, 16, -8, 32, -32, 32, -32, -32, 32, -32 )
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=41]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=42]
+points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=44]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 32.0
 
-[sub_resource type="ConvexPolygonShape2D" id=35]
+[sub_resource type="ConvexPolygonShape2D" id=45]
 points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=36]
+[sub_resource type="ConvexPolygonShape2D" id=46]
 points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=37]
+[sub_resource type="ConvexPolygonShape2D" id=47]
 points = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
+[sub_resource type="ConvexPolygonShape2D" id=48]
+points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -24, -32, 32, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=49]
+points = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=50]
+points = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 0, -24, 32 )
 
 [resource]
-0/name = "Sprite"
-0/texture = ExtResource( 20 )
+0/name = "Sprite59"
+0/texture = ExtResource( 11 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
+0/region = Rect2( 0, 64, 64, 64 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 32, 32 )
 0/navigation_offset = Vector2( 32, 32 )
 0/shape_offset = Vector2( 32, 32 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-0/shape = SubResource( 1 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 0/z_index = 0
-1/name = "Sprite16"
+1/name = "Sprite287"
 1/texture = ExtResource( 11 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 64 )
+1/region = Rect2( 0, 128, 64, 64 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 32, 32 )
 1/navigation_offset = Vector2( 32, 32 )
 1/shape_offset = Vector2( 32, 32 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-1/shape = SubResource( 3 )
+1/shape = SubResource( 4 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 1/z_index = 0
-2/name = "Sprite17"
-2/texture = ExtResource( 9 )
+2/name = "Sprite288"
+2/texture = ExtResource( 11 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 64, 64 )
+2/region = Rect2( 0, 256, 64, 64 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 32, 32 )
 2/navigation_offset = Vector2( 32, 32 )
 2/shape_offset = Vector2( 32, 32 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-2/shape = SubResource( 14 )
+2/shape = SubResource( 27 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 14 ),
+"shape": SubResource( 27 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 2/z_index = 0
-3/name = "Sprite18"
-3/texture = ExtResource( 10 )
+3/name = "Sprite289"
+3/texture = ExtResource( 11 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 64, 64 )
+3/region = Rect2( 0, 192, 64, 64 )
 3/tile_mode = 0
 3/occluder_offset = Vector2( 32, 32 )
 3/navigation_offset = Vector2( 32, 32 )
 3/shape_offset = Vector2( 32, 32 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-3/shape = SubResource( 25 )
+3/shape = SubResource( 44 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 44 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 3/z_index = 0
-4/name = "Sprite19"
-4/texture = ExtResource( 6 )
+4/name = "Sprite290"
+4/texture = ExtResource( 10 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 64, 64 )
+4/region = Rect2( 0, 64, 64, 64 )
 4/tile_mode = 0
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shape_offset = Vector2( 32, 32 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-4/shape = SubResource( 34 )
+4/shape = SubResource( 45 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 34 ),
+"shape": SubResource( 45 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 4/z_index = 0
-5/name = "Sprite2"
-5/texture = ExtResource( 14 )
+5/name = "Sprite291"
+5/texture = ExtResource( 10 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 64, 64 )
+5/region = Rect2( 0, 128, 64, 64 )
 5/tile_mode = 0
 5/occluder_offset = Vector2( 32, 32 )
 5/navigation_offset = Vector2( 32, 32 )
 5/shape_offset = Vector2( 32, 32 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-5/shape = SubResource( 1 )
+5/shape = SubResource( 46 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 46 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 5/z_index = 0
-6/name = "Sprite20"
-6/texture = ExtResource( 24 )
+6/name = "Sprite292"
+6/texture = ExtResource( 10 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 0, 0, 64, 64 )
+6/region = Rect2( 0, 256, 64, 64 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 32, 32 )
 6/navigation_offset = Vector2( 32, 32 )
 6/shape_offset = Vector2( 32, 32 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-6/shape = SubResource( 35 )
+6/shape = SubResource( 47 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 35 ),
+"shape": SubResource( 47 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 6/z_index = 0
-7/name = "Sprite21"
-7/texture = ExtResource( 25 )
+7/name = "Sprite293"
+7/texture = ExtResource( 10 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 0, 0, 64, 64 )
+7/region = Rect2( 0, 192, 64, 64 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 32, 32 )
 7/navigation_offset = Vector2( 32, 32 )
 7/shape_offset = Vector2( 32, 32 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-7/shape = SubResource( 36 )
+7/shape = SubResource( 48 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 36 ),
+"shape": SubResource( 48 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 7/z_index = 0
-8/name = "Sprite22"
-8/texture = ExtResource( 1 )
+8/name = "Sprite298"
+8/texture = ExtResource( 4 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 0, 0, 64, 64 )
+8/region = Rect2( 0, 64, 64, 64 )
 8/tile_mode = 0
 8/occluder_offset = Vector2( 32, 32 )
 8/navigation_offset = Vector2( 32, 32 )
 8/shape_offset = Vector2( 32, 32 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-8/shape = SubResource( 37 )
+8/shape = SubResource( 49 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 37 ),
+"shape": SubResource( 49 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 8/z_index = 0
-9/name = "Sprite23"
-9/texture = ExtResource( 18 )
+9/name = "Sprite299"
+9/texture = ExtResource( 4 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 0, 64, 64 )
+9/region = Rect2( 0, 128, 64, 64 )
 9/tile_mode = 0
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shape_offset = Vector2( 32, 32 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-9/shape = SubResource( 38 )
+9/shape = SubResource( 50 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 38 ),
+"shape": SubResource( 50 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 9/z_index = 0
-10/name = "Sprite59"
-10/texture = ExtResource( 27 )
+10/name = "Sprite300"
+10/texture = ExtResource( 4 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 64, 0, 64, 64 )
+10/region = Rect2( 0, 192, 64, 64 )
 10/tile_mode = 0
 10/occluder_offset = Vector2( 32, 32 )
 10/navigation_offset = Vector2( 32, 32 )
 10/shape_offset = Vector2( 32, 32 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-10/shape = SubResource( 4 )
+10/shape = SubResource( 5 )
 10/shape_one_way = false
 10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 10/z_index = 0
-11/name = "Sprite287"
-11/texture = ExtResource( 27 )
+11/name = "Sprite301"
+11/texture = ExtResource( 4 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 128, 0, 64, 64 )
+11/region = Rect2( 0, 256, 64, 64 )
 11/tile_mode = 0
 11/occluder_offset = Vector2( 32, 32 )
 11/navigation_offset = Vector2( 32, 32 )
 11/shape_offset = Vector2( 32, 32 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-11/shape = SubResource( 5 )
+11/shape = SubResource( 6 )
 11/shape_one_way = false
 11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 11/z_index = 0
-12/name = "Sprite288"
-12/texture = ExtResource( 27 )
+12/name = "Sprite306"
+12/texture = ExtResource( 6 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
-12/region = Rect2( 64, 64, 64, 64 )
+12/region = Rect2( 0, 64, 64, 64 )
 12/tile_mode = 0
 12/occluder_offset = Vector2( 32, 32 )
 12/navigation_offset = Vector2( 32, 32 )
 12/shape_offset = Vector2( 32, 32 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-12/shape = SubResource( 6 )
+12/shape = SubResource( 7 )
 12/shape_one_way = false
 12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 12/z_index = 0
-13/name = "Sprite289"
-13/texture = ExtResource( 27 )
+13/name = "Sprite307"
+13/texture = ExtResource( 6 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
-13/region = Rect2( 0, 64, 64, 64 )
+13/region = Rect2( 0, 128, 64, 64 )
 13/tile_mode = 0
 13/occluder_offset = Vector2( 32, 32 )
 13/navigation_offset = Vector2( 32, 32 )
 13/shape_offset = Vector2( 32, 32 )
 13/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-13/shape = SubResource( 7 )
+13/shape = SubResource( 8 )
 13/shape_one_way = false
 13/shape_one_way_margin = 1.0
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 13/z_index = 0
-14/name = "Sprite290"
-14/texture = ExtResource( 8 )
+14/name = "Sprite308"
+14/texture = ExtResource( 6 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
-14/region = Rect2( 0, 64, 64, 64 )
+14/region = Rect2( 0, 256, 64, 64 )
 14/tile_mode = 0
 14/occluder_offset = Vector2( 32, 32 )
 14/navigation_offset = Vector2( 32, 32 )
 14/shape_offset = Vector2( 32, 32 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-14/shape = SubResource( 8 )
+14/shape = SubResource( 9 )
 14/shape_one_way = false
 14/shape_one_way_margin = 1.0
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 14/z_index = 0
-15/name = "Sprite291"
-15/texture = ExtResource( 8 )
+15/name = "Sprite309"
+15/texture = ExtResource( 6 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
-15/region = Rect2( 0, 128, 64, 64 )
+15/region = Rect2( 0, 192, 64, 64 )
 15/tile_mode = 0
 15/occluder_offset = Vector2( 32, 32 )
 15/navigation_offset = Vector2( 32, 32 )
 15/shape_offset = Vector2( 32, 32 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-15/shape = SubResource( 9 )
+15/shape = SubResource( 10 )
 15/shape_one_way = false
 15/shape_one_way_margin = 1.0
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 15/z_index = 0
-16/name = "Sprite292"
-16/texture = ExtResource( 8 )
+16/name = "Sprite302"
+16/texture = ExtResource( 1 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
-16/region = Rect2( 0, 256, 64, 64 )
+16/region = Rect2( 0, 64, 64, 64 )
 16/tile_mode = 0
 16/occluder_offset = Vector2( 32, 32 )
 16/navigation_offset = Vector2( 32, 32 )
 16/shape_offset = Vector2( 32, 32 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-16/shape = SubResource( 10 )
+16/shape = SubResource( 11 )
 16/shape_one_way = false
 16/shape_one_way_margin = 1.0
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 16/z_index = 0
-17/name = "Sprite293"
-17/texture = ExtResource( 8 )
+17/name = "Sprite303"
+17/texture = ExtResource( 1 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
-17/region = Rect2( 0, 192, 64, 64 )
+17/region = Rect2( 0, 128, 64, 64 )
 17/tile_mode = 0
 17/occluder_offset = Vector2( 32, 32 )
 17/navigation_offset = Vector2( 32, 32 )
 17/shape_offset = Vector2( 32, 32 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-17/shape = SubResource( 11 )
+17/shape = SubResource( 12 )
 17/shape_one_way = false
 17/shape_one_way_margin = 1.0
 17/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 17/z_index = 0
-18/name = "Sprite298"
-18/texture = ExtResource( 29 )
+18/name = "Sprite304"
+18/texture = ExtResource( 1 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
-18/region = Rect2( 0, 64, 64, 64 )
+18/region = Rect2( 0, 256, 64, 64 )
 18/tile_mode = 0
 18/occluder_offset = Vector2( 32, 32 )
 18/navigation_offset = Vector2( 32, 32 )
 18/shape_offset = Vector2( 32, 32 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-18/shape = SubResource( 12 )
+18/shape = SubResource( 20 )
 18/shape_one_way = false
 18/shape_one_way_margin = 1.0
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 18/z_index = 0
-19/name = "Sprite299"
-19/texture = ExtResource( 29 )
+19/name = "Sprite305"
+19/texture = ExtResource( 1 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
-19/region = Rect2( 0, 128, 64, 64 )
+19/region = Rect2( 0, 192, 64, 64 )
 19/tile_mode = 0
 19/occluder_offset = Vector2( 32, 32 )
 19/navigation_offset = Vector2( 32, 32 )
 19/shape_offset = Vector2( 32, 32 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-19/shape = SubResource( 13 )
+19/shape = SubResource( 26 )
 19/shape_one_way = false
 19/shape_one_way_margin = 1.0
 19/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 13 ),
+"shape": SubResource( 26 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 19/z_index = 0
-20/name = "Sprite300"
-20/texture = ExtResource( 29 )
+20/name = "Sprite294"
+20/texture = ExtResource( 7 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 192, 64, 64 )
@@ -581,19 +608,19 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 20/navigation_offset = Vector2( 32, 32 )
 20/shape_offset = Vector2( 32, 32 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-20/shape = SubResource( 15 )
+20/shape = SubResource( 28 )
 20/shape_one_way = false
 20/shape_one_way_margin = 1.0
 20/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 20/z_index = 0
-21/name = "Sprite301"
-21/texture = ExtResource( 29 )
+21/name = "Sprite295"
+21/texture = ExtResource( 7 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 256, 64, 64 )
@@ -602,19 +629,19 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 21/navigation_offset = Vector2( 32, 32 )
 21/shape_offset = Vector2( 32, 32 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-21/shape = SubResource( 16 )
+21/shape = SubResource( 29 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 29 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 21/z_index = 0
-22/name = "Sprite306"
-22/texture = ExtResource( 2 )
+22/name = "Sprite296"
+22/texture = ExtResource( 7 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 64, 64, 64 )
@@ -623,19 +650,19 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 22/navigation_offset = Vector2( 32, 32 )
 22/shape_offset = Vector2( 32, 32 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-22/shape = SubResource( 17 )
+22/shape = SubResource( 30 )
 22/shape_one_way = false
 22/shape_one_way_margin = 1.0
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 30 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 22/z_index = 0
-23/name = "Sprite307"
-23/texture = ExtResource( 2 )
+23/name = "Sprite297"
+23/texture = ExtResource( 7 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 128, 64, 64 )
@@ -644,232 +671,232 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 23/navigation_offset = Vector2( 32, 32 )
 23/shape_offset = Vector2( 32, 32 )
 23/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-23/shape = SubResource( 18 )
+23/shape = SubResource( 31 )
 23/shape_one_way = false
 23/shape_one_way_margin = 1.0
 23/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 31 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 23/z_index = 0
-24/name = "Sprite308"
-24/texture = ExtResource( 2 )
+24/name = "Sprite3"
+24/texture = ExtResource( 21 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
-24/region = Rect2( 0, 256, 64, 64 )
+24/region = Rect2( 0, 0, 64, 64 )
 24/tile_mode = 0
 24/occluder_offset = Vector2( 32, 32 )
 24/navigation_offset = Vector2( 32, 32 )
 24/shape_offset = Vector2( 32, 32 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-24/shape = SubResource( 19 )
+24/shape = SubResource( 1 )
 24/shape_one_way = false
 24/shape_one_way_margin = 1.0
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 24/z_index = 0
-25/name = "Sprite309"
-25/texture = ExtResource( 2 )
+25/name = "Sprite4"
+25/texture = ExtResource( 16 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
-25/region = Rect2( 0, 192, 64, 64 )
+25/region = Rect2( 0, 0, 64, 64 )
 25/tile_mode = 0
 25/occluder_offset = Vector2( 32, 32 )
 25/navigation_offset = Vector2( 32, 32 )
 25/shape_offset = Vector2( 32, 32 )
 25/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-25/shape = SubResource( 20 )
+25/shape = SubResource( 1 )
 25/shape_one_way = false
 25/shape_one_way_margin = 1.0
 25/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 25/z_index = 0
-26/name = "Sprite302"
-26/texture = ExtResource( 30 )
+26/name = "Sprite5"
+26/texture = ExtResource( 12 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
-26/region = Rect2( 0, 64, 64, 64 )
+26/region = Rect2( 0, 0, 64, 64 )
 26/tile_mode = 0
 26/occluder_offset = Vector2( 32, 32 )
 26/navigation_offset = Vector2( 32, 32 )
 26/shape_offset = Vector2( 32, 32 )
 26/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-26/shape = SubResource( 21 )
+26/shape = SubResource( 1 )
 26/shape_one_way = false
 26/shape_one_way_margin = 1.0
 26/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 26/z_index = 0
-27/name = "Sprite303"
-27/texture = ExtResource( 30 )
+27/name = "Sprite6"
+27/texture = ExtResource( 19 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
-27/region = Rect2( 0, 128, 64, 64 )
+27/region = Rect2( 0, 0, 64, 64 )
 27/tile_mode = 0
 27/occluder_offset = Vector2( 32, 32 )
 27/navigation_offset = Vector2( 32, 32 )
 27/shape_offset = Vector2( 32, 32 )
 27/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-27/shape = SubResource( 22 )
+27/shape = SubResource( 1 )
 27/shape_one_way = false
 27/shape_one_way_margin = 1.0
 27/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 27/z_index = 0
-28/name = "Sprite304"
-28/texture = ExtResource( 30 )
+28/name = "Sprite7"
+28/texture = ExtResource( 26 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
-28/region = Rect2( 0, 256, 64, 64 )
+28/region = Rect2( 0, 0, 64, 64 )
 28/tile_mode = 0
 28/occluder_offset = Vector2( 32, 32 )
 28/navigation_offset = Vector2( 32, 32 )
 28/shape_offset = Vector2( 32, 32 )
 28/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-28/shape = SubResource( 23 )
+28/shape = SubResource( 1 )
 28/shape_one_way = false
 28/shape_one_way_margin = 1.0
 28/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 28/z_index = 0
-29/name = "Sprite305"
-29/texture = ExtResource( 30 )
+29/name = "Sprite8"
+29/texture = ExtResource( 5 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
-29/region = Rect2( 0, 192, 64, 64 )
+29/region = Rect2( 0, 0, 64, 64 )
 29/tile_mode = 0
 29/occluder_offset = Vector2( 32, 32 )
 29/navigation_offset = Vector2( 32, 32 )
 29/shape_offset = Vector2( 32, 32 )
 29/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-29/shape = SubResource( 24 )
+29/shape = SubResource( 1 )
 29/shape_one_way = false
 29/shape_one_way_margin = 1.0
 29/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 29/z_index = 0
-30/name = "Sprite294"
-30/texture = ExtResource( 4 )
+30/name = "Sprite12"
+30/texture = ExtResource( 28 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
-30/region = Rect2( 0, 192, 64, 64 )
+30/region = Rect2( 0, 0, 64, 64 )
 30/tile_mode = 0
 30/occluder_offset = Vector2( 32, 32 )
 30/navigation_offset = Vector2( 32, 32 )
 30/shape_offset = Vector2( 32, 32 )
 30/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-30/shape = SubResource( 26 )
+30/shape = SubResource( 1 )
 30/shape_one_way = false
 30/shape_one_way_margin = 1.0
 30/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 30/z_index = 0
-31/name = "Sprite295"
-31/texture = ExtResource( 4 )
+31/name = "Sprite13"
+31/texture = ExtResource( 32 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
-31/region = Rect2( 0, 256, 64, 64 )
+31/region = Rect2( 0, 0, 64, 64 )
 31/tile_mode = 0
 31/occluder_offset = Vector2( 32, 32 )
 31/navigation_offset = Vector2( 32, 32 )
 31/shape_offset = Vector2( 32, 32 )
 31/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-31/shape = SubResource( 31 )
+31/shape = SubResource( 1 )
 31/shape_one_way = false
 31/shape_one_way_margin = 1.0
 31/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 31 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 31/z_index = 0
-32/name = "Sprite296"
-32/texture = ExtResource( 4 )
+32/name = "Sprite29"
+32/texture = ExtResource( 34 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
-32/region = Rect2( 0, 64, 64, 64 )
+32/region = Rect2( 0, 0, 64, 64 )
 32/tile_mode = 0
 32/occluder_offset = Vector2( 32, 32 )
 32/navigation_offset = Vector2( 32, 32 )
 32/shape_offset = Vector2( 32, 32 )
 32/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-32/shape = SubResource( 32 )
+32/shape = SubResource( 2 )
 32/shape_one_way = false
 32/shape_one_way_margin = 1.0
 32/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 32 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 32/z_index = 0
-33/name = "Sprite297"
-33/texture = ExtResource( 4 )
+33/name = "Sprite24"
+33/texture = ExtResource( 31 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
-33/region = Rect2( 0, 128, 64, 64 )
+33/region = Rect2( 0, 0, 64, 64 )
 33/tile_mode = 0
 33/occluder_offset = Vector2( 32, 32 )
 33/navigation_offset = Vector2( 32, 32 )
 33/shape_offset = Vector2( 32, 32 )
 33/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-33/shape = SubResource( 33 )
+33/shape = SubResource( 1 )
 33/shape_one_way = false
 33/shape_one_way_margin = 1.0
 33/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 33 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 33/z_index = 0
-34/name = "Sprite3"
-34/texture = ExtResource( 21 )
+34/name = "Sprite30"
+34/texture = ExtResource( 31 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
-34/region = Rect2( 0, 0, 64, 64 )
+34/region = Rect2( 64, 0, 64, 64 )
 34/tile_mode = 0
 34/occluder_offset = Vector2( 32, 32 )
 34/navigation_offset = Vector2( 32, 32 )
@@ -886,11 +913,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 34/z_index = 0
-35/name = "Sprite4"
-35/texture = ExtResource( 16 )
+35/name = "Sprite31"
+35/texture = ExtResource( 31 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
-35/region = Rect2( 0, 0, 64, 64 )
+35/region = Rect2( 128, 0, 64, 64 )
 35/tile_mode = 0
 35/occluder_offset = Vector2( 32, 32 )
 35/navigation_offset = Vector2( 32, 32 )
@@ -907,11 +934,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 35/z_index = 0
-36/name = "Sprite5"
-36/texture = ExtResource( 12 )
+36/name = "Sprite32"
+36/texture = ExtResource( 31 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
-36/region = Rect2( 0, 0, 64, 64 )
+36/region = Rect2( 192, 0, 64, 64 )
 36/tile_mode = 0
 36/occluder_offset = Vector2( 32, 32 )
 36/navigation_offset = Vector2( 32, 32 )
@@ -928,11 +955,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 36/z_index = 0
-37/name = "Sprite6"
-37/texture = ExtResource( 19 )
+37/name = "Sprite33"
+37/texture = ExtResource( 31 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
-37/region = Rect2( 0, 0, 64, 64 )
+37/region = Rect2( 256, 0, 64, 64 )
 37/tile_mode = 0
 37/occluder_offset = Vector2( 32, 32 )
 37/navigation_offset = Vector2( 32, 32 )
@@ -949,11 +976,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 37/z_index = 0
-38/name = "Sprite7"
-38/texture = ExtResource( 26 )
+38/name = "Sprite34"
+38/texture = ExtResource( 31 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
-38/region = Rect2( 0, 0, 64, 64 )
+38/region = Rect2( 320, 0, 64, 64 )
 38/tile_mode = 0
 38/occluder_offset = Vector2( 32, 32 )
 38/navigation_offset = Vector2( 32, 32 )
@@ -970,11 +997,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 38/z_index = 0
-39/name = "Sprite8"
-39/texture = ExtResource( 5 )
+39/name = "Sprite35"
+39/texture = ExtResource( 31 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
-39/region = Rect2( 0, 0, 64, 64 )
+39/region = Rect2( 384, 0, 64, 64 )
 39/tile_mode = 0
 39/occluder_offset = Vector2( 32, 32 )
 39/navigation_offset = Vector2( 32, 32 )
@@ -991,11 +1018,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 39/z_index = 0
-40/name = "Sprite12"
-40/texture = ExtResource( 28 )
+40/name = "Sprite36"
+40/texture = ExtResource( 31 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
-40/region = Rect2( 0, 0, 64, 64 )
+40/region = Rect2( 448, 0, 64, 64 )
 40/tile_mode = 0
 40/occluder_offset = Vector2( 32, 32 )
 40/navigation_offset = Vector2( 32, 32 )
@@ -1012,11 +1039,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 40/z_index = 0
-41/name = "Sprite13"
-41/texture = ExtResource( 32 )
+41/name = "Sprite37"
+41/texture = ExtResource( 31 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
-41/region = Rect2( 0, 0, 64, 64 )
+41/region = Rect2( 0, 64, 64, 64 )
 41/tile_mode = 0
 41/occluder_offset = Vector2( 32, 32 )
 41/navigation_offset = Vector2( 32, 32 )
@@ -1033,32 +1060,32 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 41/z_index = 0
-42/name = "Sprite29"
-42/texture = ExtResource( 34 )
+42/name = "Sprite38"
+42/texture = ExtResource( 31 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
-42/region = Rect2( 0, 0, 64, 64 )
+42/region = Rect2( 64, 64, 64, 64 )
 42/tile_mode = 0
 42/occluder_offset = Vector2( 32, 32 )
 42/navigation_offset = Vector2( 32, 32 )
 42/shape_offset = Vector2( 32, 32 )
 42/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-42/shape = SubResource( 2 )
+42/shape = SubResource( 1 )
 42/shape_one_way = false
 42/shape_one_way_margin = 1.0
 42/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 42/z_index = 0
-43/name = "Sprite14"
-43/texture = ExtResource( 22 )
+43/name = "Sprite39"
+43/texture = ExtResource( 31 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
-43/region = Rect2( 0, 0, 64, 64 )
+43/region = Rect2( 128, 64, 64, 64 )
 43/tile_mode = 0
 43/occluder_offset = Vector2( 32, 32 )
 43/navigation_offset = Vector2( 32, 32 )
@@ -1075,11 +1102,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 43/z_index = 0
-44/name = "Sprite24"
+44/name = "Sprite40"
 44/texture = ExtResource( 31 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
-44/region = Rect2( 0, 0, 64, 64 )
+44/region = Rect2( 192, 64, 64, 64 )
 44/tile_mode = 0
 44/occluder_offset = Vector2( 32, 32 )
 44/navigation_offset = Vector2( 32, 32 )
@@ -1096,11 +1123,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 44/z_index = 0
-45/name = "Sprite30"
+45/name = "Sprite41"
 45/texture = ExtResource( 31 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
-45/region = Rect2( 64, 0, 64, 64 )
+45/region = Rect2( 256, 64, 64, 64 )
 45/tile_mode = 0
 45/occluder_offset = Vector2( 32, 32 )
 45/navigation_offset = Vector2( 32, 32 )
@@ -1117,11 +1144,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 45/z_index = 0
-46/name = "Sprite31"
-46/texture = ExtResource( 31 )
+46/name = "Sprite42"
+46/texture = ExtResource( 4 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
-46/region = Rect2( 128, 0, 64, 64 )
+46/region = Rect2( 0, 0, 64, 64 )
 46/tile_mode = 0
 46/occluder_offset = Vector2( 32, 32 )
 46/navigation_offset = Vector2( 32, 32 )
@@ -1138,11 +1165,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 46/z_index = 0
-47/name = "Sprite32"
+47/name = "Sprite43"
 47/texture = ExtResource( 31 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
-47/region = Rect2( 192, 0, 64, 64 )
+47/region = Rect2( 384, 64, 64, 64 )
 47/tile_mode = 0
 47/occluder_offset = Vector2( 32, 32 )
 47/navigation_offset = Vector2( 32, 32 )
@@ -1159,11 +1186,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 47/z_index = 0
-48/name = "Sprite33"
+48/name = "Sprite44"
 48/texture = ExtResource( 31 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
-48/region = Rect2( 256, 0, 64, 64 )
+48/region = Rect2( 448, 64, 64, 64 )
 48/tile_mode = 0
 48/occluder_offset = Vector2( 32, 32 )
 48/navigation_offset = Vector2( 32, 32 )
@@ -1180,11 +1207,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 48/z_index = 0
-49/name = "Sprite34"
+49/name = "Sprite45"
 49/texture = ExtResource( 31 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
-49/region = Rect2( 320, 0, 64, 64 )
+49/region = Rect2( 0, 128, 64, 64 )
 49/tile_mode = 0
 49/occluder_offset = Vector2( 32, 32 )
 49/navigation_offset = Vector2( 32, 32 )
@@ -1201,11 +1228,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 49/z_index = 0
-50/name = "Sprite35"
+50/name = "Sprite46"
 50/texture = ExtResource( 31 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
-50/region = Rect2( 384, 0, 64, 64 )
+50/region = Rect2( 64, 128, 64, 64 )
 50/tile_mode = 0
 50/occluder_offset = Vector2( 32, 32 )
 50/navigation_offset = Vector2( 32, 32 )
@@ -1222,11 +1249,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 50/z_index = 0
-51/name = "Sprite36"
+51/name = "Sprite47"
 51/texture = ExtResource( 31 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
-51/region = Rect2( 448, 0, 64, 64 )
+51/region = Rect2( 128, 128, 64, 64 )
 51/tile_mode = 0
 51/occluder_offset = Vector2( 32, 32 )
 51/navigation_offset = Vector2( 32, 32 )
@@ -1243,11 +1270,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 51/z_index = 0
-52/name = "Sprite37"
+52/name = "Sprite48"
 52/texture = ExtResource( 31 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
-52/region = Rect2( 0, 64, 64, 64 )
+52/region = Rect2( 192, 128, 64, 64 )
 52/tile_mode = 0
 52/occluder_offset = Vector2( 32, 32 )
 52/navigation_offset = Vector2( 32, 32 )
@@ -1264,11 +1291,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 52/z_index = 0
-53/name = "Sprite38"
+53/name = "Sprite49"
 53/texture = ExtResource( 31 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
-53/region = Rect2( 64, 64, 64, 64 )
+53/region = Rect2( 256, 128, 64, 64 )
 53/tile_mode = 0
 53/occluder_offset = Vector2( 32, 32 )
 53/navigation_offset = Vector2( 32, 32 )
@@ -1285,11 +1312,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 53/z_index = 0
-54/name = "Sprite39"
+54/name = "Sprite50"
 54/texture = ExtResource( 31 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
-54/region = Rect2( 128, 64, 64, 64 )
+54/region = Rect2( 320, 128, 64, 64 )
 54/tile_mode = 0
 54/occluder_offset = Vector2( 32, 32 )
 54/navigation_offset = Vector2( 32, 32 )
@@ -1306,11 +1333,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 54/z_index = 0
-55/name = "Sprite40"
+55/name = "Sprite51"
 55/texture = ExtResource( 31 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
-55/region = Rect2( 192, 64, 64, 64 )
+55/region = Rect2( 384, 128, 64, 64 )
 55/tile_mode = 0
 55/occluder_offset = Vector2( 32, 32 )
 55/navigation_offset = Vector2( 32, 32 )
@@ -1327,11 +1354,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 55/z_index = 0
-56/name = "Sprite41"
+56/name = "Sprite52"
 56/texture = ExtResource( 31 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
-56/region = Rect2( 256, 64, 64, 64 )
+56/region = Rect2( 448, 128, 64, 64 )
 56/tile_mode = 0
 56/occluder_offset = Vector2( 32, 32 )
 56/navigation_offset = Vector2( 32, 32 )
@@ -1348,11 +1375,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 56/z_index = 0
-57/name = "Sprite42"
-57/texture = ExtResource( 29 )
+57/name = "Sprite53"
+57/texture = ExtResource( 31 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
-57/region = Rect2( 0, 0, 64, 64 )
+57/region = Rect2( 0, 192, 64, 64 )
 57/tile_mode = 0
 57/occluder_offset = Vector2( 32, 32 )
 57/navigation_offset = Vector2( 32, 32 )
@@ -1369,11 +1396,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 57/z_index = 0
-58/name = "Sprite43"
+58/name = "Sprite54"
 58/texture = ExtResource( 31 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
-58/region = Rect2( 384, 64, 64, 64 )
+58/region = Rect2( 64, 192, 64, 64 )
 58/tile_mode = 0
 58/occluder_offset = Vector2( 32, 32 )
 58/navigation_offset = Vector2( 32, 32 )
@@ -1390,11 +1417,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 58/z_index = 0
-59/name = "Sprite44"
+59/name = "Sprite55"
 59/texture = ExtResource( 31 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
-59/region = Rect2( 448, 64, 64, 64 )
+59/region = Rect2( 128, 192, 64, 64 )
 59/tile_mode = 0
 59/occluder_offset = Vector2( 32, 32 )
 59/navigation_offset = Vector2( 32, 32 )
@@ -1411,11 +1438,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 59/z_index = 0
-60/name = "Sprite45"
+60/name = "Sprite56"
 60/texture = ExtResource( 31 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
-60/region = Rect2( 0, 128, 64, 64 )
+60/region = Rect2( 192, 192, 64, 64 )
 60/tile_mode = 0
 60/occluder_offset = Vector2( 32, 32 )
 60/navigation_offset = Vector2( 32, 32 )
@@ -1432,11 +1459,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 60/z_index = 0
-61/name = "Sprite46"
+61/name = "Sprite57"
 61/texture = ExtResource( 31 )
 61/tex_offset = Vector2( 0, 0 )
 61/modulate = Color( 1, 1, 1, 1 )
-61/region = Rect2( 64, 128, 64, 64 )
+61/region = Rect2( 256, 192, 64, 64 )
 61/tile_mode = 0
 61/occluder_offset = Vector2( 32, 32 )
 61/navigation_offset = Vector2( 32, 32 )
@@ -1453,11 +1480,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 61/z_index = 0
-62/name = "Sprite47"
+62/name = "Sprite58"
 62/texture = ExtResource( 31 )
 62/tex_offset = Vector2( 0, 0 )
 62/modulate = Color( 1, 1, 1, 1 )
-62/region = Rect2( 128, 128, 64, 64 )
+62/region = Rect2( 320, 192, 64, 64 )
 62/tile_mode = 0
 62/occluder_offset = Vector2( 32, 32 )
 62/navigation_offset = Vector2( 32, 32 )
@@ -1474,11 +1501,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 62/z_index = 0
-63/name = "Sprite48"
+63/name = "Sprite60"
 63/texture = ExtResource( 31 )
 63/tex_offset = Vector2( 0, 0 )
 63/modulate = Color( 1, 1, 1, 1 )
-63/region = Rect2( 192, 128, 64, 64 )
+63/region = Rect2( 384, 192, 64, 64 )
 63/tile_mode = 0
 63/occluder_offset = Vector2( 32, 32 )
 63/navigation_offset = Vector2( 32, 32 )
@@ -1495,11 +1522,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 63/z_index = 0
-64/name = "Sprite49"
+64/name = "Sprite61"
 64/texture = ExtResource( 31 )
 64/tex_offset = Vector2( 0, 0 )
 64/modulate = Color( 1, 1, 1, 1 )
-64/region = Rect2( 256, 128, 64, 64 )
+64/region = Rect2( 448, 192, 64, 64 )
 64/tile_mode = 0
 64/occluder_offset = Vector2( 32, 32 )
 64/navigation_offset = Vector2( 32, 32 )
@@ -1516,11 +1543,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 64/z_index = 0
-65/name = "Sprite50"
+65/name = "Sprite62"
 65/texture = ExtResource( 31 )
 65/tex_offset = Vector2( 0, 0 )
 65/modulate = Color( 1, 1, 1, 1 )
-65/region = Rect2( 320, 128, 64, 64 )
+65/region = Rect2( 0, 256, 64, 64 )
 65/tile_mode = 0
 65/occluder_offset = Vector2( 32, 32 )
 65/navigation_offset = Vector2( 32, 32 )
@@ -1537,11 +1564,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 65/z_index = 0
-66/name = "Sprite51"
+66/name = "Sprite63"
 66/texture = ExtResource( 31 )
 66/tex_offset = Vector2( 0, 0 )
 66/modulate = Color( 1, 1, 1, 1 )
-66/region = Rect2( 384, 128, 64, 64 )
+66/region = Rect2( 64, 256, 64, 64 )
 66/tile_mode = 0
 66/occluder_offset = Vector2( 32, 32 )
 66/navigation_offset = Vector2( 32, 32 )
@@ -1558,11 +1585,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 66/z_index = 0
-67/name = "Sprite52"
+67/name = "Sprite64"
 67/texture = ExtResource( 31 )
 67/tex_offset = Vector2( 0, 0 )
 67/modulate = Color( 1, 1, 1, 1 )
-67/region = Rect2( 448, 128, 64, 64 )
+67/region = Rect2( 128, 256, 64, 64 )
 67/tile_mode = 0
 67/occluder_offset = Vector2( 32, 32 )
 67/navigation_offset = Vector2( 32, 32 )
@@ -1579,11 +1606,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 67/z_index = 0
-68/name = "Sprite53"
+68/name = "Sprite65"
 68/texture = ExtResource( 31 )
 68/tex_offset = Vector2( 0, 0 )
 68/modulate = Color( 1, 1, 1, 1 )
-68/region = Rect2( 0, 192, 64, 64 )
+68/region = Rect2( 192, 256, 64, 64 )
 68/tile_mode = 0
 68/occluder_offset = Vector2( 32, 32 )
 68/navigation_offset = Vector2( 32, 32 )
@@ -1600,11 +1627,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 68/z_index = 0
-69/name = "Sprite54"
+69/name = "Sprite66"
 69/texture = ExtResource( 31 )
 69/tex_offset = Vector2( 0, 0 )
 69/modulate = Color( 1, 1, 1, 1 )
-69/region = Rect2( 64, 192, 64, 64 )
+69/region = Rect2( 256, 256, 64, 64 )
 69/tile_mode = 0
 69/occluder_offset = Vector2( 32, 32 )
 69/navigation_offset = Vector2( 32, 32 )
@@ -1621,11 +1648,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 69/z_index = 0
-70/name = "Sprite55"
+70/name = "Sprite67"
 70/texture = ExtResource( 31 )
 70/tex_offset = Vector2( 0, 0 )
 70/modulate = Color( 1, 1, 1, 1 )
-70/region = Rect2( 128, 192, 64, 64 )
+70/region = Rect2( 320, 256, 64, 64 )
 70/tile_mode = 0
 70/occluder_offset = Vector2( 32, 32 )
 70/navigation_offset = Vector2( 32, 32 )
@@ -1642,11 +1669,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 70/z_index = 0
-71/name = "Sprite56"
+71/name = "Sprite68"
 71/texture = ExtResource( 31 )
 71/tex_offset = Vector2( 0, 0 )
 71/modulate = Color( 1, 1, 1, 1 )
-71/region = Rect2( 192, 192, 64, 64 )
+71/region = Rect2( 384, 256, 64, 64 )
 71/tile_mode = 0
 71/occluder_offset = Vector2( 32, 32 )
 71/navigation_offset = Vector2( 32, 32 )
@@ -1663,11 +1690,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 71/z_index = 0
-72/name = "Sprite57"
+72/name = "Sprite69"
 72/texture = ExtResource( 31 )
 72/tex_offset = Vector2( 0, 0 )
 72/modulate = Color( 1, 1, 1, 1 )
-72/region = Rect2( 256, 192, 64, 64 )
+72/region = Rect2( 448, 256, 64, 64 )
 72/tile_mode = 0
 72/occluder_offset = Vector2( 32, 32 )
 72/navigation_offset = Vector2( 32, 32 )
@@ -1684,11 +1711,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 72/z_index = 0
-73/name = "Sprite58"
+73/name = "Sprite70"
 73/texture = ExtResource( 31 )
 73/tex_offset = Vector2( 0, 0 )
 73/modulate = Color( 1, 1, 1, 1 )
-73/region = Rect2( 320, 192, 64, 64 )
+73/region = Rect2( 0, 320, 64, 64 )
 73/tile_mode = 0
 73/occluder_offset = Vector2( 32, 32 )
 73/navigation_offset = Vector2( 32, 32 )
@@ -1705,11 +1732,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 73/z_index = 0
-74/name = "Sprite60"
+74/name = "Sprite71"
 74/texture = ExtResource( 31 )
 74/tex_offset = Vector2( 0, 0 )
 74/modulate = Color( 1, 1, 1, 1 )
-74/region = Rect2( 384, 192, 64, 64 )
+74/region = Rect2( 0, 320, 64, 64 )
 74/tile_mode = 0
 74/occluder_offset = Vector2( 32, 32 )
 74/navigation_offset = Vector2( 32, 32 )
@@ -1726,11 +1753,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 74/z_index = 0
-75/name = "Sprite61"
+75/name = "Sprite72"
 75/texture = ExtResource( 31 )
 75/tex_offset = Vector2( 0, 0 )
 75/modulate = Color( 1, 1, 1, 1 )
-75/region = Rect2( 448, 192, 64, 64 )
+75/region = Rect2( 64, 320, 64, 64 )
 75/tile_mode = 0
 75/occluder_offset = Vector2( 32, 32 )
 75/navigation_offset = Vector2( 32, 32 )
@@ -1747,11 +1774,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 75/z_index = 0
-76/name = "Sprite62"
+76/name = "Sprite73"
 76/texture = ExtResource( 31 )
 76/tex_offset = Vector2( 0, 0 )
 76/modulate = Color( 1, 1, 1, 1 )
-76/region = Rect2( 0, 256, 64, 64 )
+76/region = Rect2( 128, 320, 64, 64 )
 76/tile_mode = 0
 76/occluder_offset = Vector2( 32, 32 )
 76/navigation_offset = Vector2( 32, 32 )
@@ -1768,11 +1795,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 76/z_index = 0
-77/name = "Sprite63"
+77/name = "Sprite74"
 77/texture = ExtResource( 31 )
 77/tex_offset = Vector2( 0, 0 )
 77/modulate = Color( 1, 1, 1, 1 )
-77/region = Rect2( 64, 256, 64, 64 )
+77/region = Rect2( 192, 320, 64, 64 )
 77/tile_mode = 0
 77/occluder_offset = Vector2( 32, 32 )
 77/navigation_offset = Vector2( 32, 32 )
@@ -1789,11 +1816,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 77/z_index = 0
-78/name = "Sprite64"
+78/name = "Sprite75"
 78/texture = ExtResource( 31 )
 78/tex_offset = Vector2( 0, 0 )
 78/modulate = Color( 1, 1, 1, 1 )
-78/region = Rect2( 128, 256, 64, 64 )
+78/region = Rect2( 256, 320, 64, 64 )
 78/tile_mode = 0
 78/occluder_offset = Vector2( 32, 32 )
 78/navigation_offset = Vector2( 32, 32 )
@@ -1810,11 +1837,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 78/z_index = 0
-79/name = "Sprite65"
+79/name = "Sprite76"
 79/texture = ExtResource( 31 )
 79/tex_offset = Vector2( 0, 0 )
 79/modulate = Color( 1, 1, 1, 1 )
-79/region = Rect2( 192, 256, 64, 64 )
+79/region = Rect2( 320, 320, 64, 64 )
 79/tile_mode = 0
 79/occluder_offset = Vector2( 32, 32 )
 79/navigation_offset = Vector2( 32, 32 )
@@ -1831,11 +1858,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 79/z_index = 0
-80/name = "Sprite66"
+80/name = "Sprite77"
 80/texture = ExtResource( 31 )
 80/tex_offset = Vector2( 0, 0 )
 80/modulate = Color( 1, 1, 1, 1 )
-80/region = Rect2( 256, 256, 64, 64 )
+80/region = Rect2( 384, 320, 64, 64 )
 80/tile_mode = 0
 80/occluder_offset = Vector2( 32, 32 )
 80/navigation_offset = Vector2( 32, 32 )
@@ -1852,11 +1879,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 80/z_index = 0
-81/name = "Sprite67"
+81/name = "Sprite78"
 81/texture = ExtResource( 31 )
 81/tex_offset = Vector2( 0, 0 )
 81/modulate = Color( 1, 1, 1, 1 )
-81/region = Rect2( 320, 256, 64, 64 )
+81/region = Rect2( 448, 320, 64, 64 )
 81/tile_mode = 0
 81/occluder_offset = Vector2( 32, 32 )
 81/navigation_offset = Vector2( 32, 32 )
@@ -1873,11 +1900,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 81/z_index = 0
-82/name = "Sprite68"
+82/name = "Sprite79"
 82/texture = ExtResource( 31 )
 82/tex_offset = Vector2( 0, 0 )
 82/modulate = Color( 1, 1, 1, 1 )
-82/region = Rect2( 384, 256, 64, 64 )
+82/region = Rect2( 0, 384, 64, 64 )
 82/tile_mode = 0
 82/occluder_offset = Vector2( 32, 32 )
 82/navigation_offset = Vector2( 32, 32 )
@@ -1894,11 +1921,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 82/z_index = 0
-83/name = "Sprite69"
+83/name = "Sprite80"
 83/texture = ExtResource( 31 )
 83/tex_offset = Vector2( 0, 0 )
 83/modulate = Color( 1, 1, 1, 1 )
-83/region = Rect2( 448, 256, 64, 64 )
+83/region = Rect2( 64, 384, 64, 64 )
 83/tile_mode = 0
 83/occluder_offset = Vector2( 32, 32 )
 83/navigation_offset = Vector2( 32, 32 )
@@ -1915,11 +1942,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 83/z_index = 0
-84/name = "Sprite70"
+84/name = "Sprite81"
 84/texture = ExtResource( 31 )
 84/tex_offset = Vector2( 0, 0 )
 84/modulate = Color( 1, 1, 1, 1 )
-84/region = Rect2( 0, 320, 64, 64 )
+84/region = Rect2( 128, 384, 64, 64 )
 84/tile_mode = 0
 84/occluder_offset = Vector2( 32, 32 )
 84/navigation_offset = Vector2( 32, 32 )
@@ -1936,11 +1963,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 84/z_index = 0
-85/name = "Sprite71"
+85/name = "Sprite82"
 85/texture = ExtResource( 31 )
 85/tex_offset = Vector2( 0, 0 )
 85/modulate = Color( 1, 1, 1, 1 )
-85/region = Rect2( 0, 320, 64, 64 )
+85/region = Rect2( 192, 384, 64, 64 )
 85/tile_mode = 0
 85/occluder_offset = Vector2( 32, 32 )
 85/navigation_offset = Vector2( 32, 32 )
@@ -1957,11 +1984,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 85/z_index = 0
-86/name = "Sprite72"
+86/name = "Sprite83"
 86/texture = ExtResource( 31 )
 86/tex_offset = Vector2( 0, 0 )
 86/modulate = Color( 1, 1, 1, 1 )
-86/region = Rect2( 64, 320, 64, 64 )
+86/region = Rect2( 256, 384, 64, 64 )
 86/tile_mode = 0
 86/occluder_offset = Vector2( 32, 32 )
 86/navigation_offset = Vector2( 32, 32 )
@@ -1978,11 +2005,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 86/z_index = 0
-87/name = "Sprite73"
+87/name = "Sprite84"
 87/texture = ExtResource( 31 )
 87/tex_offset = Vector2( 0, 0 )
 87/modulate = Color( 1, 1, 1, 1 )
-87/region = Rect2( 128, 320, 64, 64 )
+87/region = Rect2( 320, 384, 64, 64 )
 87/tile_mode = 0
 87/occluder_offset = Vector2( 32, 32 )
 87/navigation_offset = Vector2( 32, 32 )
@@ -1999,11 +2026,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 87/z_index = 0
-88/name = "Sprite74"
+88/name = "Sprite85"
 88/texture = ExtResource( 31 )
 88/tex_offset = Vector2( 0, 0 )
 88/modulate = Color( 1, 1, 1, 1 )
-88/region = Rect2( 192, 320, 64, 64 )
+88/region = Rect2( 384, 384, 64, 64 )
 88/tile_mode = 0
 88/occluder_offset = Vector2( 32, 32 )
 88/navigation_offset = Vector2( 32, 32 )
@@ -2020,11 +2047,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 88/z_index = 0
-89/name = "Sprite75"
+89/name = "Sprite86"
 89/texture = ExtResource( 31 )
 89/tex_offset = Vector2( 0, 0 )
 89/modulate = Color( 1, 1, 1, 1 )
-89/region = Rect2( 256, 320, 64, 64 )
+89/region = Rect2( 448, 384, 64, 64 )
 89/tile_mode = 0
 89/occluder_offset = Vector2( 32, 32 )
 89/navigation_offset = Vector2( 32, 32 )
@@ -2041,11 +2068,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 89/z_index = 0
-90/name = "Sprite76"
+90/name = "Sprite87"
 90/texture = ExtResource( 31 )
 90/tex_offset = Vector2( 0, 0 )
 90/modulate = Color( 1, 1, 1, 1 )
-90/region = Rect2( 320, 320, 64, 64 )
+90/region = Rect2( 0, 448, 64, 64 )
 90/tile_mode = 0
 90/occluder_offset = Vector2( 32, 32 )
 90/navigation_offset = Vector2( 32, 32 )
@@ -2062,11 +2089,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 90/z_index = 0
-91/name = "Sprite77"
+91/name = "Sprite88"
 91/texture = ExtResource( 31 )
 91/tex_offset = Vector2( 0, 0 )
 91/modulate = Color( 1, 1, 1, 1 )
-91/region = Rect2( 384, 320, 64, 64 )
+91/region = Rect2( 64, 448, 64, 64 )
 91/tile_mode = 0
 91/occluder_offset = Vector2( 32, 32 )
 91/navigation_offset = Vector2( 32, 32 )
@@ -2083,11 +2110,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 91/z_index = 0
-92/name = "Sprite78"
+92/name = "Sprite89"
 92/texture = ExtResource( 31 )
 92/tex_offset = Vector2( 0, 0 )
 92/modulate = Color( 1, 1, 1, 1 )
-92/region = Rect2( 448, 320, 64, 64 )
+92/region = Rect2( 128, 448, 64, 64 )
 92/tile_mode = 0
 92/occluder_offset = Vector2( 32, 32 )
 92/navigation_offset = Vector2( 32, 32 )
@@ -2104,11 +2131,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 92/z_index = 0
-93/name = "Sprite79"
+93/name = "Sprite90"
 93/texture = ExtResource( 31 )
 93/tex_offset = Vector2( 0, 0 )
 93/modulate = Color( 1, 1, 1, 1 )
-93/region = Rect2( 0, 384, 64, 64 )
+93/region = Rect2( 192, 448, 64, 64 )
 93/tile_mode = 0
 93/occluder_offset = Vector2( 32, 32 )
 93/navigation_offset = Vector2( 32, 32 )
@@ -2125,11 +2152,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 93/z_index = 0
-94/name = "Sprite80"
+94/name = "Sprite91"
 94/texture = ExtResource( 31 )
 94/tex_offset = Vector2( 0, 0 )
 94/modulate = Color( 1, 1, 1, 1 )
-94/region = Rect2( 64, 384, 64, 64 )
+94/region = Rect2( 256, 448, 64, 64 )
 94/tile_mode = 0
 94/occluder_offset = Vector2( 32, 32 )
 94/navigation_offset = Vector2( 32, 32 )
@@ -2146,11 +2173,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 94/z_index = 0
-95/name = "Sprite81"
+95/name = "Sprite92"
 95/texture = ExtResource( 31 )
 95/tex_offset = Vector2( 0, 0 )
 95/modulate = Color( 1, 1, 1, 1 )
-95/region = Rect2( 128, 384, 64, 64 )
+95/region = Rect2( 320, 448, 64, 64 )
 95/tile_mode = 0
 95/occluder_offset = Vector2( 32, 32 )
 95/navigation_offset = Vector2( 32, 32 )
@@ -2167,11 +2194,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 95/z_index = 0
-96/name = "Sprite82"
+96/name = "Sprite93"
 96/texture = ExtResource( 31 )
 96/tex_offset = Vector2( 0, 0 )
 96/modulate = Color( 1, 1, 1, 1 )
-96/region = Rect2( 192, 384, 64, 64 )
+96/region = Rect2( 384, 448, 64, 64 )
 96/tile_mode = 0
 96/occluder_offset = Vector2( 32, 32 )
 96/navigation_offset = Vector2( 32, 32 )
@@ -2188,11 +2215,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 96/z_index = 0
-97/name = "Sprite83"
+97/name = "Sprite94"
 97/texture = ExtResource( 31 )
 97/tex_offset = Vector2( 0, 0 )
 97/modulate = Color( 1, 1, 1, 1 )
-97/region = Rect2( 256, 384, 64, 64 )
+97/region = Rect2( 448, 448, 64, 64 )
 97/tile_mode = 0
 97/occluder_offset = Vector2( 32, 32 )
 97/navigation_offset = Vector2( 32, 32 )
@@ -2209,11 +2236,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 97/z_index = 0
-98/name = "Sprite84"
+98/name = "Sprite95"
 98/texture = ExtResource( 31 )
 98/tex_offset = Vector2( 0, 0 )
 98/modulate = Color( 1, 1, 1, 1 )
-98/region = Rect2( 320, 384, 64, 64 )
+98/region = Rect2( 0, 512, 64, 64 )
 98/tile_mode = 0
 98/occluder_offset = Vector2( 32, 32 )
 98/navigation_offset = Vector2( 32, 32 )
@@ -2230,11 +2257,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 98/z_index = 0
-99/name = "Sprite85"
+99/name = "Sprite96"
 99/texture = ExtResource( 31 )
 99/tex_offset = Vector2( 0, 0 )
 99/modulate = Color( 1, 1, 1, 1 )
-99/region = Rect2( 384, 384, 64, 64 )
+99/region = Rect2( 64, 512, 64, 64 )
 99/tile_mode = 0
 99/occluder_offset = Vector2( 32, 32 )
 99/navigation_offset = Vector2( 32, 32 )
@@ -2251,11 +2278,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 99/z_index = 0
-100/name = "Sprite86"
+100/name = "Sprite97"
 100/texture = ExtResource( 31 )
 100/tex_offset = Vector2( 0, 0 )
 100/modulate = Color( 1, 1, 1, 1 )
-100/region = Rect2( 448, 384, 64, 64 )
+100/region = Rect2( 128, 512, 64, 64 )
 100/tile_mode = 0
 100/occluder_offset = Vector2( 32, 32 )
 100/navigation_offset = Vector2( 32, 32 )
@@ -2272,11 +2299,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 100/z_index = 0
-101/name = "Sprite87"
+101/name = "Sprite98"
 101/texture = ExtResource( 31 )
 101/tex_offset = Vector2( 0, 0 )
 101/modulate = Color( 1, 1, 1, 1 )
-101/region = Rect2( 0, 448, 64, 64 )
+101/region = Rect2( 192, 512, 64, 64 )
 101/tile_mode = 0
 101/occluder_offset = Vector2( 32, 32 )
 101/navigation_offset = Vector2( 32, 32 )
@@ -2293,11 +2320,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 101/z_index = 0
-102/name = "Sprite88"
+102/name = "Sprite99"
 102/texture = ExtResource( 31 )
 102/tex_offset = Vector2( 0, 0 )
 102/modulate = Color( 1, 1, 1, 1 )
-102/region = Rect2( 64, 448, 64, 64 )
+102/region = Rect2( 256, 512, 64, 64 )
 102/tile_mode = 0
 102/occluder_offset = Vector2( 32, 32 )
 102/navigation_offset = Vector2( 32, 32 )
@@ -2314,11 +2341,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 102/z_index = 0
-103/name = "Sprite89"
+103/name = "Sprite100"
 103/texture = ExtResource( 31 )
 103/tex_offset = Vector2( 0, 0 )
 103/modulate = Color( 1, 1, 1, 1 )
-103/region = Rect2( 128, 448, 64, 64 )
+103/region = Rect2( 320, 512, 64, 64 )
 103/tile_mode = 0
 103/occluder_offset = Vector2( 32, 32 )
 103/navigation_offset = Vector2( 32, 32 )
@@ -2335,11 +2362,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 103/z_index = 0
-104/name = "Sprite90"
+104/name = "Sprite101"
 104/texture = ExtResource( 31 )
 104/tex_offset = Vector2( 0, 0 )
 104/modulate = Color( 1, 1, 1, 1 )
-104/region = Rect2( 192, 448, 64, 64 )
+104/region = Rect2( 384, 512, 64, 64 )
 104/tile_mode = 0
 104/occluder_offset = Vector2( 32, 32 )
 104/navigation_offset = Vector2( 32, 32 )
@@ -2356,11 +2383,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 104/z_index = 0
-105/name = "Sprite91"
+105/name = "Sprite102"
 105/texture = ExtResource( 31 )
 105/tex_offset = Vector2( 0, 0 )
 105/modulate = Color( 1, 1, 1, 1 )
-105/region = Rect2( 256, 448, 64, 64 )
+105/region = Rect2( 448, 512, 64, 64 )
 105/tile_mode = 0
 105/occluder_offset = Vector2( 32, 32 )
 105/navigation_offset = Vector2( 32, 32 )
@@ -2377,11 +2404,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 105/z_index = 0
-106/name = "Sprite92"
+106/name = "Sprite103"
 106/texture = ExtResource( 31 )
 106/tex_offset = Vector2( 0, 0 )
 106/modulate = Color( 1, 1, 1, 1 )
-106/region = Rect2( 320, 448, 64, 64 )
+106/region = Rect2( 0, 576, 64, 64 )
 106/tile_mode = 0
 106/occluder_offset = Vector2( 32, 32 )
 106/navigation_offset = Vector2( 32, 32 )
@@ -2398,11 +2425,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 106/z_index = 0
-107/name = "Sprite93"
+107/name = "Sprite104"
 107/texture = ExtResource( 31 )
 107/tex_offset = Vector2( 0, 0 )
 107/modulate = Color( 1, 1, 1, 1 )
-107/region = Rect2( 384, 448, 64, 64 )
+107/region = Rect2( 64, 576, 64, 64 )
 107/tile_mode = 0
 107/occluder_offset = Vector2( 32, 32 )
 107/navigation_offset = Vector2( 32, 32 )
@@ -2419,11 +2446,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 107/z_index = 0
-108/name = "Sprite94"
+108/name = "Sprite105"
 108/texture = ExtResource( 31 )
 108/tex_offset = Vector2( 0, 0 )
 108/modulate = Color( 1, 1, 1, 1 )
-108/region = Rect2( 448, 448, 64, 64 )
+108/region = Rect2( 128, 576, 64, 64 )
 108/tile_mode = 0
 108/occluder_offset = Vector2( 32, 32 )
 108/navigation_offset = Vector2( 32, 32 )
@@ -2440,11 +2467,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 108/z_index = 0
-109/name = "Sprite95"
+109/name = "Sprite106"
 109/texture = ExtResource( 31 )
 109/tex_offset = Vector2( 0, 0 )
 109/modulate = Color( 1, 1, 1, 1 )
-109/region = Rect2( 0, 512, 64, 64 )
+109/region = Rect2( 192, 576, 64, 64 )
 109/tile_mode = 0
 109/occluder_offset = Vector2( 32, 32 )
 109/navigation_offset = Vector2( 32, 32 )
@@ -2461,11 +2488,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 109/z_index = 0
-110/name = "Sprite96"
+110/name = "Sprite107"
 110/texture = ExtResource( 31 )
 110/tex_offset = Vector2( 0, 0 )
 110/modulate = Color( 1, 1, 1, 1 )
-110/region = Rect2( 64, 512, 64, 64 )
+110/region = Rect2( 256, 576, 64, 64 )
 110/tile_mode = 0
 110/occluder_offset = Vector2( 32, 32 )
 110/navigation_offset = Vector2( 32, 32 )
@@ -2482,11 +2509,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 110/z_index = 0
-111/name = "Sprite97"
+111/name = "Sprite108"
 111/texture = ExtResource( 31 )
 111/tex_offset = Vector2( 0, 0 )
 111/modulate = Color( 1, 1, 1, 1 )
-111/region = Rect2( 128, 512, 64, 64 )
+111/region = Rect2( 320, 576, 64, 64 )
 111/tile_mode = 0
 111/occluder_offset = Vector2( 32, 32 )
 111/navigation_offset = Vector2( 32, 32 )
@@ -2503,11 +2530,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 111/z_index = 0
-112/name = "Sprite98"
+112/name = "Sprite109"
 112/texture = ExtResource( 31 )
 112/tex_offset = Vector2( 0, 0 )
 112/modulate = Color( 1, 1, 1, 1 )
-112/region = Rect2( 192, 512, 64, 64 )
+112/region = Rect2( 384, 576, 64, 64 )
 112/tile_mode = 0
 112/occluder_offset = Vector2( 32, 32 )
 112/navigation_offset = Vector2( 32, 32 )
@@ -2524,11 +2551,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 112/z_index = 0
-113/name = "Sprite99"
+113/name = "Sprite110"
 113/texture = ExtResource( 31 )
 113/tex_offset = Vector2( 0, 0 )
 113/modulate = Color( 1, 1, 1, 1 )
-113/region = Rect2( 256, 512, 64, 64 )
+113/region = Rect2( 448, 576, 64, 64 )
 113/tile_mode = 0
 113/occluder_offset = Vector2( 32, 32 )
 113/navigation_offset = Vector2( 32, 32 )
@@ -2545,11 +2572,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 113/z_index = 0
-114/name = "Sprite100"
+114/name = "Sprite111"
 114/texture = ExtResource( 31 )
 114/tex_offset = Vector2( 0, 0 )
 114/modulate = Color( 1, 1, 1, 1 )
-114/region = Rect2( 320, 512, 64, 64 )
+114/region = Rect2( 0, 640, 64, 64 )
 114/tile_mode = 0
 114/occluder_offset = Vector2( 32, 32 )
 114/navigation_offset = Vector2( 32, 32 )
@@ -2566,11 +2593,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 114/z_index = 0
-115/name = "Sprite101"
+115/name = "Sprite112"
 115/texture = ExtResource( 31 )
 115/tex_offset = Vector2( 0, 0 )
 115/modulate = Color( 1, 1, 1, 1 )
-115/region = Rect2( 384, 512, 64, 64 )
+115/region = Rect2( 64, 640, 64, 64 )
 115/tile_mode = 0
 115/occluder_offset = Vector2( 32, 32 )
 115/navigation_offset = Vector2( 32, 32 )
@@ -2587,11 +2614,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 115/z_index = 0
-116/name = "Sprite102"
+116/name = "Sprite113"
 116/texture = ExtResource( 31 )
 116/tex_offset = Vector2( 0, 0 )
 116/modulate = Color( 1, 1, 1, 1 )
-116/region = Rect2( 448, 512, 64, 64 )
+116/region = Rect2( 128, 640, 64, 64 )
 116/tile_mode = 0
 116/occluder_offset = Vector2( 32, 32 )
 116/navigation_offset = Vector2( 32, 32 )
@@ -2608,11 +2635,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 116/z_index = 0
-117/name = "Sprite103"
+117/name = "Sprite114"
 117/texture = ExtResource( 31 )
 117/tex_offset = Vector2( 0, 0 )
 117/modulate = Color( 1, 1, 1, 1 )
-117/region = Rect2( 0, 576, 64, 64 )
+117/region = Rect2( 192, 640, 64, 64 )
 117/tile_mode = 0
 117/occluder_offset = Vector2( 32, 32 )
 117/navigation_offset = Vector2( 32, 32 )
@@ -2629,11 +2656,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 117/z_index = 0
-118/name = "Sprite104"
+118/name = "Sprite115"
 118/texture = ExtResource( 31 )
 118/tex_offset = Vector2( 0, 0 )
 118/modulate = Color( 1, 1, 1, 1 )
-118/region = Rect2( 64, 576, 64, 64 )
+118/region = Rect2( 256, 640, 64, 64 )
 118/tile_mode = 0
 118/occluder_offset = Vector2( 32, 32 )
 118/navigation_offset = Vector2( 32, 32 )
@@ -2650,11 +2677,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 118/z_index = 0
-119/name = "Sprite105"
+119/name = "Sprite116"
 119/texture = ExtResource( 31 )
 119/tex_offset = Vector2( 0, 0 )
 119/modulate = Color( 1, 1, 1, 1 )
-119/region = Rect2( 128, 576, 64, 64 )
+119/region = Rect2( 320, 640, 64, 64 )
 119/tile_mode = 0
 119/occluder_offset = Vector2( 32, 32 )
 119/navigation_offset = Vector2( 32, 32 )
@@ -2671,11 +2698,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 119/z_index = 0
-120/name = "Sprite106"
+120/name = "Sprite117"
 120/texture = ExtResource( 31 )
 120/tex_offset = Vector2( 0, 0 )
 120/modulate = Color( 1, 1, 1, 1 )
-120/region = Rect2( 192, 576, 64, 64 )
+120/region = Rect2( 384, 640, 64, 64 )
 120/tile_mode = 0
 120/occluder_offset = Vector2( 32, 32 )
 120/navigation_offset = Vector2( 32, 32 )
@@ -2692,11 +2719,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 120/z_index = 0
-121/name = "Sprite107"
+121/name = "Sprite118"
 121/texture = ExtResource( 31 )
 121/tex_offset = Vector2( 0, 0 )
 121/modulate = Color( 1, 1, 1, 1 )
-121/region = Rect2( 256, 576, 64, 64 )
+121/region = Rect2( 448, 640, 64, 64 )
 121/tile_mode = 0
 121/occluder_offset = Vector2( 32, 32 )
 121/navigation_offset = Vector2( 32, 32 )
@@ -2713,11 +2740,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 121/z_index = 0
-122/name = "Sprite108"
+122/name = "Sprite119"
 122/texture = ExtResource( 31 )
 122/tex_offset = Vector2( 0, 0 )
 122/modulate = Color( 1, 1, 1, 1 )
-122/region = Rect2( 320, 576, 64, 64 )
+122/region = Rect2( 0, 704, 64, 64 )
 122/tile_mode = 0
 122/occluder_offset = Vector2( 32, 32 )
 122/navigation_offset = Vector2( 32, 32 )
@@ -2734,11 +2761,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 122/z_index = 0
-123/name = "Sprite109"
+123/name = "Sprite120"
 123/texture = ExtResource( 31 )
 123/tex_offset = Vector2( 0, 0 )
 123/modulate = Color( 1, 1, 1, 1 )
-123/region = Rect2( 384, 576, 64, 64 )
+123/region = Rect2( 64, 704, 64, 64 )
 123/tile_mode = 0
 123/occluder_offset = Vector2( 32, 32 )
 123/navigation_offset = Vector2( 32, 32 )
@@ -2755,11 +2782,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 123/z_index = 0
-124/name = "Sprite110"
+124/name = "Sprite121"
 124/texture = ExtResource( 31 )
 124/tex_offset = Vector2( 0, 0 )
 124/modulate = Color( 1, 1, 1, 1 )
-124/region = Rect2( 448, 576, 64, 64 )
+124/region = Rect2( 128, 704, 64, 64 )
 124/tile_mode = 0
 124/occluder_offset = Vector2( 32, 32 )
 124/navigation_offset = Vector2( 32, 32 )
@@ -2776,11 +2803,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 124/z_index = 0
-125/name = "Sprite111"
+125/name = "Sprite122"
 125/texture = ExtResource( 31 )
 125/tex_offset = Vector2( 0, 0 )
 125/modulate = Color( 1, 1, 1, 1 )
-125/region = Rect2( 0, 640, 64, 64 )
+125/region = Rect2( 192, 704, 64, 64 )
 125/tile_mode = 0
 125/occluder_offset = Vector2( 32, 32 )
 125/navigation_offset = Vector2( 32, 32 )
@@ -2797,11 +2824,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 125/z_index = 0
-126/name = "Sprite112"
+126/name = "Sprite123"
 126/texture = ExtResource( 31 )
 126/tex_offset = Vector2( 0, 0 )
 126/modulate = Color( 1, 1, 1, 1 )
-126/region = Rect2( 64, 640, 64, 64 )
+126/region = Rect2( 256, 704, 64, 64 )
 126/tile_mode = 0
 126/occluder_offset = Vector2( 32, 32 )
 126/navigation_offset = Vector2( 32, 32 )
@@ -2818,11 +2845,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 126/z_index = 0
-127/name = "Sprite113"
+127/name = "Sprite124"
 127/texture = ExtResource( 31 )
 127/tex_offset = Vector2( 0, 0 )
 127/modulate = Color( 1, 1, 1, 1 )
-127/region = Rect2( 128, 640, 64, 64 )
+127/region = Rect2( 320, 704, 64, 64 )
 127/tile_mode = 0
 127/occluder_offset = Vector2( 32, 32 )
 127/navigation_offset = Vector2( 32, 32 )
@@ -2839,11 +2866,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 127/z_index = 0
-128/name = "Sprite114"
+128/name = "Sprite125"
 128/texture = ExtResource( 31 )
 128/tex_offset = Vector2( 0, 0 )
 128/modulate = Color( 1, 1, 1, 1 )
-128/region = Rect2( 192, 640, 64, 64 )
+128/region = Rect2( 384, 704, 64, 64 )
 128/tile_mode = 0
 128/occluder_offset = Vector2( 32, 32 )
 128/navigation_offset = Vector2( 32, 32 )
@@ -2860,11 +2887,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 128/z_index = 0
-129/name = "Sprite115"
+129/name = "Sprite126"
 129/texture = ExtResource( 31 )
 129/tex_offset = Vector2( 0, 0 )
 129/modulate = Color( 1, 1, 1, 1 )
-129/region = Rect2( 256, 640, 64, 64 )
+129/region = Rect2( 448, 704, 64, 64 )
 129/tile_mode = 0
 129/occluder_offset = Vector2( 32, 32 )
 129/navigation_offset = Vector2( 32, 32 )
@@ -2881,11 +2908,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 129/z_index = 0
-130/name = "Sprite116"
+130/name = "Sprite127"
 130/texture = ExtResource( 31 )
 130/tex_offset = Vector2( 0, 0 )
 130/modulate = Color( 1, 1, 1, 1 )
-130/region = Rect2( 320, 640, 64, 64 )
+130/region = Rect2( 0, 768, 64, 64 )
 130/tile_mode = 0
 130/occluder_offset = Vector2( 32, 32 )
 130/navigation_offset = Vector2( 32, 32 )
@@ -2902,11 +2929,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 130/z_index = 0
-131/name = "Sprite117"
+131/name = "Sprite128"
 131/texture = ExtResource( 31 )
 131/tex_offset = Vector2( 0, 0 )
 131/modulate = Color( 1, 1, 1, 1 )
-131/region = Rect2( 384, 640, 64, 64 )
+131/region = Rect2( 64, 768, 64, 64 )
 131/tile_mode = 0
 131/occluder_offset = Vector2( 32, 32 )
 131/navigation_offset = Vector2( 32, 32 )
@@ -2923,11 +2950,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 131/z_index = 0
-132/name = "Sprite118"
+132/name = "Sprite129"
 132/texture = ExtResource( 31 )
 132/tex_offset = Vector2( 0, 0 )
 132/modulate = Color( 1, 1, 1, 1 )
-132/region = Rect2( 448, 640, 64, 64 )
+132/region = Rect2( 128, 768, 64, 64 )
 132/tile_mode = 0
 132/occluder_offset = Vector2( 32, 32 )
 132/navigation_offset = Vector2( 32, 32 )
@@ -2944,11 +2971,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 132/z_index = 0
-133/name = "Sprite119"
+133/name = "Sprite130"
 133/texture = ExtResource( 31 )
 133/tex_offset = Vector2( 0, 0 )
 133/modulate = Color( 1, 1, 1, 1 )
-133/region = Rect2( 0, 704, 64, 64 )
+133/region = Rect2( 192, 768, 64, 64 )
 133/tile_mode = 0
 133/occluder_offset = Vector2( 32, 32 )
 133/navigation_offset = Vector2( 32, 32 )
@@ -2965,11 +2992,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 133/z_index = 0
-134/name = "Sprite120"
+134/name = "Sprite131"
 134/texture = ExtResource( 31 )
 134/tex_offset = Vector2( 0, 0 )
 134/modulate = Color( 1, 1, 1, 1 )
-134/region = Rect2( 64, 704, 64, 64 )
+134/region = Rect2( 256, 768, 64, 64 )
 134/tile_mode = 0
 134/occluder_offset = Vector2( 32, 32 )
 134/navigation_offset = Vector2( 32, 32 )
@@ -2986,11 +3013,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 134/z_index = 0
-135/name = "Sprite121"
+135/name = "Sprite132"
 135/texture = ExtResource( 31 )
 135/tex_offset = Vector2( 0, 0 )
 135/modulate = Color( 1, 1, 1, 1 )
-135/region = Rect2( 128, 704, 64, 64 )
+135/region = Rect2( 320, 768, 64, 64 )
 135/tile_mode = 0
 135/occluder_offset = Vector2( 32, 32 )
 135/navigation_offset = Vector2( 32, 32 )
@@ -3007,11 +3034,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 135/z_index = 0
-136/name = "Sprite122"
+136/name = "Sprite133"
 136/texture = ExtResource( 31 )
 136/tex_offset = Vector2( 0, 0 )
 136/modulate = Color( 1, 1, 1, 1 )
-136/region = Rect2( 192, 704, 64, 64 )
+136/region = Rect2( 384, 768, 64, 64 )
 136/tile_mode = 0
 136/occluder_offset = Vector2( 32, 32 )
 136/navigation_offset = Vector2( 32, 32 )
@@ -3028,11 +3055,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 136/z_index = 0
-137/name = "Sprite123"
+137/name = "Sprite134"
 137/texture = ExtResource( 31 )
 137/tex_offset = Vector2( 0, 0 )
 137/modulate = Color( 1, 1, 1, 1 )
-137/region = Rect2( 256, 704, 64, 64 )
+137/region = Rect2( 448, 768, 64, 64 )
 137/tile_mode = 0
 137/occluder_offset = Vector2( 32, 32 )
 137/navigation_offset = Vector2( 32, 32 )
@@ -3049,11 +3076,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 137/z_index = 0
-138/name = "Sprite124"
+138/name = "Sprite135"
 138/texture = ExtResource( 31 )
 138/tex_offset = Vector2( 0, 0 )
 138/modulate = Color( 1, 1, 1, 1 )
-138/region = Rect2( 320, 704, 64, 64 )
+138/region = Rect2( 0, 832, 64, 64 )
 138/tile_mode = 0
 138/occluder_offset = Vector2( 32, 32 )
 138/navigation_offset = Vector2( 32, 32 )
@@ -3070,11 +3097,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 138/z_index = 0
-139/name = "Sprite125"
+139/name = "Sprite136"
 139/texture = ExtResource( 31 )
 139/tex_offset = Vector2( 0, 0 )
 139/modulate = Color( 1, 1, 1, 1 )
-139/region = Rect2( 384, 704, 64, 64 )
+139/region = Rect2( 64, 832, 64, 64 )
 139/tile_mode = 0
 139/occluder_offset = Vector2( 32, 32 )
 139/navigation_offset = Vector2( 32, 32 )
@@ -3091,11 +3118,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 139/z_index = 0
-140/name = "Sprite126"
+140/name = "Sprite137"
 140/texture = ExtResource( 31 )
 140/tex_offset = Vector2( 0, 0 )
 140/modulate = Color( 1, 1, 1, 1 )
-140/region = Rect2( 448, 704, 64, 64 )
+140/region = Rect2( 128, 832, 64, 64 )
 140/tile_mode = 0
 140/occluder_offset = Vector2( 32, 32 )
 140/navigation_offset = Vector2( 32, 32 )
@@ -3112,11 +3139,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 140/z_index = 0
-141/name = "Sprite127"
+141/name = "Sprite138"
 141/texture = ExtResource( 31 )
 141/tex_offset = Vector2( 0, 0 )
 141/modulate = Color( 1, 1, 1, 1 )
-141/region = Rect2( 0, 768, 64, 64 )
+141/region = Rect2( 192, 832, 64, 64 )
 141/tile_mode = 0
 141/occluder_offset = Vector2( 32, 32 )
 141/navigation_offset = Vector2( 32, 32 )
@@ -3133,11 +3160,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 141/z_index = 0
-142/name = "Sprite128"
+142/name = "Sprite139"
 142/texture = ExtResource( 31 )
 142/tex_offset = Vector2( 0, 0 )
 142/modulate = Color( 1, 1, 1, 1 )
-142/region = Rect2( 64, 768, 64, 64 )
+142/region = Rect2( 256, 832, 64, 64 )
 142/tile_mode = 0
 142/occluder_offset = Vector2( 32, 32 )
 142/navigation_offset = Vector2( 32, 32 )
@@ -3154,11 +3181,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 142/z_index = 0
-143/name = "Sprite129"
+143/name = "Sprite140"
 143/texture = ExtResource( 31 )
 143/tex_offset = Vector2( 0, 0 )
 143/modulate = Color( 1, 1, 1, 1 )
-143/region = Rect2( 128, 768, 64, 64 )
+143/region = Rect2( 320, 832, 64, 64 )
 143/tile_mode = 0
 143/occluder_offset = Vector2( 32, 32 )
 143/navigation_offset = Vector2( 32, 32 )
@@ -3175,11 +3202,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 143/z_index = 0
-144/name = "Sprite130"
+144/name = "Sprite141"
 144/texture = ExtResource( 31 )
 144/tex_offset = Vector2( 0, 0 )
 144/modulate = Color( 1, 1, 1, 1 )
-144/region = Rect2( 192, 768, 64, 64 )
+144/region = Rect2( 384, 832, 64, 64 )
 144/tile_mode = 0
 144/occluder_offset = Vector2( 32, 32 )
 144/navigation_offset = Vector2( 32, 32 )
@@ -3196,11 +3223,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 144/z_index = 0
-145/name = "Sprite131"
+145/name = "Sprite142"
 145/texture = ExtResource( 31 )
 145/tex_offset = Vector2( 0, 0 )
 145/modulate = Color( 1, 1, 1, 1 )
-145/region = Rect2( 256, 768, 64, 64 )
+145/region = Rect2( 448, 832, 64, 64 )
 145/tile_mode = 0
 145/occluder_offset = Vector2( 32, 32 )
 145/navigation_offset = Vector2( 32, 32 )
@@ -3217,11 +3244,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 145/z_index = 0
-146/name = "Sprite132"
+146/name = "Sprite143"
 146/texture = ExtResource( 31 )
 146/tex_offset = Vector2( 0, 0 )
 146/modulate = Color( 1, 1, 1, 1 )
-146/region = Rect2( 320, 768, 64, 64 )
+146/region = Rect2( 0, 896, 64, 64 )
 146/tile_mode = 0
 146/occluder_offset = Vector2( 32, 32 )
 146/navigation_offset = Vector2( 32, 32 )
@@ -3238,11 +3265,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 146/z_index = 0
-147/name = "Sprite133"
+147/name = "Sprite144"
 147/texture = ExtResource( 31 )
 147/tex_offset = Vector2( 0, 0 )
 147/modulate = Color( 1, 1, 1, 1 )
-147/region = Rect2( 384, 768, 64, 64 )
+147/region = Rect2( 64, 896, 64, 64 )
 147/tile_mode = 0
 147/occluder_offset = Vector2( 32, 32 )
 147/navigation_offset = Vector2( 32, 32 )
@@ -3259,11 +3286,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 147/z_index = 0
-148/name = "Sprite134"
+148/name = "Sprite145"
 148/texture = ExtResource( 31 )
 148/tex_offset = Vector2( 0, 0 )
 148/modulate = Color( 1, 1, 1, 1 )
-148/region = Rect2( 448, 768, 64, 64 )
+148/region = Rect2( 128, 896, 64, 64 )
 148/tile_mode = 0
 148/occluder_offset = Vector2( 32, 32 )
 148/navigation_offset = Vector2( 32, 32 )
@@ -3280,11 +3307,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 148/z_index = 0
-149/name = "Sprite135"
+149/name = "Sprite146"
 149/texture = ExtResource( 31 )
 149/tex_offset = Vector2( 0, 0 )
 149/modulate = Color( 1, 1, 1, 1 )
-149/region = Rect2( 0, 832, 64, 64 )
+149/region = Rect2( 192, 896, 64, 64 )
 149/tile_mode = 0
 149/occluder_offset = Vector2( 32, 32 )
 149/navigation_offset = Vector2( 32, 32 )
@@ -3301,11 +3328,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 149/z_index = 0
-150/name = "Sprite136"
+150/name = "Sprite147"
 150/texture = ExtResource( 31 )
 150/tex_offset = Vector2( 0, 0 )
 150/modulate = Color( 1, 1, 1, 1 )
-150/region = Rect2( 64, 832, 64, 64 )
+150/region = Rect2( 256, 896, 64, 64 )
 150/tile_mode = 0
 150/occluder_offset = Vector2( 32, 32 )
 150/navigation_offset = Vector2( 32, 32 )
@@ -3322,11 +3349,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 150/z_index = 0
-151/name = "Sprite137"
+151/name = "Sprite148"
 151/texture = ExtResource( 31 )
 151/tex_offset = Vector2( 0, 0 )
 151/modulate = Color( 1, 1, 1, 1 )
-151/region = Rect2( 128, 832, 64, 64 )
+151/region = Rect2( 320, 896, 64, 64 )
 151/tile_mode = 0
 151/occluder_offset = Vector2( 32, 32 )
 151/navigation_offset = Vector2( 32, 32 )
@@ -3343,11 +3370,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 151/z_index = 0
-152/name = "Sprite138"
+152/name = "Sprite149"
 152/texture = ExtResource( 31 )
 152/tex_offset = Vector2( 0, 0 )
 152/modulate = Color( 1, 1, 1, 1 )
-152/region = Rect2( 192, 832, 64, 64 )
+152/region = Rect2( 384, 896, 64, 64 )
 152/tile_mode = 0
 152/occluder_offset = Vector2( 32, 32 )
 152/navigation_offset = Vector2( 32, 32 )
@@ -3364,11 +3391,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 152/z_index = 0
-153/name = "Sprite139"
+153/name = "Sprite150"
 153/texture = ExtResource( 31 )
 153/tex_offset = Vector2( 0, 0 )
 153/modulate = Color( 1, 1, 1, 1 )
-153/region = Rect2( 256, 832, 64, 64 )
+153/region = Rect2( 448, 896, 64, 64 )
 153/tile_mode = 0
 153/occluder_offset = Vector2( 32, 32 )
 153/navigation_offset = Vector2( 32, 32 )
@@ -3385,11 +3412,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 153/z_index = 0
-154/name = "Sprite140"
+154/name = "Sprite151"
 154/texture = ExtResource( 31 )
 154/tex_offset = Vector2( 0, 0 )
 154/modulate = Color( 1, 1, 1, 1 )
-154/region = Rect2( 320, 832, 64, 64 )
+154/region = Rect2( 0, 960, 64, 64 )
 154/tile_mode = 0
 154/occluder_offset = Vector2( 32, 32 )
 154/navigation_offset = Vector2( 32, 32 )
@@ -3406,11 +3433,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 154/z_index = 0
-155/name = "Sprite141"
+155/name = "Sprite152"
 155/texture = ExtResource( 31 )
 155/tex_offset = Vector2( 0, 0 )
 155/modulate = Color( 1, 1, 1, 1 )
-155/region = Rect2( 384, 832, 64, 64 )
+155/region = Rect2( 64, 960, 64, 64 )
 155/tile_mode = 0
 155/occluder_offset = Vector2( 32, 32 )
 155/navigation_offset = Vector2( 32, 32 )
@@ -3427,11 +3454,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 155/z_index = 0
-156/name = "Sprite142"
+156/name = "Sprite153"
 156/texture = ExtResource( 31 )
 156/tex_offset = Vector2( 0, 0 )
 156/modulate = Color( 1, 1, 1, 1 )
-156/region = Rect2( 448, 832, 64, 64 )
+156/region = Rect2( 128, 960, 64, 64 )
 156/tile_mode = 0
 156/occluder_offset = Vector2( 32, 32 )
 156/navigation_offset = Vector2( 32, 32 )
@@ -3448,11 +3475,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 156/z_index = 0
-157/name = "Sprite143"
+157/name = "Sprite154"
 157/texture = ExtResource( 31 )
 157/tex_offset = Vector2( 0, 0 )
 157/modulate = Color( 1, 1, 1, 1 )
-157/region = Rect2( 0, 896, 64, 64 )
+157/region = Rect2( 192, 960, 64, 64 )
 157/tile_mode = 0
 157/occluder_offset = Vector2( 32, 32 )
 157/navigation_offset = Vector2( 32, 32 )
@@ -3469,11 +3496,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 157/z_index = 0
-158/name = "Sprite144"
+158/name = "Sprite155"
 158/texture = ExtResource( 31 )
 158/tex_offset = Vector2( 0, 0 )
 158/modulate = Color( 1, 1, 1, 1 )
-158/region = Rect2( 64, 896, 64, 64 )
+158/region = Rect2( 256, 960, 64, 64 )
 158/tile_mode = 0
 158/occluder_offset = Vector2( 32, 32 )
 158/navigation_offset = Vector2( 32, 32 )
@@ -3490,11 +3517,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 158/z_index = 0
-159/name = "Sprite145"
+159/name = "Sprite156"
 159/texture = ExtResource( 31 )
 159/tex_offset = Vector2( 0, 0 )
 159/modulate = Color( 1, 1, 1, 1 )
-159/region = Rect2( 128, 896, 64, 64 )
+159/region = Rect2( 320, 960, 64, 64 )
 159/tile_mode = 0
 159/occluder_offset = Vector2( 32, 32 )
 159/navigation_offset = Vector2( 32, 32 )
@@ -3511,11 +3538,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 159/z_index = 0
-160/name = "Sprite146"
+160/name = "Sprite157"
 160/texture = ExtResource( 31 )
 160/tex_offset = Vector2( 0, 0 )
 160/modulate = Color( 1, 1, 1, 1 )
-160/region = Rect2( 192, 896, 64, 64 )
+160/region = Rect2( 384, 960, 64, 64 )
 160/tile_mode = 0
 160/occluder_offset = Vector2( 32, 32 )
 160/navigation_offset = Vector2( 32, 32 )
@@ -3532,11 +3559,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 160/z_index = 0
-161/name = "Sprite147"
+161/name = "Sprite158"
 161/texture = ExtResource( 31 )
 161/tex_offset = Vector2( 0, 0 )
 161/modulate = Color( 1, 1, 1, 1 )
-161/region = Rect2( 256, 896, 64, 64 )
+161/region = Rect2( 448, 960, 64, 64 )
 161/tile_mode = 0
 161/occluder_offset = Vector2( 32, 32 )
 161/navigation_offset = Vector2( 32, 32 )
@@ -3553,11 +3580,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 161/z_index = 0
-162/name = "Sprite148"
+162/name = "Sprite159"
 162/texture = ExtResource( 31 )
 162/tex_offset = Vector2( 0, 0 )
 162/modulate = Color( 1, 1, 1, 1 )
-162/region = Rect2( 320, 896, 64, 64 )
+162/region = Rect2( 0, 1024, 64, 64 )
 162/tile_mode = 0
 162/occluder_offset = Vector2( 32, 32 )
 162/navigation_offset = Vector2( 32, 32 )
@@ -3574,11 +3601,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 162/z_index = 0
-163/name = "Sprite149"
+163/name = "Sprite160"
 163/texture = ExtResource( 31 )
 163/tex_offset = Vector2( 0, 0 )
 163/modulate = Color( 1, 1, 1, 1 )
-163/region = Rect2( 384, 896, 64, 64 )
+163/region = Rect2( 64, 1024, 64, 64 )
 163/tile_mode = 0
 163/occluder_offset = Vector2( 32, 32 )
 163/navigation_offset = Vector2( 32, 32 )
@@ -3595,11 +3622,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 163/z_index = 0
-164/name = "Sprite150"
+164/name = "Sprite161"
 164/texture = ExtResource( 31 )
 164/tex_offset = Vector2( 0, 0 )
 164/modulate = Color( 1, 1, 1, 1 )
-164/region = Rect2( 448, 896, 64, 64 )
+164/region = Rect2( 128, 1024, 64, 64 )
 164/tile_mode = 0
 164/occluder_offset = Vector2( 32, 32 )
 164/navigation_offset = Vector2( 32, 32 )
@@ -3616,11 +3643,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 164/z_index = 0
-165/name = "Sprite151"
+165/name = "Sprite162"
 165/texture = ExtResource( 31 )
 165/tex_offset = Vector2( 0, 0 )
 165/modulate = Color( 1, 1, 1, 1 )
-165/region = Rect2( 0, 960, 64, 64 )
+165/region = Rect2( 192, 1024, 64, 64 )
 165/tile_mode = 0
 165/occluder_offset = Vector2( 32, 32 )
 165/navigation_offset = Vector2( 32, 32 )
@@ -3637,11 +3664,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 165/z_index = 0
-166/name = "Sprite152"
+166/name = "Sprite163"
 166/texture = ExtResource( 31 )
 166/tex_offset = Vector2( 0, 0 )
 166/modulate = Color( 1, 1, 1, 1 )
-166/region = Rect2( 64, 960, 64, 64 )
+166/region = Rect2( 256, 1024, 64, 64 )
 166/tile_mode = 0
 166/occluder_offset = Vector2( 32, 32 )
 166/navigation_offset = Vector2( 32, 32 )
@@ -3658,11 +3685,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 166/z_index = 0
-167/name = "Sprite153"
+167/name = "Sprite164"
 167/texture = ExtResource( 31 )
 167/tex_offset = Vector2( 0, 0 )
 167/modulate = Color( 1, 1, 1, 1 )
-167/region = Rect2( 128, 960, 64, 64 )
+167/region = Rect2( 320, 1024, 64, 64 )
 167/tile_mode = 0
 167/occluder_offset = Vector2( 32, 32 )
 167/navigation_offset = Vector2( 32, 32 )
@@ -3679,11 +3706,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 167/z_index = 0
-168/name = "Sprite154"
+168/name = "Sprite165"
 168/texture = ExtResource( 31 )
 168/tex_offset = Vector2( 0, 0 )
 168/modulate = Color( 1, 1, 1, 1 )
-168/region = Rect2( 192, 960, 64, 64 )
+168/region = Rect2( 384, 1024, 64, 64 )
 168/tile_mode = 0
 168/occluder_offset = Vector2( 32, 32 )
 168/navigation_offset = Vector2( 32, 32 )
@@ -3700,11 +3727,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 168/z_index = 0
-169/name = "Sprite155"
+169/name = "Sprite166"
 169/texture = ExtResource( 31 )
 169/tex_offset = Vector2( 0, 0 )
 169/modulate = Color( 1, 1, 1, 1 )
-169/region = Rect2( 256, 960, 64, 64 )
+169/region = Rect2( 448, 1024, 64, 64 )
 169/tile_mode = 0
 169/occluder_offset = Vector2( 32, 32 )
 169/navigation_offset = Vector2( 32, 32 )
@@ -3721,11 +3748,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 169/z_index = 0
-170/name = "Sprite156"
+170/name = "Sprite167"
 170/texture = ExtResource( 31 )
 170/tex_offset = Vector2( 0, 0 )
 170/modulate = Color( 1, 1, 1, 1 )
-170/region = Rect2( 320, 960, 64, 64 )
+170/region = Rect2( 0, 1088, 64, 64 )
 170/tile_mode = 0
 170/occluder_offset = Vector2( 32, 32 )
 170/navigation_offset = Vector2( 32, 32 )
@@ -3742,11 +3769,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 170/z_index = 0
-171/name = "Sprite157"
-171/texture = ExtResource( 31 )
+171/name = "Sprite168"
+171/texture = ExtResource( 6 )
 171/tex_offset = Vector2( 0, 0 )
 171/modulate = Color( 1, 1, 1, 1 )
-171/region = Rect2( 384, 960, 64, 64 )
+171/region = Rect2( 0, 0, 64, 64 )
 171/tile_mode = 0
 171/occluder_offset = Vector2( 32, 32 )
 171/navigation_offset = Vector2( 32, 32 )
@@ -3763,95 +3790,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 171/z_index = 0
-172/name = "Sprite158"
-172/texture = ExtResource( 31 )
+172/name = "Sprite325"
+172/texture = ExtResource( 18 )
 172/tex_offset = Vector2( 0, 0 )
 172/modulate = Color( 1, 1, 1, 1 )
-172/region = Rect2( 448, 960, 64, 64 )
+172/region = Rect2( 0, 64, 64, 64 )
 172/tile_mode = 0
 172/occluder_offset = Vector2( 32, 32 )
 172/navigation_offset = Vector2( 32, 32 )
 172/shape_offset = Vector2( 32, 32 )
 172/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-172/shape = SubResource( 1 )
+172/shape = SubResource( 13 )
 172/shape_one_way = false
 172/shape_one_way_margin = 1.0
 172/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 172/z_index = 0
-173/name = "Sprite159"
-173/texture = ExtResource( 31 )
+173/name = "Sprite326"
+173/texture = ExtResource( 18 )
 173/tex_offset = Vector2( 0, 0 )
 173/modulate = Color( 1, 1, 1, 1 )
-173/region = Rect2( 0, 1024, 64, 64 )
+173/region = Rect2( 0, 128, 64, 64 )
 173/tile_mode = 0
 173/occluder_offset = Vector2( 32, 32 )
 173/navigation_offset = Vector2( 32, 32 )
 173/shape_offset = Vector2( 32, 32 )
 173/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-173/shape = SubResource( 1 )
+173/shape = SubResource( 14 )
 173/shape_one_way = false
 173/shape_one_way_margin = 1.0
 173/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 173/z_index = 0
-174/name = "Sprite160"
-174/texture = ExtResource( 31 )
+174/name = "Sprite327"
+174/texture = ExtResource( 18 )
 174/tex_offset = Vector2( 0, 0 )
 174/modulate = Color( 1, 1, 1, 1 )
-174/region = Rect2( 64, 1024, 64, 64 )
+174/region = Rect2( 0, 192, 64, 64 )
 174/tile_mode = 0
 174/occluder_offset = Vector2( 32, 32 )
 174/navigation_offset = Vector2( 32, 32 )
 174/shape_offset = Vector2( 32, 32 )
 174/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-174/shape = SubResource( 1 )
+174/shape = SubResource( 15 )
 174/shape_one_way = false
 174/shape_one_way_margin = 1.0
 174/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 174/z_index = 0
-175/name = "Sprite161"
-175/texture = ExtResource( 31 )
+175/name = "Sprite328"
+175/texture = ExtResource( 18 )
 175/tex_offset = Vector2( 0, 0 )
 175/modulate = Color( 1, 1, 1, 1 )
-175/region = Rect2( 128, 1024, 64, 64 )
+175/region = Rect2( 0, 256, 64, 64 )
 175/tile_mode = 0
 175/occluder_offset = Vector2( 32, 32 )
 175/navigation_offset = Vector2( 32, 32 )
 175/shape_offset = Vector2( 32, 32 )
 175/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-175/shape = SubResource( 1 )
+175/shape = SubResource( 16 )
 175/shape_one_way = false
 175/shape_one_way_margin = 1.0
 175/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 175/z_index = 0
-176/name = "Sprite162"
-176/texture = ExtResource( 31 )
+176/name = "Sprite329"
+176/texture = ExtResource( 18 )
 176/tex_offset = Vector2( 0, 0 )
 176/modulate = Color( 1, 1, 1, 1 )
-176/region = Rect2( 192, 1024, 64, 64 )
+176/region = Rect2( 0, 0, 64, 64 )
 176/tile_mode = 0
 176/occluder_offset = Vector2( 32, 32 )
 176/navigation_offset = Vector2( 32, 32 )
@@ -3868,95 +3895,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 176/z_index = 0
-177/name = "Sprite163"
-177/texture = ExtResource( 31 )
+177/name = "Sprite330"
+177/texture = ExtResource( 2 )
 177/tex_offset = Vector2( 0, 0 )
 177/modulate = Color( 1, 1, 1, 1 )
-177/region = Rect2( 256, 1024, 64, 64 )
+177/region = Rect2( 0, 64, 64, 64 )
 177/tile_mode = 0
 177/occluder_offset = Vector2( 32, 32 )
 177/navigation_offset = Vector2( 32, 32 )
 177/shape_offset = Vector2( 32, 32 )
 177/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-177/shape = SubResource( 1 )
+177/shape = SubResource( 17 )
 177/shape_one_way = false
 177/shape_one_way_margin = 1.0
 177/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 177/z_index = 0
-178/name = "Sprite164"
-178/texture = ExtResource( 31 )
+178/name = "Sprite331"
+178/texture = ExtResource( 2 )
 178/tex_offset = Vector2( 0, 0 )
 178/modulate = Color( 1, 1, 1, 1 )
-178/region = Rect2( 320, 1024, 64, 64 )
+178/region = Rect2( 0, 128, 64, 64 )
 178/tile_mode = 0
 178/occluder_offset = Vector2( 32, 32 )
 178/navigation_offset = Vector2( 32, 32 )
 178/shape_offset = Vector2( 32, 32 )
 178/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-178/shape = SubResource( 1 )
+178/shape = SubResource( 18 )
 178/shape_one_way = false
 178/shape_one_way_margin = 1.0
 178/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 178/z_index = 0
-179/name = "Sprite165"
-179/texture = ExtResource( 31 )
+179/name = "Sprite332"
+179/texture = ExtResource( 2 )
 179/tex_offset = Vector2( 0, 0 )
 179/modulate = Color( 1, 1, 1, 1 )
-179/region = Rect2( 384, 1024, 64, 64 )
+179/region = Rect2( 0, 192, 64, 64 )
 179/tile_mode = 0
 179/occluder_offset = Vector2( 32, 32 )
 179/navigation_offset = Vector2( 32, 32 )
 179/shape_offset = Vector2( 32, 32 )
 179/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-179/shape = SubResource( 1 )
+179/shape = SubResource( 19 )
 179/shape_one_way = false
 179/shape_one_way_margin = 1.0
 179/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 179/z_index = 0
-180/name = "Sprite166"
-180/texture = ExtResource( 31 )
+180/name = "Sprite333"
+180/texture = ExtResource( 2 )
 180/tex_offset = Vector2( 0, 0 )
 180/modulate = Color( 1, 1, 1, 1 )
-180/region = Rect2( 448, 1024, 64, 64 )
+180/region = Rect2( 0, 256, 64, 64 )
 180/tile_mode = 0
 180/occluder_offset = Vector2( 32, 32 )
 180/navigation_offset = Vector2( 32, 32 )
 180/shape_offset = Vector2( 32, 32 )
 180/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-180/shape = SubResource( 1 )
+180/shape = SubResource( 21 )
 180/shape_one_way = false
 180/shape_one_way_margin = 1.0
 180/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 180/z_index = 0
-181/name = "Sprite167"
-181/texture = ExtResource( 31 )
+181/name = "Sprite334"
+181/texture = ExtResource( 2 )
 181/tex_offset = Vector2( 0, 0 )
 181/modulate = Color( 1, 1, 1, 1 )
-181/region = Rect2( 0, 1088, 64, 64 )
+181/region = Rect2( 0, 0, 64, 64 )
 181/tile_mode = 0
 181/occluder_offset = Vector2( 32, 32 )
 181/navigation_offset = Vector2( 32, 32 )
@@ -3973,95 +4000,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 181/z_index = 0
-182/name = "Sprite168"
-182/texture = ExtResource( 2 )
+182/name = "Sprite335"
+182/texture = ExtResource( 13 )
 182/tex_offset = Vector2( 0, 0 )
 182/modulate = Color( 1, 1, 1, 1 )
-182/region = Rect2( 0, 0, 64, 64 )
+182/region = Rect2( 0, 64, 64, 64 )
 182/tile_mode = 0
 182/occluder_offset = Vector2( 32, 32 )
 182/navigation_offset = Vector2( 32, 32 )
 182/shape_offset = Vector2( 32, 32 )
 182/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-182/shape = SubResource( 1 )
+182/shape = SubResource( 22 )
 182/shape_one_way = false
 182/shape_one_way_margin = 1.0
 182/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 182/z_index = 0
-183/name = "Sprite169"
-183/texture = ExtResource( 31 )
+183/name = "Sprite336"
+183/texture = ExtResource( 13 )
 183/tex_offset = Vector2( 0, 0 )
 183/modulate = Color( 1, 1, 1, 1 )
-183/region = Rect2( 128, 1088, 64, 64 )
+183/region = Rect2( 0, 128, 64, 64 )
 183/tile_mode = 0
 183/occluder_offset = Vector2( 32, 32 )
 183/navigation_offset = Vector2( 32, 32 )
 183/shape_offset = Vector2( 32, 32 )
 183/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-183/shape = SubResource( 1 )
+183/shape = SubResource( 23 )
 183/shape_one_way = false
 183/shape_one_way_margin = 1.0
 183/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 183/z_index = 0
-184/name = "Sprite170"
-184/texture = ExtResource( 31 )
+184/name = "Sprite337"
+184/texture = ExtResource( 13 )
 184/tex_offset = Vector2( 0, 0 )
 184/modulate = Color( 1, 1, 1, 1 )
-184/region = Rect2( 192, 1088, 64, 64 )
+184/region = Rect2( 0, 192, 64, 64 )
 184/tile_mode = 0
 184/occluder_offset = Vector2( 32, 32 )
 184/navigation_offset = Vector2( 32, 32 )
 184/shape_offset = Vector2( 32, 32 )
 184/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-184/shape = SubResource( 1 )
+184/shape = SubResource( 24 )
 184/shape_one_way = false
 184/shape_one_way_margin = 1.0
 184/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 184/z_index = 0
-185/name = "Sprite171"
-185/texture = ExtResource( 31 )
+185/name = "Sprite338"
+185/texture = ExtResource( 13 )
 185/tex_offset = Vector2( 0, 0 )
 185/modulate = Color( 1, 1, 1, 1 )
-185/region = Rect2( 256, 1088, 64, 64 )
+185/region = Rect2( 0, 256, 64, 64 )
 185/tile_mode = 0
 185/occluder_offset = Vector2( 32, 32 )
 185/navigation_offset = Vector2( 32, 32 )
 185/shape_offset = Vector2( 32, 32 )
 185/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-185/shape = SubResource( 1 )
+185/shape = SubResource( 25 )
 185/shape_one_way = false
 185/shape_one_way_margin = 1.0
 185/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 185/z_index = 0
-186/name = "Sprite172"
-186/texture = ExtResource( 31 )
+186/name = "Sprite339"
+186/texture = ExtResource( 13 )
 186/tex_offset = Vector2( 0, 0 )
 186/modulate = Color( 1, 1, 1, 1 )
-186/region = Rect2( 320, 1088, 64, 64 )
+186/region = Rect2( 0, 0, 64, 64 )
 186/tile_mode = 0
 186/occluder_offset = Vector2( 32, 32 )
 186/navigation_offset = Vector2( 32, 32 )
@@ -4078,11 +4105,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 186/z_index = 0
-187/name = "Sprite173"
+187/name = "Sprite169"
 187/texture = ExtResource( 31 )
 187/tex_offset = Vector2( 0, 0 )
 187/modulate = Color( 1, 1, 1, 1 )
-187/region = Rect2( 384, 1088, 64, 64 )
+187/region = Rect2( 128, 1088, 64, 64 )
 187/tile_mode = 0
 187/occluder_offset = Vector2( 32, 32 )
 187/navigation_offset = Vector2( 32, 32 )
@@ -4099,11 +4126,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 187/z_index = 0
-188/name = "Sprite174"
+188/name = "Sprite170"
 188/texture = ExtResource( 31 )
 188/tex_offset = Vector2( 0, 0 )
 188/modulate = Color( 1, 1, 1, 1 )
-188/region = Rect2( 448, 1088, 64, 64 )
+188/region = Rect2( 192, 1088, 64, 64 )
 188/tile_mode = 0
 188/occluder_offset = Vector2( 32, 32 )
 188/navigation_offset = Vector2( 32, 32 )
@@ -4120,11 +4147,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 188/z_index = 0
-189/name = "Sprite175"
+189/name = "Sprite171"
 189/texture = ExtResource( 31 )
 189/tex_offset = Vector2( 0, 0 )
 189/modulate = Color( 1, 1, 1, 1 )
-189/region = Rect2( 0, 1152, 64, 64 )
+189/region = Rect2( 256, 1088, 64, 64 )
 189/tile_mode = 0
 189/occluder_offset = Vector2( 32, 32 )
 189/navigation_offset = Vector2( 32, 32 )
@@ -4141,11 +4168,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 189/z_index = 0
-190/name = "Sprite176"
+190/name = "Sprite172"
 190/texture = ExtResource( 31 )
 190/tex_offset = Vector2( 0, 0 )
 190/modulate = Color( 1, 1, 1, 1 )
-190/region = Rect2( 64, 1152, 64, 64 )
+190/region = Rect2( 320, 1088, 64, 64 )
 190/tile_mode = 0
 190/occluder_offset = Vector2( 32, 32 )
 190/navigation_offset = Vector2( 32, 32 )
@@ -4162,11 +4189,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 190/z_index = 0
-191/name = "Sprite177"
+191/name = "Sprite173"
 191/texture = ExtResource( 31 )
 191/tex_offset = Vector2( 0, 0 )
 191/modulate = Color( 1, 1, 1, 1 )
-191/region = Rect2( 128, 1152, 64, 64 )
+191/region = Rect2( 384, 1088, 64, 64 )
 191/tile_mode = 0
 191/occluder_offset = Vector2( 32, 32 )
 191/navigation_offset = Vector2( 32, 32 )
@@ -4183,11 +4210,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 191/z_index = 0
-192/name = "Sprite178"
+192/name = "Sprite174"
 192/texture = ExtResource( 31 )
 192/tex_offset = Vector2( 0, 0 )
 192/modulate = Color( 1, 1, 1, 1 )
-192/region = Rect2( 192, 1152, 64, 64 )
+192/region = Rect2( 448, 1088, 64, 64 )
 192/tile_mode = 0
 192/occluder_offset = Vector2( 32, 32 )
 192/navigation_offset = Vector2( 32, 32 )
@@ -4204,11 +4231,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 192/z_index = 0
-193/name = "Sprite179"
+193/name = "Sprite175"
 193/texture = ExtResource( 31 )
 193/tex_offset = Vector2( 0, 0 )
 193/modulate = Color( 1, 1, 1, 1 )
-193/region = Rect2( 256, 1152, 64, 64 )
+193/region = Rect2( 0, 1152, 64, 64 )
 193/tile_mode = 0
 193/occluder_offset = Vector2( 32, 32 )
 193/navigation_offset = Vector2( 32, 32 )
@@ -4225,11 +4252,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 193/z_index = 0
-194/name = "Sprite180"
+194/name = "Sprite176"
 194/texture = ExtResource( 31 )
 194/tex_offset = Vector2( 0, 0 )
 194/modulate = Color( 1, 1, 1, 1 )
-194/region = Rect2( 320, 1152, 64, 64 )
+194/region = Rect2( 64, 1152, 64, 64 )
 194/tile_mode = 0
 194/occluder_offset = Vector2( 32, 32 )
 194/navigation_offset = Vector2( 32, 32 )
@@ -4246,11 +4273,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 194/z_index = 0
-195/name = "Sprite181"
+195/name = "Sprite177"
 195/texture = ExtResource( 31 )
 195/tex_offset = Vector2( 0, 0 )
 195/modulate = Color( 1, 1, 1, 1 )
-195/region = Rect2( 384, 1152, 64, 64 )
+195/region = Rect2( 128, 1152, 64, 64 )
 195/tile_mode = 0
 195/occluder_offset = Vector2( 32, 32 )
 195/navigation_offset = Vector2( 32, 32 )
@@ -4267,11 +4294,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 195/z_index = 0
-196/name = "Sprite182"
+196/name = "Sprite178"
 196/texture = ExtResource( 31 )
 196/tex_offset = Vector2( 0, 0 )
 196/modulate = Color( 1, 1, 1, 1 )
-196/region = Rect2( 448, 1152, 64, 64 )
+196/region = Rect2( 192, 1152, 64, 64 )
 196/tile_mode = 0
 196/occluder_offset = Vector2( 32, 32 )
 196/navigation_offset = Vector2( 32, 32 )
@@ -4288,11 +4315,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 196/z_index = 0
-197/name = "Sprite183"
+197/name = "Sprite179"
 197/texture = ExtResource( 31 )
 197/tex_offset = Vector2( 0, 0 )
 197/modulate = Color( 1, 1, 1, 1 )
-197/region = Rect2( 0, 1216, 64, 64 )
+197/region = Rect2( 256, 1152, 64, 64 )
 197/tile_mode = 0
 197/occluder_offset = Vector2( 32, 32 )
 197/navigation_offset = Vector2( 32, 32 )
@@ -4309,11 +4336,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 197/z_index = 0
-198/name = "Sprite184"
-198/texture = ExtResource( 30 )
+198/name = "Sprite180"
+198/texture = ExtResource( 31 )
 198/tex_offset = Vector2( 0, 0 )
 198/modulate = Color( 1, 1, 1, 1 )
-198/region = Rect2( 0, 0, 64, 64 )
+198/region = Rect2( 320, 1152, 64, 64 )
 198/tile_mode = 0
 198/occluder_offset = Vector2( 32, 32 )
 198/navigation_offset = Vector2( 32, 32 )
@@ -4330,11 +4357,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 198/z_index = 0
-199/name = "Sprite185"
+199/name = "Sprite181"
 199/texture = ExtResource( 31 )
 199/tex_offset = Vector2( 0, 0 )
 199/modulate = Color( 1, 1, 1, 1 )
-199/region = Rect2( 128, 1216, 64, 64 )
+199/region = Rect2( 384, 1152, 64, 64 )
 199/tile_mode = 0
 199/occluder_offset = Vector2( 32, 32 )
 199/navigation_offset = Vector2( 32, 32 )
@@ -4351,11 +4378,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 199/z_index = 0
-200/name = "Sprite186"
+200/name = "Sprite182"
 200/texture = ExtResource( 31 )
 200/tex_offset = Vector2( 0, 0 )
 200/modulate = Color( 1, 1, 1, 1 )
-200/region = Rect2( 192, 1216, 64, 64 )
+200/region = Rect2( 448, 1152, 64, 64 )
 200/tile_mode = 0
 200/occluder_offset = Vector2( 32, 32 )
 200/navigation_offset = Vector2( 32, 32 )
@@ -4372,11 +4399,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 200/z_index = 0
-201/name = "Sprite187"
+201/name = "Sprite183"
 201/texture = ExtResource( 31 )
 201/tex_offset = Vector2( 0, 0 )
 201/modulate = Color( 1, 1, 1, 1 )
-201/region = Rect2( 256, 1216, 64, 64 )
+201/region = Rect2( 0, 1216, 64, 64 )
 201/tile_mode = 0
 201/occluder_offset = Vector2( 32, 32 )
 201/navigation_offset = Vector2( 32, 32 )
@@ -4393,11 +4420,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 201/z_index = 0
-202/name = "Sprite188"
-202/texture = ExtResource( 31 )
+202/name = "Sprite184"
+202/texture = ExtResource( 1 )
 202/tex_offset = Vector2( 0, 0 )
 202/modulate = Color( 1, 1, 1, 1 )
-202/region = Rect2( 320, 1216, 64, 64 )
+202/region = Rect2( 0, 0, 64, 64 )
 202/tile_mode = 0
 202/occluder_offset = Vector2( 32, 32 )
 202/navigation_offset = Vector2( 32, 32 )
@@ -4414,11 +4441,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 202/z_index = 0
-203/name = "Sprite189"
+203/name = "Sprite185"
 203/texture = ExtResource( 31 )
 203/tex_offset = Vector2( 0, 0 )
 203/modulate = Color( 1, 1, 1, 1 )
-203/region = Rect2( 384, 1216, 64, 64 )
+203/region = Rect2( 128, 1216, 64, 64 )
 203/tile_mode = 0
 203/occluder_offset = Vector2( 32, 32 )
 203/navigation_offset = Vector2( 32, 32 )
@@ -4435,11 +4462,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 203/z_index = 0
-204/name = "Sprite190"
+204/name = "Sprite186"
 204/texture = ExtResource( 31 )
 204/tex_offset = Vector2( 0, 0 )
 204/modulate = Color( 1, 1, 1, 1 )
-204/region = Rect2( 448, 1216, 64, 64 )
+204/region = Rect2( 192, 1216, 64, 64 )
 204/tile_mode = 0
 204/occluder_offset = Vector2( 32, 32 )
 204/navigation_offset = Vector2( 32, 32 )
@@ -4456,11 +4483,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 204/z_index = 0
-205/name = "Sprite191"
+205/name = "Sprite187"
 205/texture = ExtResource( 31 )
 205/tex_offset = Vector2( 0, 0 )
 205/modulate = Color( 1, 1, 1, 1 )
-205/region = Rect2( 0, 1280, 64, 64 )
+205/region = Rect2( 256, 1216, 64, 64 )
 205/tile_mode = 0
 205/occluder_offset = Vector2( 32, 32 )
 205/navigation_offset = Vector2( 32, 32 )
@@ -4477,11 +4504,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 205/z_index = 0
-206/name = "Sprite192"
+206/name = "Sprite188"
 206/texture = ExtResource( 31 )
 206/tex_offset = Vector2( 0, 0 )
 206/modulate = Color( 1, 1, 1, 1 )
-206/region = Rect2( 64, 1280, 64, 64 )
+206/region = Rect2( 320, 1216, 64, 64 )
 206/tile_mode = 0
 206/occluder_offset = Vector2( 32, 32 )
 206/navigation_offset = Vector2( 32, 32 )
@@ -4498,11 +4525,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 206/z_index = 0
-207/name = "Sprite193"
+207/name = "Sprite189"
 207/texture = ExtResource( 31 )
 207/tex_offset = Vector2( 0, 0 )
 207/modulate = Color( 1, 1, 1, 1 )
-207/region = Rect2( 128, 1280, 64, 64 )
+207/region = Rect2( 384, 1216, 64, 64 )
 207/tile_mode = 0
 207/occluder_offset = Vector2( 32, 32 )
 207/navigation_offset = Vector2( 32, 32 )
@@ -4519,11 +4546,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 207/z_index = 0
-208/name = "Sprite194"
+208/name = "Sprite190"
 208/texture = ExtResource( 31 )
 208/tex_offset = Vector2( 0, 0 )
 208/modulate = Color( 1, 1, 1, 1 )
-208/region = Rect2( 192, 1280, 64, 64 )
+208/region = Rect2( 448, 1216, 64, 64 )
 208/tile_mode = 0
 208/occluder_offset = Vector2( 32, 32 )
 208/navigation_offset = Vector2( 32, 32 )
@@ -4540,11 +4567,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 208/z_index = 0
-209/name = "Sprite195"
+209/name = "Sprite191"
 209/texture = ExtResource( 31 )
 209/tex_offset = Vector2( 0, 0 )
 209/modulate = Color( 1, 1, 1, 1 )
-209/region = Rect2( 256, 1280, 64, 64 )
+209/region = Rect2( 0, 1280, 64, 64 )
 209/tile_mode = 0
 209/occluder_offset = Vector2( 32, 32 )
 209/navigation_offset = Vector2( 32, 32 )
@@ -4561,11 +4588,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 209/z_index = 0
-210/name = "Sprite196"
+210/name = "Sprite192"
 210/texture = ExtResource( 31 )
 210/tex_offset = Vector2( 0, 0 )
 210/modulate = Color( 1, 1, 1, 1 )
-210/region = Rect2( 320, 1280, 64, 64 )
+210/region = Rect2( 64, 1280, 64, 64 )
 210/tile_mode = 0
 210/occluder_offset = Vector2( 32, 32 )
 210/navigation_offset = Vector2( 32, 32 )
@@ -4582,11 +4609,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 210/z_index = 0
-211/name = "Sprite197"
+211/name = "Sprite193"
 211/texture = ExtResource( 31 )
 211/tex_offset = Vector2( 0, 0 )
 211/modulate = Color( 1, 1, 1, 1 )
-211/region = Rect2( 384, 1280, 64, 64 )
+211/region = Rect2( 128, 1280, 64, 64 )
 211/tile_mode = 0
 211/occluder_offset = Vector2( 32, 32 )
 211/navigation_offset = Vector2( 32, 32 )
@@ -4603,11 +4630,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 211/z_index = 0
-212/name = "Sprite198"
+212/name = "Sprite194"
 212/texture = ExtResource( 31 )
 212/tex_offset = Vector2( 0, 0 )
 212/modulate = Color( 1, 1, 1, 1 )
-212/region = Rect2( 448, 1280, 64, 64 )
+212/region = Rect2( 192, 1280, 64, 64 )
 212/tile_mode = 0
 212/occluder_offset = Vector2( 32, 32 )
 212/navigation_offset = Vector2( 32, 32 )
@@ -4624,11 +4651,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 212/z_index = 0
-213/name = "Sprite199"
+213/name = "Sprite195"
 213/texture = ExtResource( 31 )
 213/tex_offset = Vector2( 0, 0 )
 213/modulate = Color( 1, 1, 1, 1 )
-213/region = Rect2( 0, 1344, 64, 64 )
+213/region = Rect2( 256, 1280, 64, 64 )
 213/tile_mode = 0
 213/occluder_offset = Vector2( 32, 32 )
 213/navigation_offset = Vector2( 32, 32 )
@@ -4645,11 +4672,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 213/z_index = 0
-214/name = "Sprite200"
+214/name = "Sprite196"
 214/texture = ExtResource( 31 )
 214/tex_offset = Vector2( 0, 0 )
 214/modulate = Color( 1, 1, 1, 1 )
-214/region = Rect2( 64, 1344, 64, 64 )
+214/region = Rect2( 320, 1280, 64, 64 )
 214/tile_mode = 0
 214/occluder_offset = Vector2( 32, 32 )
 214/navigation_offset = Vector2( 32, 32 )
@@ -4666,11 +4693,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 214/z_index = 0
-215/name = "Sprite201"
+215/name = "Sprite197"
 215/texture = ExtResource( 31 )
 215/tex_offset = Vector2( 0, 0 )
 215/modulate = Color( 1, 1, 1, 1 )
-215/region = Rect2( 128, 1344, 64, 64 )
+215/region = Rect2( 384, 1280, 64, 64 )
 215/tile_mode = 0
 215/occluder_offset = Vector2( 32, 32 )
 215/navigation_offset = Vector2( 32, 32 )
@@ -4687,11 +4714,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 215/z_index = 0
-216/name = "Sprite202"
+216/name = "Sprite198"
 216/texture = ExtResource( 31 )
 216/tex_offset = Vector2( 0, 0 )
 216/modulate = Color( 1, 1, 1, 1 )
-216/region = Rect2( 192, 1344, 64, 64 )
+216/region = Rect2( 448, 1280, 64, 64 )
 216/tile_mode = 0
 216/occluder_offset = Vector2( 32, 32 )
 216/navigation_offset = Vector2( 32, 32 )
@@ -4708,11 +4735,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 216/z_index = 0
-217/name = "Sprite203"
+217/name = "Sprite199"
 217/texture = ExtResource( 31 )
 217/tex_offset = Vector2( 0, 0 )
 217/modulate = Color( 1, 1, 1, 1 )
-217/region = Rect2( 256, 1344, 64, 64 )
+217/region = Rect2( 0, 1344, 64, 64 )
 217/tile_mode = 0
 217/occluder_offset = Vector2( 32, 32 )
 217/navigation_offset = Vector2( 32, 32 )
@@ -4729,11 +4756,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 217/z_index = 0
-218/name = "Sprite204"
+218/name = "Sprite200"
 218/texture = ExtResource( 31 )
 218/tex_offset = Vector2( 0, 0 )
 218/modulate = Color( 1, 1, 1, 1 )
-218/region = Rect2( 320, 1344, 64, 64 )
+218/region = Rect2( 64, 1344, 64, 64 )
 218/tile_mode = 0
 218/occluder_offset = Vector2( 32, 32 )
 218/navigation_offset = Vector2( 32, 32 )
@@ -4750,11 +4777,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 218/z_index = 0
-219/name = "Sprite205"
+219/name = "Sprite201"
 219/texture = ExtResource( 31 )
 219/tex_offset = Vector2( 0, 0 )
 219/modulate = Color( 1, 1, 1, 1 )
-219/region = Rect2( 384, 1344, 64, 64 )
+219/region = Rect2( 128, 1344, 64, 64 )
 219/tile_mode = 0
 219/occluder_offset = Vector2( 32, 32 )
 219/navigation_offset = Vector2( 32, 32 )
@@ -4771,11 +4798,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 219/z_index = 0
-220/name = "Sprite206"
+220/name = "Sprite202"
 220/texture = ExtResource( 31 )
 220/tex_offset = Vector2( 0, 0 )
 220/modulate = Color( 1, 1, 1, 1 )
-220/region = Rect2( 448, 1344, 64, 64 )
+220/region = Rect2( 192, 1344, 64, 64 )
 220/tile_mode = 0
 220/occluder_offset = Vector2( 32, 32 )
 220/navigation_offset = Vector2( 32, 32 )
@@ -4792,11 +4819,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 220/z_index = 0
-221/name = "Sprite207"
+221/name = "Sprite203"
 221/texture = ExtResource( 31 )
 221/tex_offset = Vector2( 0, 0 )
 221/modulate = Color( 1, 1, 1, 1 )
-221/region = Rect2( 0, 1408, 64, 64 )
+221/region = Rect2( 256, 1344, 64, 64 )
 221/tile_mode = 0
 221/occluder_offset = Vector2( 32, 32 )
 221/navigation_offset = Vector2( 32, 32 )
@@ -4813,11 +4840,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 221/z_index = 0
-222/name = "Sprite208"
+222/name = "Sprite204"
 222/texture = ExtResource( 31 )
 222/tex_offset = Vector2( 0, 0 )
 222/modulate = Color( 1, 1, 1, 1 )
-222/region = Rect2( 64, 1408, 64, 64 )
+222/region = Rect2( 320, 1344, 64, 64 )
 222/tile_mode = 0
 222/occluder_offset = Vector2( 32, 32 )
 222/navigation_offset = Vector2( 32, 32 )
@@ -4834,11 +4861,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 222/z_index = 0
-223/name = "Sprite209"
+223/name = "Sprite205"
 223/texture = ExtResource( 31 )
 223/tex_offset = Vector2( 0, 0 )
 223/modulate = Color( 1, 1, 1, 1 )
-223/region = Rect2( 128, 1408, 64, 64 )
+223/region = Rect2( 384, 1344, 64, 64 )
 223/tile_mode = 0
 223/occluder_offset = Vector2( 32, 32 )
 223/navigation_offset = Vector2( 32, 32 )
@@ -4855,11 +4882,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 223/z_index = 0
-224/name = "Sprite210"
+224/name = "Sprite206"
 224/texture = ExtResource( 31 )
 224/tex_offset = Vector2( 0, 0 )
 224/modulate = Color( 1, 1, 1, 1 )
-224/region = Rect2( 192, 1408, 64, 64 )
+224/region = Rect2( 448, 1344, 64, 64 )
 224/tile_mode = 0
 224/occluder_offset = Vector2( 32, 32 )
 224/navigation_offset = Vector2( 32, 32 )
@@ -4876,11 +4903,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 224/z_index = 0
-225/name = "Sprite211"
+225/name = "Sprite207"
 225/texture = ExtResource( 31 )
 225/tex_offset = Vector2( 0, 0 )
 225/modulate = Color( 1, 1, 1, 1 )
-225/region = Rect2( 256, 1408, 64, 64 )
+225/region = Rect2( 0, 1408, 64, 64 )
 225/tile_mode = 0
 225/occluder_offset = Vector2( 32, 32 )
 225/navigation_offset = Vector2( 32, 32 )
@@ -4897,11 +4924,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 225/z_index = 0
-226/name = "Sprite212"
+226/name = "Sprite208"
 226/texture = ExtResource( 31 )
 226/tex_offset = Vector2( 0, 0 )
 226/modulate = Color( 1, 1, 1, 1 )
-226/region = Rect2( 320, 1408, 64, 64 )
+226/region = Rect2( 64, 1408, 64, 64 )
 226/tile_mode = 0
 226/occluder_offset = Vector2( 32, 32 )
 226/navigation_offset = Vector2( 32, 32 )
@@ -4918,11 +4945,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 226/z_index = 0
-227/name = "Sprite213"
+227/name = "Sprite209"
 227/texture = ExtResource( 31 )
 227/tex_offset = Vector2( 0, 0 )
 227/modulate = Color( 1, 1, 1, 1 )
-227/region = Rect2( 384, 1408, 64, 64 )
+227/region = Rect2( 128, 1408, 64, 64 )
 227/tile_mode = 0
 227/occluder_offset = Vector2( 32, 32 )
 227/navigation_offset = Vector2( 32, 32 )
@@ -4939,11 +4966,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 227/z_index = 0
-228/name = "Sprite214"
+228/name = "Sprite210"
 228/texture = ExtResource( 31 )
 228/tex_offset = Vector2( 0, 0 )
 228/modulate = Color( 1, 1, 1, 1 )
-228/region = Rect2( 448, 1408, 64, 64 )
+228/region = Rect2( 192, 1408, 64, 64 )
 228/tile_mode = 0
 228/occluder_offset = Vector2( 32, 32 )
 228/navigation_offset = Vector2( 32, 32 )
@@ -4960,11 +4987,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 228/z_index = 0
-229/name = "Sprite215"
+229/name = "Sprite211"
 229/texture = ExtResource( 31 )
 229/tex_offset = Vector2( 0, 0 )
 229/modulate = Color( 1, 1, 1, 1 )
-229/region = Rect2( 0, 1472, 64, 64 )
+229/region = Rect2( 256, 1408, 64, 64 )
 229/tile_mode = 0
 229/occluder_offset = Vector2( 32, 32 )
 229/navigation_offset = Vector2( 32, 32 )
@@ -4981,11 +5008,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 229/z_index = 0
-230/name = "Sprite216"
+230/name = "Sprite212"
 230/texture = ExtResource( 31 )
 230/tex_offset = Vector2( 0, 0 )
 230/modulate = Color( 1, 1, 1, 1 )
-230/region = Rect2( 64, 1472, 64, 64 )
+230/region = Rect2( 320, 1408, 64, 64 )
 230/tile_mode = 0
 230/occluder_offset = Vector2( 32, 32 )
 230/navigation_offset = Vector2( 32, 32 )
@@ -5002,11 +5029,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 230/z_index = 0
-231/name = "Sprite217"
+231/name = "Sprite213"
 231/texture = ExtResource( 31 )
 231/tex_offset = Vector2( 0, 0 )
 231/modulate = Color( 1, 1, 1, 1 )
-231/region = Rect2( 128, 1472, 64, 64 )
+231/region = Rect2( 384, 1408, 64, 64 )
 231/tile_mode = 0
 231/occluder_offset = Vector2( 32, 32 )
 231/navigation_offset = Vector2( 32, 32 )
@@ -5023,11 +5050,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 231/z_index = 0
-232/name = "Sprite218"
+232/name = "Sprite214"
 232/texture = ExtResource( 31 )
 232/tex_offset = Vector2( 0, 0 )
 232/modulate = Color( 1, 1, 1, 1 )
-232/region = Rect2( 192, 1472, 64, 64 )
+232/region = Rect2( 448, 1408, 64, 64 )
 232/tile_mode = 0
 232/occluder_offset = Vector2( 32, 32 )
 232/navigation_offset = Vector2( 32, 32 )
@@ -5044,11 +5071,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 232/z_index = 0
-233/name = "Sprite219"
+233/name = "Sprite215"
 233/texture = ExtResource( 31 )
 233/tex_offset = Vector2( 0, 0 )
 233/modulate = Color( 1, 1, 1, 1 )
-233/region = Rect2( 256, 1472, 64, 64 )
+233/region = Rect2( 0, 1472, 64, 64 )
 233/tile_mode = 0
 233/occluder_offset = Vector2( 32, 32 )
 233/navigation_offset = Vector2( 32, 32 )
@@ -5065,11 +5092,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 233/z_index = 0
-234/name = "Sprite220"
-234/texture = ExtResource( 27 )
+234/name = "Sprite216"
+234/texture = ExtResource( 31 )
 234/tex_offset = Vector2( 0, 0 )
 234/modulate = Color( 1, 1, 1, 1 )
-234/region = Rect2( 0, 0, 64, 64 )
+234/region = Rect2( 64, 1472, 64, 64 )
 234/tile_mode = 0
 234/occluder_offset = Vector2( 32, 32 )
 234/navigation_offset = Vector2( 32, 32 )
@@ -5086,11 +5113,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 234/z_index = 0
-235/name = "Sprite221"
-235/texture = ExtResource( 8 )
+235/name = "Sprite217"
+235/texture = ExtResource( 31 )
 235/tex_offset = Vector2( 0, 0 )
 235/modulate = Color( 1, 1, 1, 1 )
-235/region = Rect2( 0, 0, 64, 64 )
+235/region = Rect2( 128, 1472, 64, 64 )
 235/tile_mode = 0
 235/occluder_offset = Vector2( 32, 32 )
 235/navigation_offset = Vector2( 32, 32 )
@@ -5107,11 +5134,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 235/z_index = 0
-236/name = "Sprite222"
+236/name = "Sprite218"
 236/texture = ExtResource( 31 )
 236/tex_offset = Vector2( 0, 0 )
 236/modulate = Color( 1, 1, 1, 1 )
-236/region = Rect2( 448, 1472, 64, 64 )
+236/region = Rect2( 192, 1472, 64, 64 )
 236/tile_mode = 0
 236/occluder_offset = Vector2( 32, 32 )
 236/navigation_offset = Vector2( 32, 32 )
@@ -5128,11 +5155,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 236/z_index = 0
-237/name = "Sprite223"
+237/name = "Sprite219"
 237/texture = ExtResource( 31 )
 237/tex_offset = Vector2( 0, 0 )
 237/modulate = Color( 1, 1, 1, 1 )
-237/region = Rect2( 0, 1536, 64, 64 )
+237/region = Rect2( 256, 1472, 64, 64 )
 237/tile_mode = 0
 237/occluder_offset = Vector2( 32, 32 )
 237/navigation_offset = Vector2( 32, 32 )
@@ -5149,8 +5176,8 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 237/z_index = 0
-238/name = "Sprite224"
-238/texture = ExtResource( 4 )
+238/name = "Sprite220"
+238/texture = ExtResource( 11 )
 238/tex_offset = Vector2( 0, 0 )
 238/modulate = Color( 1, 1, 1, 1 )
 238/region = Rect2( 0, 0, 64, 64 )
@@ -5170,95 +5197,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 238/z_index = 0
-239/name = "Sprite225"
-239/texture = ExtResource( 31 )
+239/name = "Sprite310"
+239/texture = ExtResource( 9 )
 239/tex_offset = Vector2( 0, 0 )
 239/modulate = Color( 1, 1, 1, 1 )
-239/region = Rect2( 128, 1536, 64, 64 )
+239/region = Rect2( 0, 192, 64, 64 )
 239/tile_mode = 0
 239/occluder_offset = Vector2( 32, 32 )
 239/navigation_offset = Vector2( 32, 32 )
 239/shape_offset = Vector2( 32, 32 )
 239/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-239/shape = SubResource( 1 )
+239/shape = SubResource( 32 )
 239/shape_one_way = false
 239/shape_one_way_margin = 1.0
 239/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 32 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 239/z_index = 0
-240/name = "Sprite226"
-240/texture = ExtResource( 31 )
+240/name = "Sprite311"
+240/texture = ExtResource( 9 )
 240/tex_offset = Vector2( 0, 0 )
 240/modulate = Color( 1, 1, 1, 1 )
-240/region = Rect2( 192, 1536, 64, 64 )
+240/region = Rect2( 0, 256, 64, 64 )
 240/tile_mode = 0
 240/occluder_offset = Vector2( 32, 32 )
 240/navigation_offset = Vector2( 32, 32 )
 240/shape_offset = Vector2( 32, 32 )
 240/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-240/shape = SubResource( 1 )
+240/shape = SubResource( 33 )
 240/shape_one_way = false
 240/shape_one_way_margin = 1.0
 240/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 33 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 240/z_index = 0
-241/name = "Sprite227"
-241/texture = ExtResource( 31 )
+241/name = "Sprite312"
+241/texture = ExtResource( 9 )
 241/tex_offset = Vector2( 0, 0 )
 241/modulate = Color( 1, 1, 1, 1 )
-241/region = Rect2( 256, 1536, 64, 64 )
+241/region = Rect2( 0, 128, 64, 64 )
 241/tile_mode = 0
 241/occluder_offset = Vector2( 32, 32 )
 241/navigation_offset = Vector2( 32, 32 )
 241/shape_offset = Vector2( 32, 32 )
 241/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-241/shape = SubResource( 1 )
+241/shape = SubResource( 34 )
 241/shape_one_way = false
 241/shape_one_way_margin = 1.0
 241/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 34 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 241/z_index = 0
-242/name = "Sprite228"
-242/texture = ExtResource( 31 )
+242/name = "Sprite313"
+242/texture = ExtResource( 9 )
 242/tex_offset = Vector2( 0, 0 )
 242/modulate = Color( 1, 1, 1, 1 )
-242/region = Rect2( 320, 1536, 64, 64 )
+242/region = Rect2( 0, 64, 64, 64 )
 242/tile_mode = 0
 242/occluder_offset = Vector2( 32, 32 )
 242/navigation_offset = Vector2( 32, 32 )
 242/shape_offset = Vector2( 32, 32 )
 242/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-242/shape = SubResource( 1 )
+242/shape = SubResource( 35 )
 242/shape_one_way = false
 242/shape_one_way_margin = 1.0
 242/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 35 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 242/z_index = 0
-243/name = "Sprite229"
-243/texture = ExtResource( 31 )
+243/name = "Sprite314"
+243/texture = ExtResource( 9 )
 243/tex_offset = Vector2( 0, 0 )
 243/modulate = Color( 1, 1, 1, 1 )
-243/region = Rect2( 384, 1536, 64, 64 )
+243/region = Rect2( 0, 0, 64, 64 )
 243/tile_mode = 0
 243/occluder_offset = Vector2( 32, 32 )
 243/navigation_offset = Vector2( 32, 32 )
@@ -5275,95 +5302,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 243/z_index = 0
-244/name = "Sprite230"
-244/texture = ExtResource( 31 )
+244/name = "Sprite315"
+244/texture = ExtResource( 14 )
 244/tex_offset = Vector2( 0, 0 )
 244/modulate = Color( 1, 1, 1, 1 )
-244/region = Rect2( 448, 1536, 64, 64 )
+244/region = Rect2( 0, 256, 64, 64 )
 244/tile_mode = 0
 244/occluder_offset = Vector2( 32, 32 )
 244/navigation_offset = Vector2( 32, 32 )
 244/shape_offset = Vector2( 32, 32 )
 244/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-244/shape = SubResource( 1 )
+244/shape = SubResource( 36 )
 244/shape_one_way = false
 244/shape_one_way_margin = 1.0
 244/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 36 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 244/z_index = 0
-245/name = "Sprite231"
-245/texture = ExtResource( 31 )
+245/name = "Sprite316"
+245/texture = ExtResource( 14 )
 245/tex_offset = Vector2( 0, 0 )
 245/modulate = Color( 1, 1, 1, 1 )
-245/region = Rect2( 0, 1600, 64, 64 )
+245/region = Rect2( 0, 192, 64, 64 )
 245/tile_mode = 0
 245/occluder_offset = Vector2( 32, 32 )
 245/navigation_offset = Vector2( 32, 32 )
 245/shape_offset = Vector2( 32, 32 )
 245/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-245/shape = SubResource( 1 )
+245/shape = SubResource( 37 )
 245/shape_one_way = false
 245/shape_one_way_margin = 1.0
 245/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 37 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 245/z_index = 0
-246/name = "Sprite232"
-246/texture = ExtResource( 31 )
+246/name = "Sprite317"
+246/texture = ExtResource( 14 )
 246/tex_offset = Vector2( 0, 0 )
 246/modulate = Color( 1, 1, 1, 1 )
-246/region = Rect2( 64, 1600, 64, 64 )
+246/region = Rect2( 0, 64, 64, 64 )
 246/tile_mode = 0
 246/occluder_offset = Vector2( 32, 32 )
 246/navigation_offset = Vector2( 32, 32 )
 246/shape_offset = Vector2( 32, 32 )
 246/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-246/shape = SubResource( 1 )
+246/shape = SubResource( 38 )
 246/shape_one_way = false
 246/shape_one_way_margin = 1.0
 246/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 38 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 246/z_index = 0
-247/name = "Sprite233"
-247/texture = ExtResource( 31 )
+247/name = "Sprite318"
+247/texture = ExtResource( 14 )
 247/tex_offset = Vector2( 0, 0 )
 247/modulate = Color( 1, 1, 1, 1 )
-247/region = Rect2( 128, 1600, 64, 64 )
+247/region = Rect2( 0, 128, 64, 64 )
 247/tile_mode = 0
 247/occluder_offset = Vector2( 32, 32 )
 247/navigation_offset = Vector2( 32, 32 )
 247/shape_offset = Vector2( 32, 32 )
 247/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-247/shape = SubResource( 1 )
+247/shape = SubResource( 39 )
 247/shape_one_way = false
 247/shape_one_way_margin = 1.0
 247/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 39 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 247/z_index = 0
-248/name = "Sprite234"
-248/texture = ExtResource( 31 )
+248/name = "Sprite319"
+248/texture = ExtResource( 14 )
 248/tex_offset = Vector2( 0, 0 )
 248/modulate = Color( 1, 1, 1, 1 )
-248/region = Rect2( 192, 1600, 64, 64 )
+248/region = Rect2( 0, 0, 64, 64 )
 248/tile_mode = 0
 248/occluder_offset = Vector2( 32, 32 )
 248/navigation_offset = Vector2( 32, 32 )
@@ -5380,95 +5407,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 248/z_index = 0
-249/name = "Sprite236"
-249/texture = ExtResource( 31 )
+249/name = "Sprite320"
+249/texture = ExtResource( 8 )
 249/tex_offset = Vector2( 0, 0 )
 249/modulate = Color( 1, 1, 1, 1 )
-249/region = Rect2( 320, 1600, 64, 64 )
+249/region = Rect2( 0, 256, 64, 64 )
 249/tile_mode = 0
 249/occluder_offset = Vector2( 32, 32 )
 249/navigation_offset = Vector2( 32, 32 )
 249/shape_offset = Vector2( 32, 32 )
 249/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-249/shape = SubResource( 1 )
+249/shape = SubResource( 40 )
 249/shape_one_way = false
 249/shape_one_way_margin = 1.0
 249/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 40 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 249/z_index = 0
-250/name = "Sprite237"
-250/texture = ExtResource( 31 )
+250/name = "Sprite321"
+250/texture = ExtResource( 8 )
 250/tex_offset = Vector2( 0, 0 )
 250/modulate = Color( 1, 1, 1, 1 )
-250/region = Rect2( 384, 1600, 64, 64 )
+250/region = Rect2( 0, 192, 64, 64 )
 250/tile_mode = 0
 250/occluder_offset = Vector2( 32, 32 )
 250/navigation_offset = Vector2( 32, 32 )
 250/shape_offset = Vector2( 32, 32 )
 250/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-250/shape = SubResource( 1 )
+250/shape = SubResource( 41 )
 250/shape_one_way = false
 250/shape_one_way_margin = 1.0
 250/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 41 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 250/z_index = 0
-251/name = "Sprite238"
-251/texture = ExtResource( 31 )
+251/name = "Sprite322"
+251/texture = ExtResource( 8 )
 251/tex_offset = Vector2( 0, 0 )
 251/modulate = Color( 1, 1, 1, 1 )
-251/region = Rect2( 448, 1600, 64, 64 )
+251/region = Rect2( 0, 64, 64, 64 )
 251/tile_mode = 0
 251/occluder_offset = Vector2( 32, 32 )
 251/navigation_offset = Vector2( 32, 32 )
 251/shape_offset = Vector2( 32, 32 )
 251/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-251/shape = SubResource( 1 )
+251/shape = SubResource( 42 )
 251/shape_one_way = false
 251/shape_one_way_margin = 1.0
 251/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 42 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 251/z_index = 0
-252/name = "Sprite239"
-252/texture = ExtResource( 31 )
+252/name = "Sprite323"
+252/texture = ExtResource( 8 )
 252/tex_offset = Vector2( 0, 0 )
 252/modulate = Color( 1, 1, 1, 1 )
-252/region = Rect2( 0, 1664, 64, 64 )
+252/region = Rect2( 0, 128, 64, 64 )
 252/tile_mode = 0
 252/occluder_offset = Vector2( 32, 32 )
 252/navigation_offset = Vector2( 32, 32 )
 252/shape_offset = Vector2( 32, 32 )
 252/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-252/shape = SubResource( 1 )
+252/shape = SubResource( 43 )
 252/shape_one_way = false
 252/shape_one_way_margin = 1.0
 252/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 43 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 252/z_index = 0
-253/name = "Sprite240"
-253/texture = ExtResource( 31 )
+253/name = "Sprite324"
+253/texture = ExtResource( 8 )
 253/tex_offset = Vector2( 0, 0 )
 253/modulate = Color( 1, 1, 1, 1 )
-253/region = Rect2( 64, 1664, 64, 64 )
+253/region = Rect2( 0, 0, 64, 64 )
 253/tile_mode = 0
 253/occluder_offset = Vector2( 32, 32 )
 253/navigation_offset = Vector2( 32, 32 )
@@ -5485,11 +5512,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 253/z_index = 0
-254/name = "Sprite241"
-254/texture = ExtResource( 31 )
+254/name = "Sprite221"
+254/texture = ExtResource( 10 )
 254/tex_offset = Vector2( 0, 0 )
 254/modulate = Color( 1, 1, 1, 1 )
-254/region = Rect2( 128, 1664, 64, 64 )
+254/region = Rect2( 0, 0, 64, 64 )
 254/tile_mode = 0
 254/occluder_offset = Vector2( 32, 32 )
 254/navigation_offset = Vector2( 32, 32 )
@@ -5506,11 +5533,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 254/z_index = 0
-255/name = "Sprite242"
+255/name = "Sprite222"
 255/texture = ExtResource( 31 )
 255/tex_offset = Vector2( 0, 0 )
 255/modulate = Color( 1, 1, 1, 1 )
-255/region = Rect2( 192, 1664, 64, 64 )
+255/region = Rect2( 448, 1472, 64, 64 )
 255/tile_mode = 0
 255/occluder_offset = Vector2( 32, 32 )
 255/navigation_offset = Vector2( 32, 32 )
@@ -5527,11 +5554,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 255/z_index = 0
-256/name = "Sprite243"
+256/name = "Sprite223"
 256/texture = ExtResource( 31 )
 256/tex_offset = Vector2( 0, 0 )
 256/modulate = Color( 1, 1, 1, 1 )
-256/region = Rect2( 256, 1664, 64, 64 )
+256/region = Rect2( 0, 1536, 64, 64 )
 256/tile_mode = 0
 256/occluder_offset = Vector2( 32, 32 )
 256/navigation_offset = Vector2( 32, 32 )
@@ -5548,11 +5575,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 256/z_index = 0
-257/name = "Sprite244"
-257/texture = ExtResource( 31 )
+257/name = "Sprite224"
+257/texture = ExtResource( 7 )
 257/tex_offset = Vector2( 0, 0 )
 257/modulate = Color( 1, 1, 1, 1 )
-257/region = Rect2( 320, 1664, 64, 64 )
+257/region = Rect2( 0, 0, 64, 64 )
 257/tile_mode = 0
 257/occluder_offset = Vector2( 32, 32 )
 257/navigation_offset = Vector2( 32, 32 )
@@ -5569,11 +5596,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 257/z_index = 0
-258/name = "Sprite245"
+258/name = "Sprite225"
 258/texture = ExtResource( 31 )
 258/tex_offset = Vector2( 0, 0 )
 258/modulate = Color( 1, 1, 1, 1 )
-258/region = Rect2( 384, 1664, 64, 64 )
+258/region = Rect2( 128, 1536, 64, 64 )
 258/tile_mode = 0
 258/occluder_offset = Vector2( 32, 32 )
 258/navigation_offset = Vector2( 32, 32 )
@@ -5590,11 +5617,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 258/z_index = 0
-259/name = "Sprite246"
+259/name = "Sprite226"
 259/texture = ExtResource( 31 )
 259/tex_offset = Vector2( 0, 0 )
 259/modulate = Color( 1, 1, 1, 1 )
-259/region = Rect2( 448, 1664, 64, 64 )
+259/region = Rect2( 192, 1536, 64, 64 )
 259/tile_mode = 0
 259/occluder_offset = Vector2( 32, 32 )
 259/navigation_offset = Vector2( 32, 32 )
@@ -5611,11 +5638,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 259/z_index = 0
-260/name = "Sprite247"
+260/name = "Sprite227"
 260/texture = ExtResource( 31 )
 260/tex_offset = Vector2( 0, 0 )
 260/modulate = Color( 1, 1, 1, 1 )
-260/region = Rect2( 0, 1728, 64, 64 )
+260/region = Rect2( 256, 1536, 64, 64 )
 260/tile_mode = 0
 260/occluder_offset = Vector2( 32, 32 )
 260/navigation_offset = Vector2( 32, 32 )
@@ -5632,11 +5659,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 260/z_index = 0
-261/name = "Sprite248"
+261/name = "Sprite228"
 261/texture = ExtResource( 31 )
 261/tex_offset = Vector2( 0, 0 )
 261/modulate = Color( 1, 1, 1, 1 )
-261/region = Rect2( 64, 1728, 64, 64 )
+261/region = Rect2( 320, 1536, 64, 64 )
 261/tile_mode = 0
 261/occluder_offset = Vector2( 32, 32 )
 261/navigation_offset = Vector2( 32, 32 )
@@ -5653,11 +5680,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 261/z_index = 0
-262/name = "Sprite249"
+262/name = "Sprite229"
 262/texture = ExtResource( 31 )
 262/tex_offset = Vector2( 0, 0 )
 262/modulate = Color( 1, 1, 1, 1 )
-262/region = Rect2( 128, 1728, 64, 64 )
+262/region = Rect2( 384, 1536, 64, 64 )
 262/tile_mode = 0
 262/occluder_offset = Vector2( 32, 32 )
 262/navigation_offset = Vector2( 32, 32 )
@@ -5674,11 +5701,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 262/z_index = 0
-263/name = "Sprite250"
+263/name = "Sprite230"
 263/texture = ExtResource( 31 )
 263/tex_offset = Vector2( 0, 0 )
 263/modulate = Color( 1, 1, 1, 1 )
-263/region = Rect2( 192, 1728, 64, 64 )
+263/region = Rect2( 448, 1536, 64, 64 )
 263/tile_mode = 0
 263/occluder_offset = Vector2( 32, 32 )
 263/navigation_offset = Vector2( 32, 32 )
@@ -5695,11 +5722,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 263/z_index = 0
-264/name = "Sprite251"
+264/name = "Sprite231"
 264/texture = ExtResource( 31 )
 264/tex_offset = Vector2( 0, 0 )
 264/modulate = Color( 1, 1, 1, 1 )
-264/region = Rect2( 256, 1728, 64, 64 )
+264/region = Rect2( 0, 1600, 64, 64 )
 264/tile_mode = 0
 264/occluder_offset = Vector2( 32, 32 )
 264/navigation_offset = Vector2( 32, 32 )
@@ -5716,11 +5743,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 264/z_index = 0
-265/name = "Sprite252"
+265/name = "Sprite232"
 265/texture = ExtResource( 31 )
 265/tex_offset = Vector2( 0, 0 )
 265/modulate = Color( 1, 1, 1, 1 )
-265/region = Rect2( 320, 1728, 64, 64 )
+265/region = Rect2( 64, 1600, 64, 64 )
 265/tile_mode = 0
 265/occluder_offset = Vector2( 32, 32 )
 265/navigation_offset = Vector2( 32, 32 )
@@ -5737,11 +5764,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 265/z_index = 0
-266/name = "Sprite253"
+266/name = "Sprite233"
 266/texture = ExtResource( 31 )
 266/tex_offset = Vector2( 0, 0 )
 266/modulate = Color( 1, 1, 1, 1 )
-266/region = Rect2( 384, 1728, 64, 64 )
+266/region = Rect2( 128, 1600, 64, 64 )
 266/tile_mode = 0
 266/occluder_offset = Vector2( 32, 32 )
 266/navigation_offset = Vector2( 32, 32 )
@@ -5758,11 +5785,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 266/z_index = 0
-267/name = "Sprite254"
+267/name = "Sprite234"
 267/texture = ExtResource( 31 )
 267/tex_offset = Vector2( 0, 0 )
 267/modulate = Color( 1, 1, 1, 1 )
-267/region = Rect2( 448, 1728, 64, 64 )
+267/region = Rect2( 192, 1600, 64, 64 )
 267/tile_mode = 0
 267/occluder_offset = Vector2( 32, 32 )
 267/navigation_offset = Vector2( 32, 32 )
@@ -5779,11 +5806,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 267/z_index = 0
-268/name = "Sprite255"
+268/name = "Sprite236"
 268/texture = ExtResource( 31 )
 268/tex_offset = Vector2( 0, 0 )
 268/modulate = Color( 1, 1, 1, 1 )
-268/region = Rect2( 0, 1792, 64, 64 )
+268/region = Rect2( 320, 1600, 64, 64 )
 268/tile_mode = 0
 268/occluder_offset = Vector2( 32, 32 )
 268/navigation_offset = Vector2( 32, 32 )
@@ -5800,11 +5827,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 268/z_index = 0
-269/name = "Sprite256"
+269/name = "Sprite237"
 269/texture = ExtResource( 31 )
 269/tex_offset = Vector2( 0, 0 )
 269/modulate = Color( 1, 1, 1, 1 )
-269/region = Rect2( 64, 1792, 64, 64 )
+269/region = Rect2( 384, 1600, 64, 64 )
 269/tile_mode = 0
 269/occluder_offset = Vector2( 32, 32 )
 269/navigation_offset = Vector2( 32, 32 )
@@ -5821,11 +5848,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 269/z_index = 0
-270/name = "Sprite257"
+270/name = "Sprite238"
 270/texture = ExtResource( 31 )
 270/tex_offset = Vector2( 0, 0 )
 270/modulate = Color( 1, 1, 1, 1 )
-270/region = Rect2( 128, 1792, 64, 64 )
+270/region = Rect2( 448, 1600, 64, 64 )
 270/tile_mode = 0
 270/occluder_offset = Vector2( 32, 32 )
 270/navigation_offset = Vector2( 32, 32 )
@@ -5842,11 +5869,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 270/z_index = 0
-271/name = "Sprite258"
+271/name = "Sprite239"
 271/texture = ExtResource( 31 )
 271/tex_offset = Vector2( 0, 0 )
 271/modulate = Color( 1, 1, 1, 1 )
-271/region = Rect2( 192, 1792, 64, 64 )
+271/region = Rect2( 0, 1664, 64, 64 )
 271/tile_mode = 0
 271/occluder_offset = Vector2( 32, 32 )
 271/navigation_offset = Vector2( 32, 32 )
@@ -5863,11 +5890,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 271/z_index = 0
-272/name = "Sprite259"
+272/name = "Sprite240"
 272/texture = ExtResource( 31 )
 272/tex_offset = Vector2( 0, 0 )
 272/modulate = Color( 1, 1, 1, 1 )
-272/region = Rect2( 256, 1792, 64, 64 )
+272/region = Rect2( 64, 1664, 64, 64 )
 272/tile_mode = 0
 272/occluder_offset = Vector2( 32, 32 )
 272/navigation_offset = Vector2( 32, 32 )
@@ -5884,11 +5911,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 272/z_index = 0
-273/name = "Sprite260"
+273/name = "Sprite241"
 273/texture = ExtResource( 31 )
 273/tex_offset = Vector2( 0, 0 )
 273/modulate = Color( 1, 1, 1, 1 )
-273/region = Rect2( 320, 1792, 64, 64 )
+273/region = Rect2( 128, 1664, 64, 64 )
 273/tile_mode = 0
 273/occluder_offset = Vector2( 32, 32 )
 273/navigation_offset = Vector2( 32, 32 )
@@ -5905,11 +5932,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 273/z_index = 0
-274/name = "Sprite261"
+274/name = "Sprite242"
 274/texture = ExtResource( 31 )
 274/tex_offset = Vector2( 0, 0 )
 274/modulate = Color( 1, 1, 1, 1 )
-274/region = Rect2( 384, 1792, 64, 64 )
+274/region = Rect2( 192, 1664, 64, 64 )
 274/tile_mode = 0
 274/occluder_offset = Vector2( 32, 32 )
 274/navigation_offset = Vector2( 32, 32 )
@@ -5926,11 +5953,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 274/z_index = 0
-275/name = "Sprite262"
+275/name = "Sprite243"
 275/texture = ExtResource( 31 )
 275/tex_offset = Vector2( 0, 0 )
 275/modulate = Color( 1, 1, 1, 1 )
-275/region = Rect2( 448, 1792, 64, 64 )
+275/region = Rect2( 256, 1664, 64, 64 )
 275/tile_mode = 0
 275/occluder_offset = Vector2( 32, 32 )
 275/navigation_offset = Vector2( 32, 32 )
@@ -5947,11 +5974,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 275/z_index = 0
-276/name = "Sprite263"
+276/name = "Sprite244"
 276/texture = ExtResource( 31 )
 276/tex_offset = Vector2( 0, 0 )
 276/modulate = Color( 1, 1, 1, 1 )
-276/region = Rect2( 0, 1856, 64, 64 )
+276/region = Rect2( 320, 1664, 64, 64 )
 276/tile_mode = 0
 276/occluder_offset = Vector2( 32, 32 )
 276/navigation_offset = Vector2( 32, 32 )
@@ -5968,11 +5995,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 276/z_index = 0
-277/name = "Sprite264"
+277/name = "Sprite245"
 277/texture = ExtResource( 31 )
 277/tex_offset = Vector2( 0, 0 )
 277/modulate = Color( 1, 1, 1, 1 )
-277/region = Rect2( 64, 1856, 64, 64 )
+277/region = Rect2( 384, 1664, 64, 64 )
 277/tile_mode = 0
 277/occluder_offset = Vector2( 32, 32 )
 277/navigation_offset = Vector2( 32, 32 )
@@ -5989,11 +6016,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 277/z_index = 0
-278/name = "Sprite265"
+278/name = "Sprite246"
 278/texture = ExtResource( 31 )
 278/tex_offset = Vector2( 0, 0 )
 278/modulate = Color( 1, 1, 1, 1 )
-278/region = Rect2( 128, 1856, 64, 64 )
+278/region = Rect2( 448, 1664, 64, 64 )
 278/tile_mode = 0
 278/occluder_offset = Vector2( 32, 32 )
 278/navigation_offset = Vector2( 32, 32 )
@@ -6010,11 +6037,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 278/z_index = 0
-279/name = "Sprite266"
+279/name = "Sprite247"
 279/texture = ExtResource( 31 )
 279/tex_offset = Vector2( 0, 0 )
 279/modulate = Color( 1, 1, 1, 1 )
-279/region = Rect2( 192, 1856, 64, 64 )
+279/region = Rect2( 0, 1728, 64, 64 )
 279/tile_mode = 0
 279/occluder_offset = Vector2( 32, 32 )
 279/navigation_offset = Vector2( 32, 32 )
@@ -6031,11 +6058,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 279/z_index = 0
-280/name = "Sprite267"
+280/name = "Sprite248"
 280/texture = ExtResource( 31 )
 280/tex_offset = Vector2( 0, 0 )
 280/modulate = Color( 1, 1, 1, 1 )
-280/region = Rect2( 256, 1856, 64, 64 )
+280/region = Rect2( 64, 1728, 64, 64 )
 280/tile_mode = 0
 280/occluder_offset = Vector2( 32, 32 )
 280/navigation_offset = Vector2( 32, 32 )
@@ -6052,11 +6079,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 280/z_index = 0
-281/name = "Sprite268"
+281/name = "Sprite249"
 281/texture = ExtResource( 31 )
 281/tex_offset = Vector2( 0, 0 )
 281/modulate = Color( 1, 1, 1, 1 )
-281/region = Rect2( 320, 1856, 64, 64 )
+281/region = Rect2( 128, 1728, 64, 64 )
 281/tile_mode = 0
 281/occluder_offset = Vector2( 32, 32 )
 281/navigation_offset = Vector2( 32, 32 )
@@ -6073,11 +6100,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 281/z_index = 0
-282/name = "Sprite269"
+282/name = "Sprite250"
 282/texture = ExtResource( 31 )
 282/tex_offset = Vector2( 0, 0 )
 282/modulate = Color( 1, 1, 1, 1 )
-282/region = Rect2( 384, 1856, 64, 64 )
+282/region = Rect2( 192, 1728, 64, 64 )
 282/tile_mode = 0
 282/occluder_offset = Vector2( 32, 32 )
 282/navigation_offset = Vector2( 32, 32 )
@@ -6094,11 +6121,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 282/z_index = 0
-283/name = "Sprite270"
+283/name = "Sprite251"
 283/texture = ExtResource( 31 )
 283/tex_offset = Vector2( 0, 0 )
 283/modulate = Color( 1, 1, 1, 1 )
-283/region = Rect2( 448, 1856, 64, 64 )
+283/region = Rect2( 256, 1728, 64, 64 )
 283/tile_mode = 0
 283/occluder_offset = Vector2( 32, 32 )
 283/navigation_offset = Vector2( 32, 32 )
@@ -6115,11 +6142,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 283/z_index = 0
-284/name = "Sprite271"
+284/name = "Sprite252"
 284/texture = ExtResource( 31 )
 284/tex_offset = Vector2( 0, 0 )
 284/modulate = Color( 1, 1, 1, 1 )
-284/region = Rect2( 0, 1920, 64, 64 )
+284/region = Rect2( 320, 1728, 64, 64 )
 284/tile_mode = 0
 284/occluder_offset = Vector2( 32, 32 )
 284/navigation_offset = Vector2( 32, 32 )
@@ -6136,11 +6163,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 284/z_index = 0
-285/name = "Sprite272"
+285/name = "Sprite253"
 285/texture = ExtResource( 31 )
 285/tex_offset = Vector2( 0, 0 )
 285/modulate = Color( 1, 1, 1, 1 )
-285/region = Rect2( 64, 1920, 64, 64 )
+285/region = Rect2( 384, 1728, 64, 64 )
 285/tile_mode = 0
 285/occluder_offset = Vector2( 32, 32 )
 285/navigation_offset = Vector2( 32, 32 )
@@ -6157,11 +6184,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 285/z_index = 0
-286/name = "Sprite273"
+286/name = "Sprite254"
 286/texture = ExtResource( 31 )
 286/tex_offset = Vector2( 0, 0 )
 286/modulate = Color( 1, 1, 1, 1 )
-286/region = Rect2( 128, 1920, 64, 64 )
+286/region = Rect2( 448, 1728, 64, 64 )
 286/tile_mode = 0
 286/occluder_offset = Vector2( 32, 32 )
 286/navigation_offset = Vector2( 32, 32 )
@@ -6178,11 +6205,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 286/z_index = 0
-287/name = "Sprite274"
+287/name = "Sprite255"
 287/texture = ExtResource( 31 )
 287/tex_offset = Vector2( 0, 0 )
 287/modulate = Color( 1, 1, 1, 1 )
-287/region = Rect2( 192, 1920, 64, 64 )
+287/region = Rect2( 0, 1792, 64, 64 )
 287/tile_mode = 0
 287/occluder_offset = Vector2( 32, 32 )
 287/navigation_offset = Vector2( 32, 32 )
@@ -6199,11 +6226,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 287/z_index = 0
-288/name = "Sprite275"
+288/name = "Sprite256"
 288/texture = ExtResource( 31 )
 288/tex_offset = Vector2( 0, 0 )
 288/modulate = Color( 1, 1, 1, 1 )
-288/region = Rect2( 256, 1920, 64, 64 )
+288/region = Rect2( 64, 1792, 64, 64 )
 288/tile_mode = 0
 288/occluder_offset = Vector2( 32, 32 )
 288/navigation_offset = Vector2( 32, 32 )
@@ -6220,11 +6247,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 288/z_index = 0
-289/name = "Sprite276"
+289/name = "Sprite257"
 289/texture = ExtResource( 31 )
 289/tex_offset = Vector2( 0, 0 )
 289/modulate = Color( 1, 1, 1, 1 )
-289/region = Rect2( 320, 1920, 64, 64 )
+289/region = Rect2( 128, 1792, 64, 64 )
 289/tile_mode = 0
 289/occluder_offset = Vector2( 32, 32 )
 289/navigation_offset = Vector2( 32, 32 )
@@ -6241,11 +6268,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 289/z_index = 0
-290/name = "Sprite277"
+290/name = "Sprite258"
 290/texture = ExtResource( 31 )
 290/tex_offset = Vector2( 0, 0 )
 290/modulate = Color( 1, 1, 1, 1 )
-290/region = Rect2( 384, 1920, 64, 64 )
+290/region = Rect2( 192, 1792, 64, 64 )
 290/tile_mode = 0
 290/occluder_offset = Vector2( 32, 32 )
 290/navigation_offset = Vector2( 32, 32 )
@@ -6262,11 +6289,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 290/z_index = 0
-291/name = "Sprite278"
+291/name = "Sprite259"
 291/texture = ExtResource( 31 )
 291/tex_offset = Vector2( 0, 0 )
 291/modulate = Color( 1, 1, 1, 1 )
-291/region = Rect2( 448, 1920, 64, 64 )
+291/region = Rect2( 256, 1792, 64, 64 )
 291/tile_mode = 0
 291/occluder_offset = Vector2( 32, 32 )
 291/navigation_offset = Vector2( 32, 32 )
@@ -6283,11 +6310,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 291/z_index = 0
-292/name = "Sprite279"
+292/name = "Sprite260"
 292/texture = ExtResource( 31 )
 292/tex_offset = Vector2( 0, 0 )
 292/modulate = Color( 1, 1, 1, 1 )
-292/region = Rect2( 0, 1984, 64, 64 )
+292/region = Rect2( 320, 1792, 64, 64 )
 292/tile_mode = 0
 292/occluder_offset = Vector2( 32, 32 )
 292/navigation_offset = Vector2( 32, 32 )
@@ -6304,11 +6331,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 292/z_index = 0
-293/name = "Sprite280"
+293/name = "Sprite261"
 293/texture = ExtResource( 31 )
 293/tex_offset = Vector2( 0, 0 )
 293/modulate = Color( 1, 1, 1, 1 )
-293/region = Rect2( 64, 1984, 64, 64 )
+293/region = Rect2( 384, 1792, 64, 64 )
 293/tile_mode = 0
 293/occluder_offset = Vector2( 32, 32 )
 293/navigation_offset = Vector2( 32, 32 )
@@ -6325,11 +6352,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 293/z_index = 0
-294/name = "Sprite281"
+294/name = "Sprite262"
 294/texture = ExtResource( 31 )
 294/tex_offset = Vector2( 0, 0 )
 294/modulate = Color( 1, 1, 1, 1 )
-294/region = Rect2( 128, 1984, 64, 64 )
+294/region = Rect2( 448, 1792, 64, 64 )
 294/tile_mode = 0
 294/occluder_offset = Vector2( 32, 32 )
 294/navigation_offset = Vector2( 32, 32 )
@@ -6346,11 +6373,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 294/z_index = 0
-295/name = "Sprite282"
+295/name = "Sprite263"
 295/texture = ExtResource( 31 )
 295/tex_offset = Vector2( 0, 0 )
 295/modulate = Color( 1, 1, 1, 1 )
-295/region = Rect2( 192, 1984, 64, 64 )
+295/region = Rect2( 0, 1856, 64, 64 )
 295/tile_mode = 0
 295/occluder_offset = Vector2( 32, 32 )
 295/navigation_offset = Vector2( 32, 32 )
@@ -6367,11 +6394,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 295/z_index = 0
-296/name = "Sprite283"
+296/name = "Sprite264"
 296/texture = ExtResource( 31 )
 296/tex_offset = Vector2( 0, 0 )
 296/modulate = Color( 1, 1, 1, 1 )
-296/region = Rect2( 256, 1984, 64, 64 )
+296/region = Rect2( 64, 1856, 64, 64 )
 296/tile_mode = 0
 296/occluder_offset = Vector2( 32, 32 )
 296/navigation_offset = Vector2( 32, 32 )
@@ -6388,11 +6415,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 296/z_index = 0
-297/name = "Sprite284"
+297/name = "Sprite265"
 297/texture = ExtResource( 31 )
 297/tex_offset = Vector2( 0, 0 )
 297/modulate = Color( 1, 1, 1, 1 )
-297/region = Rect2( 320, 1984, 64, 64 )
+297/region = Rect2( 128, 1856, 64, 64 )
 297/tile_mode = 0
 297/occluder_offset = Vector2( 32, 32 )
 297/navigation_offset = Vector2( 32, 32 )
@@ -6409,11 +6436,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 297/z_index = 0
-298/name = "Sprite285"
+298/name = "Sprite266"
 298/texture = ExtResource( 31 )
 298/tex_offset = Vector2( 0, 0 )
 298/modulate = Color( 1, 1, 1, 1 )
-298/region = Rect2( 384, 1984, 64, 64 )
+298/region = Rect2( 192, 1856, 64, 64 )
 298/tile_mode = 0
 298/occluder_offset = Vector2( 32, 32 )
 298/navigation_offset = Vector2( 32, 32 )
@@ -6430,11 +6457,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 298/z_index = 0
-299/name = "Sprite286"
+299/name = "Sprite267"
 299/texture = ExtResource( 31 )
 299/tex_offset = Vector2( 0, 0 )
 299/modulate = Color( 1, 1, 1, 1 )
-299/region = Rect2( 448, 1984, 64, 64 )
+299/region = Rect2( 256, 1856, 64, 64 )
 299/tile_mode = 0
 299/occluder_offset = Vector2( 32, 32 )
 299/navigation_offset = Vector2( 32, 32 )
@@ -6451,11 +6478,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 299/z_index = 0
-300/name = "Sprite235"
+300/name = "Sprite268"
 300/texture = ExtResource( 31 )
 300/tex_offset = Vector2( 0, 0 )
 300/modulate = Color( 1, 1, 1, 1 )
-300/region = Rect2( 256, 1600, 64, 64 )
+300/region = Rect2( 320, 1856, 64, 64 )
 300/tile_mode = 0
 300/occluder_offset = Vector2( 32, 32 )
 300/navigation_offset = Vector2( 32, 32 )
@@ -6472,95 +6499,95 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 300/z_index = 0
-301/name = "Sprite25"
-301/texture = ExtResource( 23 )
+301/name = "Sprite269"
+301/texture = ExtResource( 31 )
 301/tex_offset = Vector2( 0, 0 )
 301/modulate = Color( 1, 1, 1, 1 )
-301/region = Rect2( 0, 0, 64, 64 )
+301/region = Rect2( 384, 1856, 64, 64 )
 301/tile_mode = 0
 301/occluder_offset = Vector2( 32, 32 )
 301/navigation_offset = Vector2( 32, 32 )
 301/shape_offset = Vector2( 32, 32 )
 301/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-301/shape = SubResource( 27 )
+301/shape = SubResource( 1 )
 301/shape_one_way = false
 301/shape_one_way_margin = 1.0
 301/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 301/z_index = 0
-302/name = "Sprite27"
-302/texture = ExtResource( 33 )
+302/name = "Sprite270"
+302/texture = ExtResource( 31 )
 302/tex_offset = Vector2( 0, 0 )
 302/modulate = Color( 1, 1, 1, 1 )
-302/region = Rect2( 0, 0, 64, 64 )
+302/region = Rect2( 448, 1856, 64, 64 )
 302/tile_mode = 0
 302/occluder_offset = Vector2( 32, 32 )
 302/navigation_offset = Vector2( 32, 32 )
 302/shape_offset = Vector2( 32, 32 )
 302/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-302/shape = SubResource( 28 )
+302/shape = SubResource( 1 )
 302/shape_one_way = false
 302/shape_one_way_margin = 1.0
 302/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 302/z_index = 0
-303/name = "Sprite28"
-303/texture = ExtResource( 7 )
+303/name = "Sprite271"
+303/texture = ExtResource( 31 )
 303/tex_offset = Vector2( 0, 0 )
 303/modulate = Color( 1, 1, 1, 1 )
-303/region = Rect2( 0, 0, 64, 64 )
+303/region = Rect2( 0, 1920, 64, 64 )
 303/tile_mode = 0
 303/occluder_offset = Vector2( 32, 32 )
 303/navigation_offset = Vector2( 32, 32 )
 303/shape_offset = Vector2( 32, 32 )
 303/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-303/shape = SubResource( 29 )
+303/shape = SubResource( 1 )
 303/shape_one_way = false
 303/shape_one_way_margin = 1.0
 303/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 303/z_index = 0
-304/name = "Sprite26"
-304/texture = ExtResource( 13 )
+304/name = "Sprite272"
+304/texture = ExtResource( 31 )
 304/tex_offset = Vector2( 0, 0 )
 304/modulate = Color( 1, 1, 1, 1 )
-304/region = Rect2( 0, 0, 64, 64 )
+304/region = Rect2( 64, 1920, 64, 64 )
 304/tile_mode = 0
 304/occluder_offset = Vector2( 32, 32 )
 304/navigation_offset = Vector2( 32, 32 )
 304/shape_offset = Vector2( 32, 32 )
 304/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-304/shape = SubResource( 30 )
+304/shape = SubResource( 1 )
 304/shape_one_way = false
 304/shape_one_way_margin = 1.0
 304/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 30 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 304/z_index = 0
-305/name = "Sprite15"
-305/texture = ExtResource( 17 )
+305/name = "Sprite273"
+305/texture = ExtResource( 31 )
 305/tex_offset = Vector2( 0, 0 )
 305/modulate = Color( 1, 1, 1, 1 )
-305/region = Rect2( 0, 0, 64, 64 )
+305/region = Rect2( 128, 1920, 64, 64 )
 305/tile_mode = 0
 305/occluder_offset = Vector2( 32, 32 )
 305/navigation_offset = Vector2( 32, 32 )
@@ -6577,11 +6604,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 305/z_index = 0
-306/name = "Sprite9"
-306/texture = ExtResource( 15 )
+306/name = "Sprite274"
+306/texture = ExtResource( 31 )
 306/tex_offset = Vector2( 0, 0 )
 306/modulate = Color( 1, 1, 1, 1 )
-306/region = Rect2( 0, 0, 64, 64 )
+306/region = Rect2( 192, 1920, 64, 64 )
 306/tile_mode = 0
 306/occluder_offset = Vector2( 32, 32 )
 306/navigation_offset = Vector2( 32, 32 )
@@ -6598,11 +6625,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 306/z_index = 0
-307/name = "Sprite10"
-307/texture = ExtResource( 3 )
+307/name = "Sprite275"
+307/texture = ExtResource( 31 )
 307/tex_offset = Vector2( 0, 0 )
 307/modulate = Color( 1, 1, 1, 1 )
-307/region = Rect2( 0, 0, 64, 64 )
+307/region = Rect2( 256, 1920, 64, 64 )
 307/tile_mode = 0
 307/occluder_offset = Vector2( 32, 32 )
 307/navigation_offset = Vector2( 32, 32 )
@@ -6619,11 +6646,11 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 307/z_index = 0
-308/name = "Sprite11"
-308/texture = ExtResource( 35 )
+308/name = "Sprite276"
+308/texture = ExtResource( 31 )
 308/tex_offset = Vector2( 0, 0 )
 308/modulate = Color( 1, 1, 1, 1 )
-308/region = Rect2( 0, 0, 64, 64 )
+308/region = Rect2( 320, 1920, 64, 64 )
 308/tile_mode = 0
 308/occluder_offset = Vector2( 32, 32 )
 308/navigation_offset = Vector2( 32, 32 )
@@ -6640,3 +6667,318 @@ points = PoolVector2Array( 32, 32, -32, 32, -32, -32, -16, -32, 32, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 308/z_index = 0
+309/name = "Sprite277"
+309/texture = ExtResource( 31 )
+309/tex_offset = Vector2( 0, 0 )
+309/modulate = Color( 1, 1, 1, 1 )
+309/region = Rect2( 384, 1920, 64, 64 )
+309/tile_mode = 0
+309/occluder_offset = Vector2( 32, 32 )
+309/navigation_offset = Vector2( 32, 32 )
+309/shape_offset = Vector2( 32, 32 )
+309/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+309/shape = SubResource( 1 )
+309/shape_one_way = false
+309/shape_one_way_margin = 1.0
+309/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+309/z_index = 0
+310/name = "Sprite278"
+310/texture = ExtResource( 31 )
+310/tex_offset = Vector2( 0, 0 )
+310/modulate = Color( 1, 1, 1, 1 )
+310/region = Rect2( 448, 1920, 64, 64 )
+310/tile_mode = 0
+310/occluder_offset = Vector2( 32, 32 )
+310/navigation_offset = Vector2( 32, 32 )
+310/shape_offset = Vector2( 32, 32 )
+310/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+310/shape = SubResource( 1 )
+310/shape_one_way = false
+310/shape_one_way_margin = 1.0
+310/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+310/z_index = 0
+311/name = "Sprite279"
+311/texture = ExtResource( 31 )
+311/tex_offset = Vector2( 0, 0 )
+311/modulate = Color( 1, 1, 1, 1 )
+311/region = Rect2( 0, 1984, 64, 64 )
+311/tile_mode = 0
+311/occluder_offset = Vector2( 32, 32 )
+311/navigation_offset = Vector2( 32, 32 )
+311/shape_offset = Vector2( 32, 32 )
+311/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+311/shape = SubResource( 1 )
+311/shape_one_way = false
+311/shape_one_way_margin = 1.0
+311/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+311/z_index = 0
+312/name = "Sprite280"
+312/texture = ExtResource( 31 )
+312/tex_offset = Vector2( 0, 0 )
+312/modulate = Color( 1, 1, 1, 1 )
+312/region = Rect2( 64, 1984, 64, 64 )
+312/tile_mode = 0
+312/occluder_offset = Vector2( 32, 32 )
+312/navigation_offset = Vector2( 32, 32 )
+312/shape_offset = Vector2( 32, 32 )
+312/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+312/shape = SubResource( 1 )
+312/shape_one_way = false
+312/shape_one_way_margin = 1.0
+312/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+312/z_index = 0
+313/name = "Sprite281"
+313/texture = ExtResource( 31 )
+313/tex_offset = Vector2( 0, 0 )
+313/modulate = Color( 1, 1, 1, 1 )
+313/region = Rect2( 128, 1984, 64, 64 )
+313/tile_mode = 0
+313/occluder_offset = Vector2( 32, 32 )
+313/navigation_offset = Vector2( 32, 32 )
+313/shape_offset = Vector2( 32, 32 )
+313/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+313/shape = SubResource( 1 )
+313/shape_one_way = false
+313/shape_one_way_margin = 1.0
+313/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+313/z_index = 0
+314/name = "Sprite282"
+314/texture = ExtResource( 31 )
+314/tex_offset = Vector2( 0, 0 )
+314/modulate = Color( 1, 1, 1, 1 )
+314/region = Rect2( 192, 1984, 64, 64 )
+314/tile_mode = 0
+314/occluder_offset = Vector2( 32, 32 )
+314/navigation_offset = Vector2( 32, 32 )
+314/shape_offset = Vector2( 32, 32 )
+314/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+314/shape = SubResource( 1 )
+314/shape_one_way = false
+314/shape_one_way_margin = 1.0
+314/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+314/z_index = 0
+315/name = "Sprite283"
+315/texture = ExtResource( 31 )
+315/tex_offset = Vector2( 0, 0 )
+315/modulate = Color( 1, 1, 1, 1 )
+315/region = Rect2( 256, 1984, 64, 64 )
+315/tile_mode = 0
+315/occluder_offset = Vector2( 32, 32 )
+315/navigation_offset = Vector2( 32, 32 )
+315/shape_offset = Vector2( 32, 32 )
+315/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+315/shape = SubResource( 1 )
+315/shape_one_way = false
+315/shape_one_way_margin = 1.0
+315/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+315/z_index = 0
+316/name = "Sprite284"
+316/texture = ExtResource( 31 )
+316/tex_offset = Vector2( 0, 0 )
+316/modulate = Color( 1, 1, 1, 1 )
+316/region = Rect2( 320, 1984, 64, 64 )
+316/tile_mode = 0
+316/occluder_offset = Vector2( 32, 32 )
+316/navigation_offset = Vector2( 32, 32 )
+316/shape_offset = Vector2( 32, 32 )
+316/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+316/shape = SubResource( 1 )
+316/shape_one_way = false
+316/shape_one_way_margin = 1.0
+316/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+316/z_index = 0
+317/name = "Sprite285"
+317/texture = ExtResource( 31 )
+317/tex_offset = Vector2( 0, 0 )
+317/modulate = Color( 1, 1, 1, 1 )
+317/region = Rect2( 384, 1984, 64, 64 )
+317/tile_mode = 0
+317/occluder_offset = Vector2( 32, 32 )
+317/navigation_offset = Vector2( 32, 32 )
+317/shape_offset = Vector2( 32, 32 )
+317/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+317/shape = SubResource( 1 )
+317/shape_one_way = false
+317/shape_one_way_margin = 1.0
+317/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+317/z_index = 0
+318/name = "Sprite286"
+318/texture = ExtResource( 31 )
+318/tex_offset = Vector2( 0, 0 )
+318/modulate = Color( 1, 1, 1, 1 )
+318/region = Rect2( 448, 1984, 64, 64 )
+318/tile_mode = 0
+318/occluder_offset = Vector2( 32, 32 )
+318/navigation_offset = Vector2( 32, 32 )
+318/shape_offset = Vector2( 32, 32 )
+318/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+318/shape = SubResource( 1 )
+318/shape_one_way = false
+318/shape_one_way_margin = 1.0
+318/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+318/z_index = 0
+319/name = "Sprite235"
+319/texture = ExtResource( 31 )
+319/tex_offset = Vector2( 0, 0 )
+319/modulate = Color( 1, 1, 1, 1 )
+319/region = Rect2( 256, 1600, 64, 64 )
+319/tile_mode = 0
+319/occluder_offset = Vector2( 32, 32 )
+319/navigation_offset = Vector2( 32, 32 )
+319/shape_offset = Vector2( 32, 32 )
+319/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+319/shape = SubResource( 1 )
+319/shape_one_way = false
+319/shape_one_way_margin = 1.0
+319/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+319/z_index = 0
+320/name = "Sprite15"
+320/texture = ExtResource( 17 )
+320/tex_offset = Vector2( 0, 0 )
+320/modulate = Color( 1, 1, 1, 1 )
+320/region = Rect2( 0, 0, 64, 64 )
+320/tile_mode = 0
+320/occluder_offset = Vector2( 32, 32 )
+320/navigation_offset = Vector2( 32, 32 )
+320/shape_offset = Vector2( 32, 32 )
+320/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+320/shape = SubResource( 1 )
+320/shape_one_way = false
+320/shape_one_way_margin = 1.0
+320/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+320/z_index = 0
+321/name = "Sprite9"
+321/texture = ExtResource( 15 )
+321/tex_offset = Vector2( 0, 0 )
+321/modulate = Color( 1, 1, 1, 1 )
+321/region = Rect2( 0, 0, 64, 64 )
+321/tile_mode = 0
+321/occluder_offset = Vector2( 32, 32 )
+321/navigation_offset = Vector2( 32, 32 )
+321/shape_offset = Vector2( 32, 32 )
+321/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+321/shape = SubResource( 1 )
+321/shape_one_way = false
+321/shape_one_way_margin = 1.0
+321/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+321/z_index = 0
+322/name = "Sprite10"
+322/texture = ExtResource( 3 )
+322/tex_offset = Vector2( 0, 0 )
+322/modulate = Color( 1, 1, 1, 1 )
+322/region = Rect2( 0, 0, 64, 64 )
+322/tile_mode = 0
+322/occluder_offset = Vector2( 32, 32 )
+322/navigation_offset = Vector2( 32, 32 )
+322/shape_offset = Vector2( 32, 32 )
+322/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+322/shape = SubResource( 1 )
+322/shape_one_way = false
+322/shape_one_way_margin = 1.0
+322/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+322/z_index = 0
+323/name = "Sprite11"
+323/texture = ExtResource( 35 )
+323/tex_offset = Vector2( 0, 0 )
+323/modulate = Color( 1, 1, 1, 1 )
+323/region = Rect2( 0, 0, 64, 64 )
+323/tile_mode = 0
+323/occluder_offset = Vector2( 32, 32 )
+323/navigation_offset = Vector2( 32, 32 )
+323/shape_offset = Vector2( 32, 32 )
+323/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
+323/shape = SubResource( 1 )
+323/shape_one_way = false
+323/shape_one_way_margin = 1.0
+323/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+} ]
+323/z_index = 0
