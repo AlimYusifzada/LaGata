@@ -301,10 +301,11 @@ radius = 32.0
 height = 96.0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 40, 5.25 )
+extents = Vector2( 24, 5.25 )
 
-[sub_resource type="RayShape2D" id=116]
-length = 88.0
+[sub_resource type="CapsuleShape2D" id=116]
+radius = 24.0
+height = 96.0
 
 [node name="humanguy" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -315,17 +316,17 @@ script = ExtResource( 1 )
 frames = SubResource( 30 )
 animation = "Run"
 
-[node name="body" type="Area2D" parent="."]
+[node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
 shape = SubResource( 115 )
 
-[node name="head" type="Area2D" parent="."]
+[node name="CatchZone" type="Area2D" parent="."]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
 position = Vector2( 0, -96 )
 shape = SubResource( 21 )
 
@@ -336,7 +337,7 @@ one_shot = true
 [node name="JumpTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="GravCol" type="CollisionShape2D" parent="."]
+[node name="body" type="CollisionShape2D" parent="."]
 shape = SubResource( 116 )
 
 [node name="MindTimer" type="Timer" parent="."]
@@ -352,7 +353,12 @@ enabled = true
 cast_to = Vector2( 64, 0 )
 collision_mask = 6
 
-[connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
+[node name="RayCastSouth" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 88 )
+collision_mask = 6
+
+[connection signal="body_entered" from="DamageZone" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CatchZone" to="." method="_on_head_body_entered"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]
 [connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]

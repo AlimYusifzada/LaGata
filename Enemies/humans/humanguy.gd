@@ -9,11 +9,12 @@ var Life=true
 export var JumpOffProb=0.1
 
 onready var XenAnimation=$AnimatedSprite
-onready var DeathTimer=$DeathTimer
-onready var JumpTimer=$JumpTimer
-onready var MindTimer=$MindTimer
+#onready var DeathTimer=$DeathTimer
+#onready var JumpTimer=$JumpTimer
+#onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
+onready var WallOnSouth=$RayCastSouth
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,24 +36,27 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && DeathTimer.is_stopped():
+	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):
-	if is_on_floor():
+	if is_floor():
 		velocity.y=0
 	else:
 		velocity.y+=Global.GRAVITY*delta
 
 func animation():
-	if !DeathTimer.is_stopped(): #play death if timer is running
+	if !Life: #play death if timer is running
 		XenAnimation.play("Death")
 	elif velocity.x>0: #face to right or left
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
 		
+func is_floor():
+	return WallOnSouth.get_collider()
+	pass
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()	
 	pass
@@ -65,12 +69,12 @@ func sidewall():
 			return 1
 	return -1
 func move():
-	if is_on_floor() and is_wall():
+	if is_floor() and is_wall():
 		velocity.y=JUMP_VELOCITY #jump
-		JumpTimer.start(0.5)
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+#		JumpTimer.start(0.5)
+	elif !is_floor():# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
-		MindTimer.start(Global.MindTimerSet)
+		#MindTimer.start(Global.MindTimerSet)
 		pass
 		
 func deathcheck():
@@ -83,7 +87,7 @@ func _on_head_body_entered(body):
 		#drop sceleton down
 		set_collision_mask_bit(Global.GROUND,false)
 		set_collision_mask_bit(Global.PLATFORM,false)
-		DeathTimer.start()
+#		DeathTimer.start()
 		pass
 	pass # Replace with function body.
 
@@ -91,8 +95,8 @@ func _on_DeathTimer_timeout():
 	Life=false
 	pass # Replace with function body.
 
-func _on_JumpTimer_timeout():
-	if randf()<0.3:
-		velocity.x*=sidewall()
-	pass # Replace with function body.
+#func _on_JumpTimer_timeout():
+#	if randf()<0.3:
+#		velocity.x*=sidewall()
+#	pass # Replace with function body.
 
