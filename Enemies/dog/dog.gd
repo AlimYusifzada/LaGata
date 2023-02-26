@@ -2,25 +2,19 @@
 
 extends KinematicBody2D
 
-#const ARROW=preload("res://Enemies//arrow.tscn")
 export var MINSPEED=200.0
 export var JUMP_VELOCITY=-600
-const SCALE=Vector2(1,1)
+const SCALE=Vector2(0.8,0.8)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
-export var  JumpOffProb=0.1
 onready var DogAnimation=$AnimatedSprite
-onready var JumpTimer=$JumpTimer
 onready var Voice=$Voice
-onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
+onready var WallOnSouth=$RayCastSuth
 onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
-
-#var shooting=false
-var dest=velocity.x
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,9 +24,6 @@ func _ready():
 	DogAnimation.speed_scale=Speed/(MINSPEED/2)
 	DogAnimation.play("Run")
 	velocity.x=Speed
-	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.2,
-		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -45,14 +36,8 @@ func _physics_process(delta):
 func _process(delta):
 	animation()
 
-func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Die")
-		pass
-	pass # Replace with function body.
-	
 func fall(delta):
-	if is_on_floor():
+	if is_floor():
 		velocity.y=0
 	else:
 		velocity.y+=Global.GRAVITY*delta
@@ -71,7 +56,10 @@ func LookAt():
 	else:
 		DogAnimation.flip_h=true
 		return -1
-
+		
+func is_floor():
+	return WallOnSouth.get_collider()
+	pass
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
@@ -84,32 +72,25 @@ func sidewall():
 			return 1
 	return -1
 func move(delta):
-	if is_on_floor() && is_wall():
+	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-#		velocity.y=JUMP_VELOCITY #jump
-#		JumpTimer.start(0.5)
-	elif !is_on_floor() && (MindTimer.is_stopped() && randf()>JumpOffProb):
+	elif !is_floor():
 		velocity.x*=-1.0
-		MindTimer.start(Global.MindTimerSet)
 
 func Kill():
+	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
-	set_collision_layer_bit(Global.ENEMY,false)
+	$DamageZone.set_collision_layer_bit(Global.ENEMY,false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	Life=false
-	$Tween.start()
+	queue_free()
 	
-func _on_head_body_entered(body):
+func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food",3) #incease stamina
 		Kill()
-	pass # Replace with function body.
-
-func _on_JumpTimer_timeout():
-	if randf()<0.3:
-		velocity.x*=-1
-	JumpTimer.stop()
 	pass # Replace with function body.
 
 func MakeVoice(body):
@@ -135,11 +116,11 @@ func _on_AimLeft_body_entered(body):
 	LookAt()
 	pass # Replace with function body.
 
-func _on_Tween_tween_all_completed():
-	queue_free()
-	pass # Replace with function body.
-
-
 func _on_dog_Die():
 	Kill()
+	pass # Replace with function body.
+	
+func _on_DamageZone_body_entered(body):
+	if body.is_in_group("Cats"):
+		body.emit_signal("Die") #incease stamina
 	pass # Replace with function body.

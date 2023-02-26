@@ -42,11 +42,7 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-#	SceneTransition.FadeIn=false
-#	SceneTransition.emit_signal("Start")
-#	yield(SceneTransition,"finished")
 	transit.change_scene("res://Levels/TestLvl.tscn")
-#	get_tree().change_scene()
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
@@ -58,12 +54,6 @@ func _on_Exit_pressed():
 func _on_Comtinue_pressed():
 	Global.loadGameOptions()
 	Global.loadGameState()
-#	Global.Stamina=10
-#	Global.KeysRing=[0,0,0]
-#	SceneTransition.FadeIn=false
-#	SceneTransition.emit_signal("Start")
-#	yield(SceneTransition,"finished")
-	
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
 		transit.change_scene("res://Levels/TestLvl.tscn")

@@ -95,43 +95,34 @@ animations = [ {
 radius = 16.0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 16, 4.8125 )
+extents = Vector2( 8, 4.8125 )
 
-[sub_resource type="RayShape2D" id=60]
-length = 8.0
+[sub_resource type="CircleShape2D" id=62]
 
 [node name="smallspider" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
-collision_mask = 6
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Run"
 
-[node name="body" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
-shape = SubResource( 61 )
-
-[node name="head" type="Area2D" parent="."]
+[node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
+shape = SubResource( 61 )
+
+[node name="CatchZone" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
 position = Vector2( 0, -24 )
 shape = SubResource( 21 )
 
-[node name="JumpTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="GravCol" type="CollisionShape2D" parent="."]
-shape = SubResource( 60 )
-
-[node name="Tween" type="Tween" parent="."]
-
-[node name="MindTimer" type="Timer" parent="."]
+[node name="body" type="CollisionShape2D" parent="."]
+shape = SubResource( 62 )
 
 [node name="RayCastWest" type="RayCast2D" parent="."]
 enabled = true
@@ -143,7 +134,11 @@ enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 6
 
+[node name="RayCastSouth" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 8 )
+collision_mask = 6
+
 [connection signal="Die" from="." to="." method="_on_spider_Die"]
-[connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
-[connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
+[connection signal="body_entered" from="DamageZone" to="." method="_on_DamageZone_body_entered"]
+[connection signal="body_entered" from="CatchZone" to="." method="_on_CatchZone_body_entered"]

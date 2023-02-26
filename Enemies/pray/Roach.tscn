@@ -38,7 +38,9 @@ height = 76.0
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 40, 4 )
 
-[sub_resource type="RayShape2D" id=28]
+[sub_resource type="CapsuleShape2D" id=28]
+radius = 8.0
+height = 76.0
 
 [node name="Roach" type="KinematicBody2D" groups=["Pray"]]
 collision_layer = 16
@@ -49,11 +51,10 @@ script = ExtResource( 2 )
 frames = SubResource( 5 )
 animation = "RoachRun"
 
-[node name="DynEnvCol" type="Area2D" parent="."]
+[node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 16
-collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DynEnvCol"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
 rotation = 1.5708
 shape = SubResource( 27 )
 
@@ -62,13 +63,12 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
-position = Vector2( 0, -31 )
+position = Vector2( 0, -24 )
 shape = SubResource( 26 )
 
-[node name="GravCol" type="CollisionShape2D" parent="."]
+[node name="body" type="CollisionShape2D" parent="."]
+rotation = 1.5708
 shape = SubResource( 28 )
-
-[node name="Tween" type="Tween" parent="."]
 
 [node name="RayCastWest" type="RayCast2D" parent="."]
 enabled = true
@@ -80,7 +80,11 @@ enabled = true
 cast_to = Vector2( 64, 0 )
 collision_mask = 6
 
+[node name="RayCastSouth" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 24 )
+collision_mask = 6
+
 [connection signal="Die" from="." to="." method="_on_Roach_Die"]
-[connection signal="body_entered" from="DynEnvCol" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="DamageZone" to="." method="_on_DamageZone_body_entered"]
 [connection signal="body_entered" from="CatchZone" to="." method="_on_CatchZone_body_entered"]
-[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

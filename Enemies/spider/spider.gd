@@ -8,12 +8,10 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
-export var JumpOffProb=0.5
 onready var SpiderAnimation=$AnimatedSprite
-onready var JumpTimer=$JumpTimer
-onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
+onready var WallOnSouth=$RayCastSouth
 onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
@@ -24,9 +22,6 @@ func _ready():
 	SpiderAnimation.speed_scale=Speed/(MINSPEED/2.0)
 	SpiderAnimation.play("Run")
 	velocity.x=Speed
-	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.2,
-		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -38,13 +33,13 @@ func _physics_process(delta):
 func _process(delta):
 	animation()
 
-func _on_Area2D_body_entered(body):
+func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):
-	if is_on_floor():
+	if is_floor():
 		velocity.y=0
 	else:
 		velocity.y+=Global.GRAVITY*delta
@@ -55,7 +50,9 @@ func animation():
 	elif velocity.x<0:
 		SpiderAnimation.flip_h=true
 
-
+func is_floor():
+	return WallOnSouth.get_collider()
+	pass
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
@@ -69,36 +66,27 @@ func sidewall():
 	return -1
 		
 func move():
-	if is_on_floor() && is_wall():
+	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor():
 		velocity.x*=-1
-		MindTimer.start(Global.MindTimerSet)
 		pass
 
 func Kill():
+	Life=false
+	$DamageZone.set_collision_layer_bit(Global.ENEMY,false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
+	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
 	bl.cloud="acid"
 	get_parent().add_child(bl)
-	Life=false
-	set_collision_layer_bit(Global.ENEMY,false)
-	$Tween.start()
+	queue_free()
 
-func _on_head_body_entered(body):
+func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food",4) #incease stamina
 		Kill()
-		pass
-	pass # Replace with function body.
-
-func _on_JumpTimer_timeout():
-	if randf()<0.3:
-		velocity.x*=-1
-	pass # Replace with function body.
-
-func _on_Tween_tween_all_completed():
-	queue_free()
 	pass # Replace with function body.
 
 func _on_spider_Die():
