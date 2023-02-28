@@ -8,12 +8,11 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 onready var XenAnimation=$AnimatedSprite
-#onready var JumpTimer=$JumpTimer
-onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
-export var JumpOffProb=0.1
+#onready var WallOnSouth=$RayCastSouth
 
+signal Die
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,9 +32,9 @@ func _physics_process(delta):
 func _process(delta):
 	animation()
 
-func _on_Area2D_body_entered(body):
+func _on_JumpZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Jump",30)
+		body.emit_signal("Jump",10)
 	pass # Replace with function body.
 	
 func fall(delta):
@@ -58,15 +57,13 @@ func move():
 			pass
 	if is_on_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_on_floor():#&& randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
-		MindTimer.start(Global.MindTimerSet)
 		pass
-		
+
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
-
 func sidewall():
 	if WallOnEast.get_collider():
 		if velocity.x<0:

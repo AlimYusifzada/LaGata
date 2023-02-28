@@ -83,7 +83,6 @@ func Kill():
 	bl.position=position
 	get_parent().add_child(bl)
 	$DamageZone.set_collision_layer_bit(Global.ENEMY,false)
-	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	Life=false
 	queue_free()
 	
@@ -99,6 +98,7 @@ func MakeVoice(body):
 		Voice.play()
 		
 func _on_AimRight_body_entered(body):
+	Speed+=50
 	MakeVoice(body)
 	if velocity.x<0:
 		velocity.x*=-1
@@ -108,6 +108,7 @@ func _on_AimRight_body_entered(body):
 	pass # Replace with function body.
 
 func _on_AimLeft_body_entered(body):
+	Speed+=50
 	MakeVoice(body)
 	if velocity.x>0:
 		velocity.x*=-1
@@ -123,4 +124,8 @@ func _on_dog_Die():
 func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Die") #incease stamina
+	pass # Replace with function body.
+
+func _on_Aim_body_exited(body):
+	Speed-=50
 	pass # Replace with function body.

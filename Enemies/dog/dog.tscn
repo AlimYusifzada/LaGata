@@ -230,4 +230,6 @@ collision_mask = 6
 [connection signal="body_entered" from="CatchZone" to="." method="_on_CatchZone_body_entered"]
 [connection signal="body_entered" from="DamageZone" to="." method="_on_DamageZone_body_entered"]
 [connection signal="body_entered" from="AimRight" to="." method="_on_AimRight_body_entered"]
+[connection signal="body_exited" from="AimRight" to="." method="_on_Aim_body_exited"]
 [connection signal="body_entered" from="AimLeft" to="." method="_on_AimLeft_body_entered"]
+[connection signal="body_exited" from="AimLeft" to="." method="_on_Aim_body_exited"]

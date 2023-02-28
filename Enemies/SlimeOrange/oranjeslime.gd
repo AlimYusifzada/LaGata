@@ -62,7 +62,7 @@ func move():
 		velocity.x*=-1
 		MindTimer.start(Global.MindTimerSet)
 		pass
-		
+
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass

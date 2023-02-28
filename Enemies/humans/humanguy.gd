@@ -9,9 +9,6 @@ var Life=true
 export var JumpOffProb=0.1
 
 onready var XenAnimation=$AnimatedSprite
-#onready var DeathTimer=$DeathTimer
-#onready var JumpTimer=$JumpTimer
-#onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
@@ -71,10 +68,8 @@ func sidewall():
 func move():
 	if is_floor() and is_wall():
 		velocity.y=JUMP_VELOCITY #jump
-#		JumpTimer.start(0.5)
-	elif !is_floor():# && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor():
 		velocity.x*=-1
-		#MindTimer.start(Global.MindTimerSet)
 		pass
 		
 func deathcheck():
@@ -95,8 +90,4 @@ func _on_DeathTimer_timeout():
 	Life=false
 	pass # Replace with function body.
 
-#func _on_JumpTimer_timeout():
-#	if randf()<0.3:
-#		velocity.x*=sidewall()
-#	pass # Replace with function body.
 

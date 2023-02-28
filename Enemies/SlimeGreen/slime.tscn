@@ -175,35 +175,29 @@ animations = [ {
 radius = 40.0
 height = 64.0
 
-[sub_resource type="RayShape2D" id=45]
-length = 32.0
+[sub_resource type="RayShape2D" id=76]
+length = 37.0
 
 [node name="slime" type="KinematicBody2D" groups=["Enemies"]]
-collision_layer = 16
+collision_layer = 0
 collision_mask = 6
 script = ExtResource( 9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Run"
-frame = 18
+frame = 10
 playing = true
 
-[node name="body" type="Area2D" parent="."]
-collision_layer = 16
+[node name="JumpZone" type="Area2D" parent="."]
+collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JumpZone"]
 rotation = 1.5708
 shape = SubResource( 44 )
 
-[node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8 )
-shape = SubResource( 45 )
-
-[node name="MindTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="Tween" type="Tween" parent="."]
+[node name="body" type="CollisionShape2D" parent="."]
+shape = SubResource( 76 )
 
 [node name="RayCastWest" type="RayCast2D" parent="."]
 enabled = true
@@ -215,5 +209,4 @@ enabled = true
 cast_to = Vector2( 72, 0 )
 collision_mask = 6
 
-[connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
-[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="body_entered" from="JumpZone" to="." method="_on_JumpZone_body_entered"]

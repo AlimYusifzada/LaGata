@@ -75,7 +75,6 @@ func move():
 func Kill():
 	Life=false
 	$DamageZone.set_collision_layer_bit(Global.ENEMY,false)
-	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
