@@ -8,11 +8,12 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
+var falling=false
 onready var SpiderAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +38,7 @@ func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
-	
+
 func fall(delta):
 	if is_floor():
 		velocity.y=0
@@ -64,13 +65,13 @@ func sidewall():
 		if velocity.x>0:
 			return 1
 	return -1
-		
+
 func move():
 	if is_floor() && is_wall():
-		velocity.x*=sidewall()
+		velocity.x=Speed*sidewall()
 	elif !is_floor():
 		velocity.x*=-1
-		pass
+	pass
 
 func Kill():
 	Life=false
@@ -78,7 +79,7 @@ func Kill():
 	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
-	bl.cloud="acid"
+	bl.cloud="brown"
 	get_parent().add_child(bl)
 	queue_free()
 

@@ -167,11 +167,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=65]
-radius = 16.0
-height = 32.0
+radius = 14.0
+height = 24.0
 
 [sub_resource type="CapsuleShape2D" id=66]
-height = 28.0
+height = 24.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 16, 2.5 )
@@ -196,16 +196,18 @@ collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
+position = Vector2( 0, 7 )
 shape = SubResource( 65 )
 
 [node name="body" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 7 )
 shape = SubResource( 66 )
 
 [node name="CatchZone" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
-position = Vector2( 0, -40 )
+position = Vector2( 0, -23 )
 shape = SubResource( 21 )
 disabled = true
 
@@ -235,7 +237,7 @@ collision_mask = 6
 
 [node name="RayCastSouth" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 0, 24 )
+cast_to = Vector2( 0, 30 )
 collision_mask = 6
 
 [connection signal="Die" from="." to="." method="_on_xenshooter_Die"]

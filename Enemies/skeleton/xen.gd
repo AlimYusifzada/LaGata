@@ -9,11 +9,10 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 onready var XenAnimation=$AnimatedSprite
-#onready var JumpTimer=$JumpTimer
-onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+onready var WallOnSouth=$RayCastSouth
+const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 export var JumpOffProb=0.1
 
 signal Die
@@ -25,8 +24,6 @@ func _ready():
 	XenAnimation.speed_scale=Speed/(MINSPEED/2.0)
 	XenAnimation.play("Run")
 	velocity.x=Speed
-	$Tween.interpolate_property($".","modulate",
-		Color(1,1,1,1),Color(1,1,1,0),0.2,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass # Replace with function body.
 	
 func _physics_process(delta):
@@ -44,7 +41,7 @@ func _on_Area2D_body_entered(body):
 	pass # Replace with function body.
 	
 func fall(delta):
-	if is_on_floor():
+	if is_floor():
 		velocity.y=0
 	else:
 		velocity.y+=Global.GRAVITY*delta
@@ -56,13 +53,14 @@ func animation():
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
-		
+func is_floor():
+	return WallOnSouth.get_collider()
+	pass
 func move():
-	if is_on_floor() && is_wall():
+	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor():# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
-		MindTimer.start(Global.MindTimerSet)
 		pass
 		
 func is_wall():
@@ -78,27 +76,19 @@ func sidewall():
 	return -1
 	
 func Kill():
+	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
 	set_collision_layer_bit(Global.ENEMY,false)
 	Life=false
-	$Tween.start()
+	queue_free()
 
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
 		Kill()
 		pass
-	pass # Replace with function body.
-
-#func _on_JumpTimer_timeout():
-#	if rand_range(0.0,1.0)<0.3:
-#		velocity.x*=-1
-#	pass # Replace with function body.
-
-func _on_Tween_tween_all_completed():
-	queue_free()
 	pass # Replace with function body.
 
 func _on_xen_Die():

@@ -8,13 +8,12 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 onready var XenAnimation=$AnimatedSprite
-#onready var JumpTimer=$JumpTimer
-onready var MindTimer=$MindTimer
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
+onready var WallOnSouth=$RayCastSouth
 export var JumpOffProb=0.1
-
-
+onready var BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+signal Die
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)
@@ -31,42 +30,37 @@ func _physics_process(delta):
 	pass
 
 func _process(delta):
-	animation()
+	#animation() # no animation yet
+	pass
 
-func _on_Area2D_body_entered(body):
+func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Die")
 	pass # Replace with function body.
 	
 func fall(delta):
-	if is_on_floor():
+	if is_floor():
 		velocity.y=0
 	else:
 		velocity.y+=Global.GRAVITY*delta
 
-func animation():
-	if velocity.x>0: #face to right or left
-		XenAnimation.flip_h=false
-	else:
-		XenAnimation.flip_h=true
+#func animation():
+#	if velocity.x>0: #face to right or left
+#		XenAnimation.flip_h=false
+#	else:
+#		XenAnimation.flip_h=true
 		
 func move():
-#	var col=get_last_slide_collision()
-#	if col:
-#		if col.get_collider().is_in_group("Cats"):
-#			velocity.y=JUMP_VELOCITY
-#			pass
-	if is_on_floor() && is_wall():
+	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_on_floor() && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor():# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
-		MindTimer.start(Global.MindTimerSet)
 		pass
-
+func is_floor():
+	return WallOnSouth.get_collider()
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
 	pass
-
 func sidewall():
 	if WallOnEast.get_collider():
 		if velocity.x<0:
@@ -75,3 +69,15 @@ func sidewall():
 		if velocity.x>0:
 			return 1
 	return -1
+func Kill():
+	var bl=BloodExplosion.instance()
+	bl.position=position
+	bl.cloud="acid"
+	bl.scale=Vector2(2,2)
+	get_parent().add_child(bl)
+	queue_free()
+	pass
+
+func _on_oranjeslime_Die():
+	Kill()
+	pass # Replace with function body.

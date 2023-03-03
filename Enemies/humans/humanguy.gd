@@ -6,13 +6,13 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
-export var JumpOffProb=0.1
+signal Die
 
 onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-
+const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)
@@ -23,7 +23,6 @@ func _ready():
 	pass # Replace with function body.
 	
 func _physics_process(delta):
-	deathcheck()
 	fall(delta)
 	move()
 	move_and_slide(velocity,Global.UP)
@@ -32,7 +31,7 @@ func _physics_process(delta):
 func _process(delta):
 	animation()
 
-func _on_Area2D_body_entered(body):
+func _on_DeathZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
@@ -44,9 +43,7 @@ func fall(delta):
 		velocity.y+=Global.GRAVITY*delta
 
 func animation():
-	if !Life: #play death if timer is running
-		XenAnimation.play("Death")
-	elif velocity.x>0: #face to right or left
+	if velocity.x>0: #face to right or left
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
@@ -66,28 +63,28 @@ func sidewall():
 			return 1
 	return -1
 func move():
-	if is_floor() and is_wall():
-		velocity.y=JUMP_VELOCITY #jump
+	if is_floor() && is_wall():
+		velocity.x*=sidewall()
 	elif !is_floor():
 		velocity.x*=-1
 		pass
 		
-func deathcheck():
-	if !Life:
-		queue_free()
-		
-func _on_head_body_entered(body):
+func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		#drop sceleton down
-		set_collision_mask_bit(Global.GROUND,false)
-		set_collision_mask_bit(Global.PLATFORM,false)
-#		DeathTimer.start()
+		Kill()
 		pass
 	pass # Replace with function body.
 
-func _on_DeathTimer_timeout():
+func Kill():
 	Life=false
+	velocity=Vector2(0,0)
+	var bl=BloodExpl.instance()
+	bl.position=position
+	get_parent().add_child(bl)
+	queue_free()
+	pass
+
+func _on_humanguy_Die():
+	Kill()
 	pass # Replace with function body.
-
-

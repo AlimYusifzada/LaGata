@@ -9,13 +9,12 @@ const SCALE=Vector2(0.6,0.6)
 var velocity=Vector2()
 var Life=true
 var isRunning=true
-export var JumpOffProb=0.7
 
 onready var RoachSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 
 # Called when the node enters the scene tree for the first time.

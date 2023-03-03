@@ -132,17 +132,19 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=44]
-height = 28.0
+radius = 13.0
+height = 24.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 8, 2.5 )
 
-[sub_resource type="RayShape2D" id=45]
-length = 11.0
+[sub_resource type="CapsuleShape2D" id=45]
+radius = 8.0
+height = 24.0
 
 [node name="xen" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
-collision_mask = 6
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -150,28 +152,23 @@ frames = SubResource( 11 )
 animation = "Jump"
 frame = 3
 
-[node name="body" type="Area2D" parent="."]
+[node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
-position = Vector2( 0, 8 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
+position = Vector2( 0, 6 )
 shape = SubResource( 44 )
 
-[node name="head" type="Area2D" parent="."]
+[node name="CatchZone" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
-position = Vector2( 0, -24 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
+position = Vector2( 0, -22 )
 shape = SubResource( 21 )
 
-[node name="GravCol" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 13 )
+[node name="body" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 6 )
 shape = SubResource( 45 )
-
-[node name="MindTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="Tween" type="Tween" parent="."]
 
 [node name="RayCastWest" type="RayCast2D" parent="."]
 enabled = true
@@ -183,7 +180,11 @@ enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 6
 
+[node name="RayCastSouth" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 29 )
+collision_mask = 6
+
 [connection signal="Die" from="." to="." method="_on_xen_Die"]
-[connection signal="body_entered" from="body" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="head" to="." method="_on_head_body_entered"]
-[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[connection signal="body_entered" from="DamageZone" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="CatchZone" to="." method="_on_head_body_entered"]

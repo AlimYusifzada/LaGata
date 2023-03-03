@@ -8,7 +8,7 @@ const KITTEN_MOD=1.2 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten"
 
-onready var DUST=preload("res://Common/JumpDust.tscn")
+const DUST=preload("res://Common/JumpDust.tscn")
 onready var Message=$Cam/HUD/HUDPanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
@@ -147,16 +147,16 @@ func ChecKbrdRun(delta):
 
 #animation
 func animate():
-	if velocity.y!=0 && !(is_on_floor()||onObject):
+	if velocity.y!=0 && !(is_on_floor()||onObject): #jumping
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(JUMP))
-	if velocity.x==0 && (is_on_floor()||onObject):
+	if velocity.x==0 && (is_on_floor()||onObject): #idle
 		PlayerSprite.speed_scale=0.1
 		PlayerSprite.play(PickAnimation(SIT))
-	elif abs(velocity.x)<=SPEED && (is_on_floor()||onObject):
+	elif abs(velocity.x)<=SPEED && (is_on_floor()||onObject): #walk
 		PlayerSprite.speed_scale=2
 		PlayerSprite.play(PickAnimation(WALK))
-	elif abs(velocity.x)>SPEED && (is_on_floor()||onObject):
+	elif abs(velocity.x)>SPEED && (is_on_floor()||onObject): #run
 		PlayerSprite.speed_scale=3
 		PlayerSprite.play(PickAnimation(RUN))
 	pass

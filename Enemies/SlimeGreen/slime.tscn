@@ -186,7 +186,7 @@ script = ExtResource( 9 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Run"
-frame = 10
+frame = 13
 playing = true
 
 [node name="JumpZone" type="Area2D" parent="."]

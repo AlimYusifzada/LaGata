@@ -95,6 +95,7 @@ func jump_from_wall():
 		velocity.x*=-1
 
 func Kill():
+	velocity=Vector2(0,0)
 	set_collision_layer_bit(Global.ENEMY,false)
 	var bl=BloodExpl.instance()
 	bl.position=position
