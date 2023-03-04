@@ -138,15 +138,12 @@ Explosive = true
 
 [node name="MovableObject7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 278, 137 )
-Explosive = true
 
 [node name="MovableObject8" parent="." instance=ExtResource( 4 )]
 position = Vector2( 280, 70 )
-Explosive = true
 
 [node name="MovableObject9" parent="." instance=ExtResource( 4 )]
 position = Vector2( 230, 326 )
-Explosive = true
 
 [node name="Ladder" parent="." instance=ExtResource( 10 )]
 position = Vector2( -479, -26 )

@@ -2,10 +2,15 @@ extends RigidBody2D
 
 export var Explosive=false
 var Broken=false
-onready var explosion=preload("res://Common/MovableObjects/Explosion.tscn")
+const explosion=preload("res://Common/MovableObjects/Explosion.tscn")
+onready var ASprite=$ASprite
 signal Die
 
 func _ready():
+	if Explosive:
+		ASprite.frame=1
+	else:
+		ASprite.frame=randi()%6+2
 	pass
 
 func _process(delta):
@@ -17,8 +22,9 @@ func _process(delta):
 			boom.position=position
 			get_parent().add_child(boom)
 			queue_free()
-		else:
+		else: #change sprite
 			set_mode(MODE_STATIC)
+			ASprite.frame=0
 			set_collision_layer_bit(Global.GROUND,true)
 			set_collision_mask_bit(Global.ENEMY,true)
 			set_collision_mask_bit(Global.PRAY,true)

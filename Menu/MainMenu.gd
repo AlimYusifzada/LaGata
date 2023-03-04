@@ -2,7 +2,7 @@
 
 extends Node2D
 
-onready var OptionsMenu=preload("res://Menu/Options.tscn")
+const OptionsMenu=preload("res://Menu/Options.tscn")
 onready var CatYawAnimation=$MenuPoint/CatYaw
 onready var CatYawDelay=$CatYawDelay
 onready var BGMusic=$BGMusic
@@ -10,6 +10,7 @@ onready var Continue=$MenuPoint/Continue
 onready var SFXSound=$SFXSound
 onready var MenuPoint=$MenuPoint
 onready var transit=$"/root/Transit"
+export var StartLevel="res://Levels/TestLvl.tscn"
 
 signal OptionsChanged
 
@@ -42,7 +43,7 @@ func _process(delta):
 	
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-	transit.change_scene("res://Levels/TestLvl.tscn")
+	transit.change_scene(StartLevel)
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
@@ -51,12 +52,14 @@ func _on_Exit_pressed():
 	get_tree().quit(0)
 	pass # Replace with function body.
 
-func _on_Comtinue_pressed():
+func _on_Continue_pressed():
 	Global.loadGameOptions()
 	Global.loadGameState()
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
-		transit.change_scene("res://Levels/TestLvl.tscn")
+		#need simple level name assembler
+		print("continue:"+str(Global.Level))
+		transit.change_scene(StartLevel)
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():
