@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyBranch4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Common/StaticPlatforms/Ladder.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Buffs/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Backgrounds/Beach/1/cloud.png" type="Texture" id=14]
@@ -161,7 +162,7 @@ position = Vector2( -479, -218 )
 position = Vector2( -479, -282 )
 
 [node name="Cat" parent="." instance=ExtResource( 1 )]
-position = Vector2( 92, -136 )
+position = Vector2( 154, 128 )
 
 [node name="slime" parent="." instance=ExtResource( 24 )]
 position = Vector2( 941, 358 )
@@ -176,3 +177,6 @@ position = Vector2( 321, -51 )
 tile_set = ExtResource( 23 )
 format = 1
 tile_data = PoolIntArray( -131065, 31, 0, -131064, 35, 0, -65536, 29, 0, -65535, 30, 0, 65530, 5, 0, 65532, 29, 0, 65533, 29, 0, 65534, 34, 0, 65535, 27, 0, 0, 27, 0, 1, 27, 0, 2, 27, 0, 131066, 13, 0, 131067, 23, 0, 131068, 23, 0, 131069, 23, 0, 131070, 23, 0, 131071, 27, 0, 196607, 27, 0, 327674, 7, 0, 393210, 10, 0, 393211, 9, 0 )
+
+[node name="dog" parent="." instance=ExtResource( 11 )]
+position = Vector2( -164, 344 )

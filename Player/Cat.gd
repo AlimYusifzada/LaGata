@@ -9,6 +9,7 @@ const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten"
 
 const DUST=preload("res://Common/JumpDust.tscn")
+const FLROACH=preload("res://Player/ammo/FlyingRoach.tscn")
 onready var Message=$Cam/HUD/HUDPanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
@@ -38,8 +39,9 @@ var KoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double j
 var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
-var JoystickMove=Vector2()
+#var JoystickMove=Vector2()
 var BuffTime:int=30
+
 
 signal Food(stamina)
 signal Die
@@ -118,6 +120,15 @@ func CheckDeath():
 	pass
 
 func ChecKbrdRun(delta):
+	if Input.is_action_just_pressed("ui_shoot"):
+		var flroach=FLROACH.instance()
+		flroach.position=position
+		if PlayerSprite.is_flipped_h():
+			flroach.velocity.x=MAXSPEED*delta
+		else:
+			flroach.velocity.x=-MAXSPEED*delta
+		get_parent().add_child(flroach)
+		
 	if Input.is_action_pressed("ui_runright") && canMoveEast:#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
