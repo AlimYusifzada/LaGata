@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Backgrounds/Beach/1/cloud.png" type="Texture" id=14]
 [ext_resource path="res://Levels/TestLvl.gd" type="Script" id=15]
 [ext_resource path="res://Backgrounds/OilPlant/5.png" type="Texture" id=16]
+[ext_resource path="res://Enemies/pray/Mouse.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Backgrounds/OilPlant/3.png" type="Texture" id=20]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=23]
 [ext_resource path="res://Enemies/SlimeGreen/slime.tscn" type="PackedScene" id=24]
@@ -126,11 +127,11 @@ position = Vector2( -391, 182 )
 position = Vector2( -1215, 406 )
 
 [node name="MovableObject4" parent="." instance=ExtResource( 4 )]
-position = Vector2( -378, 168 )
+position = Vector2( 844, 47 )
 Explosive = true
 
 [node name="MovableObject5" parent="." instance=ExtResource( 4 )]
-position = Vector2( -386, -20 )
+position = Vector2( 839, 131 )
 Explosive = true
 
 [node name="MovableObject6" parent="." instance=ExtResource( 4 )]
@@ -138,13 +139,13 @@ position = Vector2( -357, -255 )
 Explosive = true
 
 [node name="MovableObject7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 278, 137 )
+position = Vector2( 808, -122 )
 
 [node name="MovableObject8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 280, 70 )
+position = Vector2( 909, -103 )
 
 [node name="MovableObject9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 230, 326 )
+position = Vector2( 979, -161 )
 
 [node name="Ladder" parent="." instance=ExtResource( 10 )]
 position = Vector2( -479, -26 )
@@ -171,12 +172,18 @@ position = Vector2( 941, 358 )
 position = Vector2( -217, -301 )
 
 [node name="Roach" parent="." instance=ExtResource( 13 )]
-position = Vector2( 321, -51 )
+position = Vector2( -150, 220 )
+
+[node name="dog" parent="." instance=ExtResource( 11 )]
+position = Vector2( 969, 144 )
+
+[node name="Mouse" parent="." instance=ExtResource( 17 )]
+position = Vector2( 271, 155 )
+
+[node name="Roach2" parent="." instance=ExtResource( 13 )]
+position = Vector2( -656, -128 )
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 23 )
 format = 1
 tile_data = PoolIntArray( -131065, 31, 0, -131064, 35, 0, -65536, 29, 0, -65535, 30, 0, 65530, 5, 0, 65532, 29, 0, 65533, 29, 0, 65534, 34, 0, 65535, 27, 0, 0, 27, 0, 1, 27, 0, 2, 27, 0, 131066, 13, 0, 131067, 23, 0, 131068, 23, 0, 131069, 23, 0, 131070, 23, 0, 131071, 27, 0, 196607, 27, 0, 327674, 7, 0, 393210, 10, 0, 393211, 9, 0 )
-
-[node name="dog" parent="." instance=ExtResource( 11 )]
-position = Vector2( -164, 344 )

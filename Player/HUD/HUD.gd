@@ -14,6 +14,8 @@ onready var StaminaBar=$HUDPanel/CatStat/CatStamBar
 onready var LifeBar=$HUDPanel/CatStat/CatLifeBar
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
 onready var PointsCounter=$HUDPanel/PointsCounter
+onready var Ammo=$HUDPanel/Ammo
+onready var AmmoCounter=$HUDPanel/Ammo/AmmoCounter
 
 onready var Options=preload("res://Menu/Options.tscn")
 
@@ -62,12 +64,16 @@ func _on_CanvasLayer_UpdateHUD():
 
 	PointsCounter.text=str(Global.Points)
 	KeysCounter.text=str(Global.KeysRing[0])
+	AmmoCounter.text=str(Global.Ammo)
 	
 	if Global.KeysRing[0]==0:
 		Keys.visible=false
 	else:
 		Keys.visible=true
-	pass # Replace with function body.
+	if Global.Ammo==0:
+		Ammo.visible=false
+	else:
+		Ammo.visible=true
 
 func _on_TouchESC_pressed():
 	get_tree().paused=true

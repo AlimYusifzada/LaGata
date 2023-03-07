@@ -39,22 +39,25 @@ func Kill():
 	Life=false
 	$DamageZone.set_collision_layer_bit(Global.PRAY,false)
 	velocity=Vector2(0,0)
-	var bl=BloodExpl.instance()
-	bl.position=position
-	bl.cloud="brown"
-	get_parent().add_child(bl)
 	queue_free()
 
 func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Food",-2)
-		Kill()
+		velocity.x*=-1
+#		Global.Ammo+=2
+#		Kill()
 	pass # Replace with function body.
 
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
+		var bl=BloodExpl.instance()
+		bl.position=position
+		bl.cloud="brown"
+		get_parent().add_child(bl)
 		Global.MiceCatches+=1
 		body.emit_signal("Food",2)
+		Global.Ammo+=5
 		Kill()
 	pass # Replace with function body.
 

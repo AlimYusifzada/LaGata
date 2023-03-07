@@ -3,6 +3,7 @@ extends AnimatedSprite
 var cloud="default"
 
 func _ready():
+	$APLayer.play()
 	play(cloud)
 	pass
 

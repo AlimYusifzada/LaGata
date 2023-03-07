@@ -31,6 +31,7 @@ func _on_Timer_timeout():
 func _on_DamageZone_body_entered(body):
 	body.emit_signal("Die")
 	velocity.x=0
+	Global.Points+=100
 	puff()
 	pass # Replace with function body.
 

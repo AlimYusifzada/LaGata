@@ -21,6 +21,7 @@ var isChild:bool=true #player status (child/adult)
 var Stamina=10	#initial value
 var MiceCatches=0
 var Points=0
+var Ammo=0
 #var PlayerPosition=Vector2()
 
 var MusicVol=0
@@ -34,7 +35,7 @@ var MaxLifes:int=7
 
 func _ready():
 	loadGameOptions()
-#	PlayerReset()
+	PlayerReset()
 	randomize()
 
 func PlayerReset():
@@ -89,6 +90,7 @@ func saveGameState():
 		"isChild":isChild,
 		"MiceCatches":MiceCatches,
 		"Points":Points,
+		"Ammo":Ammo,
 		"DblJumps":DblJumps,
 		"MaxDblJumps":MaxDblJumps,
 		"Stamina":Stamina,
@@ -131,6 +133,7 @@ func loadGameState():
 		isChild=GameState["isChild"]
 		MiceCatches=GameState["MiceCatches"]
 		Points=GameState["Points"]
+		Ammo=GameState["Ammo"]
 		DblJumps=GameState["DblJumps"]
 		MaxDblJumps=GameState["MaxDblJumps"]
 		Stamina=GameState["Stamina"]

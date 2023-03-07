@@ -121,14 +121,17 @@ func CheckDeath():
 
 func ChecKbrdRun(delta):
 	if Input.is_action_just_pressed("ui_shoot"):
-		var flroach=FLROACH.instance()
-		flroach.position=position
-		if PlayerSprite.is_flipped_h():
-			flroach.velocity.x=MAXSPEED*delta
+		if Global.Ammo>0:
+			Global.Ammo-=1
+			var flroach=FLROACH.instance()
+			flroach.position=position
+			if PlayerSprite.is_flipped_h():
+				flroach.velocity.x=(MAXSPEED+100)*delta
+			else:
+				flroach.velocity.x=-(MAXSPEED+100)*delta
+			get_parent().add_child(flroach)
 		else:
-			flroach.velocity.x=-MAXSPEED*delta
-		get_parent().add_child(flroach)
-		
+			Global.Ammo=0
 	if Input.is_action_pressed("ui_runright") && canMoveEast:#and not Input.is_action_just_pressed("ui_runright"):
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta

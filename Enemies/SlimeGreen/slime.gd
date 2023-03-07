@@ -35,6 +35,7 @@ func _process(delta):
 func _on_JumpZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Jump",10)
+		velocity.x*=-1
 	pass # Replace with function body.
 	
 func fall(delta):

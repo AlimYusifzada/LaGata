@@ -88,7 +88,8 @@ func Kill():
 	
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Food",3) #incease stamina
+		body.emit_signal("Food",10) #incease stamina
+		body.emit_signal("Jump",5)
 		Kill()
 	pass # Replace with function body.
 
