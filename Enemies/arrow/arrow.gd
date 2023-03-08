@@ -23,7 +23,7 @@ func _process(delta):
 		sprite.flip_h=false
 		
 func _physics_process(delta):
-	move_and_collide(velocity)
+	move_and_slide(velocity)
 	pass
 
 func _on_arrow_body_entered(body):

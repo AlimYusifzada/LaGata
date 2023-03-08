@@ -49,7 +49,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite59/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 8, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite287" type="Sprite" parent="."]
 position = Vector2( 96, 1096 )
@@ -64,7 +64,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite287/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -9, 32, -9, -2, 32, -2, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite288" type="Sprite" parent="."]
 position = Vector2( 96, 1168 )
@@ -79,7 +79,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite288/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 16, 15, 16, -32, 32, -32, 32, 32 )
 
 [node name="Sprite289" type="Sprite" parent="."]
 position = Vector2( 96, 1248 )
@@ -94,7 +94,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite289/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -10, 14, -11, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite290" type="Sprite" parent="."]
 position = Vector2( 168, 1024 )
@@ -109,7 +109,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite290/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 8, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite291" type="Sprite" parent="."]
 position = Vector2( 168, 1096 )
@@ -124,7 +124,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite291/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -8, 32, -8, -7, 32, -7, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite292" type="Sprite" parent="."]
 position = Vector2( 168, 1168 )
@@ -139,7 +139,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite292/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 13, 15, 13, -32, 32, -32, 32, 32 )
 
 [node name="Sprite293" type="Sprite" parent="."]
 position = Vector2( 168, 1248 )
@@ -154,7 +154,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite293/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -14, 15, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite298" type="Sprite" parent="."]
 position = Vector2( 96, 632 )
@@ -169,7 +169,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite298/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 8, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite299" type="Sprite" parent="."]
 position = Vector2( 96, 704 )
@@ -184,7 +184,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite299/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -11, 32, -11, -6, 32, -6, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite300" type="Sprite" parent="."]
 position = Vector2( 96, 776 )
@@ -199,7 +199,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite300/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 10, 15, 11, -32, 32, -32, 32, 32 )
 
 [node name="Sprite301" type="Sprite" parent="."]
 position = Vector2( 96, 848 )
@@ -214,7 +214,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite301/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -13, 14, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite306" type="Sprite" parent="."]
 position = Vector2( 243, 632 )
@@ -229,7 +229,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite306/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 8, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite307" type="Sprite" parent="."]
 position = Vector2( 243, 704 )
@@ -244,7 +244,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite307/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -10, 32, -10, -5, 32, -6, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite308" type="Sprite" parent="."]
 position = Vector2( 243, 776 )
@@ -259,7 +259,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite308/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 11, 14, 10, 15, -32, 32, -32, 32, 32 )
 
 [node name="Sprite309" type="Sprite" parent="."]
 position = Vector2( 243, 848 )
@@ -274,7 +274,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite309/StaticBody2D"]
-polygon = PoolVector2Array( 29, 16, -19, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -13, 15, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite302" type="Sprite" parent="."]
 position = Vector2( 168, 632 )
@@ -289,7 +289,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite302/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite303" type="Sprite" parent="."]
 position = Vector2( 168, 704 )
@@ -304,7 +304,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite303/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -4, 31, -4, -4, 31, -4, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite304" type="Sprite" parent="."]
 position = Vector2( 168, 776 )
@@ -319,7 +319,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite304/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 11, 14, 11, 14, -32, 32, -32, 32, 32 )
 
 [node name="Sprite305" type="Sprite" parent="."]
 position = Vector2( 168, 848 )
@@ -334,7 +334,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite305/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -11, 15, -11, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite294" type="Sprite" parent="."]
 position = Vector2( 243, 1024 )
@@ -349,7 +349,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite294/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -7, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite295" type="Sprite" parent="."]
 position = Vector2( 243, 1096 )
@@ -364,7 +364,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite295/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -10, 32, -10, -9, 32, -10, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite296" type="Sprite" parent="."]
 position = Vector2( 243, 1168 )
@@ -379,7 +379,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite296/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 13, 15, 13, -32, 32, -32, 32, 32 )
 
 [node name="Sprite297" type="Sprite" parent="."]
 position = Vector2( 243, 1248 )
@@ -394,7 +394,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite297/StaticBody2D"]
-polygon = PoolVector2Array( 32, 8, -21, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 17, -13, 16, -13, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 848, 56 )
@@ -2611,7 +2611,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite325/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite326" type="Sprite" parent="."]
 position = Vector2( 246, 304 )
@@ -2626,7 +2626,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite326/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -7, 32, -7, -10, 32, -10, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite327" type="Sprite" parent="."]
 position = Vector2( 246, 376 )
@@ -2641,7 +2641,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite327/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 11, 11, 11, 11, -32, 32, -32, 32, 32 )
 
 [node name="Sprite328" type="Sprite" parent="."]
 position = Vector2( 246, 448 )
@@ -2656,7 +2656,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite328/StaticBody2D"]
-polygon = PoolVector2Array( 29, 16, -19, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 15, -5, 14, -5, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite329" type="Sprite" parent="."]
 position = Vector2( 243, 152 )
@@ -2686,7 +2686,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite330/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 8, -9, -32, -9, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite331" type="Sprite" parent="."]
 position = Vector2( 171, 304 )
@@ -2701,7 +2701,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite331/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -5, 32, -5, -1, 33, -1, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite332" type="Sprite" parent="."]
 position = Vector2( 171, 376 )
@@ -2716,7 +2716,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite332/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 8, -3, 8, -3, -32, 32, -32, 32, 32 )
 
 [node name="Sprite333" type="Sprite" parent="."]
 position = Vector2( 171, 448 )
@@ -2731,7 +2731,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite333/StaticBody2D"]
-polygon = PoolVector2Array( 29, 16, -19, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 16, -3, 16, -3, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite334" type="Sprite" parent="."]
 position = Vector2( 168, 152 )
@@ -2761,7 +2761,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite335/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite336" type="Sprite" parent="."]
 position = Vector2( 99, 304 )
@@ -2776,10 +2776,10 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite336/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -10, 32, -10, -7, 32, -7, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite337" type="Sprite" parent="."]
-position = Vector2( 99, 376 )
+position = Vector2( 97, 377 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 192, 64, 64 )
@@ -2791,7 +2791,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite337/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 21, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -33, 31, -33, 7, 7, 7, 7, -33, 31, -33, 31, 31 )
 
 [node name="Sprite338" type="Sprite" parent="."]
 position = Vector2( 99, 448 )
@@ -2806,7 +2806,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite338/StaticBody2D"]
-polygon = PoolVector2Array( 29, 16, -19, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 29, 16, -3, 16, -3, -32, -32, -32, -32, 32, 29, 32 )
 
 [node name="Sprite339" type="Sprite" parent="."]
 position = Vector2( 96, 152 )
@@ -3616,7 +3616,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite310/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite311" type="Sprite" parent="."]
 position = Vector2( 96, 1504 )
@@ -3631,7 +3631,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite311/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -13, 32, -13, -7, 32, -7, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite312" type="Sprite" parent="."]
 position = Vector2( 96, 1576 )
@@ -3646,7 +3646,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite312/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 13, 14, 13, 15, -32, 32, -32, 32, 32 )
 
 [node name="Sprite313" type="Sprite" parent="."]
 position = Vector2( 96, 1656 )
@@ -3661,7 +3661,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite313/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 12, -14, 12, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite314" type="Sprite" parent="."]
 position = Vector2( 96, 1352 )
@@ -3691,7 +3691,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite315/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 6, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite316" type="Sprite" parent="."]
 position = Vector2( 168, 1504 )
@@ -3706,7 +3706,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite316/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -6, 32, -6, -6, 32, -6, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite317" type="Sprite" parent="."]
 position = Vector2( 168, 1576 )
@@ -3721,7 +3721,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite317/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 12, 13, 10, 13, -32, 32, -32, 32, 32 )
 
 [node name="Sprite318" type="Sprite" parent="."]
 position = Vector2( 168, 1656 )
@@ -3736,7 +3736,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite318/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 9, -13, 8, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite319" type="Sprite" parent="."]
 position = Vector2( 168, 1352 )
@@ -3766,7 +3766,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite320/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -8, -32, -8, -32, -32, 32, -32, 32, 32 )
 
 [node name="Sprite321" type="Sprite" parent="."]
 position = Vector2( 243, 1504 )
@@ -3781,7 +3781,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite321/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -10, 32, -10, -8, 32, -9, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite322" type="Sprite" parent="."]
 position = Vector2( 243, 1576 )
@@ -3796,7 +3796,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite322/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 13, 15, 13, -32, 32, -32, 32, 32 )
 
 [node name="Sprite323" type="Sprite" parent="."]
 position = Vector2( 243, 1656 )
@@ -3811,7 +3811,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite323/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 13, -12, 13, -13, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite324" type="Sprite" parent="."]
 position = Vector2( 243, 1352 )
@@ -3841,7 +3841,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite340/StaticBody2D"]
-polygon = PoolVector2Array( 8, 32, -32, -8, -32, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( 8, 32, 7, -9, -33, -9, -34, -32, 32, -32, 32, 32 )
 
 [node name="Sprite341" type="Sprite" parent="."]
 position = Vector2( 320, 1504 )
@@ -3856,7 +3856,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite341/StaticBody2D"]
-polygon = PoolVector2Array( -24, 32, 32, 0, 32, -32, -32, -32, -32, 32 )
+polygon = PoolVector2Array( -9, 32, -9, -6, 32, -6, 32, -32, -32, -32, -32, 32 )
 
 [node name="Sprite342" type="Sprite" parent="."]
 position = Vector2( 320, 1576 )
@@ -3871,7 +3871,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite342/StaticBody2D"]
-polygon = PoolVector2Array( -32, 32, -32, 16, 24, -32, 32, -32, 32, 32 )
+polygon = PoolVector2Array( -32, 32, -32, 16, 15, 15, 14, -32, 32, -32, 32, 32 )
 
 [node name="Sprite343" type="Sprite" parent="."]
 position = Vector2( 320, 1656 )
@@ -3886,7 +3886,7 @@ __meta__ = {
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite343/StaticBody2D"]
-polygon = PoolVector2Array( 32, 16, -24, -32, -32, -32, -32, 32, 32, 32 )
+polygon = PoolVector2Array( 32, 15, -13, 14, -14, -32, -32, -32, -32, 32, 32, 32 )
 
 [node name="Sprite344" type="Sprite" parent="."]
 position = Vector2( 320, 1352 )

@@ -7,6 +7,8 @@ export var JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)
 var velocity=Vector2()
 var Speed=0.0
+var moveCounter=0
+var prevX=0.0
 var Life=true
 onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
@@ -57,9 +59,15 @@ func is_floor():
 	return WallOnSouth.get_collider()
 	pass
 func move():
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
+		
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor():# && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor() || moveCounter>10:# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		pass
 		

@@ -4,6 +4,7 @@ extends KinematicBody2D
 
 
 const ARROW=preload("res://Enemies/arrow/arrow.tscn")
+const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 export var MINSPEED=100.0
 export var JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)
@@ -12,6 +13,8 @@ var Speed=0.0
 var Life=true
 var shooting=false
 var dest=velocity.x
+var prevX=0.0
+var moveCounter=0
 
 signal Die
 
@@ -19,7 +22,6 @@ onready var ArcherSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -69,6 +71,12 @@ func LookAt():
 		return -1
 		
 func move(delta):
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
+		
 	if velocity.x!=0:
 		dest=velocity.x
 	elif !shooting:
@@ -91,7 +99,7 @@ func sidewall():
 func jump_from_wall():
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor():
+	elif !is_floor()||moveCounter>10:
 		velocity.x*=-1
 
 func Kill():
