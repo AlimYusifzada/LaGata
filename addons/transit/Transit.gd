@@ -2,7 +2,7 @@ extends Control
 
 signal scene_changed
 
-const DEFAULT_DURATION := 0.2
+const DEFAULT_DURATION := 0.3
 const DEFAULT_DELAY := 0.0
 
 onready var _animator := $AnimationPlayer

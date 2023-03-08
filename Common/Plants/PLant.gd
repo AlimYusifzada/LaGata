@@ -1,7 +1,7 @@
 extends AnimatedSprite
 
-export var plantnum=1
+export var PlantNum=1
 
 func _ready():
-	play("Plant"+str(plantnum))
+	play("Plant"+str(PlantNum))
 	pass
