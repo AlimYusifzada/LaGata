@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-
+var RoachSpeed=0.0
 var velocity=Vector2(0,0)
 var SCALE=Vector2(.5,.5)
 const Cloud=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
@@ -15,13 +15,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	velocity.x=RoachSpeed*delta
 	if velocity.x>0:
 		roachSprite.flip_h=false
 	else:
 		roachSprite.flip_h=true
 	pass
-func _physics_process(delta):
-	move_and_collide(velocity)
+	move_and_collide(velocity,false)
 	
 func _on_Timer_timeout():
 	puff()

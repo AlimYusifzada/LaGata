@@ -6,6 +6,8 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
+var moveCounter=0
+var prevX=0.0
 signal Die
 
 onready var XenAnimation=$AnimatedSprite
@@ -63,9 +65,14 @@ func sidewall():
 			return 1
 	return -1
 func move():
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor():
+	elif !is_floor()||moveCounter>10:
 		velocity.x*=-1
 		pass
 		

@@ -145,7 +145,7 @@ func _on_AnimatedSprite_animation_finished():
 		var arrow=ARROW.instance() #create instance of arrow
 		arrow.position=position # set position
 		arrow.position.y+=15
-		arrow.velocity.x=LookAt()*Speed*10
+		arrow.ArrowSpeed=LookAt()*Speed*10
 		get_parent().add_child(arrow)
 		shooting=false
 		velocity.x=dest

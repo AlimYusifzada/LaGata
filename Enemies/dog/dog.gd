@@ -8,6 +8,8 @@ const SCALE=Vector2(0.8,0.8)
 var velocity=Vector2()
 var Speed=0.0
 var Life=true
+var moveCounter=0
+var prevX=0.0
 onready var DogAnimation=$AnimatedSprite
 onready var Voice=$Voice
 onready var WallOnWest=$RayCastWest
@@ -72,9 +74,14 @@ func sidewall():
 			return 1
 	return -1
 func move(delta):
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor():
+	elif !is_floor()||moveCounter>10:
 		velocity.x*=-1.0
 
 func Kill():

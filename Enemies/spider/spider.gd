@@ -9,6 +9,8 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 var falling=false
+var prevX=0.0
+var moveCounter=0
 onready var SpiderAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
@@ -67,9 +69,14 @@ func sidewall():
 	return -1
 
 func move():
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
 	if is_floor() && is_wall():
 		velocity.x=Speed*sidewall()
-	elif !is_floor():
+	elif !is_floor()||moveCounter>10:
 		velocity.x*=-1
 	pass
 

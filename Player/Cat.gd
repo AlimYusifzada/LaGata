@@ -126,9 +126,9 @@ func ChecKbrdRun(delta):
 			var flroach=FLROACH.instance()
 			flroach.position=position
 			if PlayerSprite.is_flipped_h():
-				flroach.velocity.x=(MAXSPEED+100)*delta
+				flroach.RoachSpeed=MAXSPEED
 			else:
-				flroach.velocity.x=-(MAXSPEED+100)*delta
+				flroach.RoachSpeed=-MAXSPEED
 			get_parent().add_child(flroach)
 		else:
 			Global.Ammo=0
