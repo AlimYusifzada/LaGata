@@ -35,7 +35,7 @@ var MaxLifes:int=7
 
 func _ready():
 	loadGameOptions()
-	PlayerReset()
+#	PlayerReset()
 	randomize()
 
 func PlayerReset():
@@ -47,6 +47,7 @@ func PlayerReset():
 	Stamina=10 #initial value
 	MiceCatches=0
 	Points=0
+	Ammo=0
 	DblJumps=MaxDblJumps
 	saveGameState()
 	pass

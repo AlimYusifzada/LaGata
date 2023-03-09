@@ -7,7 +7,7 @@ var velocity=Vector2(0,0) # only x wiil change
 var ArrowSpeed=0.0
 onready var woosh=$woosh
 onready var RemoveTimer=$RemoveTimer
-onready var sprite=$arrow/Sprite
+onready var sprite=$Sprite
 
 func _ready():
 	set_scale(SCALE)

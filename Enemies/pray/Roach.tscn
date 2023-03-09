@@ -33,14 +33,14 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=27]
 radius = 23.9999
-height = 76.0
+height = 48.0002
 
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 32, 4 )
 
 [sub_resource type="CapsuleShape2D" id=28]
 radius = 15.9999
-height = 76.0
+height = 32.0002
 
 [node name="Roach" type="KinematicBody2D" groups=["Pray"]]
 collision_layer = 16

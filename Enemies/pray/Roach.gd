@@ -9,6 +9,8 @@ const SCALE=Vector2(0.6,0.6)
 var velocity=Vector2()
 var Life=true
 var isRunning=true
+var moveCounter=0
+var prevX=0.0
 
 onready var RoachSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
@@ -86,8 +88,15 @@ func sidewall():
 			return 1
 	return -1
 func move():
+	if is_equal_approx(prevX,get_global_position().x):
+		moveCounter+=1
+	else:
+		prevX=get_global_position().x
+		moveCounter=0
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
+	if moveCounter>10:
+		velocity.x*=-1
 
 func _on_Roach_Die():
 	Kill()
