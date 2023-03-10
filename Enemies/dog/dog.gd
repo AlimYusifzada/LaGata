@@ -39,6 +39,8 @@ func _process(delta):
 	animation()
 
 func fall(delta):
+	if velocity.y>Global.TerminateVelocity:
+		Kill()
 	if is_floor():
 		velocity.y=0
 	else:

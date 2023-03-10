@@ -10,6 +10,7 @@ const file_GameOptions="user://gameoptions"
 
 const MindTimerSet=.5
 const GRAVITY = 1500
+const TerminateVelocity=2000
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index

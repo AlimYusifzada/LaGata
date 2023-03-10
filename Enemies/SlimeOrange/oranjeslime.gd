@@ -12,7 +12,7 @@ onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
 export var JumpOffProb=0.1
-onready var BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 signal Die
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,6 +39,8 @@ func _on_DamageZone_body_entered(body):
 	pass # Replace with function body.
 	
 func fall(delta):
+	if velocity.y>Global.TerminateVelocity:
+		Kill()
 	if is_floor():
 		velocity.y=0
 	else:

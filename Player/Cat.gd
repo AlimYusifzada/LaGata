@@ -114,7 +114,7 @@ func CheckDeath():
 		HeartBeat.play()
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
-	if Global.Stamina<=0 || velocity.y>2000 || !Life:
+	if Global.Stamina<=0 || velocity.y>Global.TerminateVelocity || !Life:
 		set_physics_process(false)
 		$Tween.start()
 	pass

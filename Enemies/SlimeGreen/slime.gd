@@ -11,6 +11,7 @@ onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 #onready var WallOnSouth=$RayCastSouth
+const BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 
 signal Die
 
@@ -39,6 +40,8 @@ func _on_JumpZone_body_entered(body):
 	pass # Replace with function body.
 	
 func fall(delta):
+	if velocity.y>Global.TerminateVelocity:
+		Kill()
 	if is_on_floor():
 		velocity.y=0
 	else:
@@ -73,3 +76,12 @@ func sidewall():
 		if velocity.x>0:
 			return 1
 	return -1
+	
+func Kill():
+	var bl=BloodExplosion.instance()
+	bl.position=position
+	bl.cloud="acid"
+	bl.scale=Vector2(2,2)
+	get_parent().add_child(bl)
+	queue_free()
+	pass

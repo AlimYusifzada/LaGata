@@ -64,6 +64,8 @@ func _on_CatchZone_body_entered(body):
 	pass # Replace with function body.
 
 func fall(delta):
+	if velocity.y>Global.TerminateVelocity:
+		Kill()
 	if is_floor():
 		velocity.y=0
 	else:
