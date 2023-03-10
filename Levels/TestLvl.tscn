@@ -20,7 +20,7 @@
 [ext_resource path="res://Common/Plants/StaticPlant.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Backgrounds/OilPlant/3.png" type="Texture" id=20]
-[ext_resource path="res://Enemies/SpawnPoints/SpawnToilet.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Common/StaticPlatforms/ToiletFront.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=23]
 [ext_resource path="res://Enemies/SlimeGreen/slime.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Backgrounds/OilPlant/4.png" type="Texture" id=25]
@@ -120,6 +120,23 @@ position = Vector2( 545, -90 )
 [node name="Coin10" parent="Coins" instance=ExtResource( 12 )]
 position = Vector2( 609, -90 )
 
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="DeadlyBranch2" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( -1463, 374 )
+
+[node name="DeadlyBranch3" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( -903, 398 )
+
+[node name="DeadlyBranch4" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( -391, 182 )
+
+[node name="DeadlyBranch1" parent="Traps" instance=ExtResource( 7 )]
+position = Vector2( -1215, 406 )
+
+[node name="CrowScene" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( -217, -301 )
+
 [node name="Movables" type="Node2D" parent="."]
 
 [node name="MovableObject4" parent="Movables" instance=ExtResource( 4 )]
@@ -177,7 +194,7 @@ position = Vector2( 153, 153 )
 position = Vector2( -656, -128 )
 
 [node name="Cat" parent="Actors" instance=ExtResource( 1 )]
-position = Vector2( -632, 149 )
+position = Vector2( -189, 253 )
 
 [node name="xen" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( -663, 319 )
@@ -197,28 +214,6 @@ position = Vector2( -741, 295 )
 [node name="xenshooter" parent="Actors" instance=ExtResource( 26 )]
 position = Vector2( 214, 327 )
 
-[node name="Traps" type="Node2D" parent="."]
-
-[node name="SpawnToilet" parent="Traps" instance=ExtResource( 21 )]
-position = Vector2( -282, 375 )
-scale = Vector2( 1.5, 1.5 )
-frame = 1
-
-[node name="DeadlyBranch2" parent="Traps" instance=ExtResource( 6 )]
-position = Vector2( -1463, 374 )
-
-[node name="DeadlyBranch3" parent="Traps" instance=ExtResource( 5 )]
-position = Vector2( -903, 398 )
-
-[node name="DeadlyBranch4" parent="Traps" instance=ExtResource( 8 )]
-position = Vector2( -391, 182 )
-
-[node name="DeadlyBranch1" parent="Traps" instance=ExtResource( 7 )]
-position = Vector2( -1215, 406 )
-
-[node name="CrowScene" parent="Traps" instance=ExtResource( 9 )]
-position = Vector2( -217, -301 )
-
 [node name="StaticObjectsDecoration" type="Node2D" parent="."]
 
 [node name="StaticPlant2" parent="StaticObjectsDecoration" instance=ExtResource( 18 )]
@@ -228,6 +223,9 @@ frame = 5
 [node name="StaticPlant3" parent="StaticObjectsDecoration" instance=ExtResource( 18 )]
 position = Vector2( -410, 444 )
 frame = 5
+
+[node name="SpawnToilet" parent="StaticObjectsDecoration" instance=ExtResource( 21 )]
+position = Vector2( -207, 394 )
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 23 )

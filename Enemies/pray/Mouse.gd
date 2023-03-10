@@ -39,8 +39,9 @@ func _process(delta):
 	animation()
 
 func Kill():
+	set_physics_process(false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	Life=false
-	set_collision_layer_bit(Global.PRAY,false)
 	queue_free()
 
 func _on_Area2D_body_entered(body):

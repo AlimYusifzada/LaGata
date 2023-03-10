@@ -318,7 +318,6 @@ animation = "Run"
 
 [node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 32
-collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
 shape = SubResource( 115 )

@@ -87,11 +87,11 @@ func move(delta):
 		velocity.x*=-1.0
 
 func Kill():
-	velocity=Vector2(0,0)
+	set_physics_process(false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
-	$DamageZone.set_collision_layer_bit(Global.ENEMY,false)
 	Life=false
 	queue_free()
 	

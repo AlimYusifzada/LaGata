@@ -72,6 +72,8 @@ func sidewall():
 			return 1
 	return -1
 func Kill():
+	set_physics_process(false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	var bl=BloodExplosion.instance()
 	bl.position=position
 	bl.cloud="acid"

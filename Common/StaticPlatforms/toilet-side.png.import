@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/toilet-front.png-f01ef69a23e6f69bf51e6bdf482838e3.stex"
+path="res://.import/toilet-side.png-2313aa137e309d1a1b03478aa146f505.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/SpawnPoints/toilet-front.png"
-dest_files=[ "res://.import/toilet-front.png-f01ef69a23e6f69bf51e6bdf482838e3.stex" ]
+source_file="res://Common/StaticPlatforms/toilet-side.png"
+dest_files=[ "res://.import/toilet-side.png-2313aa137e309d1a1b03478aa146f505.stex" ]
 
 [params]
 

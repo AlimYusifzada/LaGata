@@ -87,6 +87,8 @@ func _on_CatchZone_body_entered(body):
 	pass # Replace with function body.
 
 func Kill():
+	set_physics_process(false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	Life=false
 	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()

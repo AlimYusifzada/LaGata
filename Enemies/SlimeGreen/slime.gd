@@ -78,6 +78,7 @@ func sidewall():
 	return -1
 	
 func Kill():
+	set_physics_process(false)
 	var bl=BloodExplosion.instance()
 	bl.position=position
 	bl.cloud="acid"

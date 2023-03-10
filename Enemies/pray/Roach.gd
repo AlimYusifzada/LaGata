@@ -38,8 +38,9 @@ func _process(delta):
 	animation()
 
 func Kill():
+	set_physics_process(false)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	Life=false
-	$DamageZone.set_collision_layer_bit(Global.PRAY,false)
 	velocity=Vector2(0,0)
 	queue_free()
 

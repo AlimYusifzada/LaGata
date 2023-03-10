@@ -86,12 +86,12 @@ func sidewall():
 	return -1
 	
 func Kill():
-	velocity=Vector2(0,0)
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
+	set_physics_process(false)
+	Life=false
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
-	set_collision_layer_bit(Global.ENEMY,false)
-	Life=false
 	queue_free()
 
 func _on_head_body_entered(body):
