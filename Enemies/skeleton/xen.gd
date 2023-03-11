@@ -9,11 +9,14 @@ var velocity=Vector2()
 var Speed=0.0
 var moveCounter=0
 var prevX=0.0
-var Life=true
+#var Life=true
+var notFalling=true
+var Punching=false
 onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
+onready var JumpTimer=$JumpTimer
 const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 export var JumpOffProb=0.1
 
@@ -38,7 +41,7 @@ func _process(delta):
 	animation()
 
 func _on_Area2D_body_entered(body):
-	if body.is_in_group("Cats") && Life:
+	if body.is_in_group("Cats"): # && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
 	
@@ -47,29 +50,37 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
 
 func animation():
-	if !Life: #play death if timer is running
-		XenAnimation.play("Death")
-	elif velocity.x>0: #face to right or left
+	if velocity.x>0 && notFalling: #face to right or left
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
+	if Punching:
+		XenAnimation.play("Hit")
+	elif !notFalling:
+		XenAnimation.play("Jump")
+	else:
+		XenAnimation.play("Run")
+
 func is_floor():
 	return WallOnSouth.get_collider()
 	pass
 func move():
 	if is_equal_approx(prevX,get_global_position().x):
 		moveCounter+=1
+		Punching=true
 	else:
 		prevX=get_global_position().x
 		moveCounter=0
-		
+		Punching=false
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor() || moveCounter>10:# && randf()>JumpOffProb && MindTimer.is_stopped():
+	elif !is_floor() || moveCounter>50:# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
 		pass
 		
@@ -86,9 +97,9 @@ func sidewall():
 	return -1
 	
 func Kill():
-	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
 	set_physics_process(false)
-	Life=false
+	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
+#	Life=false
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
@@ -104,4 +115,14 @@ func _on_head_body_entered(body):
 
 func _on_xen_Die():
 	Kill()
+	pass # Replace with function body.
+	
+func Jump():
+	JumpTimer.start()
+	set_collision_mask_bit(Global.PLATFORM,false)
+	velocity.y=JUMP_VELOCITY
+	pass
+
+func _on_JumpTimer_timeout():
+	set_collision_mask_bit(Global.PLATFORM,true)
 	pass # Replace with function body.

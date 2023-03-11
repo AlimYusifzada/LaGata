@@ -194,22 +194,16 @@ position = Vector2( 153, 153 )
 position = Vector2( -656, -128 )
 
 [node name="Cat" parent="Actors" instance=ExtResource( 1 )]
-position = Vector2( -189, 253 )
+position = Vector2( -570, 154 )
 
 [node name="xen" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -663, 319 )
+position = Vector2( -401, 51 )
 
 [node name="xen2" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -115, 332 )
-
-[node name="xen3" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -599, 361 )
+position = Vector2( -726, 202 )
 
 [node name="xen4" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( -514, 389 )
-
-[node name="xen5" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -741, 295 )
 
 [node name="xenshooter" parent="Actors" instance=ExtResource( 26 )]
 position = Vector2( 214, 327 )

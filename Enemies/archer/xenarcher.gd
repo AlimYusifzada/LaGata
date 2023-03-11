@@ -15,6 +15,7 @@ var shooting=false
 var dest=velocity.x
 var prevX=0.0
 var moveCounter=0
+var notFalling=true
 
 signal Die
 
@@ -52,20 +53,20 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
 
 func animation():
 	LookAt()
-	if !Life: #play death if timer is running
-		ArcherSprite.play("Death")
-	elif shooting:
+	if shooting:
 		ArcherSprite.play("Shoot")
 	else:
 		ArcherSprite.play("Run")
 		
 func LookAt():
-	if dest>0: #face to right or left
+	if dest>0 && notFalling: #face to right or left
 		ArcherSprite.flip_h=false
 		return 1
 	else:

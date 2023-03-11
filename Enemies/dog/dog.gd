@@ -7,9 +7,11 @@ export var JUMP_VELOCITY=-600
 const SCALE=Vector2(0.8,0.8)
 var velocity=Vector2()
 var Speed=0.0
-var Life=true
+#var Life=true
 var moveCounter=0
 var prevX=0.0
+var notFalling=true
+
 onready var DogAnimation=$AnimatedSprite
 onready var Voice=$Voice
 onready var WallOnWest=$RayCastWest
@@ -43,18 +45,17 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
 
 func animation():
 	LookAt()
-	if !Life: #play death if timer is running
-		DogAnimation.play("Death")
-	else:
-		DogAnimation.play("Run")
+	pass
 		
 func LookAt():
-	if velocity.x>0: #face to right or left
+	if velocity.x>0 && notFalling: #face to right or left
 		DogAnimation.flip_h=false
 		return 1
 	else:
@@ -92,7 +93,7 @@ func Kill():
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
-	Life=false
+#	Life=false
 	queue_free()
 	
 func _on_CatchZone_body_entered(body):

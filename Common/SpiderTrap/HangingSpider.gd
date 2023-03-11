@@ -4,6 +4,7 @@ export var Depth="a1"
 onready var Ambush=$Ambush
 # Called when the node enters the scene tree for the first time.
 func _ready():
+#	Ambush.play("a128") test
 	pass # Replace with function body.
 
 func _on_Watch128_body_entered(body):

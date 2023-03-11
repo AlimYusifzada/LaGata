@@ -5,9 +5,10 @@ export var JUMP_VELOCITY=-100
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
-var Life=true
+#var Life=true
 var moveCounter=0
 var prevX=0.0
+var notFalling=true
 signal Die
 
 onready var XenAnimation=$AnimatedSprite
@@ -34,7 +35,7 @@ func _process(delta):
 	animation()
 
 func _on_DeathZone_body_entered(body):
-	if body.is_in_group("Cats") && Life:
+	if body.is_in_group("Cats"):# && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
 	
@@ -43,11 +44,13 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
 
 func animation():
-	if velocity.x>0: #face to right or left
+	if velocity.x>0 && notFalling: #face to right or left
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
@@ -89,7 +92,7 @@ func _on_CatchZone_body_entered(body):
 func Kill():
 	set_physics_process(false)
 	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
-	Life=false
+#	Life=false
 	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position

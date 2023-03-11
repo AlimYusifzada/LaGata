@@ -7,10 +7,11 @@ export var JUMP_VELOCITY=-600
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
-var Life=true
+#var Life=true
 var falling=false
 var prevX=0.0
 var moveCounter=0
+var notFalling=true
 onready var SpiderAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
@@ -37,7 +38,7 @@ func _process(delta):
 	animation()
 
 func _on_DamageZone_body_entered(body):
-	if body.is_in_group("Cats") && Life:
+	if body.is_in_group("Cats"):# && Life:
 		body.emit_signal("Die")
 	pass # Replace with function body.
 
@@ -46,11 +47,13 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
 
 func animation():
-	if velocity.x>0: #face to right or left
+	if velocity.x>0 && notFalling: #face to right or left
 		SpiderAnimation.flip_h=false
 	elif velocity.x<0:
 		SpiderAnimation.flip_h=true
@@ -84,7 +87,7 @@ func move():
 
 func Kill():
 	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
-	Life=false
+#	Life=false
 	set_physics_process(false)
 #	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()

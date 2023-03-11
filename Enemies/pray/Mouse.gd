@@ -11,6 +11,7 @@ var Life=true
 var isRunning=true
 var moveCounter=0
 var prevX=0.0
+var notFalling=true
 
 onready var MouseSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
@@ -66,11 +67,14 @@ func fall(delta):
 		Kill()
 	if is_floor():
 		velocity.y=0
+		notFalling=true
 	else:
 		velocity.y+=Global.GRAVITY*delta
+		notFalling=false
+		
 
 func animation():
-	if velocity.x>0:
+	if velocity.x>0 && notFalling:
 		MouseSprite.flip_h=false
 	else:
 		MouseSprite.flip_h=true

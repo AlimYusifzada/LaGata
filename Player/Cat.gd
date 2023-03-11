@@ -251,7 +251,7 @@ func _on_jumptimer_timeout():
 	pass
 
 func jumpaction(modifier=0): #instant jump
-	JumperTimer.start() # set for platforms
+	JumperTimer.start() # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:
