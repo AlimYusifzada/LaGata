@@ -12,6 +12,7 @@ var velocity=Vector2()
 var Speed=0.0
 var Life=true
 var shooting=false
+var hitting=false
 var dest=velocity.x
 var prevX=0.0
 var moveCounter=0
@@ -23,6 +24,8 @@ onready var ArcherSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
+onready var HitEast=$HitEast
+onready var HitWest=$HitWest
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,6 +39,7 @@ func _ready():
 func _physics_process(delta):
 	fall(delta)
 	move(delta)
+	CheckHit()
 	move_and_slide(velocity,Global.UP)
 	pass
 
@@ -62,11 +66,13 @@ func animation():
 	LookAt()
 	if shooting:
 		ArcherSprite.play("Shoot")
+	elif hitting:
+		ArcherSprite.play("Hit")
 	else:
 		ArcherSprite.play("Run")
 		
 func LookAt():
-	if dest>0 && notFalling: #face to right or left
+	if dest>0:# && notFalling: #face to right or left
 		ArcherSprite.flip_h=false
 		return 1
 	else:
@@ -79,7 +85,6 @@ func move(delta):
 	else:
 		prevX=get_global_position().x
 		moveCounter=0
-		
 	if velocity.x!=0:
 		dest=velocity.x
 	elif !shooting:
@@ -152,8 +157,25 @@ func _on_AnimatedSprite_animation_finished():
 		get_parent().add_child(arrow)
 		shooting=false
 		velocity.x=dest
+	if hitting:
+		hitting=false
+		velocity.x=dest
 	pass # Replace with function body.
 
 func _on_xenshooter_Die():
 	Kill()
 	pass # Replace with function body.
+	
+func CheckHit():
+	var cEast=HitEast.get_collider()
+	var cWest=HitWest.get_collider()
+	if cWest && !hitting:
+		cWest.emit_signal("Food",-5)
+	if cEast && !hitting:
+		cEast.emit_signal("Food",-5)
+	if (cWest || cEast):
+		velocity.x=0
+		hitting=true
+	if (cWest && LookAt()>0) || (cEast && LookAt()<0):
+		dest*=-1
+	

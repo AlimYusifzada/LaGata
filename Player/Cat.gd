@@ -3,10 +3,10 @@
 extends KinematicBody2D
 const SPEED=350   	#walking speed
 const MAXSPEED=500 	#runing speed
-const JUMP_VELOCITY=-600
-const KITTEN_MOD=1.2 #jumping modifiyer for kitten
+const JUMP_VELOCITY=-700
+const KITTEN_MOD=1.5 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
-const Animate_Mode="Kitten"
+const Animate_Mode="Kitten" #Cat
 
 const DUST=preload("res://Common/JumpDust.tscn")
 const FLROACH=preload("res://Player/ammo/FlyingRoach.tscn")
@@ -112,6 +112,7 @@ func CheckDeath():
 	HeartBeat.volume_db=Global.SFXVol
 	if Global.Stamina<10 && !HeartBeat.playing:
 		HeartBeat.play()
+		emit_signal("Message","YOU CAN DIE SOON")
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
 	if Global.Stamina<=0 || velocity.y>Global.TerminateVelocity || !Life:
@@ -199,16 +200,15 @@ func _on_Cat_Food(stamina=2):
 		Meow.play()
 	if stamina>0:
 		Global.Points+=stamina*50
-	if Global.Stamina<100:
-		Global.Stamina+=stamina
-		if Global.Stamina>100:
-			Global.Stamina=100
+	Global.Stamina+=stamina
+	if Global.Stamina>100:
+		Global.Stamina=100
 	pass
 
 # HUD message handling
 func _on_Cat_Message(message):
 	Message.text=str(message)
-	MessageTimer.start(5)
+	MessageTimer.start(10)
 	pass
 func _on_messagetimer_timeout():
 	Message.text=""
@@ -241,19 +241,18 @@ func _on_koyotetimer_timeout():
 	pass # Replace with function body.
 
 func _on_Cat_Jump(power): # signal
-	jumpaction(Global.Stamina*power)
+	jumpaction(power)
 	EmitDust()
 	pass # Replace with function body.
 
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
-#	set_collision_mask_bit(Global.GROUND,true)
 	pass
 
 func jumpaction(modifier=0): #instant jump
 	JumperTimer.start() # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
-	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
+	velocity.y=JUMP_VELOCITY-Global.Stamina-abs(velocity.x/3)-modifier
 	if Global.isChild:
 		velocity.y=velocity.y/KITTEN_MOD 
 	JumpCounter-=1
@@ -283,6 +282,6 @@ func _on_DblJumpTimer_timeout():
 		BuffTime=30
 		if Global.DblJumps>1:
 			Global.DblJumps-=1
-			emit_signal("Message","Double Jumps counter: %s"%(Global.DblJumps-1))
+			emit_signal("Message","SUPER JUMPS LEFT: %s"%(Global.DblJumps-1))
 	DblJumpInd.progress=BuffTime
 	pass # Replace with function body.

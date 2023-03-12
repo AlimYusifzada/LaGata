@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -20,11 +20,10 @@
 [ext_resource path="res://Common/Plants/StaticPlant.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Backgrounds/OilPlant/3.png" type="Texture" id=20]
-[ext_resource path="res://Common/StaticPlatforms/ToiletFront.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Enemies/archer/xenknight.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=23]
 [ext_resource path="res://Enemies/SlimeGreen/slime.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Backgrounds/OilPlant/4.png" type="Texture" id=25]
-[ext_resource path="res://Enemies/archer/xenskeleton.tscn" type="PackedScene" id=26]
 
 [node name="TestLvl1" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -178,6 +177,9 @@ position = Vector2( -479, -282 )
 
 [node name="Actors" type="Node2D" parent="."]
 
+[node name="Mouse2" parent="Actors" instance=ExtResource( 17 )]
+position = Vector2( -741, -5 )
+
 [node name="slime" parent="Actors" instance=ExtResource( 24 )]
 position = Vector2( 941, 358 )
 
@@ -190,23 +192,14 @@ position = Vector2( 1240, -149 )
 [node name="Mouse" parent="Actors" instance=ExtResource( 17 )]
 position = Vector2( 153, 153 )
 
-[node name="Roach2" parent="Actors" instance=ExtResource( 13 )]
-position = Vector2( -656, -128 )
-
 [node name="Cat" parent="Actors" instance=ExtResource( 1 )]
 position = Vector2( -570, 154 )
 
 [node name="xen" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( -401, 51 )
 
-[node name="xen2" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -726, 202 )
-
-[node name="xen4" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( -514, 389 )
-
-[node name="xenshooter" parent="Actors" instance=ExtResource( 26 )]
-position = Vector2( 214, 327 )
+[node name="xenknight" parent="Actors" instance=ExtResource( 21 )]
+position = Vector2( -901, -96 )
 
 [node name="StaticObjectsDecoration" type="Node2D" parent="."]
 
@@ -217,9 +210,6 @@ frame = 5
 [node name="StaticPlant3" parent="StaticObjectsDecoration" instance=ExtResource( 18 )]
 position = Vector2( -410, 444 )
 frame = 5
-
-[node name="SpawnToilet" parent="StaticObjectsDecoration" instance=ExtResource( 21 )]
-position = Vector2( -207, 394 )
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 23 )

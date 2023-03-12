@@ -11,7 +11,8 @@ var moveCounter=0
 var prevX=0.0
 #var Life=true
 var notFalling=true
-var Punching=false
+var hitting=false
+var dest=velocity.x
 onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
@@ -19,6 +20,8 @@ onready var WallOnSouth=$RayCastSouth
 onready var JumpTimer=$JumpTimer
 const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
 export var JumpOffProb=0.1
+onready var HitEast=$HitEast
+onready var HitWest=$HitWest
 
 signal Die
 
@@ -34,6 +37,7 @@ func _ready():
 func _physics_process(delta):
 	fall(delta)
 	move()
+	CheckHit()
 	move_and_slide(velocity,Global.UP)
 	pass
 
@@ -60,7 +64,7 @@ func animation():
 		XenAnimation.flip_h=false
 	else:
 		XenAnimation.flip_h=true
-	if Punching:
+	if hitting:
 		XenAnimation.play("Hit")
 	elif !notFalling:
 		XenAnimation.play("Jump")
@@ -73,16 +77,15 @@ func is_floor():
 func move():
 	if is_equal_approx(prevX,get_global_position().x):
 		moveCounter+=1
-		Punching=true
 	else:
 		prevX=get_global_position().x
 		moveCounter=0
-		Punching=false
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
 	elif !is_floor() || moveCounter>50:# && randf()>JumpOffProb && MindTimer.is_stopped():
 		velocity.x*=-1
-		pass
+	if velocity.x!=0:
+		dest=velocity.x
 		
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
@@ -125,4 +128,31 @@ func Jump():
 
 func _on_JumpTimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
+	pass # Replace with function body.
+	
+func LookAt():
+	if dest>0:# && notFalling: #face to right or left
+		XenAnimation.flip_h=false
+		return 1
+	else:
+		XenAnimation.flip_h=true
+		return -1
+
+func CheckHit():
+	var cEast=HitEast.get_collider()
+	var cWest=HitWest.get_collider()
+	if cWest && !hitting:
+		cWest.emit_signal("Food",-5)
+	if cEast && !hitting:
+		cEast.emit_signal("Food",-5)
+	if (cWest || cEast):
+		velocity.x=0
+		hitting=true
+	if (cWest && LookAt()>0) || (cEast && LookAt()<0):
+		dest*=-1
+
+func _on_AnimatedSprite_animation_finished():
+	if hitting:
+		hitting=false
+		velocity.x=dest
 	pass # Replace with function body.
