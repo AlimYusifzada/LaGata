@@ -61,7 +61,7 @@ radius = 16.0
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 32, 3.90625 )
+extents = Vector2( 24, 3.90625 )
 
 [sub_resource type="CapsuleShape2D" id=53]
 height = 48.0

@@ -26,6 +26,7 @@ func _process(delta):
 	move_and_collide(velocity,false)
 
 func _on_arrow_body_entered(body):
+	ArrowSpeed=ArrowSpeed/100
 	if body.is_in_group("Cats"):
 		body.emit_signal("Die")
 		pass

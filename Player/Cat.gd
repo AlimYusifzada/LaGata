@@ -151,11 +151,11 @@ func ChecKbrdRun(delta):
 		if velocity.x<0 && !canMoveWest:
 			velocity.x=0
 		if velocity.x>0 && canMoveEast:
-			velocity.x-=MAXSPEED*delta
+			velocity.x-=MAXSPEED*delta*2
 			if velocity.x<0:
 				velocity.x=0
 		if velocity.x<0 && canMoveWest:
-			velocity.x+=MAXSPEED*delta
+			velocity.x+=MAXSPEED*delta*2
 			if velocity.x>0:
 				velocity.x=0
 	pass
@@ -214,7 +214,7 @@ func _on_messagetimer_timeout():
 	Message.text=""
 	pass
 
-#jumping
+#jumping functions
 func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
 		if Global.Stamina>10:

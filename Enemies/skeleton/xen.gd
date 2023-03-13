@@ -60,10 +60,7 @@ func fall(delta):
 		notFalling=false
 
 func animation():
-	if velocity.x>0 && notFalling: #face to right or left
-		XenAnimation.flip_h=false
-	else:
-		XenAnimation.flip_h=true
+	LookAt()
 	if hitting:
 		XenAnimation.play("Hit")
 	elif !notFalling:
@@ -80,12 +77,14 @@ func move():
 	else:
 		prevX=get_global_position().x
 		moveCounter=0
-	if is_floor() && is_wall():
-		velocity.x*=sidewall()
-	elif !is_floor() || moveCounter>50:# && randf()>JumpOffProb && MindTimer.is_stopped():
-		velocity.x*=-1
 	if velocity.x!=0:
 		dest=velocity.x
+	elif !hitting:
+		velocity.x=Speed
+	if is_floor() && is_wall():
+		velocity.x*=sidewall()
+	elif !is_floor()||moveCounter>10:
+		velocity.x*=-1
 		
 func is_wall():
 	return WallOnEast.get_collider() || WallOnWest.get_collider()
@@ -102,7 +101,6 @@ func sidewall():
 func Kill():
 	set_physics_process(false)
 	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
-#	Life=false
 	var bl=BloodExpl.instance()
 	bl.position=position
 	get_parent().add_child(bl)
@@ -111,7 +109,7 @@ func Kill():
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food") #incease stamina
-		body.emit_signal("Jump",5)
+		body.emit_signal("Jump",1)
 		Kill()
 		pass
 	pass # Replace with function body.
@@ -131,6 +129,9 @@ func _on_JumpTimer_timeout():
 	pass # Replace with function body.
 	
 func LookAt():
+	if !notFalling: 
+		XenAnimation.flip_h=false
+		return 1
 	if dest>0:# && notFalling: #face to right or left
 		XenAnimation.flip_h=false
 		return 1

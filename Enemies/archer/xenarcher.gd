@@ -68,6 +68,8 @@ func animation():
 		ArcherSprite.play("Shoot")
 	elif hitting:
 		ArcherSprite.play("Hit")
+	elif !notFalling:
+		ArcherSprite.play("Jump")
 	else:
 		ArcherSprite.play("Run")
 		
@@ -89,7 +91,10 @@ func move(delta):
 		dest=velocity.x
 	elif !shooting:
 		velocity.x=Speed
-	jump_from_wall()
+	if is_floor() && is_wall():
+		velocity.x*=sidewall()
+	elif !is_floor()||moveCounter>10:
+		velocity.x*=-1
 	
 func is_floor():
 	return WallOnSouth.get_collider()
@@ -104,11 +109,6 @@ func sidewall():
 		if velocity.x>0:
 			return 1
 	return -1
-func jump_from_wall():
-	if is_floor() && is_wall():
-		velocity.x*=sidewall()
-	elif !is_floor()||moveCounter>10:
-		velocity.x*=-1
 
 func Kill():
 	set_physics_process(false)

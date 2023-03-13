@@ -11,6 +11,7 @@ onready var removeTimer=$Timer
 func _ready():
 	scale=SCALE
 	removeTimer.start(1)
+	velocity.x=RoachSpeed
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,7 +22,7 @@ func _process(delta):
 	else:
 		roachSprite.flip_h=true
 	pass
-	move_and_collide(velocity,false)
+	move_and_collide(velocity)
 	
 func _on_Timer_timeout():
 	puff()
@@ -29,8 +30,8 @@ func _on_Timer_timeout():
 	pass # Replace with function body.
 
 func _on_DamageZone_body_entered(body):
+	RoachSpeed=RoachSpeed/100
 	body.emit_signal("Die")
-	velocity.x=0
 	Global.Points+=100
 	puff()
 	pass # Replace with function body.

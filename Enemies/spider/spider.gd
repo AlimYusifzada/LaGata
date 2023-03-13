@@ -8,7 +8,7 @@ const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
 #var Life=true
-var falling=false
+#var falling=false
 var prevX=0.0
 var moveCounter=0
 var notFalling=true
@@ -87,9 +87,7 @@ func move():
 
 func Kill():
 	$DamageZone.set_collision_mask_bit(Global.PLAYER,false)
-#	Life=false
 	set_physics_process(false)
-#	velocity=Vector2(0,0)
 	var bl=BloodExpl.instance()
 	bl.position=position
 	bl.cloud="brown"
@@ -99,7 +97,7 @@ func Kill():
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Food",4) #incease stamina
-		body.emit_signal("Jump",5)
+		body.emit_signal("Jump",1)
 		Kill()
 	pass # Replace with function body.
 

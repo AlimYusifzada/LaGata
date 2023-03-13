@@ -139,6 +139,7 @@ func loadGameState():
 		DblJumps=GameState["DblJumps"]
 		MaxDblJumps=GameState["MaxDblJumps"]
 		Stamina=GameState["Stamina"]
+		if Stamina<=0: Stamina=10
 		KeysRing[0]=GameState["YellowKeys"]
 		KeysRing[1]=GameState["GreenKeys"]
 		KeysRing[2]=GameState["BlackKeys"]
