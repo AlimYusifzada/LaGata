@@ -23,7 +23,7 @@ func _on_Coin_body_entered(body):
 		set_collision_layer_bit(Global.PRAY,false)
 		flag=true
 		$Tween.start()
-		body.emit_signal("Food",1)
+		body.emit_signal("Food",10)
 	pass # Replace with function body.
 
 func _on_Tween_tween_all_completed():

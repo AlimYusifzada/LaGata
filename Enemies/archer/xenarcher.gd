@@ -48,7 +48,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Die")
+		body.emit_signal("Food",-10)
 		pass
 	pass # Replace with function body.
 	
@@ -93,7 +93,7 @@ func move(delta):
 		velocity.x=Speed
 	if is_floor() && is_wall():
 		velocity.x*=sidewall()
-	elif !is_floor()||moveCounter>10:
+	elif !is_floor()||moveCounter>5:
 		velocity.x*=-1
 	
 func is_floor():

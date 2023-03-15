@@ -136,24 +136,24 @@ position = Vector2( -1215, 406 )
 [node name="Movables" type="Node2D" parent="."]
 
 [node name="MovableObject4" parent="Movables" instance=ExtResource( 4 )]
-position = Vector2( 844, 47 )
+position = Vector2( 419, -266 )
 Explosive = true
 
 [node name="MovableObject5" parent="Movables" instance=ExtResource( 4 )]
-position = Vector2( 839, 131 )
+position = Vector2( 309, 153 )
 Explosive = true
 
 [node name="MovableObject6" parent="Movables" instance=ExtResource( 4 )]
 position = Vector2( -357, -255 )
 
 [node name="MovableObject7" parent="Movables" instance=ExtResource( 4 )]
-position = Vector2( 808, -122 )
+position = Vector2( 782, -118 )
 
 [node name="MovableObject8" parent="Movables" instance=ExtResource( 4 )]
-position = Vector2( 909, -103 )
+position = Vector2( 913, -175 )
 
 [node name="MovableObject9" parent="Movables" instance=ExtResource( 4 )]
-position = Vector2( 979, -161 )
+position = Vector2( 417, -177 )
 
 [node name="Platforms" type="Node2D" parent="."]
 
@@ -175,7 +175,7 @@ position = Vector2( -479, -282 )
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Cat" parent="Actors" instance=ExtResource( 1 )]
-position = Vector2( 40, -72 )
+position = Vector2( 676, -147 )
 
 [node name="xen" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( 239, 292 )
@@ -188,15 +188,16 @@ position = Vector2( -741, -5 )
 
 [node name="slime" parent="Actors" instance=ExtResource( 24 )]
 position = Vector2( 941, 358 )
+BounceJump = 700
 
 [node name="Roach" parent="Actors" instance=ExtResource( 13 )]
 position = Vector2( -150, 220 )
 
 [node name="dog" parent="Actors" instance=ExtResource( 11 )]
-position = Vector2( 1240, -149 )
+position = Vector2( 1135, 319 )
 
 [node name="xenknight" parent="Actors" instance=ExtResource( 21 )]
-position = Vector2( -901, -96 )
+position = Vector2( -798, -124 )
 
 [node name="StaticObjectsDecoration" type="Node2D" parent="."]
 

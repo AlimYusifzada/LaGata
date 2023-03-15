@@ -3,7 +3,8 @@
 extends KinematicBody2D
 
 export var MINSPEED=10
-export var JUMP_VELOCITY=-600
+export var JUMP_VELOCITY=-700
+export var BounceJump=100
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
@@ -35,7 +36,7 @@ func _process(delta):
 
 func _on_JumpZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Jump",10)
+		body.emit_signal("Jump",BounceJump)
 		velocity.x*=-1
 	pass # Replace with function body.
 	
@@ -57,6 +58,7 @@ func move():
 	var col=get_last_slide_collision()
 	if col:
 		if col.get_collider().is_in_group("Cats"):
+			set_collision_mask_bit(Global.PLATFORM,false)
 			velocity.y=JUMP_VELOCITY
 			pass
 	if is_on_floor() && is_wall():
@@ -86,3 +88,4 @@ func Kill():
 	get_parent().add_child(bl)
 	queue_free()
 	pass
+

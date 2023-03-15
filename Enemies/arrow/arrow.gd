@@ -5,6 +5,8 @@ extends KinematicBody2D
 const SCALE=Vector2(2,2)
 var velocity=Vector2(0,0) # only x wiil change
 var ArrowSpeed=0.0
+var prevX=0
+var pCounter=0
 onready var woosh=$woosh
 onready var RemoveTimer=$RemoveTimer
 onready var sprite=$Sprite
@@ -18,11 +20,20 @@ func _ready():
 	pass
 
 func _process(delta):
-	velocity.x=ArrowSpeed*delta
+	if pCounter>1:
+		set_collision_mask_bit(Global.PLAYER,false)
 	if velocity.x>0:
 		sprite.flip_h=true
 	else:
 		sprite.flip_h=false
+		
+func _physics_process(delta):
+	if is_equal_approx(prevX,get_global_position().x):
+		pCounter+=1
+	else:
+		pCounter=0
+		prevX=get_global_position().x
+	velocity.x=ArrowSpeed*delta
 	move_and_collide(velocity,false)
 
 func _on_arrow_body_entered(body):

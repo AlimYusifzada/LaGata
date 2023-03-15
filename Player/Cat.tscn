@@ -7,7 +7,6 @@
 [ext_resource path="res://Player/kitten/Run/KittenRun.png" type="Texture" id=5]
 [ext_resource path="res://Player/kitten/walk/KittenWalk.png" type="Texture" id=6]
 [ext_resource path="res://Player/Sound/cat-meow.wav" type="AudioStream" id=7]
-[ext_resource path="res://Player/bloodpart.png" type="Texture" id=8]
 [ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
 [ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://Player/kitten/Jump/KittenJump.png" type="Texture" id=25]
@@ -364,6 +363,10 @@ animations = [ {
 radius = 48.337
 height = 27.3229
 
+[sub_resource type="Gradient" id=150]
+offsets = PoolRealArray( 0, 0.00214133, 0.508929, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 0, 0, 1, 0.501961, 0, 0, 1, 0.501961, 0, 0, 0 )
+
 [node name="Cat" type="KinematicBody2D" groups=["Cats"]]
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 54
@@ -399,7 +402,7 @@ collision_mask = 64
 [node name="messagetimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="koyotetimer" type="Timer" parent="."]
+[node name="coyotetimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
@@ -451,13 +454,13 @@ emitting = false
 amount = 100
 one_shot = true
 speed_scale = 2.0
-local_coords = false
-texture = ExtResource( 8 )
 emission_shape = 1
-emission_sphere_radius = 10.0
-gravity = Vector2( -50, 98 )
-orbit_velocity = 1.0
-orbit_velocity_random = 1.0
+emission_sphere_radius = 20.0
+radial_accel = 150.0
+scale_amount = 20.0
+scale_amount_random = 1.0
+color = Color( 1, 0, 0, 1 )
+color_ramp = SubResource( 150 )
 
 [connection signal="Die" from="." to="." method="_on_Cat_Die"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]
@@ -465,6 +468,6 @@ orbit_velocity_random = 1.0
 [connection signal="Message" from="." to="." method="_on_Cat_Message"]
 [connection signal="timeout" from="jumptimer" to="." method="_on_jumptimer_timeout"]
 [connection signal="timeout" from="messagetimer" to="." method="_on_messagetimer_timeout"]
-[connection signal="timeout" from="koyotetimer" to="." method="_on_koyotetimer_timeout"]
+[connection signal="timeout" from="coyotetimer" to="." method="_on_koyotetimer_timeout"]
 [connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
 [connection signal="timeout" from="DblJumpTimer" to="." method="_on_DblJumpTimer_timeout"]

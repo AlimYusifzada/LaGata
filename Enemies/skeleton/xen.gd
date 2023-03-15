@@ -46,7 +46,7 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"): # && Life:
-		body.emit_signal("Die")
+		body.emit_signal("Food",-10)
 	pass # Replace with function body.
 	
 func fall(delta):

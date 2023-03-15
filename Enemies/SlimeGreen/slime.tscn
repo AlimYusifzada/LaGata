@@ -173,20 +173,20 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=44]
 radius = 40.0
-height = 64.0
+height = 46.0
 
 [sub_resource type="RayShape2D" id=76]
 length = 37.0
 
 [node name="slime" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 0
-collision_mask = 6
+collision_mask = 7
 script = ExtResource( 9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Run"
-frame = 1
+frame = 21
 playing = true
 
 [node name="JumpZone" type="Area2D" parent="."]

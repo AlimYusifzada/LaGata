@@ -13,7 +13,7 @@ const FLROACH=preload("res://Player/ammo/FlyingRoach.tscn")
 onready var Message=$Cam/HUD/HUDPanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
-onready var KoyoteTimer=$koyotetimer
+onready var CoyoteTimer=$coyotetimer
 onready var CollectSound=$CollectSound
 onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
@@ -36,7 +36,7 @@ var velocity=Vector2()
 var Life:bool=true
 var JumpPossible:bool=false
 var JumpCounter:int=0
-var KoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
+var CoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
@@ -66,7 +66,7 @@ func _ready():
 #----------------------------------------
 func _physics_process(delta):
 	#---FASTER---
-	KoyoteTimeCheck()
+	CoyoteTimeCheck()
 	CheckDeath()
 	CheckMovable(delta)
 	ChecKbrdJump()
@@ -220,8 +220,8 @@ func _on_messagetimer_timeout():
 #jumping functions
 func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
-		if Global.Stamina>10:
-			Global.Stamina-=1.0
+		if Global.Stamina>20:
+			Global.Stamina-=0.1
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()
@@ -232,11 +232,11 @@ func ChecKbrdJump():
 		DblJumpTimer.start()
 	pass
 
-func KoyoteTimeCheck():
-	if !is_on_floor() && KoyoteTimer.is_stopped():
-		KoyoteTimer.start(KoyoteTime)
+func CoyoteTimeCheck():
+	if !is_on_floor() && CoyoteTimer.is_stopped():
+		CoyoteTimer.start(CoyoteTime)
 	elif is_on_floor():
-		KoyoteTimer.stop()
+		CoyoteTimer.stop()
 		JumpPossible=true
 
 func _on_koyotetimer_timeout():
@@ -252,7 +252,7 @@ func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
 	pass
 
-func jumpaction(modifier=0): #instant jump
+func jumpaction(modifier=10): #instant jump
 	JumperTimer.start() # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina-abs(velocity.x/3)-modifier
