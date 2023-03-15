@@ -28,6 +28,7 @@ onready var CheckTEast=$ChkTEast
 onready var HeartBeat=$heartbeat
 onready var DblJumpTimer=$DblJumpTimer
 onready var DblJumpInd=$Cam/HUD/HUDPanel/DblJumpTimerInd
+onready var Bleeding=$bleeding
 
 enum {JUMP,SIT,WALK,RUN}
 var Animate_Name=["Jump","Sit","Walk","Run"]
@@ -50,6 +51,7 @@ signal Message(message)
 
 func _ready():
 	set_scale(SCALE)
+	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	Life=true
@@ -197,6 +199,7 @@ func _on_Cat_Food(stamina=2):
 	if stamina>0:
 		CollectSound.play()
 	else:
+		Bleeding.set_emitting(true)
 		Meow.play()
 	if stamina>0:
 		Global.Points+=stamina*50
@@ -266,6 +269,7 @@ func _on_Tween_tween_all_completed():
 	queue_free()
 
 func _on_Cat_Die():
+	Bleeding.set_emitting(true)
 	Meow.volume_db=Global.SFXVol
 	Meow.play()
 	set_collision_layer_bit(Global.PLAYER,false)

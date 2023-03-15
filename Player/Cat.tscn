@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Player/Cat.gd" type="Script" id=1]
 [ext_resource path="res://Player/blackcat.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Player/kitten/Run/KittenRun.png" type="Texture" id=5]
 [ext_resource path="res://Player/kitten/walk/KittenWalk.png" type="Texture" id=6]
 [ext_resource path="res://Player/Sound/cat-meow.wav" type="AudioStream" id=7]
+[ext_resource path="res://Player/bloodpart.png" type="Texture" id=8]
 [ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
 [ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://Player/kitten/Jump/KittenJump.png" type="Texture" id=25]
@@ -444,6 +445,19 @@ smoothing_speed = 10.0
 
 [node name="DblJumpTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="bleeding" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 100
+one_shot = true
+speed_scale = 2.0
+local_coords = false
+texture = ExtResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 10.0
+gravity = Vector2( -50, 98 )
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
 
 [connection signal="Die" from="." to="." method="_on_Cat_Die"]
 [connection signal="Food" from="." to="." method="_on_Cat_Food"]
