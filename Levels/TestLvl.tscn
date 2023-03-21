@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyBranch2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyBranch1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/64xt/DeadlyMoss/DeadlyBranch4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Common/Doors/FDoor/NextLvlDoor.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Common/StaticPlatforms/Ladder.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Buffs/Coin.tscn" type="PackedScene" id=12]
@@ -118,6 +119,10 @@ position = Vector2( 545, -90 )
 
 [node name="Coin10" parent="Coins" instance=ExtResource( 12 )]
 position = Vector2( 609, -90 )
+
+[node name="NextLvlDoor" parent="Coins" instance=ExtResource( 9 )]
+position = Vector2( -216, 21 )
+LevelNumber = 1
 
 [node name="Traps" type="Node2D" parent="."]
 
