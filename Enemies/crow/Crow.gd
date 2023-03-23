@@ -10,6 +10,7 @@ onready var CrowAnimation=$AnimationPlayer
 onready var Feathers=$feathers
 onready var Scream=$Crow/scream
 onready var CheckWalls=$Crow/LookDown
+onready var fart=$Crow/fart
 
 func _ready():
 	poopspawn.y=position.y
@@ -45,4 +46,6 @@ func _on_PoopingArea_body_entered(body):
 	if canpoop && !pooping:
 		poopspawn.x=body.position.x
 		pooping=true
+		fart.play()
 	pass # Replace with function body.
+
