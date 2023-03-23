@@ -4,7 +4,7 @@
 [ext_resource path="res://Common/64xt/BloodExplosion/BloodExplosion.png" type="Texture" id=2]
 [ext_resource path="res://Common/64xt/BloodExplosion/AcidExplosion.png" type="Texture" id=3]
 [ext_resource path="res://Common/64xt/BloodExplosion/BrownExplosion.png" type="Texture" id=4]
-[ext_resource path="res://Common/64xt/BloodExplosion/retro_sound_1_0.wav" type="AudioStream" id=5]
+[ext_resource path="res://Common/64xt/BloodExplosion/blood-pop.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4

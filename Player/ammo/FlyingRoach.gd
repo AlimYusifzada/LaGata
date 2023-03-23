@@ -4,6 +4,7 @@ var RoachSpeed=0.0
 var velocity=Vector2(0,0)
 var SCALE=Vector2(.5,.5)
 const Cloud=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+onready var wizz=$wizz
 onready var roachSprite=$AnimatedSprite
 onready var removeTimer=$Timer
 
@@ -12,6 +13,7 @@ func _ready():
 	scale=SCALE
 	removeTimer.start(1)
 	velocity.x=RoachSpeed
+	wizz.play()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

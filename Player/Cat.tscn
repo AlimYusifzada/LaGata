@@ -7,8 +7,8 @@
 [ext_resource path="res://Player/kitten/Run/KittenRun.png" type="Texture" id=5]
 [ext_resource path="res://Player/kitten/walk/KittenWalk.png" type="Texture" id=6]
 [ext_resource path="res://Player/Sound/cat-meow.wav" type="AudioStream" id=7]
+[ext_resource path="res://Player/Sound/quick-jump.wav" type="AudioStream" id=8]
 [ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
-[ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://Player/kitten/Jump/KittenJump.png" type="Texture" id=25]
 
 [sub_resource type="AtlasTexture" id=117]
@@ -406,7 +406,7 @@ one_shot = true
 one_shot = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 24 )
+stream = ExtResource( 8 )
 
 [node name="meow" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
