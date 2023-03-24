@@ -80,7 +80,7 @@ func move():
 		prevX=get_global_position().x
 		moveCounter=0
 	if is_floor() && is_wall():
-		velocity.x=Speed*sidewall()
+		velocity.x*=sidewall()
 	elif !is_floor()||moveCounter>10:
 		velocity.x*=-1
 	pass

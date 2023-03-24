@@ -10,6 +10,8 @@ onready var sw=$SWShrap
 onready var se=$SEShrap
 
 func _ready():
+	$Boom.volume_db=Global.SFXVol
+	$Boom.play()
 	play("default")
 	pass
 

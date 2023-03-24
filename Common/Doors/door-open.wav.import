@@ -2,11 +2,13 @@
 
 importer="wav"
 type="AudioStreamSample"
-valid=false
+path="res://.import/door-open.wav-c131653259a9c5390527c9aa0a2554ae.sample"
 
 [deps]
 
 source_file="res://Common/Doors/door-open.wav"
+dest_files=[ "res://.import/door-open.wav-c131653259a9c5390527c9aa0a2554ae.sample" ]
+
 [params]
 
 force/8_bit=false

@@ -2,7 +2,7 @@
 
 extends KinematicBody2D
 
-export var MINSPEED=200.0
+export var MINSPEED=150.0
 export var JUMP_VELOCITY=-600
 const SCALE=Vector2(0.8,0.8)
 var velocity=Vector2()
@@ -51,7 +51,8 @@ func fall(delta):
 		notFalling=false
 
 func animation():
-	LookAt()
+	velocity.x=LookAt()*Speed
+	DogAnimation.speed_scale=Speed/(MINSPEED/2)
 	pass
 		
 func LookAt():
@@ -109,23 +110,17 @@ func MakeVoice(body):
 		Voice.play()
 		
 func _on_AimRight_body_entered(body):
-	Speed+=50
 	MakeVoice(body)
+	Speed+=100
 	if velocity.x<0:
 		velocity.x*=-1
-	elif velocity.x==0:
-		velocity.x=Speed
-	LookAt()
 	pass # Replace with function body.
 
 func _on_AimLeft_body_entered(body):
-	Speed+=50
 	MakeVoice(body)
+	Speed+=100
 	if velocity.x>0:
 		velocity.x*=-1
-	elif velocity.x==0:
-		velocity.x=-Speed
-	LookAt()
 	pass # Replace with function body.
 
 func _on_dog_Die():
@@ -138,5 +133,5 @@ func _on_DamageZone_body_entered(body):
 	pass # Replace with function body.
 
 func _on_Aim_body_exited(body):
-	Speed-=50
+	Speed-=100
 	pass # Replace with function body.

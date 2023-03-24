@@ -13,6 +13,7 @@ func _ready():
 	scale=SCALE
 	removeTimer.start(1)
 	velocity.x=RoachSpeed
+	wizz.volume_db=Global.SFXVol
 	wizz.play()
 	pass # Replace with function body.
 

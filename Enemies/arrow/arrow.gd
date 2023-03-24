@@ -13,15 +13,15 @@ onready var sprite=$Sprite
 
 func _ready():
 	set_scale(SCALE)
-	woosh.volume_db=Global.SFXVol
 	visible=true
+	woosh.volume_db=Global.SFXVol
 	woosh.play()
 	RemoveTimer.start(1)
 	pass
 
 func _process(delta):
 	if pCounter>1:
-		set_collision_mask_bit(Global.PLAYER,false)
+		$arrow.set_collision_mask_bit(Global.PLAYER,false)
 	if velocity.x>0:
 		sprite.flip_h=true
 	else:

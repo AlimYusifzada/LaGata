@@ -4,6 +4,7 @@ extends StaticBody2D
 
 export var DoorColor=Global.Ykey
 onready var DoorAnimation=$AnimatedSprite
+onready var DoorSound=$AudioStreamPlayer2D
 enum{CLOSED,OPEN}
 var DoorState=CLOSED
 
@@ -29,11 +30,13 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && DoorState==OPEN:
 		SetDoor(false)
 		DoorAnimation.play("open")
+		DoorSound.play()
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]>0 && DoorState==CLOSED:
 		SetDoor(false)
 		Global.KeysRing[DoorColor]-=1
 		DoorState=OPEN
 		DoorAnimation.play("open")
+		DoorSound.play()
 	elif body.is_in_group("Cats") && Global.KeysRing[DoorColor]<=0 && DoorState==CLOSED:
 		Global.KeysRing[DoorColor]=0
 	pass # Replace with function body.
@@ -41,6 +44,7 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("Cats") && DoorState!=OPEN:
 		DoorAnimation.play("open",true)
+		DoorSound.play()
 		SetDoor(true)
 	pass # Replace with function body.
 

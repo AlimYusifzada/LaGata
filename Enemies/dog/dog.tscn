@@ -148,7 +148,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 56, 4 )
+extents = Vector2( 40, 6 )
 
 [sub_resource type="CapsuleShape2D" id=100]
 radius = 24.0
@@ -223,7 +223,7 @@ collision_mask = 6
 
 [node name="RayCastSuth" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 0, 48 )
+cast_to = Vector2( 0, 40 )
 collision_mask = 6
 
 [connection signal="Die" from="." to="." method="_on_dog_Die"]

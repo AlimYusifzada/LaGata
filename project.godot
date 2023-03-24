@@ -16,8 +16,6 @@ started: October 2022
 "
 run/main_scene="res://Menu/MainMenu.tscn"
 boot_splash/show_image=false
-boot_splash/fullsize=false
-boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://Common/cat.png"
 
 [autoload]
@@ -87,15 +85,9 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_6="Enemy"
 2d_physics/layer_7="Movable"
 
-[physics]
-
-common/physics_jitter_fix=0.6
-
 [rendering]
 
 quality/driver/driver_name="GLES2"
-quality/intended_usage/framebuffer_allocation=0
-quality/intended_usage/framebuffer_allocation.mobile=0
 2d/snapping/use_gpu_pixel_snap=true
-vram_compression/import_etc=true
+misc/lossless_compression/force_png=true
 environment/default_environment="res://Common/default_env.tres"

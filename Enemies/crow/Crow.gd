@@ -46,6 +46,7 @@ func _on_PoopingArea_body_entered(body):
 	if canpoop && !pooping:
 		poopspawn.x=body.position.x
 		pooping=true
+		fart.volume_db=Global.SFXVol
 		fart.play()
 	pass # Replace with function body.
 

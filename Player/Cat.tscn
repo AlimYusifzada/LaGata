@@ -3,11 +3,11 @@
 [ext_resource path="res://Player/Cat.gd" type="Script" id=1]
 [ext_resource path="res://Player/blackcat.png" type="Texture" id=2]
 [ext_resource path="res://Player/Camera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/Sound/heartbeat.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Player/Sound/jump.wav" type="AudioStream" id=4]
 [ext_resource path="res://Player/kitten/Run/KittenRun.png" type="Texture" id=5]
 [ext_resource path="res://Player/kitten/walk/KittenWalk.png" type="Texture" id=6]
 [ext_resource path="res://Player/Sound/cat-meow.wav" type="AudioStream" id=7]
-[ext_resource path="res://Player/Sound/quick-jump.wav" type="AudioStream" id=8]
+[ext_resource path="res://Player/Sound/heartbeat.wav" type="AudioStream" id=8]
 [ext_resource path="res://Player/Sound/collect.wav" type="AudioStream" id=23]
 [ext_resource path="res://Player/kitten/Jump/KittenJump.png" type="Texture" id=25]
 
@@ -406,7 +406,7 @@ one_shot = true
 one_shot = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 4 )
 
 [node name="meow" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
@@ -415,7 +415,7 @@ stream = ExtResource( 7 )
 stream = ExtResource( 23 )
 
 [node name="heartbeat" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 8 )
 
 [node name="ChkMWest" type="RayCast2D" parent="."]
 position = Vector2( -80, 0 )

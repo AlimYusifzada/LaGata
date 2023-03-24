@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/HUD/HUD.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Player/Sound/l1.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Player/Sound/l1.wav" type="AudioStream" id=2]
 
 [node name="Camera2D" type="Camera2D"]
 current = true

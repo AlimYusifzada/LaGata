@@ -58,7 +58,7 @@ func move():
 	var col=get_last_slide_collision()
 	if col:
 		if col.get_collider().is_in_group("Cats"):
-			set_collision_mask_bit(Global.PLATFORM,false)
+#			set_collision_mask_bit(Global.PLATFORM,false)
 			velocity.y=JUMP_VELOCITY
 			pass
 	if is_on_floor() && is_wall():
