@@ -1,7 +1,41 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player/Buffs/Coin.gd" type="Script" id=1]
 [ext_resource path="res://Player/Buffs/coin.png" type="Texture" id=2]
+
+[sub_resource type="Shader" id=33]
+code = "shader_type canvas_item;
+
+const float PI = 3.141516;
+
+uniform float speed = 1.;
+
+uniform vec4 tint : hint_color = vec4(1., 1., 0., 1.);
+
+uniform float span : hint_range(0.1, 1.) = .3;
+
+float luminance(vec4 colour) {
+	return 1.0 - sqrt(0.299*colour.r*colour.r + 0.587*colour.g*colour.g + 0.114*colour.b*colour.b);
+}
+
+void fragment() {
+	vec4 colour = texture(TEXTURE, UV);
+	float target = abs(sin(TIME * PI * speed) * (1. + span));
+	if(colour.a > 0.) {
+		float lum = luminance(colour);
+		float diff = abs(lum - target);
+		float mx = clamp(1. - diff / span, 0., 1.);
+		colour = mix(colour, tint, mx);
+	}
+	
+	COLOR = colour;
+}"
+
+[sub_resource type="ShaderMaterial" id=34]
+shader = SubResource( 33 )
+shader_param/speed = 1.0
+shader_param/tint = Color( 1, 1, 0, 1 )
+shader_param/span = 0.3
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
@@ -99,8 +133,9 @@ collision_layer = 16
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 34 )
 frames = SubResource( 15 )
-frame = 7
+frame = 13
 speed_scale = 3.0
 playing = true
 
