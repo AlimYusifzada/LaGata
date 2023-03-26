@@ -215,7 +215,7 @@ animations = [ {
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 67 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 71 ), SubResource( 70 ), SubResource( 67 ), SubResource( 69 ) ],
 "loop": true,
 "name": "Hit",
 "speed": 5.0
@@ -261,7 +261,8 @@ script = ExtResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "Hit"
-frame = 5
+frame = 7
+playing = true
 
 [node name="DamageZone" type="Area2D" parent="."]
 collision_layer = 32
