@@ -47,10 +47,10 @@ func Kill():
 
 func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Food",-2)
+		body.emit_signal("Food",-5)
 		velocity.x*=-1
 #		Global.Ammo+=2
-#		Kill()
+		Kill()
 	pass # Replace with function body.
 
 func _on_CatchZone_body_entered(body):
@@ -60,7 +60,7 @@ func _on_CatchZone_body_entered(body):
 		bl.cloud="brown"
 		get_parent().add_child(bl)
 		Global.MiceCatches+=1
-		body.emit_signal("Food",2)
+		body.emit_signal("Food")
 		Global.Ammo+=5
 		Kill()
 	pass # Replace with function body.

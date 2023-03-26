@@ -99,9 +99,10 @@ func Kill():
 	
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Food",10) #incease stamina
-		body.emit_signal("Jump",5)
-		Kill()
+		if !Global.isChild:
+			body.emit_signal("Food",Global.EnemyKillPrize) #incease stamina
+			body.emit_signal("Jump",Global.EnemyJumpOff)
+			Kill()
 	pass # Replace with function body.
 
 func MakeVoice(body):

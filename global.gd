@@ -23,6 +23,8 @@ var Stamina=10	#initial value
 var MiceCatches=0
 var Points=0
 var Ammo=0
+var EnemyKillPrize=10
+var EnemyJumpOff=1
 #var PlayerPosition=Vector2()
 
 var MusicVol=0
@@ -38,6 +40,14 @@ func _ready():
 	loadGameOptions()
 #	PlayerReset()
 	randomize()
+
+func _get_Enemies():
+	# get all enemies on the level and return as dictionary
+	var EnemiesDick={}
+	for enemy in get_tree().get_nodes_in_group("Enemies"):
+		var eny=enemy.get_name()+str(enemy.get_index())
+		EnemiesDick.merge({eny:true})
+	return EnemiesDick
 
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
@@ -82,7 +92,7 @@ func saveGameOptions():
 	f.store_line(to_json(GameOptions))
 	f.close()
 	pass
-		
+
 func saveGameState():
 	var GameState={
 		"Level":Level,

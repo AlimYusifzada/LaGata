@@ -83,8 +83,8 @@ func move():
 		
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Food") #incease stamina
-		body.emit_signal("Jump",5)
+		body.emit_signal("Food",Global.EnemyKillPrize) #incease stamina
+		body.emit_signal("Jump",Global.EnemyJumpOff)
 		Kill()
 		pass
 	pass # Replace with function body.

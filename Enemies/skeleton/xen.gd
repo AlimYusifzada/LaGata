@@ -108,9 +108,10 @@ func Kill():
 
 func _on_head_body_entered(body):
 	if body.is_in_group("Cats"):
-		body.emit_signal("Food") #incease stamina
-		body.emit_signal("Jump",1)
-		Kill()
+		if !Global.isChild:
+			body.emit_signal("Food",Global.EnemyKillPrize) #incease stamina
+			body.emit_signal("Jump",Global.EnemyJumpOff)
+			Kill()
 		pass
 	pass # Replace with function body.
 

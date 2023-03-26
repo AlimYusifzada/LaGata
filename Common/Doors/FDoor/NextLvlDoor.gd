@@ -17,5 +17,7 @@ func _on_NextLvlDoor_body_entered(body):
 
 func _on_AnimatedSprite_animation_finished():
 	$AnimatedSprite.stop()
+	Global.Level=LevelNumber
+	Global.saveGameState()
 	transit.change_scene(Global.getLevelScene(LevelNumber))
 	pass # Replace with function body.

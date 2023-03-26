@@ -57,9 +57,7 @@ func _on_Continue_pressed():
 	Global.loadGameState()
 	if Global.LifesLeft>0:
 		Global.PlayerAlive=true
-		#need simple level name assembler
-		print("continue:"+str(Global.Level))
-		transit.change_scene(StartLevel)
+		transit.change_scene(Global.getLevelScene(Global.Level))
 	pass # Replace with function body.
 
 func _on_CatYawDelay_timeout():

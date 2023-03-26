@@ -17,6 +17,7 @@ func _on_DblJumpBonus_body_entered(body):
 		$bonus.volume_db=Global.SFXVol
 		$bonus.play()
 		Global.DblJumps+=DoubleJumps
+		body.emit_signal("Food",Global.EnemyKillPrize)
 		body.emit_signal("Message","Double Jump counter: %s"%(Global.DblJumps-1))
 		set_collision_layer_bit(Global.PRAY,false)
 		flag=true

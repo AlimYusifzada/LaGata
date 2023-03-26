@@ -47,7 +47,7 @@ func Kill():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats") && Life:
-		body.emit_signal("Food",-3)
+		body.emit_signal("Food",-10)
 		velocity.x*=-1
 #		Kill()
 	pass # Replace with function body.
@@ -55,7 +55,7 @@ func _on_Area2D_body_entered(body):
 func _on_CatchZone_body_entered(body):
 	if body.is_in_group("Cats") && Life:
 		Global.MiceCatches+=1
-		body.emit_signal("Food",5)
+		body.emit_signal("Food")
 		var bl=BloodExpl.instance()
 		bl.position=position
 		get_parent().add_child(bl)

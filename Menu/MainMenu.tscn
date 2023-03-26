@@ -140,7 +140,7 @@ custom_colors/font_color_hover = Color( 1, 1, 0, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 1 )
 enabled_focus_mode = 0
-text = "Restart"
+text = "Continue"
 flat = true
 
 [node name="Options" type="Button" parent="MenuPoint"]
