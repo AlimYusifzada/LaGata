@@ -2293,6 +2293,6 @@ animations = [ {
 [node name="Plant" type="AnimatedSprite"]
 frames = SubResource( 91 )
 animation = "Plant1"
-frame = 30
+frame = 8
 speed_scale = 5.0
 playing = true

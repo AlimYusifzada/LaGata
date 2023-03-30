@@ -53,7 +53,7 @@ func _ready():
 	set_scale(SCALE)
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
-	JumperTimer.wait_time=0.5
+	JumperTimer.wait_time=0.3
 	Life=true
 	JumpCounter=Global.DblJumps
 	$Tween.interpolate_property($".",
@@ -165,7 +165,7 @@ func ChecKbrdRun(delta):
 #animation
 func animate():
 	if velocity.y!=0 && !(is_on_floor()||onObject): #jumping
-		PlayerSprite.speed_scale=3
+		PlayerSprite.speed_scale=4
 		PlayerSprite.play(PickAnimation(JUMP))
 	if velocity.x==0 && (is_on_floor()||onObject): #idle
 		PlayerSprite.speed_scale=0.1
@@ -221,7 +221,7 @@ func _on_messagetimer_timeout():
 func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
 		if Global.Stamina>20:
-			Global.Stamina-=0.1
+			Global.Stamina-=1
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()

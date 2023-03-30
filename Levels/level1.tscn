@@ -15,7 +15,7 @@
 [ext_resource path="res://Player/Buffs/Coin.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Player/Buffs/DblJumpBonus.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Common/Doors/Keys/GoldKey.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Levels/TestLvl.gd" type="Script" id=16]
+[ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=16]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 16 )
@@ -87,34 +87,34 @@ position = Vector2( -288, 134 )
 
 [node name="Plant" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 88, 480 )
-frame = 62
+frame = 51
 
 [node name="Plant2" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 120, 480 )
-frame = 62
+frame = 51
 
 [node name="Plant3" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 148, 482 )
-frame = 62
+frame = 51
 
 [node name="Plant4" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 60, 482 )
-frame = 62
+frame = 51
 
 [node name="Plant5" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 216, 480 )
 animation = "Plant2"
-frame = 60
+frame = 49
 
 [node name="Plant6" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 272, 465 )
 animation = "Plant4"
-frame = 0
+frame = 19
 
 [node name="Plant7" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 24, 478 )
 animation = "Plant6"
-frame = 0
+frame = 19
 
 [node name="Water" parent="Plants" instance=ExtResource( 12 )]
 position = Vector2( 1568, 480 )

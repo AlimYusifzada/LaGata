@@ -20,8 +20,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 64, 10 )
+[sub_resource type="CapsuleShape2D" id=2]
+height = 108.0
 
 [node name="Cylinder" type="StaticBody2D"]
 collision_layer = 4
@@ -33,4 +33,5 @@ frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -64 )
+rotation = 1.5708
 shape = SubResource( 2 )

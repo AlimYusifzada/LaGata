@@ -360,8 +360,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=80]
-radius = 48.337
-height = 27.3229
+radius = 30.0
+height = 60.0
 
 [sub_resource type="Gradient" id=150]
 offsets = PoolRealArray( 0, 0.00214133, 0.508929, 1 )
@@ -377,11 +377,11 @@ frames = SubResource( 26 )
 animation = "Jump"
 
 [node name="jumptimer" type="Timer" parent="."]
-wait_time = 0.3
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = 1.56375
+position = Vector2( 0, 16 )
+rotation = 1.5708
 shape = SubResource( 80 )
 
 [node name="LookDown" type="RayCast2D" parent="."]

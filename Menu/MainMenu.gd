@@ -10,7 +10,7 @@ onready var Continue=$MenuPoint/Continue
 onready var SFXSound=$SFXSound
 onready var MenuPoint=$MenuPoint
 onready var transit=$"/root/Transit"
-export var StartLevel="res://Levels/TestLvl.tscn"
+export var StartLevel="res://Levels/level0.tscn"
 
 signal OptionsChanged
 
