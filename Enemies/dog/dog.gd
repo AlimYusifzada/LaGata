@@ -18,6 +18,7 @@ onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSuth
 onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+onready var DustCloud=preload("res://Common/JumpDust.tscn")
 signal Die
 
 
@@ -130,6 +131,11 @@ func _on_dog_Die():
 	
 func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats"):
+		Speed=10
+		var dust=DustCloud.instance()
+		dust.amount=10
+		dust.position=body.position
+		get_parent().add_child(dust)
 		body.emit_signal("Die") #incease stamina
 	pass # Replace with function body.
 

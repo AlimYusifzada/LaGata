@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Common/Plants/PLant.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Common/Plants/Plant.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Common/StaticPlatforms/Cylinders.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Common/StaticPlatforms/Ladder.tscn" type="PackedScene" id=6]
@@ -121,37 +121,6 @@ position = Vector2( 1312, 96 )
 [node name="GoldKey" parent="Plants" instance=ExtResource( 15 )]
 position = Vector2( -288, 134 )
 
-[node name="Plant" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 88, 480 )
-frame = 86
-
-[node name="Plant2" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 120, 480 )
-frame = 86
-
-[node name="Plant3" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 148, 482 )
-frame = 86
-
-[node name="Plant4" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 60, 482 )
-frame = 86
-
-[node name="Plant5" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 216, 480 )
-animation = "Plant2"
-frame = 84
-
-[node name="Plant6" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 272, 465 )
-animation = "Plant4"
-frame = 54
-
-[node name="Plant7" parent="Plants" instance=ExtResource( 3 )]
-position = Vector2( 24, 478 )
-animation = "Plant6"
-frame = 54
-
 [node name="Water" parent="Plants" instance=ExtResource( 12 )]
 position = Vector2( 1568, 480 )
 
@@ -181,3 +150,8 @@ position = Vector2( -736, 480 )
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 format = 1
+
+[node name="Plant" parent="." instance=ExtResource( 3 )]
+position = Vector2( 88, 484 )
+animation = "Plant2"
+frame = 86

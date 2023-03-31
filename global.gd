@@ -16,7 +16,7 @@ const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level=0 #current level
-var LifesLeft:int=7
+var LifesLeft:int=3
 var PlayerAlive:bool=true #player life status - default true
 var isChild:bool=true #player status (child/adult)
 var Stamina=10	#initial value
