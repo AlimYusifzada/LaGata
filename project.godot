@@ -16,7 +16,7 @@ started: October 2022
 "
 run/main_scene="res://Menu/MainMenu.tscn"
 boot_splash/show_image=false
-config/icon="res://Common/cat.png"
+config/icon="res://Common/Textures/cat.png"
 
 [autoload]
 

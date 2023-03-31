@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Player/Buffs/DblJumpBonus.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Common/Doors/Keys/GoldKey.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=16]
+[ext_resource path="res://Common/StaticPlatforms/snake.tscn" type="PackedScene" id=17]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 16 )
@@ -27,9 +28,6 @@ format = 1
 
 [node name="trashcanH" parent="Platforms" instance=ExtResource( 8 )]
 position = Vector2( -136, 480 )
-
-[node name="Cylinder" parent="Platforms" instance=ExtResource( 5 )]
-position = Vector2( -552, 448 )
 
 [node name="Cylinder2" parent="Platforms" instance=ExtResource( 5 )]
 position = Vector2( 136, 440 )
@@ -54,6 +52,44 @@ position = Vector2( 632, 344 )
 
 [node name="MovingPlatform2" parent="Platforms" instance=ExtResource( 10 )]
 position = Vector2( -88, 256 )
+
+[node name="StaticBody2D" parent="Platforms" instance=ExtResource( 17 )]
+position = Vector2( -706, 442 )
+
+[node name="Platforms2" type="Node2D" parent="."]
+
+[node name="trashcanH" parent="Platforms2" instance=ExtResource( 8 )]
+position = Vector2( -136, 480 )
+
+[node name="Cylinder2" parent="Platforms2" instance=ExtResource( 5 )]
+position = Vector2( 136, 440 )
+
+[node name="Cylinder3" parent="Platforms2" instance=ExtResource( 5 )]
+position = Vector2( 408, 440 )
+
+[node name="Ladder" parent="Platforms2" instance=ExtResource( 6 )]
+position = Vector2( -288, 384 )
+
+[node name="Ladder2" parent="Platforms2" instance=ExtResource( 6 )]
+position = Vector2( -288, 320 )
+
+[node name="Ladder3" parent="Platforms2" instance=ExtResource( 6 )]
+position = Vector2( -288, 256 )
+
+[node name="Ladder4" parent="Platforms2" instance=ExtResource( 6 )]
+position = Vector2( -288, 192 )
+
+[node name="MovingPlatform1" parent="Platforms2" instance=ExtResource( 9 )]
+position = Vector2( 632, 344 )
+
+[node name="MovingPlatform2" parent="Platforms2" instance=ExtResource( 10 )]
+position = Vector2( -88, 256 )
+
+[node name="StaticBody2D" parent="Platforms2" instance=ExtResource( 17 )]
+position = Vector2( -401, 443 )
+
+[node name="StaticBody2D2" parent="Platforms2" instance=ExtResource( 17 )]
+position = Vector2( -553, 442 )
 
 [node name="Ground" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -87,34 +123,34 @@ position = Vector2( -288, 134 )
 
 [node name="Plant" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 88, 480 )
-frame = 51
+frame = 86
 
 [node name="Plant2" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 120, 480 )
-frame = 51
+frame = 86
 
 [node name="Plant3" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 148, 482 )
-frame = 51
+frame = 86
 
 [node name="Plant4" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 60, 482 )
-frame = 51
+frame = 86
 
 [node name="Plant5" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 216, 480 )
 animation = "Plant2"
-frame = 49
+frame = 84
 
 [node name="Plant6" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 272, 465 )
 animation = "Plant4"
-frame = 19
+frame = 54
 
 [node name="Plant7" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 24, 478 )
 animation = "Plant6"
-frame = 19
+frame = 54
 
 [node name="Water" parent="Plants" instance=ExtResource( 12 )]
 position = Vector2( 1568, 480 )

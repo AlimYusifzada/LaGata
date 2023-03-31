@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Common/64xt/Lava/Lava.gd" type="Script" id=2]
 [ext_resource path="res://Common/64xt/Lava/LavaTop.png" type="Texture" id=3]
-[ext_resource path="res://Common/smoke_particle.png" type="Texture" id=4]
+[ext_resource path="res://Common/Textures/smoke_particle.png" type="Texture" id=4]
+
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
