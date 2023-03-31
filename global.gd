@@ -15,16 +15,16 @@ enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
-var Level=0 #current level
-var LifesLeft:int=3
+var Level:int=0 #current level
+var LifesLeft:int
 var PlayerAlive:bool=true #player life status - default true
 var isChild:bool=true #player status (child/adult)
-var Stamina=10	#initial value
-var MiceCatches=0
-var Points=0
-var Ammo=0
-var EnemyKillPrize=10
-var EnemyJumpOff=1
+var Stamina:int	#initial value
+var MiceCatches:int #remove
+var Points:int
+var Ammo:int
+const EnemyKillPrize=10
+const EnemyJumpOff=1
 #var PlayerPosition=Vector2()
 
 var MusicVol=0
@@ -52,10 +52,10 @@ func _get_Enemies():
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
 	Level=0 #current level
-	LifesLeft=MaxLifes 
+	LifesLeft=int(MaxLifes/2)
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change
-	Stamina=10 #initial value
+	Stamina=20 #initial value
 	MiceCatches=0
 	Points=0
 	Ammo=0

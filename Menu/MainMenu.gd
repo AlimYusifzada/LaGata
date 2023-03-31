@@ -18,6 +18,7 @@ func _ready():
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()
+	show_Status()
 	BGMusic.volume_db=Global.MusicVol
 	BGMusic.play()
 	if Global.LifesLeft<=0:
@@ -25,7 +26,7 @@ func _ready():
 	else:
 		Continue.disabled=false
 	pass
-	
+
 func _process(delta):
 	var eye_position=get_global_mouse_position().x-CatYawAnimation.position.x
 	if !CatYawAnimation.playing:
@@ -40,7 +41,12 @@ func _process(delta):
 			pass
 		CatYawAnimation.stop()
 	pass
-	
+
+func show_Status():
+	$MenuPoint/Continue/LLevel.set_text("level: "+str(Global.Level))
+	$MenuPoint/Continue/LLife.set_text("lifes left: "+str(Global.LifesLeft))
+	$MenuPoint/Continue/LStamina.set_text("stamina: "+str(Global.Stamina))
+
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
 	transit.change_scene(StartLevel)

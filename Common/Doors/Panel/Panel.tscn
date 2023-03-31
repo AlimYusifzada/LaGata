@@ -1,8 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Common/Doors/Panel/Panel.gd" type="Script" id=1]
-[ext_resource path="res://Common/64xt/Singles/GemOv3.png" type="Texture" id=2]
-[ext_resource path="res://Common/64xt/Singles/GemOv2.png" type="Texture" id=3]
+[ext_resource path="res://Common/Textures/Singles/GemOv3.png" type="Texture" id=2]
+[ext_resource path="res://Common/Textures/Singles/GemOv2.png" type="Texture" id=3]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

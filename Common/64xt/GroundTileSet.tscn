@@ -1,32 +1,32 @@
 [gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://Common/64xt/Corners/Bricks.png" type="Texture" id=1]
-[ext_resource path="res://Common/64xt/Singles/bookshelf.png" type="Texture" id=2]
-[ext_resource path="res://Common/64xt/Corners/Bark.png" type="Texture" id=3]
-[ext_resource path="res://Common/64xt/Corners/WalkingStones.png" type="Texture" id=4]
-[ext_resource path="res://Common/64xt/Singles/Stone.png" type="Texture" id=5]
-[ext_resource path="res://Common/64xt/Singles/TreeRings.png" type="Texture" id=6]
-[ext_resource path="res://Common/64xt/Singles/Gravel.png" type="Texture" id=7]
-[ext_resource path="res://Common/64xt/Singles/TilledSoil.png" type="Texture" id=8]
-[ext_resource path="res://Common/64xt/Singles/Mud.png" type="Texture" id=9]
-[ext_resource path="res://Common/64xt/Singles/Ice.png" type="Texture" id=10]
-[ext_resource path="res://Common/64xt/Singles/Sand.png" type="Texture" id=11]
-[ext_resource path="res://Common/64xt/Singles/Gold0.png" type="Texture" id=12]
-[ext_resource path="res://Common/64xt/Singles/Iron.png" type="Texture" id=13]
-[ext_resource path="res://Common/64xt/Singles/Planks.png" type="Texture" id=14]
-[ext_resource path="res://Common/64xt/Greens/Grass.png" type="Texture" id=15]
-[ext_resource path="res://Common/64xt/Corners/OranjeStones.png" type="Texture" id=16]
-[ext_resource path="res://Common/64xt/Singles/MixedTileset.png" type="Texture" id=24]
-[ext_resource path="res://Common/64xt/Singles/TreeRingsRound.png" type="Texture" id=26]
-[ext_resource path="res://Common/64xt/Corners/BigStones.png" type="Texture" id=30]
-[ext_resource path="res://Common/64xt/Corners/Bolders.png" type="Texture" id=31]
-[ext_resource path="res://Common/64xt/Corners/HellBricks.png" type="Texture" id=32]
-[ext_resource path="res://Common/64xt/Corners/GrGravel.png" type="Texture" id=33]
-[ext_resource path="res://Common/64xt/Corners/RedBricks.png" type="Texture" id=34]
-[ext_resource path="res://Common/64xt/Corners/BrGravel.png" type="Texture" id=35]
-[ext_resource path="res://Common/64xt/Corners/GrayTiles.png" type="Texture" id=36]
-[ext_resource path="res://Common/64xt/Corners/OliveBubles.png" type="Texture" id=37]
-[ext_resource path="res://Common/64xt/Corners/Parket.png" type="Texture" id=38]
+[ext_resource path="res://Common/Textures/Corners/Bricks.png" type="Texture" id=1]
+[ext_resource path="res://Common/Textures/Singles/bookshelf.png" type="Texture" id=2]
+[ext_resource path="res://Common/Textures/Corners/Bark.png" type="Texture" id=3]
+[ext_resource path="res://Common/Textures/Corners/WalkingStones.png" type="Texture" id=4]
+[ext_resource path="res://Common/Textures/Singles/Stone.png" type="Texture" id=5]
+[ext_resource path="res://Common/Textures/Singles/TreeRings.png" type="Texture" id=6]
+[ext_resource path="res://Common/Textures/Singles/Gravel.png" type="Texture" id=7]
+[ext_resource path="res://Common/Textures/Singles/TilledSoil.png" type="Texture" id=8]
+[ext_resource path="res://Common/Textures/Singles/Mud.png" type="Texture" id=9]
+[ext_resource path="res://Common/Textures/Singles/Ice.png" type="Texture" id=10]
+[ext_resource path="res://Common/Textures/Singles/Sand.png" type="Texture" id=11]
+[ext_resource path="res://Common/Textures/Singles/Gold0.png" type="Texture" id=12]
+[ext_resource path="res://Common/Textures/Singles/Iron.png" type="Texture" id=13]
+[ext_resource path="res://Common/Textures/Singles/Planks.png" type="Texture" id=14]
+[ext_resource path="res://Common/Textures/Greens/Grass.png" type="Texture" id=15]
+[ext_resource path="res://Common/Textures/Corners/OranjeStones.png" type="Texture" id=16]
+[ext_resource path="res://Common/Textures/Singles/MixedTileset.png" type="Texture" id=24]
+[ext_resource path="res://Common/Textures/Singles/TreeRingsRound.png" type="Texture" id=26]
+[ext_resource path="res://Common/Textures/Corners/BigStones.png" type="Texture" id=30]
+[ext_resource path="res://Common/Textures/Corners/Bolders.png" type="Texture" id=31]
+[ext_resource path="res://Common/Textures/Corners/HellBricks.png" type="Texture" id=32]
+[ext_resource path="res://Common/Textures/Corners/GrGravel.png" type="Texture" id=33]
+[ext_resource path="res://Common/Textures/Corners/RedBricks.png" type="Texture" id=34]
+[ext_resource path="res://Common/Textures/Corners/BrGravel.png" type="Texture" id=35]
+[ext_resource path="res://Common/Textures/Corners/GrayTiles.png" type="Texture" id=36]
+[ext_resource path="res://Common/Textures/Corners/OliveBubles.png" type="Texture" id=37]
+[ext_resource path="res://Common/Textures/Corners/Parket.png" type="Texture" id=38]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -3704,6 +3704,7 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite319"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite319/StaticBody2D"]
 shape = SubResource( 1 )
@@ -3845,6 +3846,7 @@ __meta__ = {
 }
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite344"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite344/StaticBody2D"]
 shape = SubResource( 1 )
