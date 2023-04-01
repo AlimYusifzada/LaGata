@@ -131,7 +131,7 @@ func _on_dog_Die():
 	
 func _on_DamageZone_body_entered(body):
 	if body.is_in_group("Cats"):
-		Speed=10
+		Speed=100
 		var dust=DustCloud.instance()
 		dust.amount=10
 		dust.position=body.position

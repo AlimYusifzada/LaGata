@@ -19,7 +19,7 @@ margin_top = 136.0
 margin_right = 768.0
 margin_bottom = 456.0
 theme = ExtResource( 2 )
-color = Color( 0.215686, 0.215686, 0.215686, 0.501961 )
+color = Color( 0, 0, 0, 0.376471 )
 
 [node name="TabContainer" type="TabContainer" parent="window"]
 anchor_left = 0.5
@@ -135,8 +135,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -128.0
-margin_top = -48.0
+margin_left = -136.0
+margin_top = -56.0
+margin_right = -8.0
+margin_bottom = -8.0
 theme = ExtResource( 2 )
 text = "Cancel"
 
@@ -145,17 +147,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -8.0
-margin_top = -48.0
-margin_right = 120.0
+margin_left = -16.0
+margin_top = -56.0
+margin_right = 112.0
+margin_bottom = -8.0
 theme = ExtResource( 2 )
 text = "OK"
 
 [node name="MainMenuButton" type="Button" parent="window"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -48.0
-margin_right = 170.0
+margin_left = 8.0
+margin_top = -56.0
+margin_right = 178.0
+margin_bottom = -8.0
 theme = ExtResource( 2 )
 text = "Main Menu"
 

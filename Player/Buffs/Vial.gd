@@ -20,11 +20,11 @@ func _on_Vial_body_entered(body):
 	if body.is_in_group("Cats"):
 		set_collision_mask_bit(Global.PLAYER,false)
 		if VialType==0:
-			body.emit_signal("Food",100)
+			body.emit_signal("Food",50)
 		elif VialType==1:
 			if Global.LifesLeft<Global.MaxLifes:
 				Global.LifesLeft+=1
-		Global.Points*=2
+		Global.Points+=1000
 		$Tween.start()	
 	pass # Replace with function body.
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Menu/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Common/coralines-cat.regular.ttf" type="DynamicFontData" id=2]
@@ -68,6 +68,9 @@ stereo = true
 
 [sub_resource type="DynamicFont" id=1]
 size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 2 )
 
 [sub_resource type="SpriteFrames" id=2]
@@ -148,28 +151,36 @@ margin_left = 29.0
 margin_top = 64.0
 margin_right = 69.0
 margin_bottom = 78.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "level"
-
-[node name="LStamina" type="Label" parent="MenuPoint/Continue"]
-margin_left = 29.0
-margin_top = 96.0
-margin_right = 80.0
-margin_bottom = 110.0
-text = "stamina"
 
 [node name="LLife" type="Label" parent="MenuPoint/Continue"]
 margin_left = 29.0
-margin_top = 80.0
-margin_right = 81.0
-margin_bottom = 94.0
+margin_top = 97.0
+margin_right = 151.0
+margin_bottom = 130.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "lifes left"
 
-[node name="LAdult" type="Label" parent="MenuPoint/Continue"]
+[node name="LStamina" type="Label" parent="MenuPoint/Continue"]
 margin_left = 29.0
-margin_top = 112.0
-margin_right = 114.0
-margin_bottom = 126.0
-text = "play as kitten"
+margin_top = 130.0
+margin_right = 132.0
+margin_bottom = 163.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "stamina"
+
+[node name="LPoints" type="Label" parent="MenuPoint/Continue"]
+margin_left = 29.0
+margin_top = 168.0
+margin_right = 105.0
+margin_bottom = 201.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "points"
 
 [node name="Options" type="Button" parent="MenuPoint"]
 anchor_right = 1.0

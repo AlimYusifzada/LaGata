@@ -202,7 +202,7 @@ func _on_Cat_Food(stamina=2):
 		Bleeding.set_emitting(true)
 		Meow.play()
 	if stamina>0:
-		Global.Points+=stamina*50
+		Global.Points+=stamina*10
 	Global.Stamina+=stamina
 	if Global.Stamina>100:
 		Global.Stamina=100

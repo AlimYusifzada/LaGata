@@ -46,6 +46,7 @@ func show_Status():
 	$MenuPoint/Continue/LLevel.set_text("level: "+str(Global.Level))
 	$MenuPoint/Continue/LLife.set_text("lifes left: "+str(Global.LifesLeft))
 	$MenuPoint/Continue/LStamina.set_text("stamina: "+str(Global.Stamina))
+	$MenuPoint/Continue/LPoints.set_text("points: "+str(Global.Points))
 
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
