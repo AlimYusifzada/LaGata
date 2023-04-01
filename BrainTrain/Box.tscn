@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Area2D" type="Area2D"]
+[node name="HomeBox" type="Area2D"]
 collision_layer = 16
 script = ExtResource( 2 )
 

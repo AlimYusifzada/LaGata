@@ -38,7 +38,7 @@ var MaxLifes:int=7
 
 func _ready():
 	loadGameOptions()
-#	PlayerReset()
+	PlayerReset()
 	randomize()
 
 func _get_Enemies():

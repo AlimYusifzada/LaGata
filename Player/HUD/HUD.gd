@@ -31,17 +31,13 @@ func _ready():
 	LvlCounter.text="Lvl="+str(Global.Level)
 	pass
 	
-func _process(delta):
-	CheckESC()
-
-func CheckESC():
-	if Input.is_action_pressed("ui_cancel"):
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
 		get_tree().paused=true
 		Global.saveGameOptions()
 		Global.saveGameState()
 		var op=Options.instance()
 		self.add_child(op)
-		pass
 
 func _on_HUD_OptionsChanged():
 	Global.loadGameOptions()

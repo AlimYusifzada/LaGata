@@ -42,7 +42,6 @@ extents = Vector2( 96, 9 )
 collision_layer = 2
 collision_mask = 49
 script = ExtResource( 2 )
-DoorColor = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -16, 0 )

@@ -10,11 +10,11 @@ func _ready():
 func _process(delta):
 	prev_position=position
 	move_and_collide(velocity*delta)
-	if position.x>512 || position.x<0 || position.y>512 || position.y<0:
+	if !is_on_screen():
 		get_parent().emit_signal("Failed")
 	if prev_position==position:
 		velocity=Vector2(0,0)
-	
+		
 func _input(event):
 	if velocity.length()>0:
 		return
@@ -35,3 +35,10 @@ func _input(event):
 		velocity.y=-Speed
 		pass
 	pass
+	
+func is_on_screen()->bool:
+	var wins=get_viewport().size
+	if (position.x>=0 && position.x<=wins.x) && (position.y>=0 && position.y<=wins.y):
+		return true
+	else:
+		return false

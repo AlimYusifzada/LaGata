@@ -11,12 +11,12 @@
 [ext_resource path="res://Common/MovingPlatforms/Movingplatform1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Common/MovingPlatforms/MovingPlatform2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Common/64xt/Lava/LavaTop.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Common/64xt/Water/Water.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Common/Doors/InternalDoor/InternalDoor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Player/Buffs/Coin.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Player/Buffs/DblJumpBonus.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Common/Doors/Keys/GoldKey.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=16]
 [ext_resource path="res://Common/StaticPlatforms/snake.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Common/OpenCloseMsg/OpenCloseMsg.tscn" type="PackedScene" id=19]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 16 )
@@ -118,15 +118,6 @@ DoubleJumps = 3
 [node name="Coin" parent="Plants" instance=ExtResource( 13 )]
 position = Vector2( 1312, 96 )
 
-[node name="GoldKey" parent="Plants" instance=ExtResource( 15 )]
-position = Vector2( -288, 134 )
-
-[node name="Water" parent="Plants" instance=ExtResource( 12 )]
-position = Vector2( 1568, 480 )
-
-[node name="Water2" parent="Plants" instance=ExtResource( 12 )]
-position = Vector2( 1632, 480 )
-
 [node name="LavaTop2" parent="Plants" instance=ExtResource( 11 )]
 position = Vector2( -608, 480 )
 
@@ -148,10 +139,16 @@ position = Vector2( -672, 480 )
 [node name="LavaTop" parent="Plants" instance=ExtResource( 11 )]
 position = Vector2( -736, 480 )
 
-[node name="FrontDecoration" type="TileMap" parent="."]
-format = 1
+[node name="InternalDoor" parent="Plants" instance=ExtResource( 12 )]
+position = Vector2( 1497, 418 )
+NextDoorPath = NodePath("../OpenCloseMsg")
 
-[node name="Plant" parent="." instance=ExtResource( 3 )]
+[node name="Plant" parent="Plants" instance=ExtResource( 3 )]
 position = Vector2( 88, 484 )
 animation = "Plant2"
-frame = 86
+frame = 14
+
+[node name="OpenCloseMsg" parent="Plants" instance=ExtResource( 19 )]
+
+[node name="FrontDecoration" type="TileMap" parent="."]
+format = 1

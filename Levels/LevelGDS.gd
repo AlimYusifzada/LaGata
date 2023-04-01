@@ -3,6 +3,7 @@ extends Node2D
 onready var transit=$"/root/Transit"
 
 func _ready():
+#	Global.PlayerReset()
 	pass
 
 func _process(delta):
