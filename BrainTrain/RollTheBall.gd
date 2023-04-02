@@ -16,6 +16,8 @@ func _on_Failed():
 	pass # Replace with function body.
 
 func _on_Success():
+	Global.Level=NextLevel
+	Global.saveGameState()
 	transit.change_scene((Global.getLevelScene(NextLevel)))
 	pass # Replace with function body.
 

@@ -25,6 +25,7 @@ func _ready():
 		Continue.disabled=true
 	else:
 		Continue.disabled=false
+	$MenuPoint/Continue/LRecord.text="record: "+str(Global.RecordPoints)
 	pass
 
 func _process(delta):
@@ -86,4 +87,36 @@ func _on_MainMenu_OptionsChanged():
 	Global.loadGameOptions()
 	SFXSound.volume_db=Global.SFXVol
 	BGMusic.volume_db=Global.MusicVol
+	pass # Replace with function body.
+
+func _on_StartNewGame_mouse_entered():
+	$MenuPoint/message.text="carefull! all progress will be lost!"
+	pass # Replace with function body.
+
+func _on_Continue_mouse_entered():
+	$MenuPoint/message.text="continue the journey"
+	pass # Replace with function body.
+
+func _on_Exit_mouse_entered():
+	$MenuPoint/message.text="quit from here"
+	pass # Replace with function body.
+
+func _on_Options_mouse_entered():
+	$MenuPoint/message.text="game options and other..."
+	pass # Replace with function body.
+
+func _on_StartNewGame_mouse_exited():
+	$MenuPoint/message.text=""
+	pass # Replace with function body.
+
+func _on_Continue_mouse_exited():
+	$MenuPoint/message.text=""
+	pass # Replace with function body.
+
+func _on_Options_mouse_exited():
+	$MenuPoint/message.text=""
+	pass # Replace with function body.
+
+func _on_Exit_mouse_exited():
+	$MenuPoint/message.text=""
 	pass # Replace with function body.

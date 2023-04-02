@@ -22,6 +22,7 @@ var isChild:bool=true #player status (child/adult)
 var Stamina:int	#initial value
 var MiceCatches:int #remove
 var Points:int
+var RecordPoints:int
 var Ammo:int
 const EnemyKillPrize=10
 const EnemyJumpOff=1
@@ -37,9 +38,9 @@ var MaxDblJumps:int=1
 var MaxLifes:int=7
 
 func _ready():
+	randomize()
 	loadGameOptions()
 	PlayerReset()
-	randomize()
 
 func _get_Enemies():
 	# get all enemies on the level and return as dictionary
@@ -106,6 +107,8 @@ func saveGameOptions():
 	pass
 
 func saveGameState():
+	if RecordPoints<Points:
+		RecordPoints=Points
 	var GameState={
 		"Level":Level,
 		"LifesLeft":LifesLeft,
@@ -114,6 +117,7 @@ func saveGameState():
 		"isChild":isChild,
 		"MiceCatches":MiceCatches,
 		"Points":Points,
+		"RecordPoints":RecordPoints,
 		"Ammo":Ammo,
 		"DblJumps":DblJumps,
 		"MaxDblJumps":MaxDblJumps,
@@ -161,6 +165,7 @@ func loadGameState():
 		DblJumps=GameState["DblJumps"]
 		MaxDblJumps=GameState["MaxDblJumps"]
 		Stamina=GameState["Stamina"]
+		RecordPoints=GameState["RecordPoints"]
 		if Stamina<=0: Stamina=10
 		KeysRing[0]=GameState["YellowKeys"]
 		KeysRing[1]=GameState["GreenKeys"]

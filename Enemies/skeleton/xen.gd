@@ -144,9 +144,9 @@ func CheckHit():
 	var cEast=HitEast.get_collider()
 	var cWest=HitWest.get_collider()
 	if cWest && !hitting:
-		cWest.emit_signal("Food",-5)
+		cWest.emit_signal("Food",-10)
 	if cEast && !hitting:
-		cEast.emit_signal("Food",-5)
+		cEast.emit_signal("Food",-10)
 	if (cWest || cEast):
 		velocity.x=0
 		hitting=true
