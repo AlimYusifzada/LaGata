@@ -4,6 +4,8 @@ onready var transit=$"/root/Transit"
 
 func _ready():
 #	Global.PlayerReset()
+	if Global.getLockScene(Global.Level)=='':
+		print("lock interscene not found")
 	pass
 
 func _process(delta):

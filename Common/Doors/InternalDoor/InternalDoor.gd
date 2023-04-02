@@ -12,11 +12,16 @@ signal SetOpen
 signal SetClose
 #frame 0 - open
 #frame 3 - closed
-
 export var NextDoorPath:NodePath
-onready var NextDoor=get_node(NextDoorPath)
+var NextDoor:Node#=get_node(NextDoorPath)
 
 func _ready():
+	if NextDoorPath=='':
+		NextDoor=null
+	else:
+		NextDoor=get_node(NextDoorPath) #or message
+
+		
 	scale=Vector2(1,1)
 	if DoorState==CLOSED:
 		DoorAnimation.set_frame(3)

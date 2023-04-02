@@ -1,24 +1,21 @@
 extends Node2D
 
+onready var transit=$"/root/Transit"
 signal Failed
 signal Success
+export var NextLevel=1
+export var CurrentLevel=0
 
-export var DoorPath:NodePath
-#onready var Door=get_node(DoorPath)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	if !Door:
-#		print("no Door defined!")
-#		queue_free()
 	pass # Replace with function body.
 
 func _on_Failed():
-#	Door.emit_signal("SetClose")
-	queue_free()
+	transit.change_scene(Global.getLevelScene(CurrentLevel))
 	pass # Replace with function body.
 
 func _on_Success():
-#	Door.emit_signal("SetOpen")
-	queue_free()
+	transit.change_scene((Global.getLevelScene(NextLevel)))
 	pass # Replace with function body.
+

@@ -63,7 +63,19 @@ func PlayerReset():
 	saveGameState()
 	pass
 
-func getLevelScene(level):
+func getLockScene(level)->String:
+	var pathS="res://Levels/"
+	var pathM="lock"
+	var pathE=".tscn"
+	var levelpath=pathS+pathM+str(level)+pathE
+	var levelfile=File.new()
+	if levelfile.file_exists(levelpath):
+		return levelpath
+	else:
+		return ''
+	pass
+	
+func getLevelScene(level)->String:
 	var pathS="res://Levels/"
 	var pathM="level"
 	var pathE=".tscn"
@@ -72,7 +84,7 @@ func getLevelScene(level):
 	if levelfile.file_exists(levelpath):
 		return levelpath
 	else:
-		return null
+		return ''
 	pass
 
 func checkChild():

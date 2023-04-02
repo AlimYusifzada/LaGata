@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://BrainTrain/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BrainTrain/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BrainTrain/RollTheBall.gd" type="Script" id=4]
+[ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=5]
+
+[node name="PeackLock" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="maze" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 7, 18, 0, 14, 18, 0, 65536, 18, 0, 131072, 18, 0, 131074, 18, 0, 131083, 18, 0, 131084, 18, 0, 196614, 18, 0, 327683, 18, 0, 327692, 18, 0, 393219, 18, 0, 393220, 18, 0, 393221, 18, 0, 393228, 18, 0, 458752, 18, 0, 458757, 18, 0, 524288, 18, 0, 524300, 18, 0, 524301, 18, 0, 589824, 18, 0, 589825, 18, 0, 655361, 18, 0, 720902, 18, 0, 786433, 18, 0, 786436, 18, 0, 786440, 18, 0, 851983, 18, 0, 917505, 18, 0, 917511, 18, 0 )
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 208, 240 )
+
+[node name="HomeBox" parent="." instance=ExtResource( 2 )]
+position = Vector2( 48, 280 )
+
+[connection signal="Failed" from="." to="." method="_on_Failed"]
+[connection signal="Success" from="." to="." method="_on_Success"]

@@ -10,7 +10,7 @@
 [ext_resource path="res://Enemies/archer/xenskeleton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Enemies/pray/Roach.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Common/Doors/NextLevelDoor/NextLvlDoor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Levels/NextLevelDoor/NextLvlDoor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Enemies/skeleton/xen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Common/Plants/StaticPlant.tscn" type="PackedScene" id=15]
@@ -129,7 +129,6 @@ position = Vector2( 609, -90 )
 
 [node name="NextLvlDoor" parent="Coins&Buffs" instance=ExtResource( 12 )]
 position = Vector2( -586, -614 )
-LevelNumber = 1
 
 [node name="Vial" parent="Coins&Buffs" instance=ExtResource( 30 )]
 position = Vector2( -882, -277 )

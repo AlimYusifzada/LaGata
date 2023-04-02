@@ -1,27 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://BrainTrain/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BrainTrain/RollTheBall.gd" type="Script" id=3]
+[ext_resource path="res://BrainTrain/Box.tscn" type="PackedScene" id=4]
 
-[node name="area" type="Node2D"]
+[node name="PeackLock" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="maze" type="TileMap" parent="."]
-position = Vector2( 0, 8 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 7, 12, 0, 14, 12, 0, 131072, 12, 0, 131074, 12, 0, 131083, 12, 0, 196608, 12, 0, 196614, 12, 0, 262147, 12, 0, 327692, 12, 0, 393219, 12, 0, 393220, 12, 0, 393221, 12, 0, 393228, 12, 0, 458752, 12, 0, 458757, 12, 0, 524288, 12, 0, 524300, 12, 0, 524301, 12, 0, 589825, 12, 0, 720902, 12, 0, 786433, 12, 0, 786436, 12, 0, 786440, 12, 0, 851983, 12, 0, 917505, 12, 0, 917511, 12, 0 )
+tile_data = PoolIntArray( 7, 18, 0, 14, 18, 0, 131072, 18, 0, 131074, 18, 0, 131083, 18, 0, 131084, 18, 0, 196608, 18, 0, 196614, 18, 0, 262147, 18, 0, 327692, 18, 0, 393219, 18, 0, 393220, 18, 0, 393221, 18, 0, 393228, 18, 0, 458752, 18, 0, 458757, 18, 0, 524288, 18, 0, 524300, 18, 0, 524301, 18, 0, 589825, 18, 0, 720897, 18, 0, 720902, 18, 0, 786433, 18, 0, 786436, 18, 0, 786440, 18, 0, 851983, 18, 0, 917505, 18, 0, 917511, 18, 0 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
-position = Vector2( 176, 176 )
+position = Vector2( 208, 240 )
 
-[node name="lock" type="Node2D" parent="."]
-script = ExtResource( 3 )
+[node name="HomeBox" parent="." instance=ExtResource( 4 )]
+position = Vector2( 48, 280 )
 
 [connection signal="Failed" from="." to="." method="_on_Failed"]
 [connection signal="Success" from="." to="." method="_on_Success"]
-[connection signal="Failed" from="lock" to="lock" method="_on_Node2D_Failed"]
-[connection signal="Success" from="lock" to="lock" method="_on_lock_Success"]

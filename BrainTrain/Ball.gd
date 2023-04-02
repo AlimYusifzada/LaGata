@@ -3,8 +3,10 @@ extends KinematicBody2D
 var velocity:Vector2
 var Speed=500
 var prev_position:Vector2
+var wins
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	wins=get_parent().get_viewport().size
 	pass # Replace with function body.
 
 func _process(delta):
@@ -34,10 +36,12 @@ func _input(event):
 		velocity.x=0
 		velocity.y=-Speed
 		pass
+	elif event.is_action_pressed("ui_cancel"):
+		get_parent().emit_signal("Failed")
+		pass
 	pass
 	
 func is_on_screen()->bool:
-	var wins=get_viewport().size
 	if (position.x>=0 && position.x<=wins.x) && (position.y>=0 && position.y<=wins.y):
 		return true
 	else:
