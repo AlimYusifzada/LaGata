@@ -20,20 +20,21 @@ func _on_AnimatedSprite_animation_finished():
 	pass # Replace with function body.
 
 func _process(delta):
-	if ws.get_collider():
-		ws.get_collider().emit_signal("Die")
-	if es.get_collider():
-		es.get_collider().emit_signal("Die")
-	if ns.get_collider():
-		ns.get_collider().emit_signal("Die")
-	if nw.get_collider():
-		nw.get_collider().emit_signal("Die")
-	if ne.get_collider():
-		ne.get_collider().emit_signal("Die")
-	if sw.get_collider():
-		sw.get_collider().emit_signal("Die")
-	if se.get_collider():
-		se.get_collider().emit_signal("Die")
-	if ss.get_collider():
-		ss.get_collider().emit_signal("Die")
+	if get_frame()>1 && get_frame()<6:
+		if ws.get_collider():
+			ws.get_collider().emit_signal("Die")
+		if es.get_collider():
+			es.get_collider().emit_signal("Die")
+		if ns.get_collider():
+			ns.get_collider().emit_signal("Die")
+		if nw.get_collider():
+			nw.get_collider().emit_signal("Die")
+		if ne.get_collider():
+			ne.get_collider().emit_signal("Die")
+		if sw.get_collider():
+			sw.get_collider().emit_signal("Die")
+		if se.get_collider():
+			se.get_collider().emit_signal("Die")
+		if ss.get_collider():
+			ss.get_collider().emit_signal("Die")
 	pass

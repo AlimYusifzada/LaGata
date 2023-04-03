@@ -21,7 +21,7 @@ func _ready():
 	show_Status()
 	BGMusic.volume_db=Global.MusicVol
 	BGMusic.play()
-	if Global.LifesLeft<=0:
+	if Global.LifesLeft<=0 || Global.Level==0:
 		Continue.disabled=true
 	else:
 		Continue.disabled=false

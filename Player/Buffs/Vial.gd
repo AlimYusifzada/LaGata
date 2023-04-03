@@ -25,7 +25,7 @@ func _on_Vial_body_entered(body):
 			if Global.LifesLeft<Global.MaxLifes:
 				Global.LifesLeft+=1
 		Global.Points+=1000
-		$Tween.start()	
+		$Tween.start()
 	pass # Replace with function body.
 
 func _on_Tween_tween_all_completed():

@@ -29,12 +29,15 @@ onready var HeartBeat=$heartbeat
 onready var DblJumpTimer=$DblJumpTimer
 onready var DblJumpInd=$Cam/HUD/HUDPanel/DblJumpTimerInd
 onready var Bleeding=$bleeding
+onready var RollingStaminaDrain=$rollingstaminadrain
 
-enum {JUMP,SIT,WALK,RUN}
-var Animate_Name=["Jump","Sit","Walk","Run"]
+enum {JUMP,SIT,WALK,RUN,ROLL}
+var Animate_Name=["Jump","Sit","Walk","Run","Roll"]
 var velocity=Vector2()
 var Life:bool=true
 var JumpPossible:bool=false
+var RollPossible:bool=true
+var Rolling:bool=false
 var JumpCounter:int=0
 var CoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject:bool=false
@@ -54,7 +57,6 @@ func _ready():
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.3
-	Life=true
 	JumpCounter=Global.DblJumps
 	$Tween.interpolate_property($".",
 	"modulate",
@@ -108,6 +110,10 @@ func CheckMovable(delta):
 	canMoveWest=!(westobj && CheckTWest.get_collider())
 	if eastobj:if "Tile" in eastobj.to_string():canMoveEast=false
 	if westobj:if "Tile" in westobj.to_string():canMoveWest=false
+	if Global.Stamina<=20:
+		RollPossible=false
+	else:
+		RollPossible=true
 	pass
 
 func CheckDeath():
@@ -123,6 +129,11 @@ func CheckDeath():
 	pass
 
 func ChecKbrdRun(delta):
+	if Input.is_action_pressed("ui_roll") && RollPossible:
+		Rolling=true
+		RollingStaminaDrain.start()
+	else:
+		Rolling=false
 	if Input.is_action_just_pressed("ui_shoot"):
 		if Global.Ammo>0:
 			Global.Ammo-=1
@@ -164,18 +175,29 @@ func ChecKbrdRun(delta):
 
 #animation
 func animate():
-	if velocity.y!=0 && !(is_on_floor()||onObject): #jumping
-		PlayerSprite.speed_scale=4
-		PlayerSprite.play(PickAnimation(JUMP))
-	if velocity.x==0 && (is_on_floor()||onObject): #idle
-		PlayerSprite.speed_scale=0.1
-		PlayerSprite.play(PickAnimation(SIT))
-	elif abs(velocity.x)<=SPEED && (is_on_floor()||onObject): #walk
-		PlayerSprite.speed_scale=2
-		PlayerSprite.play(PickAnimation(WALK))
-	elif abs(velocity.x)>SPEED && (is_on_floor()||onObject): #run
-		PlayerSprite.speed_scale=3
-		PlayerSprite.play(PickAnimation(RUN))
+	if Rolling:
+		PlayerSprite.play(PickAnimation(ROLL))
+		PlayerSprite.rotate(10)
+		set_collision_layer_bit(Global.PLAYER,false)
+		set_collision_mask_bit(Global.ENEMY,false)
+		set_collision_mask_bit(Global.PRAY,false)
+	else:
+		set_collision_layer_bit(Global.PLAYER,true)
+		set_collision_mask_bit(Global.ENEMY,true)
+		set_collision_mask_bit(Global.PRAY,true)
+		PlayerSprite.set_rotation(0)
+		if velocity.y!=0 && !(is_on_floor()||onObject): #jumping
+			PlayerSprite.speed_scale=4
+			PlayerSprite.play(PickAnimation(JUMP))
+		if velocity.x==0 && (is_on_floor()||onObject): #idle
+			PlayerSprite.speed_scale=0.1
+			PlayerSprite.play(PickAnimation(SIT))
+		elif abs(velocity.x)<=SPEED && (is_on_floor()||onObject): #walk
+			PlayerSprite.speed_scale=2
+			PlayerSprite.play(PickAnimation(WALK))
+		elif abs(velocity.x)>SPEED && (is_on_floor()||onObject): #run
+			PlayerSprite.speed_scale=3
+			PlayerSprite.play(PickAnimation(RUN))
 	pass
 
 func PickAnimation(an_type=0) -> String: #pick from enum
@@ -261,7 +283,6 @@ func jumpaction(modifier=10): #instant jump
 	JumpCounter-=1
 	pass
 #end of jumping
-
 func _on_Tween_tween_all_completed():
 	Global.LifesLeft-=1
 	Global.PlayerAlive=false #die if trigered by highfall or stamina
@@ -288,4 +309,8 @@ func _on_DblJumpTimer_timeout():
 			Global.DblJumps-=1
 			emit_signal("Message","SUPER JUMPS LEFT: %s"%(Global.DblJumps-1))
 	DblJumpInd.progress=BuffTime
+	pass # Replace with function body.
+
+func _on_rollingstaminadrain_timeout():
+	Global.Stamina-=10
 	pass # Replace with function body.
