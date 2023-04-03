@@ -221,6 +221,7 @@ func _on_Cat_Food(stamina=2):
 	if stamina>0:
 		CollectSound.play()
 	else:
+		RollPossible=false
 		Bleeding.set_emitting(true)
 		Meow.play()
 	if stamina>0:

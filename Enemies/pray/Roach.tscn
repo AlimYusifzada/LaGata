@@ -35,8 +35,9 @@ animations = [ {
 radius = 23.9999
 height = 48.0002
 
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 40, 4 )
+[sub_resource type="CapsuleShape2D" id=29]
+radius = 24.0
+height = 32.0
 
 [sub_resource type="CapsuleShape2D" id=28]
 radius = 15.9999
@@ -57,14 +58,15 @@ collision_layer = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
 rotation = 1.5708
 shape = SubResource( 27 )
+disabled = true
 
 [node name="CatchZone" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CatchZone"]
-position = Vector2( 0, -30 )
-shape = SubResource( 26 )
+rotation = 1.5708
+shape = SubResource( 29 )
 
 [node name="body" type="CollisionShape2D" parent="."]
 rotation = 1.5708
