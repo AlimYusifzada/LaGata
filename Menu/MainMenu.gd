@@ -10,7 +10,6 @@ onready var Continue=$MenuPoint/Continue
 onready var SFXSound=$SFXSound
 onready var MenuPoint=$MenuPoint
 onready var transit=$"/root/Transit"
-export var StartLevel="res://Levels/level0.tscn"
 
 signal OptionsChanged
 
@@ -51,7 +50,7 @@ func show_Status():
 
 func _on_StartNewGame_pressed():
 	Global.PlayerReset()
-	transit.change_scene(StartLevel)
+	transit.change_scene(Global.getLevelScene(1))
 	pass # Replace with function body.
 
 func _on_Exit_pressed():
