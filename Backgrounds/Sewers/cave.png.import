@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bloodpart.png-0f78b18c5b5bb01e96ffa9829577657b.stex"
+path="res://.import/cave.png-208a957881e65c5ec38ae08356bfbc34.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/bloodpart.png"
-dest_files=[ "res://.import/bloodpart.png-0f78b18c5b5bb01e96ffa9829577657b.stex" ]
+source_file="res://Backgrounds/Sewers/cave.png"
+dest_files=[ "res://.import/cave.png-208a957881e65c5ec38ae08356bfbc34.stex" ]
 
 [params]
 

@@ -20,7 +20,7 @@ func _on_Vial_body_entered(body):
 	if body.is_in_group("Cats"):
 		set_collision_mask_bit(Global.PLAYER,false)
 		if VialType==0:
-			body.emit_signal("Food",50)
+			body.emit_signal("Food",100)
 		elif VialType==1:
 			if Global.LifesLeft<Global.MaxLifes:
 				Global.LifesLeft+=1

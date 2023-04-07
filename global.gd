@@ -19,7 +19,7 @@ var Level:int=0 #current level
 var LifesLeft:int
 var PlayerAlive:bool=true #player life status - default true
 var isChild:bool=true #player status (child/adult)
-var Stamina:int	#initial value
+var Stamina=0 setget setStamina, getStamina
 var MiceCatches:int #remove
 var Points:int
 var RecordPoints:int
@@ -36,6 +36,24 @@ var MasterVol=0
 var DblJumps:int
 var MaxDblJumps:int=1
 var MaxLifes:int=7
+
+func setStamina(stam=0):
+	var fl=false
+	if Stamina<100 and (Stamina+stam)>=100:
+		isChild=false
+		fl=true
+	elif (Stamina+stam)<=0:
+		isChild=true
+	if isChild:
+		Stamina+=stam
+	else:
+		Stamina+=stam/3
+	if fl: Stamina=20
+	clamp(Stamina,0,100)
+	pass
+func getStamina()->int:
+	return Stamina
+	pass
 
 func _ready():
 	randomize()

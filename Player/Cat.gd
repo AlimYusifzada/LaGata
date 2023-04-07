@@ -4,7 +4,7 @@ extends KinematicBody2D
 const SPEED=350   	#walking speed
 const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-700
-const KITTEN_MOD=1.5 #jumping modifiyer for kitten
+const KITTEN_MODE=1.5 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
 
@@ -84,7 +84,7 @@ func _process(delta):
 #----------------------------------------
 
 func CheckMovable(delta):
-	#CHAECK FALL and JUMP CONDITION
+	#CHECK FALL and JUMP CONDITION
 	if is_on_floor():
 		velocity.y=0
 		JumpPossible=true
@@ -94,7 +94,7 @@ func CheckMovable(delta):
 	elif is_on_ceiling():
 		velocity.y=1
 		JumpPossible=false
-	else: #in the air
+	else: #in the air or on movable object
 		JumpPossible=JumpCounter>0
 		onObject=LookDown.get_collider() || LookEDown.get_collider() || LookWDown.get_collider()
 		if !onObject:#!LookDown.get_collider() && !LookEDown.get_collider() && !LookWDown.get_collider():
@@ -110,7 +110,7 @@ func CheckMovable(delta):
 	canMoveWest=!(westobj && CheckTWest.get_collider())
 	if eastobj:if "Tile" in eastobj.to_string():canMoveEast=false
 	if westobj:if "Tile" in westobj.to_string():canMoveWest=false
-	if Global.Stamina<=20:
+	if Global.Stamina<=30:
 		RollPossible=false
 	else:
 		RollPossible=true
@@ -196,7 +196,7 @@ func animate():
 			PlayerSprite.speed_scale=2
 			PlayerSprite.play(PickAnimation(WALK))
 		elif abs(velocity.x)>SPEED && (is_on_floor()||onObject): #run
-			PlayerSprite.speed_scale=3
+			PlayerSprite.speed_scale=4
 			PlayerSprite.play(PickAnimation(RUN))
 	pass
 
@@ -225,10 +225,8 @@ func _on_Cat_Food(stamina=2):
 		Bleeding.set_emitting(true)
 		Meow.play()
 	if stamina>0:
-		Global.Points+=stamina*10
-	Global.Stamina+=stamina
-	if Global.Stamina>100:
-		Global.Stamina=100
+		Global.Points+=stamina*3
+	Global.setStamina(stamina)
 	pass
 
 # HUD message handling
@@ -244,7 +242,7 @@ func _on_messagetimer_timeout():
 func ChecKbrdJump():
 	if Input.is_action_just_pressed("ui_up") && JumpPossible:
 		if Global.Stamina>20:
-			Global.Stamina-=1
+			Global.setStamina(-1)
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()
@@ -275,12 +273,12 @@ func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
 	pass
 
-func jumpaction(modifier=10): #instant jump
+func jumpaction(modifier=5): #instant jump
 	JumperTimer.start() # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina-abs(velocity.x/3)-modifier
 	if Global.isChild:
-		velocity.y=velocity.y/KITTEN_MOD 
+		velocity.y=velocity.y/KITTEN_MODE
 	JumpCounter-=1
 	pass
 #end of jumping
@@ -313,5 +311,5 @@ func _on_DblJumpTimer_timeout():
 	pass # Replace with function body.
 
 func _on_rollingstaminadrain_timeout():
-	Global.Stamina-=10
+	Global.setStamina(-15)
 	pass # Replace with function body.
