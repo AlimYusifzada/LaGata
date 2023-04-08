@@ -3,7 +3,7 @@
 extends KinematicBody2D
 const SPEED=350   	#walking speed
 const MAXSPEED=500 	#runing speed
-const JUMP_VELOCITY=-700
+const JUMP_VELOCITY=-750
 const KITTEN_MODE=1.5 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
@@ -56,7 +56,7 @@ func _ready():
 	set_scale(SCALE)
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
-	JumperTimer.wait_time=0.3
+	JumperTimer.wait_time=0.5
 	JumpCounter=Global.DblJumps
 	$Tween.interpolate_property($".",
 	"modulate",

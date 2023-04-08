@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=5]
-[ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=26]
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=27]
 
@@ -13,47 +12,38 @@ script = ExtResource( 27 )
 
 [node name="sky" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 1080 )
 
 [node name="Sprite" type="Sprite" parent="Parx/sky"]
 
 [node name="clouds" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.01, 0.1 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/clouds"]
 
 [node name="far" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.3, 0.3 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/far"]
 
 [node name="mid" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.5, 0.5 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/mid"]
 
-[node name="SpriteB" type="Sprite" parent="Parx/mid"]
-position = Vector2( 0, 1080 )
-
 [node name="close" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.8, 0.8 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/close"]
 
-[node name="SpriteB" type="Sprite" parent="Parx/close"]
-position = Vector2( 0, 1080 )
-
 [node name="same" type="ParallaxLayer" parent="Parx"]
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/same"]
-
-[node name="SpriteB" type="Sprite" parent="Parx/same"]
-position = Vector2( 0, 1080 )
 
 [node name="BackDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 5 )
@@ -75,8 +65,6 @@ format = 1
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Actors" type="Node2D" parent="."]
-
-[node name="Cat" parent="Actors" instance=ExtResource( 11 )]
 
 [node name="StaticObjectsFront" type="Node2D" parent="."]
 

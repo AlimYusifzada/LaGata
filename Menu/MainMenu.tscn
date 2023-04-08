@@ -112,8 +112,9 @@ stream = SubResource( 3 )
 [node name="CatYawDelay" type="Timer" parent="."]
 
 [node name="MenuPoint" type="Control" parent="."]
+margin_top = 4.0
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 604.0
 
 [node name="StartNewGame" type="Button" parent="MenuPoint"]
 margin_left = 320.0

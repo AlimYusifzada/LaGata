@@ -5,8 +5,30 @@
 [ext_resource path="res://BrainTrain/RollTheBall.gd" type="Script" id=4]
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=5]
 
-[node name="PeackLock" type="Node2D"]
+[node name="Lock" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="Parx" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1980, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parx/sky"]
+
+[node name="clouds" type="ParallaxLayer" parent="Parx"]
+position = Vector2( 0.1, 0.1 )
+motion_scale = Vector2( 0.01, 0.1 )
+motion_mirroring = Vector2( 1980, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parx/clouds"]
+
+[node name="far" type="ParallaxLayer" parent="Parx"]
+position = Vector2( 0.2, 0.2 )
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 1980, 0 )
+
+[node name="Sprite" type="Sprite" parent="Parx/far"]
 
 [node name="maze" type="TileMap" parent="."]
 tile_set = ExtResource( 5 )
