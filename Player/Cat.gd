@@ -3,8 +3,8 @@
 extends KinematicBody2D
 const SPEED=350   	#walking speed
 const MAXSPEED=500 	#runing speed
-const JUMP_VELOCITY=-750
-const KITTEN_MODE=1.5 #jumping modifiyer for kitten
+const JUMP_VELOCITY=-700
+const KITTEN_MODE=1.3 #jumping modifiyer for kitten
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
 
@@ -44,7 +44,7 @@ var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
 #var JoystickMove=Vector2()
-var BuffTime:int=30
+var BuffTime:int=15
 
 
 signal Food(stamina)
@@ -215,7 +215,7 @@ func EmitDust():
 	JumpSound.play()
 	pass
 
-func _on_Cat_Food(stamina=2):
+func _on_Cat_Food(stamina=1):
 	Meow.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
 	if stamina>0:
@@ -225,7 +225,7 @@ func _on_Cat_Food(stamina=2):
 		Bleeding.set_emitting(true)
 		Meow.play()
 	if stamina>0:
-		Global.Points+=stamina*3
+		Global.Points+=stamina*10
 	Global.setStamina(stamina)
 	pass
 
@@ -303,7 +303,7 @@ func _on_DblJumpTimer_timeout():
 	if BuffTime>0:
 		DblJumpTimer.start()
 	else:
-		BuffTime=30
+		BuffTime=15
 		if Global.DblJumps>1:
 			Global.DblJumps-=1
 			emit_signal("Message","SUPER JUMPS LEFT: %s"%(Global.DblJumps-1))

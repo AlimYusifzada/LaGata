@@ -20,7 +20,6 @@ func _ready():
 		NextDoor=null
 	else:
 		NextDoor=get_node(NextDoorPath) #or message
-
 		
 	scale=Vector2(1,1)
 	if DoorState==CLOSED:
@@ -61,19 +60,21 @@ func _on_InternalDoor_SetClose():
 	SetDoor(true)
 	DoorState=CLOSED
 	DoorAnimation.set_frame(3)
-	if NextDoor:
-		NextDoor.emit_signal("SetOpen")
 	pass # Replace with function body.
 
 func _on_InternalDoor_SetOpen():
 	SetDoor(false)
 	DoorState=OPEN
 	DoorAnimation.set_frame(0)
-	if NextDoor:
-		NextDoor.emit_signal("SetClose")
 	pass # Replace with function body.
 
 func SetDoor(status):
+	if status:
+		if NextDoor:
+			NextDoor.emit_signal("SetClose")
+	else:
+		if NextDoor:
+			NextDoor.emit_signal("SetOpen")
 	set_collision_layer_bit(Global.GROUND,status)
 	set_collision_mask_bit(Global.PLAYER,status)
 	set_collision_mask_bit(Global.PRAY,status)
