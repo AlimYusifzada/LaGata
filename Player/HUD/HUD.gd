@@ -25,6 +25,7 @@ signal UpdateHUD
 var Praystot=0
 
 func _ready():
+	set_visible(true)
 	Global.loadGameOptions()
 	BackgroundMusic.volume_db=Global.MusicVol
 	BackgroundMusic.play()

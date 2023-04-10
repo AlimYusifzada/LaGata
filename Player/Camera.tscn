@@ -8,6 +8,7 @@ current = true
 smoothing_enabled = true
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="BGM" type="AudioStreamPlayer" parent="HUD"]
 stream = ExtResource( 2 )
