@@ -6,7 +6,7 @@ const height=1080
 func _ready():
 #	Global.PlayerReset()
 	if Global.getLockScene(Global.Level)=='':
-		print("lock interscene not found")
+		print("interscene file not found!")
 	pass
 
 func _process(delta):

@@ -27,7 +27,7 @@ func _process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Cats"):
 		body.emit_signal("Jump",10)
-		body.emit_signal("Message","crow jump!")
+#		body.emit_signal("Message","crow jump!")
 		Feathers.position=$Crow.position
 		Feathers.set_emitting(true)
 		Scream.volume_db=Global.SFXVol

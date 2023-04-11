@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Common/DoorsKeysMsg/OpenCloseMsg/OpenCloseMsg.gd" type="Script" id=1]
+
+[node name="OpenCloseMsg" type="Node"]
+script = ExtResource( 1 )
+
+[connection signal="SetClose" from="." to="." method="_on_Node_SetClose"]
+[connection signal="SetOpen" from="." to="." method="_on_Node_SetOpen"]

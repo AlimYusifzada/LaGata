@@ -3,7 +3,7 @@ extends KinematicBody2D
 var RoachSpeed=0.0
 var velocity=Vector2(0,0)
 var SCALE=Vector2(.5,.5)
-const Cloud=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const Cloud=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 onready var wizz=$wizz
 onready var roachSprite=$AnimatedSprite
 onready var removeTimer=$Timer

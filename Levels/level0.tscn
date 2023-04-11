@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=5]
 [ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=26]
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=27]
@@ -17,7 +18,7 @@ motion_mirroring = Vector2( 1920, 1080 )
 [node name="Sprite" type="Sprite" parent="Parx/sky"]
 
 [node name="clouds" type="ParallaxLayer" parent="Parx"]
-motion_scale = Vector2( 0.01, 0.1 )
+motion_scale = Vector2( 0.1, 0.1 )
 motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Sprite" type="Sprite" parent="Parx/clouds"]
@@ -49,7 +50,15 @@ motion_mirroring = Vector2( 1920, 0 )
 tile_set = ExtResource( 5 )
 format = 1
 
-[node name="Ground" type="TileMap" parent="." groups=["Wall"]]
+[node name="32xPlatform" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Ground" type="TileMap" parent="."]
 tile_set = ExtResource( 26 )
 compatibility_mode = true
 collision_layer = 2

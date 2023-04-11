@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://BrainTrain/Ball.tscn" type="PackedScene" id=1]
-[ext_resource path="res://BrainTrain/Box.tscn" type="PackedScene" id=2]
-[ext_resource path="res://BrainTrain/RollTheBall.gd" type="Script" id=4]
+[ext_resource path="res://MiniGames/Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MiniGames/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://MiniGames/RollTheBall.gd" type="Script" id=4]
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=5]
 
 [node name="Lock" type="Node2D"]
@@ -12,21 +12,21 @@ script = ExtResource( 4 )
 
 [node name="sky" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0, 0 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 1080 )
 
 [node name="Sprite" type="Sprite" parent="Parx/sky"]
 
 [node name="clouds" type="ParallaxLayer" parent="Parx"]
 position = Vector2( 0.1, 0.1 )
-motion_scale = Vector2( 0.01, 0.1 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 1920, 1080 )
 
 [node name="Sprite" type="Sprite" parent="Parx/clouds"]
 
 [node name="far" type="ParallaxLayer" parent="Parx"]
 position = Vector2( 0.2, 0.2 )
 motion_scale = Vector2( 0.3, 0.3 )
-motion_mirroring = Vector2( 1980, 0 )
+motion_mirroring = Vector2( 1920, 1080 )
 
 [node name="Sprite" type="Sprite" parent="Parx/far"]
 
