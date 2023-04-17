@@ -15,7 +15,7 @@ onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExpl=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)

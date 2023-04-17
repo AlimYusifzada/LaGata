@@ -3,7 +3,8 @@ onready var transit=$"/root/Transit"
 
 func _ready():
 	if !Global.getLockScene(Global.Level):
-		print("peacklock not exist")
+		print("there should be a file lock#.tscn")
+		print("if you are at level1.tscn -> lock1.tscn")
 		queue_free()
 	pass
 

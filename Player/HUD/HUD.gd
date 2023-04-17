@@ -51,13 +51,13 @@ func _on_CanvasLayer_UpdateHUD():
 		$HUDPanel/DblJumpTimerInd.visible=true
 	else:
 		$HUDPanel/DblJumpTimerInd.visible=false
-		
+
 	LifeBar.bar_color=Color(range_lerp(Global.LifesLeft,1,7,1,0),
 						  range_lerp(Global.LifesLeft,1,7,0,1),0)
-	LifeBar.set_progress(Global.LifesLeft)
+	LifeBar.set_progress(clamp(Global.LifesLeft,0,7))
 	
 	StaminaBar.bar_color=Color(0,range_lerp(Global.Stamina,0,100,1,0),1)
-	StaminaBar.set_progress(Global.Stamina)
+	StaminaBar.set_progress(clamp(Global.Stamina,0,100))
 
 	PointsCounter.text=str(Global.Points)
 	KeysCounter.text=str(Global.KeysRing[0])

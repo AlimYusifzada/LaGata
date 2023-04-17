@@ -186,9 +186,9 @@ text = "points"
 
 [node name="LRecord" type="Label" parent="MenuPoint/Continue"]
 margin_left = 29.0
-margin_top = 208.0
+margin_top = 228.0
 margin_right = 69.0
-margin_bottom = 241.0
+margin_bottom = 261.0
 theme = ExtResource( 44 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
 

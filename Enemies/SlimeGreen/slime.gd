@@ -12,7 +12,7 @@ onready var XenAnimation=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 #onready var WallOnSouth=$RayCastSouth
-const BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExplosion=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 
 signal Die
 

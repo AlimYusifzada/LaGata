@@ -58,11 +58,13 @@ func _ready():
 	PlayerSprite.playing=true
 	JumperTimer.wait_time=0.5
 	JumpCounter=Global.DblJumps
+	
 	$Tween.interpolate_property($".",
 	"modulate",
 	Color(1,1,1,1),
 	Color(1,1,1,0),1,
 	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	
 	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #----------------------------------------
@@ -120,7 +122,7 @@ func CheckDeath():
 	HeartBeat.volume_db=Global.SFXVol
 	if Global.Stamina<10 && !HeartBeat.playing:
 		HeartBeat.play()
-		emit_signal("Message","YOU CAN DIE SOON")
+		emit_signal("Message","be careful")
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
 	if Global.Stamina<=0 || velocity.y>Global.TerminateVelocity || !Life:
@@ -219,20 +221,22 @@ func _on_Cat_Food(stamina=1):
 	Meow.volume_db=Global.SFXVol
 	CollectSound.volume_db=Global.SFXVol
 	if stamina>0:
+		var oldVal=Global.Points
 		CollectSound.play()
+		Global.Points+=stamina*10
+#		if (Global.Points-oldVal)>10:
+#			emit_signal("Message",str(Global.Points))
 	else:
 		RollPossible=false
 		Bleeding.set_emitting(true)
 		Meow.play()
-	if stamina>0:
-		Global.Points+=stamina*10
 	Global.setStamina(stamina)
 	pass
 
 # HUD message handling
-func _on_Cat_Message(message):
+func _on_Cat_Message(message,msgtime=3):
 	Message.text=str(message)
-	MessageTimer.start(10)
+	MessageTimer.start(msgtime)
 	pass
 func _on_messagetimer_timeout():
 	Message.text=""
@@ -282,11 +286,6 @@ func jumpaction(modifier=5): #instant jump
 	JumpCounter-=1
 	pass
 #end of jumping
-func _on_Tween_tween_all_completed():
-	Global.LifesLeft-=1
-	Global.PlayerAlive=false #die if trigered by highfall or stamina
-	Global.saveGameState()
-	queue_free()
 
 func _on_Cat_Die():
 	Bleeding.set_emitting(true)
@@ -306,10 +305,18 @@ func _on_DblJumpTimer_timeout():
 		BuffTime=15
 		if Global.DblJumps>1:
 			Global.DblJumps-=1
-			emit_signal("Message","SUPER JUMPS LEFT: %s"%(Global.DblJumps-1))
+			emit_signal("Message","kangaroo %s jump(s) left"%(Global.DblJumps-1))
 	DblJumpInd.progress=BuffTime
 	pass # Replace with function body.
 
 func _on_rollingstaminadrain_timeout():
 	Global.setStamina(-15)
 	pass # Replace with function body.
+
+func _on_Tween_tween_completed(object, key):
+	Global.LifesLeft-=1
+	Global.PlayerAlive=false #die if trigered by highfall or stamina
+	Global.saveGameState()
+	queue_free()
+	pass # Replace with function body.
+

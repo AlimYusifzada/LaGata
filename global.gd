@@ -37,6 +37,10 @@ var DblJumps:int
 var MaxDblJumps:int=1
 var MaxLifes:int=7
 
+func getPlayer()->Node:
+	return get_tree().get_nodes_in_group("Cats")[0]
+	pass
+
 func setStamina(stam=0):
 	var fl=false
 	if Stamina<100 and (Stamina+stam)>=100:

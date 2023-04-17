@@ -17,7 +17,7 @@ onready var Voice=$Voice
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSuth
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+onready var BloodExpl=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 onready var DustCloud=preload("res://Common/JumpDust.tscn")
 signal Die
 

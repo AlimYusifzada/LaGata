@@ -4,7 +4,7 @@ extends KinematicBody2D
 
 
 const ARROW=preload("res://Enemies/arrow/arrow.tscn")
-const BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExpl=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 export var MINSPEED=100.0
 export var JUMP_VELOCITY=-600
 const SCALE=Vector2(2,2)

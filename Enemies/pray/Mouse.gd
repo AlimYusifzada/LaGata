@@ -17,7 +17,7 @@ onready var MouseSprite=$AnimatedSprite
 onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
-onready var BloodExpl=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+onready var BloodExpl=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 
 signal Die
 

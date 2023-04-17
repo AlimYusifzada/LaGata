@@ -12,7 +12,7 @@ onready var WallOnWest=$RayCastWest
 onready var WallOnEast=$RayCastEast
 onready var WallOnSouth=$RayCastSouth
 export var JumpOffProb=0.1
-const BloodExplosion=preload("res://Common/64xt/BloodExplosion/BloodExplosion.tscn")
+const BloodExplosion=preload("res://Common/BloodExplosion/BloodExplosion.tscn")
 signal Die
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -83,5 +83,7 @@ func Kill():
 	pass
 
 func _on_oranjeslime_Die():
+	#maintain life change
+	#if life <=0 call Kill()
 	Kill()
 	pass # Replace with function body.
