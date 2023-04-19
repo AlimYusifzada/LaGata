@@ -244,7 +244,7 @@ func _on_messagetimer_timeout():
 
 #jumping functions
 func ChecKbrdJump():
-	if Input.is_action_just_pressed("ui_up") && JumpPossible:
+	if Input.is_action_just_pressed("ui_jump") && JumpPossible:
 		if Global.Stamina>20:
 			Global.setStamina(-0.5)
 		if !is_on_floor():
