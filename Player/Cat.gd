@@ -56,7 +56,7 @@ func _ready():
 	set_scale(SCALE)
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
-	JumperTimer.wait_time=0.5
+#	JumperTimer.wait_time=0.5
 	JumpCounter=Global.DblJumps
 	
 	$Tween.interpolate_property($".",
@@ -252,7 +252,7 @@ func ChecKbrdJump():
 		jumpaction()
 	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
 		set_collision_mask_bit(Global.PLATFORM,false)
-		JumperTimer.start()
+		JumperTimer.start(0.2)
 	if DblJumpTimer.is_stopped() && Global.DblJumps>1:
 		DblJumpTimer.start()
 	pass
@@ -278,7 +278,7 @@ func _on_jumptimer_timeout():
 	pass
 
 func jumpaction(modifier=5): #instant jump
-	JumperTimer.start() # start timer to go throgh platforms
+	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina-abs(velocity.x/3)-modifier
 	if Global.isChild:
@@ -294,6 +294,7 @@ func _on_Cat_Die():
 	set_collision_layer_bit(Global.PLAYER,false)
 	set_collision_mask_bit(Global.PRAY,false)
 	set_collision_mask_bit(Global.ENEMY,false)
+	Global.isChild=true
 	Life=false #die
 	pass # Replace with function body.
 

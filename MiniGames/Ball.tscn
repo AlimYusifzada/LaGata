@@ -18,3 +18,8 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[connection signal="Message" from="." to="." method="_on_Ball_Message"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]

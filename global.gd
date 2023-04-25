@@ -15,11 +15,11 @@ enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY}
 const UP=Vector2(0,-1)
 enum{Ykey,Gkey,Bkey} #Yellow,Green,Black keys index
 var KeysRing=[0,0,0] #Yellow,Green,Black keys array
-var Level:int=0 #current level
+var Level:int=1 #current level
 var LifesLeft:int
 var PlayerAlive:bool=true #player life status - default true
 var isChild:bool=true #player status (child/adult)
-var Stamina=0 setget setStamina, getStamina
+var Stamina=20 setget setStamina, getStamina
 var MiceCatches:int #remove
 var Points:int
 var RecordPoints:int
@@ -62,19 +62,10 @@ func getStamina()->int:
 func _ready():
 	randomize()
 	loadGameOptions()
-#	PlayerReset()
-
-#func _get_Enemies():
-#	# get all enemies on the level and return as dictionary
-#	var EnemiesDick={}
-#	for enemy in get_tree().get_nodes_in_group("Enemies"):
-#		var eny=enemy.get_name()+str(enemy.get_index())
-#		EnemiesDick.merge({eny:true})
-#	return EnemiesDick
 
 func PlayerReset():
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
-	Level=0 #current level
+	Level=1 #current level
 	LifesLeft=int(MaxLifes/2)
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change

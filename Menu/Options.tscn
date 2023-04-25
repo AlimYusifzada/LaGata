@@ -59,9 +59,10 @@ margin_bottom = 38.0
 text = "rifgt"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelR" instance=ExtResource( 5 )]
-margin_left = 80.0
-margin_right = 92.0
-margin_bottom = 39.0
+margin_left = 112.0
+margin_top = -1.0
+margin_right = 124.0
+margin_bottom = 38.0
 action = "ui_runright"
 
 [node name="LabelL" type="Label" parent="window/TabContainer/Control"]
@@ -72,8 +73,8 @@ margin_bottom = 83.0
 text = "left"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelL" instance=ExtResource( 5 )]
-margin_left = 80.0
-margin_right = 92.0
+margin_left = 112.0
+margin_right = 124.0
 margin_bottom = 39.0
 action = "ui_runleft"
 
@@ -82,11 +83,11 @@ margin_left = 16.0
 margin_top = 94.0
 margin_right = 88.0
 margin_bottom = 127.0
-text = "jump"
+text = "up/jump"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelJ" instance=ExtResource( 5 )]
-margin_left = 80.0
-margin_right = 92.0
+margin_left = 112.0
+margin_right = 124.0
 margin_bottom = 39.0
 action = "ui_jump"
 
@@ -122,11 +123,11 @@ margin_left = 16.0
 margin_top = 141.0
 margin_right = 85.0
 margin_bottom = 174.0
-text = "down"
+text = "down/slip"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelD" instance=ExtResource( 5 )]
-margin_left = 80.0
-margin_right = 92.0
+margin_left = 112.0
+margin_right = 124.0
 margin_bottom = 39.0
 action = "ui_down"
 
@@ -253,6 +254,7 @@ stream = ExtResource( 3 )
 stream = ExtResource( 4 )
 
 [connection signal="item_selected" from="window/TabContainer/Control/playmode/ChildOptions" to="." method="_on_ChildOptions_item_selected"]
+[connection signal="mouse_entered" from="window/TabContainer/Control/LabelR" to="." method="_on_LabelR_mouse_entered"]
 [connection signal="value_changed" from="window/TabContainer/Sound/MusicVol" to="." method="_on_MusicVol_value_changed"]
 [connection signal="value_changed" from="window/TabContainer/Sound/SFXVol" to="." method="_on_SFXVol_value_changed"]
 [connection signal="item_selected" from="window/TabContainer/Graphics/Label/ViewOptions" to="." method="_on_ViewOptions_item_selected"]

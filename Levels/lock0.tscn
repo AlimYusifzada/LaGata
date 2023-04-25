@@ -5,7 +5,7 @@
 [ext_resource path="res://MiniGames/RollTheBall.gd" type="Script" id=4]
 [ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=5]
 
-[node name="Lock" type="Node2D"]
+[node name="lock" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Parx" type="ParallaxBackground" parent="."]

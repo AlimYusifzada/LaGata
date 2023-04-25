@@ -4,7 +4,7 @@ onready var transit=$"/root/Transit"
 signal Failed
 signal Success
 export var NextLevel=1
-export var CurrentLevel=0
+export var CurrentLevel=1
 
 
 # Called when the node enters the scene tree for the first time.

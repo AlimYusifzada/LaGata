@@ -24,7 +24,7 @@ func _ready():
 		Continue.disabled=true
 	else:
 		Continue.disabled=false
-	$MenuPoint/Continue/LRecord.text="record: "+str(Global.RecordPoints)
+	$MenuPoint/Continue/LRecord.text="last record: "+str(Global.RecordPoints)
 	pass
 
 func _process(delta):

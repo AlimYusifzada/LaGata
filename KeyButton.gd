@@ -1,6 +1,7 @@
 extends Button
 
 export var action: String = "ui_up"
+onready var originalMod=modulate
 
 func _ready():
 	assert(InputMap.has_action(action))
@@ -37,3 +38,4 @@ func remap_action_to(event):
 func display_current_key():
 	var current_key = InputMap.get_action_list(action)[0].as_text()
 	text = "%s" % current_key
+

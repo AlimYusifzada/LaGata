@@ -74,3 +74,4 @@ func _on_ChildOptions_item_selected(index):
 			Global.isChild=false
 		1:
 			Global.isChild=true
+
