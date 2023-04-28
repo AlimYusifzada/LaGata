@@ -117,8 +117,8 @@ func CheckMovable(delta):
 	pass
 
 func CheckDeath():
-	HeartBeat.volume_db=Global.SFXVol
 	if Global.Stamina<10 && !HeartBeat.playing:
+		HeartBeat.volume_db=Global.SFXVol
 		HeartBeat.play()
 		emit_signal("Message","be careful")
 	elif Global.Stamina>=10:
@@ -126,52 +126,69 @@ func CheckDeath():
 	if Global.Stamina<=0 || velocity.y>Global.TerminateVelocity || !Life:
 		set_physics_process(false)
 		$Tween.start()
-	pass
 
-func ChecKbrdRun(delta):
-	if Input.is_action_pressed("ui_roll") && RollPossible:
+func i_slip():
+	if JumpPossible:
+		set_collision_mask_bit(Global.PLATFORM,false)
+		JumperTimer.start(0.2)
+func i_jump():
+	if JumpPossible:
+		if Global.Stamina>20:
+			Global.setStamina(-0.5)
+		if !is_on_floor():
+			EmitDust()
+		jumpaction()
+func i_roll():
+	if RollPossible:
 		Rolling=true
 		RollingStaminaDrain.start()
 	else:
 		Rolling=false
-	if Input.is_action_just_pressed("ui_shoot"):
-		if Global.Ammo>0:
-			Global.Ammo-=1
-			var flroach=FLROACH.instance()
-			flroach.position=position
-			if PlayerSprite.is_flipped_h():
-				flroach.RoachSpeed=MAXSPEED
-			else:
-				flroach.RoachSpeed=-MAXSPEED
-			get_parent().add_child(flroach)
+func i_shoot():
+	if Global.Ammo>0:
+		Global.Ammo-=1
+		var flroach=FLROACH.instance()
+		flroach.position=position
+		if PlayerSprite.is_flipped_h():
+			flroach.RoachSpeed=MAXSPEED
 		else:
-			Global.Ammo=0
-	if Input.is_action_pressed("ui_runright") && canMoveEast:#and not Input.is_action_just_pressed("ui_runright"):
+			flroach.RoachSpeed=-MAXSPEED
+		get_parent().add_child(flroach)
+	else:
+		Global.Ammo=0
+func i_runright(delta):
+	if canMoveEast:
 		if velocity.x<MAXSPEED:
 			velocity.x+=MAXSPEED*delta
 		else:
 			velocity.x=MAXSPEED
-		PlayerSprite.flip_h=true #face right
-	elif Input.is_action_pressed("ui_runleft") && canMoveWest:#and not Input.is_action_just_pressed("ui_runright"):
+	PlayerSprite.flip_h=true #face right
+func i_runleft(delta):
+	if canMoveWest:
 		if velocity.x>-MAXSPEED:
 			velocity.x-=MAXSPEED*delta
 		else:
 			velocity.x=-MAXSPEED
-		PlayerSprite.flip_h=false #face left
-	else: #inertia calc - buttons released
-		if velocity.x>0 && !canMoveEast:
+	PlayerSprite.flip_h=false #face left
+func i_inertia(delta):
+	if velocity.x>0 && !canMoveEast:
+		velocity.x=0
+	if velocity.x<0 && !canMoveWest:
+		velocity.x=0
+	if velocity.x>0 && canMoveEast:
+		velocity.x-=MAXSPEED*delta*2
+		if velocity.x<0:
 			velocity.x=0
-		if velocity.x<0 && !canMoveWest:
+	if velocity.x<0 && canMoveWest:
+		velocity.x+=MAXSPEED*delta*2
+		if velocity.x>0:
 			velocity.x=0
-		if velocity.x>0 && canMoveEast:
-			velocity.x-=MAXSPEED*delta*2
-			if velocity.x<0:
-				velocity.x=0
-		if velocity.x<0 && canMoveWest:
-			velocity.x+=MAXSPEED*delta*2
-			if velocity.x>0:
-				velocity.x=0
-	pass
+func ChecKbrdRun(delta):
+	if Input.is_action_just_pressed("ui_shoot"): i_shoot()
+	elif Input.is_action_pressed("ui_roll"): i_roll()
+	elif Input.is_action_pressed("ui_runright"): i_runright(delta)
+	elif Input.is_action_pressed("ui_runleft"):	i_runleft(delta)
+	else: i_inertia(delta)
 
 #animation
 func animate():
@@ -215,16 +232,16 @@ func EmitDust():
 	JumpSound.play()
 	pass
 
-func _on_Cat_Food(stamina=1):
-	Meow.volume_db=Global.SFXVol
-	CollectSound.volume_db=Global.SFXVol
+func _on_Cat_Food(stamina=1): #kill, eat or catch someting also call on non lethal hit
 	if stamina>0:
 		var oldVal=Global.Points
+		CollectSound.volume_db=Global.SFXVol
 		CollectSound.play()
 		Global.Points+=stamina*10
 	else:
-		RollPossible=false
+#		RollPossible=false
 		Bleeding.set_emitting(true)
+		Meow.volume_db=Global.SFXVol
 		Meow.play()
 	Global.setStamina(stamina)
 	pass
@@ -240,15 +257,10 @@ func _on_messagetimer_timeout():
 
 #jumping functions
 func ChecKbrdJump():
-	if Input.is_action_just_pressed("ui_jump") && JumpPossible:
-		if Global.Stamina>20:
-			Global.setStamina(-0.5)
-		if !is_on_floor():
-			EmitDust()
-		jumpaction()
-	elif Input.is_action_just_pressed("ui_down") && is_on_floor():
-		set_collision_mask_bit(Global.PLATFORM,false)
-		JumperTimer.start(0.2)
+	if Input.is_action_just_pressed("ui_jump"):# && JumpPossible:
+		i_jump()
+	elif Input.is_action_just_pressed("ui_down"):# && JumpPossible:
+		i_slip()
 	if DblJumpTimer.is_stopped() && Global.DblJumps>1:
 		DblJumpTimer.start()
 	pass
@@ -258,13 +270,11 @@ func CoyoteTimeCheck():
 		CoyoteTimer.start(CoyoteTime)
 	elif is_on_floor():
 		CoyoteTimer.stop()
-		JumpPossible=true
 
 func _on_koyotetimer_timeout():
 	JumpPossible=false
 	pass # Replace with function body.
-
-func _on_Cat_Jump(power): # signal
+func _on_Cat_Jump(power): # unconditional jump signal
 	jumpaction(power)
 	EmitDust()
 	pass # Replace with function body.
@@ -272,8 +282,7 @@ func _on_Cat_Jump(power): # signal
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
 	pass
-
-func jumpaction(modifier=5): #instant jump
+func jumpaction(modifier=5): #unconditional jump
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina-abs(velocity.x/3)-modifier
@@ -307,7 +316,7 @@ func _on_DblJumpTimer_timeout():
 	pass # Replace with function body.
 
 func _on_rollingstaminadrain_timeout():
-	Global.setStamina(-15)
+	Global.setStamina(-10)
 	pass # Replace with function body.
 
 func _on_Tween_tween_completed(object, key):
