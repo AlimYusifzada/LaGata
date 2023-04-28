@@ -49,7 +49,7 @@ texture = ExtResource( 10 )
 motion_scale = Vector2( 0.3, 0.3 )
 motion_mirroring = Vector2( 1920, 0 )
 
-[node name="Sprite" type="Sprite" parent="Parx/far"]
+[node name="Sprite2" type="Sprite" parent="Parx/far"]
 texture = ExtResource( 15 )
 
 [node name="mid" type="ParallaxLayer" parent="Parx"]
@@ -72,8 +72,6 @@ texture = ExtResource( 16 )
 
 [node name="same" type="ParallaxLayer" parent="Parx"]
 motion_mirroring = Vector2( 1920, 0 )
-
-[node name="Sprite" type="Sprite" parent="Parx/same"]
 
 [node name="BackDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
