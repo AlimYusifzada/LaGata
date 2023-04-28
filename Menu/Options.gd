@@ -5,16 +5,18 @@ onready var BGM:AudioStreamPlayer=$BGM
 onready var musicscr=$window/TabContainer/Sound/MusicVol
 onready var sfxscr=$window/TabContainer/Sound/SFXVol
 onready var rev=$window/TabContainer/About/revision
+onready var res=$window/TabContainer/Graphics/res
 onready var ViewOptions=$window/TabContainer/Graphics/Label/ViewOptions
 #onready var ChildOptions=$window/TabContainer/Control/Label2/ChildOptions
 onready var transit=$"/root/Transit"
 var Size=Vector2()
 
 func _ready():
-	scale=Vector2(1.5,1.5)
+#	scale=Vector2(1.5,1.5)
 	Global.loadGameOptions()
 	Global.loadGameState()
-	rev.text=str(OS.window_size)
+	res.text=str(OS.window_size)
+	rev.text=Global.revision
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
 	sfxscr.set_value(Global.SFXVol)

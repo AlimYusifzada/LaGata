@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.1"
+const revision="0.1.0"
 
 const main_menu="res://MainMenu.tscn"
 

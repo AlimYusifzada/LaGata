@@ -12,6 +12,18 @@ onready var transit=$"/root/Transit"
 
 signal OptionsChanged
 
+var hintmessage=[
+	"more stamina, stronger jumps",
+	"adult cats gain less stamina",
+	"kittens are weak, and jump low",
+	"if stamina bar be fullfilled kitten become a cat",
+	"cat become kitten, if she die",
+	"all cats can have seven lifes, maximum",
+	"roachers nasty but can help shoot monsters",
+	"rats are dangerous",
+	"every door need a key"
+]
+
 func _ready():
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
@@ -23,14 +35,13 @@ func _ready():
 		Continue.disabled=true
 	else:
 		Continue.disabled=false
-	pass
+	$MenuPoint/hint.text=hintmessage[randi()%hintmessage.size()]
 
 func _process(delta):
 	var eyep=get_parent().get_viewport().size.x/2
 	var rect_scale=get_parent().get_viewport().size/(get_parent().get_viewport().size/1.2)
 	var calcPos=Vector2(get_parent().get_viewport().size.x/2-eyep/2,0)
-	$MenuPoint.set("rect_scale",rect_scale)
-	$MenuPoint.set("rect_position",calcPos)
+	$MenuPoint.set("position",calcPos)
 	$MenuPoint/Continue/LRecord.text="last record: "+str(Global.RecordPoints)
 	var eye_position=get_global_mouse_position().x-eyep
 	if !CatYawAnimation.playing:
@@ -78,6 +89,7 @@ func _on_CatYawDelay_timeout():
 func _on_CatYaw_animation_finished():
 	CatYawAnimation.stop()
 	CatYawDelay.start(rand_range(3.0,15.0))
+	$MenuPoint/hint.text=hintmessage[randi()%hintmessage.size()]
 	pass # Replace with function body.
 
 func _on_Options_pressed():

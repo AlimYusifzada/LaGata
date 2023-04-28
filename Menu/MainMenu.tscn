@@ -113,28 +113,26 @@ stream = SubResource( 3 )
 
 [node name="CatYawDelay" type="Timer" parent="."]
 
-[node name="MenuPoint" type="ColorRect" parent="."]
-color = Color( 1, 1, 1, 0 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="MenuPoint"]
+[node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="sky" type="ParallaxLayer" parent="MenuPoint/ParallaxBackground"]
-
-[node name="Sky4" type="Sprite" parent="MenuPoint/ParallaxBackground/sky"]
+[node name="Sky4" type="Sprite" parent="ParallaxBackground/sky"]
 position = Vector2( 960, 544 )
 texture = ExtResource( 61 )
 
-[node name="clouds" type="ParallaxLayer" parent="MenuPoint/ParallaxBackground"]
+[node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Cloud8" type="Sprite" parent="MenuPoint/ParallaxBackground/clouds"]
+[node name="Cloud8" type="Sprite" parent="ParallaxBackground/clouds"]
 position = Vector2( 960, 544 )
 texture = ExtResource( 62 )
 
+[node name="MenuPoint" type="Node2D" parent="."]
+
 [node name="StartNewGame" type="Button" parent="MenuPoint"]
-margin_left = 32.0
-margin_top = 216.0
-margin_right = 283.0
-margin_bottom = 280.0
+margin_top = 200.0
+margin_right = 251.0
+margin_bottom = 264.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -148,10 +146,10 @@ flat = true
 [node name="Continue" type="Button" parent="MenuPoint"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 288.0
-margin_top = 216.0
-margin_right = 499.0
-margin_bottom = 280.0
+margin_left = 256.0
+margin_top = 200.0
+margin_right = 467.0
+margin_bottom = 264.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -200,19 +198,20 @@ text = "points"
 
 [node name="LRecord" type="Label" parent="MenuPoint/Continue"]
 margin_left = 29.0
-margin_top = 228.0
-margin_right = 69.0
-margin_bottom = 261.0
+margin_top = 208.0
+margin_right = 119.0
+margin_bottom = 241.0
 theme = ExtResource( 44 )
 custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+text = "record"
 
 [node name="Options" type="Button" parent="MenuPoint"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 80.0
-margin_top = 272.0
-margin_right = 256.0
-margin_bottom = 336.0
+margin_left = 48.0
+margin_top = 256.0
+margin_right = 224.0
+margin_bottom = 320.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -226,10 +225,10 @@ flat = true
 [node name="Exit" type="Button" parent="MenuPoint"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 112.0
-margin_top = 336.0
-margin_right = 212.0
-margin_bottom = 400.0
+margin_left = 80.0
+margin_top = 320.0
+margin_right = 180.0
+margin_bottom = 384.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 1, 0.501961, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -241,14 +240,21 @@ text = "Exit"
 flat = true
 
 [node name="message" type="Label" parent="MenuPoint"]
-margin_left = 49.0
-margin_top = 45.0
-margin_right = 89.0
-margin_bottom = 78.0
+margin_left = 17.0
+margin_top = 29.0
+margin_right = 57.0
+margin_bottom = 62.0
 theme = ExtResource( 44 )
 
+[node name="hint" type="Label" parent="MenuPoint"]
+margin_top = 448.0
+margin_right = 154.0
+margin_bottom = 481.0
+theme = ExtResource( 44 )
+text = "random hint"
+
 [node name="CatYaw" type="AnimatedSprite" parent="MenuPoint"]
-position = Vector2( 368, 200 )
+position = Vector2( 336, 184 )
 frames = SubResource( 2 )
 speed_scale = 2.0
 
