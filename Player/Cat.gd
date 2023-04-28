@@ -43,7 +43,6 @@ var CoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double j
 var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
-#var JoystickMove=Vector2()
 var BuffTime:int=15
 
 
@@ -56,7 +55,6 @@ func _ready():
 	set_scale(SCALE)
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
-#	JumperTimer.wait_time=0.5
 	JumpCounter=Global.DblJumps
 	
 	$Tween.interpolate_property($".",
@@ -224,8 +222,6 @@ func _on_Cat_Food(stamina=1):
 		var oldVal=Global.Points
 		CollectSound.play()
 		Global.Points+=stamina*10
-#		if (Global.Points-oldVal)>10:
-#			emit_signal("Message",str(Global.Points))
 	else:
 		RollPossible=false
 		Bleeding.set_emitting(true)
