@@ -16,12 +16,14 @@ var hintmessage=[
 	"more stamina, stronger jumps",
 	"adult cats gain less stamina",
 	"kittens are weak, and jump low",
-	"if stamina bar be fullfilled kitten become a cat",
+	"if stamina bar fullfilled, kitten become a cat",
 	"cat become kitten, if she die",
-	"all cats can have seven lifes, maximum",
-	"roachers nasty but can help shoot monsters",
+	"all cats can have seven lifes,... maximum",
+	"roachers nasty, but can help shoot monsters down",
 	"rats are dangerous",
-	"every door need a key"
+	"every door need a key",
+	"rolling is good for avoiding threats but drains stamina",
+	"jumping over the enemy is bad idea for kittens"
 ]
 
 func _ready():

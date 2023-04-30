@@ -285,7 +285,7 @@ func _on_jumptimer_timeout():
 func jumpaction(modifier=5): #unconditional jump
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
-	velocity.y=JUMP_VELOCITY-Global.Stamina*1.5-abs(velocity.x/3)-modifier
+	velocity.y=JUMP_VELOCITY-Global.Stamina*2-abs(velocity.x/3)-modifier
 	if Global.isChild:
 		velocity.y=velocity.y/KITTEN_MODE
 	JumpCounter-=1
