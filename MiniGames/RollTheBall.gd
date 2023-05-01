@@ -3,7 +3,7 @@ extends Node2D
 onready var transit=$"/root/Transit"
 signal Failed
 signal Success
-export var NextLevel=1
+export var NextLevel=0
 var CurrentLevel=Global.Level
 
 
@@ -12,11 +12,12 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Failed():
-	transit.change_scene(Global.getLevelScene(Global.Level))
+	transit.change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.
 
 func _on_Success():
 	if NextLevel==0:
+		#replace with final scene
 		transit.change_scene("res://Menu/MainMenu.tscn")
 	else:
 		Global.Level=NextLevel

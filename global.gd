@@ -49,7 +49,7 @@ func setStamina(stam=0):
 	elif (Stamina+stam)<=0:
 		isChild=true
 	if isChild:
-		Stamina+=stam
+		Stamina+=stam/2
 	else:
 		Stamina+=stam/3
 	if fl: Stamina=20

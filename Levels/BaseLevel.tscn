@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
+
+[node name="Level" type="Node2D"]
+position = Vector2( 439, 202 )
+script = ExtResource( 1 )
+
+[node name="Parx" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="clouds" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.01, 0.1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="far" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.2, 0.2 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="mid" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="close" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="same" type="ParallaxLayer" parent="Parx"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="BackDecoration" type="TileMap" parent="."]
+format = 1
+
+[node name="32xPlatform" type="TileMap" parent="."]
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Ground" type="TileMap" parent="." groups=["Wall"]]
+compatibility_mode = true
+collision_layer = 2
+collision_mask = 65
+format = 1
+
+[node name="Coins&Buffs" type="Node2D" parent="."]
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Movables" type="Node2D" parent="."]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="StaticObjectsFront" type="Node2D" parent="."]
+
+[node name="FrontDecoration" type="TileMap" parent="."]
+format = 1
