@@ -62,7 +62,6 @@ func _input(event):
 func paypoints(points=5):
 	if Global.Points>points:
 		Global.Points-=points
-		emit_signal("Message",str(Global.Points))
 	else:
 		Global.Points=0
 		get_parent().emit_signal("Failed")

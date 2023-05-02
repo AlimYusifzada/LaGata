@@ -120,7 +120,6 @@ func CheckDeath():
 	if Global.Stamina<10 && !HeartBeat.playing:
 		HeartBeat.volume_db=Global.SFXVol
 		HeartBeat.play()
-		emit_signal("Message","be careful")
 	elif Global.Stamina>=10:
 		HeartBeat.stop()
 	if Global.Stamina<=0 || velocity.y>Global.TerminateVelocity || !Life:
