@@ -371,8 +371,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=80]
-radius = 30.0
-height = 56.0
+radius = 49.9999
+height = 28.0002
 
 [sub_resource type="Gradient" id=150]
 offsets = PoolRealArray( 0, 0.00214133, 0.508929, 1 )
@@ -391,7 +391,6 @@ animation = "KittenRoll"
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 16 )
 rotation = 1.5708
 shape = SubResource( 80 )
 

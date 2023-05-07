@@ -96,7 +96,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
-max_value = 30
+max_value = 15
 radius = 60
 progress = 30
 thickness = 10

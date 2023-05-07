@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -8,9 +8,11 @@
 [ext_resource path="res://Common/DoorsKeysMsg/InternalDoor/InternalDoor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/DoorsKeysMsg/Keys/GoldKey.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/DoorsKeysMsg/OpenCloseMsg/OpenCloseMsg.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Enemies/archer/xenorc.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Backgrounds/Clouds/cloud6.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/CityPark/layer_05_1920 x 1080.png" type="Texture" id=11]
 [ext_resource path="res://Backgrounds/Skys/sky9.png" type="Texture" id=12]
+[ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Backgrounds/Sewers/sewers.png" type="Texture" id=14]
 [ext_resource path="res://Backgrounds/CityPark/layer_06_1920 x 1080.png" type="Texture" id=15]
 [ext_resource path="res://Backgrounds/CityPark/layer_04_1920 x 1080.png" type="Texture" id=16]
@@ -301,6 +303,13 @@ CloseMessage = "search for the key"
 [node name="GoldKey2" parent="Movables" instance=ExtResource( 7 )]
 position = Vector2( 4305, 70 )
 
+[node name="MovableObject" parent="Movables" instance=ExtResource( 13 )]
+position = Vector2( 481, -35 )
+Explosive = true
+
+[node name="MovableObject2" parent="Movables" instance=ExtResource( 13 )]
+position = Vector2( 481, 30 )
+
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Actors" type="Node2D" parent="."]
@@ -313,6 +322,9 @@ position = Vector2( -287, 206 )
 
 [node name="Cat" parent="Actors" instance=ExtResource( 4 )]
 position = Vector2( 25, 129 )
+
+[node name="xenorc" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( 1025, 94 )
 
 [node name="StaticObjectsFront" type="Node2D" parent="."]
 

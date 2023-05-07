@@ -16,7 +16,7 @@ func _ready():
 	Global.loadGameOptions()
 	Global.loadGameState()
 	res.text=str(OS.window_size)
-	rev.text=Global.revision
+	rev.text="rev:"+Global.revision
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
 	sfxscr.set_value(Global.SFXVol)
@@ -65,11 +65,4 @@ func _on_ViewOptions_item_selected(index):
 		OS.window_fullscreen=true
 	else:
 		OS.window_fullscreen=false
-
-func _on_ChildOptions_item_selected(index):
-	match index:
-		0:
-			Global.isChild=false
-		1:
-			Global.isChild=true
 

@@ -44,6 +44,8 @@ var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
 var BuffTime:int=15
+var PrevPos:Vector2=Vector2(0,0)
+var StuckCounter:int=0
 
 
 signal Food(stamina)
@@ -79,9 +81,22 @@ func _physics_process(delta):
 
 func _process(delta):
 	animate()
+	if_stuck()
 	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #----------------------------------------
+
+func if_stuck()->bool:
+	var stk:bool=false
+	if !JumpPossible && is_equal_approx(PrevPos.y,get_global_position().y):
+		StuckCounter+=1
+		if StuckCounter>5:
+			StuckCounter=0
+			set_collision_mask_bit(Global.PLATFORM,false)
+			JumperTimer.start(0.2)
+			stk=true
+	PrevPos=get_global_position()
+	return stk
 
 func CheckMovable(delta):
 	#CHECK FALL and JUMP CONDITION
@@ -133,7 +148,7 @@ func i_slip():
 func i_jump():
 	if JumpPossible:
 		if Global.Stamina>20:
-			Global.setStamina(-0.5)
+			Global.addStamina(-3)
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()
@@ -238,11 +253,10 @@ func _on_Cat_Food(stamina=1): #kill, eat or catch someting also call on non leth
 		CollectSound.play()
 		Global.Points+=stamina*10
 	else:
-#		RollPossible=false
 		Bleeding.set_emitting(true)
 		Meow.volume_db=Global.SFXVol
 		Meow.play()
-	Global.setStamina(stamina)
+	Global.addStamina(stamina)
 	pass
 
 # HUD message handling
@@ -307,7 +321,6 @@ func _on_DblJumpTimer_timeout():
 	if BuffTime>0:
 		DblJumpTimer.start()
 	else:
-		BuffTime=15
 		if Global.DblJumps>1:
 			Global.DblJumps-=1
 			emit_signal("Message","kangaroo %s jump(s) left"%(Global.DblJumps-1))
@@ -315,10 +328,14 @@ func _on_DblJumpTimer_timeout():
 	pass # Replace with function body.
 
 func _on_rollingstaminadrain_timeout():
-	Global.setStamina(-10)
+	Global.addStamina(-10)
 	pass # Replace with function body.
 
 func _on_Tween_tween_completed(object, key):
+	Global.isChild=true
+	Global.Ammo=0
+	Global.KeysRing[0]=0
+	Global.Stamina=20
 	Global.LifesLeft-=1
 	Global.PlayerAlive=false #die if trigered by highfall or stamina
 	Global.saveGameState()

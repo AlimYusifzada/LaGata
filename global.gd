@@ -8,7 +8,7 @@ const main_menu="res://MainMenu.tscn"
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
 
-const MindTimerSet=.5
+#const MindTimerSet=.5
 const GRAVITY = 1500
 const TerminateVelocity=2000 #kill player
 enum{PLAYER,GROUND,PLATFORM,LAVA,PRAY,ENEMY} #collision layers
@@ -41,9 +41,10 @@ func getPlayer()->Node:
 	return get_tree().get_nodes_in_group("Cats")[0]
 	pass
 
-func setStamina(stam=0):
+func addStamina(stam=0):
 	var fl=false
-	if Stamina<100 and (Stamina+stam)>=100:
+	if Stamina<100 and (Stamina+stam)>=100 and isChild:
+		Stamina=20
 		isChild=false
 		fl=true
 	elif (Stamina+stam)<=0:
@@ -52,9 +53,10 @@ func setStamina(stam=0):
 		Stamina+=stam/2
 	else:
 		Stamina+=stam/3
-	if fl: Stamina=20
-	clamp(Stamina,0,100)
 	pass
+func setStamina(stam):
+	Stamina=stam
+	clamp(Stamina,0,100)
 func getStamina()->int:
 	return Stamina
 	pass
@@ -63,7 +65,7 @@ func _ready():
 	randomize()
 	loadGameOptions()
 
-func PlayerReset():
+func PlayerReset(): # lost all progress
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
 	Level=1 #current level
 	LifesLeft=int(MaxLifes/2)

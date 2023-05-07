@@ -23,7 +23,7 @@ var hintmessage=[
 	"rats are dangerous",
 	"every door need a key",
 	"rolling is good for avoiding threats but drains stamina",
-	"jumping over the enemy is bad idea for kittens"
+	"jumping over the enemy is a bad idea for kittens"
 ]
 
 func _ready():
