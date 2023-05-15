@@ -199,8 +199,8 @@ func i_inertia(delta):
 			velocity.x=0
 func ChecKbrdRun(delta):
 	if Input.is_action_just_pressed("ui_shoot"): i_shoot()
-	elif Input.is_action_pressed("ui_roll"): i_roll()
-	elif Input.is_action_pressed("ui_runright"): i_runright(delta)
+	if Input.is_action_pressed("ui_roll"): i_roll()
+	if Input.is_action_pressed("ui_runright"): i_runright(delta)
 	elif Input.is_action_pressed("ui_runleft"):	i_runleft(delta)
 	else: i_inertia(delta)
 
@@ -329,6 +329,7 @@ func _on_DblJumpTimer_timeout():
 
 func _on_rollingstaminadrain_timeout():
 	Global.addStamina(-10)
+	Rolling=false
 	pass # Replace with function body.
 
 func _on_Tween_tween_completed(object, key):
