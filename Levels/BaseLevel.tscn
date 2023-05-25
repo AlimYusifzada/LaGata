@@ -6,6 +6,9 @@
 position = Vector2( 439, 202 )
 script = ExtResource( 1 )
 
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
 [node name="Parx" type="ParallaxBackground" parent="."]
 
 [node name="sky" type="ParallaxLayer" parent="Parx"]

@@ -3,14 +3,12 @@ extends KinematicBody2D
 var velocity:Vector2
 var Speed=500
 var prev_position:Vector2
-var wins
-
+var move_counter=0
 signal Message(msg)
 onready var MessageTimer=$MessageTimer
 onready var Message=$Camera2D/HUD/HUDPanel/Message
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	wins=get_parent().get_viewport().size
 	$Camera2D/HUD/HUDPanel/Ammo.visible=false
 	$Camera2D/HUD/HUDPanel/Keys.visible=false
 	$Camera2D/HUD/HUDPanel/CatStat.visible=false
@@ -25,10 +23,13 @@ func _ready():
 func _process(delta):
 	prev_position=position
 	move_and_collide(velocity*delta)
-	if !is_on_screen():
+	if move_counter>100:
 		get_parent().emit_signal("Failed")
 	if prev_position==position:
 		velocity=Vector2(0,0)
+		move_counter=0
+	else:
+		move_counter+=1
 	$Camera2D/HUD/HUDPanel/PointsCounter.text=str(Global.Points)
 		
 func _input(event):
@@ -59,7 +60,7 @@ func _input(event):
 		pass
 	pass
 
-func paypoints(points=5):
+func paypoints(points=10):
 	if Global.Points>points:
 		Global.Points-=points
 	else:
@@ -67,12 +68,6 @@ func paypoints(points=5):
 		get_parent().emit_signal("Failed")
 	pass
 
-func is_on_screen()->bool:
-	if (position.x>=0 && position.x<=wins.x) && (position.y>=0 && position.y<=wins.y):
-		return true
-	else:
-		return false
-		
 func _on_Ball_Message(msg=""):
 	Message.text=msg
 	MessageTimer.start(3)

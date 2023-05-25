@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Common/DoorsKeysMsg/InternalDoor/InternalDoor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Common/DoorsKeysMsg/Keys/GoldKey.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Common/DoorsKeysMsg/OpenCloseMsg/OpenCloseMsg.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Player/Sound/l1.wav" type="AudioStream" id=9]
 [ext_resource path="res://Backgrounds/Clouds/cloud6.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/CityPark/layer_05_1920 x 1080.png" type="Texture" id=11]
 [ext_resource path="res://Backgrounds/Skys/sky9.png" type="Texture" id=12]
@@ -27,6 +28,10 @@
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
 script = ExtResource( 1 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
 
 [node name="Parx" type="ParallaxBackground" parent="."]
 

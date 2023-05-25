@@ -9,7 +9,7 @@ const BSCALE=Vector2(1.0,1.0)
 onready var CatStat=$HUDPanel/CatStat
 onready var Keys=$HUDPanel/Keys
 onready var LvlCounter=$HUDPanel/LvlCounter
-onready var BackgroundMusic=$BGM
+#onready var BackgroundMusic=$BGM
 onready var StaminaBar=$HUDPanel/CatStat/CatStamBar
 onready var LifeBar=$HUDPanel/CatStat/CatLifeBar
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
@@ -27,8 +27,8 @@ var Praystot=0
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()
-	BackgroundMusic.volume_db=Global.MusicVol
-	BackgroundMusic.play()
+#	BackgroundMusic.volume_db=Global.MusicVol
+#	BackgroundMusic.play()
 	LvlCounter.text="Lvl="+str(Global.Level)
 	pass
 	
@@ -42,7 +42,11 @@ func _input(event):
 
 func _on_HUD_OptionsChanged():
 	Global.loadGameOptions()
-	BackgroundMusic.volume_db=Global.MusicVol
+	var root=get_tree().get_root()
+	var lvlbgm=root.get_node("Level/BGM")
+	if lvlbgm: 
+		lvlbgm.volume_db=Global.MusicVol
+#	BackgroundMusic.volume_db=Global.MusicVol
 	pass # Replace with function body.
 
 func _on_CanvasLayer_UpdateHUD():
