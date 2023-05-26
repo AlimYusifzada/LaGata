@@ -2,9 +2,9 @@
 
 extends CanvasLayer
 
-const LSCALE=Vector2(0.0,0.0)
-const NSCALE=Vector2(.65,.65)
-const BSCALE=Vector2(1.0,1.0)
+#const LSCALE=Vector2(0.0,0.0)
+#const NSCALE=Vector2(.65,.65)
+#const BSCALE=Vector2(1.0,1.0)
 
 onready var CatStat=$HUDPanel/CatStat
 onready var Keys=$HUDPanel/Keys
@@ -23,7 +23,7 @@ signal OptionsChanged
 signal UpdateHUD
 
 var Praystot=0
-
+onready var root=get_tree().get_root()
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()
@@ -42,7 +42,7 @@ func _input(event):
 
 func _on_HUD_OptionsChanged():
 	Global.loadGameOptions()
-	var root=get_tree().get_root()
+#	var root=get_tree().get_root()
 	var lvlbgm=root.get_node("Level/BGM")
 	if lvlbgm: 
 		lvlbgm.volume_db=Global.MusicVol
@@ -83,3 +83,38 @@ func _on_TouchESC_pressed():
 	var op=Options.instance()
 	self.add_child(op)
 
+func _on_JumpBtn_pressed():
+	Global.TJump=true
+	pass # Replace with function body.
+
+func _on_ShootBtn_pressed():
+	Global.TShoot=true
+	pass # Replace with function body.
+
+func _on_SlideBtn_pressed():
+	Global.TSlip=true
+	pass # Replace with function body.
+
+func _on_RollBtn_pressed():
+	Global.TRoll=true
+	pass # Replace with function body.
+
+func _on_RightBtn_pressed():
+	Global.TRight=true
+	pass # Replace with function body.
+
+func _on_LeftBtn_pressed():
+	Global.TLeft=true
+	pass # Replace with function body.
+
+func _on_RollBtn_released():
+	Global.TRoll=false
+	pass # Replace with function body.
+
+func _on_RightBtn_released():
+	Global.TRight=false
+	pass # Replace with function body.
+
+func _on_LeftBtn_released():
+	Global.TLeft=false
+	pass # Replace with function body.

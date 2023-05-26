@@ -34,8 +34,17 @@ var MasterVol=0
 #var JoystickMove=Vector2()
 #var JoystickJump=false
 var DblJumps:int
-var MaxDblJumps:int=1
+var MaxDblJumps:int
 var MaxLifes:int=7
+var PlayerPath:NodePath
+var TDelta:float=0.0
+
+var TJump=false
+var TLeft=false
+var TRight=false
+var TSlip=false
+var TRoll=false
+var TShoot=false
 
 func getPlayer()->Node:
 	return get_tree().get_nodes_in_group("Cats")[0]

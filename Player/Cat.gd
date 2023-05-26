@@ -10,7 +10,7 @@ const Animate_Mode="Kitten" #Cat
 
 const DUST=preload("res://Common/JumpDust.tscn")
 const FLROACH=preload("res://Player/ammo/FlyingRoach.tscn")
-onready var Message=$Cam/HUD/HUDPanel/Message
+onready var Message=$Cam/HUD/MessagePanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
 onready var CoyoteTimer=$coyotetimer
@@ -46,14 +46,15 @@ var canMoveEast:bool=false
 var BuffTime:int=15
 var PrevPos:Vector2=Vector2(0,0)
 var StuckCounter:int=0
-
+var CtrlAction=false
 
 signal Food(stamina)
 signal Die
-signal Jump(power)
+signal Jump(power) #unconditional jump
 signal Message(message)
 
 func _ready():
+	Global.PlayerPath=get_path()
 	set_scale(SCALE)
 	Bleeding.set_emitting(false)
 	PlayerSprite.playing=true
@@ -69,34 +70,35 @@ func _ready():
 	pass
 #----------------------------------------
 func _physics_process(delta):
-	#---FASTER---
+	Global.TDelta=delta #get delta for touch control
 	CoyoteTimeCheck()
 	CheckDeath()
 	CheckMovable(delta)
-	ChecKbrdJump()
-	ChecKbrdRun(delta)
+	#---Ctrl---
+	CheckJump()
+	CheckRun(delta)
 	#---SLOWER---
+	InertiaForce(delta)
 	move_and_slide(velocity,Global.UP)#,false,4,1.0,false)
 	pass
 
 func _process(delta):
 	animate()
-	if_stuck()
+	if is_stuck():
+		set_collision_mask_bit(Global.PLATFORM,false)
+		JumperTimer.start(0.2)
 	$Cam/HUD.emit_signal("UpdateHUD")
 	pass
 #----------------------------------------
 
-func if_stuck()->bool:
-	var stk:bool=false
+func is_stuck()->bool:
 	if !JumpPossible && is_equal_approx(PrevPos.y,get_global_position().y):
 		StuckCounter+=1
-		if StuckCounter>5:
+		if StuckCounter>3:
 			StuckCounter=0
-			set_collision_mask_bit(Global.PLATFORM,false)
-			JumperTimer.start(0.2)
-			stk=true
+			return true
 	PrevPos=get_global_position()
-	return stk
+	return false
 
 func CheckMovable(delta):
 	#CHECK FALL and JUMP CONDITION
@@ -184,7 +186,9 @@ func i_runleft(delta):
 		else:
 			velocity.x=-MAXSPEED
 	PlayerSprite.flip_h=false #face left
-func i_inertia(delta):
+	
+func InertiaForce(delta):
+	if CtrlAction: return
 	if velocity.x>0 && !canMoveEast:
 		velocity.x=0
 	if velocity.x<0 && !canMoveWest:
@@ -197,12 +201,19 @@ func i_inertia(delta):
 		velocity.x+=MAXSPEED*delta*2
 		if velocity.x>0:
 			velocity.x=0
-func ChecKbrdRun(delta):
-	if Input.is_action_just_pressed("ui_shoot"): i_shoot()
-	if Input.is_action_pressed("ui_roll"): i_roll()
-	if Input.is_action_pressed("ui_runright"): i_runright(delta)
-	elif Input.is_action_pressed("ui_runleft"):	i_runleft(delta)
-	else: i_inertia(delta)
+
+func CheckRun(delta):
+	CtrlAction=true
+	if Input.is_action_just_pressed("ui_shoot") or Global.TShoot:
+		Global.TShoot=false
+		i_shoot()
+	if Input.is_action_pressed("ui_roll") or Global.TRoll:
+		i_roll()
+	if Input.is_action_pressed("ui_runright") or Global.TRight:
+		i_runright(delta)
+	elif Input.is_action_pressed("ui_runleft") or Global.TLeft:
+		i_runleft(delta)
+	else: CtrlAction=false
 
 #animation
 func animate():
@@ -269,10 +280,12 @@ func _on_messagetimer_timeout():
 	pass
 
 #jumping functions
-func ChecKbrdJump():
-	if Input.is_action_just_pressed("ui_jump"):# && JumpPossible:
+func CheckJump():
+	if Input.is_action_just_pressed("ui_jump") or Global.TJump:# && JumpPossible:
+		Global.TJump=false
 		i_jump()
-	elif Input.is_action_just_pressed("ui_down"):# && JumpPossible:
+	elif Input.is_action_just_pressed("ui_down") or Global.TSlip:# && JumpPossible:
+		Global.TSlip=false
 		i_slip()
 	if DblJumpTimer.is_stopped() && Global.DblJumps>1:
 		DblJumpTimer.start()

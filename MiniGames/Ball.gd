@@ -6,7 +6,7 @@ var prev_position:Vector2
 var move_counter=0
 signal Message(msg)
 onready var MessageTimer=$MessageTimer
-onready var Message=$Camera2D/HUD/HUDPanel/Message
+onready var Message=$Camera2D/HUD/MessagePanel/Message
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Camera2D/HUD/HUDPanel/Ammo.visible=false
