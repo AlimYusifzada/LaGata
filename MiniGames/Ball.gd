@@ -9,6 +9,8 @@ onready var MessageTimer=$MessageTimer
 onready var Message=$Camera2D/HUD/MessagePanel/Message
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Camera2D/HUD/CtrlPanel/RightCtrl/RollBtn.visible=false
+	$Camera2D/HUD/CtrlPanel/RightCtrl/ShootBtn.visible=false
 	$Camera2D/HUD/HUDPanel/Ammo.visible=false
 	$Camera2D/HUD/HUDPanel/Keys.visible=false
 	$Camera2D/HUD/HUDPanel/CatStat.visible=false
@@ -35,22 +37,26 @@ func _process(delta):
 func _input(event):
 	if velocity.length()>0:
 		return
-	if event.is_action_pressed("ui_runright"):
+	if event.is_action_pressed("ui_runright") or Global.TRight:
+		Global.TRight=false
 		velocity.x=Speed
 		velocity.y=0
 		paypoints()
 		pass
-	elif event.is_action_pressed("ui_runleft"):
+	elif event.is_action_pressed("ui_runleft") or Global.TLeft:
+		Global.TLeft=false
 		velocity.x=-Speed
 		velocity.y=0
 		paypoints()
 		pass
-	elif event.is_action_pressed("ui_down"):
+	elif event.is_action_pressed("ui_down") or Global.TSlip:
+		Global.TSlip=false
 		velocity.x=0
 		velocity.y=Speed
 		paypoints()
 		pass
-	elif event.is_action_pressed("ui_jump"):
+	elif event.is_action_pressed("ui_jump") or Global.TJump:
+		Global.TJump=false
 		velocity.x=0
 		velocity.y=-Speed
 		paypoints()
@@ -60,7 +66,7 @@ func _input(event):
 		pass
 	pass
 
-func paypoints(points=10):
+func paypoints(points=5):
 	if Global.Points>points:
 		Global.Points-=points
 	else:

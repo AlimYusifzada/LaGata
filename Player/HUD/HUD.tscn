@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Common/Textures/DblJumpBonus.png" type="Texture" id=2]
@@ -7,7 +7,12 @@
 [ext_resource path="res://Common/DoorsKeysMsg/Keys/GoldKey.png" type="Texture" id=5]
 [ext_resource path="res://Common/coralines-cat.regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Player/HUD/roach_.png" type="Texture" id=7]
-[ext_resource path="res://Player/swirl.png" type="Texture" id=8]
+[ext_resource path="res://Player/HUD/right.png" type="Texture" id=8]
+[ext_resource path="res://Player/HUD/up.png" type="Texture" id=9]
+[ext_resource path="res://Player/HUD/left.png" type="Texture" id=10]
+[ext_resource path="res://Player/HUD/down.png" type="Texture" id=11]
+[ext_resource path="res://Player/HUD/act1.png" type="Texture" id=12]
+[ext_resource path="res://Player/HUD/act2.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 6 )
@@ -77,9 +82,9 @@ position = Vector2( -32, -32 )
 normal = ExtResource( 3 )
 
 [node name="DblJumpTimerInd" type="Control" parent="HUDPanel"]
-margin_left = 224.0
+margin_left = 255.0
 margin_top = 64.0
-margin_right = 264.0
+margin_right = 295.0
 margin_bottom = 104.0
 script = ExtResource( 4 )
 __meta__ = {
@@ -158,24 +163,20 @@ anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
 
 [node name="JumpBtn" type="TouchScreenButton" parent="CtrlPanel/RightCtrl"]
-position = Vector2( -80, -152 )
-scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 8 )
+position = Vector2( -104, -208 )
+normal = ExtResource( 9 )
 
 [node name="ShootBtn" type="TouchScreenButton" parent="CtrlPanel/RightCtrl"]
-position = Vector2( -160, -72 )
-scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 8 )
+position = Vector2( -208, -104 )
+normal = ExtResource( 12 )
 
 [node name="SlideBtn" type="TouchScreenButton" parent="CtrlPanel/RightCtrl"]
-position = Vector2( -80, -72 )
-scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 8 )
+position = Vector2( -104, -104 )
+normal = ExtResource( 11 )
 
 [node name="RollBtn" type="TouchScreenButton" parent="CtrlPanel/RightCtrl"]
-position = Vector2( -160, -152 )
-scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 8 )
+position = Vector2( -208, -208 )
+normal = ExtResource( 13 )
 
 [node name="LeftCtrl" type="ColorRect" parent="CtrlPanel"]
 anchor_top = 1.0
@@ -183,14 +184,12 @@ anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0 )
 
 [node name="RightBtn" type="TouchScreenButton" parent="CtrlPanel/LeftCtrl"]
-position = Vector2( 107, -80 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 128, -104 )
 normal = ExtResource( 8 )
 
 [node name="LeftBtn" type="TouchScreenButton" parent="CtrlPanel/LeftCtrl"]
-position = Vector2( 24, -80 )
-scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 8 )
+position = Vector2( 24, -104 )
+normal = ExtResource( 10 )
 
 [connection signal="UpdateHUD" from="." to="." method="_on_CanvasLayer_UpdateHUD"]
 [connection signal="pressed" from="HUDPanel/CatStat/TouchESC" to="." method="_on_TouchESC_pressed"]

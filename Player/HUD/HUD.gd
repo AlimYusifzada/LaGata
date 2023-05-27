@@ -118,3 +118,10 @@ func _on_RightBtn_released():
 func _on_LeftBtn_released():
 	Global.TLeft=false
 	pass # Replace with function body.
+
+func HideTouch():
+	pass
+func ShowTouch():
+	pass
+func HideETouch():
+	pass
