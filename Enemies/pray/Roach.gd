@@ -82,14 +82,14 @@ func animation():
 		RoachSprite.flip_h=true
 		
 func is_floor():
-	return WallOnSouth.get_collider()
+	return WallOnSouth.is_colliding()
 func is_wall():
-	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	return WallOnEast.is_colliding() || WallOnWest.is_colliding()
 func sidewall():
-	if WallOnEast.get_collider():
+	if WallOnEast.is_colliding():
 		if velocity.x<0:
 			return 1
-	if WallOnWest.get_collider():
+	if WallOnWest.is_colliding():
 		if velocity.x>0:
 			return 1
 	return -1

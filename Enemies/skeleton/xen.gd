@@ -69,7 +69,7 @@ func animation():
 		XenAnimation.play("Run")
 
 func is_floor():
-	return WallOnSouth.get_collider()
+	return WallOnSouth.is_colliding()
 	pass
 func move():
 	if is_equal_approx(prevX,get_global_position().x):
@@ -87,13 +87,13 @@ func move():
 		velocity.x*=-1
 		
 func is_wall():
-	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	return WallOnEast.is_colliding() || WallOnWest.is_colliding()
 	pass
 func sidewall():
-	if WallOnEast.get_collider():
+	if WallOnEast.is_colliding():
 		if velocity.x<0:
 			return 1
-	if WallOnWest.get_collider():
+	if WallOnWest.is_colliding():
 		if velocity.x>0:
 			return 1
 	return -1
@@ -141,8 +141,8 @@ func LookAt():
 		return -1
 
 func CheckHit():
-	var cEast=HitEast.get_collider()
-	var cWest=HitWest.get_collider()
+	var cEast=HitEast.is_colliding()
+	var cWest=HitWest.is_colliding()
 	if cWest && !hitting:
 		cWest.emit_signal("Food",-10)
 	if cEast && !hitting:

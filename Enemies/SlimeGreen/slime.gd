@@ -57,7 +57,7 @@ func animation():
 func move():
 	var col=get_last_slide_collision()
 	if col:
-		if col.get_collider().is_in_group("Cats"):
+		if col.is_colliding().is_in_group("Cats"):
 #			set_collision_mask_bit(Global.PLATFORM,false)
 			velocity.y=JUMP_VELOCITY
 			pass
@@ -68,13 +68,13 @@ func move():
 		pass
 
 func is_wall():
-	return WallOnEast.get_collider() || WallOnWest.get_collider()
+	return WallOnEast.is_colliding() || WallOnWest.is_colliding()
 	pass
 func sidewall():
-	if WallOnEast.get_collider():
+	if WallOnEast.is_colliding():
 		if velocity.x<0:
 			return 1
-	if WallOnWest.get_collider():
+	if WallOnWest.is_colliding():
 		if velocity.x>0:
 			return 1
 	return -1

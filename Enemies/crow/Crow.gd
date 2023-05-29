@@ -19,7 +19,7 @@ func _ready():
 	pass
 	
 func _process(delta):
-	if !CheckWalls.get_collider():
+	if !CheckWalls.is_colliding():
 		canpoop=true
 	else:
 		canpoop=false
