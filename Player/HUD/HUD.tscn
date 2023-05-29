@@ -17,10 +17,10 @@
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 6 )
 
 [node name="HUD" type="CanvasLayer"]
@@ -31,23 +31,60 @@ anchor_right = 1.0
 color = Color( 1, 1, 1, 0 )
 
 [node name="LvlCounter" type="Label" parent="HUDPanel"]
-visible = false
-anchor_bottom = 0.111
-margin_left = 8.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -256.0
 margin_top = 8.0
-margin_right = 32.0
-margin_bottom = 33.008
+margin_right = -232.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "7"
 
 [node name="PointsCounter" type="Label" parent="HUDPanel"]
-margin_left = 184.0
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -128.0
 margin_top = 8.0
-margin_right = 208.0
+margin_right = -8.0
 margin_bottom = 44.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
+text = "123456789"
+valign = 1
+
+[node name="Ammo" type="Sprite" parent="HUDPanel"]
+position = Vector2( 144, 32 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AmmoCounter" type="Label" parent="HUDPanel/Ammo"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 16.0
+margin_top = -1.0
+margin_right = 56.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 5 )
+
+[node name="Keys" type="Sprite" parent="HUDPanel"]
+position = Vector2( 136, 104 )
+scale = Vector2( 0.781249, 0.75 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KeysCounter" type="Label" parent="HUDPanel/Keys"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 5.12001
+margin_top = 4.0
+margin_right = 53.12
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 3 )
 text = "7"
 
 [node name="CatStat" type="Node2D" parent="HUDPanel"]
@@ -82,10 +119,10 @@ position = Vector2( -32, -32 )
 normal = ExtResource( 3 )
 
 [node name="DblJumpTimerInd" type="Control" parent="HUDPanel"]
-margin_left = 255.0
-margin_top = 64.0
-margin_right = 295.0
-margin_bottom = 104.0
+margin_left = 224.0
+margin_top = 66.0
+margin_right = 264.0
+margin_bottom = 106.0
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -99,38 +136,6 @@ bar_color = Color( 0.501961, 0.501961, 0.501961, 0.501961 )
 
 [node name="Sprite" type="Sprite" parent="HUDPanel/DblJumpTimerInd"]
 texture = ExtResource( 2 )
-
-[node name="Keys" type="Sprite" parent="HUDPanel"]
-position = Vector2( 136, 104 )
-scale = Vector2( 0.781249, 0.75 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="KeysCounter" type="Label" parent="HUDPanel/Keys"]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 5.12001
-margin_top = 4.0
-margin_right = 53.12
-margin_bottom = 28.0
-custom_fonts/font = SubResource( 3 )
-text = "7"
-
-[node name="Ammo" type="Sprite" parent="HUDPanel"]
-position = Vector2( 144, 32 )
-texture = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AmmoCounter" type="Label" parent="HUDPanel/Ammo"]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 16.0
-margin_top = -1.0
-margin_right = 56.0
-margin_bottom = 32.0
-custom_fonts/font = SubResource( 5 )
 
 [node name="MessagePanel" type="ColorRect" parent="."]
 anchor_top = 0.5

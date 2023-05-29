@@ -50,7 +50,10 @@ func _on_HUD_OptionsChanged():
 	pass # Replace with function body.
 
 func _on_CanvasLayer_UpdateHUD():
-	
+	if Global.TouchCtrlEnabled:
+		ShowTouch()
+	else:
+		HideCTouch()
 	if Global.DblJumps>1:
 		$HUDPanel/DblJumpTimerInd.visible=true
 	else:
@@ -120,8 +123,22 @@ func _on_LeftBtn_released():
 	pass # Replace with function body.
 
 func HideTouch():
+	$HUDPanel/Keys.visible=false
+	$HUDPanel/CatStat.visible=false
+	$HUDPanel/Ammo.visible=false
+	$CtrlPanel/LeftCtrl.visible=false
+	$CtrlPanel/RightCtrl.visible=false
 	pass
 func ShowTouch():
+	Global.TouchCtrlEnabled=true
+	$HUDPanel/Keys.visible=true
+	$HUDPanel/CatStat.visible=true
+	$HUDPanel/Ammo.visible=true
+	$CtrlPanel/LeftCtrl.visible=true
+	$CtrlPanel/RightCtrl.visible=true
 	pass
-func HideETouch():
+func HideCTouch():
+	Global.TouchCtrlEnabled=false
+	$CtrlPanel/LeftCtrl.visible=false
+	$CtrlPanel/RightCtrl.visible=false
 	pass

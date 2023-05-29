@@ -31,6 +31,7 @@ const EnemyJumpOff=1
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
+var TouchCtrlEnabled=false
 #var JoystickMove=Vector2()
 #var JoystickJump=false
 var DblJumps:int
@@ -72,6 +73,7 @@ func getStamina()->int:
 
 func _ready():
 	randomize()
+#	saveGameOptions()
 	loadGameOptions()
 
 func PlayerReset(): # lost all progress
@@ -122,7 +124,8 @@ func saveGameOptions():
 	var GameOptions={
 		"MasterVol":MasterVol,
 		"SFXVol":SFXVol,
-		"MusicVol":MusicVol
+		"MusicVol":MusicVol,
+		"TouchCtrlEnabled":TouchCtrlEnabled
 		}
 	var f=File.new()
 	f.open(file_GameOptions,File.WRITE)
@@ -166,6 +169,7 @@ func loadGameOptions():
 		MusicVol=GameOptions["MusicVol"]
 		SFXVol=GameOptions["SFXVol"]
 		MasterVol=GameOptions["MasterVol"]
+		TouchCtrlEnabled=GameOptions["TouchCtrlEnabled"]
 		return
 	else:
 		saveGameOptions()

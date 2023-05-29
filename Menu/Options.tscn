@@ -27,6 +27,7 @@ margin_bottom = 256.0
 theme = ExtResource( 2 )
 
 [node name="About" type="Tabs" parent="window/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -87,7 +88,6 @@ margin_bottom = 25.0
 text = "SFX"
 
 [node name="Control" type="Tabs" parent="window/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -193,6 +193,13 @@ flat = true
 align = 0
 action = "ui_down"
 
+[node name="TouchCtrl" type="CheckButton" parent="window/TabContainer/Control"]
+margin_left = 288.0
+margin_top = 165.0
+margin_right = 503.0
+margin_bottom = 206.0
+text = "Touch ctrl"
+
 [node name="Graphics" type="Tabs" parent="window/TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -264,7 +271,7 @@ stream = ExtResource( 4 )
 
 [connection signal="value_changed" from="window/TabContainer/Sound/MusicVol" to="." method="_on_MusicVol_value_changed"]
 [connection signal="value_changed" from="window/TabContainer/Sound/SFXVol" to="." method="_on_SFXVol_value_changed"]
-[connection signal="mouse_entered" from="window/TabContainer/Control/LabelR" to="." method="_on_LabelR_mouse_entered"]
+[connection signal="toggled" from="window/TabContainer/Control/TouchCtrl" to="." method="_on_TouchCtrl_toggled"]
 [connection signal="item_selected" from="window/TabContainer/Graphics/Label/ViewOptions" to="." method="_on_ViewOptions_item_selected"]
 [connection signal="pressed" from="window/CancelButton" to="." method="_on_CancelButton_pressed"]
 [connection signal="pressed" from="window/OKButton" to="." method="_on_OKButton_pressed"]
