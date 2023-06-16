@@ -244,8 +244,9 @@ margin_bottom = 62.0
 theme = ExtResource( 44 )
 
 [node name="hint" type="Label" parent="MenuPoint"]
+margin_left = -64.0
 margin_top = 448.0
-margin_right = 154.0
+margin_right = 90.0
 margin_bottom = 481.0
 theme = ExtResource( 44 )
 text = "random hint"
