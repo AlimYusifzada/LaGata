@@ -14,6 +14,10 @@ func _on_NextLvlDoor_body_entered(body):
 	if body.is_in_group("Cats"):
 		if NextLevel<0:
 			transit.change_scene(Global.getLockScene(Global.Level))
+		else:
+			Global.Level=NextLevel
+			Global.saveGameState()
+			transit.change_scene((Global.getLevelScene(NextLevel)))
 		pass
 	pass # Replace with function body.
 	

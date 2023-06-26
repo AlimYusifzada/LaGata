@@ -103,6 +103,7 @@ tile_data = PoolIntArray( -1507239, 238, 0, -1441703, 238, 0, -1376167, 238, 0, 
 
 [node name="NextLvlDoor" parent="Ground" instance=ExtResource( 21 )]
 position = Vector2( 5198, 78 )
+NextLevel = 2
 
 [node name="Coins&Buffs" type="Node2D" parent="."]
 
