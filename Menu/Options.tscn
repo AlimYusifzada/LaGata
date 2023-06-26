@@ -14,16 +14,17 @@ script = ExtResource( 1 )
 margin_left = 256.0
 margin_top = 128.0
 margin_right = 832.0
-margin_bottom = 448.0
+margin_bottom = 464.0
 theme = ExtResource( 2 )
 color = Color( 0, 0, 0, 0.376471 )
 
 [node name="TabContainer" type="TabContainer" parent="window"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -244.0
-margin_right = 264.0
-margin_bottom = 256.0
+margin_left = -256.0
+margin_top = 8.0
+margin_right = 256.0
+margin_bottom = 272.0
 theme = ExtResource( 2 )
 
 [node name="About" type="Tabs" parent="window/TabContainer"]
@@ -56,9 +57,9 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="MusicVol" type="HSlider" parent="window/TabContainer/Sound"]
-margin_left = 48.0
+margin_left = 28.0
 margin_top = 133.0
-margin_right = 304.0
+margin_right = 284.0
 margin_bottom = 149.0
 min_value = -70.0
 max_value = 10.0
@@ -72,10 +73,10 @@ margin_bottom = 25.0
 text = "Music"
 
 [node name="SFXVol" type="HSlider" parent="window/TabContainer/Sound"]
-margin_left = 48.0
-margin_top = 53.0
-margin_right = 304.0
-margin_bottom = 69.0
+margin_left = 28.0
+margin_top = 47.0
+margin_right = 284.0
+margin_bottom = 63.0
 min_value = -70.0
 max_value = 10.0
 step = 5.0
@@ -96,9 +97,9 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="LabelR" type="Label" parent="window/TabContainer/Control"]
-margin_left = 48.0
+margin_left = 28.0
 margin_top = 13.0
-margin_right = 120.0
+margin_right = 100.0
 margin_bottom = 46.0
 text = "rifgt"
 
@@ -113,9 +114,9 @@ align = 0
 action = "ui_runright"
 
 [node name="LabelL" type="Label" parent="window/TabContainer/Control"]
-margin_left = 48.0
+margin_left = 28.0
 margin_top = 58.0
-margin_right = 120.0
+margin_right = 100.0
 margin_bottom = 91.0
 text = "left"
 
@@ -129,9 +130,9 @@ align = 0
 action = "ui_runleft"
 
 [node name="LabelJ" type="Label" parent="window/TabContainer/Control"]
-margin_left = 48.0
+margin_left = 28.0
 margin_top = 102.0
-margin_right = 138.0
+margin_right = 118.0
 margin_bottom = 135.0
 text = "up/jump"
 
@@ -145,10 +146,10 @@ align = 0
 action = "ui_jump"
 
 [node name="LabelS" type="Label" parent="window/TabContainer/Control"]
-margin_left = 272.0
-margin_top = 13.0
-margin_right = 347.0
-margin_bottom = 46.0
+margin_left = 284.0
+margin_top = 12.0
+margin_right = 359.0
+margin_bottom = 45.0
 text = "shoot"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelS" instance=ExtResource( 5 )]
@@ -162,10 +163,10 @@ align = 0
 action = "ui_shoot"
 
 [node name="LabelR2" type="Label" parent="window/TabContainer/Control"]
-margin_left = 272.0
-margin_top = 58.0
-margin_right = 347.0
-margin_bottom = 91.0
+margin_left = 284.0
+margin_top = 57.0
+margin_right = 359.0
+margin_bottom = 90.0
 text = "roll"
 
 [node name="KeyButton" parent="window/TabContainer/Control/LabelR2" instance=ExtResource( 5 )]
@@ -178,9 +179,9 @@ align = 0
 action = "ui_roll"
 
 [node name="LabelD" type="Label" parent="window/TabContainer/Control"]
-margin_left = 48.0
+margin_left = 28.0
 margin_top = 149.0
-margin_right = 154.0
+margin_right = 134.0
 margin_bottom = 182.0
 text = "down/slip"
 
@@ -194,10 +195,10 @@ align = 0
 action = "ui_down"
 
 [node name="TouchCtrl" type="CheckButton" parent="window/TabContainer/Control"]
-margin_left = 288.0
-margin_top = 165.0
-margin_right = 503.0
-margin_bottom = 206.0
+margin_left = 276.0
+margin_top = 158.0
+margin_right = 491.0
+margin_bottom = 199.0
 text = "Touch ctrl"
 
 [node name="Graphics" type="Tabs" parent="window/TabContainer"]

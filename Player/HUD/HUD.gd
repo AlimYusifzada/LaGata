@@ -2,14 +2,9 @@
 
 extends CanvasLayer
 
-#const LSCALE=Vector2(0.0,0.0)
-#const NSCALE=Vector2(.65,.65)
-#const BSCALE=Vector2(1.0,1.0)
-
 onready var CatStat=$HUDPanel/CatStat
 onready var Keys=$HUDPanel/Keys
 onready var LvlCounter=$HUDPanel/LvlCounter
-#onready var BackgroundMusic=$BGM
 onready var StaminaBar=$HUDPanel/CatStat/CatStamBar
 onready var LifeBar=$HUDPanel/CatStat/CatLifeBar
 onready var KeysCounter=$HUDPanel/Keys/KeysCounter
@@ -27,8 +22,6 @@ onready var root=get_tree().get_root()
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()
-#	BackgroundMusic.volume_db=Global.MusicVol
-#	BackgroundMusic.play()
 	LvlCounter.text="Lvl="+str(Global.Level)
 	pass
 	
@@ -42,16 +35,15 @@ func _input(event):
 
 func _on_HUD_OptionsChanged():
 	Global.loadGameOptions()
-#	var root=get_tree().get_root()
-	var lvlbgm=root.get_node("Level/BGM")
-	if lvlbgm: 
-		lvlbgm.volume_db=Global.MusicVol
-#	BackgroundMusic.volume_db=Global.MusicVol
+	if Global.TouchCtrlEnabled:
+		ShowCTouch()
+	else:
+		HideCTouch()
 	pass # Replace with function body.
 
 func _on_CanvasLayer_UpdateHUD():
 	if Global.TouchCtrlEnabled:
-		ShowTouch()
+		ShowHUD()
 	else:
 		HideCTouch()
 	if Global.DblJumps>1:
@@ -122,14 +114,15 @@ func _on_LeftBtn_released():
 	Global.TLeft=false
 	pass # Replace with function body.
 
-func HideTouch():
+func HideHUD():
 	$HUDPanel/Keys.visible=false
 	$HUDPanel/CatStat.visible=false
 	$HUDPanel/Ammo.visible=false
+	$HUDPanel/DblJumpTimerInd.visible=false
 	$CtrlPanel/LeftCtrl.visible=false
 	$CtrlPanel/RightCtrl.visible=false
 	pass
-func ShowTouch():
+func ShowHUD():
 	Global.TouchCtrlEnabled=true
 	$HUDPanel/Keys.visible=true
 	$HUDPanel/CatStat.visible=true
@@ -142,3 +135,7 @@ func HideCTouch():
 	$CtrlPanel/LeftCtrl.visible=false
 	$CtrlPanel/RightCtrl.visible=false
 	pass
+func ShowCTouch():
+	Global.TouchCtrlEnabled=true
+	$CtrlPanel/LeftCtrl.visible=true
+	$CtrlPanel/RightCtrl.visible=true

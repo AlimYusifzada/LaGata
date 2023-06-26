@@ -6,10 +6,10 @@ var flag=false
 func _ready():
 	$AnimatedSprite/Label.text=str(DoubleJumps)
 	$Tween.interpolate_property($".",
-	"modulate",
-	Color(1,1,1,1),
-	Color(1,1,1,0),1,
-	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+		"modulate",
+		Color(1,1,1,1),
+		Color(1,1,1,0),0.3,
+		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass
 
 func _on_DblJumpBonus_body_entered(body):

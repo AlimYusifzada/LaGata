@@ -19,11 +19,14 @@ var hintmessage=[
 	"if stamina bar fullfilled, kitten become a cat",
 	"cat become kitten, if she die",
 	"all cats can have seven lifes,... maximum",
-	"roachers nasty, but can help shoot monsters down",
-	"rats are dangerous",
+	"roachers are nasty, but can help shoot monsters down",
+	"rats are dangerous, don't let them bite you",
 	"every door need a key",
 	"rolling is good for avoiding threats but drains stamina",
-	"jumping over the enemy is a bad idea for kittens"
+	"jumping over the enemy is a bad idea for kittens",
+	"cats rule the world (Jim Davis)",
+	"like all pure creatures cats are practical (William S. Burroughs)",
+	"cat's choose us; we don't own them (Kristin Cast)"
 ]
 
 func _ready():

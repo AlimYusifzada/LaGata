@@ -9,13 +9,16 @@ onready var MessageTimer=$MessageTimer
 onready var Message=$Camera2D/HUD/MessagePanel/Message
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Camera2D/HUD/CtrlPanel/RightCtrl/RollBtn.visible=false
-	$Camera2D/HUD/CtrlPanel/RightCtrl/ShootBtn.visible=false
-	$Camera2D/HUD/HUDPanel/Ammo.visible=false
-	$Camera2D/HUD/HUDPanel/Keys.visible=false
-	$Camera2D/HUD/HUDPanel/CatStat.visible=false
-	$Camera2D/HUD/HUDPanel/DblJumpTimerInd.visible=false
-	$Camera2D/HUD/HUDPanel/LvlCounter.visible=false
+	$Camera2D/HUD.HideHUD()
+	if Global.TouchCtrlEnabled:
+		$Camera2D/HUD.ShowCTouch()
+#	$Camera2D/HUD/CtrlPanel/RightCtrl/RollBtn.visible=false
+#	$Camera2D/HUD/CtrlPanel/RightCtrl/ShootBtn.visible=false
+#	$Camera2D/HUD/HUDPanel/Ammo.visible=false
+#	$Camera2D/HUD/HUDPanel/Keys.visible=false
+#	$Camera2D/HUD/HUDPanel/CatStat.visible=false
+#	$Camera2D/HUD/HUDPanel/DblJumpTimerInd.visible=false
+#	$Camera2D/HUD/HUDPanel/LvlCounter.visible=false
 	$Camera2D/HUD/HUDPanel/PointsCounter.text=str(Global.Points)
 	emit_signal("Message","use arrow keys to move the ball in to the slot")
 	if Global.Points<=0:

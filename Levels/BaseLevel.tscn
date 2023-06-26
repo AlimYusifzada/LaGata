@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
+[ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=4]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -35,9 +38,11 @@ motion_mirroring = Vector2( 1920, 0 )
 motion_mirroring = Vector2( 1920, 0 )
 
 [node name="BackDecoration" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
 format = 1
 
 [node name="32xPlatform" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 4
@@ -45,6 +50,7 @@ collision_mask = 0
 format = 1
 
 [node name="Ground" type="TileMap" parent="." groups=["Wall"]]
+tile_set = ExtResource( 3 )
 compatibility_mode = true
 collision_layer = 2
 collision_mask = 65
@@ -63,4 +69,5 @@ format = 1
 [node name="StaticObjectsFront" type="Node2D" parent="."]
 
 [node name="FrontDecoration" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
 format = 1
