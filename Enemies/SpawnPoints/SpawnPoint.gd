@@ -6,7 +6,7 @@ var SpawnObject
 func _ready():
 	SpawnObject=load(Link2Object)
 	if SpawnObject:
-		print(SpawnObject.get_instance_id())
+#		print(SpawnObject.get_instance_id())
 		$DelayTime.start(SpawnDelay)
 	pass # Replace with function body.
 

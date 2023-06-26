@@ -115,13 +115,13 @@ stream = SubResource( 3 )
 [node name="sky" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sky4" type="Sprite" parent="ParallaxBackground/sky"]
-position = Vector2( 960, 540 )
+position = Vector2( 960, 544 )
 texture = ExtResource( 61 )
 
 [node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Cloud8" type="Sprite" parent="ParallaxBackground/clouds"]
-position = Vector2( 960, 540 )
+position = Vector2( 960, 544 )
 texture = ExtResource( 62 )
 
 [node name="MenuPoint" type="Node2D" parent="."]
@@ -244,11 +244,9 @@ margin_bottom = 62.0
 theme = ExtResource( 44 )
 
 [node name="hint" type="Label" parent="MenuPoint"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_left = -128.0
+margin_left = -64.0
 margin_top = 448.0
-margin_right = 26.0
+margin_right = 90.0
 margin_bottom = 481.0
 theme = ExtResource( 44 )
 text = "random hint"

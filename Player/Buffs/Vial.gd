@@ -5,15 +5,15 @@ export var VialType=0 #0- stamina 1- life
 func _ready():
 	$AnimatedSprite.set_frame(VialType)
 	$Tween.interpolate_property($".",
-		"modulate",
-		Color(1,1,1,1),
-		Color(1,1,1,0),0.3,
-		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	"modulate",
+	Color(1,1,1,1),
+	Color(1,1,1,0),0.3,
+	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	$Tween.interpolate_property($".",
-		"scale",
-		$".".scale,
-		$".".scale+Vector2(0.3,0.3),1,
-		Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	"scale",
+	$".".scale,
+	$".".scale+Vector2(0.3,0.3),0.3,
+	Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
 	pass
 
 func _on_Vial_body_entered(body):
