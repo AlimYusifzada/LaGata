@@ -30,9 +30,9 @@ func _ready():
 	pass
 
 func _on_CancelButton_pressed():
-	Global.loadGameOptions()
+#	Global.loadGameOptions()
 	get_tree().paused=false
-	get_parent().emit_signal("OptionsChanged")
+#	get_parent().emit_signal("OptionsChanged")
 	queue_free()
 	pass # Replace with function body.
 

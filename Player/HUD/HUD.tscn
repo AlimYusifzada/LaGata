@@ -196,6 +196,7 @@ normal = ExtResource( 8 )
 position = Vector2( 24, -104 )
 normal = ExtResource( 10 )
 
+[connection signal="OptionsChanged" from="." to="." method="_on_HUD_OptionsChanged"]
 [connection signal="UpdateHUD" from="." to="." method="_on_CanvasLayer_UpdateHUD"]
 [connection signal="pressed" from="HUDPanel/CatStat/TouchESC" to="." method="_on_TouchESC_pressed"]
 [connection signal="pressed" from="CtrlPanel/RightCtrl/JumpBtn" to="." method="_on_JumpBtn_pressed"]

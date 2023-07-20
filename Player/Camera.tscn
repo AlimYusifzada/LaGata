@@ -8,5 +8,3 @@ smoothing_enabled = true
 
 [node name="HUD" parent="." instance=ExtResource( 1 )]
 visible = false
-
-[connection signal="OptionsChanged" from="HUD" to="HUD" method="_on_HUD_OptionsChanged"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch2.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Enemies/dog/dog.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Enemies/crow/Crow.tscn" type="PackedScene" id=26]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -347,3 +348,6 @@ position = Vector2( 5513, 382 )
 tile_set = ExtResource( 2 )
 format = 1
 tile_data = PoolIntArray( 65584, 29, 0, 65585, 31, 0, 65586, 32, 0, 65587, 33, 0, 65588, 34, 0, 65589, 35, 0, 65590, 29, 0, 65591, 34, 0, 65592, 34, 0, 65593, 34, 0, 65594, 33, 0, 65595, 32, 0, 65596, 33, 0, 65597, 33, 0, 65598, 35, 0, 65599, 31, 0, 65600, 31, 0, 65601, 33, 0, 65602, 33, 0, 65603, 33, 0, 65604, 33, 0, 65605, 33, 0, 65606, 33, 0, 65607, 33, 0, 65632, 29, 0, 65633, 31, 0, 65634, 32, 0, 65635, 34, 0, 65636, 35, 0, 131085, 29, 0, 131086, 31, 0, 131087, 32, 0, 131088, 33, 0, 131089, 34, 0, 131090, 35, 0, 131091, 30, 0, 131092, 29, 0, 131093, 31, 0, 131094, 33, 0, 131095, 33, 0, 131096, 35, 0, 131097, 34, 0, 131098, 34, 0, 131099, 34, 0, 131100, 30, 0, 131101, 30, 0, 131102, 33, 0, 131103, 35, 0, 131104, 34, 0, 131105, 33, 0, 131106, 34, 0, 131107, 34, 0, 131108, 33, 0, 131109, 33, 0, 131110, 32, 0, 131111, 33, 0, 131112, 30, 0, 131113, 34, 0, 131114, 33, 0, 131115, 29, 0, 131116, 29, 0, 131117, 30, 0, 131118, 31, 0, 131119, 33, 0, 131120, 35, 0, 196620, 29, 0, 262155, 29, 0, 393207, 72, 0, 589819, 72, 0 )
+
+[node name="CrowScene" parent="." instance=ExtResource( 26 )]
+position = Vector2( 657, -202 )

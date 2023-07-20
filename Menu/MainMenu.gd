@@ -5,9 +5,11 @@ extends Node2D
 const OptionsMenu=preload("res://Menu/Options.tscn")
 onready var CatYawAnimation=$MenuPoint/CatYaw
 onready var CatYawDelay=$CatYawDelay
+
 onready var BGMusic=$BGMusic
-onready var Continue=$MenuPoint/Continue
 onready var SFXSound=$SFXSound
+
+onready var Continue=$MenuPoint/Continue
 onready var transit=$"/root/Transit"
 
 signal OptionsChanged

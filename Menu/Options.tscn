@@ -28,7 +28,6 @@ margin_bottom = 272.0
 theme = ExtResource( 2 )
 
 [node name="About" type="Tabs" parent="window/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -89,6 +88,7 @@ margin_bottom = 25.0
 text = "SFX"
 
 [node name="Control" type="Tabs" parent="window/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0

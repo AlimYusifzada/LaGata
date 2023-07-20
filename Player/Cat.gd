@@ -14,10 +14,13 @@ onready var Message=$Cam/HUD/MessagePanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
 onready var CoyoteTimer=$coyotetimer
+
 onready var CollectSound=$CollectSound
-onready var MessageTimer=$messagetimer
 onready var JumpSound=$JumpSound
+onready var HeartBeat=$heartbeat
 onready var Meow=$meow
+
+onready var MessageTimer=$messagetimer
 onready var LookDown=$LookDown
 onready var LookEDown=$LookEDown
 onready var LookWDown=$LookWDown
@@ -25,7 +28,6 @@ onready var CheckMWest=$ChkMWest
 onready var CheckMEast=$ChkMEast
 onready var CheckTWest=$ChkTWest
 onready var CheckTEast=$ChkTEast
-onready var HeartBeat=$heartbeat
 onready var DblJumpTimer=$DblJumpTimer
 onready var DblJumpInd=$Cam/HUD/HUDPanel/DblJumpTimerInd
 onready var Bleeding=$bleeding

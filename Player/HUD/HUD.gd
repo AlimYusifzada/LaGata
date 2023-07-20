@@ -12,13 +12,14 @@ onready var PointsCounter=$HUDPanel/PointsCounter
 onready var Ammo=$HUDPanel/Ammo
 onready var AmmoCounter=$HUDPanel/Ammo/AmmoCounter
 
-onready var Options=preload("res://Menu/Options.tscn")
-
 signal OptionsChanged
 signal UpdateHUD
 
-var Praystot=0
+onready var Options=preload("res://Menu/Options.tscn")
 onready var root=get_tree().get_root()
+
+var Praystot=0
+
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()

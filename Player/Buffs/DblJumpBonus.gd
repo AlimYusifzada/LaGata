@@ -14,8 +14,8 @@ func _ready():
 
 func _on_DblJumpBonus_body_entered(body):
 	if body.is_in_group("Cats") && !flag:
-		$bonus.volume_db=Global.SFXVol
-		$bonus.play()
+#		$bonus.volume_db=Global.SFXVol
+#		$bonus.play()
 		Global.DblJumps+=DoubleJumps
 		body.emit_signal("Food",Global.EnemyKillPrize)
 		body.emit_signal("Message","kangaroo %s jump(s)"%(Global.DblJumps-1))
