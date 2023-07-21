@@ -23,7 +23,7 @@ var Praystot=0
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()
-	LvlCounter.text="Lvl="+str(Global.Level)
+	LvlCounter.text=str(Global.Level) #replace number with name
 	pass
 	
 func _input(event):

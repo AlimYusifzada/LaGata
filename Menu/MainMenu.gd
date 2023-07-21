@@ -26,9 +26,9 @@ var hintmessage=[
 	"every door need a key",
 	"rolling is good for avoiding threats but drains stamina",
 	"jumping over the enemy is a bad idea for kittens",
-	"cats rule the world (Jim Davis)",
-	"like all pure creatures cats are practical (William S. Burroughs)",
-	"cat's choose us; we don't own them (Kristin Cast)"
+	"cats rule the world",
+	"like all pure creatures cats are practical",
+	"cat's choose us; we don't own them"
 ]
 
 func _ready():
