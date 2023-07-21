@@ -20,10 +20,16 @@ onready var root=get_tree().get_root()
 
 var Praystot=0
 
+var LevelName=[
+	'Purr-fect Playground',
+	'Land of Whiskers I',
+	'Land of Whiskers II'
+]
+
 func _ready():
 	set_visible(true)
 	Global.loadGameOptions()
-	LvlCounter.text=str(Global.Level) #replace number with name
+	LvlCounter.text=str(LevelName[Global.Level-1]) #replace number with name
 	pass
 	
 func _input(event):

@@ -12,6 +12,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Failed():
+	#replace with failed screen
 	transit.change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.
 
@@ -20,8 +21,13 @@ func _on_Success():
 		#replace with final scene
 		transit.change_scene("res://Menu/MainMenu.tscn")
 	else:
+		# move to the next level
 		Global.Level=NextLevel
 		Global.saveGameState()
-		transit.change_scene((Global.getLevelScene(NextLevel)))
+		var nl=Global.getLevelScene(NextLevel)
+		if nl.length()>0:
+			transit.change_scene(nl)
+		else:
+			transit.change_scene("res://Menu/MainMenu.tscn")
 	pass # Replace with function body.
 

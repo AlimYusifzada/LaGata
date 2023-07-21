@@ -14,7 +14,7 @@ const FLROACH=preload("res://Player/ammo/FlyingRoach.tscn")
 onready var Message=$Cam/HUD/MessagePanel/Message
 onready var PlayerSprite=$AnimatedSprite
 onready var JumperTimer=$jumptimer
-onready var CoyoteTimer=$coyotetimer
+#onready var CoyoteTimer=$coyotetimer
 
 onready var CollectSound=$CollectSound
 onready var JumpSound=$JumpSound
@@ -38,11 +38,11 @@ enum {JUMP,SIT,WALK,RUN,ROLL}
 var Animate_Name=["Jump","Sit","Walk","Run","Roll"]
 var velocity=Vector2()
 var Life:bool=true
-var JumpPossible:bool=false
+var JumpPossible:bool=true
 var RollPossible:bool=true
 var Rolling:bool=false
-var JumpCounter:int=0
-var CoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
+var JumpCounter:int
+#var CoyoteTime:float=0.1 #0.3 is a max value for k.jump more it will be double jump
 var onObject:bool=false
 var canMoveWest:bool=false
 var canMoveEast:bool=false
@@ -74,10 +74,10 @@ func _ready():
 #----------------------------------------
 func _physics_process(delta):
 	Global.TDelta=delta #get delta for touch control
-	CoyoteTimeCheck()
+#	CoyoteTimeCheck()
 	CheckDeath()
-	CheckMovable(delta)
 	#---Ctrl---
+	CheckMovable(delta)
 	CheckJump()
 	CheckRun(delta)
 	#---SLOWER---
@@ -294,15 +294,18 @@ func CheckJump():
 		DblJumpTimer.start()
 	pass
 
-func CoyoteTimeCheck():
-	if !is_on_floor() && CoyoteTimer.is_stopped():
-		CoyoteTimer.start(CoyoteTime)
-	elif is_on_floor():
-		CoyoteTimer.stop()
+#func CoyoteTimeCheck():
+#	if !is_on_floor() && CoyoteTimer.is_stopped():
+#		JumpPossible=true
+#		CoyoteTimer.start(CoyoteTime)
+#	elif is_on_floor():
+#		JumpPossible=true
+#		CoyoteTimer.stop()
 
-func _on_koyotetimer_timeout():
-	JumpPossible=false
-	pass # Replace with function body.
+#func _on_koyotetimer_timeout():
+#	JumpPossible=false
+#	pass # Replace with function body.
+
 func _on_Cat_Jump(power): # unconditional jump signal
 	jumpaction(power)
 	EmitDust()
@@ -311,6 +314,7 @@ func _on_Cat_Jump(power): # unconditional jump signal
 func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
 	pass
+
 func jumpaction(modifier=5): #unconditional jump
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
@@ -337,6 +341,7 @@ func _on_DblJumpTimer_timeout():
 	if BuffTime>0:
 		DblJumpTimer.start()
 	else:
+		BuffTime=15
 		if Global.DblJumps>1:
 			Global.DblJumps-=1
 			emit_signal("Message","kangaroo %s jump(s) left"%(Global.DblJumps-1))

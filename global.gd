@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.1.0"
+const revision="0.1.1"
 
 const main_menu="res://MainMenu.tscn"
 
@@ -78,7 +78,7 @@ func _ready():
 
 func PlayerReset(): # lost all progress
 	KeysRing=[0,0,0] #Yellow,Green,Black keys array
-	Level=1 #current level
+	Level=1 
 	LifesLeft=int(MaxLifes/2)
 	PlayerAlive=true #player life status - default true
 	isChild=true #player status (child/adult). what is a rule of change
@@ -86,6 +86,7 @@ func PlayerReset(): # lost all progress
 	MiceCatches=0
 	Points=0
 	Ammo=0
+	MaxDblJumps=1
 	DblJumps=MaxDblJumps
 	saveGameState()
 	pass
