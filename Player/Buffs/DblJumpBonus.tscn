@@ -56,6 +56,10 @@ margin_top = -31.0
 margin_right = -16.0
 margin_bottom = 2.0
 theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
 text = "1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
