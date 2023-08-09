@@ -522,42 +522,43 @@ position = Vector2( 5921, 958 )
 
 [node name="torch3" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 2081, 1008 )
-frame = 13
+frame = 9
 
 [node name="torch" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1065, 494 )
-frame = 11
+frame = 7
 
 [node name="torch4" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1705, 1150 )
-frame = 11
+frame = 7
 
 [node name="torch5" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 658, 742 )
-frame = 11
+frame = 7
 
 [node name="torch6" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 289, 950 )
-frame = 11
+frame = 7
 
 [node name="torch7" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( -1575, 886 )
-frame = 10
+frame = 6
 
 [node name="torch2" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 4689, 414 )
+frame = 0
 
 [node name="torch8" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 3753, 686 )
-frame = 3
+frame = 13
 
 [node name="torch9" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5676, 406 )
-frame = 3
+frame = 13
 
 [node name="torch10" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5393, 1019 )
-frame = 2
+frame = 12
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
