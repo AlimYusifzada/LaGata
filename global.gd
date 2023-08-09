@@ -3,7 +3,7 @@ extends Node
 #general constants
 const revision="0.1.1"
 
-const main_menu="res://MainMenu.tscn"
+const main_menu="res://Menu/MainMenu.tscn"
 
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
