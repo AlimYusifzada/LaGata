@@ -449,6 +449,7 @@ cast_to = Vector2( 16, 0 )
 collision_mask = 70
 
 [node name="Cam" parent="." instance=ExtResource( 3 )]
+limit_smoothed = true
 
 [node name="Tween" type="Tween" parent="."]
 

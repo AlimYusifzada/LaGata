@@ -45,14 +45,12 @@ func _ready():
 	$MenuPoint/hint.text=hintmessage[randi()%hintmessage.size()]
 
 func _process(delta):
-	var eyep=get_parent().get_viewport().size.x/2
-	var rect_scale=get_parent().get_viewport().size/(get_parent().get_viewport().size/1.2)
-	var calcPos=Vector2(get_parent().get_viewport().size.x/2-eyep/2,0)
-	$MenuPoint.set("position",calcPos)
+	var midscr=get_parent().get_viewport().size.x/2
+
 	$MenuPoint/Continue/LRecord.text="last record: "+str(Global.RecordPoints)
-	var eye_position=get_global_mouse_position().x-eyep
+	var eye_position=get_local_mouse_position().x-midscr
 	if !CatYawAnimation.playing:
-		if eye_position<-100:
+		if eye_position<100:
 			CatYawAnimation.play("lookright")
 			pass
 		elif eye_position>100:

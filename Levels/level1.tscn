@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch1.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch2.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Common/Plants/StaticPlant.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Common/JIgsawTrap/Jigsaw.tscn" type="PackedScene" id=26]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -104,6 +106,12 @@ tile_data = PoolIntArray( -1507239, 238, 0, -1441703, 238, 0, -1376167, 238, 0, 
 position = Vector2( 5641, 398 )
 NextLevel = 2
 
+[node name="StaticObjectsBack" type="Node2D" parent="."]
+
+[node name="StaticPlant" parent="StaticObjectsBack" instance=ExtResource( 25 )]
+position = Vector2( 684, 302 )
+frame = 2
+
 [node name="Coins&Buffs" type="Node2D" parent="."]
 
 [node name="Coin27" parent="Coins&Buffs" instance=ExtResource( 5 )]
@@ -113,16 +121,16 @@ position = Vector2( 161, 294 )
 position = Vector2( 217, 294 )
 
 [node name="Coin54" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4904, 410 )
+position = Vector2( 4337, -2026 )
 
 [node name="Coin55" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4960, 410 )
+position = Vector2( 4393, -2026 )
 
 [node name="Coin56" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5016, 408 )
+position = Vector2( 4449, -2028 )
 
 [node name="Coin57" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5072, 408 )
+position = Vector2( 4505, -2028 )
 
 [node name="Coin58" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 1929, -122 )
@@ -131,7 +139,7 @@ position = Vector2( 1929, -122 )
 position = Vector2( 1873, -122 )
 
 [node name="Coin63" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4962, -380 )
+position = Vector2( 4962, -322 )
 
 [node name="Coin64" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 105, 294 )
@@ -170,7 +178,7 @@ position = Vector2( 5033, 230 )
 position = Vector2( 4966, 230 )
 
 [node name="Coin36" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4963, -234 )
+position = Vector2( 4922, -210 )
 
 [node name="Coin37" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 1801, 62 )
@@ -185,16 +193,16 @@ position = Vector2( 2153, 62 )
 position = Vector2( 4905, 344 )
 
 [node name="Coin47" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4963, -514 )
+position = Vector2( 4963, -434 )
 
 [node name="Coin48" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4962, -450 )
+position = Vector2( 4991, -378 )
 
 [node name="Coin49" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5025, -410 )
+position = Vector2( 5005, -210 )
 
 [node name="Coin50" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4897, -410 )
+position = Vector2( 4932, -378 )
 
 [node name="Coin39" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 1865, 62 )
@@ -222,8 +230,80 @@ position = Vector2( 1769, 14 )
 [node name="Coin43" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 2178, 6 )
 
+[node name="Coin74" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5585, -354 )
+
+[node name="Coin75" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5642, -354 )
+
+[node name="Coin76" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5610, -410 )
+
+[node name="Coin77" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5665, -1106 )
+
+[node name="Coin78" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5665, -1034 )
+
+[node name="Coin79" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5665, -962 )
+
+[node name="Coin80" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5667, -818 )
+
+[node name="Coin81" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5665, -890 )
+
+[node name="Coin82" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5667, -746 )
+
+[node name="Coin83" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5030, -1250 )
+
+[node name="Coin84" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5087, -1250 )
+
+[node name="Coin85" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5055, -1306 )
+
+[node name="Coin86" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4761, -1514 )
+
+[node name="Coin87" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4818, -1514 )
+
+[node name="Coin88" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4786, -1570 )
+
+[node name="Coin89" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5041, -1986 )
+
+[node name="Coin90" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5098, -1986 )
+
+[node name="Coin91" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5066, -2042 )
+
+[node name="Coin92" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4785, -1770 )
+
+[node name="Coin93" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4842, -1770 )
+
+[node name="Coin94" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 4810, -1826 )
+
+[node name="Coin95" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5005, -1642 )
+
+[node name="Coin96" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5062, -1642 )
+
+[node name="Coin97" parent="Coins&Buffs" instance=ExtResource( 5 )]
+position = Vector2( 5030, -1698 )
+
 [node name="Coin51" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4962, -306 )
+position = Vector2( 4962, -258 )
 
 [node name="Coin52" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 5057, 286 )
@@ -238,10 +318,10 @@ position = Vector2( 5161, 350 )
 position = Vector2( 5225, 350 )
 
 [node name="Coin62" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5262.25, 409 )
+position = Vector2( 4480, -2087 )
 
 [node name="Coin68" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5198.25, 407 )
+position = Vector2( 4424, -2087 )
 
 [node name="Coin69" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 5129, 294 )
@@ -253,7 +333,7 @@ position = Vector2( 5265, 294 )
 position = Vector2( 5198, 294 )
 
 [node name="Coin72" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5137, 408 )
+position = Vector2( 4362, -2087 )
 
 [node name="Coin73" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 5289, 350 )
@@ -297,6 +377,9 @@ position = Vector2( -783, 164 )
 position = Vector2( -1055, 230 )
 rotation = -1.28969
 
+[node name="Jigsaw" parent="Traps" instance=ExtResource( 26 )]
+position = Vector2( -351, -314 )
+
 [node name="Movables" type="Node2D" parent="."]
 
 [node name="ShelterMsg" parent="Movables" instance=ExtResource( 8 )]
@@ -338,7 +421,7 @@ position = Vector2( -287, 206 )
 position = Vector2( 81, 55 )
 
 [node name="Mouse2" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( 4377, -2066 )
+position = Vector2( 3961, -1386 )
 
 [node name="Mouse3" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( 3505, -1418 )
@@ -347,6 +430,18 @@ position = Vector2( 3505, -1418 )
 position = Vector2( 5305, -2 )
 
 [node name="StaticObjectsFront" type="Node2D" parent="."]
+
+[node name="StaticPlant" parent="StaticObjectsFront" instance=ExtResource( 25 )]
+position = Vector2( 993, 150 )
+
+[node name="StaticPlant2" parent="StaticObjectsFront" instance=ExtResource( 25 )]
+position = Vector2( 1513, 175 )
+frame = 2
+
+[node name="StaticPlant3" parent="StaticObjectsFront" instance=ExtResource( 25 )]
+position = Vector2( -383, 302 )
+scale = Vector2( 0.535715, 0.545858 )
+frame = 6
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )

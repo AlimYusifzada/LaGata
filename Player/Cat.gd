@@ -4,8 +4,8 @@ extends KinematicBody2D
 const SPEED=350   	#walking speed
 const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-700
-const KITTEN_MODE=1.3 #jumping modifiyer for kitten
-const STAMINA_MAG=2.5
+const KITTEN_MODE=1.5 #jumping modifiyer for kitten
+const STAMINA_MAG=4
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
 
@@ -153,7 +153,7 @@ func i_slip():
 func i_jump():
 	if JumpPossible:
 		if Global.Stamina>20:
-			Global.addStamina(-3)
+			Global.addStamina(-2)
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()

@@ -45,7 +45,7 @@ func Kill():
 	velocity=Vector2(0,0)
 	queue_free()
 
-func _on_DamageZone_body_entered(body):
+func _on_DamageZone_body_entered(body): #disabled
 	if body.is_in_group("Cats") && Life:
 		body.emit_signal("Food",-5)
 		velocity.x*=-1
