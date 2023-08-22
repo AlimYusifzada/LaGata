@@ -23,7 +23,8 @@ var Praystot=0
 var LevelName=[
 	'Purr-fect Playground',
 	'Land of Whiskers I',
-	'Land of Whiskers II'
+	'Land of Whiskers II',
+	'Land of Whiskers III'
 ]
 
 func _ready():

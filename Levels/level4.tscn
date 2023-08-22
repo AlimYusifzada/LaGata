@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Backgrounds/Clouds/cloud4.png" type="Texture" id=1]
+[ext_resource path="res://Backgrounds/CityPark/layer_05_1920 x 1080.png" type="Texture" id=2]
+[ext_resource path="res://Backgrounds/CityPark/layer_04_1920 x 1080.png" type="Texture" id=3]
+[ext_resource path="res://Backgrounds/Skys/sky7.png" type="Texture" id=4]
+[ext_resource path="res://Backgrounds/CityPark/layer_06_1920 x 1080.png" type="Texture" id=5]
+[ext_resource path="res://Backgrounds/Sewers/cave.png" type="Texture" id=6]
+[ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=7]
+[ext_resource path="res://Common/32xt/32xTiles.tres" type="TileSet" id=8]
+[ext_resource path="res://Common/64xt/GroundTiles.tres" type="TileSet" id=9]
+[ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=10]
+[ext_resource path="res://Levels/NextLevelDoor/NextLvlDoor.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Player/Cat.tscn" type="PackedScene" id=12]
+
+[node name="Level4" type="Node2D"]
+position = Vector2( 439, 202 )
+script = ExtResource( 10 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="Parx" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sky7" type="Sprite" parent="Parx/sky"]
+texture = ExtResource( 4 )
+
+[node name="clouds" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.01, 0.1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Cloud4" type="Sprite" parent="Parx/clouds"]
+texture = ExtResource( 1 )
+
+[node name="far" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.2, 0.2 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Layer061920X1080" type="Sprite" parent="Parx/far"]
+texture = ExtResource( 5 )
+
+[node name="mid" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.3, 0.3 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Layer051920X1080" type="Sprite" parent="Parx/mid"]
+texture = ExtResource( 2 )
+
+[node name="close" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Layer041920X1080" type="Sprite" parent="Parx/close"]
+texture = ExtResource( 3 )
+
+[node name="same" type="ParallaxLayer" parent="Parx"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Cave" type="Sprite" parent="Parx/same"]
+position = Vector2( 0, 1080 )
+texture = ExtResource( 6 )
+
+[node name="BackDecoration" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+format = 1
+tile_data = PoolIntArray( -327641, 100, 0, -262105, 100, 0, -196569, 100, 0, -131034, 100, 0, -131033, 100, 0, -65498, 100, 0, 38, 100, 0, 65574, 100, 0, 131110, 100, 0, 196646, 100, 0, 327642, 98, 0, 327643, 98, 0, 327644, 98, 0, 327645, 98, 0, 327646, 96, 0, 327647, 96, 0, 327648, 96, 0, 327649, 96, 0, 327650, 96, 0, 327651, 96, 0, 327652, 96, 0, 327653, 96, 0, 327654, 96, 0, 327655, 98, 0, 327656, 98, 0, 327657, 98, 0, 327658, 98, 0, 327659, 98, 0, 327660, 98, 0, 327661, 98, 0, 327662, 98, 0, 327663, 98, 0, 327664, 98, 0, 327665, 98, 0, 327666, 98, 0, 327667, 98, 0, 327668, 98, 0, 327669, 98, 0, 327670, 98, 0, 327671, 98, 0, 327672, 98, 0, 327673, 98, 0, 327674, 98, 0, 327675, 98, 0, 327676, 98, 0, 327677, 98, 0, 327678, 98, 0, 327679, 98, 0, 262144, 98, 0, 262145, 98, 0, 262146, 98, 0, 262147, 98, 0, 262148, 98, 0, 262149, 98, 0, 262150, 98, 0, 262151, 98, 0, 262152, 98, 0, 262153, 98, 0, 262154, 98, 0, 262155, 98, 0, 262156, 98, 0, 262157, 98, 0, 262158, 98, 0, 262159, 98, 0, 262160, 98, 0, 262161, 98, 0, 262162, 98, 0, 262163, 98, 0, 262164, 98, 0, 262165, 98, 0, 262166, 98, 0, 262167, 98, 0, 262168, 98, 0, 262169, 98, 0, 262170, 98, 0, 262171, 98, 0, 262172, 98, 0, 262173, 98, 0, 262174, 98, 0, 262175, 98, 0, 262176, 98, 0, 262177, 98, 0, 262178, 98, 0, 262179, 98, 0, 262180, 98, 0, 262181, 98, 0, 262182, 98, 0, 262183, 98, 0, 262184, 96, 0, 262185, 96, 0, 262186, 96, 0, 262187, 96, 0, 262188, 96, 0, 262189, 96, 0, 262190, 96, 0, 262191, 96, 0, 262192, 96, 0, 262193, 96, 0, 262194, 96, 0, 262195, 96, 0, 262196, 96, 0, 393178, 98, 0, 393179, 98, 0, 393180, 98, 0, 393181, 98, 0, 393182, 98, 0, 393183, 98, 0, 393184, 98, 0, 393185, 98, 0, 393186, 98, 0, 393187, 98, 0, 393188, 98, 0, 393189, 98, 0, 393190, 98, 0, 393191, 98, 0, 393192, 98, 0, 393193, 98, 0, 393194, 98, 0, 393195, 98, 0, 393196, 98, 0, 393197, 98, 0, 393198, 98, 0, 393199, 98, 0, 393200, 98, 0, 393201, 98, 0, 393202, 98, 0, 393203, 98, 0, 393204, 98, 0, 393205, 98, 0, 393206, 98, 0, 393207, 98, 0, 393208, 98, 0, 393209, 98, 0, 393210, 98, 0, 393211, 98, 0, 393212, 98, 0, 393213, 98, 0, 393214, 98, 0, 393215, 98, 0, 327680, 98, 0, 327681, 98, 0, 327682, 98, 0, 327683, 98, 0, 327684, 98, 0, 327685, 98, 0, 327686, 98, 0, 327687, 98, 0, 327688, 98, 0, 327689, 98, 0, 327690, 98, 0, 327691, 98, 0, 327692, 98, 0, 327693, 98, 0, 327694, 98, 0, 327695, 98, 0, 327696, 98, 0, 327697, 98, 0, 327698, 98, 0, 327699, 98, 0, 327700, 98, 0, 327701, 98, 0, 327702, 98, 0, 327703, 98, 0, 327704, 98, 0, 327705, 98, 0, 327706, 98, 0, 327707, 98, 0, 327708, 98, 0, 327709, 98, 0, 327710, 98, 0, 327711, 98, 0, 327712, 98, 0, 327713, 98, 0, 327714, 98, 0, 327715, 98, 0, 327716, 98, 0, 327717, 98, 0, 327718, 98, 0, 327719, 98, 0, 327720, 98, 0, 327721, 98, 0, 327722, 98, 0, 327723, 98, 0, 327724, 98, 0, 327725, 98, 0, 327726, 98, 0, 327727, 98, 0, 327728, 98, 0, 327729, 98, 0, 327730, 98, 0, 327731, 98, 0, 327732, 98, 0 )
+
+[node name="32xPlatform" type="TileMap" parent="." groups=["Platfiorm"]]
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_layer = 4
+collision_mask = 0
+format = 1
+
+[node name="Ground" type="TileMap" parent="." groups=["Wall"]]
+tile_set = ExtResource( 9 )
+compatibility_mode = true
+collision_layer = 2
+collision_mask = 65
+format = 1
+tile_data = PoolIntArray( -131097, 62, 0, -65561, 62, 0, -25, 62, 0, -65497, 62, 0, 65511, 62, 0, 39, 62, 0, 131047, 62, 0, 65575, 62, 0, 196583, 62, 0, 131111, 62, 0, 262119, 62, 0, 196647, 62, 0, 327655, 96, 0, 327656, 96, 0, 327657, 96, 0, 327658, 96, 0, 327659, 96, 0, 327660, 96, 0, 327661, 96, 0, 327662, 96, 0, 327663, 96, 0, 327664, 96, 0, 327665, 96, 0, 327666, 96, 0, 327667, 96, 0, 327668, 96, 0, 327669, 96, 0, 327670, 96, 0, 327671, 96, 0, 327672, 96, 0, 327673, 96, 0, 327674, 96, 0, 327675, 96, 0, 327676, 96, 0, 327677, 96, 0, 327678, 96, 0, 327679, 96, 0, 262144, 96, 0, 262145, 96, 0, 262146, 96, 0, 262147, 96, 0, 262148, 96, 0, 262149, 96, 0, 262150, 96, 0, 262151, 96, 0, 262152, 96, 0, 262153, 96, 0, 262154, 96, 0, 262155, 96, 0, 262156, 96, 0, 262157, 96, 0, 262158, 96, 0, 262159, 96, 0, 262160, 96, 0, 262161, 96, 0, 262162, 96, 0, 262163, 96, 0, 262164, 96, 0, 262165, 96, 0, 262166, 96, 0, 262167, 96, 0, 262168, 96, 0, 262169, 96, 0, 262170, 96, 0, 262171, 96, 0, 262172, 96, 0, 262173, 96, 0, 262174, 96, 0, 262175, 96, 0, 262176, 96, 0, 262177, 96, 0, 262178, 96, 0, 262179, 96, 0, 262180, 96, 0, 262181, 96, 0, 262182, 96, 0, 262183, 96, 0 )
+
+[node name="NextLvlDoor" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2497, 206 )
+
+[node name="StaticObjectsBack" type="Node2D" parent="."]
+
+[node name="Coins&Buffs" type="Node2D" parent="."]
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Movables" type="Node2D" parent="."]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="Cat" parent="Actors" instance=ExtResource( 12 )]
+position = Vector2( -911, 14 )
+
+[node name="StaticObjectsFront" type="Node2D" parent="."]
+
+[node name="FrontDecoration" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+format = 1
