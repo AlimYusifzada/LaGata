@@ -398,7 +398,7 @@ OpenMessage = "treasure is ahead"
 CloseMessage = "search for the key high above"
 
 [node name="GoldKey2" parent="Movables" instance=ExtResource( 7 )]
-position = Vector2( 4913, -2058 )
+position = Vector2( 4833, -1146 )
 
 [node name="MovableObject" parent="Movables" instance=ExtResource( 13 )]
 position = Vector2( 481, -35 )

@@ -385,7 +385,8 @@ script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 26 )
-animation = "KittenRoll"
+animation = "Jump"
+frame = 4
 
 [node name="jumptimer" type="Timer" parent="."]
 one_shot = true

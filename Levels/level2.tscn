@@ -377,7 +377,7 @@ position = Vector2( 5793, -1258 )
 position = Vector2( 3665, -994 )
 
 [node name="DblJumpBonus" parent="Coins&Buffs" instance=ExtResource( 20 )]
-position = Vector2( 1257, 30 )
+position = Vector2( 425, -294 )
 
 [node name="Traps" type="Node2D" parent="."]
 
@@ -542,7 +542,7 @@ position = Vector2( 905, 158 )
 position = Vector2( 4961, 98 )
 
 [node name="GoldKey" parent="Movables" instance=ExtResource( 7 )]
-position = Vector2( 65, -50 )
+position = Vector2( 1225, 22 )
 
 [node name="ShelterMsg" parent="Movables" instance=ExtResource( 8 )]
 __meta__ = {
@@ -631,42 +631,43 @@ position = Vector2( 5921, 958 )
 
 [node name="torch3" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 2081, 1008 )
-frame = 13
+frame = 12
 
 [node name="torch" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1065, 494 )
-frame = 11
+frame = 10
 
 [node name="torch4" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1705, 1150 )
-frame = 11
+frame = 10
 
 [node name="torch5" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 658, 742 )
-frame = 11
+frame = 10
 
 [node name="torch6" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 425, 1158 )
-frame = 11
+frame = 10
 
 [node name="torch7" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( -1575, 886 )
-frame = 10
+frame = 9
 
 [node name="torch2" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 4689, 414 )
+frame = 3
 
 [node name="torch8" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 3753, 686 )
-frame = 3
+frame = 2
 
 [node name="torch9" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5676, 406 )
-frame = 3
+frame = 2
 
 [node name="torch10" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5393, 1019 )
-frame = 2
+frame = 1
 
 [node name="StaticPlant" parent="StaticObjectsFront" instance=ExtResource( 28 )]
 position = Vector2( 4449, 1158 )
