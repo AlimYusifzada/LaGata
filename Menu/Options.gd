@@ -4,7 +4,7 @@ onready var SFX:AudioStreamPlayer=$SFXTest
 onready var BGM:AudioStreamPlayer=$BGM
 onready var musicscr=$window/TabContainer/Sound/MusicVol
 onready var sfxscr=$window/TabContainer/Sound/SFXVol
-onready var rev=$window/TabContainer/About/revision
+#onready var rev=$window/TabContainer/Info/revision
 onready var ViewOptions=$window/TabContainer/Graphics/ViewOptions
 onready var WinResOptions=$window/TabContainer/Graphics/WinResOptions
 onready var TouchCtrl:CheckButton=$window/TabContainer/Control/TouchCtrl
@@ -16,7 +16,7 @@ func _ready():
 #	scale=Vector2(1.5,1.5)
 	Global.loadGameOptions()
 	Global.loadGameState()
-	rev.text="rev:"+Global.revision
+#	rev.text="rev:"+Global.revision
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
 	TouchCtrl.set_pressed(Global.TouchCtrlEnabled)

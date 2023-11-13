@@ -248,10 +248,10 @@ height = 28.0
 extents = Vector2( 8, 2.5 )
 
 [sub_resource type="RectangleShape2D" id=35]
-extents = Vector2( 64, 8 )
+extents = Vector2( 64, 16 )
 
 [sub_resource type="RectangleShape2D" id=36]
-extents = Vector2( 64, 8 )
+extents = Vector2( 64, 16 )
 
 [node name="xenorc" type="KinematicBody2D" groups=["Enemies"]]
 collision_layer = 32
@@ -284,14 +284,14 @@ shape = SubResource( 21 )
 collision_layer = 0
 
 [node name="CollisionRight" type="CollisionShape2D" parent="AimRight"]
-position = Vector2( 192, 0 )
+position = Vector2( 192, 8 )
 shape = SubResource( 35 )
 
 [node name="AimLeft" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionLeft" type="CollisionShape2D" parent="AimLeft"]
-position = Vector2( -192, 0 )
+position = Vector2( -192, 8 )
 shape = SubResource( 36 )
 
 [node name="RayCastWest" type="RayCast2D" parent="."]

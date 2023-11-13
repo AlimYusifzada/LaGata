@@ -12,6 +12,9 @@ onready var SFXSound=$SFXSound
 onready var Continue=$MenuPoint/Continue
 onready var transit=$"/root/Transit"
 
+onready var crowscene1=$CrowScene1
+onready var crowscene2=$CrowScene2
+
 signal OptionsChanged
 
 var hintmessage=[
@@ -32,6 +35,8 @@ var hintmessage=[
 ]
 
 func _ready():
+	crowscene1.position=Vector2(-100,randi()%400)
+	crowscene2.position=Vector2(650,randi()%400)
 	CatYawDelay.start(rand_range(3.0,15.0))
 	Global.loadGameOptions()
 	Global.loadGameState()

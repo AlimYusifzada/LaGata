@@ -1,11 +1,11 @@
 #cat & kitten
 
 extends KinematicBody2D
-const SPEED=350   	#walking speed
+const SPEED=300   	#walking speed
 const MAXSPEED=500 	#runing speed
 const JUMP_VELOCITY=-700
 const KITTEN_MODE=1.5 #jumping modifiyer for kitten
-const STAMINA_MAG=4
+const STAMINA_MAG=3
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
 
@@ -152,8 +152,12 @@ func i_slip():
 		JumperTimer.start(0.2)
 func i_jump():
 	if JumpPossible:
-		if Global.Stamina>20:
+		if Global.Stamina>40:
 			Global.addStamina(-2)
+		elif Global.Stamina>30:
+			Global.addStamina(-1)
+		elif Global.Stamina>20:
+			Global.addStamina(-0.5)
 		if !is_on_floor():
 			EmitDust()
 		jumpaction()
@@ -260,7 +264,7 @@ func EmitDust():
 	JumpSound.play()
 	pass
 
-func _on_Cat_Food(stamina=1): #kill, eat or catch someting also call on non lethal hit
+func _on_Cat_Food(stamina=5): #kill, eat or catch someting also call on non lethal hit
 	if stamina>0:
 		var oldVal=Global.Points
 		CollectSound.volume_db=Global.SFXVol
@@ -315,13 +319,14 @@ func _on_jumptimer_timeout():
 	set_collision_mask_bit(Global.PLATFORM,true)
 	pass
 
-func jumpaction(modifier=5): #unconditional jump
+func jumpaction(modifier=1): #unconditional jump
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*STAMINA_MAG-abs(velocity.x/3)-modifier
 	if Global.isChild:
 		velocity.y=velocity.y/KITTEN_MODE
 	JumpCounter-=1
+	Global.Points-=1
 	pass
 #end of jumping
 
@@ -349,7 +354,7 @@ func _on_DblJumpTimer_timeout():
 	pass # Replace with function body.
 
 func _on_rollingstaminadrain_timeout():
-	Global.addStamina(-10)
+	Global.addStamina(-15)
 	Rolling=false
 	pass # Replace with function body.
 

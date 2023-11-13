@@ -6,15 +6,18 @@ onready var SHIT=preload("res://Enemies/crow/shit.tscn")
 var pooping=false
 var canpoop=false
 var poopspawn=Vector2()
+
 onready var CrowAnimation=$AnimationPlayer
 onready var Feathers=$feathers
 onready var Scream=$Crow/scream
 onready var CheckWalls=$Crow/LookDown
 onready var fart=$Crow/fart
+onready var crowbody=$Crow
 
 func _ready():
 	poopspawn.y=position.y
-	scale=Vector2(0.6,0.6)
+	if scale.x>=1 or scale.y>=1:
+		scale=Vector2(0.6,0.6)
 	CrowAnimation.set_speed_scale(rand_range(0.7,1.0))
 	pass
 	

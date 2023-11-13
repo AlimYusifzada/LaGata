@@ -325,7 +325,7 @@ frame = 7
 [node name="Plant" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( -1575, -210 )
 scale = Vector2( 0.626316, 0.585106 )
-frame = 23
+frame = 57
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 7 )

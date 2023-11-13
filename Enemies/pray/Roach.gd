@@ -59,7 +59,8 @@ func _on_CatchZone_body_entered(body):
 		bl.position=position
 		bl.cloud="brown"
 		get_parent().add_child(bl)
-		Global.MiceCatches+=1
+		Global.Points+=10
+#		Global.MiceCatches+=1
 		body.emit_signal("Food")
 		Global.Ammo+=5
 		Kill()
