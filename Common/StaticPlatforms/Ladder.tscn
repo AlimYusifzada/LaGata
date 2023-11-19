@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Common/Textures/Ladder.png" type="Texture" id=1]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 8.0
-height = 48.0
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 32 )
 
 [node name="Ladder" type="StaticBody2D"]
 collision_layer = 4

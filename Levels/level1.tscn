@@ -145,22 +145,22 @@ position = Vector2( 4962, -322 )
 position = Vector2( 663, -94 )
 
 [node name="Coin26" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 480, -283 )
+position = Vector2( 737, -100 )
 
 [node name="Coin22" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 480, -212 )
 
 [node name="Coin24" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 480, -354 )
+position = Vector2( 737, -171 )
 
 [node name="Coin28" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4929, 240 )
+position = Vector2( 5037, 1168 )
 
 [node name="Coin29" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 4993, 240 )
+position = Vector2( 5101, 1168 )
 
 [node name="Coin30" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5057, 240 )
+position = Vector2( 5165, 1168 )
 
 [node name="Coin31" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 5281, 644 )
@@ -169,13 +169,13 @@ position = Vector2( 5281, 644 )
 position = Vector2( 5868.25, 346 )
 
 [node name="Coin33" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5560, 238 )
+position = Vector2( 6227, 846 )
 
 [node name="Coin34" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5696, 238 )
+position = Vector2( 6363, 846 )
 
 [node name="Coin35" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5629, 238 )
+position = Vector2( 6296, 846 )
 
 [node name="Coin36" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 4922, -210 )
@@ -360,16 +360,16 @@ position = Vector2( 5030, -1698 )
 position = Vector2( 4962, -258 )
 
 [node name="Coin52" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5121, 240 )
+position = Vector2( 5229, 1168 )
 
 [node name="Coin44" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 5338, 644 )
 
 [node name="Coin59" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5374, 240 )
+position = Vector2( 6041, 848 )
 
 [node name="Coin61" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5438, 240 )
+position = Vector2( 6105, 848 )
 
 [node name="Coin62" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 4480, -2087 )
@@ -378,19 +378,19 @@ position = Vector2( 4480, -2087 )
 position = Vector2( 4424, -2087 )
 
 [node name="Coin69" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5188, 240 )
+position = Vector2( 5296, 1168 )
 
 [node name="Coin70" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5316, 238 )
+position = Vector2( 5424, 1166 )
 
 [node name="Coin71" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5257, 240 )
+position = Vector2( 5365, 1168 )
 
 [node name="Coin72" parent="Coins&Buffs" instance=ExtResource( 5 )]
 position = Vector2( 4362, -2087 )
 
 [node name="Coin73" parent="Coins&Buffs" instance=ExtResource( 5 )]
-position = Vector2( 5494, 238 )
+position = Vector2( 6161, 846 )
 
 [node name="DblJumpBonus" parent="Coins&Buffs" instance=ExtResource( 20 )]
 position = Vector2( 361, 158 )
@@ -481,9 +481,35 @@ position = Vector2( 3961, -1386 )
 position = Vector2( 3505, -1418 )
 
 [node name="Mouse4" parent="Actors" instance=ExtResource( 19 )]
-position = Vector2( 5305, -2 )
+position = Vector2( 5232, 6 )
+
+[node name="Mouse5" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 6257, 534 )
+
+[node name="Mouse6" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 5441, 422 )
+
+[node name="Mouse7" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 6169, 830 )
+
+[node name="Mouse8" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 5793, 1774 )
+
+[node name="Mouse9" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 5793, 1774 )
+
+[node name="Mouse10" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 5793, 1774 )
 
 [node name="StaticObjectsFront" type="Node2D" parent="."]
+
+[node name="StaticPlant4" parent="StaticObjectsFront" instance=ExtResource( 25 )]
+position = Vector2( 881, 190 )
+frame = 9
+
+[node name="StaticPlant5" parent="StaticObjectsFront" instance=ExtResource( 25 )]
+position = Vector2( 3145, 126 )
+frame = 11
 
 [node name="StaticPlant" parent="StaticObjectsFront" instance=ExtResource( 25 )]
 position = Vector2( 993, 150 )
