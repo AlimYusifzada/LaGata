@@ -763,6 +763,18 @@ color = Color( 0.423529, 0.462745, 0.905882, 1 )
 [node name="Ladder3" parent="Platforms" instance=ExtResource( 9 )]
 position = Vector2( 553, -82 )
 
+[node name="Ladder4" parent="Platforms" instance=ExtResource( 9 )]
+position = Vector2( 4057, 830 )
+
+[node name="Ladder9" parent="Platforms" instance=ExtResource( 9 )]
+position = Vector2( 4057, 958 )
+
+[node name="Ladder10" parent="Platforms" instance=ExtResource( 9 )]
+position = Vector2( 4057, 1022 )
+
+[node name="Ladder11" parent="Platforms" instance=ExtResource( 9 )]
+position = Vector2( 4057, 894 )
+
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Mouse" parent="Actors" instance=ExtResource( 19 )]
@@ -772,7 +784,7 @@ position = Vector2( -103, -274 )
 position = Vector2( -199, 182 )
 
 [node name="Cat" parent="Actors" instance=ExtResource( 4 )]
-position = Vector2( 57, 118 )
+position = Vector2( 57, -50 )
 
 [node name="xenassasin" parent="Actors" instance=ExtResource( 26 )]
 position = Vector2( 5177, 238 )
@@ -795,47 +807,53 @@ position = Vector2( 5593, 870 )
 [node name="Mouse7" parent="Actors" instance=ExtResource( 19 )]
 position = Vector2( 5921, 958 )
 
+[node name="Mouse8" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 2337, 1008 )
+
+[node name="Mouse9" parent="Actors" instance=ExtResource( 19 )]
+position = Vector2( 1865, 982 )
+
 [node name="StaticObjectsFront" type="Node2D" parent="."]
 
 [node name="torch3" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 2081, 1008 )
-frame = 2
+frame = 3
 
 [node name="torch" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1065, 494 )
-frame = 0
+frame = 1
 
 [node name="torch4" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 1705, 1150 )
-frame = 0
+frame = 1
 
 [node name="torch5" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 658, 742 )
-frame = 0
+frame = 1
 
 [node name="torch6" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( -735, 934 )
-frame = 0
+frame = 1
 
 [node name="torch7" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( -1575, 886 )
-frame = 13
+frame = 0
 
 [node name="torch2" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 4689, 414 )
-frame = 7
+frame = 8
 
 [node name="torch8" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 3753, 686 )
-frame = 6
+frame = 7
 
 [node name="torch9" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5676, 406 )
-frame = 6
+frame = 7
 
 [node name="torch10" parent="StaticObjectsFront" instance=ExtResource( 27 )]
 position = Vector2( 5393, 1019 )
-frame = 5
+frame = 6
 
 [node name="StaticPlant" parent="StaticObjectsFront" instance=ExtResource( 28 )]
 position = Vector2( 4449, 1158 )
