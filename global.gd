@@ -1,13 +1,32 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="0.1.1"
+const revision="rev:0.1.1 Nov,2023"
 
 const main_menu="res://Menu/MainMenu.tscn"
 
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
-
+const hint_message=[
+	"more stamina, stronger jumps",
+	"adult cats gain less stamina",
+	"kittens are weak, and jump low",
+	"if stamina bar fullfilled, kitten become a cat",
+	"cat become kitten, if she die",
+	"all cats can have seven lifes,... maximum",
+	"roachers are nasty, but can help shoot monsters down",
+	"rats are dangerous, don't let them bite you",
+	"every door need a key",
+	"rolling is good for avoiding threats but drains stamina",
+	"jumping over the enemy is a bad idea for kittens",
+	"cats rule the world",
+	"like all pure creatures cats are practical",
+	"cat's choose us; we don't own them",
+	"click on the cat head to call the menu or press ESC",
+	"outer circle shows cat's stamina, inner circle shows cat's life",
+	"take a running start before jumping to jump further",
+	"each jump takes away stamina, each caught pray returns it",
+]
 #const MindTimerSet=.5
 const GRAVITY = 1500
 const TerminateVelocity=2000 #kill player

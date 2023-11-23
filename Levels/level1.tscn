@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Common/DeadlyBranches/DeadlyBranch.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Common/Plants/StaticPlant.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Common/JIgsawTrap/Jigsaw.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Player/Buffs/Vial.tscn" type="PackedScene" id=27]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -527,3 +528,7 @@ frame = 6
 tile_set = ExtResource( 2 )
 format = 1
 tile_data = PoolIntArray( 196620, 37, 0, 196678, 34, 0, 262155, 37, 0, 262159, 34, 0, 262163, 34, 0, 262187, 34, 0, 262210, 34, 0, 393207, 34, 0, 327693, 34, 0, 327715, 34, 0 )
+
+[node name="Vial" parent="." instance=ExtResource( 27 )]
+position = Vector2( -279, 38 )
+VialType = 2

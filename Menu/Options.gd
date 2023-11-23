@@ -12,13 +12,16 @@ onready var TouchCtrl:CheckButton=$window/TabContainer/Control/TouchCtrl
 onready var transit=$"/root/Transit"
 var Size=Vector2()
 
+
 func _ready():
-#	scale=Vector2(1.5,1.5)
+	$window/TabContainer/Info/tipstext.text=Global.hint_message[randi()%Global.hint_message.size()]
+	$window/TabContainer/Info/verInfo.text=Global.revision
 	Global.loadGameOptions()
 	Global.loadGameState()
-#	rev.text="rev:"+Global.revision
+	
 	SFX.volume_db=Global.SFXVol
 	BGM.volume_db=Global.MusicVol
+	
 	TouchCtrl.set_pressed(Global.TouchCtrlEnabled)
 	sfxscr.set_value(Global.SFXVol)
 	musicscr.set_value(Global.MusicVol)
@@ -32,6 +35,7 @@ func _ready():
 	WinResOptions.add_item("1024 x 600",1)
 	WinResOptions.add_item("1280 x 720",2)
 	WinResOptions.add_item("1920 x 1080",3)
+	
 	match OS.get_window_size():
 		Vector2(864,480): WinResOptions.select(0)
 		Vector2(1024,600): WinResOptions.select(1)
@@ -39,6 +43,8 @@ func _ready():
 		Vector2(1920,1080): WinResOptions.select(3)
 			
 	set_position(get_parent().get_viewport().size/2-$window.get_viewport().size*scale.x/2)
+	for i in range(1,10):
+		$window/TabContainer/Graphics/StartLevel.add_item("Level "+str(i),i)
 	pass
 
 func _on_CancelButton_pressed():
@@ -99,3 +105,10 @@ func _on_WinResOptions_item_selected(index):
 			OS.set_window_size(Vector2(1920,1080))
 		-1: pass
 	set_position(get_parent().get_viewport().size/2-$window.get_viewport().size*scale.x/2)
+
+
+func _on_StartLevel_item_selected(index):
+	Global.Level=index+1
+	Global.saveGameState()
+	_on_MainMenuButton_pressed()
+	pass # Replace with function body.

@@ -1,8 +1,10 @@
 extends Area2D
-
+var maxVialType=1
 export var VialType=0 #0- stamina 1- life
 
 func _ready():
+	if VialType>maxVialType:
+		VialType=maxVialType
 	$AnimatedSprite.set_frame(VialType)
 	$Tween.interpolate_property($".",
 	"modulate",

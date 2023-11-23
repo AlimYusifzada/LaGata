@@ -17,23 +17,6 @@ onready var crowscene2=$CrowScene2
 
 signal OptionsChanged
 
-var hintmessage=[
-	"more stamina, stronger jumps",
-	"adult cats gain less stamina",
-	"kittens are weak, and jump low",
-	"if stamina bar fullfilled, kitten become a cat",
-	"cat become kitten, if she die",
-	"all cats can have seven lifes,... maximum",
-	"roachers are nasty, but can help shoot monsters down",
-	"rats are dangerous, don't let them bite you",
-	"every door need a key",
-	"rolling is good for avoiding threats but drains stamina",
-	"jumping over the enemy is a bad idea for kittens",
-	"cats rule the world",
-	"like all pure creatures cats are practical",
-	"cat's choose us; we don't own them"
-]
-
 func _ready():
 	crowscene1.position=Vector2(-100,randi()%400)
 	crowscene2.position=Vector2(650,randi()%400)
@@ -47,7 +30,8 @@ func _ready():
 		Continue.disabled=true
 	else:
 		Continue.disabled=false
-	$MenuPoint/hint.text=hintmessage[randi()%hintmessage.size()]
+	
+	$MenuPoint/hint.text=Global.hint_message[randi()%Global.hint_message.size()]
 
 func _process(delta):
 	var midscr=get_parent().get_viewport().size.x/2
@@ -99,7 +83,7 @@ func _on_CatYawDelay_timeout():
 func _on_CatYaw_animation_finished():
 	CatYawAnimation.stop()
 	CatYawDelay.start(rand_range(3.0,15.0))
-	$MenuPoint/hint.text=hintmessage[randi()%hintmessage.size()]
+	$MenuPoint/hint.text=Global.hint_message[randi()%Global.hint_message.size()]
 	pass # Replace with function body.
 
 func _on_Options_pressed():
@@ -127,7 +111,7 @@ func _on_Exit_mouse_entered():
 	pass # Replace with function body.
 
 func _on_Options_mouse_entered():
-	$MenuPoint/message.text="game options and other..."
+	$MenuPoint/message.text="game options (use ESC to call it in game)"
 	pass # Replace with function body.
 
 func _on_StartNewGame_mouse_exited():

@@ -3,9 +3,9 @@
 extends KinematicBody2D
 const SPEED=300   	#walking speed
 const MAXSPEED=500 	#runing speed
-const JUMP_VELOCITY=-700
-const KITTEN_MODE=1.5 #jumping modifiyer for kitten
-const STAMINA_MAG=3
+const JUMP_VELOCITY=-600
+const KITTEN_MODE=1.3 #jumping modifiyer for kitten
+#const STAMINA_MAG=1
 const SCALE=Vector2(0.5,0.5)
 const Animate_Mode="Kitten" #Cat
 
@@ -322,7 +322,7 @@ func _on_jumptimer_timeout():
 func jumpaction(modifier=1): #unconditional jump
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
-	velocity.y=JUMP_VELOCITY-Global.Stamina*STAMINA_MAG-abs(velocity.x/3)-modifier
+	velocity.y=JUMP_VELOCITY-Global.Stamina*KITTEN_MODE-abs(velocity.x/3)-modifier
 	if Global.isChild:
 		velocity.y=velocity.y/KITTEN_MODE
 	JumpCounter-=1
