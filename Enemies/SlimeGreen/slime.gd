@@ -4,7 +4,7 @@ extends KinematicBody2D
 
 export var MINSPEED=10
 export var JUMP_VELOCITY=-700
-export var BounceJump=100
+export var BounceJump=150
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
@@ -55,21 +55,17 @@ func animation():
 		XenAnimation.flip_h=true
 		
 func move():
-	var col=get_last_slide_collision()
-	if col:
-		if col.is_colliding().is_in_group("Cats"):
-#			set_collision_mask_bit(Global.PLATFORM,false)
-			velocity.y=JUMP_VELOCITY
-			pass
-	if is_on_floor() && is_wall():
+#	var col=get_last_slide_collision()
+	if is_wall():
 		velocity.x*=sidewall()
-	elif !is_on_floor():#&& randf()>JumpOffProb && MindTimer.is_stopped():
-		velocity.x*=-1
+#	elif !is_on_floor():#&& randf()>JumpOffProb && MindTimer.is_stopped():
+#		velocity.x*=-1
 		pass
 
 func is_wall():
 	return WallOnEast.is_colliding() || WallOnWest.is_colliding()
 	pass
+	
 func sidewall():
 	if WallOnEast.is_colliding():
 		if velocity.x<0:

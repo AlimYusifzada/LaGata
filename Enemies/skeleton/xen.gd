@@ -144,9 +144,9 @@ func CheckHit():
 	var cEast=HitEast.is_colliding()
 	var cWest=HitWest.is_colliding()
 	if cWest && !hitting:
-		cWest.emit_signal("Food",-Global.EnemyKillPrize)
+		Global.getPlayer().emit_signal("Food",-Global.EnemyKillPrize)
 	if cEast && !hitting:
-		cEast.emit_signal("Food",-Global.EnemyKillPrize)
+		Global.getPlayer().emit_signal("Food",-Global.EnemyKillPrize)
 	if (cWest || cEast):
 		velocity.x=0
 		hitting=true
