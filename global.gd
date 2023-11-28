@@ -50,7 +50,7 @@ const EnemyJumpOff=1
 var MusicVol=0
 var SFXVol=0
 var MasterVol=0
-var TouchCtrlEnabled=true
+var TouchCtrlEnabled=false
 #var JoystickMove=Vector2()
 #var JoystickJump=false
 var DblJumps:int

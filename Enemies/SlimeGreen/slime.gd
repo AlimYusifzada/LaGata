@@ -2,9 +2,9 @@
 
 extends KinematicBody2D
 
-export var MINSPEED=10
-export var JUMP_VELOCITY=-700
-export var BounceJump=150
+export var MINSPEED=50
+#export var JUMP_VELOCITY=-700
+export var BounceJump=100
 const SCALE=Vector2(1,1)
 var velocity=Vector2()
 var Speed=0.0
@@ -19,7 +19,8 @@ signal Die
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_scale(SCALE)
-	Speed=rand_range(MINSPEED,MINSPEED+100)
+	Speed=rand_range(MINSPEED,MINSPEED+200)
+	BounceJump=BounceJump+Speed
 	XenAnimation.speed_scale=Speed/(MINSPEED/1.5)
 	XenAnimation.play("Run")
 	velocity.x=Speed
