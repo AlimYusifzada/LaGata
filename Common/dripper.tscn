@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="dripper2" type="CPUParticles2D"]
+position = Vector2( -71, 70 )
+amount = 1
+scale_amount = 5.0
+color = Color( 0.423529, 0.462745, 0.905882, 1 )

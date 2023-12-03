@@ -28,6 +28,7 @@ motion_mirroring = Vector2( 1920, 1080 )
 
 [node name="Sky7" type="Sprite" parent="Parx/sky"]
 texture = ExtResource( 9 )
+offset = Vector2( 64, 0 )
 
 [node name="clouds" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.01, 0.1 )
@@ -35,6 +36,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Cloud4" type="Sprite" parent="Parx/clouds"]
 texture = ExtResource( 5 )
+offset = Vector2( 64, 0 )
 
 [node name="far" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.2, 0.2 )
@@ -42,6 +44,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Layer061920X1080" type="Sprite" parent="Parx/far"]
 texture = ExtResource( 10 )
+offset = Vector2( 64, 0 )
 
 [node name="mid" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.3, 0.3 )
@@ -49,6 +52,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Layer051920X1080" type="Sprite" parent="Parx/mid"]
 texture = ExtResource( 6 )
+offset = Vector2( 64, 0 )
 
 [node name="close" type="ParallaxLayer" parent="Parx"]
 motion_scale = Vector2( 0.4, 0.4 )
@@ -56,13 +60,16 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Layer041920X1080" type="Sprite" parent="Parx/close"]
 texture = ExtResource( 8 )
+offset = Vector2( 64, 0 )
 
 [node name="same" type="ParallaxLayer" parent="Parx"]
+motion_scale = Vector2( 0.9, 1 )
 motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Cave" type="Sprite" parent="Parx/same"]
 position = Vector2( 0, 1080 )
 texture = ExtResource( 11 )
+offset = Vector2( 64, 0 )
 
 [node name="BackDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )

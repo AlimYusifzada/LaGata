@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Levels/LevelGDS.gd" type="Script" id=1]
 [ext_resource path="res://Common/64xt/DecorTiles.tres" type="TileSet" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Player/Buffs/Vial.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Enemies/SlimeGreen/slime.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Enemies/spider/spider.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Common/dripper.tscn" type="PackedScene" id=33]
 
 [node name="Level" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -122,71 +123,67 @@ NextLevel = 3
 
 [node name="torch3" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 2692, 1158 )
-frame = 2
+frame = 5
 
 [node name="torch13" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3281, 1942 )
-frame = 2
+frame = 5
 
 [node name="torch15" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3281, 1518 )
-frame = 1
 
 [node name="torch16" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3809, 1366 )
-frame = 1
 
 [node name="torch17" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 2793, 1358 )
-frame = 1
 
 [node name="torch14" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3281, 2318 )
-frame = 1
 
 [node name="torch" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 1065, 494 )
-frame = 0
+frame = 3
 
 [node name="torch4" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 1665, 1166 )
-frame = 0
+frame = 3
 
 [node name="torch5" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 617, 766 )
-frame = 0
+frame = 3
 
 [node name="torch6" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( -735, 962 )
-frame = 0
+frame = 3
 
 [node name="torch7" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( -1639, 862 )
-frame = 13
+frame = 2
 
 [node name="torch2" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 5281, 358 )
-frame = 7
+frame = 10
 
 [node name="torch8" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3145, 414 )
-frame = 6
+frame = 9
 
 [node name="torch12" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 4345, 425 )
-frame = 5
+frame = 8
 
 [node name="torch11" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 3705, 427 )
-frame = 6
+frame = 9
 
 [node name="torch9" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 4703, -18 )
-frame = 6
+frame = 9
 
 [node name="torch10" parent="StaticObjectBack" instance=ExtResource( 27 )]
 position = Vector2( 5393, 998 )
-frame = 5
+frame = 8
 
 [node name="Coins&Buffs" type="Node2D" parent="."]
 
@@ -905,11 +902,7 @@ position = Vector2( 553, -18 )
 [node name="Ladder5" parent="Platforms" instance=ExtResource( 9 )]
 position = Vector2( 553, 46 )
 
-[node name="dripper2" type="CPUParticles2D" parent="Platforms"]
-position = Vector2( -71, 70 )
-amount = 1
-scale_amount = 5.0
-color = Color( 0.423529, 0.462745, 0.905882, 1 )
+[node name="dripper2" parent="Platforms" instance=ExtResource( 33 )]
 
 [node name="Ladder3" parent="Platforms" instance=ExtResource( 9 )]
 position = Vector2( 553, -82 )
@@ -1007,7 +1000,7 @@ position = Vector2( 49, -290 )
 position = Vector2( -199, 182 )
 
 [node name="Cat" parent="Actors" instance=ExtResource( 4 )]
-position = Vector2( 2985, 1734 )
+position = Vector2( 73, -97 )
 
 [node name="xenassasin" parent="Actors" instance=ExtResource( 26 )]
 position = Vector2( 5177, 238 )

@@ -1,7 +1,7 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="rev:0.1.1 Nov,2023"
+const revision="(demo) rev:0.1.2 Nov,2023"
 
 const main_menu="res://Menu/MainMenu.tscn"
 
@@ -37,7 +37,7 @@ var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level:int=1 #current level
 var LifesLeft:int
 var PlayerAlive:bool=true #player life status - default true
-var isChild:bool=true #player status (child/adult)
+var isChild:bool=false #player status (child/adult)
 var Stamina=20 setget setStamina, getStamina
 var MiceCatches:int #remove
 var Points:int
