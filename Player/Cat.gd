@@ -320,6 +320,8 @@ func _on_jumptimer_timeout():
 	pass
 
 func jumpaction(modifier=1): #unconditional jump
+	if Rolling:
+		modifier+=300
 	JumperTimer.start(0.5) # start timer to go throgh platforms
 	set_collision_mask_bit(Global.PLATFORM,false)
 	velocity.y=JUMP_VELOCITY-Global.Stamina*KITTEN_MODE-abs(velocity.x/3)-modifier

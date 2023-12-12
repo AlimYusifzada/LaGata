@@ -1,13 +1,14 @@
 #global - autoload on startup
 extends Node
 #general constants
-const revision="(demo) rev:0.1.2 Nov,2023"
+const revision="(demo) rev:0.1.3 Nov,2023"
 
 const main_menu="res://Menu/MainMenu.tscn"
 
 const file_GameState="user://gamestate"
 const file_GameOptions="user://gameoptions"
 const hint_message=[
+	"try rolling to jump higher",
 	"more stamina, stronger jumps",
 	"adult cats gain less stamina",
 	"kittens are weak, and jump low",
@@ -19,7 +20,7 @@ const hint_message=[
 	"every door need a key",
 	"rolling is good for avoiding threats but drains stamina",
 	"jumping over the enemy is a bad idea for kittens",
-	"cats rule the world",
+	"cats rule the world!",
 	"like all pure creatures cats are practical",
 	"cat's choose us; we don't own them",
 	"click on the cat head to call the menu or press ESC",

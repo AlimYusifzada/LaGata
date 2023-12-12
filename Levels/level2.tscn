@@ -518,7 +518,7 @@ position = Vector2( 2568, 318 )
 position = Vector2( 2632, 318 )
 
 [node name="Water37" parent="Traps" instance=ExtResource( 13 )]
-position = Vector2( 2697, 318 )
+position = Vector2( 2696, 318 )
 
 [node name="Water44" parent="Traps" instance=ExtResource( 13 )]
 position = Vector2( 2761, 318 )
