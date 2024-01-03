@@ -424,56 +424,55 @@ position = Vector2( 2913, 1662 )
 
 [node name="torch" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 1891, 121 )
-frame = 9
+frame = 5
 
 [node name="torch8" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( -1375, 138 )
-frame = 8
 
 [node name="torch7" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 1636, -203 )
-frame = 8
 
 [node name="torch2" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 287, 126 )
-frame = 8
 
 [node name="torch3" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 921, 88 )
-frame = 8
 
 [node name="torch4" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 1121, 85 )
-frame = 7
+frame = 3
 
 [node name="torch5" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 2078, 120 )
-frame = 7
+frame = 3
 
 [node name="torch6" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 2274, 119 )
-frame = 6
+frame = 2
 
 [node name="torch9" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 3800, 532 )
-frame = 5
+frame = 1
 
 [node name="torch12" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 2725, 526 )
+frame = 0
 
 [node name="torch10" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 3471, 1121 )
-frame = 5
+frame = 1
 
 [node name="torch11" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 3244, 1489 )
+frame = 0
 
 [node name="torch14" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 3792, 1696 )
-frame = 3
+frame = 13
 
 [node name="torch13" parent="Lights" instance=ExtResource( 27 )]
 position = Vector2( 2907, 1856 )
+frame = 0
 
 [node name="Actors" type="Node2D" parent="."]
 
@@ -590,36 +589,36 @@ frame = 7
 [node name="Plant" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( -1575, -210 )
 scale = Vector2( 0.626316, 0.585106 )
-frame = 73
+frame = 55
 
 [node name="Plant4" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( -391, -193 )
 scale = Vector2( 0.626316, 0.585106 )
 animation = "Plant5"
-frame = 49
+frame = 31
 
 [node name="Plant5" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( 361, -98 )
 scale = Vector2( 0.626316, 0.585106 )
 animation = "Plant5"
-frame = 48
+frame = 30
 
 [node name="Plant6" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( 1489, 86 )
 scale = Vector2( 0.626316, 0.585106 )
 animation = "Plant5"
-frame = 48
+frame = 30
 
 [node name="Plant2" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( -375, -1157 )
 scale = Vector2( 0.626316, 0.585106 )
-frame = 73
+frame = 55
 
 [node name="Plant3" parent="StaticObjectsFront" instance=ExtResource( 20 )]
 position = Vector2( -1223, -1154 )
 scale = Vector2( 0.626316, 0.585106 )
 animation = "Plant5"
-frame = 32
+frame = 14
 
 [node name="FrontDecoration" type="TileMap" parent="."]
 tile_set = ExtResource( 7 )
