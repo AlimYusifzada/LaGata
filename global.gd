@@ -38,7 +38,7 @@ var KeysRing=[0,0,0] #Yellow,Green,Black keys array
 var Level:int=1 #current level
 var LifesLeft:int
 var PlayerAlive:bool=true #player life status - default true
-var isChild:bool=false #player status (child/adult)
+var isChild:bool=true #player status (child/adult)
 var Stamina=20 setget setStamina, getStamina
 var MiceCatches:int #remove
 var Points:int

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Backgrounds/Clouds/cloud4.png" type="Texture" id=1]
 [ext_resource path="res://Backgrounds/CityPark/layer_05_1920 x 1080.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Common/Lights&Decoration/torch.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Player/Buffs/Vial.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Common/MovableObjects/MovableBlock.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Common/StaticPlatforms/Ladder.tscn" type="PackedScene" id=16]
 
 [node name="Level4" type="Node2D"]
 position = Vector2( 439, 202 )
@@ -86,7 +87,7 @@ cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 collision_layer = 4
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -2490302, 17, 0, -2490301, 17, 0, -2490300, 17, 0, -2490299, 17, 0, -1638431, 17, 0, -1638430, 17, 0, -1638417, 17, 0, -1638416, 17, 0, -1638403, 17, 0, -1638402, 17, 0, -1703925, 17, 0, -1703924, 17, 0, -1703911, 17, 0, -1703910, 17, 0, -1703897, 17, 0, -1703896, 17, 0, -1703883, 17, 0, -1703882, 17, 0, -1638334, 17, 0, -1638333, 17, 0, -1638332, 17, 0, -1638331, 17, 0, -1245225, 17, 0, -917543, 17, 0, -917542, 17, 0, -917541, 17, 0, -917540, 17, 0, -589868, 17, 0, -589867, 17, 0, -589856, 17, 0, -589855, 17, 0, -589854, 17, 0, -589853, 17, 0, -589842, 17, 0, -589841, 17, 0, -589840, 17, 0, -589839, 17, 0, -589828, 17, 0, -589827, 17, 0, -589826, 17, 0, -589825, 17, 0, -655350, 17, 0, -655349, 17, 0, -655348, 17, 0, -655347, 17, 0, -655336, 17, 0, -655335, 17, 0, -655334, 17, 0, -655333, 17, 0, -655322, 17, 0, -655321, 17, 0, -655320, 17, 0, -655319, 17, 0, -655308, 17, 0, -655307, 17, 0, -655306, 17, 0, -655305, 17, 0, -655294, 17, 0, -655293, 17, 0, -655292, 17, 0, -655291, 17, 0, 196567, 21, 0, 196568, 21, 0, 196569, 21, 0, 196570, 21, 0, 196571, 21, 0, 196572, 21, 0, 196573, 21, 0, 196574, 21, 0, 196581, 21, 0, 196582, 21, 0, 196583, 21, 0, 196584, 21, 0, 196585, 21, 0, 196586, 21, 0, 196587, 21, 0, 196588, 21, 0, 131073, 21, 0, 131074, 21, 0, 131075, 21, 0, 131076, 21, 0, 131077, 21, 0, 131078, 21, 0, 131079, 21, 0, 131080, 21, 0, 131115, 21, 0, 131116, 21, 0, 131117, 21, 0, 131118, 21, 0, 131119, 21, 0, 131120, 21, 0, 131121, 21, 0, 131122, 21, 0, 131129, 21, 0, 131130, 21, 0, 131131, 21, 0, 131132, 21, 0, 131133, 21, 0, 131134, 21, 0, 131135, 21, 0, 131136, 21, 0 )
+tile_data = PoolIntArray( -2555886, 18, 0, -2555885, 18, 0, -2490304, 34, 0, -2490303, 34, 0, -2490302, 17, 0, -2490301, 17, 0, -2490300, 17, 0, -2490299, 17, 0, -2097189, 18, 0, -1638442, 34, 0, -1638432, 34, 0, -1638431, 17, 0, -1638430, 17, 0, -1638429, 34, 0, -1638418, 34, 0, -1638417, 17, 0, -1638416, 17, 0, -1638415, 34, 0, -1638404, 34, 0, -1638403, 17, 0, -1638402, 17, 0, -1638401, 34, 0, -1703926, 34, 0, -1703925, 17, 0, -1703924, 17, 0, -1703923, 34, 0, -1703912, 34, 0, -1703911, 17, 0, -1703910, 17, 0, -1703909, 34, 0, -1703898, 34, 0, -1703897, 17, 0, -1703896, 17, 0, -1703895, 34, 0, -1703884, 34, 0, -1703883, 17, 0, -1703882, 17, 0, -1703881, 34, 0, -1638368, 34, 0, -1638367, 34, 0, -1638337, 34, 0, -1638336, 34, 0, -1638335, 34, 0, -1638334, 17, 0, -1638333, 17, 0, -1638332, 17, 0, -1638331, 17, 0, -1441771, 34, 0, -1441770, 34, 0, -1441769, 34, 0, -1441768, 34, 0, -1441767, 34, 0, -1441766, 34, 0, -1441765, 34, 0, -1441764, 34, 0, -1441763, 34, 0, -1441762, 34, 0, -1245224, 18, 0, -1245223, 18, 0, -1179613, 34, 0, -1179612, 34, 0, -1179611, 34, 0, -1179610, 34, 0, -1179609, 34, 0, -1179608, 34, 0, -1179607, 34, 0, -1179606, 34, 0, -1179605, 34, 0, -1179604, 34, 0, -917543, 17, 0, -917542, 17, 0, -917541, 17, 0, -917540, 17, 0, -589856, 17, 0, -589855, 17, 0, -589854, 17, 0, -589853, 17, 0, -589842, 17, 0, -589841, 17, 0, -589840, 17, 0, -589839, 17, 0, -589828, 17, 0, -589827, 17, 0, -589826, 17, 0, -589825, 17, 0, -655350, 17, 0, -655349, 17, 0, -655348, 17, 0, -655347, 17, 0, -655336, 17, 0, -655335, 17, 0, -655334, 17, 0, -655333, 17, 0, -655322, 17, 0, -655321, 17, 0, -655320, 17, 0, -655319, 17, 0, -655308, 17, 0, -655307, 17, 0, -655306, 17, 0, -655305, 17, 0, -655293, 17, 0, -655292, 17, 0, -655291, 17, 0, -393229, 34, 0, -393228, 34, 0, -393227, 34, 0, -393226, 34, 0, -393225, 34, 0, -393224, 34, 0, -393223, 34, 0, -393222, 34, 0, -458695, 34, 0, -458694, 34, 0, -458693, 34, 0, -458692, 34, 0, -458691, 34, 0, -458690, 34, 0, -458689, 34, 0, -458688, 34, 0, 196567, 21, 0, 196568, 21, 0, 196569, 21, 0, 196570, 21, 0, 196571, 21, 0, 196572, 21, 0, 196573, 21, 0, 196574, 21, 0, 196581, 21, 0, 196582, 21, 0, 196583, 21, 0, 196584, 21, 0, 196585, 21, 0, 196586, 21, 0, 196587, 21, 0, 196588, 21, 0, 131073, 21, 0, 131074, 21, 0, 131075, 21, 0, 131076, 21, 0, 131077, 21, 0, 131078, 21, 0, 131079, 21, 0, 131080, 21, 0, 131115, 21, 0, 131116, 21, 0, 131117, 21, 0, 131118, 21, 0, 131119, 21, 0, 131120, 21, 0, 131121, 21, 0, 131122, 21, 0, 131129, 21, 0, 131130, 21, 0, 131131, 21, 0, 131132, 21, 0, 131133, 21, 0, 131134, 21, 0, 131135, 21, 0, 131136, 21, 0 )
 
 [node name="Ground" type="TileMap" parent="." groups=["Wall"]]
 tile_set = ExtResource( 9 )
@@ -103,35 +104,32 @@ position = Vector2( 2497, 206 )
 
 [node name="torch" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( -960, -219 )
-frame = 10
+frame = 7
 
 [node name="torch2" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( -512, -215 )
-frame = 10
+frame = 7
 
 [node name="torch3" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( -65, -209 )
-frame = 10
+frame = 7
 
 [node name="torch4" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( 381, -201 )
-frame = 9
+frame = 6
 
 [node name="torch5" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( 830, -201 )
-frame = 8
+frame = 5
 
 [node name="torch6" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( 1278, -199 )
-frame = 7
 
 [node name="torch8" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( 1726, -208 )
-frame = 7
 
 [node name="torch7" parent="StaticObjectsBack" instance=ExtResource( 13 )]
 position = Vector2( 2111, -208 )
-frame = 7
 
 [node name="Coins&Buffs" type="Node2D" parent="."]
 
@@ -149,6 +147,33 @@ position = Vector2( -1338, 200 )
 position = Vector2( -1190, 207 )
 
 [node name="Platforms" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( 966, -485 )
+
+[node name="Ladder2" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( 966, -422 )
+
+[node name="Ladder4" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( 564, 99 )
+
+[node name="Ladder5" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( 564, 162 )
+
+[node name="Ladder3" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( 966, -546 )
+
+[node name="Ladder6" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( -288, -929 )
+
+[node name="Ladder7" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( -288, -993 )
+
+[node name="Ladder8" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( -288, -1057 )
+
+[node name="Ladder9" parent="Platforms" instance=ExtResource( 16 )]
+position = Vector2( -288, -1121 )
 
 [node name="Actors" type="Node2D" parent="."]
 
